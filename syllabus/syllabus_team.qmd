@@ -15,6 +15,6 @@ title: "Teaching team"
 | ![](gj.jpg){.circ} | Jacobson, Gwen | Head TA       | Wed 5:00 PM - 7:00 PM\    |
 |                    |                |               | Old Chem 025              |
 +--------------------+----------------+---------------+---------------------------+
-| ![](jz.jpg){.circ} | Zito, John     | Instructor    | Tue 2:00 PM - 4:00 PM\    |
+| ![](jz.jpg){.circ} | Zito, John     | Instructor    | Tue 3:00 PM - 5:00 PM\    |
 |                    |                |               | Old Chem 207              |
 +--------------------+----------------+---------------+---------------------------+
