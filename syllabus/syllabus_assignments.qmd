@@ -1,0 +1,62 @@
+---
+title: "Assignments and grading"
+---
+
+Your final course grade will be calculated as follows:
+
+| Category       | Percentage |
+|----------------|------------|
+| Labs           | 10%        |
+| Problem Sets   | 30%        |
+| Midterm Exam 1 | 20%        |
+| Midterm Exam 2 | 20%        |
+| Final exam     | 20%        |
+
+Your final letter grade will be determined based on these thresholds:
+
+| Letter Grade | Final Course Grade |
+|--------------|--------------------|
+| A            | \>= 93             |
+| A-           | 90 - 92.99         |
+| B+           | 87 - 89.99         |
+| B            | 83 - 86.99         |
+| B-           | 80 - 82.99         |
+| C+           | 77 - 79.99         |
+| C            | 73 - 76.99         |
+| C-           | 70 - 72.99         |
+| D+           | 67 - 69.99         |
+| D            | 63 - 66.99         |
+| D-           | 60 - 62.99         |
+| F            | \< 60              |
+
+::: callout-warning
+These thresholds will not change, and they will be applied exactly. This means that the final grades will not be curved, and a 92.99, for example, will not be rounded up to an A.
+:::
+
+## Labs (10%)
+
+In lab every Thursday, you will complete a guided activity that illustrates how the latest course material can be applied to various domains of science and technology. Often this activity will also teach you how to implement some of the ideas from the course in the `R` programming language. Ideally you should be able to finish the activity by the end of your lab period, but in any case, you must submit your lab work by 11:59 ET PM that same day. Each lab problem will be graded for completion on the following scale:
+
+-   1.0: a complete, good faith attempt;
+-   0.5: partially complete;
+-   0.0: no submission, or mostly incomplete.
+
+::: callout-note
+Your two lowest lab scores will be dropped at the end of the semester.
+:::
+
+## Problem Sets (30%)
+
+Mathematics is like everything else in life; if you practice, you improve. As such, the problem sets are really the heart of the course. They will mostly consist of pencil-and-paper math problems, but sometimes you will be asked to do some coding. You may compose you solutions however you like (scan or photograph written work, LaTeX, Quarto, handwriting capture on a tablet, whatever) so long as you ultimately upload a single `.pdf` file to Gradescope.
+
+::: callout-note
+Your lowest problem set score will be dropped at the end of the semester.
+:::
+
+## Exams (20% each)
+
+These will be traditional, in-class, sit-down, written exams with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of a standard 8.5" x 11" piece of paper).
+
+::: callout-note
+If you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.
+:::

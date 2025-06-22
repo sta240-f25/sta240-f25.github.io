@@ -1,0 +1,25 @@
+---
+title: "Course overview"
+---
+
+## Description
+
+We will spend roughly two thirds of the course on probability theory, and the last third on mathematical statistics. In **probability**, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon behave. In **statistics**, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. In this course, we will: 
+
+- learn how to model random phenomena using a probability distribution, and learn how to extract from that distribution features and summaries that describe the phenomena's "average" or "typical" behavior; 
+
+- learn the mathematics necessary to pose and answer questions like: does this statistical procedure work? what does it mean for it to work? when does it work? how well does it work? 
+
+- write computer simulations to demonstrate the theoretical properties of probability distributions and statistical procedures; 
+
+- learn how to analyze small, stylized datasets.
+
+**Prerequisites:** single-variable calculus.
+
+## Meetings
+
+| Meeting  | Location                       | Time                   | Staff |
+|----------|--------------------------------|------------------------|-------|
+| Lectures | Social Sciences 136            | MoWe 3:05 PM - 4:20 PM | John  |
+| Lab 01   | Perkins LINK 071 (Classroom 5) | Th 1:25 PM - 2:40 PM   | Gwen  |
+| Lab 02   | Perkins LINK 071 (Classroom 5) | Th 3:05 PM - 4:20 PM   | Gwen  |

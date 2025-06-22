@@ -1,0 +1,469 @@
+---
+title: "Welcome to STA 240!"
+format: revealjs
+auto-stretch: false
+---
+
+## Welcome to STA 240! {.large}
+
+::: {.columns .v-center-container}
+::: {.column width="50%"}
+While you wait, please complete this brief questionnaire:
+:::
+
+::: {.column width="50%"}
+![](images/quiz_qr.png){fig-align="center"}
+:::
+:::
+
+## Teaching Team {.medium}
+
+| Mug                   | Name           | Role       | Office Hours  |
+|-----------------------|----------------|------------|---------------|
+| ![](images/c.jpg){.c} | Chen, Andy     | TA         | TBD           |
+| ![](images/h.jpg){.c} | Huang, Konnie  | TA         | TBD           |
+| ![](images/j.jpg){.c} | Jacobson, Gwen | Head TA    | TBD           |
+| ![](images/z.jpg){.c} | Zito, John     | Instructor | Tue 2pm - 4pm |
+
+# Why should you study the mathematics of probability and statistics?
+
+# Reason 1: It's necessary.
+
+## Example: the birthday problem
+
+$k$ people convene for a birthday party:
+
+-   What is the probability that *at least two* of the attendees share a birthday?
+
+-   How many people need to show up to the party for there to be a 50% chance of at least one match?
+
+Most people guess that you need a hundred or more people.
+
+. . .
+
+In fact, you only need 23.
+
+## Example: the birthday problem {.medium}
+
+| no. of attendees (k) | Prob(at least one bday match) |
+|----------------------|-------------------------------|
+| 1                    | 0%                            |
+| 4                    | 1.6%                          |
+| 16                   | 28%                           |
+| 23                   | 50.7%                         |
+| 40                   | 89%                           |
+| 56                   | 98%                           |
+| 60                   | 99.4                          |
+| $\vdots$             | $\vdots$                      |
+| 366                  | 100.0%                        |
+
+**Key words**: binomial coefficient, pigeonhole principle
+
+## Example: the birthday problem
+
+![](images/birthday_prob.png)
+
+## Example: the Monty Hall problem
+
+Let's play: <https://montyhall.io/>
+
+![](images/monty_hall.png){fig-align="center" width="50%"}
+
+. . .
+
+::: callout-note
+## Very counterintuitive
+
+Most people start out thinking that the two doors are equally likely to contain the prize, so switching doesn't matter. In fact, you have a 2/3 chance of winning if you switch.
+:::
+
+## Example: the wisdom of crowds {.medium}
+
+::: columns
+::: {.column width="30%"}
+![](images/weight.jpg)
+:::
+
+::: {.column width="70%"}
+At a 1906 country fair in Plymouth, 800 people participated in a contest to estimate the weight of an ox. Francis Galton observed that the median guess, 1207 lbs, was accurate within 1% of the true weight of 1198 lbs.
+:::
+:::
+
+. . .
+
+::: callout-note
+## Lesson
+
+The aggregation of many imperfect estimates/guesses is often better than a needle-in-haystack search for the "best" individual guess.
+:::
+
+. . .
+
+::: callout-warning
+## Reality check!
+
+It took humans a long time to realize this. The first recorded uses of an "average" were during Isaac Newton's lifetime (see Stigler's *Seven Pillars of Statistical Wisdom*).
+:::
+
+## Example: the wisdom of crowds
+
+::: callout-warning
+## It's a lesson we are doomed to relearn often, apparently.
+
+![](images/prediction_markets.png) (source: [CNN](https://www.cnn.com/2024/11/08/business/polymarket-election-trump-nightcap/index.html))
+:::
+
+## Example: the folly of doctors
+
+> A 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the false negative rate of the test is 10%, and if the false positive rate is 9%, what is the chance that the woman *actually* has cancer, given that she tested positive?
+
+. . .
+
+You will know how to answer this by February. Doctors though...
+
+::: callout-warning
+## [BBC News 2014](https://www.bbc.com/news/magazine-28166019)
+
+Only 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.
+
+> We can only imagine how much anxiety those innumerate doctors instil in women.
+:::
+
+## Reason 1: It's necessary. {.large-ish}
+
+::: {.columns .v-center-container}
+::: {.column width="35%"}
+![](images/dumb.jpg){width="90%"}
+:::
+
+::: {.column width="65%"}
+Human intuition and “common sense” about probability and statistics are often just flat out wrong, in silly and dangerous ways. Mere mortals require the scaffolding of mathematics to discipline our thinking.
+:::
+:::
+
+# Reason 2: It's useful.
+
+## New title: The Unreasonable Effectiveness of Probability in...Everything?
+
+::: callout-note
+## [Read it!](https://doi.org/10.1002/cpa.3160130102)
+
+![](images/wigner.png){fig-align="center" width="70%"}
+:::
+
+## Example: LLMs
+
+::: callout-note
+## Question
+
+What method does ChatGPT use to generate the next word in one of its responses?
+:::
+
+. . .
+
+Let's ask! <https://chatgpt.com/share/677ef289-9564-8008-a662-9f8c2cfb04fc>
+
+## Example: portfolio selection
+
+::: callout-important
+## Problem
+
+How do you optimally allocate your savings to different assets (stocks vs bonds, Apple stock vs Microsoft, etc)?
+:::
+
+::: callout-note
+## Objective
+
+You want to make the most stable and lucrative choice possible, subject to uncertainty about how the competing assets will ultimately perform.
+:::
+
+::: callout-tip
+## Thoroughly Modern Markowitz
+
+The mathematics of this won a Nobel Prize in Economic Sciences in 1990, but it's "just" the creative application of basic probability.
+:::
+
+## Example: the mathematics of insurance
+
+When an insurance company sells you a policy, they are making a bet that you won't need it -- that you'll pay them but they won't ultimately pay you. They make thousands of such bets, and if everyone makes a claim, the company is ruined. How do they navigate this uncertainty?
+
+. . .
+
+::: callout-note
+## Actuarial mathematics!
+
+Every insurance company employs armies of *actuaries*, certified professionals with a deep understanding of probability and statistics, to help them make decisions about profit, loss, and risk of ruin.
+:::
+
+## Example: mathematical biology
+
+The metastasis of cancer cells is frequently modeled using something called a *branching process*, a kind of random evolution process that builds on the fundamentals of our course:
+
+![](images/branching.png){fig-align="center"}
+
+## Reason 2: It's useful {.large}
+
+::: {.columns .v-center-container}
+::: {.column width="45%"}
+![](images/brazil.jpg)
+:::
+
+::: {.column width="55%"}
+Learning probability theory gives you serious wings to study large swathes of science and technology.
+:::
+:::
+
+# Reason 3: It's beautiful.
+
+## Take it away, boys...
+
+::: callout-tip
+## Bertrand Russell, [*Mysticism and Logic and Other Essays*](https://en.wikisource.org/wiki/Mysticism_and_Logic_and_Other_Essays/Chapter_04) (1917)
+
+Mathematics, rightly viewed, possesses not only truth, but supreme beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show.
+:::
+
+::: callout-tip
+## Albert Einstein, ["The Late Emmy Noether"](https://www.nytimes.com/1935/05/04/archives/the-late-emmy-noether-professor-einstein-writes-in-appreciation-of.html?smid=url-share) (1935)
+
+Pure mathematics is, in its way, the poetry of logical ideas.
+:::
+
+## This is a theorem we will prove:
+
+![](images/galton.gif){fig-align="center"}
+
+## Reason 3: It's beautiful {.large}
+
+::: {.columns .v-center-container}
+::: {.column width="50%"}
+![](images/agony.jpg){width="70%"}
+:::
+
+::: {.column width="50%"}
+Discerning elegant patterns within "random" behavior can be very aesthetically pleasing.
+:::
+:::
+
+## Why study mathematical probstat?
+
+::: incremental
+1.  It's necessary.
+
+    -   Humans suck at thinking about this stuff.
+
+2.  It's useful.
+
+    -   It makes studying other things so much easier.
+
+3.  It's beautiful.
+
+    -   This is the main reason, honestly.
+:::
+
+. . .
+
+Sound good?
+
+# Syllabus highlights
+
+## Bookmark the course page! {.large}
+
+::: {.columns .v-center-container}
+::: {.column width="30%"}
+![](images/sta240qr.png){fig-align="center"}
+:::
+
+::: {.column width="70%"}
+<https://sta240-s25.github.io/>
+:::
+:::
+
+## Final grade breakdown
+
+Your final course grade will be calculated as follows:
+
+| Category       | Percentage |
+|----------------|------------|
+| Labs           | 10%        |
+| Problem Sets   | 30%        |
+| Midterm Exam 1 | 20%        |
+| Midterm Exam 2 | 20%        |
+| Final exam     | 20%        |
+
+::: callout-warning
+The final letter grade will be based on the usual thresholds, which will not change and will be applied exactly. So no curve and no rounding.
+:::
+
+## So...where's the wiggle room?
+
+-   We drop the two lowest labs;
+-   We drop the lowest problem set;
+-   We will replace your lowest midterm score with your final exam score (if it's better).
+
+## Labs (10%)
+
+Led by Gwen in Perkins LINK 071 (Classroom 5):
+
+-   Thursday 1:25 PM - 2:40 PM;
+-   Thursday 3:05 PM - 4:20 PM.
+
+Guided activities introducing you to special topics, extensions, applications, and case studies. We will also introduce some basic `R` stuff, and we will use Quarto for the lab write-ups.
+
+::: callout-note
+## Plan to attend regularly
+
+Designed to be complete-able during the lab period, but due by 11:59 PM that same day.
+:::
+
+## Problem Sets (30%)
+
+-   Mostly pencil-and-paper math problems, with some coding thrown in occasionally;
+-   Compose solutions however you want: scan or photograph written work, handwriting capture, LaTeX, Quarto, whatever;
+-   Submit a single PDF in Gradescope (and mark your pages!)
+
+::: callout-warning
+## Late policy
+
+No late work will be accepted unless you request an extension in advance by e-mailing JZ. All reasonable requests will be entertained, but extensions will not be long.
+:::
+
+## Exams (20% each)
+
+Traditional, in-class, written exams:
+
+-   **Midterm 1**: Monday February 17;
+-   **Midterm 2**: Monday March 31;
+-   **Final Exam**: Saturday May 3.
+
+::: callout-note
+## What can I use during the exam?
+
+No resources except an 8.5" x 11" note sheet created by you and only you.
+:::
+
+::: callout-note
+## If you need testing accommodations...
+
+Make sure I get a letter, and make your appointments in the [Testing Center](https://testingcenter.duke.edu/) now.
+:::
+
+## Attendance
+
+Not required. Live your life.
+
+## Communication
+
+If you wish to ask questions in writing...
+
+-   **Post on Ed**: stuff about general course policies and content;
+
+-   **Email JZ directly**: stuff specific to your personal circumstances.
+
+You should not really be emailing the TAs directly for any reason.
+
+## Collaboration
+
+You are encouraged to work together on labs and problem sets, but you should not copy off one another or share solutions. All submitted work must be entirely your own.
+
+::: callout-warning
+If we discover violations of this policy, everyone involved (sharers and recipients alike) will receive a zero on the assignment and be referred to the conduct office.
+
+A zero score resulting from a conduct violation *will not* be dropped or replaced.
+:::
+
+## Use of outside resources, including AI
+
+Say it with me:
+
+> Do your own math and write your own words, but write code however you want (as long as you cite your sources).
+
+-   You are generally discouraged from consulting outside resources. The textbooks, notes, and discussion forum should be self-contained and sufficient. If you find that this is false, let me know and we will get you what you need;
+
+-   Hopefully our coding needs are sufficiently basic that you don't feel the need to use outside resources too often, but telling you not to use Google etc while coding is just insane. It's fine as long as you cite it.
+
+## What level of mathematics should you expect?
+
+This is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:
+
+::: incremental
+-   differentiation (power rule, chain rule, all that)
+-   integration (FTOC, improper integrals, substitution, by parts...)
+-   limits and continuity (L'Hôpital's rule, etc)
+-   infinite series (Taylor series for $e^x$, anyone?)
+:::
+
+. . .
+
+**REVIEW**: [Problem Set 0](https://sta240-s25.github.io/psets/pset_0.html) is due 12PM Thursday January 16.
+
+. . .
+
+::: callout-note
+## This is not sink-or-swim.
+
+Lab on Thursday January 9 is a review session and work period for this assignment.
+:::
+
+# So, what are we studying, anyway?
+
+## Probability
+
+State the distribution (probability rules) of some random phenomenon, and then study how the realizations of that phenomenon "typically" behave:
+
+. . .
+
+> Given a **fair** coin, how many flips will it take on average until I observe the first head?
+
+::: incremental
+1.  select a phenomenon to study (the outcome of a coin flip);
+2.  fully specify its distribution (it's a fair, 50-50 coin);
+3.  study typical behavior of realizations (how many flips *on average* until the first head?).
+:::
+
+## Statistics is "probability in reverse"
+
+Start with the realizations of a random phenomenon with *unknown* distribution, and try to use those realizations to figure out what the distribution is:
+
+. . .
+
+> Imagine that you are given an unfamiliar coin, and you do not know anything about its properties. So you flip it 25 times, and on the basis of those 25 flips, you try to decide whether or not the coin is fair.
+
+. . .
+
+In probability, we *assumed* that the coin was fair, and then reasoned from that. In statistics, we do not do this. We start with some coin, which may or may not be fair, and then we try to "infer" its properties.
+
+## Probability and statistics
+
+![](images/probstat.png){fig-align="center" width="50%"}
+
++-----------------+--------------------------------------------------+
+| **Probability** | Forward problem\                                 |
+|                 | Deductive\                                       |
+|                 | Reasons from rules to consequences               |
++-----------------+--------------------------------------------------+
+| **Statistics**  | Inverse problem\                                 |
+|                 | Inductive\                                       |
+|                 | Observes consequences, and infers rules          |
++-----------------+--------------------------------------------------+
+
+## The philosophy of probability
+
+Two common interpretive perspectives:
+
+::: incremental
+-   **Frequentist**: probability describes the long run frequency of repeatable events;
+-   **Subjective**: probability describes an observer's subjective experience of uncertainty.
+:::
+
+. . .
+
+::: callout-note
+Like the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.
+:::
+
+. . .
+
+::: callout-important
+Regardless your interpretation, the mathematics of probability is the same.
+:::

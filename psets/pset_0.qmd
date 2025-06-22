@@ -1,0 +1,149 @@
+---
+title: "Problem Set 0"
+subtitle: Due Thursday January 16 at 12PM
+---
+
+> [Nature laughs at the difficulties of integration.](https://en.wikiquote.org/wiki/Pierre-Simon_Laplace)
+
+This is ostensibly calculus review, but each problem is a piece of probability in disguise. We will illuminate these connections throughout the semester, and I will refer to Problem Set 0 often. Stay tuned!
+
+## Problem 0
+
+Recommend some music for us to listen to while we grade this.
+
+## Problem 1
+
+Explain why this is horrific notation:
+
+$$
+    \int_0^x f(x)\,\textrm{d} x.
+$$
+
+## Problem 2
+
+Assume $\lambda>0$ is a constant and compute
+
+$$
+    \sum\limits_{n=0}^\infty n \frac{\lambda^n}{n!}e^{-\lambda}
+    .
+$$
+
+## Problem 3
+
+Here is a very silly function:
+
+$$
+    h(x)
+    =
+    \exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)
+    ,\quad 
+    -\infty<x<\infty
+    .
+$$
+
+Treat $-\infty<\mu<\infty$ and $\sigma>0$ as constants and compute the value(s) of $x$ at which $h$ has *inflection points*.
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+Here is an example of what $h$ might look like in the special case where $\mu = 1$ and $\sigma=2$:
+
+```{r}
+#| label: silly
+#| echo: false
+#| fig-align: center
+#| fig-asp: 0.5
+m = 1
+s = 2
+x_vals <- seq(-6, 8, length.out = 500)
+y_vals <- exp(-0.5 * ((x_vals - m) / s)^2)
+par(mar = c(4, 4, 0.1, 4))
+plot(x_vals, y_vals, type = "l", xlab = "x", ylab = "h(x)")
+```
+
+Before you start doing any math, can you use the picture to guess what the answer will be?
+:::
+
+## Problem 4
+
+Here is another inordinately silly function:
+
+$$
+\Gamma(x)=\int_0^\infty y^{x-1}e^{-y}\,\textrm{d} y,\quad x>0.
+$$
+
+Prove that $\Gamma(x+1)=x\Gamma(x)$.
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+Start on the left-hand side by writing out $\Gamma(x+1)$ and evaluating the integral *by parts*.
+:::
+
+## Problem 5
+
+Let $f$ be any function with the following properties:
+
+-   $f$ is twice continuously differentiable in a neighborhood of 0;
+-   $f(0) = 0$;
+-   $f'(0) = 0$;
+-   $f''(0) = 1$.
+
+Assume $t$ is a constant and compute
+
+$$
+    \lim_{x\to\infty} xf\left(\frac{t}{\sqrt{x}}\right)
+    .
+$$
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+Are you allowed to simply "plug in" $\infty$ for $x$ and simplify the expression? If so, why is that allowed? If not, what do you have to do instead?
+:::
+
+## Problem 6
+
+Consider this integral:
+
+$$
+    \int_2^\infty 
+    \frac{1}{x(\ln x)^p}\textrm{d} x
+    .
+$$
+
+a.  Use a computer to create a single plot with many lines, each graphing the *integrand* for a different value of $p$. Consider $p$ equal to -2, -1.5, -1, 0, 1, and 5, and make the $x$-axis of your plot run from 2 to 15.
+b.  Show that $\lim_{x\to\infty}\frac{1}{x(\ln x)^p}=0$ for all values of $-\infty<p<\infty$.
+c.  For what values of $p$ does the integral converge? When it does converge, what is its value?
+d.  Consult the picture you created in part (a), and write a few sentences explaining conceptually why the integral converges for some values of $p$ but not others.
+
+::: callout-note
+## "Use a computer"
+
+This is deliberately vague. You are welcome to use any tool you are familiar with: graphing calculator, GeoGebra, Desmos, R, Matlab, Mathematica, WolframAlpha, Julia, Maple, etc. Just make sure to plop a single image file, however crude, into your final submission.
+:::
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+When taking the limit or evaluating the integral, can you use the same technique for all values of $p$, or do you need a different technique depending on what $p$ is?
+:::
+
+## Submission
+
+You are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.
+
+## Point values
+
+| Problem   | Points |
+|-----------|--------|
+| 1         | 2      |
+| 2         | 3      |
+| 3         | 3      |
+| 4         | 3      |
+| 5         | 3      |
+| 6.a       | 2      |
+| 6.b       | 3      |
+| 6.c       | 3      |
+| 6.d       | 2      |
+| **TOTAL** | **24** |
