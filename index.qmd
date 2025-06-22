@@ -111,3 +111,9 @@ d |>
   tab_options(table.font.size = 13) |>
   opt_row_striping()
 ```
+
+::: callout-important
+## Final Exam
+
+Our final exam is scheduled for Friday December 12 from 9:00 AM - 12:00 PM. Mark your calendar and make travel plans accordingly.
+:::
