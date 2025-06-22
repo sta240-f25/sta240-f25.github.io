@@ -12,19 +12,17 @@ Below is a prospective outline for the course. Due dates are firm, but topics ma
 #| echo: false
 #| message: false
 #| warning: false
-#| eval: false
 library(googlesheets4)
 library(gt)
 library(tidyverse)
 gs4_deauth()
-d <- read_sheet("https://docs.google.com/spreadsheets/d/1n2QUWu0zg8yBHvun0SdXrSfbhQq11ww79vICqW4mmrE/edit?usp=sharing", sheet = "240")
-prepare_cutoff_date <- as.Date("2025-5-7")
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1vMg7mBeth8YnJG_8y24Sz80EaumcofrRbuKCjJCZALo/edit?usp=sharing", sheet = "240")
+prepare_cutoff_date <- as.Date("2025-12-15")
 ```
 
 ```{r}
 #| echo: false
 #| column: screen-inset-right
-#| eval: false
 d |>
   filter(!is.na(session)) |>
   select(-dow, -admin_notes, -number, -session) |>
