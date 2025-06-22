@@ -143,246 +143,246 @@
     ]
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#welcome-to-sta-240",
-    "href": "slides/slides_2025_01_08.html#welcome-to-sta-240",
+    "objectID": "slides/slides_2025_08_25.html#welcome-to-sta-240",
+    "href": "slides/slides_2025_08_25.html#welcome-to-sta-240",
     "title": "Welcome to STA 240!",
     "section": "Welcome to STA 240!",
     "text": "Welcome to STA 240!\n\n\nWhile you wait, please complete this brief questionnaire:"
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#teaching-team",
-    "href": "slides/slides_2025_01_08.html#teaching-team",
+    "objectID": "slides/slides_2025_08_25.html#teaching-team",
+    "href": "slides/slides_2025_08_25.html#teaching-team",
     "title": "Welcome to STA 240!",
     "section": "Teaching Team",
     "text": "Teaching Team\n\n\n\nMug\nName\nRole\nOffice Hours\n\n\n\n\n\nChen, Andy\nTA\nTBD\n\n\n\nHuang, Konnie\nTA\nTBD\n\n\n\nJacobson, Gwen\nHead TA\nTBD\n\n\n\nZito, John\nInstructor\nTue 2pm - 4pm"
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#example-the-birthday-problem",
-    "href": "slides/slides_2025_01_08.html#example-the-birthday-problem",
+    "objectID": "slides/slides_2025_08_25.html#example-the-birthday-problem",
+    "href": "slides/slides_2025_08_25.html#example-the-birthday-problem",
     "title": "Welcome to STA 240!",
     "section": "Example: the birthday problem",
     "text": "Example: the birthday problem\n\\(k\\) people convene for a birthday party:\n\nWhat is the probability that at least two of the attendees share a birthday?\nHow many people need to show up to the party for there to be a 50% chance of at least one match?\n\nMost people guess that you need a hundred or more people.\n\nIn fact, you only need 23."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#example-the-birthday-problem-1",
-    "href": "slides/slides_2025_01_08.html#example-the-birthday-problem-1",
+    "objectID": "slides/slides_2025_08_25.html#example-the-birthday-problem-1",
+    "href": "slides/slides_2025_08_25.html#example-the-birthday-problem-1",
     "title": "Welcome to STA 240!",
     "section": "Example: the birthday problem",
     "text": "Example: the birthday problem\n\n\n\nno. of attendees (k)\nProb(at least one bday match)\n\n\n\n\n1\n0%\n\n\n4\n1.6%\n\n\n16\n28%\n\n\n23\n50.7%\n\n\n40\n89%\n\n\n56\n98%\n\n\n60\n99.4\n\n\n\\(\\vdots\\)\n\\(\\vdots\\)\n\n\n366\n100.0%\n\n\n\nKey words: binomial coefficient, pigeonhole principle"
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#example-the-birthday-problem-2",
-    "href": "slides/slides_2025_01_08.html#example-the-birthday-problem-2",
+    "objectID": "slides/slides_2025_08_25.html#example-the-birthday-problem-2",
+    "href": "slides/slides_2025_08_25.html#example-the-birthday-problem-2",
     "title": "Welcome to STA 240!",
     "section": "Example: the birthday problem",
     "text": "Example: the birthday problem"
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#example-the-monty-hall-problem",
-    "href": "slides/slides_2025_01_08.html#example-the-monty-hall-problem",
+    "objectID": "slides/slides_2025_08_25.html#example-the-monty-hall-problem",
+    "href": "slides/slides_2025_08_25.html#example-the-monty-hall-problem",
     "title": "Welcome to STA 240!",
     "section": "Example: the Monty Hall problem",
     "text": "Example: the Monty Hall problem\nLet’s play: https://montyhall.io/\n\n\n\n\n\n\n\n\n\n\n\n\nVery counterintuitive\n\n\nMost people start out thinking that the two doors are equally likely to contain the prize, so switching doesn’t matter. In fact, you have a 2/3 chance of winning if you switch."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#example-the-wisdom-of-crowds",
-    "href": "slides/slides_2025_01_08.html#example-the-wisdom-of-crowds",
+    "objectID": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds",
+    "href": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds",
     "title": "Welcome to STA 240!",
     "section": "Example: the wisdom of crowds",
     "text": "Example: the wisdom of crowds\n\n\n\n\nAt a 1906 country fair in Plymouth, 800 people participated in a contest to estimate the weight of an ox. Francis Galton observed that the median guess, 1207 lbs, was accurate within 1% of the true weight of 1198 lbs.\n\n\n\n\n\n\n\n\n\nLesson\n\n\nThe aggregation of many imperfect estimates/guesses is often better than a needle-in-haystack search for the “best” individual guess.\n\n\n\n\n\n\n\n\n\n\n\nReality check!\n\n\nIt took humans a long time to realize this. The first recorded uses of an “average” were during Isaac Newton’s lifetime (see Stigler’s Seven Pillars of Statistical Wisdom)."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#example-the-wisdom-of-crowds-1",
-    "href": "slides/slides_2025_01_08.html#example-the-wisdom-of-crowds-1",
+    "objectID": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds-1",
+    "href": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds-1",
     "title": "Welcome to STA 240!",
     "section": "Example: the wisdom of crowds",
     "text": "Example: the wisdom of crowds\n\n\n\n\n\n\nIt’s a lesson we are doomed to relearn often, apparently.\n\n\n (source: CNN)"
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#example-the-folly-of-doctors",
-    "href": "slides/slides_2025_01_08.html#example-the-folly-of-doctors",
+    "objectID": "slides/slides_2025_08_25.html#example-the-folly-of-doctors",
+    "href": "slides/slides_2025_08_25.html#example-the-folly-of-doctors",
     "title": "Welcome to STA 240!",
     "section": "Example: the folly of doctors",
     "text": "Example: the folly of doctors\n\nA 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the false negative rate of the test is 10%, and if the false positive rate is 9%, what is the chance that the woman actually has cancer, given that she tested positive?\n\n\nYou will know how to answer this by February. Doctors though…\n\n\n\n\n\n\nBBC News 2014\n\n\nOnly 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.\n\nWe can only imagine how much anxiety those innumerate doctors instil in women."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#reason-1-its-necessary.-1",
-    "href": "slides/slides_2025_01_08.html#reason-1-its-necessary.-1",
+    "objectID": "slides/slides_2025_08_25.html#reason-1-its-necessary.-1",
+    "href": "slides/slides_2025_08_25.html#reason-1-its-necessary.-1",
     "title": "Welcome to STA 240!",
     "section": "Reason 1: It’s necessary.",
     "text": "Reason 1: It’s necessary.\n\n\n\n\nHuman intuition and “common sense” about probability and statistics are often just flat out wrong, in silly and dangerous ways. Mere mortals require the scaffolding of mathematics to discipline our thinking."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#new-title-the-unreasonable-effectiveness-of-probability-ineverything",
-    "href": "slides/slides_2025_01_08.html#new-title-the-unreasonable-effectiveness-of-probability-ineverything",
+    "objectID": "slides/slides_2025_08_25.html#new-title-the-unreasonable-effectiveness-of-probability-ineverything",
+    "href": "slides/slides_2025_08_25.html#new-title-the-unreasonable-effectiveness-of-probability-ineverything",
     "title": "Welcome to STA 240!",
     "section": "New title: The Unreasonable Effectiveness of Probability in…Everything?",
     "text": "New title: The Unreasonable Effectiveness of Probability in…Everything?\n\n\n\n\n\n\nRead it!"
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#example-llms",
-    "href": "slides/slides_2025_01_08.html#example-llms",
+    "objectID": "slides/slides_2025_08_25.html#example-llms",
+    "href": "slides/slides_2025_08_25.html#example-llms",
     "title": "Welcome to STA 240!",
     "section": "Example: LLMs",
     "text": "Example: LLMs\n\n\n\n\n\n\nQuestion\n\n\nWhat method does ChatGPT use to generate the next word in one of its responses?\n\n\n\n\nLet’s ask! https://chatgpt.com/share/677ef289-9564-8008-a662-9f8c2cfb04fc"
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#example-portfolio-selection",
-    "href": "slides/slides_2025_01_08.html#example-portfolio-selection",
+    "objectID": "slides/slides_2025_08_25.html#example-portfolio-selection",
+    "href": "slides/slides_2025_08_25.html#example-portfolio-selection",
     "title": "Welcome to STA 240!",
     "section": "Example: portfolio selection",
     "text": "Example: portfolio selection\n\n\n\n\n\n\nProblem\n\n\nHow do you optimally allocate your savings to different assets (stocks vs bonds, Apple stock vs Microsoft, etc)?\n\n\n\n\n\n\n\n\n\nObjective\n\n\nYou want to make the most stable and lucrative choice possible, subject to uncertainty about how the competing assets will ultimately perform.\n\n\n\n\n\n\n\n\n\nThoroughly Modern Markowitz\n\n\nThe mathematics of this won a Nobel Prize in Economic Sciences in 1990, but it’s “just” the creative application of basic probability."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#example-the-mathematics-of-insurance",
-    "href": "slides/slides_2025_01_08.html#example-the-mathematics-of-insurance",
+    "objectID": "slides/slides_2025_08_25.html#example-the-mathematics-of-insurance",
+    "href": "slides/slides_2025_08_25.html#example-the-mathematics-of-insurance",
     "title": "Welcome to STA 240!",
     "section": "Example: the mathematics of insurance",
     "text": "Example: the mathematics of insurance\nWhen an insurance company sells you a policy, they are making a bet that you won’t need it – that you’ll pay them but they won’t ultimately pay you. They make thousands of such bets, and if everyone makes a claim, the company is ruined. How do they navigate this uncertainty?\n\n\n\n\n\n\n\nActuarial mathematics!\n\n\nEvery insurance company employs armies of actuaries, certified professionals with a deep understanding of probability and statistics, to help them make decisions about profit, loss, and risk of ruin."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#example-mathematical-biology",
-    "href": "slides/slides_2025_01_08.html#example-mathematical-biology",
+    "objectID": "slides/slides_2025_08_25.html#example-mathematical-biology",
+    "href": "slides/slides_2025_08_25.html#example-mathematical-biology",
     "title": "Welcome to STA 240!",
     "section": "Example: mathematical biology",
     "text": "Example: mathematical biology\nThe metastasis of cancer cells is frequently modeled using something called a branching process, a kind of random evolution process that builds on the fundamentals of our course:"
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#reason-2-its-useful",
-    "href": "slides/slides_2025_01_08.html#reason-2-its-useful",
+    "objectID": "slides/slides_2025_08_25.html#reason-2-its-useful",
+    "href": "slides/slides_2025_08_25.html#reason-2-its-useful",
     "title": "Welcome to STA 240!",
     "section": "Reason 2: It’s useful",
     "text": "Reason 2: It’s useful\n\n\n\n\nLearning probability theory gives you serious wings to study large swathes of science and technology."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#take-it-away-boys",
-    "href": "slides/slides_2025_01_08.html#take-it-away-boys",
+    "objectID": "slides/slides_2025_08_25.html#take-it-away-boys",
+    "href": "slides/slides_2025_08_25.html#take-it-away-boys",
     "title": "Welcome to STA 240!",
     "section": "Take it away, boys…",
     "text": "Take it away, boys…\n\n\n\n\n\n\nBertrand Russell, Mysticism and Logic and Other Essays (1917)\n\n\nMathematics, rightly viewed, possesses not only truth, but supreme beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show.\n\n\n\n\n\n\n\n\n\nAlbert Einstein, “The Late Emmy Noether” (1935)\n\n\nPure mathematics is, in its way, the poetry of logical ideas."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#this-is-a-theorem-we-will-prove",
-    "href": "slides/slides_2025_01_08.html#this-is-a-theorem-we-will-prove",
+    "objectID": "slides/slides_2025_08_25.html#this-is-a-theorem-we-will-prove",
+    "href": "slides/slides_2025_08_25.html#this-is-a-theorem-we-will-prove",
     "title": "Welcome to STA 240!",
     "section": "This is a theorem we will prove:",
     "text": "This is a theorem we will prove:"
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#reason-3-its-beautiful",
-    "href": "slides/slides_2025_01_08.html#reason-3-its-beautiful",
+    "objectID": "slides/slides_2025_08_25.html#reason-3-its-beautiful",
+    "href": "slides/slides_2025_08_25.html#reason-3-its-beautiful",
     "title": "Welcome to STA 240!",
     "section": "Reason 3: It’s beautiful",
     "text": "Reason 3: It’s beautiful\n\n\n\n\nDiscerning elegant patterns within “random” behavior can be very aesthetically pleasing."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#why-study-mathematical-probstat",
-    "href": "slides/slides_2025_01_08.html#why-study-mathematical-probstat",
+    "objectID": "slides/slides_2025_08_25.html#why-study-mathematical-probstat",
+    "href": "slides/slides_2025_08_25.html#why-study-mathematical-probstat",
     "title": "Welcome to STA 240!",
     "section": "Why study mathematical probstat?",
     "text": "Why study mathematical probstat?\n\n\nIt’s necessary.\n\nHumans suck at thinking about this stuff.\n\nIt’s useful.\n\nIt makes studying other things so much easier.\n\nIt’s beautiful.\n\nThis is the main reason, honestly.\n\n\n\n\nSound good?"
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#bookmark-the-course-page",
-    "href": "slides/slides_2025_01_08.html#bookmark-the-course-page",
+    "objectID": "slides/slides_2025_08_25.html#bookmark-the-course-page",
+    "href": "slides/slides_2025_08_25.html#bookmark-the-course-page",
     "title": "Welcome to STA 240!",
     "section": "Bookmark the course page!",
     "text": "Bookmark the course page!\n\n\n\n\n\n\n\n\nhttps://sta240-s25.github.io/"
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#final-grade-breakdown",
-    "href": "slides/slides_2025_01_08.html#final-grade-breakdown",
+    "objectID": "slides/slides_2025_08_25.html#final-grade-breakdown",
+    "href": "slides/slides_2025_08_25.html#final-grade-breakdown",
     "title": "Welcome to STA 240!",
     "section": "Final grade breakdown",
     "text": "Final grade breakdown\nYour final course grade will be calculated as follows:\n\n\n\nCategory\nPercentage\n\n\n\n\nLabs\n10%\n\n\nProblem Sets\n30%\n\n\nMidterm Exam 1\n20%\n\n\nMidterm Exam 2\n20%\n\n\nFinal exam\n20%\n\n\n\n\n\n\n\n\n\nWarning\n\n\nThe final letter grade will be based on the usual thresholds, which will not change and will be applied exactly. So no curve and no rounding."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#sowheres-the-wiggle-room",
-    "href": "slides/slides_2025_01_08.html#sowheres-the-wiggle-room",
+    "objectID": "slides/slides_2025_08_25.html#sowheres-the-wiggle-room",
+    "href": "slides/slides_2025_08_25.html#sowheres-the-wiggle-room",
     "title": "Welcome to STA 240!",
     "section": "So…where’s the wiggle room?",
     "text": "So…where’s the wiggle room?\n\nWe drop the two lowest labs;\nWe drop the lowest problem set;\nWe will replace your lowest midterm score with your final exam score (if it’s better)."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#labs-10",
-    "href": "slides/slides_2025_01_08.html#labs-10",
+    "objectID": "slides/slides_2025_08_25.html#labs-10",
+    "href": "slides/slides_2025_08_25.html#labs-10",
     "title": "Welcome to STA 240!",
     "section": "Labs (10%)",
     "text": "Labs (10%)\nLed by Gwen in Perkins LINK 071 (Classroom 5):\n\nThursday 1:25 PM - 2:40 PM;\nThursday 3:05 PM - 4:20 PM.\n\nGuided activities introducing you to special topics, extensions, applications, and case studies. We will also introduce some basic R stuff, and we will use Quarto for the lab write-ups.\n\n\n\n\n\n\nPlan to attend regularly\n\n\nDesigned to be complete-able during the lab period, but due by 11:59 PM that same day."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#problem-sets-30",
-    "href": "slides/slides_2025_01_08.html#problem-sets-30",
+    "objectID": "slides/slides_2025_08_25.html#problem-sets-30",
+    "href": "slides/slides_2025_08_25.html#problem-sets-30",
     "title": "Welcome to STA 240!",
     "section": "Problem Sets (30%)",
     "text": "Problem Sets (30%)\n\nMostly pencil-and-paper math problems, with some coding thrown in occasionally;\nCompose solutions however you want: scan or photograph written work, handwriting capture, LaTeX, Quarto, whatever;\nSubmit a single PDF in Gradescope (and mark your pages!)\n\n\n\n\n\n\n\nLate policy\n\n\nNo late work will be accepted unless you request an extension in advance by e-mailing JZ. All reasonable requests will be entertained, but extensions will not be long."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#exams-20-each",
-    "href": "slides/slides_2025_01_08.html#exams-20-each",
+    "objectID": "slides/slides_2025_08_25.html#exams-20-each",
+    "href": "slides/slides_2025_08_25.html#exams-20-each",
     "title": "Welcome to STA 240!",
     "section": "Exams (20% each)",
     "text": "Exams (20% each)\nTraditional, in-class, written exams:\n\nMidterm 1: Monday February 17;\nMidterm 2: Monday March 31;\nFinal Exam: Saturday May 3.\n\n\n\n\n\n\n\nWhat can I use during the exam?\n\n\nNo resources except an 8.5” x 11” note sheet created by you and only you.\n\n\n\n\n\n\n\n\n\nIf you need testing accommodations…\n\n\nMake sure I get a letter, and make your appointments in the Testing Center now."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#attendance",
-    "href": "slides/slides_2025_01_08.html#attendance",
+    "objectID": "slides/slides_2025_08_25.html#attendance",
+    "href": "slides/slides_2025_08_25.html#attendance",
     "title": "Welcome to STA 240!",
     "section": "Attendance",
     "text": "Attendance\nNot required. Live your life."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#communication",
-    "href": "slides/slides_2025_01_08.html#communication",
+    "objectID": "slides/slides_2025_08_25.html#communication",
+    "href": "slides/slides_2025_08_25.html#communication",
     "title": "Welcome to STA 240!",
     "section": "Communication",
     "text": "Communication\nIf you wish to ask questions in writing…\n\nPost on Ed: stuff about general course policies and content;\nEmail JZ directly: stuff specific to your personal circumstances.\n\nYou should not really be emailing the TAs directly for any reason."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#collaboration",
-    "href": "slides/slides_2025_01_08.html#collaboration",
+    "objectID": "slides/slides_2025_08_25.html#collaboration",
+    "href": "slides/slides_2025_08_25.html#collaboration",
     "title": "Welcome to STA 240!",
     "section": "Collaboration",
     "text": "Collaboration\nYou are encouraged to work together on labs and problem sets, but you should not copy off one another or share solutions. All submitted work must be entirely your own.\n\n\n\n\n\n\nWarning\n\n\nIf we discover violations of this policy, everyone involved (sharers and recipients alike) will receive a zero on the assignment and be referred to the conduct office.\nA zero score resulting from a conduct violation will not be dropped or replaced."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#use-of-outside-resources-including-ai",
-    "href": "slides/slides_2025_01_08.html#use-of-outside-resources-including-ai",
+    "objectID": "slides/slides_2025_08_25.html#use-of-outside-resources-including-ai",
+    "href": "slides/slides_2025_08_25.html#use-of-outside-resources-including-ai",
     "title": "Welcome to STA 240!",
     "section": "Use of outside resources, including AI",
     "text": "Use of outside resources, including AI\nSay it with me:\n\nDo your own math and write your own words, but write code however you want (as long as you cite your sources).\n\n\nYou are generally discouraged from consulting outside resources. The textbooks, notes, and discussion forum should be self-contained and sufficient. If you find that this is false, let me know and we will get you what you need;\nHopefully our coding needs are sufficiently basic that you don’t feel the need to use outside resources too often, but telling you not to use Google etc while coding is just insane. It’s fine as long as you cite it."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#what-level-of-mathematics-should-you-expect",
-    "href": "slides/slides_2025_01_08.html#what-level-of-mathematics-should-you-expect",
+    "objectID": "slides/slides_2025_08_25.html#what-level-of-mathematics-should-you-expect",
+    "href": "slides/slides_2025_08_25.html#what-level-of-mathematics-should-you-expect",
     "title": "Welcome to STA 240!",
     "section": "What level of mathematics should you expect?",
     "text": "What level of mathematics should you expect?\nThis is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:\n\n\ndifferentiation (power rule, chain rule, all that)\nintegration (FTOC, improper integrals, substitution, by parts…)\nlimits and continuity (L’Hôpital’s rule, etc)\ninfinite series (Taylor series for \\(e^x\\), anyone?)\n\n\n\nREVIEW: Problem Set 0 is due 12PM Thursday January 16.\n\n\n\n\n\n\n\n\nThis is not sink-or-swim.\n\n\nLab on Thursday January 9 is a review session and work period for this assignment."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#probability",
-    "href": "slides/slides_2025_01_08.html#probability",
+    "objectID": "slides/slides_2025_08_25.html#probability",
+    "href": "slides/slides_2025_08_25.html#probability",
     "title": "Welcome to STA 240!",
     "section": "Probability",
     "text": "Probability\nState the distribution (probability rules) of some random phenomenon, and then study how the realizations of that phenomenon “typically” behave:\n\n\nGiven a fair coin, how many flips will it take on average until I observe the first head?\n\n\n\nselect a phenomenon to study (the outcome of a coin flip);\nfully specify its distribution (it’s a fair, 50-50 coin);\nstudy typical behavior of realizations (how many flips on average until the first head?)."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#statistics-is-probability-in-reverse",
-    "href": "slides/slides_2025_01_08.html#statistics-is-probability-in-reverse",
+    "objectID": "slides/slides_2025_08_25.html#statistics-is-probability-in-reverse",
+    "href": "slides/slides_2025_08_25.html#statistics-is-probability-in-reverse",
     "title": "Welcome to STA 240!",
     "section": "Statistics is “probability in reverse”",
     "text": "Statistics is “probability in reverse”\nStart with the realizations of a random phenomenon with unknown distribution, and try to use those realizations to figure out what the distribution is:\n\n\nImagine that you are given an unfamiliar coin, and you do not know anything about its properties. So you flip it 25 times, and on the basis of those 25 flips, you try to decide whether or not the coin is fair.\n\n\n\nIn probability, we assumed that the coin was fair, and then reasoned from that. In statistics, we do not do this. We start with some coin, which may or may not be fair, and then we try to “infer” its properties."
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#probability-and-statistics",
-    "href": "slides/slides_2025_01_08.html#probability-and-statistics",
+    "objectID": "slides/slides_2025_08_25.html#probability-and-statistics",
+    "href": "slides/slides_2025_08_25.html#probability-and-statistics",
     "title": "Welcome to STA 240!",
     "section": "Probability and statistics",
     "text": "Probability and statistics\n\n\n\n\n\n\n\n\n\n\n\n\nProbability\nForward problem\nDeductive\nReasons from rules to consequences\n\n\nStatistics\nInverse problem\nInductive\nObserves consequences, and infers rules"
   },
   {
-    "objectID": "slides/slides_2025_01_08.html#the-philosophy-of-probability",
-    "href": "slides/slides_2025_01_08.html#the-philosophy-of-probability",
+    "objectID": "slides/slides_2025_08_25.html#the-philosophy-of-probability",
+    "href": "slides/slides_2025_08_25.html#the-philosophy-of-probability",
     "title": "Welcome to STA 240!",
     "section": "The philosophy of probability",
     "text": "The philosophy of probability\nTwo common interpretive perspectives:\n\n\nFrequentist: probability describes the long run frequency of repeatable events;\nSubjective: probability describes an observer’s subjective experience of uncertainty.\n\n\n\n\n\n\n\n\n\nNote\n\n\nLike the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nRegardless your interpretation, the mathematics of probability is the same."
@@ -502,7 +502,7 @@
     "href": "index.html",
     "title": "STA 240 Probability for Inference, Modeling, and Data Analysis",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nWelcome!\n\n\n\n\n\nWed, Aug 27\n\n\n\n\n\n\n\nThu, Aug 28\n\n\n\n\n\n\n2\nMon, Sep 1\n\nLabor Day - No Lecture\n\n\n\n\n\nWed, Sep 3\n\n\n\n\n\n\n\nThu, Sep 4\n\n\n\n\n\n\n3\nMon, Sep 8\n\n\n\n\n\n\n\nWed, Sep 10\n\n\n\n\n\n\n\nThu, Sep 11\n\n\n\n\n\n\n4\nMon, Sep 15\n\n\n\n\n\n\n\nWed, Sep 17\n\n\n\n\n\n\n\nThu, Sep 18\n\n\n\n\n\n\n5\nMon, Sep 22\n\n\n\n\n\n\n\nWed, Sep 24\n\n\n\n\n\n\n\nThu, Sep 25\n\n\n\n\n\n\n6\nMon, Sep 29\n\n\n\n\n\n\n\nWed, Oct 1\n\n\n\n\n\n\n\nThu, Oct 2\n\n\n\n\n\n\n7\nMon, Oct 6\n\n\n\n\n\n\n\nWed, Oct 8\n\n\n\n\n\n\n\nThu, Oct 9\n\n\n\n\n\n\n8\nMon, Oct 13\n\nFall Break - No Lecture\n\n\n\n\n\nWed, Oct 15\n\n\n\n\n\n\n\nThu, Oct 16\n\n\n\n\n\n\n9\nMon, Oct 20\n\n\n\n\n\n\n\nWed, Oct 22\n\n\n\n\n\n\n\nThu, Oct 23\n\n\n\n\n\n\n10\nMon, Oct 27\n\n\n\n\n\n\n\nWed, Oct 29\n\n\n\n\n\n\n\nThu, Oct 30\n\n\n\n\n\n\n11\nMon, Nov 3\n\n\n\n\n\n\n\nWed, Nov 5\n\n\n\n\n\n\n\nThu, Nov 6\n\n\n\n\n\n\n12\nMon, Nov 10\n\n\n\n\n\n\n\nWed, Nov 12\n\n\n\n\n\n\n\nThu, Nov 13\n\n\n\n\n\n\n13\nMon, Nov 17\n\n\n\n\n\n\n\nWed, Nov 19\n\n\n\n\n\n\n\nThu, Nov 20\n\n\n\n\n\n\n14\nMon, Nov 24\n\n\n\n\n\n\n\nWed, Nov 26\n\nThanksgiving - No Lecture\n\n\n\n\n\nThu, Nov 27\n\nThanksgiving - No Lab\n\n\n\n\n15\nMon, Dec 1\n\n\n\n\n\n\n\nWed, Dec 3\n\n\n\n\n\n\n\nThu, Dec 4",
     "crumbs": [
       "Syllabus",
       "Schedule"
