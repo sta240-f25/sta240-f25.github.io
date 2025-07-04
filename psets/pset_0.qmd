@@ -1,6 +1,6 @@
 ---
 title: "Problem Set 0"
-subtitle: Due Thursday January 16 at 12PM
+subtitle: Due Monday September 8 at 3PM
 ---
 
 > [Nature laughs at the difficulties of integration.](https://en.wikiquote.org/wiki/Pierre-Simon_Laplace)
@@ -21,6 +21,14 @@ $$
 
 ## Problem 2
 
+Simplify this:
+
+$$
+\ln\left(e^{a_1}e^{a_2}e^{a_3}\cdots e^{a_n}\right).
+$$
+
+## Problem 3
+
 Assume $\lambda>0$ is a constant and compute
 
 $$
@@ -28,7 +36,7 @@ $$
     .
 $$
 
-## Problem 3
+## Problem 4
 
 Here is a very silly function:
 
@@ -64,7 +72,7 @@ plot(x_vals, y_vals, type = "l", xlab = "x", ylab = "h(x)")
 Before you start doing any math, can you use the picture to guess what the answer will be?
 :::
 
-## Problem 4
+## Problem 5
 
 Here is another inordinately silly function:
 
@@ -80,7 +88,7 @@ Prove that $\Gamma(x+1)=x\Gamma(x)$.
 Start on the left-hand side by writing out $\Gamma(x+1)$ and evaluating the integral *by parts*.
 :::
 
-## Problem 5
+## Problem 6
 
 Let $f$ be any function with the following properties:
 
@@ -102,7 +110,7 @@ $$
 Are you allowed to simply "plug in" $\infty$ for $x$ and simplify the expression? If so, why is that allowed? If not, what do you have to do instead?
 :::
 
-## Problem 6
+## Problem 7
 
 Consider this integral:
 
@@ -132,18 +140,3 @@ When taking the limit or evaluating the integral, can you use the same technique
 ## Submission
 
 You are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.
-
-## Point values
-
-| Problem   | Points |
-|-----------|--------|
-| 1         | 2      |
-| 2         | 3      |
-| 3         | 3      |
-| 4         | 3      |
-| 5         | 3      |
-| 6.a       | 2      |
-| 6.b       | 3      |
-| 6.c       | 3      |
-| 6.d       | 2      |
-| **TOTAL** | **24** |
