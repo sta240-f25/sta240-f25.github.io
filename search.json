@@ -425,7 +425,7 @@
     "href": "psets/pset_0.html#problem-2",
     "title": "Problem Set 0",
     "section": "Problem 2",
-    "text": "Problem 2\nAssume \\(\\lambda&gt;0\\) is a constant and compute\n\\[\n    \\sum\\limits_{n=0}^\\infty n \\frac{\\lambda^n}{n!}e^{-\\lambda}\n    .\n\\]",
+    "text": "Problem 2\nSimplify this:\n\\[\n\\ln\\left(e^{a_1}e^{a_2}e^{a_3}\\cdots e^{a_n}\\right).\n\\]",
     "crumbs": [
       "Problem Sets",
       "Problem Set 0"
@@ -436,7 +436,7 @@
     "href": "psets/pset_0.html#problem-3",
     "title": "Problem Set 0",
     "section": "Problem 3",
-    "text": "Problem 3\nHere is a very silly function:\n\\[\n    h(x)\n    =\n    \\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\n    ,\\quad\n    -\\infty&lt;x&lt;\\infty\n    .\n\\]\nTreat \\(-\\infty&lt;\\mu&lt;\\infty\\) and \\(\\sigma&gt;0\\) as constants and compute the value(s) of \\(x\\) at which \\(h\\) has inflection points.\n\n\n\n\n\n\nHint\n\n\n\n\n\nHere is an example of what \\(h\\) might look like in the special case where \\(\\mu = 1\\) and \\(\\sigma=2\\):\n\n\n\n\n\n\n\n\nBefore you start doing any math, can you use the picture to guess what the answer will be?",
+    "text": "Problem 3\nAssume \\(\\lambda&gt;0\\) is a constant and compute\n\\[\n    \\sum\\limits_{n=0}^\\infty n \\frac{\\lambda^n}{n!}e^{-\\lambda}\n    .\n\\]",
     "crumbs": [
       "Problem Sets",
       "Problem Set 0"
@@ -447,7 +447,7 @@
     "href": "psets/pset_0.html#problem-4",
     "title": "Problem Set 0",
     "section": "Problem 4",
-    "text": "Problem 4\nHere is another inordinately silly function:\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\textrm{d} y,\\quad x&gt;0.\n\\]\nProve that \\(\\Gamma(x+1)=x\\Gamma(x)\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nStart on the left-hand side by writing out \\(\\Gamma(x+1)\\) and evaluating the integral by parts.",
+    "text": "Problem 4\nHere is a very silly function:\n\\[\n    h(x)\n    =\n    \\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\n    ,\\quad\n    -\\infty&lt;x&lt;\\infty\n    .\n\\]\nTreat \\(-\\infty&lt;\\mu&lt;\\infty\\) and \\(\\sigma&gt;0\\) as constants and compute the value(s) of \\(x\\) at which \\(h\\) has inflection points.\n\n\n\n\n\n\nHint\n\n\n\n\n\nHere is an example of what \\(h\\) might look like in the special case where \\(\\mu = 1\\) and \\(\\sigma=2\\):\n\n\n\n\n\n\n\n\nBefore you start doing any math, can you use the picture to guess what the answer will be?",
     "crumbs": [
       "Problem Sets",
       "Problem Set 0"
@@ -458,7 +458,7 @@
     "href": "psets/pset_0.html#problem-5",
     "title": "Problem Set 0",
     "section": "Problem 5",
-    "text": "Problem 5\nLet \\(f\\) be any function with the following properties:\n\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0;\n\n\\(f(0) = 0\\);\n\n\\(f'(0) = 0\\);\n\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nHint\n\n\n\n\n\nAre you allowed to simply “plug in” \\(\\infty\\) for \\(x\\) and simplify the expression? If so, why is that allowed? If not, what do you have to do instead?",
+    "text": "Problem 5\nHere is another inordinately silly function:\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\textrm{d} y,\\quad x&gt;0.\n\\]\nProve that \\(\\Gamma(x+1)=x\\Gamma(x)\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nStart on the left-hand side by writing out \\(\\Gamma(x+1)\\) and evaluating the integral by parts.",
     "crumbs": [
       "Problem Sets",
       "Problem Set 0"
@@ -469,7 +469,18 @@
     "href": "psets/pset_0.html#problem-6",
     "title": "Problem Set 0",
     "section": "Problem 6",
-    "text": "Problem 6\nConsider this integral:\n\\[\n    \\int_2^\\infty\n    \\frac{1}{x(\\ln x)^p}\\textrm{d} x\n    .\n\\]\n\nUse a computer to create a single plot with many lines, each graphing the integrand for a different value of \\(p\\). Consider \\(p\\) equal to -2, -1.5, -1, 0, 1, and 5, and make the \\(x\\)-axis of your plot run from 2 to 15.\nShow that \\(\\lim_{x\\to\\infty}\\frac{1}{x(\\ln x)^p}=0\\) for all values of \\(-\\infty&lt;p&lt;\\infty\\).\nFor what values of \\(p\\) does the integral converge? When it does converge, what is its value?\nConsult the picture you created in part (a), and write a few sentences explaining conceptually why the integral converges for some values of \\(p\\) but not others.\n\n\n\n\n\n\n\n“Use a computer”\n\n\n\nThis is deliberately vague. You are welcome to use any tool you are familiar with: graphing calculator, GeoGebra, Desmos, R, Matlab, Mathematica, WolframAlpha, Julia, Maple, etc. Just make sure to plop a single image file, however crude, into your final submission.\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nWhen taking the limit or evaluating the integral, can you use the same technique for all values of \\(p\\), or do you need a different technique depending on what \\(p\\) is?",
+    "text": "Problem 6\nLet \\(f\\) be any function with the following properties:\n\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0;\n\n\\(f(0) = 0\\);\n\n\\(f'(0) = 0\\);\n\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nHint\n\n\n\n\n\nAre you allowed to simply “plug in” \\(\\infty\\) for \\(x\\) and simplify the expression? If so, why is that allowed? If not, what do you have to do instead?",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "psets/pset_0.html#problem-7",
+    "href": "psets/pset_0.html#problem-7",
+    "title": "Problem Set 0",
+    "section": "Problem 7",
+    "text": "Problem 7\nConsider this integral:\n\\[\n    \\int_2^\\infty\n    \\frac{1}{x(\\ln x)^p}\\textrm{d} x\n    .\n\\]\n\nUse a computer to create a single plot with many lines, each graphing the integrand for a different value of \\(p\\). Consider \\(p\\) equal to -2, -1.5, -1, 0, 1, and 5, and make the \\(x\\)-axis of your plot run from 2 to 15.\nShow that \\(\\lim_{x\\to\\infty}\\frac{1}{x(\\ln x)^p}=0\\) for all values of \\(-\\infty&lt;p&lt;\\infty\\).\nFor what values of \\(p\\) does the integral converge? When it does converge, what is its value?\nConsult the picture you created in part (a), and write a few sentences explaining conceptually why the integral converges for some values of \\(p\\) but not others.\n\n\n\n\n\n\n\n“Use a computer”\n\n\n\nThis is deliberately vague. You are welcome to use any tool you are familiar with: graphing calculator, GeoGebra, Desmos, R, Matlab, Mathematica, WolframAlpha, Julia, Maple, etc. Just make sure to plop a single image file, however crude, into your final submission.\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nWhen taking the limit or evaluating the integral, can you use the same technique for all values of \\(p\\), or do you need a different technique depending on what \\(p\\) is?",
     "crumbs": [
       "Problem Sets",
       "Problem Set 0"
@@ -487,22 +498,11 @@
     ]
   },
   {
-    "objectID": "psets/pset_0.html#point-values",
-    "href": "psets/pset_0.html#point-values",
-    "title": "Problem Set 0",
-    "section": "Point values",
-    "text": "Point values\n\n\nProblem\nPoints\n\n\n\n1\n2\n\n\n2\n3\n\n\n3\n3\n\n\n4\n3\n\n\n5\n3\n\n\n6.a\n2\n\n\n6.b\n3\n\n\n6.c\n3\n\n\n6.d\n2\n\n\nTOTAL\n24",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "STA 240 Probability for Inference, Modeling, and Data Analysis",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nWelcome!\n\n\n\n\n\nWed, Aug 27\n\nSet Theory\n\n\n\n\n\nThu, Aug 28\n\nLab 0 - calculus review\n\n\n\n\n2\nMon, Sep 1\n\nLabor Day - No Lecture\n\n\n\n\n\nWed, Sep 3\n\nProbability Spaces\n\n\n\n\n\nThu, Sep 4\n\n\n\n\n\n\n3\nMon, Sep 8\n\nCounting\n\nPSET 0 @ 3PM\n\n\n\nWed, Sep 10\n\nCounting\n\n\n\n\n\nThu, Sep 11\n\n\n\n\n\n\n4\nMon, Sep 15\n\nConditional Probability\n\nPSET 1 @ 3PM\n\n\n\nWed, Sep 17\n\nConditional Probability\n\n\n\n\n\nThu, Sep 18\n\n\n\n\n\n\n5\nMon, Sep 22\n\n\n\nPSET 2 @ 3PM\n\n\n\nWed, Sep 24\n\n\n\n\n\n\n\nThu, Sep 25\n\nMidterm 1\n\n\n\n\n6\nMon, Sep 29\n\n\n\n\n\n\n\nWed, Oct 1\n\n\n\n\n\n\n\nThu, Oct 2\n\n\n\n\n\n\n7\nMon, Oct 6\n\n\n\n\n\n\n\nWed, Oct 8\n\n\n\n\n\n\n\nThu, Oct 9\n\n\n\n\n\n\n8\nMon, Oct 13\n\nFall Break - No Lecture\n\n\n\n\n\nWed, Oct 15\n\n\n\n\n\n\n\nThu, Oct 16\n\n\n\n\n\n\n9\nMon, Oct 20\n\n\n\n\n\n\n\nWed, Oct 22\n\n\n\n\n\n\n\nThu, Oct 23\n\n\n\n\n\n\n10\nMon, Oct 27\n\n\n\n\n\n\n\nWed, Oct 29\n\n\n\n\n\n\n\nThu, Oct 30\n\n\n\n\n\n\n11\nMon, Nov 3\n\nSums and Averages\n\n\n\n\n\nWed, Nov 5\n\nLaw of Large Numbers\n\n\n\n\n\nThu, Nov 6\n\n\n\n\n\n\n12\nMon, Nov 10\n\nCentral Limit Theorem\n\n\n\n\n\nWed, Nov 12\n\nWhat is statistics?\n\n\n\n\n\nThu, Nov 13\n\n\n\n\n\n\n13\nMon, Nov 17\n\nMaximum likelihood\n\n\n\n\n\nWed, Nov 19\n\nMaximum likelihood\n\n\n\n\n\nThu, Nov 20\n\nLab - MLE practice\n\n\n\n\n14\nMon, Nov 24\n\nWhence AP Statistics?\n\n\n\n\n\nWed, Nov 26\n\nThanksgiving - No Lecture\n\n\n\n\n\nThu, Nov 27\n\nThanksgiving - No Lab\n\n\n\n\n15\nMon, Dec 1\n\nBayesian statistics\n\n\n\n\n\nWed, Dec 3\n\nBayesian statistics\n\n\n\n\n\nThu, Dec 4\n\nLab - Bayes practice\n\n\n\n\n\nFri, Dec 5\n\n\n\nPSET X @ 5PM\n\n\n16\nFri, Dec 12\n\nFinal (9AM - 12PM)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Exam\n\n\n\nOur final exam is scheduled for Friday December 12 from 9:00 AM - 12:00 PM. Mark your calendar and make travel plans accordingly.",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nWelcome!\n\n\n\n\n\nWed, Aug 27\n\nSet Theory\n\n\n\n\n\nThu, Aug 28\n\nLab 0 - calculus review\n\n\n\n\n2\nMon, Sep 1\n\nLabor Day - No Lecture\n\n\n\n\n\nWed, Sep 3\n\nProbability Spaces\n\n\n\n\n\nThu, Sep 4\n\n\n\n\n\n\n3\nMon, Sep 8\n\nCounting\n\nPSET 0 @ 3PM\n\n\n\nWed, Sep 10\n\nCounting\n\n\n\n\n\nThu, Sep 11\n\n\n\n\n\n\n4\nMon, Sep 15\n\nConditional Probability\n\nPSET 1 @ 3PM\n\n\n\nWed, Sep 17\n\nConditional Probability\n\n\n\n\n\nThu, Sep 18\n\n\n\n\n\n\n5\nMon, Sep 22\n\n\n\nPSET 2 @ 3PM\n\n\n\nWed, Sep 24\n\n\n\n\n\n\n\nThu, Sep 25\n\nMidterm 1\n\n\n\n\n6\nMon, Sep 29\n\n\n\n\n\n\n\nWed, Oct 1\n\n\n\n\n\n\n\nThu, Oct 2\n\n\n\n\n\n\n7\nMon, Oct 6\n\n\n\n\n\n\n\nWed, Oct 8\n\n\n\n\n\n\n\nThu, Oct 9\n\n\n\n\n\n\n8\nMon, Oct 13\n\nFall Break - No Lecture\n\n\n\n\n\nWed, Oct 15\n\n\n\n\n\n\n\nThu, Oct 16\n\n\n\n\n\n\n9\nMon, Oct 20\n\n\n\n\n\n\n\nWed, Oct 22\n\n\n\n\n\n\n\nThu, Oct 23\n\n\n\n\n\n\n10\nMon, Oct 27\n\n\n\n\n\n\n\nWed, Oct 29\n\n\n\n\n\n\n\nThu, Oct 30\n\n\n\n\n\n\n11\nMon, Nov 3\n\nSums and Averages\n\n\n\n\n\nWed, Nov 5\n\nLaw of Large Numbers\n\n\n\n\n\nThu, Nov 6\n\n\n\n\n\n\n12\nMon, Nov 10\n\nCentral Limit Theorem\n\n\n\n\n\nWed, Nov 12\n\nWhat is statistics?\n\n\n\n\n\nThu, Nov 13\n\n\n\n\n\n\n13\nMon, Nov 17\n\nMaximum likelihood\n\n\n\n\n\nWed, Nov 19\n\nMaximum likelihood\n\n\n\n\n\nThu, Nov 20\n\nLab YY - MLE practice\n\n\n\n\n14\nMon, Nov 24\n\nWhence AP Statistics?\n\n\n\n\n\nWed, Nov 26\n\nThanksgiving - No Lecture\n\n\n\n\n\nThu, Nov 27\n\nThanksgiving - No Lab\n\n\n\n\n15\nMon, Dec 1\n\nBayesian statistics\n\n\n\n\n\nWed, Dec 3\n\nBayesian statistics\n\n\n\n\n\nThu, Dec 4\n\nLab ZZ - Bayes practice\n\n\n\n\n\nFri, Dec 5\n\n\n\nPSET X @ 5PM\n\n\n16\nFri, Dec 12\n\nFinal (9AM - 12PM)",
     "crumbs": [
       "Syllabus",
       "Schedule"
