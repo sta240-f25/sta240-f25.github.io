@@ -405,7 +405,7 @@ This is essentially a pencil-and-paper math class. We will use all of the basic 
 Lab on Thursday January 9 is a review session and work period for this assignment.
 :::
 
-# So, what are we studying, anyway? 
+# So, what are we studying, anyway?
 
 ## Probability {.scrollable}
 
@@ -435,17 +435,17 @@ In probability, we *assumed* that the coin was fair, and then reasoned from that
 
 ## Probability and statistics {.scrollable}
 
-![](images/probstat.png){fig-align="center" width="60%"}
+![](images/probstat.png){fig-align="center" width="55%"}
 
-+-----------------+-------------------------------------------------+
-| **Probability** | Forward problem\                                |
-|                 | Deductive\                                      |
-|                 | Reasons from rules to consequences              |
-+-----------------+-------------------------------------------------+
-| **Statistics**  | Inverse problem\                                |
-|                 | Inductive\                                      |
-|                 | Observes consequences, and infers rules         |
-+-----------------+-------------------------------------------------+
++-----------------+------------------------------------------------+
+| **Probability** | Forward problem\                               |
+|                 | Deductive\                                     |
+|                 | Reasons from rules to consequences             |
++-----------------+------------------------------------------------+
+| **Statistics**  | Inverse problem\                               |
+|                 | Inductive\                                     |
+|                 | Observes consequences, and infers rules        |
++-----------------+------------------------------------------------+
 
 ## The philosophy of probability {.scrollable}
 
