@@ -96,7 +96,7 @@ d |>
   tab_options(table.width = pct(90)) |>
   cols_width(
     week ~ pct(2),
-    date ~ pct(10), 
+    date ~ pct(8), 
     prepare ~ pct(15),
     topic ~ pct(20),
     materials ~ pct(15),
