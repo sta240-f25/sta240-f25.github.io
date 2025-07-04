@@ -382,7 +382,7 @@ Say it with me:
 
 -   Hopefully our coding needs are sufficiently basic that you don't feel the need to use outside resources too often, but telling you not to use Google etc while coding is just insane. It's fine as long as you cite it.
 
-## What level of mathematics should you expect?
+## What level of mathematics should you expect? {.scrollable}
 
 This is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:
 
@@ -405,9 +405,9 @@ This is essentially a pencil-and-paper math class. We will use all of the basic 
 Lab on Thursday January 9 is a review session and work period for this assignment.
 :::
 
-# So, what are we studying, anyway?
+# So, what are we studying, anyway? 
 
-## Probability
+## Probability {.scrollable}
 
 State the distribution (probability rules) of some random phenomenon, and then study how the realizations of that phenomenon "typically" behave:
 
@@ -421,7 +421,7 @@ State the distribution (probability rules) of some random phenomenon, and then s
 3.  study typical behavior of realizations (how many flips *on average* until the first head?).
 :::
 
-## Statistics is "probability in reverse"
+## Statistics is "probability in reverse" {.scrollable}
 
 Start with the realizations of a random phenomenon with *unknown* distribution, and try to use those realizations to figure out what the distribution is:
 
@@ -433,21 +433,21 @@ Start with the realizations of a random phenomenon with *unknown* distribution, 
 
 In probability, we *assumed* that the coin was fair, and then reasoned from that. In statistics, we do not do this. We start with some coin, which may or may not be fair, and then we try to "infer" its properties.
 
-## Probability and statistics
+## Probability and statistics {.scrollable}
 
-![](images/probstat.png){fig-align="center" width="50%"}
+![](images/probstat.png){fig-align="center" width="60%"}
 
-+-----------------+--------------------------------------------------+
-| **Probability** | Forward problem\                                 |
-|                 | Deductive\                                       |
-|                 | Reasons from rules to consequences               |
-+-----------------+--------------------------------------------------+
-| **Statistics**  | Inverse problem\                                 |
-|                 | Inductive\                                       |
-|                 | Observes consequences, and infers rules          |
-+-----------------+--------------------------------------------------+
++-----------------+-------------------------------------------------+
+| **Probability** | Forward problem\                                |
+|                 | Deductive\                                      |
+|                 | Reasons from rules to consequences              |
++-----------------+-------------------------------------------------+
+| **Statistics**  | Inverse problem\                                |
+|                 | Inductive\                                      |
+|                 | Observes consequences, and infers rules         |
++-----------------+-------------------------------------------------+
 
-## The philosophy of probability
+## The philosophy of probability {.scrollable}
 
 Two common interpretive perspectives:
 
