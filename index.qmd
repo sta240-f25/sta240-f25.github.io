@@ -97,9 +97,9 @@ d |>
   cols_width(
     week ~ pct(2),
     date ~ pct(10), 
-    prepare ~ pct(25),
+    prepare ~ pct(15),
     topic ~ pct(20),
-    materials ~ pct(18),
+    materials ~ pct(15),
     due ~ pct(15)
   ) |>
   cols_label_with(fn = function(x) {
@@ -111,9 +111,3 @@ d |>
   tab_options(table.font.size = 13) |>
   opt_row_striping()
 ```
-
-::: callout-important
-## Final Exam
-
-Our final exam is scheduled for Friday December 12 from 9:00 AM - 12:00 PM. Mark your calendar and make travel plans accordingly.
-:::
