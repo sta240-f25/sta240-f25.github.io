@@ -140,3 +140,4 @@ When taking the limit or evaluating the integral, can you use the same technique
 ## Submission
 
 You are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.
+
