@@ -100,7 +100,7 @@ d |>
     prepare ~ pct(15),
     topic ~ pct(20),
     materials ~ pct(15),
-    due ~ pct(15)
+    due ~ pct(8)
   ) |>
   cols_label_with(fn = function(x) {
       janitor::make_clean_names(x, case = "title") |>
