@@ -12,7 +12,7 @@ Your final course grade will be calculated as follows:
 | Midterm Exam 2 | 20%        |
 | Final exam     | 20%        |
 
-Your final letter grade will be determined based on these thresholds:
+Your final letter grade will be determined based on the usual thresholds:
 
 | Letter Grade | Final Course Grade |
 |--------------|--------------------|
@@ -35,13 +35,16 @@ These thresholds will not change, and they will be applied exactly. This means t
 
 ## Labs (10%)
 
-In lab every Thursday, you will complete a guided activity that illustrates how the latest course material can be applied to various domains of science and technology. Often this activity will also teach you how to implement some of the ideas from the course in the `R` programming language. Ideally you should be able to finish the activity by the end of your lab period, but in any case, you must submit your lab work by 11:59 ET PM that same day. Each lab problem will be graded for completion on the following scale:
+In lab every Thursday, you will complete a guided activity that introduces you to special topics, extensions, or applications of the latest course material. Along the way, we will teach you how to implement some of the ideas from the course in the `R` programming language. Ideally you should be able to finish the activity by the end of your lab period, but in any case, you must submit your lab work by 11:59 ET PM that same day. 
 
--   1.0: a complete, good faith attempt;
+Each lab assignment will be graded on the following scale:
+
+-   1.0: a complete, good faith attempt at every part of every problem;
 -   0.5: partially complete;
 -   0.0: no submission, or mostly incomplete.
 
 ::: callout-note
+## Grace
 Your two lowest lab scores will be dropped at the end of the semester.
 :::
 
@@ -50,6 +53,7 @@ Your two lowest lab scores will be dropped at the end of the semester.
 Mathematics is like everything else in life; if you practice, you improve. As such, the problem sets are really the heart of the course. They will mostly consist of pencil-and-paper math problems, but sometimes you will be asked to do some coding. You may compose you solutions however you like (scan or photograph written work, LaTeX, Quarto, handwriting capture on a tablet, whatever) so long as you ultimately upload a single `.pdf` file to Gradescope.
 
 ::: callout-note
+## Grace
 Your lowest problem set score will be dropped at the end of the semester.
 :::
 
@@ -57,12 +61,18 @@ Your lowest problem set score will be dropped at the end of the semester.
 
 There will be three exams. The dates, times, and locations are firm, so mark your calendar now:
 
-- **Midterm 1**: when and where;
-- **Midterm 2**: when and where;
-- **Final**: Friday December 12 from 9 AM - 12 PM in Physics 130.
+-   **Midterm 1**: when and where;
+-   **Midterm 2**: when and where;
+-   **Final**: Friday December 12 from 9 AM - 12 PM in Physics 130.
 
-These will be traditional, in-class, sit-down, written exams with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of a standard 8.5" x 11" piece of paper).
+These will be old school, pencil-and-paper, in-class exams. The only resources you are allowed are a simple four-function calculator (which you won't actually need) and a note sheet that you and only you have prepared (both sides of a standard 8.5" x 11" piece of paper).
 
 ::: callout-note
+## Grace
 If you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.
+:::
+
+::: callout-warning
+## No make-up exams
+If you are absent from one of the midterms for whatever reason, there will not be a make-up. Pursuant to the above policy, we will simply replace the missed midterm score with the final exam score. If you miss the final exam, you get a zero unless you have a [Dean's Excuse](https://trinity.duke.edu/undergraduate/academic-policies/final-exams-scheduling-conflicts-and-absences).
 :::
