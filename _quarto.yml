@@ -15,7 +15,7 @@ website:
 #  draft-mode: unlinked
 
   sidebar:
-    background: "#fb83d9"
+    background: "#FFFB71"
     logo: "img/logo.png"
     pinned: true
     align: center
@@ -79,7 +79,7 @@ website:
   page-footer:
     right: 'This page is built with [Quarto](https://quarto.org/).'
     left: "&copy; Copyright 2025 John Zito"
-    background: "#fb83d9"
+    background: "#FFFB71"
 
 format: 
   html:
