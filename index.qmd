@@ -93,12 +93,12 @@ d |>
   fmt_markdown(
     columns = c(topic, prepare, materials, due)
   ) |>
-  tab_options(table.width = pct(75),
+  tab_options(table.width = pct(72),
               table.align = 'left') |>
   cols_width(
     week ~ pct(2),
     date ~ pct(9), 
-    prepare ~ pct(15),
+    prepare ~ pct(12),
     topic ~ pct(22),
     materials ~ pct(15),
     due ~ pct(12)
