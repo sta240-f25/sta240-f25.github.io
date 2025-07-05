@@ -104,10 +104,10 @@ $$
     .
 $$
 
-::: {.callout-tip collapse="true"}
-## Hint
+::: {.callout-warning}
+## Continuity?
 
-Are you allowed to simply "plug in" $\infty$ for $x$ and simplify the expression? If so, why is that allowed? If not, what do you have to do instead?
+"[T]wice continuously differentiable" means that $f$, $f'$, and $f''$ are all continuous functions at and around zero. A full credit solution must clearly explain how and why continuity is being used along the way.
 :::
 
 ## Problem 7
@@ -140,4 +140,3 @@ When taking the limit or evaluating the integral, can you use the same technique
 ## Submission
 
 You are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.
-
