@@ -6,7 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.42">
 
   <meta name="author" content="John Zito">
@@ -150,12 +151,18 @@ John Zito
 <div class="columns v-center-container">
 <div class="column" style="width:50%;">
 <p>While you wait, please complete this brief questionnaire:</p>
+<p><em>Update link!</em></p>
 </div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/quiz_qr.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
+<div id="" class="qrcode"></div>
+<script type="text/javascript">
+(function() {
+  var script = document.currentScript;
+  var qrcode = script.previousElementSibling;
+  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"300","text":"https://sta240-f25.github.io/","width":"300"});
+  script.remove();
+})();
+</script>
+    
 </div></div>
 </section>
 <section id="teaching-team" class="slide level2 medium">
@@ -171,28 +178,28 @@ John Zito
 </thead>
 <tbody>
 <tr class="odd">
-<td><img data-src="images/c.jpg" class="c"></td>
-<td>Chen, Andy</td>
+<td></td>
+<td></td>
 <td>TA</td>
 <td>TBD</td>
 </tr>
 <tr class="even">
-<td><img data-src="images/h.jpg" class="c"></td>
-<td>Huang, Konnie</td>
+<td></td>
+<td></td>
 <td>TA</td>
 <td>TBD</td>
 </tr>
 <tr class="odd">
-<td><img data-src="images/j.jpg" class="c"></td>
-<td>Jacobson, Gwen</td>
-<td>Head TA</td>
+<td></td>
+<td></td>
+<td>TA</td>
 <td>TBD</td>
 </tr>
 <tr class="even">
 <td><img data-src="images/z.jpg" class="c"></td>
 <td>Zito, John</td>
 <td>Instructor</td>
-<td>Tue 2pm - 4pm</td>
+<td>Tue 3pm - 5pm</td>
 </tr>
 </tbody>
 </table>
@@ -215,9 +222,10 @@ John Zito
 <li><p>How many people need to show up to the party for there to be a 50% chance of at least one match?</p></li>
 </ul>
 <p>Most people guess that you need a hundred or more people.</p>
-<div class="fragment">
-<p>In fact, you only need 23.</p>
-</div>
+</section>
+<section id="your-guesses" class="slide level2">
+<h2>Your guesses</h2>
+<p>LINK TO GOOGLE SHEET.</p>
 </section>
 <section id="example-the-birthday-problem-1" class="slide level2 medium">
 <h2>Example: the birthday problem</h2>
@@ -297,6 +305,10 @@ John Zito
 </div>
 </div>
 </section>
+<section id="you-people" class="slide level2">
+<h2>You people</h2>
+<p>LINK TO GOOGLE SHEET.</p>
+</section>
 <section id="example-the-wisdom-of-crowds" class="slide level2 medium">
 <h2>Example: the wisdom of crowds</h2>
 <div class="columns">
@@ -336,6 +348,18 @@ John Zito
 </div>
 </div>
 </section>
+<section id="weight-guessing-results" class="slide level2">
+<h2>Weight guessing results</h2>
+<p>LINK TO GOOGLE SHEET.</p>
+</section>
+<section id="price-guessing-results" class="slide level2">
+<h2>Price guessing results</h2>
+<p>LINK TO GOOGLE SHEET. Reveal actual price.</p>
+</section>
+<section id="price-guessing-results-1" class="slide level2">
+<h2>Price guessing results</h2>
+<p>LINK TO GOOGLE SHEET. Reveal actual price.</p>
+</section>
 <section id="example-the-wisdom-of-crowds-1" class="slide level2">
 <h2>Example: the wisdom of crowds</h2>
 <div class="callout callout-warning callout-titled callout-style-default">
@@ -344,7 +368,7 @@ John Zito
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>It’s a lesson we are doomed to relearn often, apparently.</strong></p>
+<p><strong><a href="https://polymarket.com">It’s a lesson we are doomed to relearn often, apparently.</a></strong></p>
 </div>
 <div class="callout-content">
 <p><img data-src="images/prediction_markets.png"> (source: <a href="https://www.cnn.com/2024/11/08/business/polymarket-election-trump-nightcap/index.html">CNN</a>)</p>
@@ -352,13 +376,15 @@ John Zito
 </div>
 </div>
 </section>
-<section id="example-the-folly-of-doctors" class="slide level2">
+<section id="example-the-folly-of-doctors" class="slide level2 scrollable">
 <h2>Example: the folly of doctors</h2>
 <blockquote>
 <p>A 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the false negative rate of the test is 10%, and if the false positive rate is 9%, what is the chance that the woman <em>actually</em> has cancer, given that she tested positive?</p>
 </blockquote>
 <div class="fragment">
-<p>You will know how to answer this by February. Doctors though…</p>
+<p>You will know how to answer this by October. Doctors though…</p>
+</div>
+<div class="fragment">
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -427,7 +453,7 @@ John Zito
 </div>
 </div>
 <div class="fragment">
-<p>Let’s ask! <a href="https://chatgpt.com/share/677ef289-9564-8008-a662-9f8c2cfb04fc" class="uri">https://chatgpt.com/share/677ef289-9564-8008-a662-9f8c2cfb04fc</a></p>
+<p><a href="https://chatgpt.com">Let’s ask!</a></p>
 </div>
 </section>
 <section id="example-portfolio-selection" class="slide level2">
@@ -591,13 +617,18 @@ John Zito
 <h2>Bookmark the course page!</h2>
 <div class="columns v-center-container">
 <div class="column" style="width:30%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/sta240qr.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
+<div id="" class="qrcode"></div>
+<script type="text/javascript">
+(function() {
+  var script = document.currentScript;
+  var qrcode = script.previousElementSibling;
+  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"300","text":"https://sta240-f25.github.io/","width":"300"});
+  script.remove();
+})();
+</script>
+    
 </div><div class="column" style="width:70%;">
-<p><a href="https://sta240-s25.github.io/" class="uri">https://sta240-s25.github.io/</a></p>
+<p><a href="https://sta240-f25.github.io/" class="uri">https://sta240-f25.github.io/</a></p>
 </div></div>
 </section>
 <section id="final-grade-breakdown" class="slide level2">
@@ -657,7 +688,7 @@ John Zito
 </section>
 <section id="labs-10" class="slide level2">
 <h2>Labs (10%)</h2>
-<p>Led by Gwen in Perkins LINK 071 (Classroom 5):</p>
+<p>Led by XXX in Perkins LINK 087 (Classroom 3):</p>
 <ul>
 <li>Thursday 1:25 PM - 2:40 PM;</li>
 <li>Thursday 3:05 PM - 4:20 PM.</li>
@@ -702,9 +733,9 @@ John Zito
 <h2>Exams (20% each)</h2>
 <p>Traditional, in-class, written exams:</p>
 <ul>
-<li><strong>Midterm 1</strong>: Monday February 17;</li>
-<li><strong>Midterm 2</strong>: Monday March 31;</li>
-<li><strong>Final Exam</strong>: Saturday May 3.</li>
+<li><strong>Midterm 1</strong>: ???;</li>
+<li><strong>Midterm 2</strong>: ???;</li>
+<li><strong>Final Exam</strong>: Friday December 12.</li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -741,13 +772,13 @@ John Zito
 <h2>Communication</h2>
 <p>If you wish to ask questions in writing…</p>
 <ul>
-<li><p><strong>Post on Ed</strong>: stuff about general course policies and content;</p></li>
-<li><p><strong>Email JZ directly</strong>: stuff specific to your personal circumstances.</p></li>
+<li><p><strong>Post on Ed</strong>: about general course policies and content;</p></li>
+<li><p><strong>Email JZ directly</strong>: personal matters.</p></li>
 </ul>
 <p>You should not really be emailing the TAs directly for any reason.</p>
 </section>
-<section id="collaboration" class="slide level2">
-<h2>Collaboration</h2>
+<section id="collaboration-update" class="slide level2">
+<h2>Collaboration (UPDATE!)</h2>
 <p>You are encouraged to work together on labs and problem sets, but you should not copy off one another or share solutions. All submitted work must be entirely your own.</p>
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
@@ -764,8 +795,8 @@ John Zito
 </div>
 </div>
 </section>
-<section id="use-of-outside-resources-including-ai" class="slide level2">
-<h2>Use of outside resources, including AI</h2>
+<section id="use-of-outside-resources-including-ai-update" class="slide level2">
+<h2>Use of outside resources, including AI (UPDATE!)</h2>
 <p>Say it with me:</p>
 <blockquote>
 <p>Do your own math and write your own words, but write code however you want (as long as you cite your sources).</p>
@@ -775,8 +806,8 @@ John Zito
 <li><p>Hopefully our coding needs are sufficiently basic that you don’t feel the need to use outside resources too often, but telling you not to use Google etc while coding is just insane. It’s fine as long as you cite it.</p></li>
 </ul>
 </section>
-<section id="what-level-of-mathematics-should-you-expect" class="slide level2 scrollable">
-<h2>What level of mathematics should you expect?</h2>
+<section id="whats-the-level-of-math-here" class="slide level2 scrollable">
+<h2>What’s the level of math here?</h2>
 <p>This is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:</p>
 <div>
 <ul>
@@ -787,7 +818,7 @@ John Zito
 </ul>
 </div>
 <div class="fragment">
-<p><strong>REVIEW</strong>: <a href="https://sta240-f25.github.io/psets/pset_0.html">Problem Set 0</a> is due 12PM Thursday January 16.</p>
+<p><strong>REVIEW</strong>: <a href="https://sta240-f25.github.io/psets/pset_0.html">Problem Set 0</a> is due 3PM Monday September 8.</p>
 </div>
 <div class="fragment">
 <div class="callout callout-note callout-titled callout-style-default">
@@ -799,7 +830,7 @@ John Zito
 <p><strong>This is not sink-or-swim.</strong></p>
 </div>
 <div class="callout-content">
-<p>Lab on Thursday January 9 is a review session and work period for this assignment.</p>
+<p>Lab on Thursday August 28 is a review session and work period for this assignment.</p>
 </div>
 </div>
 </div>
@@ -845,10 +876,10 @@ John Zito
 <p><img data-src="images/probstat.png" class="quarto-figure quarto-figure-center" style="width:55.0%"></p>
 </figure>
 </div>
-<table class="caption-top" style="width:92%;">
+<table class="caption-top" style="width:90%;">
 <colgroup>
 <col style="width: 25%">
-<col style="width: 66%">
+<col style="width: 65%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -861,7 +892,7 @@ Reasons from rules to consequences</td>
 <td><strong>Statistics</strong></td>
 <td>Inverse problem<br>
 Inductive<br>
-Observes consequences, and infers rules</td>
+Observe consequences, and <em>infer</em> rules</td>
 </tr>
 </tbody>
 </table>
@@ -882,7 +913,7 @@ Observes consequences, and infers rules</td>
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Note</strong></p>
+<p><strong>You need both perspectives.</strong></p>
 </div>
 <div class="callout-content">
 <p>Like the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.</p>
@@ -897,7 +928,7 @@ Observes consequences, and infers rules</td>
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Important</strong></p>
+<p><strong>The math doesn’t care.</strong></p>
 </div>
 <div class="callout-content">
 <p>Regardless your interpretation, the mathematics of probability is the same.</p>

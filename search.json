@@ -114,7 +114,7 @@
     "href": "syllabus/syllabus_materials.html",
     "title": "Course materials",
     "section": "",
-    "text": "You are not required to purchase a textbook for this class. I strive to make the lectures self-contained and sufficient for all of the assignments. However, if you wish to follow along with one, these are all good options:\n\n[Ross] A First Course in Probability by Sheldon Ross;\n[HTZ] Probability and Statistical Inference by Robert Hogg, Elliot Tanis, and Dale Zimmerman;\n[DS] Probability and Statistics by Morris Degroot and Mark Schervish;\n[Wass] All of Statistics by Larry Wasserman.\n\nIn the PREPARE column of the course schedule, I will indicate which parts of a book correspond to the lectures.",
+    "text": "You are not required to purchase a textbook for this class. However, if you wish to follow along with one, these are all good options:\n\n[Ross] A First Course in Probability by Sheldon Ross;\n[HTZ] Probability and Statistical Inference by Robert Hogg, Elliot Tanis, and Dale Zimmerman;\n[DS] Probability and Statistics by Morris Degroot and Mark Schervish;\n[Wass] All of Statistics by Larry Wasserman.\n\nIn the PREPARE column of the course schedule, I will indicate which parts of a book correspond to the lectures.",
     "crumbs": [
       "Syllabus",
       "Materials"
@@ -125,7 +125,7 @@
     "href": "syllabus/syllabus_materials.html#textbooks",
     "title": "Course materials",
     "section": "",
-    "text": "You are not required to purchase a textbook for this class. I strive to make the lectures self-contained and sufficient for all of the assignments. However, if you wish to follow along with one, these are all good options:\n\n[Ross] A First Course in Probability by Sheldon Ross;\n[HTZ] Probability and Statistical Inference by Robert Hogg, Elliot Tanis, and Dale Zimmerman;\n[DS] Probability and Statistics by Morris Degroot and Mark Schervish;\n[Wass] All of Statistics by Larry Wasserman.\n\nIn the PREPARE column of the course schedule, I will indicate which parts of a book correspond to the lectures.",
+    "text": "You are not required to purchase a textbook for this class. However, if you wish to follow along with one, these are all good options:\n\n[Ross] A First Course in Probability by Sheldon Ross;\n[HTZ] Probability and Statistical Inference by Robert Hogg, Elliot Tanis, and Dale Zimmerman;\n[DS] Probability and Statistics by Morris Degroot and Mark Schervish;\n[Wass] All of Statistics by Larry Wasserman.\n\nIn the PREPARE column of the course schedule, I will indicate which parts of a book correspond to the lectures.",
     "crumbs": [
       "Syllabus",
       "Materials"
@@ -136,7 +136,7 @@
     "href": "syllabus/syllabus_materials.html#technology",
     "title": "Course materials",
     "section": "Technology",
-    "text": "Technology\nLecture will largely be a low tech affair: pencil and paper should be sufficient most of the time. You should plan to bring a laptop or tablet device to lab. In general, you will need access to a device with internet so that you can use the following:\n\nThis course page that you are on right now;\nR/RStudio via the Duke Container Manager;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.",
+    "text": "Technology\nLecture will largely be a low tech affair: pencil and paper should be sufficient most of the time. You should always plan to bring a laptop or tablet device to lab. In general, you will need access to a device with internet so that you can use the following:\n\nThis course page that you are on right now;\nR/RStudio via the Duke Container Manager;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.",
     "crumbs": [
       "Syllabus",
       "Materials"
@@ -147,21 +147,28 @@
     "href": "slides/slides_2025_08_25.html#welcome-to-sta-240",
     "title": "Welcome to STA 240!",
     "section": "Welcome to STA 240!",
-    "text": "Welcome to STA 240!\n\n\nWhile you wait, please complete this brief questionnaire:"
+    "text": "Welcome to STA 240!\n\n\nWhile you wait, please complete this brief questionnaire:\nUpdate link!"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#teaching-team",
     "href": "slides/slides_2025_08_25.html#teaching-team",
     "title": "Welcome to STA 240!",
     "section": "Teaching Team",
-    "text": "Teaching Team\n\n\n\nMug\nName\nRole\nOffice Hours\n\n\n\n\n\nChen, Andy\nTA\nTBD\n\n\n\nHuang, Konnie\nTA\nTBD\n\n\n\nJacobson, Gwen\nHead TA\nTBD\n\n\n\nZito, John\nInstructor\nTue 2pm - 4pm"
+    "text": "Teaching Team\n\n\n\nMug\nName\nRole\nOffice Hours\n\n\n\n\n\n\nTA\nTBD\n\n\n\n\nTA\nTBD\n\n\n\n\nTA\nTBD\n\n\n\nZito, John\nInstructor\nTue 3pm - 5pm"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-the-birthday-problem",
     "href": "slides/slides_2025_08_25.html#example-the-birthday-problem",
     "title": "Welcome to STA 240!",
     "section": "Example: the birthday problem",
-    "text": "Example: the birthday problem\n\\(k\\) people convene for a birthday party:\n\nWhat is the probability that at least two of the attendees share a birthday?\nHow many people need to show up to the party for there to be a 50% chance of at least one match?\n\nMost people guess that you need a hundred or more people.\n\nIn fact, you only need 23."
+    "text": "Example: the birthday problem\n\\(k\\) people convene for a birthday party:\n\nWhat is the probability that at least two of the attendees share a birthday?\nHow many people need to show up to the party for there to be a 50% chance of at least one match?\n\nMost people guess that you need a hundred or more people."
+  },
+  {
+    "objectID": "slides/slides_2025_08_25.html#your-guesses",
+    "href": "slides/slides_2025_08_25.html#your-guesses",
+    "title": "Welcome to STA 240!",
+    "section": "Your guesses",
+    "text": "Your guesses\nLINK TO GOOGLE SHEET."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-the-birthday-problem-1",
@@ -185,11 +192,39 @@
     "text": "Example: the Monty Hall problem\nLet’s play: https://montyhall.io/\n\n\n\n\n\n\n\n\n\n\n\n\nVery counterintuitive\n\n\nMost people start out thinking that the two doors are equally likely to contain the prize, so switching doesn’t matter. In fact, you have a 2/3 chance of winning if you switch."
   },
   {
+    "objectID": "slides/slides_2025_08_25.html#you-people",
+    "href": "slides/slides_2025_08_25.html#you-people",
+    "title": "Welcome to STA 240!",
+    "section": "You people",
+    "text": "You people\nLINK TO GOOGLE SHEET."
+  },
+  {
     "objectID": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds",
     "href": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds",
     "title": "Welcome to STA 240!",
     "section": "Example: the wisdom of crowds",
     "text": "Example: the wisdom of crowds\n\n\n\n\nAt a 1906 country fair in Plymouth, 800 people participated in a contest to estimate the weight of an ox. Francis Galton observed that the median guess, 1207 lbs, was accurate within 1% of the true weight of 1198 lbs.\n\n\n\n\n\n\n\n\nLesson\n\n\nThe aggregation of many imperfect estimates/guesses is often better than a needle-in-haystack search for the “best” individual guess.\n\n\n\n\n\n\n\n\n\n\n\nReality check!\n\n\nIt took humans a long time to realize this. The first recorded uses of an “average” were during Isaac Newton’s lifetime (see Stigler’s Seven Pillars of Statistical Wisdom)."
+  },
+  {
+    "objectID": "slides/slides_2025_08_25.html#weight-guessing-results",
+    "href": "slides/slides_2025_08_25.html#weight-guessing-results",
+    "title": "Welcome to STA 240!",
+    "section": "Weight guessing results",
+    "text": "Weight guessing results\nLINK TO GOOGLE SHEET."
+  },
+  {
+    "objectID": "slides/slides_2025_08_25.html#price-guessing-results",
+    "href": "slides/slides_2025_08_25.html#price-guessing-results",
+    "title": "Welcome to STA 240!",
+    "section": "Price guessing results",
+    "text": "Price guessing results\nLINK TO GOOGLE SHEET. Reveal actual price."
+  },
+  {
+    "objectID": "slides/slides_2025_08_25.html#price-guessing-results-1",
+    "href": "slides/slides_2025_08_25.html#price-guessing-results-1",
+    "title": "Welcome to STA 240!",
+    "section": "Price guessing results",
+    "text": "Price guessing results\nLINK TO GOOGLE SHEET. Reveal actual price."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds-1",
@@ -203,7 +238,7 @@
     "href": "slides/slides_2025_08_25.html#example-the-folly-of-doctors",
     "title": "Welcome to STA 240!",
     "section": "Example: the folly of doctors",
-    "text": "Example: the folly of doctors\n\nA 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the false negative rate of the test is 10%, and if the false positive rate is 9%, what is the chance that the woman actually has cancer, given that she tested positive?\n\n\nYou will know how to answer this by February. Doctors though…\n\n\n\n\n\n\nBBC News 2014\n\n\nOnly 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.\n\nWe can only imagine how much anxiety those innumerate doctors instil in women."
+    "text": "Example: the folly of doctors\n\nA 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the false negative rate of the test is 10%, and if the false positive rate is 9%, what is the chance that the woman actually has cancer, given that she tested positive?\n\n\nYou will know how to answer this by October. Doctors though…\n\n\n\n\n\n\n\n\nBBC News 2014\n\n\nOnly 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.\n\nWe can only imagine how much anxiety those innumerate doctors instil in women."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#reason-1-its-necessary.-1",
@@ -224,7 +259,7 @@
     "href": "slides/slides_2025_08_25.html#example-llms",
     "title": "Welcome to STA 240!",
     "section": "Example: LLMs",
-    "text": "Example: LLMs\n\n\n\n\n\n\nQuestion\n\n\nWhat method does ChatGPT use to generate the next word in one of its responses?\n\n\n\n\nLet’s ask! https://chatgpt.com/share/677ef289-9564-8008-a662-9f8c2cfb04fc"
+    "text": "Example: LLMs\n\n\n\n\n\n\nQuestion\n\n\nWhat method does ChatGPT use to generate the next word in one of its responses?\n\n\n\n\nLet’s ask!"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-portfolio-selection",
@@ -287,7 +322,7 @@
     "href": "slides/slides_2025_08_25.html#bookmark-the-course-page",
     "title": "Welcome to STA 240!",
     "section": "Bookmark the course page!",
-    "text": "Bookmark the course page!\n\n\n\n\n\n\n\n\nhttps://sta240-s25.github.io/"
+    "text": "Bookmark the course page!\n\n\n\n\n    \n\nhttps://sta240-f25.github.io/"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#final-grade-breakdown",
@@ -308,7 +343,7 @@
     "href": "slides/slides_2025_08_25.html#labs-10",
     "title": "Welcome to STA 240!",
     "section": "Labs (10%)",
-    "text": "Labs (10%)\nLed by Gwen in Perkins LINK 071 (Classroom 5):\n\nThursday 1:25 PM - 2:40 PM;\nThursday 3:05 PM - 4:20 PM.\n\nGuided activities introducing you to special topics, extensions, applications, and case studies. We will also introduce some basic R stuff, and we will use Quarto for the lab write-ups.\n\n\n\n\n\n\nPlan to attend regularly\n\n\nDesigned to be complete-able during the lab period, but due by 11:59 PM that same day."
+    "text": "Labs (10%)\nLed by XXX in Perkins LINK 087 (Classroom 3):\n\nThursday 1:25 PM - 2:40 PM;\nThursday 3:05 PM - 4:20 PM.\n\nGuided activities introducing you to special topics, extensions, applications, and case studies. We will also introduce some basic R stuff, and we will use Quarto for the lab write-ups.\n\n\n\n\n\n\nPlan to attend regularly\n\n\nDesigned to be complete-able during the lab period, but due by 11:59 PM that same day."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#problem-sets-30",
@@ -322,7 +357,7 @@
     "href": "slides/slides_2025_08_25.html#exams-20-each",
     "title": "Welcome to STA 240!",
     "section": "Exams (20% each)",
-    "text": "Exams (20% each)\nTraditional, in-class, written exams:\n\nMidterm 1: Monday February 17;\nMidterm 2: Monday March 31;\nFinal Exam: Saturday May 3.\n\n\n\n\n\n\n\nWhat can I use during the exam?\n\n\nNo resources except an 8.5” x 11” note sheet created by you and only you.\n\n\n\n\n\n\n\n\n\nIf you need testing accommodations…\n\n\nMake sure I get a letter, and make your appointments in the Testing Center now."
+    "text": "Exams (20% each)\nTraditional, in-class, written exams:\n\nMidterm 1: ???;\nMidterm 2: ???;\nFinal Exam: Friday December 12.\n\n\n\n\n\n\n\nWhat can I use during the exam?\n\n\nNo resources except an 8.5” x 11” note sheet created by you and only you.\n\n\n\n\n\n\n\n\n\nIf you need testing accommodations…\n\n\nMake sure I get a letter, and make your appointments in the Testing Center now."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#attendance",
@@ -336,28 +371,28 @@
     "href": "slides/slides_2025_08_25.html#communication",
     "title": "Welcome to STA 240!",
     "section": "Communication",
-    "text": "Communication\nIf you wish to ask questions in writing…\n\nPost on Ed: stuff about general course policies and content;\nEmail JZ directly: stuff specific to your personal circumstances.\n\nYou should not really be emailing the TAs directly for any reason."
+    "text": "Communication\nIf you wish to ask questions in writing…\n\nPost on Ed: about general course policies and content;\nEmail JZ directly: personal matters.\n\nYou should not really be emailing the TAs directly for any reason."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#collaboration",
-    "href": "slides/slides_2025_08_25.html#collaboration",
+    "objectID": "slides/slides_2025_08_25.html#collaboration-update",
+    "href": "slides/slides_2025_08_25.html#collaboration-update",
     "title": "Welcome to STA 240!",
-    "section": "Collaboration",
-    "text": "Collaboration\nYou are encouraged to work together on labs and problem sets, but you should not copy off one another or share solutions. All submitted work must be entirely your own.\n\n\n\n\n\n\nWarning\n\n\nIf we discover violations of this policy, everyone involved (sharers and recipients alike) will receive a zero on the assignment and be referred to the conduct office.\nA zero score resulting from a conduct violation will not be dropped or replaced."
+    "section": "Collaboration (UPDATE!)",
+    "text": "Collaboration (UPDATE!)\nYou are encouraged to work together on labs and problem sets, but you should not copy off one another or share solutions. All submitted work must be entirely your own.\n\n\n\n\n\n\nWarning\n\n\nIf we discover violations of this policy, everyone involved (sharers and recipients alike) will receive a zero on the assignment and be referred to the conduct office.\nA zero score resulting from a conduct violation will not be dropped or replaced."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#use-of-outside-resources-including-ai",
-    "href": "slides/slides_2025_08_25.html#use-of-outside-resources-including-ai",
+    "objectID": "slides/slides_2025_08_25.html#use-of-outside-resources-including-ai-update",
+    "href": "slides/slides_2025_08_25.html#use-of-outside-resources-including-ai-update",
     "title": "Welcome to STA 240!",
-    "section": "Use of outside resources, including AI",
-    "text": "Use of outside resources, including AI\nSay it with me:\n\nDo your own math and write your own words, but write code however you want (as long as you cite your sources).\n\n\nYou are generally discouraged from consulting outside resources. The textbooks, notes, and discussion forum should be self-contained and sufficient. If you find that this is false, let me know and we will get you what you need;\nHopefully our coding needs are sufficiently basic that you don’t feel the need to use outside resources too often, but telling you not to use Google etc while coding is just insane. It’s fine as long as you cite it."
+    "section": "Use of outside resources, including AI (UPDATE!)",
+    "text": "Use of outside resources, including AI (UPDATE!)\nSay it with me:\n\nDo your own math and write your own words, but write code however you want (as long as you cite your sources).\n\n\nYou are generally discouraged from consulting outside resources. The textbooks, notes, and discussion forum should be self-contained and sufficient. If you find that this is false, let me know and we will get you what you need;\nHopefully our coding needs are sufficiently basic that you don’t feel the need to use outside resources too often, but telling you not to use Google etc while coding is just insane. It’s fine as long as you cite it."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#what-level-of-mathematics-should-you-expect",
-    "href": "slides/slides_2025_08_25.html#what-level-of-mathematics-should-you-expect",
+    "objectID": "slides/slides_2025_08_25.html#whats-the-level-of-math-here",
+    "href": "slides/slides_2025_08_25.html#whats-the-level-of-math-here",
     "title": "Welcome to STA 240!",
-    "section": "What level of mathematics should you expect?",
-    "text": "What level of mathematics should you expect?\nThis is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:\n\n\ndifferentiation (power rule, chain rule, all that)\nintegration (FTOC, improper integrals, substitution, by parts…)\nlimits and continuity (L’Hôpital’s rule, etc)\ninfinite series (Taylor series for \\(e^x\\), anyone?)\n\n\n\nREVIEW: Problem Set 0 is due 12PM Thursday January 16.\n\n\n\n\n\n\n\n\nThis is not sink-or-swim.\n\n\nLab on Thursday January 9 is a review session and work period for this assignment."
+    "section": "What’s the level of math here?",
+    "text": "What’s the level of math here?\nThis is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:\n\n\ndifferentiation (power rule, chain rule, all that)\nintegration (FTOC, improper integrals, substitution, by parts…)\nlimits and continuity (L’Hôpital’s rule, etc)\ninfinite series (Taylor series for \\(e^x\\), anyone?)\n\n\n\nREVIEW: Problem Set 0 is due 3PM Monday September 8.\n\n\n\n\n\n\n\n\nThis is not sink-or-swim.\n\n\nLab on Thursday August 28 is a review session and work period for this assignment."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#probability",
@@ -378,14 +413,14 @@
     "href": "slides/slides_2025_08_25.html#probability-and-statistics",
     "title": "Welcome to STA 240!",
     "section": "Probability and statistics",
-    "text": "Probability and statistics\n\n\n\n\n\n\n\n\n\n\n\n\nProbability\nForward problem\nDeductive\nReasons from rules to consequences\n\n\nStatistics\nInverse problem\nInductive\nObserves consequences, and infers rules"
+    "text": "Probability and statistics\n\n\n\n\n\n\n\n\n\n\n\n\nProbability\nForward problem\nDeductive\nReasons from rules to consequences\n\n\nStatistics\nInverse problem\nInductive\nObserve consequences, and infer rules"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#the-philosophy-of-probability",
     "href": "slides/slides_2025_08_25.html#the-philosophy-of-probability",
     "title": "Welcome to STA 240!",
     "section": "The philosophy of probability",
-    "text": "The philosophy of probability\nTwo common interpretive perspectives:\n\n\nFrequentist: probability describes the long run frequency of repeatable events;\nSubjective: probability describes an observer’s subjective experience of uncertainty.\n\n\n\n\n\n\n\n\n\nNote\n\n\nLike the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nRegardless your interpretation, the mathematics of probability is the same."
+    "text": "The philosophy of probability\nTwo common interpretive perspectives:\n\n\nFrequentist: probability describes the long run frequency of repeatable events;\nSubjective: probability describes an observer’s subjective experience of uncertainty.\n\n\n\n\n\n\n\n\n\nYou need both perspectives.\n\n\nLike the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.\n\n\n\n\n\n\n\n\n\n\n\nThe math doesn’t care.\n\n\nRegardless your interpretation, the mathematics of probability is the same."
   },
   {
     "objectID": "psets/pset_0.html",
@@ -502,7 +537,7 @@
     "href": "index.html",
     "title": "STA 240 Probability for Inference, Modeling, and Data Analysis",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nMon, Aug 25\n\n\n🧑‍🏫 Welcome!\n\n\n\n\n\n\n\n\nWed, Aug 27\n\n\n🧑‍🏫 Set Theory\n\n\nIntro Survey @ 3PM\n\n\n\n\nThu, Aug 28\n\n\n💻 Lab 0 - calculus review\n\n\n\n\n\n\n2\nMon, Sep 1\n\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\n\n\nWed, Sep 3\n\n\n🧑‍🏫 Probability Spaces\n\n\n\n\n\n\n\n\nThu, Sep 4\n\n\n💻\n\n\n\n\n\n\n3\nMon, Sep 8\n\n\n🧑‍🏫 Counting\n\n\nPSET 0 @ 3PM\n\n\n\n\nWed, Sep 10\n\n\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nThu, Sep 11\n\n\n💻\n\n\n\n\n\n\n4\nMon, Sep 15\n\n\n🧑‍🏫 Conditional Probability\n\n\nPSET 1 @ 3PM\n\n\n\n\nWed, Sep 17\n\n\n🧑‍🏫 Conditional Probability\n\n\n\n\n\n\n\n\nThu, Sep 18\n\n\n💻\n\n\n\n\n\n\n5\nMon, Sep 22\n\n\n🧑‍🏫\n\n\nPSET 2 @ 3PM\n\n\n\n\nWed, Sep 24\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nThu, Sep 25\n\n\n📝 Midterm 1\n\n\n\n\n\n\n6\nMon, Sep 29\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nWed, Oct 1\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nThu, Oct 2\n\n\n💻\n\n\n\n\n\n\n7\nMon, Oct 6\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nWed, Oct 8\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nThu, Oct 9\n\n\n💻\n\n\n\n\n\n\n8\nMon, Oct 13\n\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\n\n\nWed, Oct 15\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nThu, Oct 16\n\n\n💻\n\n\n\n\n\n\n9\nMon, Oct 20\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nWed, Oct 22\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nThu, Oct 23\n\n\n💻\n\n\n\n\n\n\n10\nMon, Oct 27\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nWed, Oct 29\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nThu, Oct 30\n\n\n💻\n\n\n\n\n\n\n11\nMon, Nov 3\n\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\n\n\n\nWed, Nov 5\n\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\n\n\n\nThu, Nov 6\n\n\n💻\n\n\n\n\n\n\n12\nMon, Nov 10\n\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\n\n\n\nWed, Nov 12\n\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\n\n\n\nThu, Nov 13\n\n\n💻\n\n\n\n\n\n\n13\nMon, Nov 17\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nWed, Nov 19\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nThu, Nov 20\n\n\n💻 Lab YY - MLE practice\n\n\n\n\n\n\n14\nMon, Nov 24\n\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\n\n\n\nWed, Nov 26\n\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\n\n\nThu, Nov 27\n\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n\n15\nMon, Dec 1\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nWed, Dec 3\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nThu, Dec 4\n\n\n💻 Lab ZZ - Bayes practice\n\n\n\n\n\n\n\n\nFri, Dec 5\n\n\n\n\n\n\nPSET X @ 5PM\n\n\n16\nFri, Dec 12\n\n\n📝 Final (9AM - 12PM)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nMon, Aug 25\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\n\n\n\n\n\n\n\n\nWed, Aug 27\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\n\n\nIntro Survey @ 3PM\n\n\n\n\nThu, Aug 28\n\n\n💻 Lab 0 - calculus review\n\n\n\n\n\n\n2\nMon, Sep 1\n\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\n\n\nWed, Sep 3\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\n\n\n\n\n\n\n\nThu, Sep 4\n\n\n💻\n\n\n\n\n\n\n3\nMon, Sep 8\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\nPSET 0 @ 3PM\n\n\n\n\nWed, Sep 10\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nThu, Sep 11\n\n\n💻\n\n\n\n\n\n\n4\nMon, Sep 15\nDS: 2\n🧑‍🏫 Conditional Probability\n\n\nPSET 1 @ 3PM\n\n\n\n\nWed, Sep 17\nDS: 2\n🧑‍🏫 Conditional Probability\n\n\n\n\n\n\n\n\nThu, Sep 18\n\n\n💻\n\n\n\n\n\n\n5\nMon, Sep 22\n\n\n🧑‍🏫\n\n\nPSET 2 @ 3PM\n\n\n\n\nWed, Sep 24\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nThu, Sep 25\n\n\n📝 Midterm 1\n\n\n\n\n\n\n6\nMon, Sep 29\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nWed, Oct 1\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nThu, Oct 2\n\n\n💻\n\n\n\n\n\n\n7\nMon, Oct 6\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nWed, Oct 8\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nThu, Oct 9\n\n\n💻\n\n\n\n\n\n\n8\nMon, Oct 13\n\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\n\n\nWed, Oct 15\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nThu, Oct 16\n\n\n💻\n\n\n\n\n\n\n9\nMon, Oct 20\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nWed, Oct 22\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nThu, Oct 23\n\n\n💻\n\n\n\n\n\n\n10\nMon, Oct 27\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nWed, Oct 29\n\n\n🧑‍🏫\n\n\n\n\n\n\n\n\nThu, Oct 30\n\n\n💻\n\n\n\n\n\n\n11\nMon, Nov 3\n\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\n\n\n\nWed, Nov 5\n\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\n\n\n\nThu, Nov 6\n\n\n💻\n\n\n\n\n\n\n12\nMon, Nov 10\n\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\n\n\n\nWed, Nov 12\n\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\n\n\n\nThu, Nov 13\n\n\n💻\n\n\n\n\n\n\n13\nMon, Nov 17\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nWed, Nov 19\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nThu, Nov 20\n\n\n💻 Lab YY - MLE practice\n\n\n\n\n\n\n14\nMon, Nov 24\n\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\n\n\n\nWed, Nov 26\n\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\n\n\nThu, Nov 27\n\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n\n15\nMon, Dec 1\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nWed, Dec 3\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nThu, Dec 4\n\n\n💻 Lab ZZ - Bayes practice\n\n\n\n\n\n\n\n\nFri, Dec 5\n\n\n\n\n\n\nPSET X @ 5PM\n\n\n16\nFri, Dec 12\n\n\n📝 Final (9AM - 12PM)",
     "crumbs": [
       "Syllabus",
       "Schedule"
