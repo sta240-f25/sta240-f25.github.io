@@ -4,26 +4,29 @@ format: revealjs
 auto-stretch: false
 ---
 
-## Welcome to STA 240! {.large}
+## Welcome to STA 240!  {.large}
 
 ::::: {.columns .v-center-container}
 ::: {.column width="50%"}
 While you wait, please complete this brief questionnaire:
+
+*Update link!*
 :::
 
 ::: {.column width="50%"}
-![](images/quiz_qr.png){fig-align="center"}
+{{< qrcode https://sta240-f25.github.io/ width=300 height=300 >}}
 :::
 :::::
+
 
 ## Teaching Team {.medium}
 
 | Mug                   | Name           | Role       | Office Hours  |
 |-----------------------|----------------|------------|---------------|
-| ![](images/c.jpg){.c} | Chen, Andy     | TA         | TBD           |
-| ![](images/h.jpg){.c} | Huang, Konnie  | TA         | TBD           |
-| ![](images/j.jpg){.c} | Jacobson, Gwen | Head TA    | TBD           |
-| ![](images/z.jpg){.c} | Zito, John     | Instructor | Tue 2pm - 4pm |
+|                       |                | TA         | TBD           |
+|                       |                | TA         | TBD           |
+|                       |                | TA         | TBD           |
+| ![](images/z.jpg){.c} | Zito, John     | Instructor | Tue 3pm - 5pm |
 
 # Why should you study the mathematics of probability and statistics?
 
@@ -39,9 +42,9 @@ $k$ people convene for a birthday party:
 
 Most people guess that you need a hundred or more people.
 
-. . .
+## Your guesses
 
-In fact, you only need 23.
+LINK TO GOOGLE SHEET.
 
 ## Example: the birthday problem {.medium}
 
@@ -77,6 +80,10 @@ Let's play: <https://montyhall.io/>
 Most people start out thinking that the two doors are equally likely to contain the prize, so switching doesn't matter. In fact, you have a 2/3 chance of winning if you switch.
 :::
 
+## You people
+
+LINK TO GOOGLE SHEET.
+
 ## Example: the wisdom of crowds {.medium}
 
 ::::: columns
@@ -105,21 +112,35 @@ The aggregation of many imperfect estimates/guesses is often better than a needl
 It took humans a long time to realize this. The first recorded uses of an "average" were during Isaac Newton's lifetime (see Stigler's *Seven Pillars of Statistical Wisdom*).
 :::
 
+## Weight guessing results
+
+LINK TO GOOGLE SHEET.
+
+## Price guessing results
+
+LINK TO GOOGLE SHEET. Reveal actual price.
+
+## Price guessing results
+
+LINK TO GOOGLE SHEET. Reveal actual price.
+
 ## Example: the wisdom of crowds
 
 ::: callout-warning
-## It's a lesson we are doomed to relearn often, apparently.
+## [It's a lesson we are doomed to relearn often, apparently.](https://polymarket.com)
 
 ![](images/prediction_markets.png) (source: [CNN](https://www.cnn.com/2024/11/08/business/polymarket-election-trump-nightcap/index.html))
 :::
 
-## Example: the folly of doctors
+## Example: the folly of doctors {.scrollable}
 
 > A 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the false negative rate of the test is 10%, and if the false positive rate is 9%, what is the chance that the woman *actually* has cancer, given that she tested positive?
 
 . . .
 
-You will know how to answer this by February. Doctors though...
+You will know how to answer this by October. Doctors though...
+
+. . .
 
 ::: callout-warning
 ## [BBC News 2014](https://www.bbc.com/news/magazine-28166019)
@@ -161,7 +182,7 @@ What method does ChatGPT use to generate the next word in one of its responses?
 
 . . .
 
-Let's ask! <https://chatgpt.com/share/677ef289-9564-8008-a662-9f8c2cfb04fc>
+[Let's ask!](https://chatgpt.com)
 
 ## Example: portfolio selection
 
@@ -271,11 +292,11 @@ Sound good?
 
 ::::: {.columns .v-center-container}
 ::: {.column width="30%"}
-![](images/sta240qr.png){fig-align="center"}
+{{< qrcode https://sta240-f25.github.io/ width=300 height=300 >}}
 :::
 
 ::: {.column width="70%"}
-<https://sta240-s25.github.io/>
+<https://sta240-f25.github.io/>
 :::
 :::::
 
@@ -303,7 +324,7 @@ The final letter grade will be based on the usual thresholds, which will not cha
 
 ## Labs (10%)
 
-Led by Gwen in Perkins LINK 071 (Classroom 5):
+Led by XXX in Perkins LINK 087 (Classroom 3):
 
 -   Thursday 1:25 PM - 2:40 PM;
 -   Thursday 3:05 PM - 4:20 PM.
@@ -332,9 +353,9 @@ No late work will be accepted unless you request an extension in advance by e-ma
 
 Traditional, in-class, written exams:
 
--   **Midterm 1**: Monday February 17;
--   **Midterm 2**: Monday March 31;
--   **Final Exam**: Saturday May 3.
+-   **Midterm 1**: ???;
+-   **Midterm 2**: ???;
+-   **Final Exam**: Friday December 12.
 
 ::: callout-note
 ## What can I use during the exam?
@@ -356,13 +377,13 @@ Not required. Live your life.
 
 If you wish to ask questions in writing...
 
--   **Post on Ed**: stuff about general course policies and content;
+-   **Post on Ed**: about general course policies and content;
 
--   **Email JZ directly**: stuff specific to your personal circumstances.
+-   **Email JZ directly**: personal matters.
 
 You should not really be emailing the TAs directly for any reason.
 
-## Collaboration
+## Collaboration (UPDATE!)
 
 You are encouraged to work together on labs and problem sets, but you should not copy off one another or share solutions. All submitted work must be entirely your own.
 
@@ -372,7 +393,7 @@ If we discover violations of this policy, everyone involved (sharers and recipie
 A zero score resulting from a conduct violation *will not* be dropped or replaced.
 :::
 
-## Use of outside resources, including AI
+## Use of outside resources, including AI (UPDATE!)
 
 Say it with me:
 
@@ -382,7 +403,7 @@ Say it with me:
 
 -   Hopefully our coding needs are sufficiently basic that you don't feel the need to use outside resources too often, but telling you not to use Google etc while coding is just insane. It's fine as long as you cite it.
 
-## What level of mathematics should you expect? {.scrollable}
+## What's the level of math here? {.scrollable}
 
 This is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:
 
@@ -395,14 +416,14 @@ This is essentially a pencil-and-paper math class. We will use all of the basic 
 
 . . .
 
-**REVIEW**: [Problem Set 0](https://sta240-f25.github.io/psets/pset_0.html) is due 12PM Thursday January 16.
+**REVIEW**: [Problem Set 0](https://sta240-f25.github.io/psets/pset_0.html) is due 3PM Monday September 8.
 
 . . .
 
 ::: callout-note
 ## This is not sink-or-swim.
 
-Lab on Thursday January 9 is a review session and work period for this assignment.
+Lab on Thursday August 28 is a review session and work period for this assignment.
 :::
 
 # So, what are we studying, anyway?
@@ -437,15 +458,15 @@ In probability, we *assumed* that the coin was fair, and then reasoned from that
 
 ![](images/probstat.png){fig-align="center" width="55%"}
 
-+-----------------+-----------------------------------------------+
-| **Probability** | Forward problem\                              |
-|                 | Deductive\                                    |
-|                 | Reasons from rules to consequences            |
-+-----------------+-----------------------------------------------+
-| **Statistics**  | Inverse problem\                              |
-|                 | Inductive\                                    |
-|                 | Observes consequences, and infers rules       |
-+-----------------+-----------------------------------------------+
++-----------------+----------------------------------------------+
+| **Probability** | Forward problem\                             |
+|                 | Deductive\                                   |
+|                 | Reasons from rules to consequences           |
++-----------------+----------------------------------------------+
+| **Statistics**  | Inverse problem\                             |
+|                 | Inductive\                                   |
+|                 | Observe consequences, and *infer* rules      |
++-----------------+----------------------------------------------+
 
 ## The philosophy of probability {.scrollable}
 
@@ -459,11 +480,13 @@ Two common interpretive perspectives:
 . . .
 
 ::: callout-note
+## You need both perspectives.
 Like the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.
 :::
 
 . . .
 
 ::: callout-important
+## The math doesn't care.
 Regardless your interpretation, the mathematics of probability is the same.
 :::
