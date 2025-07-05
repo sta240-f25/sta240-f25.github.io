@@ -15,7 +15,29 @@
     "href": "syllabus/syllabus_policies.html",
     "title": "Policies",
     "section": "",
-    "text": "If you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum Ed Discussion. That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.\nIf you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructor directly (john.zito@duke.edu).\n\n\n\n\n\n\nNote\n\n\n\nYou can ask questions anonymously on Ed. The teaching team will still know your identity, but your peers will not.",
+    "text": "You are strongly encouraged to discuss and help one another.\nCopying their write up. I believe that collaboration among you is very important, and I am prepared to be fairly liberal. Nevertheless, yada yada yada.\nHaving said that, you should not be sharing",
+    "crumbs": [
+      "Syllabus",
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_policies.html#collaboration",
+    "href": "syllabus/syllabus_policies.html#collaboration",
+    "title": "Policies",
+    "section": "",
+    "text": "You are strongly encouraged to discuss and help one another.\nCopying their write up. I believe that collaboration among you is very important, and I am prepared to be fairly liberal. Nevertheless, yada yada yada.\nHaving said that, you should not be sharing",
+    "crumbs": [
+      "Syllabus",
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
+    "href": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
+    "title": "Policies",
+    "section": "Use of outside resources, including AI",
+    "text": "Use of outside resources, including AI\nI am still capable of writing a problem that ChatGPT can’t do, but it is getting harder. If you do that, you are wasting your time and money. Furthermore, 60% of the final grade is determined by your performance on an old school exam with no tech to help you. So outsourcing all of your problem solving and critical thinking skills to an AI will probably end in disaster.\nHaving ChatGPT work the problem sets for you is like showing up to a weight training class with a forklift. It will indeed lift the weight for you, but you’re wasting your time and money, and you will humiliate yourself",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -25,8 +47,8 @@
     "objectID": "syllabus/syllabus_policies.html#communication",
     "href": "syllabus/syllabus_policies.html#communication",
     "title": "Policies",
-    "section": "",
-    "text": "If you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum Ed Discussion. That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.\nIf you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructor directly (john.zito@duke.edu).\n\n\n\n\n\n\nNote\n\n\n\nYou can ask questions anonymously on Ed. The teaching team will still know your identity, but your peers will not.",
+    "section": "Communication",
+    "text": "Communication\nIf you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum Ed Discussion. That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.\nIf you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructor directly (john.zito@duke.edu). You should not really be emailing the TAs directly for any reason.\n\n\n\n\n\n\nNote\n\n\n\nYou can ask questions anonymously on Ed. The teaching team will still know your identity, but your peers will not.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -48,7 +70,7 @@
     "href": "syllabus/syllabus_policies.html#regrade-requests",
     "title": "Policies",
     "section": "Regrade requests",
-    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a regrade request in Gradescope. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nRegrade requests are not a mechanism for asking for clarification on feedback. Those questions should be brought to office hours;\nNo grades will be changed after the final exam has been administered on Saturday May 3;\n\n\n\n\n\n\n\nWarning\n\n\n\nA regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.",
+    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a regrade request in Gradescope. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nNo grades will be changed after the final exam has been administered on Friday December 12;\n\n\n\n\n\n\n\nWarning\n\n\n\nA regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -59,7 +81,7 @@
     "href": "syllabus/syllabus_policies.html#attendance",
     "title": "Policies",
     "section": "Attendance",
-    "text": "Attendance\nLive your life. Attendance is not strictly required for any of the class meetings. The responsibility lies with us to make class meetings sufficiently engaging and informative that you choose to attend. Having said that, success in this class and regular attendance are probably highly positively correlated. Furthermore, while lab attendance is not required, regular attendance is most likely the path of least resistance to earning full credit for the lab component of your final grade. The labs are designed so that they can be completed in one sitting more or less, and they are due at midnight the same day. So show up to lab, bang it out, and move on with your life.",
+    "text": "Attendance\nLive your life. Attendance is not strictly required for any of the class meetings. The responsibility lies with us to make class meetings sufficiently engaging and informative that you choose to attend. Having said that, success in this class and regular attendance are probably highly positively correlated. Furthermore, while lab attendance is not required, regular attendance is probably the path of least resistance to earning full credit for the lab component of your final grade. The labs are designed so that they can be completed in one sitting more or less, and they are due at midnight the same day. So show up to lab, bang it out, and move on with your life.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -77,33 +99,11 @@
     ]
   },
   {
-    "objectID": "syllabus/syllabus_policies.html#collaboration",
-    "href": "syllabus/syllabus_policies.html#collaboration",
-    "title": "Policies",
-    "section": "Collaboration",
-    "text": "Collaboration\nYou are encouraged to discuss and collaborate on problem sets and labs, but all submitted work must be entirely your own. You should not be sharing your solutions or copying other people’s work. This will be treated as plagiarism, and both the sharer and the recipient(s) will be penalized equally.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
-    "href": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
-    "title": "Policies",
-    "section": "Use of outside resources, including AI",
-    "text": "Use of outside resources, including AI\nIt basically comes down to this:\n\nDo your own math and write your own words, but write code however you want (as long as you cite your sources).\n\nYou are expected to produce all mathematical reasoning, arguments, and calculations yourself, and your write-ups should be original to you. You should not use ChatGPT or anything like it to solve math problems or write words for you. When it comes to code, you are free to use any outside resources (StackOverflow, ChatGPT, etc) to help you complete coding tasks as long as you cite where you obtained any code you directly use (or use as inspiration). Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\n\n\n\n\n\n\nCiting an LLM like ChatGPT\n\n\n\nHere are some general guidelines for citing AI-generated content. In this class, if you use something like ChatGPT to help you, you need to cite that by providing a direct link to the conversation you had with the bot, like this: https://chatgpt.com/share/677c4060-1d58-8008-8e47-5caa5556a825. You can generate such a link here:",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
     "objectID": "syllabus/syllabus_policies.html#duke-community-standard",
     "href": "syllabus/syllabus_policies.html#duke-community-standard",
     "title": "Policies",
     "section": "Duke Community Standard",
-    "text": "Duke Community Standard\nAs a student in this course, you have agreed to uphold the Duke Community Standard and the practices specific to this course.\n\n\nAny violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically results in a zero for the relevant portion or the entire assignment, and will be reported to the Office of Student Conduct & Community Standards for further action. Furthermore:\n\nIf a conduct violation results in a zero on a lab or problem set, that zero will not be dropped;\nIf a conduct violation results in a zero on an midterm, that zero will not be replaced with your final exam score;\nIf we discover that students are sharing and copying assignment solutions, all students involved will be penalized equally, the sharer the same as the recipients.",
+    "text": "Duke Community Standard\nAs a student in this course, you have agreed to uphold the Duke Community Standard and the practices specific to this course.\n\n\nAny violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically results in a zero for the relevant portion or the entire assignment, and will be reported to the Office of Student Conduct & Community Standards for further action. Furthermore:\n\nIf a conduct violation results in a zero on a lab or problem set, that zero will not be dropped;\nIf a conduct violation results in a zero on a midterm, that zero will not be replaced with your final exam score;\nIf we discover that students are sharing and copying assignment solutions, all students involved will be penalized equally, the sharers the same as the recipients.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -469,7 +469,7 @@
     "href": "psets/pset_0.html#problem-6",
     "title": "Problem Set 0",
     "section": "Problem 6",
-    "text": "Problem 6\nLet \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nHint\n\n\n\n\n\nAre you allowed to simply “plug in” \\(\\infty\\) for \\(x\\) and simplify the expression? If so, why is that allowed? If not, what do you have to do instead?",
+    "text": "Problem 6\nLet \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\n“[T]wice continuously differentiable” means that \\(f\\), \\(f'\\), and \\(f''\\) are all continuous functions at and around zero. A full credit solution must clearly explain how and why continuity is being used along the way.",
     "crumbs": [
       "Problem Sets",
       "Problem Set 0"
@@ -513,7 +513,7 @@
     "href": "syllabus/syllabus_overview.html",
     "title": "Course overview",
     "section": "",
-    "text": "We will spend roughly two thirds of the course on probability theory, and the last third on mathematical statistics. In probability, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon behave. In statistics, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. In this course, we will:\n\nlearn how to model random phenomena using a probability distribution, and learn how to extract from that distribution features and summaries that describe the phenomena’s “average” or “typical” behavior;\nlearn the mathematics necessary to pose and answer questions like: does this statistical procedure work? what does it mean for it to work? when does it work? how well does it work?\nwrite computer simulations to demonstrate the theoretical properties of probability distributions and statistical procedures;\nlearn how to analyze small, stylized datasets.\n\nPrerequisites: single-variable calculus.",
+    "text": "In probability, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon behave. In statistics, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. We will spend twelve weeks on the first, and then three on the second.\nPrerequisites: single-variable calculus.",
     "crumbs": [
       "Syllabus",
       "Overview"
@@ -524,7 +524,7 @@
     "href": "syllabus/syllabus_overview.html#description",
     "title": "Course overview",
     "section": "",
-    "text": "We will spend roughly two thirds of the course on probability theory, and the last third on mathematical statistics. In probability, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon behave. In statistics, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. In this course, we will:\n\nlearn how to model random phenomena using a probability distribution, and learn how to extract from that distribution features and summaries that describe the phenomena’s “average” or “typical” behavior;\nlearn the mathematics necessary to pose and answer questions like: does this statistical procedure work? what does it mean for it to work? when does it work? how well does it work?\nwrite computer simulations to demonstrate the theoretical properties of probability distributions and statistical procedures;\nlearn how to analyze small, stylized datasets.\n\nPrerequisites: single-variable calculus.",
+    "text": "In probability, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon behave. In statistics, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. We will spend twelve weeks on the first, and then three on the second.\nPrerequisites: single-variable calculus.",
     "crumbs": [
       "Syllabus",
       "Overview"
@@ -645,7 +645,7 @@
     "href": "syllabus/syllabus_assignments.html#exams-20-each",
     "title": "Assignments and grading",
     "section": "Exams (20% each)",
-    "text": "Exams (20% each)\nThese will be traditional, in-class, sit-down, written exams with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of a standard 8.5” x 11” piece of paper).\n\n\n\n\n\n\nNote\n\n\n\nIf you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.",
+    "text": "Exams (20% each)\nThere will be three exams. The dates, times, and locations are firm, so mark your calendar now:\n\nMidterm 1: when and where;\nMidterm 2: when and where;\nFinal: Friday December 12 from 9 AM - 12 PM in Physics 130.\n\nThese will be traditional, in-class, sit-down, written exams with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of a standard 8.5” x 11” piece of paper).\n\n\n\n\n\n\nNote\n\n\n\nIf you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
