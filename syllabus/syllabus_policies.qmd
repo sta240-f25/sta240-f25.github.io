@@ -4,24 +4,24 @@ title: "Policies"
 
 ## Collaboration
 
-You are strongly encouraged to discuss and help one another.
+You are *enthusiastically encouraged* to work together and help one another on labs and problem sets. I would much rather you consult your peers than some daft language model. What I ask is that you *acknowledge* your collaborators. So, at the end of each problem in your write-up, leave a comment like "Ursula, Ignatius and I worked together on this problem," or "Ethel explained to me how to do part b." You are not being judged based on your acknowledgements, and there is no penalty for getting "too much" help from others. I just want you to be thorough and honest. If you omit acknowledgements, I will assume you did your work solo, and hopefully the acknowledgements of your peers agree.
 
-Copying their write up. I believe that collaboration among you is very important, and I am prepared to be fairly liberal. Nevertheless, yada yada yada.
-
-Having said that, you should not be sharing
+Having said all of that, you should not be crassly sharing your solutions or brainlessly copying the work of others. This is plagiarism, and all involved will be penalized accordingly, sharers and recipients alike. The write-up you submit must be your own work.
 
 ## Use of outside resources, including AI
 
-I am still capable of writing a problem that ChatGPT can't do, but it is getting harder. If you do that, you are wasting your time and money. Furthermore, 60% of the final grade is determined by your performance on an old school exam with no tech to help you. So outsourcing all of your problem solving and critical thinking skills to an AI will probably end in disaster.
+There are at least two reasons you might seek outside resources:
 
+-   ✅ **Extra practice or alternative instruction**: Go crazy. Knock yourself out. Have a ball. The internet is saturated with good (and horrible) resources for learning this material, so if you find something that really resonates with you, have at it;
+-   ❌ **Doing the problems for you**: If you find a solution online, or ask a language model to generate one, and you copy it down and submit it as your own work, that is plagiarism and you will be penalized for it.
 
-Having ChatGPT work the problem sets for you is like showing up to a weight training class with a forklift. It will indeed lift the weight for you, but you're wasting your time and money, and you will humiliate yourself 
+If you use ChatGPT to solve all of the problems for you, it's like showing up to a strength training class with a forklift and using it to sling the weights around for you; it's a stupid waste of time and money, and you'll look like a fool. Furthermore, 60% of your final course grade is determined by your performance on old school, no-tech exams. As such, outsourcing all of your problem solving and critical thinking skills to an AI will probably end in humiliating disaster. If you don't wish to take that risk, then I suggest you avoid using language models to do the problems for you. 
 
 ## Communication
 
 If you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum Ed Discussion. That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.
 
-If you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructor directly (john.zito\@duke.edu). **You should not really be emailing the TAs directly for any reason.**
+If you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructor directly (john.zito\@duke.edu).
 
 ::: callout-note
 You can ask questions anonymously on Ed. The teaching team will still know your identity, but your peers will not.
