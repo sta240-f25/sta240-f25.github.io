@@ -4,7 +4,7 @@ title: "Course overview"
 
 ## Description
 
-In **probability**, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon behave. In **statistics**, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. We will spend twelve weeks on the first, and then three on the second. 
+In **probability**, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon typically behave. In **statistics**, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. We will spend twelve weeks on the first, and then three weeks on the second.
 
 **Prerequisites:** single-variable calculus.
 
