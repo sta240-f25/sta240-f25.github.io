@@ -6,7 +6,7 @@ auto-stretch: false
 
 ## Welcome to STA 240! {.large}
 
-::: {.columns .v-center-container}
+::::: {.columns .v-center-container}
 ::: {.column width="50%"}
 While you wait, please complete this brief questionnaire:
 :::
@@ -14,7 +14,7 @@ While you wait, please complete this brief questionnaire:
 ::: {.column width="50%"}
 ![](images/quiz_qr.png){fig-align="center"}
 :::
-:::
+:::::
 
 ## Teaching Team {.medium}
 
@@ -79,7 +79,7 @@ Most people start out thinking that the two doors are equally likely to contain 
 
 ## Example: the wisdom of crowds {.medium}
 
-::: columns
+::::: columns
 ::: {.column width="30%"}
 ![](images/weight.jpg)
 :::
@@ -87,7 +87,7 @@ Most people start out thinking that the two doors are equally likely to contain 
 ::: {.column width="70%"}
 At a 1906 country fair in Plymouth, 800 people participated in a contest to estimate the weight of an ox. Francis Galton observed that the median guess, 1207 lbs, was accurate within 1% of the true weight of 1198 lbs.
 :::
-:::
+:::::
 
 . . .
 
@@ -131,7 +131,7 @@ Only 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them 
 
 ## Reason 1: It's necessary. {.large-ish}
 
-::: {.columns .v-center-container}
+::::: {.columns .v-center-container}
 ::: {.column width="35%"}
 ![](images/dumb.jpg){width="90%"}
 :::
@@ -139,7 +139,7 @@ Only 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them 
 ::: {.column width="65%"}
 Human intuition and “common sense” about probability and statistics are often just flat out wrong, in silly and dangerous ways. Mere mortals require the scaffolding of mathematics to discipline our thinking.
 :::
-:::
+:::::
 
 # Reason 2: It's useful.
 
@@ -203,7 +203,7 @@ The metastasis of cancer cells is frequently modeled using something called a *b
 
 ## Reason 2: It's useful {.large}
 
-::: {.columns .v-center-container}
+::::: {.columns .v-center-container}
 ::: {.column width="45%"}
 ![](images/brazil.jpg)
 :::
@@ -211,7 +211,7 @@ The metastasis of cancer cells is frequently modeled using something called a *b
 ::: {.column width="55%"}
 Learning probability theory gives you serious wings to study large swathes of science and technology.
 :::
-:::
+:::::
 
 # Reason 3: It's beautiful.
 
@@ -235,7 +235,7 @@ Pure mathematics is, in its way, the poetry of logical ideas.
 
 ## Reason 3: It's beautiful {.large}
 
-::: {.columns .v-center-container}
+::::: {.columns .v-center-container}
 ::: {.column width="50%"}
 ![](images/agony.jpg){width="70%"}
 :::
@@ -243,7 +243,7 @@ Pure mathematics is, in its way, the poetry of logical ideas.
 ::: {.column width="50%"}
 Discerning elegant patterns within "random" behavior can be very aesthetically pleasing.
 :::
-:::
+:::::
 
 ## Why study mathematical probstat?
 
@@ -269,7 +269,7 @@ Sound good?
 
 ## Bookmark the course page! {.large}
 
-::: {.columns .v-center-container}
+::::: {.columns .v-center-container}
 ::: {.column width="30%"}
 ![](images/sta240qr.png){fig-align="center"}
 :::
@@ -277,7 +277,7 @@ Sound good?
 ::: {.column width="70%"}
 <https://sta240-s25.github.io/>
 :::
-:::
+:::::
 
 ## Final grade breakdown
 
@@ -395,7 +395,7 @@ This is essentially a pencil-and-paper math class. We will use all of the basic 
 
 . . .
 
-**REVIEW**: [Problem Set 0](https://sta240-s25.github.io/psets/pset_0.html) is due 12PM Thursday January 16.
+**REVIEW**: [Problem Set 0](https://sta240-f25.github.io/psets/pset_0.html) is due 12PM Thursday January 16.
 
 . . .
 
@@ -437,15 +437,15 @@ In probability, we *assumed* that the coin was fair, and then reasoned from that
 
 ![](images/probstat.png){fig-align="center" width="55%"}
 
-+-----------------+------------------------------------------------+
-| **Probability** | Forward problem\                               |
-|                 | Deductive\                                     |
-|                 | Reasons from rules to consequences             |
-+-----------------+------------------------------------------------+
-| **Statistics**  | Inverse problem\                               |
-|                 | Inductive\                                     |
-|                 | Observes consequences, and infers rules        |
-+-----------------+------------------------------------------------+
++-----------------+-----------------------------------------------+
+| **Probability** | Forward problem\                              |
+|                 | Deductive\                                    |
+|                 | Reasons from rules to consequences            |
++-----------------+-----------------------------------------------+
+| **Statistics**  | Inverse problem\                              |
+|                 | Inductive\                                    |
+|                 | Observes consequences, and infers rules       |
++-----------------+-----------------------------------------------+
 
 ## The philosophy of probability {.scrollable}
 
