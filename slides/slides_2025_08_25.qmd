@@ -4,7 +4,7 @@ format: revealjs
 auto-stretch: false
 ---
 
-## Welcome to STA 240!  {.large}
+## Welcome to STA 240! {.large}
 
 ::::: {.columns .v-center-container}
 ::: {.column width="50%"}
@@ -18,15 +18,14 @@ While you wait, please complete this brief questionnaire:
 :::
 :::::
 
-
 ## Teaching Team {.medium}
 
-| Mug                   | Name           | Role       | Office Hours  |
-|-----------------------|----------------|------------|---------------|
-|                       |                | TA         | TBD           |
-|                       |                | TA         | TBD           |
-|                       |                | TA         | TBD           |
-| ![](images/z.jpg){.c} | Zito, John     | Instructor | Tue 3pm - 5pm |
+| Mug                   | Name       | Role       | Office Hours  |
+|-----------------------|------------|------------|---------------|
+|                       |            | TA         | TBD           |
+|                       |            | TA         | TBD           |
+|                       |            | TA         | TBD           |
+| ![](images/z.jpg){.c} | Zito, John | Instructor | Tue 3pm - 5pm |
 
 # Why should you study the mathematics of probability and statistics?
 
@@ -458,15 +457,15 @@ In probability, we *assumed* that the coin was fair, and then reasoned from that
 
 ![](images/probstat.png){fig-align="center" width="55%"}
 
-+-----------------+----------------------------------------------+
-| **Probability** | Forward problem\                             |
-|                 | Deductive\                                   |
-|                 | Reasons from rules to consequences           |
-+-----------------+----------------------------------------------+
-| **Statistics**  | Inverse problem\                             |
-|                 | Inductive\                                   |
-|                 | Observe consequences, and *infer* rules      |
-+-----------------+----------------------------------------------+
++-----------------+---------------------------------------------+
+| **Probability** | Forward problem\                            |
+|                 | Deductive\                                  |
+|                 | Reasons from rules to consequences          |
++-----------------+---------------------------------------------+
+| **Statistics**  | Inverse problem\                            |
+|                 | Inductive\                                  |
+|                 | Observe consequences, and *infer* rules     |
++-----------------+---------------------------------------------+
 
 ## The philosophy of probability {.scrollable}
 
@@ -481,6 +480,7 @@ Two common interpretive perspectives:
 
 ::: callout-note
 ## You need both perspectives.
+
 Like the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.
 :::
 
@@ -488,5 +488,6 @@ Like the wave-particle duality of light, both are true and useful, but their coe
 
 ::: callout-important
 ## The math doesn't care.
+
 Regardless your interpretation, the mathematics of probability is the same.
 :::
