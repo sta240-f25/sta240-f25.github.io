@@ -58,15 +58,15 @@ Here is an example of what $h$ might look like in the special case where $\mu = 
 
 ```{r}
 #| label: silly
-#| echo: false
+#| code-fold: true
 #| fig-align: center
 #| fig-asp: 0.5
 m = 1
 s = 2
-x_vals <- seq(-6, 8, length.out = 500)
-y_vals <- exp(-0.5 * ((x_vals - m) / s)^2)
 par(mar = c(4, 4, 0.1, 4))
-plot(x_vals, y_vals, type = "l", xlab = "x", ylab = "h(x)")
+curve(exp(-0.5 * ((x - m) / s)^2), 
+      from = -6, to = 8, n = 500,
+      xlab = "x", ylab = "h(x)")
 ```
 
 Before you start doing any math, can you use the picture to guess what the answer will be?
@@ -104,10 +104,10 @@ $$
     .
 $$
 
-::: {.callout-warning}
+::: callout-warning
 ## Continuity?
 
-"[T]wice continuously differentiable" means that $f$, $f'$, and $f''$ are all continuous functions at and around zero. A full credit solution must clearly explain how and why continuity is being used along the way.
+"\[T\]wice continuously differentiable" means that $f$, $f'$, and $f''$ are all continuous functions at and around zero. A full credit solution must clearly explain how and why continuity is being used along the way.
 :::
 
 ## Problem 7
