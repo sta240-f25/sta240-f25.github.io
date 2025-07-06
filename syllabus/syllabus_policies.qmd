@@ -4,18 +4,18 @@ title: "Policies"
 
 ## Collaboration
 
-You are *enthusiastically encouraged* to work together and help one another on labs and problem sets. I would much rather you consult your peers than some daft language model. What I ask is that you *acknowledge* your collaborators. So, at the end of each problem in your write-up, leave a comment like "Ursula, Ignatius and I worked together on this problem," or "Ethel explained to me how to do part b." You are not being judged based on your acknowledgements, and there is no penalty for getting "too much" help from others. I just want you to be thorough and honest. If you omit acknowledgements, I will assume you did your work solo, and hopefully the acknowledgements of your peers agree.
+You are *enthusiastically encouraged* to work together and help one another on labs and problem sets. I would much rather you consult your peers than some daft language model. What I ask is that you *acknowledge* your collaborators. So, at the end of each problem in your write-up, leave a comment like "Ursula, Ignatius and I worked together on this problem," or "Ethel explained to me how to do part b." You are not being judged based on your acknowledgements, and there is no penalty for getting "too much" help from others. If you omit acknowledgements, I will assume you did your work solo, but if your classmates tell a different story, I will have questions. So long as you are thorough and honest, there will be no problems.
 
-Having said all of that, you should not be crassly sharing your solutions or brainlessly copying the work of others. This is plagiarism, and all involved will be penalized accordingly, sharers and recipients alike. The write-up you submit must be your own work.
+Having said all of that, you should not be crassly handing over your solutions to someone else or brainlessly copying the work of others. This is plagiarism, and all involved will earn a zero on the assignment, sharers and recipients alike. The write-up you submit must be your own work.
 
 ## Use of outside resources, including AI
 
 There are at least two reasons you might seek outside resources:
 
 -   ✅ **Extra practice or alternative instruction**: Go crazy. Knock yourself out. Have a ball. The internet is saturated with good (and horrible) resources for learning this material, so if you find something that really resonates with you, have at it;
--   ❌ **Doing the problems for you**: If you find a solution online, or ask a language model to generate one, and you copy it down and submit it as your own work, that is plagiarism and you will be penalized for it.
+-   ❌ **Doing the problems for you**: If you find a solution online, or ask a language model to generate one, and you copy it down and submit it as your own work, that is plagiarism. If we detect it, you will earn a zero for that part of your write-up.
 
-If you use ChatGPT to solve all of the problems for you, it's like showing up to a strength training class with a forklift and using it to sling the weights around for you; it's a stupid waste of time and money, and you'll look like a fool. Furthermore, 60% of your final course grade is determined by your performance on old school, no-tech exams. As such, outsourcing all of your problem solving and critical thinking skills to an AI will probably end in humiliating disaster. If you don't wish to take that risk, then I suggest you avoid using language models to do the problems for you. 
+If you use ChatGPT to solve all of the problems for you, it's like showing up to a strength training class with a forklift and using it to sling the weights around for you; it's a stupid waste of time and money, and you'll look like a fool. Furthermore, 60% of your final course grade is determined by your performance on old school, no-tech exams. As such, outsourcing all of your problem solving and critical thinking skills to an AI will probably end in humiliating disaster. If you don't wish to take that risk, then I suggest you avoid using language models to do the problems for you.
 
 ## Communication
 
