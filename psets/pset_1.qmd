@@ -1,7 +1,14 @@
 ---
 title: "Problem Set 1"
 subtitle: Due Monday September 15 at 3PM
+editor: 
+  mode: source
 ---
+
+::: callout-important
+## Under construction!
+This assignment is not finalized. 
+:::
 
 ## Problem 0
 
@@ -11,10 +18,9 @@ Recommend some music for us to listen to while we grade this.
 
 One day last semester I looked down at my phone and saw this screen:
 
-![](images/apple-weather.jpg){fig-align="center" width="50%"}
+![](images/apple-weather.jpg){fig-align="center" width="40%"}
 
 Interpret the three probabilities and explain how they could be compatible with one another.
-
 
 ## Submission
 
