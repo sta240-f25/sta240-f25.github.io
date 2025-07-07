@@ -1,0 +1,21 @@
+---
+title: "Problem Set 1"
+subtitle: Due Monday September 15 at 3PM
+---
+
+## Problem 0
+
+Recommend some music for us to listen to while we grade this.
+
+## Problem X
+
+One day last semester I looked down at my phone and saw this screen:
+
+![](images/apple-weather.jpg){fig-align="center" width="50%"}
+
+Interpret the three probabilities and explain how they could be compatible with one another.
+
+
+## Submission
+
+You are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.
