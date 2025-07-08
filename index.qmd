@@ -4,6 +4,8 @@ execute:
   freeze: false
 editor_options: 
   chunk_output_type: console
+editor: 
+  mode: source
 ---
 
 Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.
