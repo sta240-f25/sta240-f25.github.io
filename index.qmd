@@ -1,5 +1,5 @@
 ---
-title: "STA 240 Probability for Inference, Modeling, and Data Analysis"
+title: "STA 240 Probability for Statistical Inference"
 execute: 
   freeze: false
 editor_options: 
