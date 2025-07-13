@@ -1,5 +1,7 @@
 ---
 title: "Policies"
+editor: 
+  mode: source
 ---
 
 ## Collaboration
