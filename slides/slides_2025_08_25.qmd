@@ -384,25 +384,21 @@ If you wish to ask questions in writing...
 
 You should not really be emailing the TAs directly for any reason.
 
-## Collaboration (UPDATE!)
+## Collaboration
 
-You are encouraged to work together on labs and problem sets, but you should not copy off one another or share solutions. All submitted work must be entirely your own.
+You are *enthusiastically encouraged* to work together on labs and problem sets. You will learn a lot from each other! Two policies:
 
-::: callout-warning
-If we discover violations of this policy, everyone involved (sharers and recipients alike) will receive a zero on the assignment and be referred to the conduct office.
+- ✅ Acknowledge your collaborators: "Aloysius, Cybill, and I worked together on this problem;"
+- ❌ Do not outright share or copy solutions. All submitted work must be your own.
 
-A zero score resulting from a conduct violation *will not* be dropped or replaced.
-:::
+Violation of the second policy is plagiarism. Sharers and recipients alike are referred to the conduct office and receive zeros.
 
-## Use of outside resources, including AI (UPDATE!)
+## Use of outside resources, including AI
 
-Say it with me:
+> [Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.](https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
 
-> Do your own math and write your own words, but write code however you want (as long as you cite your sources).
-
--   You are generally discouraged from consulting outside resources. The textbooks, notes, and discussion forum should be self-contained and sufficient. If you find that this is false, let me know and we will get you what you need;
-
--   Hopefully our coding needs are sufficiently basic that you don't feel the need to use outside resources too often, but telling you not to use Google etc while coding is just insane. It's fine as long as you cite it.
+- If you find a problem solution online (or prompt an LLM to generate one) and submit it as your own work, that will obviously be considered plagiarism;
+- Otherwise, all outside resources are fair game for you to get extra practice and study from.
 
 ## What's the level of math here? {.scrollable}
 
