@@ -417,7 +417,7 @@ This is essentially a pencil-and-paper math class. We will use all of the basic 
 
 . . .
 
-**REVIEW**: [Problem Set 0](https://sta240-f25.github.io/psets/pset_0.html) is due 3PM Monday September 8.
+**REVIEW**: [Problem Set 0](https://sta240-f25.github.io/psets/pset_0.html) is due 5PM Friday September 5.
 
 . . .
 
@@ -489,7 +489,7 @@ Like the wave-particle duality of light, both are true and useful, but their coe
 . . .
 
 ::: callout-important
-## The math doesn't care.
+## The math doesn't care which you prefer.
 
 Regardless your interpretation, the mathematics of probability is the same.
 :::
