@@ -374,25 +374,25 @@
     "text": "Communication\nIf you wish to ask questions in writing…\n\nPost on Ed: about general course policies and content;\nEmail JZ directly: personal matters.\n\nYou should not really be emailing the TAs directly for any reason."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#collaboration-update",
-    "href": "slides/slides_2025_08_25.html#collaboration-update",
+    "objectID": "slides/slides_2025_08_25.html#collaboration",
+    "href": "slides/slides_2025_08_25.html#collaboration",
     "title": "Welcome to STA 240!",
-    "section": "Collaboration (UPDATE!)",
-    "text": "Collaboration (UPDATE!)\nYou are encouraged to work together on labs and problem sets, but you should not copy off one another or share solutions. All submitted work must be entirely your own.\n\n\n\n\n\n\nWarning\n\n\nIf we discover violations of this policy, everyone involved (sharers and recipients alike) will receive a zero on the assignment and be referred to the conduct office.\nA zero score resulting from a conduct violation will not be dropped or replaced."
+    "section": "Collaboration",
+    "text": "Collaboration\nYou are enthusiastically encouraged to work together on labs and problem sets. You will learn a lot from each other! Two policies:\n\n✅ Acknowledge your collaborators: “Aloysius, Cybill, and I worked together on this problem;”\n❌ Do not outright share or copy solutions. All submitted work must be your own.\n\nViolation of the second policy is plagiarism. Sharers and recipients alike are referred to the conduct office and receive zeros."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#use-of-outside-resources-including-ai-update",
-    "href": "slides/slides_2025_08_25.html#use-of-outside-resources-including-ai-update",
+    "objectID": "slides/slides_2025_08_25.html#use-of-outside-resources-including-ai",
+    "href": "slides/slides_2025_08_25.html#use-of-outside-resources-including-ai",
     "title": "Welcome to STA 240!",
-    "section": "Use of outside resources, including AI (UPDATE!)",
-    "text": "Use of outside resources, including AI (UPDATE!)\nSay it with me:\n\nDo your own math and write your own words, but write code however you want (as long as you cite your sources).\n\n\nYou are generally discouraged from consulting outside resources. The textbooks, notes, and discussion forum should be self-contained and sufficient. If you find that this is false, let me know and we will get you what you need;\nHopefully our coding needs are sufficiently basic that you don’t feel the need to use outside resources too often, but telling you not to use Google etc while coding is just insane. It’s fine as long as you cite it."
+    "section": "Use of outside resources, including AI",
+    "text": "Use of outside resources, including AI\n\nUsing ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.\n\n\nIf you find a problem solution online (or prompt an LLM to generate one) and submit it as your own work, that will obviously be considered plagiarism;\nOtherwise, all outside resources are fair game for you to get extra practice and study from."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#whats-the-level-of-math-here",
     "href": "slides/slides_2025_08_25.html#whats-the-level-of-math-here",
     "title": "Welcome to STA 240!",
     "section": "What’s the level of math here?",
-    "text": "What’s the level of math here?\nThis is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:\n\n\ndifferentiation (power rule, chain rule, all that)\nintegration (FTOC, improper integrals, substitution, by parts…)\nlimits and continuity (L’Hôpital’s rule, etc)\ninfinite series (Taylor series for \\(e^x\\), anyone?)\n\n\n\nREVIEW: Problem Set 0 is due 3PM Monday September 8.\n\n\n\n\n\n\n\n\nThis is not sink-or-swim.\n\n\nLab on Thursday August 28 is a review session and work period for this assignment."
+    "text": "What’s the level of math here?\nThis is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:\n\n\ndifferentiation (power rule, chain rule, all that)\nintegration (FTOC, improper integrals, substitution, by parts…)\nlimits and continuity (L’Hôpital’s rule, etc)\ninfinite series (Taylor series for \\(e^x\\), anyone?)\n\n\n\nREVIEW: Problem Set 0 is due 5PM Friday September 5.\n\n\n\n\n\n\n\n\nThis is not sink-or-swim.\n\n\nLab on Thursday August 28 is a review session and work period for this assignment."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#probability",
@@ -420,7 +420,7 @@
     "href": "slides/slides_2025_08_25.html#the-philosophy-of-probability",
     "title": "Welcome to STA 240!",
     "section": "The philosophy of probability",
-    "text": "The philosophy of probability\nTwo common interpretive perspectives:\n\n\nFrequentist: probability describes the long run frequency of repeatable events;\nSubjective: probability describes an observer’s subjective experience of uncertainty.\n\n\n\n\n\n\n\n\n\nYou need both perspectives.\n\n\nLike the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.\n\n\n\n\n\n\n\n\n\n\n\nThe math doesn’t care.\n\n\nRegardless your interpretation, the mathematics of probability is the same."
+    "text": "The philosophy of probability\nTwo common interpretive perspectives:\n\n\nFrequentist: probability describes the long run frequency of repeatable events;\nSubjective: probability describes an observer’s subjective experience of uncertainty.\n\n\n\n\n\n\n\n\n\nYou need both perspectives.\n\n\nLike the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.\n\n\n\n\n\n\n\n\n\n\n\nThe math doesn’t care which you prefer.\n\n\nRegardless your interpretation, the mathematics of probability is the same."
   },
   {
     "objectID": "psets/pset_1.html",
@@ -447,6 +447,69 @@
     "objectID": "psets/pset_1.html#submission",
     "href": "psets/pset_1.html#submission",
     "title": "Problem Set 1",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+  },
+  {
+    "objectID": "psets/pset_2.html",
+    "href": "psets/pset_2.html",
+    "title": "Problem Set 2",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "psets/pset_2.html#problem-0",
+    "href": "psets/pset_2.html#problem-0",
+    "title": "Problem Set 2",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "psets/pset_2.html#problem-x",
+    "href": "psets/pset_2.html#problem-x",
+    "title": "Problem Set 2",
+    "section": "Problem X",
+    "text": "Problem X"
+  },
+  {
+    "objectID": "psets/pset_2.html#submission",
+    "href": "psets/pset_2.html#submission",
+    "title": "Problem Set 2",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+  },
+  {
+    "objectID": "psets/pset_3.html",
+    "href": "psets/pset_3.html",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "psets/pset_3.html#problem-0",
+    "href": "psets/pset_3.html#problem-0",
+    "title": "Problem Set 3",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "psets/pset_3.html#problem-x",
+    "href": "psets/pset_3.html#problem-x",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\nDisease testing with symptoms"
+  },
+  {
+    "objectID": "psets/pset_3.html#problem-x-1",
+    "href": "psets/pset_3.html#problem-x-1",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\nMerlin"
+  },
+  {
+    "objectID": "psets/pset_3.html#submission",
+    "href": "psets/pset_3.html#submission",
+    "title": "Problem Set 3",
     "section": "Submission",
     "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
   },
