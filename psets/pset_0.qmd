@@ -1,6 +1,8 @@
 ---
 title: "Problem Set 0"
 subtitle: Due Friday September 5 at 5PM
+editor: 
+  mode: source
 ---
 
 > [Nature laughs at the difficulties of integration.](https://en.wikiquote.org/wiki/Pierre-Simon_Laplace)
