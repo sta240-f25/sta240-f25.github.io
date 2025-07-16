@@ -1,5 +1,7 @@
 ---
 title: "Assignments and grading"
+editor: 
+  mode: source
 ---
 
 Your final course grade will be calculated as follows:
@@ -35,7 +37,7 @@ These thresholds will not change, and they will be applied exactly. This means t
 
 ## Labs (10%)
 
-In lab every Thursday, you will complete a guided activity that introduces you to special topics, extensions, or applications of the latest course material. Along the way, we will teach you how to implement some of the ideas from the course in the `R` programming language. Ideally you should be able to finish the activity by the end of your lab period, but in any case, you must submit your lab work by 11:59 ET PM that same day. 
+In lab every Thursday, you will complete a guided activity that introduces you to special topics, extensions, or applications of the latest course material. Along the way, we will teach you how to implement some of the ideas from the course in the `R` programming language. Ideally you should be able to finish the activity by the end of your lab period, but in any case, you must submit your lab work by 11:59 ET PM that same day.
 
 Each lab assignment will be graded on the following scale:
 
@@ -45,6 +47,7 @@ Each lab assignment will be graded on the following scale:
 
 ::: callout-note
 ## Grace
+
 Your two lowest lab scores will be dropped at the end of the semester.
 :::
 
@@ -54,6 +57,7 @@ Mathematics is like everything else in life; if you practice, you improve. As su
 
 ::: callout-note
 ## Grace
+
 Your lowest problem set score will be dropped at the end of the semester.
 :::
 
@@ -69,10 +73,12 @@ These will be old school, pencil-and-paper, in-class exams. The only resources y
 
 ::: callout-note
 ## Grace
+
 If you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.
 :::
 
 ::: callout-warning
 ## No make-up exams
+
 If you are absent from one of the midterms for whatever reason, there will not be a make-up. Pursuant to the above policy, we will simply replace the missed midterm score with the final exam score. If you miss the final exam, you get a zero unless you have a [Dean's Excuse](https://trinity.duke.edu/undergraduate/academic-policies/final-exams-scheduling-conflicts-and-absences).
 :::
