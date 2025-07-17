@@ -67,6 +67,10 @@ LINK TO GOOGLE SHEET.
 
 ![](images/birthday_prob.png)
 
+## Any matches today?
+
+
+
 ## Example: the Monty Hall problem
 
 Let's play: <https://montyhall.io/>
@@ -237,7 +241,7 @@ Learning probability theory gives you serious wings to study large swathes of sc
 
 # Reason 3: It's beautiful.
 
-## Take it away, boys...
+## Good ol' Bert and Al
 
 ::: callout-tip
 ## Bertrand Russell, [*Mysticism and Logic and Other Essays*](https://en.wikisource.org/wiki/Mysticism_and_Logic_and_Other_Essays/Chapter_04) (1917)
