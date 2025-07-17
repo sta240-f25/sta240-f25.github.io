@@ -1,0 +1,23 @@
+---
+title: "midterm-1"
+format: html
+editor: 
+  mode: source
+---
+
+Midterm Exam 1 will take place on **Thursday October 9** during your lab section. There will be XX
+problems, and they will break down as follows:
+
+0. 
+1.
+2.
+
+Below are practice problems for each of these areas, as well as guidance about what course materials to refer to if you want more review on a particular topic.
+
+# Probability spaces
+
+# Counting
+
+# Conditional probability 
+
+# Discrete random variables
