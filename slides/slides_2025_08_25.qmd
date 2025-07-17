@@ -466,6 +466,27 @@ In probability, we *assumed* that the coin was fair, and then reasoned from that
 |                 | Observe consequences, and *infer* rules     |
 +-----------------+---------------------------------------------+
 
+## Forward problem versus inverse problem
+
+- **Forward**: read the rulebook, and then play a game of chess;
+- **Inverse**: watch a chess match, and based on the players' behavior, try to guess the rules.
+
+## Forward problem versus inverse problem
+
+- *Differentiation* is a forward problem. You grab the function, and you take the darn derivative;
+
+- *Integration* is an inverse problem. You have to muse "If this is the derivative, then what was the original function?"
+
+$$
+\text{FTOC:}\quad\int_a^bF'(x)\,\text{d} x=F(b)-F(a).
+$$
+
+## Inverse problems are tricky!
+
+> If this is the answer, then what was the question?
+
+Like all inverse problems, you will find that statistics is subtler, less well-defined, and less straightforward than probability.
+
 ## The philosophy of probability {.scrollable}
 
 . . .
