@@ -255,6 +255,10 @@ Pure mathematics is, in its way, the poetry of logical ideas.
 
 ![](images/galton.gif){fig-align="center"}
 
+## XXX
+
+Cathedral!
+
 ## Reason 3: It's beautiful {.large}
 
 ::::: {.columns .v-center-container}
@@ -455,6 +459,8 @@ In probability, we *assumed* that the coin was fair, and then reasoned from that
 ## Probability and statistics {.scrollable}
 
 ![](images/probstat.png){fig-align="center" width="55%"}
+
+. . .
 
 +-----------------+---------------------------------------------+
 | **Probability** | Forward problem\                            |
