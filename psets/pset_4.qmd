@@ -23,6 +23,27 @@ b. What is the probability mass function of $X$?
 c. Sketch the CDF of $X$.
 d. Compute $E(X)$.
 
+## Problem X
+
+King Elessar summons the wizard Gandalf to court, seeking his counsel. An evil plague has been sweeping the army barracks and incapacitating the soldiers. King Elessar asks Gandalf if he can devise a test for the disease that is 100% sensitive *and* 100% specific. Gandalf says that this can be done with a blood test, but they are very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan that he claims will cost less than 500 gold pieces:
+
+1. Take a blood sample from each of the 1000 knights;
+2. Split each of these samples into two parts;
+3. Take one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.
+4. Test each of those mixed samples;
+5. A few things could happen:
+    - If the test gives a negative result, we know all of the original ten samples are clear, and we can move on;
+    - If the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten knights. We can then identify which knights are positive.
+    
+Gandalf finishes by saying "I expect sixty of the mixed samples to be negative. For the other forty samples, I expect the results to be negative, and hence we will have to test all four hundred of the original samples. This gives a total cost of 460 gold pieces."
+
+a. What disease prevalence is Gandalf implicitly assuming?
+b. Can Gandalf revise his scheme to reduce the expected cost even more?
+
+## Problem X
+
+election thing
+
 ## Submission
 
 You are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.
