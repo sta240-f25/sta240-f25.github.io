@@ -354,8 +354,8 @@ No late work will be accepted unless you request an extension in advance by e-ma
 
 Traditional, in-class, written exams:
 
--   **Midterm 1**: ???;
--   **Midterm 2**: ???;
+-   **Midterm 1**: Thursday October 9 *in your lab*;
+-   **Midterm 2**: Thursday November 13 *in your lab*;
 -   **Final Exam**: Friday December 12.
 
 ::: callout-note
@@ -398,7 +398,8 @@ Violation of the second policy is plagiarism. Sharers and recipients alike are r
 > [Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.](https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
 
 - If you find a problem solution online (or prompt an LLM to generate one) and submit it as your own work, that will obviously be considered plagiarism;
-- Otherwise, all outside resources are fair game for you to get extra practice and study from.
+- Otherwise, all outside resources are fair game for you to study and get extra practice;
+- If you outsource all of your *thinking* to a language model, you will probably tank every exam. Good luck!
 
 ## What's the level of math here? {.scrollable}
 
@@ -466,6 +467,8 @@ In probability, we *assumed* that the coin was fair, and then reasoned from that
 +-----------------+---------------------------------------------+
 
 ## The philosophy of probability {.scrollable}
+
+. . .
 
 Two common interpretive perspectives:
 
