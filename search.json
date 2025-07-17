@@ -1,146 +1,421 @@
 [
   {
-    "objectID": "syllabus/syllabus_team.html",
-    "href": "syllabus/syllabus_team.html",
-    "title": "Teaching team",
+    "objectID": "exams/midterm-1.html",
+    "href": "exams/midterm-1.html",
+    "title": "midterm-1",
     "section": "",
-    "text": "Mug\nName\nRole\nOffice Hours\n\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\nZito, John\nInstructor\nTue 3:00 PM - 5:00 PM\nOld Chem 207",
-    "crumbs": [
-      "Syllabus",
-      "Teaching team"
-    ]
+    "text": "Midterm Exam 1 will take place on Thursday October 9 during your lab section. There will be XX problems, and they will break down as follows:\n\n\n\n\n\nBelow are practice problems for each of these areas, as well as guidance about what course materials to refer to if you want more review on a particular topic.\n\nProbability spaces\n\n\nCounting\n\n\nConditional probability\n\n\nDiscrete random variables"
   },
   {
-    "objectID": "syllabus/syllabus_policies.html",
-    "href": "syllabus/syllabus_policies.html",
-    "title": "Policies",
+    "objectID": "syllabus/syllabus_assignments.html",
+    "href": "syllabus/syllabus_assignments.html",
+    "title": "Assignments and grading",
     "section": "",
-    "text": "You are enthusiastically encouraged to work together and help one another on labs and problem sets. I would much rather you consult your peers than some daft language model. What I ask is that you acknowledge your collaborators. So, at the end of each problem in your write-up, leave a comment like “Ursula, Ignatius and I worked together on this problem,” or “Ethel explained to me how to do part b.” You are not being judged based on your acknowledgements, and there is no penalty for getting “too much” help from others. If you omit acknowledgements, I will assume you did your work solo, but if your classmates tell a different story, I will have questions. So long as you are thorough and honest, there will be no problems.\nHaving said all of that, you should not be crassly handing over your solutions to someone else or brainlessly copying the work of others. This is plagiarism, and all involved will earn a zero on the assignment, sharers and recipients alike. The write-up you submit must be your own work.",
+    "text": "Your final course grade will be calculated as follows:\nYour final letter grade will be determined based on the usual thresholds:",
     "crumbs": [
       "Syllabus",
-      "Policies"
+      "Assignments and grading"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_policies.html#collaboration",
-    "href": "syllabus/syllabus_policies.html#collaboration",
-    "title": "Policies",
+    "objectID": "syllabus/syllabus_assignments.html#labs-10",
+    "href": "syllabus/syllabus_assignments.html#labs-10",
+    "title": "Assignments and grading",
+    "section": "Labs (10%)",
+    "text": "Labs (10%)\nIn lab every Thursday, you will complete a guided activity that introduces you to special topics, extensions, or applications of the latest course material. Along the way, we will teach you how to implement some of the ideas from the course in the R programming language. Ideally you should be able to finish the activity by the end of your lab period, but in any case, you must submit your lab work by 11:59 ET PM that same day.\nEach lab assignment will be graded on the following scale:\n\n1.0: a complete, good faith attempt at every part of every problem;\n0.5: partially complete;\n0.0: no submission, or mostly incomplete.\n\n\n\n\n\n\n\nGrace\n\n\n\nYour two lowest lab scores will be dropped at the end of the semester.",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_assignments.html#problem-sets-30",
+    "href": "syllabus/syllabus_assignments.html#problem-sets-30",
+    "title": "Assignments and grading",
+    "section": "Problem Sets (30%)",
+    "text": "Problem Sets (30%)\nMathematics is like everything else in life; if you practice, you improve. As such, the problem sets are really the heart of the course. They will mostly consist of pencil-and-paper math problems, but sometimes you will be asked to do some coding. You may compose you solutions however you like (scan or photograph written work, LaTeX, Quarto, handwriting capture on a tablet, whatever) so long as you ultimately upload a single .pdf file to Gradescope.\n\n\n\n\n\n\nGrace\n\n\n\nYour lowest problem set score will be dropped at the end of the semester.",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_assignments.html#exams-20-each",
+    "href": "syllabus/syllabus_assignments.html#exams-20-each",
+    "title": "Assignments and grading",
+    "section": "Exams (20% each)",
+    "text": "Exams (20% each)\nThere will be three exams. The dates, times, and locations are firm, so mark your calendar now:\n\nMidterm 1: when and where;\nMidterm 2: when and where;\nFinal: Friday December 12 from 9 AM - 12 PM in Physics 130.\n\nThese will be old school, pencil-and-paper, in-class exams. The only resources you are allowed are a simple four-function calculator (which you won’t actually need) and a note sheet that you and only you have prepared (both sides of a standard 8.5” x 11” piece of paper).\n\n\n\n\n\n\nGrace\n\n\n\nIf you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.\n\n\n\n\n\n\n\n\nNo make-up exams\n\n\n\nIf you are absent from one of the midterms for whatever reason, there will not be a make-up. Pursuant to the above policy, we will simply replace the missed midterm score with the final exam score. If you miss the final exam, you get a zero unless you have a Dean’s Excuse.",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_resources.html",
+    "href": "syllabus/syllabus_resources.html",
+    "title": "University resources",
     "section": "",
-    "text": "You are enthusiastically encouraged to work together and help one another on labs and problem sets. I would much rather you consult your peers than some daft language model. What I ask is that you acknowledge your collaborators. So, at the end of each problem in your write-up, leave a comment like “Ursula, Ignatius and I worked together on this problem,” or “Ethel explained to me how to do part b.” You are not being judged based on your acknowledgements, and there is no penalty for getting “too much” help from others. If you omit acknowledgements, I will assume you did your work solo, but if your classmates tell a different story, I will have questions. So long as you are thorough and honest, there will be no problems.\nHaving said all of that, you should not be crassly handing over your solutions to someone else or brainlessly copying the work of others. This is plagiarism, and all involved will earn a zero on the assignment, sharers and recipients alike. The write-up you submit must be your own work.",
+    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
     "crumbs": [
       "Syllabus",
-      "Policies"
+      "University resources"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
-    "href": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
-    "title": "Policies",
-    "section": "Use of outside resources, including AI",
-    "text": "Use of outside resources, including AI\nThere are at least two reasons you might seek outside resources:\n\n✅ Extra practice or alternative instruction: Go crazy. Knock yourself out. Have a ball. The internet is saturated with good (and horrible) resources for learning this material, so if you find something that really resonates with you, have at it;\n❌ Doing the problems for you: If you find a solution online, or ask a language model to generate one, and you copy it down and submit it as your own work, that is plagiarism. If we detect it, you will earn a zero for that part of your write-up.\n\nIf you use ChatGPT to solve all of the problems for you, it’s like showing up to a strength training class with a forklift and using it to sling the weights around for you; it’s a stupid waste of time and money, and you’ll look like a fool. Furthermore, 60% of your final course grade is determined by your performance on old school, no-tech exams. As such, outsourcing all of your problem solving and critical thinking skills to an AI will probably end in humiliating disaster. If you don’t wish to take that risk, then I suggest you avoid using language models to do the problems for you.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_policies.html#communication",
-    "href": "syllabus/syllabus_policies.html#communication",
-    "title": "Policies",
-    "section": "Communication",
-    "text": "Communication\nIf you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum Ed Discussion. That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.\nIf you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructor directly (john.zito@duke.edu).\n\n\n\n\n\n\nNote\n\n\n\nYou can ask questions anonymously on Ed. The teaching team will still know your identity, but your peers will not.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_policies.html#late-work-and-extensions",
-    "href": "syllabus/syllabus_policies.html#late-work-and-extensions",
-    "title": "Policies",
-    "section": "Late work and extensions",
-    "text": "Late work and extensions\nNo late work will be accepted unless you request an extension in advance by e-mailing the instructor directly (john.zito@duke.edu). All reasonable requests will be entertained, but extensions will not be long.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_policies.html#regrade-requests",
-    "href": "syllabus/syllabus_policies.html#regrade-requests",
-    "title": "Policies",
-    "section": "Regrade requests",
-    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a regrade request in Gradescope. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nNo grades will be changed after the final exam has been administered on Friday December 12;\n\n\n\n\n\n\n\nWarning\n\n\n\nA regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_policies.html#attendance",
-    "href": "syllabus/syllabus_policies.html#attendance",
-    "title": "Policies",
-    "section": "Attendance",
-    "text": "Attendance\nLive your life. Attendance is not strictly required for any of the class meetings. The responsibility lies with us to make class meetings sufficiently engaging and informative that you choose to attend. Having said that, success in this class and regular attendance are probably highly positively correlated. Furthermore, while lab attendance is not required, regular attendance is probably the path of least resistance to earning full credit for the lab component of your final grade. The labs are designed so that they can be completed in one sitting more or less, and they are due at midnight the same day. So show up to lab, bang it out, and move on with your life.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_policies.html#accommodations",
-    "href": "syllabus/syllabus_policies.html#accommodations",
-    "title": "Policies",
-    "section": "Accommodations",
-    "text": "Accommodations\nIf you need accommodations for this class, you will need to register with the Student Disability Access Office (SDAO) and provide them with documentation related to your needs. SDAO will work with you to determine what accommodations are appropriate for your situation. Please note that accommodations are not retroactive and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me. Please contact SDAO for more information: sdao@duke.edu or access.duke.edu.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_policies.html#duke-community-standard",
-    "href": "syllabus/syllabus_policies.html#duke-community-standard",
-    "title": "Policies",
-    "section": "Duke Community Standard",
-    "text": "Duke Community Standard\nAs a student in this course, you have agreed to uphold the Duke Community Standard and the practices specific to this course.\n\n\nAny violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically results in a zero for the relevant portion or the entire assignment, and will be reported to the Office of Student Conduct & Community Standards for further action. Furthermore:\n\nIf a conduct violation results in a zero on a lab or problem set, that zero will not be dropped;\nIf a conduct violation results in a zero on a midterm, that zero will not be replaced with your final exam score;\nIf we discover that students are sharing and copying assignment solutions, all students involved will be penalized equally, the sharers the same as the recipients.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_materials.html",
-    "href": "syllabus/syllabus_materials.html",
-    "title": "Course materials",
+    "objectID": "syllabus/syllabus_resources.html#course-costs",
+    "href": "syllabus/syllabus_resources.html#course-costs",
+    "title": "University resources",
     "section": "",
-    "text": "You are not required to purchase a textbook for this class. However, if you wish to follow along with one, these are all good options:\n\n[Ross] A First Course in Probability by Sheldon Ross;\n[HTZ] Probability and Statistical Inference by Robert Hogg, Elliot Tanis, and Dale Zimmerman;\n[DS] Probability and Statistics by Morris Degroot and Mark Schervish;\n[Wass] All of Statistics by Larry Wasserman.\n\nIn the PREPARE column of the course schedule, I will indicate which parts of a book correspond to the lectures.",
+    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
     "crumbs": [
       "Syllabus",
-      "Materials"
+      "University resources"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_materials.html#textbooks",
-    "href": "syllabus/syllabus_materials.html#textbooks",
-    "title": "Course materials",
+    "objectID": "syllabus/syllabus_resources.html#tech-support",
+    "href": "syllabus/syllabus_resources.html#tech-support",
+    "title": "University resources",
+    "section": "Tech support",
+    "text": "Tech support\nContact the Duke OIT Service Desk at oit.duke.edu/help.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_resources.html#academic-support",
+    "href": "syllabus/syllabus_resources.html#academic-support",
+    "title": "University resources",
+    "section": "Academic support",
+    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact ARC@duke.edu, 919-684-5917.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_resources.html#accessibility",
+    "href": "syllabus/syllabus_resources.html#accessibility",
+    "title": "University resources",
+    "section": "Accessibility",
+    "text": "Accessibility\nIf any portion of the course is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nThe Student Disability Access Office (SDAO) is available to ensure that students can engage with their courses and related assignments. Students should contact the SDAO to request or update accommodations under these circumstances.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_resources.html#mental-health-and-well-being",
+    "href": "syllabus/syllabus_resources.html#mental-health-and-well-being",
+    "title": "University resources",
+    "section": "Mental health and well-being",
+    "text": "Mental health and well-being\nDuke is committed to holistic student well-being, including mental, emotional, and physical health. The university offers resources to help students manage daily stress, encourage intentional self-care, and access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities and your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of well-being, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can reach the DukeReach team at dukereach@duke.edu.\nCounseling and Psychological Services (CAPS): CAPS services include individual and group counseling services, psychiatric services, and workshops. CAPS also provides referrals to off-campus resources for specialized care. You can reach CAPS at (919) 660-1000.\nTimelyCare: TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling.\nBC Fellows for Healthy Relationship: The BC Fellows meet with students individually and in groups, supporting the development of healthy relationships and building meaningful community in all areas of a student’s life.\nDukeLine: Students who want to connect anonymously with a Peer Coach can text 984-230-4888 from 5 to 11 p.m. daily. DukeLine offers in-the-moment anonymous, non-emergency text support from a peer.\nDuWell: DuWell provides Moments of Mindfulness (stress management and resilience building) and meditation programming (Koru workshop) to assist students in developing a daily emotional well-being practice. All are welcome, and no experience is necessary. You can reach DuWell at (919) 681-8421.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_overview.html",
+    "href": "syllabus/syllabus_overview.html",
+    "title": "Course overview",
     "section": "",
-    "text": "You are not required to purchase a textbook for this class. However, if you wish to follow along with one, these are all good options:\n\n[Ross] A First Course in Probability by Sheldon Ross;\n[HTZ] Probability and Statistical Inference by Robert Hogg, Elliot Tanis, and Dale Zimmerman;\n[DS] Probability and Statistics by Morris Degroot and Mark Schervish;\n[Wass] All of Statistics by Larry Wasserman.\n\nIn the PREPARE column of the course schedule, I will indicate which parts of a book correspond to the lectures.",
+    "text": "In probability, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon typically behave. In statistics, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. We will spend twelve weeks on the first, and then three weeks on the second.\nPrerequisites: single-variable calculus.",
     "crumbs": [
       "Syllabus",
-      "Materials"
+      "Overview"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_materials.html#technology",
-    "href": "syllabus/syllabus_materials.html#technology",
-    "title": "Course materials",
-    "section": "Technology",
-    "text": "Technology\nLecture will largely be a low tech affair: pencil and paper should be sufficient most of the time. You should always plan to bring a laptop or tablet device to lab. In general, you will need access to a device with internet so that you can use the following:\n\nThis course page that you are on right now;\nR/RStudio via the Duke Container Manager;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.",
+    "objectID": "syllabus/syllabus_overview.html#description",
+    "href": "syllabus/syllabus_overview.html#description",
+    "title": "Course overview",
+    "section": "",
+    "text": "In probability, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon typically behave. In statistics, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. We will spend twelve weeks on the first, and then three weeks on the second.\nPrerequisites: single-variable calculus.",
     "crumbs": [
       "Syllabus",
-      "Materials"
+      "Overview"
     ]
+  },
+  {
+    "objectID": "syllabus/syllabus_overview.html#meetings",
+    "href": "syllabus/syllabus_overview.html#meetings",
+    "title": "Course overview",
+    "section": "Meetings",
+    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nOld Chem 116\nMoWe 3:05 PM - 4:20 PM\nJohn\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nTh 1:25 PM - 2:40 PM\n????\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nTh 3:05 PM - 4:20 PM\n????",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 240 Probability for Statistical Inference",
+    "section": "",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nMon, Aug 25\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\n\n\n\n\n\n\n\n\nWed, Aug 27\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\n\n\nIntro Survey @ 3 PM\n\n\n\n\nThu, Aug 28\n\n\n💻 Lab 0 (calculus review)\n\n\n\n\n\n\n2\nMon, Sep 1\n\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\n\n\nWed, Sep 3\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\n\n\n\n\n\n\n\nThu, Sep 4\n\n\n💻 Lab 1\n\n\nLab 1 @ 11:59 PM\n\n\n\n\nFri, Sep 5\n\n\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nWed, Sep 10\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nThu, Sep 11\n\n\n💻 Lab 2\n\n\nLab 2 @ 11:59 PM\n\n\n\n\nFri, Sep 12\n\n\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\nDS: 2\n🧑‍🏫 Conditional Probability\nPlay around!  Play around some more!\n\n\n\n\n\n\nWed, Sep 17\nDS: 2\n🧑‍🏫 Conditional Probability\n\n\n\n\n\n\n\n\nThu, Sep 18\n\n\n💻 Lab 3\n\n\nLab 3 @ 11:59 PM\n\n\n\n\nFri, Sep 19\n\n\n\n\n\n\nPSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nWed, Sep 24\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nThu, Sep 25\n\n\n💻 Lab 4\n\n\nLab 4 @ 11:59 PM\n\n\n\n\nFri, Sep 26\n\n\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nWed, Oct 1\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nThu, Oct 2\n\n\n💻 Lab 5\n\n\nLab 5 @ 11:59 PM\n\n\n\n\nFri, Oct 3\n\n\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nWed, Oct 8\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nThu, Oct 9\n\n\n📝 Midterm 1\n\n\n\n\n\n\n8\nMon, Oct 13\n\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\n\n\nWed, Oct 15\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nThu, Oct 16\n\n\n💻 Lab 6\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nWed, Oct 22\n\n\n🧑‍🏫 Jointly Discrete\n\n\n\n\n\n\n\n\nThu, Oct 23\n\n\n💻 Lab 7\n\n\nLab 7 @ 11:59 PM\n\n\n\n\nFri, Oct 24\n\n\n\n\n\n\nPSET 5 @ 5PM\n\n\n10\nMon, Oct 27\n\n\n🧑‍🏫 Jointly Continuous\n\n\n\n\n\n\n\n\nWed, Oct 29\n\n\n🧑‍🏫 Hierarchies\n\n\n\n\n\n\n\n\nThu, Oct 30\n\n\n💻 Lab 8\n\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\n\n\n\nWed, Nov 5\n\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\n\n\n\nThu, Nov 6\n\n\n💻 Lab 9\n\n\nLab 9 @ 11:59 PM\n\n\n\n\nFri, Nov 7\n\n\n\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\n\n\n\nWed, Nov 12\n\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\n\n\n\nThu, Nov 13\n\n\n📝 Midterm 2\n\n\n\n\n\n\n13\nMon, Nov 17\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nWed, Nov 19\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nThu, Nov 20\n\n\n💻 Lab 10\n\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\n\n\n\nWed, Nov 26\n\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\n\n\nThu, Nov 27\n\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n\n15\nMon, Dec 1\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nWed, Dec 3\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nThu, Dec 4\n\n\n💻 Lab 11\n\n\nLab 11 @ 11:59 PM\n\n\n\n\nFri, Dec 5\n\n\n\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n\n📝 Final (9AM - 12PM)",
+    "crumbs": [
+      "Syllabus",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "psets/pset_0.html",
+    "href": "psets/pset_0.html",
+    "title": "Problem Set 0",
+    "section": "",
+    "text": "Nature laughs at the difficulties of integration.\nThis is ostensibly calculus review, but each problem is a piece of probability in disguise. We will illuminate these connections throughout the semester, and I will refer to Problem Set 0 often. Stay tuned!",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "psets/pset_0.html#problem-0",
+    "href": "psets/pset_0.html#problem-0",
+    "title": "Problem Set 0",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "psets/pset_0.html#problem-1",
+    "href": "psets/pset_0.html#problem-1",
+    "title": "Problem Set 0",
+    "section": "Problem 1",
+    "text": "Problem 1\nExplain why this is horrific notation:\n\\[\n    \\int_0^x f(x)\\,\\textrm{d} x.\n\\]",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "psets/pset_0.html#problem-2",
+    "href": "psets/pset_0.html#problem-2",
+    "title": "Problem Set 0",
+    "section": "Problem 2",
+    "text": "Problem 2\nSimplify this:\n\\[\n\\ln\\left(e^{a_1}e^{a_2}e^{a_3}\\cdots e^{a_n}\\right).\n\\]",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "psets/pset_0.html#problem-3",
+    "href": "psets/pset_0.html#problem-3",
+    "title": "Problem Set 0",
+    "section": "Problem 3",
+    "text": "Problem 3\nAssume \\(\\lambda&gt;0\\) is a constant and compute\n\\[\n    \\sum\\limits_{n=0}^\\infty n \\frac{\\lambda^n}{n!}e^{-\\lambda}\n    .\n\\]",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "psets/pset_0.html#problem-4",
+    "href": "psets/pset_0.html#problem-4",
+    "title": "Problem Set 0",
+    "section": "Problem 4",
+    "text": "Problem 4\nHere is a very silly function:\n\\[\n    h(x)\n    =\n    \\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\n    ,\\quad\n    -\\infty&lt;x&lt;\\infty\n    .\n\\]\nTreat \\(-\\infty&lt;\\mu&lt;\\infty\\) and \\(\\sigma&gt;0\\) as constants and compute the value(s) of \\(x\\) at which \\(h\\) has inflection points.\n\n\n\n\n\n\nHint\n\n\n\n\n\nHere is an example of what \\(h\\) might look like in the special case where \\(\\mu = 1\\) and \\(\\sigma=2\\):\n\n\nCode\nm = 1\ns = 2\npar(mar = c(4, 4, 0.1, 4))\ncurve(exp(-0.5 * ((x - m) / s)^2), \n      from = -6, to = 8, n = 500,\n      xlab = \"x\", ylab = \"h(x)\")\n\n\n\n\n\n\n\n\n\nBefore you start doing any math, can you use the picture to guess what the answer will be?",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "psets/pset_0.html#problem-5",
+    "href": "psets/pset_0.html#problem-5",
+    "title": "Problem Set 0",
+    "section": "Problem 5",
+    "text": "Problem 5\nHere is another inordinately silly function:\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\textrm{d} y,\\quad x&gt;0.\n\\]\nProve that \\(\\Gamma(x+1)=x\\Gamma(x)\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nStart on the left-hand side by writing out \\(\\Gamma(x+1)\\) and evaluating the integral by parts.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "psets/pset_0.html#problem-6",
+    "href": "psets/pset_0.html#problem-6",
+    "title": "Problem Set 0",
+    "section": "Problem 6",
+    "text": "Problem 6\nLet \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\n“[T]wice continuously differentiable” means that \\(f\\), \\(f'\\), and \\(f''\\) are all continuous functions at and around zero. A full credit solution must clearly explain how and why continuity is being used along the way.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "psets/pset_0.html#problem-7",
+    "href": "psets/pset_0.html#problem-7",
+    "title": "Problem Set 0",
+    "section": "Problem 7",
+    "text": "Problem 7\nConsider this integral:\n\\[\n    \\int_2^\\infty\n    \\frac{1}{x(\\ln x)^p}\\textrm{d} x\n    .\n\\]\n\nUse a computer to create a single plot with many lines, each graphing the integrand for a different value of \\(p\\). Consider \\(p\\) equal to -2, -1.5, -1, 0, 1, and 5, and make the \\(x\\)-axis of your plot run from 2 to 15.\nShow that \\(\\lim_{x\\to\\infty}\\frac{1}{x(\\ln x)^p}=0\\) for all values of \\(-\\infty&lt;p&lt;\\infty\\).\nFor what values of \\(p\\) does the integral converge? When it does converge, what is its value?\nConsult the picture you created in part (a), and write a few sentences explaining conceptually why the integral converges for some values of \\(p\\) but not others.\n\n\n\n\n\n\n\n“Use a computer”\n\n\n\nThis is deliberately vague. You are welcome to use any tool you are familiar with: graphing calculator, GeoGebra, Desmos, R, Matlab, Mathematica, WolframAlpha, Julia, Maple, etc. Just make sure to plop a single image file, however crude, into your final submission.\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nWhen taking the limit or evaluating the integral, can you use the same technique for all values of \\(p\\), or do you need a different technique depending on what \\(p\\) is?",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "psets/pset_0.html#submission",
+    "href": "psets/pset_0.html#submission",
+    "title": "Problem Set 0",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "psets/pset_3.html",
+    "href": "psets/pset_3.html",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "psets/pset_3.html#problem-0",
+    "href": "psets/pset_3.html#problem-0",
+    "title": "Problem Set 3",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "psets/pset_3.html#problem-x",
+    "href": "psets/pset_3.html#problem-x",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\nWe studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\). Table 1 enumerates all of the possible states of the world together with their individual probabilities.\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n\n-\n-\n-\n0.32\n\n\n-\n-\n+\n0.24\n\n\n-\n+\n-\n0.16\n\n\n-\n+\n+\n0.08\n\n\n+\n-\n-\n0.02\n\n\n+\n-\n+\n0.04\n\n\n+\n+\n-\n0.06\n\n\n+\n+\n+\n0.08\n\n\n\n\n\n\n\nWhat is the overall prevalence of this disease?\nWhat is the sensitivity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you truly have the disease?"
+  },
+  {
+    "objectID": "psets/pset_3.html#problem-x-1",
+    "href": "psets/pset_3.html#problem-x-1",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\nAn encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
+  },
+  {
+    "objectID": "psets/pset_3.html#problem-x-2",
+    "href": "psets/pset_3.html#problem-x-2",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\n\n\n\n\n\nThe figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
+  },
+  {
+    "objectID": "psets/pset_3.html#problem-x-3",
+    "href": "psets/pset_3.html#problem-x-3",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\nTwo balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
+  },
+  {
+    "objectID": "psets/pset_3.html#submission",
+    "href": "psets/pset_3.html#submission",
+    "title": "Problem Set 3",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+  },
+  {
+    "objectID": "psets/pset_4.html",
+    "href": "psets/pset_4.html",
+    "title": "Problem Set 4",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "psets/pset_4.html#problem-0",
+    "href": "psets/pset_4.html#problem-0",
+    "title": "Problem Set 4",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "psets/pset_4.html#problem-x",
+    "href": "psets/pset_4.html#problem-x",
+    "title": "Problem Set 4",
+    "section": "Problem X",
+    "text": "Problem X\nAn urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\)."
+  },
+  {
+    "objectID": "psets/pset_4.html#problem-x-1",
+    "href": "psets/pset_4.html#problem-x-1",
+    "title": "Problem Set 4",
+    "section": "Problem X",
+    "text": "Problem X\nKing Elessar summons the wizard Gandalf to court, seeking his counsel. An evil plague has been sweeping the army barracks and incapacitating the soldiers. King Elessar asks Gandalf if he can devise a test for the disease that is 100% sensitive and 100% specific. Gandalf says that this can be done with a blood test, but they are very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan that he claims will cost less than 500 gold pieces:\n\nTake a blood sample from each of the 1000 knights;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten knights. We can then identify which knights are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed samples to be negative. For the other forty samples, I expect the results to be negative, and hence we will have to test all four hundred of the original samples. This gives a total cost of 460 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
+  },
+  {
+    "objectID": "psets/pset_4.html#problem-x-2",
+    "href": "psets/pset_4.html#problem-x-2",
+    "title": "Problem Set 4",
+    "section": "Problem X",
+    "text": "Problem X\nelection thing"
+  },
+  {
+    "objectID": "psets/pset_4.html#submission",
+    "href": "psets/pset_4.html#submission",
+    "title": "Problem Set 4",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+  },
+  {
+    "objectID": "psets/pset_2.html",
+    "href": "psets/pset_2.html",
+    "title": "Problem Set 2",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "psets/pset_2.html#problem-0",
+    "href": "psets/pset_2.html#problem-0",
+    "title": "Problem Set 2",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "psets/pset_2.html#problem-x",
+    "href": "psets/pset_2.html#problem-x",
+    "title": "Problem Set 2",
+    "section": "Problem X",
+    "text": "Problem X\nLet \\(A\\) and \\(B\\) be independent events. Prove that \\(A^c\\) and \\(B^c\\) are independent events."
+  },
+  {
+    "objectID": "psets/pset_2.html#submission",
+    "href": "psets/pset_2.html#submission",
+    "title": "Problem Set 2",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+  },
+  {
+    "objectID": "psets/pset_1.html",
+    "href": "psets/pset_1.html",
+    "title": "Problem Set 1",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "psets/pset_1.html#problem-0",
+    "href": "psets/pset_1.html#problem-0",
+    "title": "Problem Set 1",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "psets/pset_1.html#problem-x",
+    "href": "psets/pset_1.html#problem-x",
+    "title": "Problem Set 1",
+    "section": "Problem X",
+    "text": "Problem X\nOne day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they could be compatible with one another."
+  },
+  {
+    "objectID": "psets/pset_1.html#submission",
+    "href": "psets/pset_1.html#submission",
+    "title": "Problem Set 1",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#welcome-to-sta-240",
@@ -357,7 +632,7 @@
     "href": "slides/slides_2025_08_25.html#exams-20-each",
     "title": "Welcome to STA 240!",
     "section": "Exams (20% each)",
-    "text": "Exams (20% each)\nTraditional, in-class, written exams:\n\nMidterm 1: ???;\nMidterm 2: ???;\nFinal Exam: Friday December 12.\n\n\n\n\n\n\n\nWhat can I use during the exam?\n\n\nNo resources except an 8.5” x 11” note sheet created by you and only you.\n\n\n\n\n\n\n\n\n\nIf you need testing accommodations…\n\n\nMake sure I get a letter, and make your appointments in the Testing Center now."
+    "text": "Exams (20% each)\nTraditional, in-class, written exams:\n\nMidterm 1: Thursday October 9 in your lab;\nMidterm 2: Thursday November 13 in your lab;\nFinal Exam: Friday December 12.\n\n\n\n\n\n\n\nWhat can I use during the exam?\n\n\nNo resources except an 8.5” x 11” note sheet created by you and only you.\n\n\n\n\n\n\n\n\n\nIf you need testing accommodations…\n\n\nMake sure I get a letter, and make your appointments in the Testing Center now."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#attendance",
@@ -385,7 +660,7 @@
     "href": "slides/slides_2025_08_25.html#use-of-outside-resources-including-ai",
     "title": "Welcome to STA 240!",
     "section": "Use of outside resources, including AI",
-    "text": "Use of outside resources, including AI\n\nUsing ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.\n\n\nIf you find a problem solution online (or prompt an LLM to generate one) and submit it as your own work, that will obviously be considered plagiarism;\nOtherwise, all outside resources are fair game for you to get extra practice and study from."
+    "text": "Use of outside resources, including AI\n\nUsing ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.\n\n\nIf you find a problem solution online (or prompt an LLM to generate one) and submit it as your own work, that will obviously be considered plagiarism;\nOtherwise, all outside resources are fair game for you to study and get extra practice;\nIf you outsource all of your thinking to a language model, you will probably tank every exam. Good luck!"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#whats-the-level-of-math-here",
@@ -416,365 +691,174 @@
     "text": "Probability and statistics\n\n\n\n\n\n\n\n\n\n\n\n\nProbability\nForward problem\nDeductive\nReasons from rules to consequences\n\n\nStatistics\nInverse problem\nInductive\nObserve consequences, and infer rules"
   },
   {
+    "objectID": "slides/slides_2025_08_25.html#forward-problem-versus-inverse-problem",
+    "href": "slides/slides_2025_08_25.html#forward-problem-versus-inverse-problem",
+    "title": "Welcome to STA 240!",
+    "section": "Forward problem versus inverse problem",
+    "text": "Forward problem versus inverse problem\n\n\n\n\n\nForward: read the rulebook, and then play a game of chess;\nInverse: watch a chess match, and based on the players’ behavior, try to guess the rules."
+  },
+  {
+    "objectID": "slides/slides_2025_08_25.html#forward-problem-versus-inverse-problem-1",
+    "href": "slides/slides_2025_08_25.html#forward-problem-versus-inverse-problem-1",
+    "title": "Welcome to STA 240!",
+    "section": "Forward problem versus inverse problem",
+    "text": "Forward problem versus inverse problem\n\nDifferentiation is a forward problem. You grab the function \\(F\\), and you take the darn derivative;\nIntegration is an inverse problem. Given the derivative, you have to figure out what the original function was:\n\n\\[\n\\text{FTOC:}\\quad\\int_a^bF'(x)\\,\\text{d} x=F(b)-F(a).\n\\]"
+  },
+  {
+    "objectID": "slides/slides_2025_08_25.html#inverse-problems-are-tricky",
+    "href": "slides/slides_2025_08_25.html#inverse-problems-are-tricky",
+    "title": "Welcome to STA 240!",
+    "section": "Inverse problems are tricky!",
+    "text": "Inverse problems are tricky!\n\n\nForward\n\n“Here’s the question. What’s the answer?”\n\n\nInverse\n\n“If this is the answer, then what was the question?”\n\n\n\n\n\n\n\n\nGird your loins\n\n\nLike all inverse problems, you will find that statistics is subtler, less well-defined, less straightforward, and more open-ended than probability."
+  },
+  {
     "objectID": "slides/slides_2025_08_25.html#the-philosophy-of-probability",
     "href": "slides/slides_2025_08_25.html#the-philosophy-of-probability",
     "title": "Welcome to STA 240!",
     "section": "The philosophy of probability",
-    "text": "The philosophy of probability\nTwo common interpretive perspectives:\n\n\nFrequentist: probability describes the long run frequency of repeatable events;\nSubjective: probability describes an observer’s subjective experience of uncertainty.\n\n\n\n\n\n\n\n\n\nYou need both perspectives.\n\n\nLike the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.\n\n\n\n\n\n\n\n\n\n\n\nThe math doesn’t care which you prefer.\n\n\nRegardless your interpretation, the mathematics of probability is the same."
+    "text": "The philosophy of probability\n\nTwo common interpretive perspectives:\n\n\nFrequentist: probability describes the long run frequency of repeatable events;\nSubjective: probability describes an observer’s subjective experience of uncertainty.\n\n\n\n\n\n\n\n\n\n\nYou need both perspectives.\n\n\nLike the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.\n\n\n\n\n\n\n\n\n\n\n\nThe math doesn’t care which you prefer.\n\n\nRegardless your interpretation, the mathematics of probability is the same."
   },
   {
-    "objectID": "psets/pset_1.html",
-    "href": "psets/pset_1.html",
-    "title": "Problem Set 1",
+    "objectID": "syllabus/syllabus_materials.html",
+    "href": "syllabus/syllabus_materials.html",
+    "title": "Course materials",
     "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+    "text": "You are not required to purchase a textbook for this class. However, if you wish to follow along with one, these are all good options:\n\n[Ross] A First Course in Probability by Sheldon Ross;\n[HTZ] Probability and Statistical Inference by Robert Hogg, Elliot Tanis, and Dale Zimmerman;\n[DS] Probability and Statistics by Morris Degroot and Mark Schervish;\n[Wass] All of Statistics by Larry Wasserman.\n\nIn the PREPARE column of the course schedule, I will indicate which parts of a book correspond to the lectures.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
   },
   {
-    "objectID": "psets/pset_1.html#problem-0",
-    "href": "psets/pset_1.html#problem-0",
-    "title": "Problem Set 1",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
-  },
-  {
-    "objectID": "psets/pset_1.html#problem-x",
-    "href": "psets/pset_1.html#problem-x",
-    "title": "Problem Set 1",
-    "section": "Problem X",
-    "text": "Problem X\nOne day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they could be compatible with one another."
-  },
-  {
-    "objectID": "psets/pset_1.html#submission",
-    "href": "psets/pset_1.html#submission",
-    "title": "Problem Set 1",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
-  },
-  {
-    "objectID": "psets/pset_2.html",
-    "href": "psets/pset_2.html",
-    "title": "Problem Set 2",
+    "objectID": "syllabus/syllabus_materials.html#textbooks",
+    "href": "syllabus/syllabus_materials.html#textbooks",
+    "title": "Course materials",
     "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+    "text": "You are not required to purchase a textbook for this class. However, if you wish to follow along with one, these are all good options:\n\n[Ross] A First Course in Probability by Sheldon Ross;\n[HTZ] Probability and Statistical Inference by Robert Hogg, Elliot Tanis, and Dale Zimmerman;\n[DS] Probability and Statistics by Morris Degroot and Mark Schervish;\n[Wass] All of Statistics by Larry Wasserman.\n\nIn the PREPARE column of the course schedule, I will indicate which parts of a book correspond to the lectures.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
   },
   {
-    "objectID": "psets/pset_2.html#problem-0",
-    "href": "psets/pset_2.html#problem-0",
-    "title": "Problem Set 2",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+    "objectID": "syllabus/syllabus_materials.html#technology",
+    "href": "syllabus/syllabus_materials.html#technology",
+    "title": "Course materials",
+    "section": "Technology",
+    "text": "Technology\nLecture will largely be a low tech affair: pencil and paper should be sufficient most of the time. You should always plan to bring a laptop or tablet device to lab. In general, you will need access to a device with internet so that you can use the following:\n\nThis course page that you are on right now;\nR/RStudio via the Duke Container Manager;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
   },
   {
-    "objectID": "psets/pset_2.html#problem-x",
-    "href": "psets/pset_2.html#problem-x",
-    "title": "Problem Set 2",
-    "section": "Problem X",
-    "text": "Problem X"
-  },
-  {
-    "objectID": "psets/pset_2.html#submission",
-    "href": "psets/pset_2.html#submission",
-    "title": "Problem Set 2",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
-  },
-  {
-    "objectID": "psets/pset_3.html",
-    "href": "psets/pset_3.html",
-    "title": "Problem Set 3",
+    "objectID": "syllabus/syllabus_policies.html",
+    "href": "syllabus/syllabus_policies.html",
+    "title": "Policies",
     "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+    "text": "You are enthusiastically encouraged to work together and help one another on labs and problem sets. I would much rather you consult your peers than some daft language model. What I ask is that you acknowledge your collaborators. So, at the end of each problem in your write-up, leave a comment like “Ursula, Ignatius and I worked together on this problem,” or “Ethel explained to me how to do part b.” You are not being judged based on your acknowledgements, and there is no penalty for getting “too much” help from others. If you omit acknowledgements, I will assume you did your work solo. If your classmates tell a different story, I will have questions. As long as you are thorough and honest, there will be no problems.\nHaving said all of that, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment, sharers and recipients alike. The write-up you submit must be your own work.",
+    "crumbs": [
+      "Syllabus",
+      "Policies"
+    ]
   },
   {
-    "objectID": "psets/pset_3.html#problem-0",
-    "href": "psets/pset_3.html#problem-0",
-    "title": "Problem Set 3",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
-  },
-  {
-    "objectID": "psets/pset_3.html#problem-x",
-    "href": "psets/pset_3.html#problem-x",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\nDisease testing with symptoms"
-  },
-  {
-    "objectID": "psets/pset_3.html#problem-x-1",
-    "href": "psets/pset_3.html#problem-x-1",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\nMerlin"
-  },
-  {
-    "objectID": "psets/pset_3.html#submission",
-    "href": "psets/pset_3.html#submission",
-    "title": "Problem Set 3",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
-  },
-  {
-    "objectID": "psets/pset_0.html",
-    "href": "psets/pset_0.html",
-    "title": "Problem Set 0",
+    "objectID": "syllabus/syllabus_policies.html#collaboration",
+    "href": "syllabus/syllabus_policies.html#collaboration",
+    "title": "Policies",
     "section": "",
-    "text": "Nature laughs at the difficulties of integration.\nThis is ostensibly calculus review, but each problem is a piece of probability in disguise. We will illuminate these connections throughout the semester, and I will refer to Problem Set 0 often. Stay tuned!",
+    "text": "You are enthusiastically encouraged to work together and help one another on labs and problem sets. I would much rather you consult your peers than some daft language model. What I ask is that you acknowledge your collaborators. So, at the end of each problem in your write-up, leave a comment like “Ursula, Ignatius and I worked together on this problem,” or “Ethel explained to me how to do part b.” You are not being judged based on your acknowledgements, and there is no penalty for getting “too much” help from others. If you omit acknowledgements, I will assume you did your work solo. If your classmates tell a different story, I will have questions. As long as you are thorough and honest, there will be no problems.\nHaving said all of that, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment, sharers and recipients alike. The write-up you submit must be your own work.",
     "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
+      "Syllabus",
+      "Policies"
     ]
   },
   {
-    "objectID": "psets/pset_0.html#problem-0",
-    "href": "psets/pset_0.html#problem-0",
-    "title": "Problem Set 0",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this.",
+    "objectID": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
+    "href": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
+    "title": "Policies",
+    "section": "Use of outside resources, including AI",
+    "text": "Use of outside resources, including AI\nThere are at least two reasons you might seek outside resources:\n\n✅ Extra practice or alternative instruction: Go crazy. Knock yourself out. Have a ball. The internet is saturated with good (and horrible) resources for learning this material, so if you find something that really resonates with you, have at it;\n❌ Doing the problems for you: If you find a solution online, or ask a language model to generate one, and you copy it down and submit it as your own work, that is plagiarism. If we detect it, you will earn a zero for that part of your write-up.\n\n“Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.” Furthermore, 60% of your final course grade is determined by your performance on old school, no-tech exams. As such, outsourcing all of your thinking to an AI will probably end in humiliating disaster. To avoid this, I suggest you abstain from using language models to do the problems for you.",
     "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
+      "Syllabus",
+      "Policies"
     ]
   },
   {
-    "objectID": "psets/pset_0.html#problem-1",
-    "href": "psets/pset_0.html#problem-1",
-    "title": "Problem Set 0",
-    "section": "Problem 1",
-    "text": "Problem 1\nExplain why this is horrific notation:\n\\[\n    \\int_0^x f(x)\\,\\textrm{d} x.\n\\]",
+    "objectID": "syllabus/syllabus_policies.html#communication",
+    "href": "syllabus/syllabus_policies.html#communication",
+    "title": "Policies",
+    "section": "Communication",
+    "text": "Communication\nIf you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum Ed Discussion. That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.\nIf you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructor directly (john.zito@duke.edu).\n\n\n\n\n\n\nNote\n\n\n\nYou can ask questions anonymously on Ed. The teaching team will still know your identity, but your peers will not.",
     "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
+      "Syllabus",
+      "Policies"
     ]
   },
   {
-    "objectID": "psets/pset_0.html#problem-2",
-    "href": "psets/pset_0.html#problem-2",
-    "title": "Problem Set 0",
-    "section": "Problem 2",
-    "text": "Problem 2\nSimplify this:\n\\[\n\\ln\\left(e^{a_1}e^{a_2}e^{a_3}\\cdots e^{a_n}\\right).\n\\]",
+    "objectID": "syllabus/syllabus_policies.html#late-work-and-extensions",
+    "href": "syllabus/syllabus_policies.html#late-work-and-extensions",
+    "title": "Policies",
+    "section": "Late work and extensions",
+    "text": "Late work and extensions\nNo late work will be accepted unless you request an extension in advance by e-mailing the instructor directly (john.zito@duke.edu). All reasonable requests will be entertained, but extensions will not be long.",
     "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
+      "Syllabus",
+      "Policies"
     ]
   },
   {
-    "objectID": "psets/pset_0.html#problem-3",
-    "href": "psets/pset_0.html#problem-3",
-    "title": "Problem Set 0",
-    "section": "Problem 3",
-    "text": "Problem 3\nAssume \\(\\lambda&gt;0\\) is a constant and compute\n\\[\n    \\sum\\limits_{n=0}^\\infty n \\frac{\\lambda^n}{n!}e^{-\\lambda}\n    .\n\\]",
+    "objectID": "syllabus/syllabus_policies.html#regrade-requests",
+    "href": "syllabus/syllabus_policies.html#regrade-requests",
+    "title": "Policies",
+    "section": "Regrade requests",
+    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a regrade request in Gradescope. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nNo grades will be changed after the final exam has been administered on Friday December 12;\n\n\n\n\n\n\n\nWarning\n\n\n\nA regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.",
     "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
+      "Syllabus",
+      "Policies"
     ]
   },
   {
-    "objectID": "psets/pset_0.html#problem-4",
-    "href": "psets/pset_0.html#problem-4",
-    "title": "Problem Set 0",
-    "section": "Problem 4",
-    "text": "Problem 4\nHere is a very silly function:\n\\[\n    h(x)\n    =\n    \\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\n    ,\\quad\n    -\\infty&lt;x&lt;\\infty\n    .\n\\]\nTreat \\(-\\infty&lt;\\mu&lt;\\infty\\) and \\(\\sigma&gt;0\\) as constants and compute the value(s) of \\(x\\) at which \\(h\\) has inflection points.\n\n\n\n\n\n\nHint\n\n\n\n\n\nHere is an example of what \\(h\\) might look like in the special case where \\(\\mu = 1\\) and \\(\\sigma=2\\):\n\n\nCode\nm = 1\ns = 2\npar(mar = c(4, 4, 0.1, 4))\ncurve(exp(-0.5 * ((x - m) / s)^2), \n      from = -6, to = 8, n = 500,\n      xlab = \"x\", ylab = \"h(x)\")\n\n\n\n\n\n\n\n\n\nBefore you start doing any math, can you use the picture to guess what the answer will be?",
+    "objectID": "syllabus/syllabus_policies.html#attendance",
+    "href": "syllabus/syllabus_policies.html#attendance",
+    "title": "Policies",
+    "section": "Attendance",
+    "text": "Attendance\nLive your life. Attendance is not strictly required for any of the class meetings. The responsibility lies with us to make class meetings sufficiently engaging and informative that you choose to attend. Having said that, success in this class and regular attendance are probably highly positively correlated. Furthermore, while lab attendance is not required, regular attendance is probably the path of least resistance to earning full credit for the lab component of your final grade. The labs are designed so that they can be completed in one sitting more or less, and they are due at midnight the same day. So show up to lab, bang it out, and move on with your life.",
     "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
+      "Syllabus",
+      "Policies"
     ]
   },
   {
-    "objectID": "psets/pset_0.html#problem-5",
-    "href": "psets/pset_0.html#problem-5",
-    "title": "Problem Set 0",
-    "section": "Problem 5",
-    "text": "Problem 5\nHere is another inordinately silly function:\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\textrm{d} y,\\quad x&gt;0.\n\\]\nProve that \\(\\Gamma(x+1)=x\\Gamma(x)\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nStart on the left-hand side by writing out \\(\\Gamma(x+1)\\) and evaluating the integral by parts.",
+    "objectID": "syllabus/syllabus_policies.html#accommodations",
+    "href": "syllabus/syllabus_policies.html#accommodations",
+    "title": "Policies",
+    "section": "Accommodations",
+    "text": "Accommodations\nIf you need accommodations for this class, you will need to register with the Student Disability Access Office (SDAO) and provide them with documentation related to your needs. SDAO will work with you to determine what accommodations are appropriate for your situation. Please note that accommodations are not retroactive and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me. Please contact SDAO for more information: sdao@duke.edu or access.duke.edu.",
     "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
+      "Syllabus",
+      "Policies"
     ]
   },
   {
-    "objectID": "psets/pset_0.html#problem-6",
-    "href": "psets/pset_0.html#problem-6",
-    "title": "Problem Set 0",
-    "section": "Problem 6",
-    "text": "Problem 6\nLet \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\n“[T]wice continuously differentiable” means that \\(f\\), \\(f'\\), and \\(f''\\) are all continuous functions at and around zero. A full credit solution must clearly explain how and why continuity is being used along the way.",
+    "objectID": "syllabus/syllabus_policies.html#duke-community-standard",
+    "href": "syllabus/syllabus_policies.html#duke-community-standard",
+    "title": "Policies",
+    "section": "Duke Community Standard",
+    "text": "Duke Community Standard\nAs a student in this course, you have agreed to uphold the Duke Community Standard and the practices specific to this course.\n\n\nAny violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically results in a zero for the relevant portion or the entire assignment, and will be reported to the Office of Student Conduct & Community Standards for further action. Furthermore:\n\nIf a conduct violation results in a zero on a lab or problem set, that zero will not be dropped;\nIf a conduct violation results in a zero on a midterm, that zero will not be replaced with your final exam score;\nIf we discover that students are sharing and copying assignment solutions, all students involved will be penalized equally, the sharers the same as the recipients.",
     "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
+      "Syllabus",
+      "Policies"
     ]
   },
   {
-    "objectID": "psets/pset_0.html#problem-7",
-    "href": "psets/pset_0.html#problem-7",
-    "title": "Problem Set 0",
-    "section": "Problem 7",
-    "text": "Problem 7\nConsider this integral:\n\\[\n    \\int_2^\\infty\n    \\frac{1}{x(\\ln x)^p}\\textrm{d} x\n    .\n\\]\n\nUse a computer to create a single plot with many lines, each graphing the integrand for a different value of \\(p\\). Consider \\(p\\) equal to -2, -1.5, -1, 0, 1, and 5, and make the \\(x\\)-axis of your plot run from 2 to 15.\nShow that \\(\\lim_{x\\to\\infty}\\frac{1}{x(\\ln x)^p}=0\\) for all values of \\(-\\infty&lt;p&lt;\\infty\\).\nFor what values of \\(p\\) does the integral converge? When it does converge, what is its value?\nConsult the picture you created in part (a), and write a few sentences explaining conceptually why the integral converges for some values of \\(p\\) but not others.\n\n\n\n\n\n\n\n“Use a computer”\n\n\n\nThis is deliberately vague. You are welcome to use any tool you are familiar with: graphing calculator, GeoGebra, Desmos, R, Matlab, Mathematica, WolframAlpha, Julia, Maple, etc. Just make sure to plop a single image file, however crude, into your final submission.\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nWhen taking the limit or evaluating the integral, can you use the same technique for all values of \\(p\\), or do you need a different technique depending on what \\(p\\) is?",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
-    ]
-  },
-  {
-    "objectID": "psets/pset_0.html#submission",
-    "href": "psets/pset_0.html#submission",
-    "title": "Problem Set 0",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA 240 Probability for Statistical Inference",
+    "objectID": "syllabus/syllabus_team.html",
+    "href": "syllabus/syllabus_team.html",
+    "title": "Teaching team",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nMon, Aug 25\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\n\n\n\n\n\n\n\n\nWed, Aug 27\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\n\n\nIntro Survey @ 3 PM\n\n\n\n\nThu, Aug 28\n\n\n💻 Lab 0 (calculus review)\n\n\n\n\n\n\n2\nMon, Sep 1\n\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\n\n\nWed, Sep 3\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\n\n\n\n\n\n\n\nThu, Sep 4\n\n\n💻 Lab 1\n\n\nLab 1 @ 11:59 PM\n\n\n\n\nFri, Sep 5\n\n\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nWed, Sep 10\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nThu, Sep 11\n\n\n💻 Lab 2\n\n\nLab 2 @ 11:59 PM\n\n\n\n\nFri, Sep 12\n\n\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\nDS: 2\n🧑‍🏫 Conditional Probability\n\n\n\n\n\n\n\n\nWed, Sep 17\nDS: 2\n🧑‍🏫 Conditional Probability\n\n\n\n\n\n\n\n\nThu, Sep 18\n\n\n💻 Lab 3\n\n\nLab 3 @ 11:59 PM\n\n\n\n\nFri, Sep 19\n\n\n\n\n\n\nPSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nWed, Sep 24\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nThu, Sep 25\n\n\n💻 Lab 4\n\n\nLab 4 @ 11:59 PM\n\n\n\n\nFri, Sep 26\n\n\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nWed, Oct 1\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nThu, Oct 2\n\n\n💻 Lab 5\n\n\nLab 5 @ 11:59 PM\n\n\n\n\nFri, Oct 3\n\n\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nWed, Oct 8\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nThu, Oct 9\n\n\n📝 Midterm 1\n\n\n\n\n\n\n8\nMon, Oct 13\n\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\n\n\nWed, Oct 15\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nThu, Oct 16\n\n\n💻 Lab 6\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nWed, Oct 22\n\n\n🧑‍🏫 Jointly Discrete\n\n\n\n\n\n\n\n\nThu, Oct 23\n\n\n💻 Lab 7\n\n\nLab 7 @ 11:59 PM\n\n\n\n\nFri, Oct 24\n\n\n\n\n\n\nPSET 5 @ 5PM\n\n\n10\nMon, Oct 27\n\n\n🧑‍🏫 Jointly Continuous\n\n\n\n\n\n\n\n\nWed, Oct 29\n\n\n🧑‍🏫 Hierarchies\n\n\n\n\n\n\n\n\nThu, Oct 30\n\n\n💻 Lab 8\n\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\n\n\n\nWed, Nov 5\n\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\n\n\n\nThu, Nov 6\n\n\n💻 Lab 9\n\n\nLab 9 @ 11:59 PM\n\n\n\n\nFri, Nov 7\n\n\n\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\n\n\n\nWed, Nov 12\n\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\n\n\n\nThu, Nov 13\n\n\n📝 Midterm 2\n\n\n\n\n\n\n13\nMon, Nov 17\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nWed, Nov 19\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nThu, Nov 20\n\n\n💻 Lab 10\n\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\n\n\n\nWed, Nov 26\n\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\n\n\nThu, Nov 27\n\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n\n15\nMon, Dec 1\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nWed, Dec 3\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nThu, Dec 4\n\n\n💻 Lab 11\n\n\nLab 11 @ 11:59 PM\n\n\n\n\nFri, Dec 5\n\n\n\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n\n📝 Final (9AM - 12PM)",
+    "text": "Mug\nName\nRole\nOffice Hours\n\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\nZito, John\nInstructor\nTue 3:00 PM - 5:00 PM\nOld Chem 207",
     "crumbs": [
       "Syllabus",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_overview.html",
-    "href": "syllabus/syllabus_overview.html",
-    "title": "Course overview",
-    "section": "",
-    "text": "In probability, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon typically behave. In statistics, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. We will spend twelve weeks on the first, and then three weeks on the second.\nPrerequisites: single-variable calculus.",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_overview.html#description",
-    "href": "syllabus/syllabus_overview.html#description",
-    "title": "Course overview",
-    "section": "",
-    "text": "In probability, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon typically behave. In statistics, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. We will spend twelve weeks on the first, and then three weeks on the second.\nPrerequisites: single-variable calculus.",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_overview.html#meetings",
-    "href": "syllabus/syllabus_overview.html#meetings",
-    "title": "Course overview",
-    "section": "Meetings",
-    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\n???\nMoWe 3:05 PM - 4:20 PM\nJohn\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nTh 1:25 PM - 2:40 PM\n????\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nTh 3:05 PM - 4:20 PM\n????",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_resources.html",
-    "href": "syllabus/syllabus_resources.html",
-    "title": "University resources",
-    "section": "",
-    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_resources.html#course-costs",
-    "href": "syllabus/syllabus_resources.html#course-costs",
-    "title": "University resources",
-    "section": "",
-    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_resources.html#tech-support",
-    "href": "syllabus/syllabus_resources.html#tech-support",
-    "title": "University resources",
-    "section": "Tech support",
-    "text": "Tech support\nContact the Duke OIT Service Desk at oit.duke.edu/help.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_resources.html#academic-support",
-    "href": "syllabus/syllabus_resources.html#academic-support",
-    "title": "University resources",
-    "section": "Academic support",
-    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact ARC@duke.edu, 919-684-5917.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_resources.html#accessibility",
-    "href": "syllabus/syllabus_resources.html#accessibility",
-    "title": "University resources",
-    "section": "Accessibility",
-    "text": "Accessibility\nIf any portion of the course is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nThe Student Disability Access Office (SDAO) is available to ensure that students can engage with their courses and related assignments. Students should contact the SDAO to request or update accommodations under these circumstances.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_resources.html#mental-health-and-well-being",
-    "href": "syllabus/syllabus_resources.html#mental-health-and-well-being",
-    "title": "University resources",
-    "section": "Mental health and well-being",
-    "text": "Mental health and well-being\nDuke is committed to holistic student well-being, including mental, emotional, and physical health. The university offers resources to help students manage daily stress, encourage intentional self-care, and access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities and your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of well-being, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can reach the DukeReach team at dukereach@duke.edu.\nCounseling and Psychological Services (CAPS): CAPS services include individual and group counseling services, psychiatric services, and workshops. CAPS also provides referrals to off-campus resources for specialized care. You can reach CAPS at (919) 660-1000.\nTimelyCare: TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling.\nBC Fellows for Healthy Relationship: The BC Fellows meet with students individually and in groups, supporting the development of healthy relationships and building meaningful community in all areas of a student’s life.\nDukeLine: Students who want to connect anonymously with a Peer Coach can text 984-230-4888 from 5 to 11 p.m. daily. DukeLine offers in-the-moment anonymous, non-emergency text support from a peer.\nDuWell: DuWell provides Moments of Mindfulness (stress management and resilience building) and meditation programming (Koru workshop) to assist students in developing a daily emotional well-being practice. All are welcome, and no experience is necessary. You can reach DuWell at (919) 681-8421.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_assignments.html",
-    "href": "syllabus/syllabus_assignments.html",
-    "title": "Assignments and grading",
-    "section": "",
-    "text": "Your final course grade will be calculated as follows:\nYour final letter grade will be determined based on the usual thresholds:",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_assignments.html#labs-10",
-    "href": "syllabus/syllabus_assignments.html#labs-10",
-    "title": "Assignments and grading",
-    "section": "Labs (10%)",
-    "text": "Labs (10%)\nIn lab every Thursday, you will complete a guided activity that introduces you to special topics, extensions, or applications of the latest course material. Along the way, we will teach you how to implement some of the ideas from the course in the R programming language. Ideally you should be able to finish the activity by the end of your lab period, but in any case, you must submit your lab work by 11:59 ET PM that same day.\nEach lab assignment will be graded on the following scale:\n\n1.0: a complete, good faith attempt at every part of every problem;\n0.5: partially complete;\n0.0: no submission, or mostly incomplete.\n\n\n\n\n\n\n\nGrace\n\n\n\nYour two lowest lab scores will be dropped at the end of the semester.",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_assignments.html#problem-sets-30",
-    "href": "syllabus/syllabus_assignments.html#problem-sets-30",
-    "title": "Assignments and grading",
-    "section": "Problem Sets (30%)",
-    "text": "Problem Sets (30%)\nMathematics is like everything else in life; if you practice, you improve. As such, the problem sets are really the heart of the course. They will mostly consist of pencil-and-paper math problems, but sometimes you will be asked to do some coding. You may compose you solutions however you like (scan or photograph written work, LaTeX, Quarto, handwriting capture on a tablet, whatever) so long as you ultimately upload a single .pdf file to Gradescope.\n\n\n\n\n\n\nGrace\n\n\n\nYour lowest problem set score will be dropped at the end of the semester.",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_assignments.html#exams-20-each",
-    "href": "syllabus/syllabus_assignments.html#exams-20-each",
-    "title": "Assignments and grading",
-    "section": "Exams (20% each)",
-    "text": "Exams (20% each)\nThere will be three exams. The dates, times, and locations are firm, so mark your calendar now:\n\nMidterm 1: when and where;\nMidterm 2: when and where;\nFinal: Friday December 12 from 9 AM - 12 PM in Physics 130.\n\nThese will be old school, pencil-and-paper, in-class exams. The only resources you are allowed are a simple four-function calculator (which you won’t actually need) and a note sheet that you and only you have prepared (both sides of a standard 8.5” x 11” piece of paper).\n\n\n\n\n\n\nGrace\n\n\n\nIf you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.\n\n\n\n\n\n\n\n\nNo make-up exams\n\n\n\nIf you are absent from one of the midterms for whatever reason, there will not be a make-up. Pursuant to the above policy, we will simply replace the missed midterm score with the final exam score. If you miss the final exam, you get a zero unless you have a Dean’s Excuse.",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
+      "Teaching team"
     ]
   }
 ]
