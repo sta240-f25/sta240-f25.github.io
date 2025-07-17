@@ -468,14 +468,25 @@ In probability, we *assumed* that the coin was fair, and then reasoned from that
 
 ## Forward problem versus inverse problem
 
+::::: {.columns}
+::: {.column width="50%"}
+![](images/chess.jpg)
+:::
+
+::: {.column width="50%"}
 - **Forward**: read the rulebook, and then play a game of chess;
+
 - **Inverse**: watch a chess match, and based on the players' behavior, try to guess the rules.
+:::
+:::::
+
+
 
 ## Forward problem versus inverse problem
 
-- *Differentiation* is a forward problem. You grab the function, and you take the darn derivative;
+- *Differentiation* is a forward problem. You grab the function $F$, and you take the darn derivative;
 
-- *Integration* is an inverse problem. You have to muse "If this is the derivative, then what was the original function?"
+- *Integration* is an inverse problem. Given the derivative, you have to figure out what the original function was:
 
 $$
 \text{FTOC:}\quad\int_a^bF'(x)\,\text{d} x=F(b)-F(a).
@@ -483,9 +494,24 @@ $$
 
 ## Inverse problems are tricky!
 
-> If this is the answer, then what was the question?
+::::: {.columns}
+::: {.column width="45%"}
+**Forward**
 
-Like all inverse problems, you will find that statistics is subtler, less well-defined, and less straightforward than probability.
+> "Here's the question. What's the answer?"
+:::
+
+::: {.column width="50%"}
+**Inverse**
+
+> "If this is the answer, then what was the question?"
+:::
+:::::
+
+::: callout-warning
+## Gird your loins
+Like all inverse problems, you will find that statistics is subtler, less well-defined, less straightforward, and more open-ended than probability.
+:::
 
 ## The philosophy of probability {.scrollable}
 
