@@ -39,10 +39,6 @@ c. Imagine you develop symptoms. So you visit Dr.\ Vinnie Boombatz to get tested
 
 ## Problem X
 
-Merlin
-
-## Problem X
-
 An encryption algorithm generates a seed value $z$ in the following way:
 
 -   A binary operator is chosen at random from $\{+,\,\cdot\}$;
