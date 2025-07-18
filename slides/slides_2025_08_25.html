@@ -281,6 +281,9 @@ John Zito
 <h2>Example: the birthday problem</h2>
 <p><img data-src="images/birthday_prob.png"></p>
 </section>
+<section id="any-matches-today" class="slide level2">
+<h2>Any matches today?</h2>
+</section>
 <section id="example-the-monty-hall-problem" class="slide level2">
 <h2>Example: the Monty Hall problem</h2>
 <p>Let’s play: <a href="https://montyhall.io/" class="uri">https://montyhall.io/</a></p>
@@ -540,8 +543,8 @@ John Zito
 <h1>Reason 3: It’s beautiful.</h1>
 
 </section>
-<section id="take-it-away-boys" class="slide level2">
-<h2>Take it away, boys…</h2>
+<section id="good-ol-bert-and-al" class="slide level2">
+<h2>Good ol’ Bert and Al</h2>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -576,6 +579,10 @@ John Zito
 <p><img data-src="images/galton.gif" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
+</section>
+<section id="xxx" class="slide level2">
+<h2>XXX</h2>
+<p>Cathedral!</p>
 </section>
 <section id="reason-3-its-beautiful" class="slide level2 large">
 <h2>Reason 3: It’s beautiful</h2>
@@ -834,11 +841,37 @@ John Zito
 </section>
 <section id="probability" class="slide level2 scrollable">
 <h2>Probability</h2>
-<p>State the distribution (probability rules) of some random phenomenon, and then study how the realizations of that phenomenon “typically” behave:</p>
-<div class="fragment">
+<div class="v-center-container">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>What do we do?</strong></p>
+</div>
+<div class="callout-content">
+<p>State the <em>distribution</em> (rules) of some random phenomenon, and then study how the realizations of that phenomenon “typically” behave.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-canonical-probability-problem" class="slide level2">
+<h2>A canonical probability problem</h2>
 <blockquote>
-<p>Given a <strong>fair</strong> coin, how many flips will it take on average until I observe the first head?</p>
+<p>Given a <strong>fair</strong> coin, how many flips will it take <em>on average</em> until you observe the first head?</p>
 </blockquote>
+<div class="fragment">
+<p><img data-src="images/prob-example.svg"></p>
+</div>
+</section>
+<section id="a-canonical-probability-problem-1" class="slide level2">
+<h2>A canonical probability problem</h2>
+<blockquote>
+<p>Given a <strong>fair</strong> coin, how many flips will it take <em>on average</em> until you observe the first head?</p>
+</blockquote>
+<p>Why is this a probability problem?</p>
 <div>
 <ol type="1">
 <li class="fragment">select a phenomenon to study (the outcome of a coin flip);</li>
@@ -846,19 +879,40 @@ John Zito
 <li class="fragment">study typical behavior of realizations (how many flips <em>on average</em> until the first head?).</li>
 </ol>
 </div>
-</div>
 </section>
 <section id="statistics-is-probability-in-reverse" class="slide level2 scrollable">
 <h2>Statistics is “probability in reverse”</h2>
-<p>Start with the realizations of a random phenomenon with <em>unknown</em> distribution, and try to use those realizations to figure out what the distribution is:</p>
-<div class="fragment">
+<div class="v-center-container">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>What do we do?</strong></p>
+</div>
+<div class="callout-content">
+<p>Start with the realizations of a random phenomenon with <em>unknown</em> distribution, and try to use those realizations to figure out what the distribution is.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-canonical-statistics-problem" class="slide level2">
+<h2>A canonical statistics problem</h2>
 <blockquote>
-<p>Imagine that you are given an unfamiliar coin, and you do not know anything about its properties. So you flip it 25 times, and on the basis of those 25 flips, you try to decide whether or not the coin is fair.</p>
+<p>Given 28 flips from a mysterious coin, can you tell if it is fair?</p>
 </blockquote>
-</div>
 <div class="fragment">
-<p>In probability, we <em>assumed</em> that the coin was fair, and then reasoned from that. In statistics, we do not do this. We start with some coin, which may or may not be fair, and then we try to “infer” its properties.</p>
+<p><img data-src="images/stat-example.svg"></p>
 </div>
+</section>
+<section id="a-canonical-statistics-problem-1" class="slide level2">
+<h2>A canonical statistics problem</h2>
+<blockquote>
+<p>Given 28 flips from a mysterious coin, can you tell if it is fair?</p>
+</blockquote>
+<p>In probability, we <em>assumed</em> that the coin was fair, and then reasoned from that. In statistics, we do not do this. We start with some coin, which may or may not be fair, and then we try to “infer” its properties.</p>
 </section>
 <section id="probability-and-statistics" class="slide level2 scrollable">
 <h2>Probability and statistics</h2>
@@ -867,6 +921,7 @@ John Zito
 <p><img data-src="images/probstat.png" class="quarto-figure quarto-figure-center" style="width:55.0%"></p>
 </figure>
 </div>
+<div class="fragment">
 <table class="caption-top" style="width:89%;">
 <colgroup>
 <col style="width: 25%">
@@ -887,6 +942,7 @@ Observe consequences, and <em>infer</em> rules</td>
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="forward-problem-versus-inverse-problem" class="slide level2">
 <h2>Forward problem versus inverse problem</h2>
