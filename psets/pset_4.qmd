@@ -35,7 +35,7 @@ King Elessar summons the wizard Gandalf to court, seeking his counsel. An evil p
     - If the test gives a negative result, we know all of the original ten samples are clear, and we can move on;
     - If the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten knights. We can then identify which knights are positive.
     
-Gandalf finishes by saying "I expect sixty of the mixed samples to be negative. For the other forty samples, I expect the results to be negative, and hence we will have to test all four hundred of the original samples. This gives a total cost of 460 gold pieces."
+Gandalf finishes by saying "I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total cost of 500 gold pieces."
 
 a. What disease prevalence is Gandalf implicitly assuming?
 b. Can Gandalf revise his scheme to reduce the expected cost even more?
