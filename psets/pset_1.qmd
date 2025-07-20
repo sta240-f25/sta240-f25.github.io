@@ -20,7 +20,7 @@ One day last semester I looked down at my phone and saw this screen:
 
 ![](images/apple-weather.jpg){fig-align="center" width="40%"}
 
-Interpret the three probabilities and explain how they could be compatible with one another.
+Interpret the three probabilities and explain how they fit together.
 
 ## Submission
 
