@@ -18,7 +18,8 @@ Your final letter grade will be determined based on the usual thresholds:
 
 | Letter Grade | Final Course Grade |
 |--------------|--------------------|
-| A            | \>= 93             |
+| A+           | \>= 97             |
+| A            | 93 - 96.99         |
 | A-           | 90 - 92.99         |
 | B+           | 87 - 89.99         |
 | B            | 83 - 86.99         |
@@ -65,8 +66,8 @@ Your lowest problem set score will be dropped at the end of the semester.
 
 There will be three exams. The dates, times, and locations are firm, so mark your calendar now:
 
--   **Midterm 1**: when and where;
--   **Midterm 2**: when and where;
+-   **Midterm 1**: Thursday October 9 during your lab;
+-   **Midterm 2**: Thursday November 13 during your lab;
 -   **Final**: Friday December 12 from 9 AM - 12 PM in Physics 130.
 
 These will be old school, pencil-and-paper, in-class exams. The only resources you are allowed are a simple four-function calculator (which you won't actually need) and a note sheet that you and only you have prepared (both sides of a standard 8.5" x 11" piece of paper).
