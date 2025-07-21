@@ -380,6 +380,13 @@
     "href": "psets/pset_2.html#problem-x",
     "title": "Problem Set 2",
     "section": "Problem X",
+    "text": "Problem X\nA few months ago I went to Harris Teeter to get some junk food, and when I looked at my receipt, I saw this:\n\n\n\n\n\nI thought, “Strange. What are the odds the total would be a whole number?” Well, let’s find out!\n\nImagine you randomly purchase two items that each cost less than $10, and assume all prices are equally likely. The prices of the two items are quoted to two decimal places. What is the probability that the two prices add up to a whole number total?\nNow let’s add a wrinkle. Imagine sales tax is 5%. This is calculated, rounded up to the nearest cent, and then added to your bill. What is the probability that the cost of the two items plus the rounded sales tax adds up to a whole number?"
+  },
+  {
+    "objectID": "psets/pset_2.html#problem-x-1",
+    "href": "psets/pset_2.html#problem-x-1",
+    "title": "Problem Set 2",
+    "section": "Problem X",
     "text": "Problem X\nLet \\(A\\) and \\(B\\) be independent events. Prove that \\(A^c\\) and \\(B^c\\) are independent events."
   },
   {
@@ -408,7 +415,7 @@
     "href": "psets/pset_1.html#problem-x",
     "title": "Problem Set 1",
     "section": "Problem X",
-    "text": "Problem X\nOne day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they could be compatible with one another."
+    "text": "Problem X\nOne day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they fit together."
   },
   {
     "objectID": "psets/pset_1.html#submission",
@@ -897,7 +904,7 @@
     "href": "syllabus/syllabus_team.html",
     "title": "Teaching team",
     "section": "",
-    "text": "Mug\nName\nRole\nOffice Hours\n\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\nZito, John\nInstructor\nTue 3:00 PM - 5:00 PM\nOld Chem 207",
+    "text": "Mug\nName\nRole\nOffice Hours\n\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\nZito, John\nInstructor\nTue 3:00 PM - 5:00 PM\nor by appointment\nOld Chem 207",
     "crumbs": [
       "Syllabus",
       "Teaching team"
