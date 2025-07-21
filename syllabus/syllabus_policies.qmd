@@ -6,7 +6,7 @@ editor:
 
 ## Collaboration
 
-You are *enthusiastically encouraged* to work together and help one another on labs and problem sets. I would much rather you consult your peers than some daft language model. What I ask is that you *acknowledge* your collaborators. So, at the end of each problem in your write-up, leave a comment like "Ursula, Ignatius and I worked together on this problem," or "Ethel explained to me how to do part b." You are not being judged based on your acknowledgements, and there is no penalty for getting "too much" help from others. If you omit acknowledgements, I will assume you did your work solo. If your classmates tell a different story, I will have questions. As long as you are thorough and honest, there will be no problems.
+You are *enthusiastically encouraged* to work together and help one another on labs and problem sets. I would much rather you consult your peers than some daft language model. What I ask is that you *acknowledge* your collaborators. So, at the end of each problem in your write-up, leave a comment like "Ursula, Ignatius and I worked together on this problem," or "Ethel explained to me how to do part b." You are not being judged based on your acknowledgements, and there is no penalty for getting "too much" help from others. If you omit acknowledgements, I will assume you did your work solo. If your classmates tell a different story, I will have questions. But otherwise, so long as you are thorough and honest, there will be no problems.
 
 Having said all of that, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment, sharers and recipients alike. The write-up you submit must be your own work.
 
