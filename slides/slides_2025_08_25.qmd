@@ -434,7 +434,7 @@ Lab on Thursday August 28 is a review session and work period for this assignmen
 
 # So, what are we studying, anyway?
 
-## Probability {.scrollable}
+## Probability
 
 ::: {.v-center-container}
 
@@ -468,7 +468,7 @@ Why is this a probability problem?
 3.  study typical behavior of realizations (how many flips *on average* until the first head?).
 :::
 
-## Statistics is "probability in reverse" {.scrollable}
+## Statistics is "probability in reverse" 
 
 ::: {.v-center-container}
 
