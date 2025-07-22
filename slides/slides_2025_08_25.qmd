@@ -567,7 +567,7 @@ Two common interpretive perspectives:
 
 ::: incremental
 -   **Frequentist**: probability describes the long run frequency of repeatable events;
--   **Subjective**: probability describes an observer's subjective experience of uncertainty.
+-   **Subjective**: probability describes an observer's subjective experience of uncertainty. Their "degrees of belief."
 :::
 
 . . .
