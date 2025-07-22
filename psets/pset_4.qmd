@@ -22,6 +22,7 @@ a. What is the range of the random variable $X$?
 b. What is the probability mass function of $X$? 
 c. Sketch the CDF of $X$.
 d. Compute $E(X)$.
+e. Three balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?
 
 ## Problem X
 
