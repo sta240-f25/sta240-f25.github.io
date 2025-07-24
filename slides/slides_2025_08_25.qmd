@@ -139,7 +139,7 @@ LINK TO GOOGLE SHEET. Reveal actual price.
 
 ## Example: the folly of doctors {.scrollable}
 
-> A 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the true positive rate of the test is 10%, and if the false positive rate is 9%, what is the chance that the woman *actually* has cancer, given that she tested positive?
+> A 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the true positive rate of the test is 90%, and if the false positive rate is 9%, what is the chance that the woman *actually* has cancer, given that she tested positive?
 
 . . .
 
