@@ -1,0 +1,7 @@
+---
+title: "series"
+format: html
+---
+
+geometric 
+taylor

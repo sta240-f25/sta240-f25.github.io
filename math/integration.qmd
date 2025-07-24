@@ -1,0 +1,14 @@
+---
+title: "integration"
+format: html
+---
+
+Crudely, the **definite integral** of a function gives you the (signed) area between the curve and the $x$-axis. 
+
+## fundamental theorem of calculus
+
+## u-substitution
+
+## integration by parts
+
+## Improper integration

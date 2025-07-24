@@ -1,0 +1,6 @@
+---
+title: "limits"
+format: html
+---
+
+limits, continuity, left versus right, l'hopital

@@ -1,0 +1,104 @@
+---
+title: "Differentiation"
+format: html
+editor: 
+  mode: source
+---
+
+The **derivative** of a function $f(x)$ is its instantaneous rate of change. On a graph, this corresponds to the slope of the tangent line. We will denote derivatives by $f'(x)$ or $\text{d}f/\text{d}x$ or something like that. 
+
+When it exists, **which it doesn't always**, the derivative is defined as the limit of difference quotients:
+
+$$
+f'(x)=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}
+$$
+
+So, "rise over run" as the "run" bit gets arbitrarily small.
+
+![](images/tangent.gif){fig-align="center"}
+
+## Derivative rules 
+
+
+
+| rule | function       | derivative |
+|------|--------------------|--------------|
+| constant    | $h(x)=c$ | $h'(x)=0$        |
+| scaling     | $h(x)=c\cdot f(x)$ |  $h'(x)=c\cdot f'(x)$ |
+| sum/difference | $h(x)=f(x)\pm g(x)$ | $h'(x)=f'(x)\pm g'(x)$ |
+| linearity | $h(x)=a\cdot f(x)\pm b\cdot g(x)$ | $h'(x)=a\cdot f'(x)\pm b\cdot g'(x)$ |
+| power | $h(x)=x^n$| $h'(x)=nx^{n-1}$|
+| product |$h(x)=f(x)g(x)$| $h'(x)=f'(x)g(x)+f(x)g'(x)$|
+| quotient |$h(x)=f(x)/g(x)$| $h'(x)=\frac{f'(x)g(x)+f(x)g'(x)}{g(x)^2}$|
+| chain |$h(x)=f(g(x))$| $h'(x)=f'(g(x))g'(x)$|
+| exponential |$h(x)=e^x$| $h'(x)=e^x$|
+| natural log | $h(x)=\ln(x)$| $h'(x)=1/x$|
+
+
+
+## Curvature
+
+If you take the derivative of $f$, you get the **first derivative** $f'$. If you take the derivative of the derivative, you get the **second derivative** $f''$. The derivative of the derivative of the derivative is the **third derivative** $f'''$, and [on and on](https://youtu.be/TW28iWV7nxE?si=EZrdZrENMdE6JvT1). But let's focus on the first two. The derivatives contain information about the shape of the original function:
+
+- the first derivative tells you if the function is increasing or decreasing;
+    - if $f'(x)>0$, then $f$ is increasing at $x$;
+    - if $f'(x)<0$, then $f$ is decreasing at $x$;
+    - if $f'(x)=0$, then $f$ is not changing at $x$;
+- if the second derivative tells you about the **curvature** (aka **concavity**) of the function:
+    - if $f''(x)>0$, then $f$ is **concave up** ($\cup$, smiling) at $x$;
+    - if $f''(x)<0$, then $f$ is **concave down** ($\cap$, frowning) at $x$.
+    
+Here is an illustration with the function $f(x)=x^3-x$ and its derivatives $f'(x)=3x^2-1$ and $f''(x)=6x$ (power rule!):
+
+```{r}
+#| label: log
+#| echo: false
+#| fig-align: center
+#| fig-asp: 1
+ticks = seq(-1.5, 1.5, by = 0.5)
+labs = c(NA, ticks[-c(1, length(ticks))], NA)
+par(mfrow = c(3, 1), mar = c(0, 5, 0, 0.5))
+curve(x^3 - x, from = -2, to = 2, 
+      xaxt = "n", xaxs = "i", col = "red", 
+      yaxt = "n", yaxs = "i",
+      lwd = 2, xlim = c(-1.5, 1.5), ylim = c(-1, 1),
+      ylab = "original function")
+box(lwd = 3)
+abline(v = c(0, -1/sqrt(3), 1/sqrt(3)), lty = c(1, 2, 2))
+axis(1, pos = 0, at = ticks, labels = labs)
+curve(3*x^2 - 1, from = -2, to = 2, 
+      xaxt = "n", xaxs = "i", col = "red", 
+      yaxt = "n", yaxs = "i",
+      lwd = 2, , xlim = c(-1.5, 1.5), ylim = c(-2, 4),
+      ylab  = "first derivative")
+segments(-1/sqrt(3), 0, -1/sqrt(3), 100, lty = 2)
+segments(1/sqrt(3), 0, 1/sqrt(3), 100, lty = 2)
+axis(1, pos = 0, at = ticks, labels = labs)
+points(c(-1/sqrt(3), 1/sqrt(3)), c(0, 0), pch = 19, cex = 2, col = "red")
+box(lwd = 3)
+abline(v = 0)
+
+curve(6*x, from = -2, to = 2, 
+      xaxt = "n", xaxs = "i", col = "red", 
+      yaxt = "n", yaxs = "i",
+      lwd = 2, , xlim = c(-1.5, 1.5),
+      ylab = "second derivative")
+box(lwd = 3)
+abline(v = 0)
+axis(1, pos = 0, at = ticks, labels = labs)
+points(0, 0, pch = 19, col = "red", cex = 2)
+```
+
+When the first derivative changes sign (at $x=\pm1/\sqrt{3}$), that corresponds to the original function switching from increasing to decreasing, or vice versa. When the second derivative changes sign (at $x=0$), that corresponds to the original function switching from concave down (frowning) to concave up (smiling). 
+
+A point like $x=0$ in this example where the second derivative changes sign and the concavity changes is called an **inflection point**. "Second derivative changes sign" is the same thing as saying the graph of $f''$ crosses the $x$-axis, so an inflection point happens where the second derivative has roots: $f''=0$. 
+
+## Optimization
+
+
+
+max versus argmax 
+
+critical points
+
+check the second derivative
