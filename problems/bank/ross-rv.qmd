@@ -1,0 +1,9 @@
+Two balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win \$2 for each black ball selected, we lose \$1 for each green ball selected, and we earn nothing for each orange ball selected. Let $X$ denote our winnings.
+
+a.  Make a table with the possible values of $X$ and the probabilities of each value.
+
+b.  Sketch the pmf of $X$.
+
+c.  Sketch the cdf of $X$.
+
+d.  Compute the expected value of $X$.

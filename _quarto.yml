@@ -105,7 +105,7 @@ website:
             text: "`sample`"
       - section: "Problem Sets"
         contents:
-          - href: psets/pset_0.qmd
+          - href: problems/pset_0.qmd
             text: Problem Set 0
       - section: "Labs"
       - section: "Exam Review"

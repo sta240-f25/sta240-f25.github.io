@@ -1,0 +1,3 @@
+![](images/circuit.png){fig-align="center" width="60%"}
+
+The figure above displays a circuit. Switch $S_i$ closes with probability $p_i$, and the switches close independently of one another. What is the probability that electricity can flow from $A$ to $G$?

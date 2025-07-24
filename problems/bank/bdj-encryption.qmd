@@ -1,0 +1,8 @@
+An encryption algorithm generates a seed value $z$ in the following way:
+
+-   A binary operator is chosen at random from $\{+,\,\cdot\}$;
+
+-   Two *distinct* numbers $x$ and $y$ are chosen at random from the set $\{1,\,2,\,...,\,9\}$ and the binary operation chosen above acts on $x$ and $y$ to produce $z$.
+
+a.  What is the probability that $z$ is an even number?
+b.  You notice that the algorithm generates an even $z$ value. Given this, what is the probability that the $+$ operator was used to generate it?

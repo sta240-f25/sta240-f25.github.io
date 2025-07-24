@@ -1,0 +1,13 @@
+Let $A$ and $B$ be events in a sample space $S$. Let $C$ be the set of outcomes that are in either $A$ or $B$, but *not* both.
+
+a.  Draw a well-labeled picture of $S$, $A$, $B$, and $C$.
+
+b.  Write down a formula for $C$ in terms of $A$ and $B$ using any of the basic operations: union ($\cup$), intersection ($\cap$), complement ($^c$).
+
+c.  Use set theory and the probability axioms to show that
+
+$$
+P(C)=P(A)+P(B)-2P(A\cap B).
+$$
+
+d.  Explain this result conceptually (with words and pictures).

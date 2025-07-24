@@ -16,7 +16,7 @@ Recommend some music for us to listen to while we grade this.
 
 ## Problem X
 
-Let $A$ and $B$ be independent events. Prove that $A^c$ and $B^c$ are independent events.
+{{< include bank/independent-complements.qmd >}}
 
 ## Submission
 

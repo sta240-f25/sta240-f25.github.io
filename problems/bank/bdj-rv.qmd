@@ -1,0 +1,7 @@
+An urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let $X$ be the number of balls drawn in this process.
+
+a. What is the range of the random variable $X$?
+b. What is the probability mass function of $X$? 
+c. Sketch the CDF of $X$.
+d. Compute $E(X)$.
+e. Three balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?

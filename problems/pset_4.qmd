@@ -16,30 +16,11 @@ Recommend some music for us to listen to while we grade this.
 
 ## Problem X
 
-An urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let $X$ be the number of balls drawn in this process.
-
-a. What is the range of the random variable $X$?
-b. What is the probability mass function of $X$? 
-c. Sketch the CDF of $X$.
-d. Compute $E(X)$.
-e. Three balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?
+{{< include bank/bdj-rv.qmd >}}
 
 ## Problem X
 
-King Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive *and* 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won't break the bank:
-
-1. Take a blood sample from each of the 1000 knights;
-2. Split each of these samples into two parts;
-3. Take one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.
-4. Test each of those mixed samples;
-5. A few things could happen:
-    - If the test gives a negative result, we know all of the original ten samples are clear, and we can move on;
-    - If the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten knights. We can then identify which knights are positive.
-    
-Gandalf finishes by saying "I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces."
-
-a. What disease prevalence is Gandalf implicitly assuming here? 
-b. Can Gandalf revise his scheme to reduce the expected cost even more?
+{{< include bank/gandalf-test.qmd >}}
 
 ## Problem X
 
