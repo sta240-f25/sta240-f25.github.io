@@ -1,5 +1,49 @@
 [
   {
+    "objectID": "explainers/RStudio.html",
+    "href": "explainers/RStudio.html",
+    "title": "The Lay of the Land",
+    "section": "",
+    "text": "R is a programming language, like Python, C++, Java, Julia, etc. RStudio is an IDE (integrated development environment) that allows you to interacts with R in a convenient way. So if R is the engine, RStudio is the dashboard.\nWhen you launch RStudio, you see something like this:\n\n\n\n\n\nfour panes\n\n(bottom left)\n(top left)\n(top right)\n(bottom right)",
+    "crumbs": [
+      "R Explainers",
+      "The lay of the land"
+    ]
+  },
+  {
+    "objectID": "explainers/vectorization.html",
+    "href": "explainers/vectorization.html",
+    "title": "Vectorization",
+    "section": "",
+    "text": "Functions in R are often vectorized. For example:\n\nexp(2)\n\n[1] 7.389056\n\n\nI give it one number, and it returns one number. If instead, I supply a vector, I get this:\n\nexp(c(-3, 0.001, 2, 5, 600, 1, 0))\n\n[1]  4.978707e-02  1.001001e+00  7.389056e+00  1.484132e+02 3.773020e+260\n[6]  2.718282e+00  1.000000e+00\n\n\nSo when I supply a regular ol’ number as an argument, the exp function returns a number. When I supply a vector, it returns a vector; the exp function knows to act entry-wise and give me back a vector with the output of each entry-wise computation. In other words, I didn’t have to write a loop to manually do this. The function is vectorized, so it effectively runs the loop for me.\nSo consider for instance the set of numbers \\(A = \\{-100, -6, 0.001, \\pi, 30\\}\\), and this stupid function:\n\\[\nf(x) = \\ln^2\\left|\\frac{2x}{1-\\sin(x)}\\right|.\n\\]\nIf I wanted to compute the value of \\(f\\) for each of the arguments in \\(A\\), I could write a loop that goes entry-by-entry through \\(A\\) and applies the function \\(f\\) to it. But in R, because arithmetic operations are vectorized, I can do this:\n\nA = c(-100, -6, 0.001, pi, 30)\n\nlog( abs( (2 * A) / ( 1 - sin(A) ) ) ) ^ 2 \n\n[1] 36.051349  7.910714 38.608919  3.377792 11.609009\n\n\nDumb!\nAll of the basic arithmetic operations are vectorized like this:\n\nc(1, 2, 3) + 2\n\n[1] 3 4 5\n\n\n\nc(1, 2, 3) + c(1, 2, 3)\n\n[1] 2 4 6\n\n\n\nfloor(c(4, 5.1, 6.9))\n\n[1] 4 5 6",
+    "crumbs": [
+      "R Explainers",
+      "Vectorization"
+    ]
+  },
+  {
+    "objectID": "explainers/math.html",
+    "href": "explainers/math.html",
+    "title": "Basic math in R",
+    "section": "",
+    "text": "Using R for the calculator is like buying a plane ticket to get free peanuts. But I have done my taxes in R, so…\n\n2 + 2 # addition\n\n[1] 4\n\n5 - 2 # subtraction\n\n[1] 3\n\n0.5 * 6 # multiplication\n\n[1] 3\n\n3 / 4 # division\n\n[1] 0.75\n\nsqrt(2) # square root\n\n[1] 1.414214\n\n4 ^ 2 # exponent\n\n[1] 16\n\nexp(4.9) # base-e exponent\n\n[1] 134.2898\n\nlog(7) # natural log\n\n[1] 1.94591\n\nabs(-6) # absolute value\n\n[1] 6\n\nceiling(4.6) # round up\n\n[1] 5\n\nfloor(4.6) # round down\n\n[1] 4\n\nfactorial(4) # n! = n x (n-1) x ... x 2 x 1\n\n[1] 24\n\nchoose(8, 3) # binomial coefficient (we'll get there)\n\n[1] 56",
+    "crumbs": [
+      "R Explainers",
+      "Basic math"
+    ]
+  },
+  {
+    "objectID": "explainers/lineplot.html",
+    "href": "explainers/lineplot.html",
+    "title": "Plotting lines",
+    "section": "",
+    "text": "You can use the curve function to plot a line graph of a function. If that function were \\(f(x) = x^2\\) for example, you would type this:\n\ncurve(x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"f(x)\")\n\n\n\n\n\n\n\n\nThis function takes many arguments.\n\nthe first argument is a formula for the function you want to graph. The curve command implicitly assumes that x is the argument, and everything else is constant;\nfrom and to give the bounds of the \\(x\\)-axis;\nThis command is basicall6 evaluating the function at many points and connecting the dots. n specifies how many dots. Too few, and the picture would look all cattywampus:\n\n\ncurve(x^2, from = -5, to = 5, n = 5)\n\n\n\n\n\n\n\n\nIf you want multiple lines on one graph, you can call curve multiple times, and include the add argument to all but the first call:\n\ncurve(1*x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"\")\ncurve(2*x^2, from = -5, to = 5, n = 500, col = \"blue\", ylab = \"\", add = TRUE)\ncurve(3*x^2, from = -5, to = 5, n = 500, col = \"darkgreen\", ylab = \"\", add = TRUE)\nlegend(\"bottomleft\", c(\"a = 1\", \"a = 2\", \"a = 3\"), \n       col = c(\"red\", \"blue\", \"green\"), lty = 1, bty = \"n\")",
+    "crumbs": [
+      "R Explainers",
+      "Plotting lines"
+    ]
+  },
+  {
     "objectID": "exams/midterm-1.html",
     "href": "exams/midterm-1.html",
     "title": "midterm-1",
@@ -150,15 +194,311 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA 240 Probability for Statistical Inference",
+    "objectID": "math/integration.html",
+    "href": "math/integration.html",
+    "title": "integration",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nMon, Aug 25\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\n\n\n\n\n\n\n\n\nWed, Aug 27\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\n\n\nIntro Survey @ 3 PM\n\n\n\n\nThu, Aug 28\n\n\n💻 Lab 0 (calculus review)\n\n\n\n\n\n\n2\nMon, Sep 1\n\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\n\n\nWed, Sep 3\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\n\n\n\n\n\n\n\nThu, Sep 4\n\n\n💻 Lab 1\n\n\nLab 1 @ 11:59 PM\n\n\n\n\nFri, Sep 5\n\n\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nWed, Sep 10\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nThu, Sep 11\n\n\n💻 Lab 2\n\n\nLab 2 @ 11:59 PM\n\n\n\n\nFri, Sep 12\n\n\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\nDS: 2\n🧑‍🏫 Conditional Probability\nPlay around!\n\n\n\n\n\n\nWed, Sep 17\nDS: 2\n🧑‍🏫 Conditional Probability\nPlay around!\n\n\n\n\n\n\nThu, Sep 18\n\n\n💻 Lab 3\n\n\nLab 3 @ 11:59 PM\n\n\n\n\nFri, Sep 19\n\n\n\n\n\n\nPSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nWed, Sep 24\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nThu, Sep 25\n\n\n💻 Lab 4\n\n\nLab 4 @ 11:59 PM\n\n\n\n\nFri, Sep 26\n\n\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nWed, Oct 1\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nThu, Oct 2\n\n\n💻 Lab 5\n\n\nLab 5 @ 11:59 PM\n\n\n\n\nFri, Oct 3\n\n\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nWed, Oct 8\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nThu, Oct 9\n\n\n📝 Midterm 1\n\n\n\n\n\n\n8\nMon, Oct 13\n\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\n\n\nWed, Oct 15\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nThu, Oct 16\n\n\n💻 Lab 6\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nWed, Oct 22\n\n\n🧑‍🏫 Jointly Discrete\n\n\n\n\n\n\n\n\nThu, Oct 23\n\n\n💻 Lab 7\n\n\nLab 7 @ 11:59 PM\n\n\n\n\nFri, Oct 24\n\n\n\n\n\n\nPSET 5 @ 5PM\n\n\n10\nMon, Oct 27\n\n\n🧑‍🏫 Jointly Continuous\n\n\n\n\n\n\n\n\nWed, Oct 29\n\n\n🧑‍🏫 Hierarchies\n\n\n\n\n\n\n\n\nThu, Oct 30\n\n\n💻 Lab 8\n\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\n\n\n\nWed, Nov 5\n\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\n\n\n\nThu, Nov 6\n\n\n💻 Lab 9\n\n\nLab 9 @ 11:59 PM\n\n\n\n\nFri, Nov 7\n\n\n\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\n\n\n\nWed, Nov 12\n\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\n\n\n\nThu, Nov 13\n\n\n📝 Midterm 2\n\n\n\n\n\n\n13\nMon, Nov 17\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nWed, Nov 19\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nThu, Nov 20\n\n\n💻 Lab 10\n\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\n\n\n\nWed, Nov 26\n\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\n\n\nThu, Nov 27\n\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n\n15\nMon, Dec 1\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nWed, Dec 3\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nThu, Dec 4\n\n\n💻 Lab 11\n\n\nLab 11 @ 11:59 PM\n\n\n\n\nFri, Dec 5\n\n\n\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n\n📝 Final (9AM - 12PM)",
+    "text": "Crudely, the definite integral of a function gives you the (signed) area between the curve and the \\(x\\)-axis.",
     "crumbs": [
-      "Syllabus",
-      "Schedule"
+      "Math Review",
+      "Integration"
     ]
+  },
+  {
+    "objectID": "math/integration.html#fundamental-theorem-of-calculus",
+    "href": "math/integration.html#fundamental-theorem-of-calculus",
+    "title": "integration",
+    "section": "fundamental theorem of calculus",
+    "text": "fundamental theorem of calculus",
+    "crumbs": [
+      "Math Review",
+      "Integration"
+    ]
+  },
+  {
+    "objectID": "math/integration.html#u-substitution",
+    "href": "math/integration.html#u-substitution",
+    "title": "integration",
+    "section": "u-substitution",
+    "text": "u-substitution",
+    "crumbs": [
+      "Math Review",
+      "Integration"
+    ]
+  },
+  {
+    "objectID": "math/integration.html#integration-by-parts",
+    "href": "math/integration.html#integration-by-parts",
+    "title": "integration",
+    "section": "integration by parts",
+    "text": "integration by parts",
+    "crumbs": [
+      "Math Review",
+      "Integration"
+    ]
+  },
+  {
+    "objectID": "math/integration.html#improper-integration",
+    "href": "math/integration.html#improper-integration",
+    "title": "integration",
+    "section": "Improper integration",
+    "text": "Improper integration",
+    "crumbs": [
+      "Math Review",
+      "Integration"
+    ]
+  },
+  {
+    "objectID": "math/limits.html",
+    "href": "math/limits.html",
+    "title": "limits",
+    "section": "",
+    "text": "limits, continuity, left versus right, l’hopital",
+    "crumbs": [
+      "Math Review",
+      "Limits and continuity"
+    ]
+  },
+  {
+    "objectID": "math/latex.html",
+    "href": "math/latex.html",
+    "title": "Typesetting math with LaTeX and Quarto",
+    "section": "",
+    "text": "This is optional!\n\n\n\nYou can get a 100% A+ in this class without doing any of the stuff described below, so please skip it if you’re not interested. However, if you plan on doing research in the mathematical sciences, you will this stuff eventually, so…\nLaTeX is a software system for typesetting documents with a bunch of math in them1. It is fully integrated into Quarto, so you can do all of your writing and coding and plotting and math-ing in one place. Pretty neat. We’ll just show you a few things to get you going, but if you want to use the entire system for realz, you should make an Overleaf account and start playing.",
+    "crumbs": [
+      "Math Review",
+      "Typing math"
+    ]
+  },
+  {
+    "objectID": "math/latex.html#inline-math-goes-between-single-dollar-signs",
+    "href": "math/latex.html#inline-math-goes-between-single-dollar-signs",
+    "title": "Typesetting math with LaTeX and Quarto",
+    "section": "Inline math goes between single dollar signs",
+    "text": "Inline math goes between single dollar signs\n\n\n\n\n\n\n\nGoal\ninclude an equation in the middle of a sentence\n\n\nWhat you type in the .qmd file\nThe function $h(x)=\\ln x^2$ is my favorite\n\n\nHow it will look when you render\nThe function \\(h(x)=\\ln x^2\\) is my favorite.",
+    "crumbs": [
+      "Math Review",
+      "Typing math"
+    ]
+  },
+  {
+    "objectID": "math/latex.html#a-math-block-goes-between-double-dollar-signs",
+    "href": "math/latex.html#a-math-block-goes-between-double-dollar-signs",
+    "title": "Typesetting math with LaTeX and Quarto",
+    "section": "A math block goes between double dollar signs",
+    "text": "A math block goes between double dollar signs\nSay you want a whole bunch of math set off on a new line, in between your paragraphs, like this:\n\\[\nf(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n\\]\nIn that case, you put this into your source .qmd file:\n\n$$\nf(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n$$\n\nWhen you render, you’ll get the pretty math. Notice some of the commands we used:\n\n\\exp for \\(\\exp\\);\n\\sqrt{2} for the square root \\(\\sqrt{2}\\);\n\\frac{1}{2} to get a fraction \\(\\frac{1}{2}\\);\n(x-\\mu)^2 to get an exponent \\((x-\\mu)^2\\);\n\\mu, \\sigma, \\pi for the Greek letters \\(\\mu\\), \\(\\sigma\\), and \\(\\pi\\);\nand so on.\n\n\n\n\n\n\n\nMath commands in LaTeX\n\n\n\nHere is a bank of common LaTeX commands. You won’t use most of them. Alternatively, Detexify is a very useful site where you can draw a symbol and it will tell you what the LaTeX command is for it.",
+    "crumbs": [
+      "Math Review",
+      "Typing math"
+    ]
+  },
+  {
+    "objectID": "math/latex.html#lining-equations-up",
+    "href": "math/latex.html#lining-equations-up",
+    "title": "Typesetting math with LaTeX and Quarto",
+    "section": "Lining equations up",
+    "text": "Lining equations up\nIf you are typesetting a sequence of equalities, you should do it inside an aligned environment so that the equal signs are all lined up nice.\nIf you type this:\n\n$$\n\\begin{aligned}\nx(x+1)(x-1) &= (x^2+x)(x-1)\\\\\n&=x^3-x^2+x^2-x\\\\\n&=x^3-x.\n\\end{aligned}\n$$\n\nYou will get this:\n\\[\n\\begin{aligned}\nx(x+1)(x-1) &= (x^2+x)(x-1)\\\\\n&=x^3-x^2+x^2-x\\\\\n&=x^3-x.\n\\end{aligned}\n\\]\nThe \\\\ introduces a line break, and the & in each equation tells it where to line things up.",
+    "crumbs": [
+      "Math Review",
+      "Typing math"
+    ]
+  },
+  {
+    "objectID": "math/latex.html#footnotes",
+    "href": "math/latex.html#footnotes",
+    "title": "Typesetting math with LaTeX and Quarto",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThere is no consensus on how to pronounce “LaTeX.” JZ says “lah-tech.” Some folks say “lay-tech.” Some even say “lay-techs,” just like a latex glove. But we all agree that the emphasis is on the first syllable. Perhaps I’ll award 2.56 bonus points if you invent a new way to pronounce it. But probably not.↩︎",
+    "crumbs": [
+      "Math Review",
+      "Typing math"
+    ]
+  },
+  {
+    "objectID": "math/series.html",
+    "href": "math/series.html",
+    "title": "series",
+    "section": "",
+    "text": "geometric taylor",
+    "crumbs": [
+      "Math Review",
+      "Sequences and series"
+    ]
+  },
+  {
+    "objectID": "psets/pset_1.html",
+    "href": "psets/pset_1.html",
+    "title": "Problem Set 1",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "psets/pset_1.html#problem-0",
+    "href": "psets/pset_1.html#problem-0",
+    "title": "Problem Set 1",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "psets/pset_1.html#problem-x",
+    "href": "psets/pset_1.html#problem-x",
+    "title": "Problem Set 1",
+    "section": "Problem X",
+    "text": "Problem X\nOne day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they fit together."
+  },
+  {
+    "objectID": "psets/pset_1.html#problem-x-1",
+    "href": "psets/pset_1.html#problem-x-1",
+    "title": "Problem Set 1",
+    "section": "Problem X",
+    "text": "Problem X\nLet \\(A\\) and \\(B\\) be events in a sample space \\(S\\). Let \\(C\\) be the set of outcomes that are in either \\(A\\) or \\(B\\), but not both.\n\nDraw a well-labeled picture of \\(S\\), \\(A\\), \\(B\\), and \\(C\\).\nWrite down a formula for \\(C\\) in terms of \\(A\\) and \\(B\\) using any of the basic operations: union (\\(\\cup\\)), intersection (\\(\\cap\\)), complement (\\(^c\\)).\nUse set theory and the probability axioms to show that\n\n\\[\nP(C)=P(A)+P(B)-2P(A\\cap B).\n\\]\n\nExplain this result conceptually (with words and pictures)."
+  },
+  {
+    "objectID": "psets/pset_1.html#problem-x-2",
+    "href": "psets/pset_1.html#problem-x-2",
+    "title": "Problem Set 1",
+    "section": "Problem X",
+    "text": "Problem X\nLet \\(S\\) be a sample space, and consider events \\(A,\\, B,\\, C\\subseteq S\\). Recall that the law of inclusion/exclusion says that\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B).\n\\]\n\nHow should this be extended to unions of three events? \\[\nP(A\\cup B\\cup C)=P(A)+P(B)+P(C) +\\,...{???}\n\\] Explain your conjecture with words and pictures.\nUse set theory and the probabiity axioms to prove your conjecture in the previous part."
+  },
+  {
+    "objectID": "psets/pset_1.html#problem-9",
+    "href": "psets/pset_1.html#problem-9",
+    "title": "Problem Set 1",
+    "section": "Problem 9",
+    "text": "Problem 9\nA few months ago I went to Harris Teeter to get some junk food, and when I looked at my receipt, I saw this:\n\n\n\n\n\nI thought, “Strange. What are the odds the total would be a whole number?” Well, let’s find out!\n\nImagine you randomly purchase two items that each cost less than $10, and assume all prices are equally likely. The prices of the two items are quoted to two decimal places. What is the probability that the two prices add up to a whole number total?\nNow let’s add a wrinkle. Imagine sales tax is 5%. This is calculated, rounded up to the nearest cent, and then added to your bill. What is the probability that the cost of the two items plus the rounded sales tax adds up to a whole number?"
+  },
+  {
+    "objectID": "psets/pset_1.html#problem-10",
+    "href": "psets/pset_1.html#problem-10",
+    "title": "Problem Set 1",
+    "section": "Problem 10",
+    "text": "Problem 10\nSeven balls are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green balls. Find the probability that\n\n3 red, 2 blue, and 2 green balls are withdrawn;\nat least 2 red balls are withdrawn;\nall withdrawn balls are the same color;\neither exactly 3 red balls or exactly 3 blue balls are withdrawn."
+  },
+  {
+    "objectID": "psets/pset_1.html#submission",
+    "href": "psets/pset_1.html#submission",
+    "title": "Problem Set 1",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+  },
+  {
+    "objectID": "psets/pset_2.html",
+    "href": "psets/pset_2.html",
+    "title": "Problem Set 2",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "psets/pset_2.html#problem-0",
+    "href": "psets/pset_2.html#problem-0",
+    "title": "Problem Set 2",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "psets/pset_2.html#problem-x",
+    "href": "psets/pset_2.html#problem-x",
+    "title": "Problem Set 2",
+    "section": "Problem X",
+    "text": "Problem X\nLet \\(A\\) and \\(B\\) be independent events. Prove that \\(A^c\\) and \\(B^c\\) are independent events."
+  },
+  {
+    "objectID": "psets/pset_2.html#submission",
+    "href": "psets/pset_2.html#submission",
+    "title": "Problem Set 2",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+  },
+  {
+    "objectID": "psets/pset_4.html",
+    "href": "psets/pset_4.html",
+    "title": "Problem Set 4",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "psets/pset_4.html#problem-0",
+    "href": "psets/pset_4.html#problem-0",
+    "title": "Problem Set 4",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "psets/pset_4.html#problem-x",
+    "href": "psets/pset_4.html#problem-x",
+    "title": "Problem Set 4",
+    "section": "Problem X",
+    "text": "Problem X\nAn urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
+  },
+  {
+    "objectID": "psets/pset_4.html#problem-x-1",
+    "href": "psets/pset_4.html#problem-x-1",
+    "title": "Problem Set 4",
+    "section": "Problem X",
+    "text": "Problem X\nKing Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 knights;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten knights. We can then identify which knights are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
+  },
+  {
+    "objectID": "psets/pset_4.html#problem-x-2",
+    "href": "psets/pset_4.html#problem-x-2",
+    "title": "Problem Set 4",
+    "section": "Problem X",
+    "text": "Problem X\nelection thing"
+  },
+  {
+    "objectID": "psets/pset_4.html#submission",
+    "href": "psets/pset_4.html#submission",
+    "title": "Problem Set 4",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+  },
+  {
+    "objectID": "psets/pset_3.html",
+    "href": "psets/pset_3.html",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "psets/pset_3.html#problem-0",
+    "href": "psets/pset_3.html#problem-0",
+    "title": "Problem Set 3",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "psets/pset_3.html#problem-x",
+    "href": "psets/pset_3.html#problem-x",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\nWe studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\). Table 1 enumerates all of the possible states of the world together with their individual probabilities.\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n\n-\n-\n-\n0.32\n\n\n-\n-\n+\n0.24\n\n\n-\n+\n-\n0.16\n\n\n-\n+\n+\n0.08\n\n\n+\n-\n-\n0.02\n\n\n+\n-\n+\n0.04\n\n\n+\n+\n-\n0.06\n\n\n+\n+\n+\n0.08\n\n\n\n\n\n\n\nWhat is the overall prevalence of this disease?\nWhat is the sensitivity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you truly have the disease?"
+  },
+  {
+    "objectID": "psets/pset_3.html#problem-x-1",
+    "href": "psets/pset_3.html#problem-x-1",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\nAn encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
+  },
+  {
+    "objectID": "psets/pset_3.html#problem-x-2",
+    "href": "psets/pset_3.html#problem-x-2",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\n\n\n\n\n\nThe figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
+  },
+  {
+    "objectID": "psets/pset_3.html#problem-x-3",
+    "href": "psets/pset_3.html#problem-x-3",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\nTwo balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
+  },
+  {
+    "objectID": "psets/pset_3.html#submission",
+    "href": "psets/pset_3.html#submission",
+    "title": "Problem Set 3",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
   },
   {
     "objectID": "psets/pset_0.html",
@@ -271,179 +611,103 @@
     ]
   },
   {
-    "objectID": "psets/pset_3.html",
-    "href": "psets/pset_3.html",
-    "title": "Problem Set 3",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 240 Probability for Statistical Inference",
     "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nMon, Aug 25\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\n\n\n\n\n\n\n\n\nWed, Aug 27\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\n\n\nIntro Survey @ 3 PM\n\n\n\n\nThu, Aug 28\n\n\n💻 Lab 0 (calculus review)\n\n\n\n\n\n\n2\nMon, Sep 1\n\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\n\n\nWed, Sep 3\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\n\n\n\n\n\n\n\nThu, Sep 4\n\n\n💻 Lab 1\n\n\nLab 1 @ 11:59 PM\n\n\n\n\nFri, Sep 5\n\n\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nWed, Sep 10\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nThu, Sep 11\n\n\n💻 Lab 2\n\n\nLab 2 @ 11:59 PM\n\n\n\n\nFri, Sep 12\n\n\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\nDS: 2\n🧑‍🏫 Conditional Probability\nPlay around!\n\n\n\n\n\n\nWed, Sep 17\nDS: 2\n🧑‍🏫 Conditional Probability\nPlay around!\n\n\n\n\n\n\nThu, Sep 18\n\n\n💻 Lab 3\n\n\nLab 3 @ 11:59 PM\n\n\n\n\nFri, Sep 19\n\n\n\n\n\n\nPSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nWed, Sep 24\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nThu, Sep 25\n\n\n💻 Lab 4\n\n\nLab 4 @ 11:59 PM\n\n\n\n\nFri, Sep 26\n\n\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nWed, Oct 1\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nThu, Oct 2\n\n\n💻 Lab 5\n\n\nLab 5 @ 11:59 PM\n\n\n\n\nFri, Oct 3\n\n\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nWed, Oct 8\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nThu, Oct 9\n\n\n📝 Midterm 1\n\n\n\n\n\n\n8\nMon, Oct 13\n\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\n\n\nWed, Oct 15\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nThu, Oct 16\n\n\n💻 Lab 6\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nWed, Oct 22\n\n\n🧑‍🏫 Jointly Discrete\n\n\n\n\n\n\n\n\nThu, Oct 23\n\n\n💻 Lab 7\n\n\nLab 7 @ 11:59 PM\n\n\n\n\nFri, Oct 24\n\n\n\n\n\n\nPSET 5 @ 5PM\n\n\n10\nMon, Oct 27\n\n\n🧑‍🏫 Jointly Continuous\n\n\n\n\n\n\n\n\nWed, Oct 29\n\n\n🧑‍🏫 Hierarchies\n\n\n\n\n\n\n\n\nThu, Oct 30\n\n\n💻 Lab 8\n\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\n\n\n\nWed, Nov 5\n\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\n\n\n\nThu, Nov 6\n\n\n💻 Lab 9\n\n\nLab 9 @ 11:59 PM\n\n\n\n\nFri, Nov 7\n\n\n\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\n\n\n\nWed, Nov 12\n\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\n\n\n\nThu, Nov 13\n\n\n📝 Midterm 2\n\n\n\n\n\n\n13\nMon, Nov 17\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nWed, Nov 19\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nThu, Nov 20\n\n\n💻 Lab 10\n\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\n\n\n\nWed, Nov 26\n\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\n\n\nThu, Nov 27\n\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n\n15\nMon, Dec 1\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nWed, Dec 3\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nThu, Dec 4\n\n\n💻 Lab 11\n\n\nLab 11 @ 11:59 PM\n\n\n\n\nFri, Dec 5\n\n\n\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n\n📝 Final (9AM - 12PM)",
+    "crumbs": [
+      "Syllabus",
+      "Schedule"
+    ]
   },
   {
-    "objectID": "psets/pset_3.html#problem-0",
-    "href": "psets/pset_3.html#problem-0",
-    "title": "Problem Set 3",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
-  },
-  {
-    "objectID": "psets/pset_3.html#problem-x",
-    "href": "psets/pset_3.html#problem-x",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\nWe studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\). Table 1 enumerates all of the possible states of the world together with their individual probabilities.\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n\n-\n-\n-\n0.32\n\n\n-\n-\n+\n0.24\n\n\n-\n+\n-\n0.16\n\n\n-\n+\n+\n0.08\n\n\n+\n-\n-\n0.02\n\n\n+\n-\n+\n0.04\n\n\n+\n+\n-\n0.06\n\n\n+\n+\n+\n0.08\n\n\n\n\n\n\n\nWhat is the overall prevalence of this disease?\nWhat is the sensitivity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you truly have the disease?"
-  },
-  {
-    "objectID": "psets/pset_3.html#problem-x-1",
-    "href": "psets/pset_3.html#problem-x-1",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\nAn encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
-  },
-  {
-    "objectID": "psets/pset_3.html#problem-x-2",
-    "href": "psets/pset_3.html#problem-x-2",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\n\n\n\n\n\nThe figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
-  },
-  {
-    "objectID": "psets/pset_3.html#problem-x-3",
-    "href": "psets/pset_3.html#problem-x-3",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\nTwo balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
-  },
-  {
-    "objectID": "psets/pset_3.html#submission",
-    "href": "psets/pset_3.html#submission",
-    "title": "Problem Set 3",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
-  },
-  {
-    "objectID": "psets/pset_4.html",
-    "href": "psets/pset_4.html",
-    "title": "Problem Set 4",
+    "objectID": "math/greeks.html",
+    "href": "math/greeks.html",
+    "title": "Greek alphabet",
     "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+    "text": "For better or worse, Greek letters will be flying in this class, so you should have a working knowledge of the most common ones used in mathematics:\n\n\n\nGreek Letter\nEnglish Name\n\n\n\n\n\\(A, \\alpha\\)\nalpha\n\n\n\\(B, \\beta\\)\nbeta\n\n\n\\(\\Gamma, \\gamma\\)\ngamma\n\n\n\\(\\Delta, \\delta\\)\ndelta\n\n\n\\(E, \\epsilon\\)\nepsilon\n\n\n\\(Z, \\zeta\\)\nzeta\n\n\n\\(H, \\eta\\)\neta\n\n\n\\(\\Theta, \\theta\\)\ntheta\n\n\n\\(I, \\iota\\)\niota\n\n\n\\(K, \\kappa\\)\nkappa\n\n\n\\(\\Lambda, \\lambda\\)\nlambda\n\n\n\\(M, \\mu\\)\nmu (“mew”)\n\n\n\\(N, \\nu\\)\nnu\n\n\n\\(\\Xi, \\xi\\)\nxi\n\n\n\\(O, o\\)\nomicron\n\n\n\\(\\Pi, \\pi\\)\npi\n\n\n\\(P, \\rho\\)\nrho (“row”)\n\n\n\\(\\Sigma, \\sigma\\)\nsigma\n\n\n\\(T, \\tau\\)\ntau\n\n\n\\(Y, \\upsilon\\)\nupsilon\n\n\n\\(\\Phi, \\phi\\)\nphi\n\n\n\\(X, \\chi\\)\nchi (“kai”)\n\n\n\\(\\Psi, \\psi\\)\npsi\n\n\n\\(\\Omega, \\omega\\)\nomega",
+    "crumbs": [
+      "Math Review",
+      "Greek alphabet"
+    ]
   },
   {
-    "objectID": "psets/pset_4.html#problem-0",
-    "href": "psets/pset_4.html#problem-0",
-    "title": "Problem Set 4",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
-  },
-  {
-    "objectID": "psets/pset_4.html#problem-x",
-    "href": "psets/pset_4.html#problem-x",
-    "title": "Problem Set 4",
-    "section": "Problem X",
-    "text": "Problem X\nAn urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
-  },
-  {
-    "objectID": "psets/pset_4.html#problem-x-1",
-    "href": "psets/pset_4.html#problem-x-1",
-    "title": "Problem Set 4",
-    "section": "Problem X",
-    "text": "Problem X\nKing Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 knights;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten knights. We can then identify which knights are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
-  },
-  {
-    "objectID": "psets/pset_4.html#problem-x-2",
-    "href": "psets/pset_4.html#problem-x-2",
-    "title": "Problem Set 4",
-    "section": "Problem X",
-    "text": "Problem X\nelection thing"
-  },
-  {
-    "objectID": "psets/pset_4.html#submission",
-    "href": "psets/pset_4.html#submission",
-    "title": "Problem Set 4",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
-  },
-  {
-    "objectID": "psets/pset_2.html",
-    "href": "psets/pset_2.html",
-    "title": "Problem Set 2",
+    "objectID": "math/differentiation.html",
+    "href": "math/differentiation.html",
+    "title": "Differentiation",
     "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+    "text": "The derivative of a function \\(f(x)\\) is its instantaneous rate of change. On a graph, this corresponds to the slope of the tangent line. We will denote derivatives by \\(f'(x)\\) or \\(\\text{d}f/\\text{d}x\\) or something like that.\nWhen it exists, which it doesn’t always, the derivative is defined as the limit of difference quotients:\n\\[\nf'(x)=\\lim_{\\Delta x\\to0}\\frac{f(x+\\Delta x)-f(x)}{\\Delta x}\n\\]\nSo, “rise over run” as the “run” bit gets arbitrarily small.",
+    "crumbs": [
+      "Math Review",
+      "Differentiation"
+    ]
   },
   {
-    "objectID": "psets/pset_2.html#problem-0",
-    "href": "psets/pset_2.html#problem-0",
-    "title": "Problem Set 2",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+    "objectID": "math/differentiation.html#derivative-rules",
+    "href": "math/differentiation.html#derivative-rules",
+    "title": "Differentiation",
+    "section": "Derivative rules",
+    "text": "Derivative rules\n\n\n\n\n\n\n\n\nrule\nfunction\nderivative\n\n\n\n\nconstant\n\\(h(x)=c\\)\n\\(h'(x)=0\\)\n\n\nscaling\n\\(h(x)=c\\cdot f(x)\\)\n\\(h'(x)=c\\cdot f'(x)\\)\n\n\nsum/difference\n\\(h(x)=f(x)\\pm g(x)\\)\n\\(h'(x)=f'(x)\\pm g'(x)\\)\n\n\nlinearity\n\\(h(x)=a\\cdot f(x)\\pm b\\cdot g(x)\\)\n\\(h'(x)=a\\cdot f'(x)\\pm b\\cdot g'(x)\\)\n\n\npower\n\\(h(x)=x^n\\)\n\\(h'(x)=nx^{n-1}\\)\n\n\nproduct\n\\(h(x)=f(x)g(x)\\)\n\\(h'(x)=f'(x)g(x)+f(x)g'(x)\\)\n\n\nquotient\n\\(h(x)=f(x)/g(x)\\)\n\\(h'(x)=\\frac{f'(x)g(x)+f(x)g'(x)}{g(x)^2}\\)\n\n\nchain\n\\(h(x)=f(g(x))\\)\n\\(h'(x)=f'(g(x))g'(x)\\)\n\n\nexponential\n\\(h(x)=e^x\\)\n\\(h'(x)=e^x\\)\n\n\nnatural log\n\\(h(x)=\\ln(x)\\)\n\\(h'(x)=1/x\\)",
+    "crumbs": [
+      "Math Review",
+      "Differentiation"
+    ]
   },
   {
-    "objectID": "psets/pset_2.html#problem-x",
-    "href": "psets/pset_2.html#problem-x",
-    "title": "Problem Set 2",
-    "section": "Problem X",
-    "text": "Problem X\nLet \\(A\\) and \\(B\\) be independent events. Prove that \\(A^c\\) and \\(B^c\\) are independent events."
+    "objectID": "math/differentiation.html#curvature",
+    "href": "math/differentiation.html#curvature",
+    "title": "Differentiation",
+    "section": "Curvature",
+    "text": "Curvature\nIf you take the derivative of \\(f\\), you get the first derivative \\(f'\\). If you take the derivative of the derivative, you get the second derivative \\(f''\\). The derivative of the derivative of the derivative is the third derivative \\(f'''\\), and on and on. But let’s focus on the first two. The derivatives contain information about the shape of the original function:\n\nthe first derivative tells you if the function is increasing or decreasing;\n\nif \\(f'(x)&gt;0\\), then \\(f\\) is increasing at \\(x\\);\nif \\(f'(x)&lt;0\\), then \\(f\\) is decreasing at \\(x\\);\nif \\(f'(x)=0\\), then \\(f\\) is not changing at \\(x\\);\n\nif the second derivative tells you about the curvature (aka concavity) of the function:\n\nif \\(f''(x)&gt;0\\), then \\(f\\) is concave up (\\(\\cup\\), smiling) at \\(x\\);\nif \\(f''(x)&lt;0\\), then \\(f\\) is concave down (\\(\\cap\\), frowning) at \\(x\\).\n\n\nHere is an illustration with the function \\(f(x)=x^3-x\\) and its derivatives \\(f'(x)=3x^2-1\\) and \\(f''(x)=6x\\) (power rule!):\n\n\n\n\n\n\n\n\n\nWhen the first derivative changes sign (at \\(x=\\pm1/\\sqrt{3}\\)), that corresponds to the original function switching from increasing to decreasing, or vice versa. When the second derivative changes sign (at \\(x=0\\)), that corresponds to the original function switching from concave down (frowning) to concave up (smiling).\nA point like \\(x=0\\) in this example where the second derivative changes sign and the concavity changes is called an inflection point. “Second derivative changes sign” is the same thing as saying the graph of \\(f''\\) crosses the \\(x\\)-axis, so an inflection point happens where the second derivative has roots: \\(f''=0\\).",
+    "crumbs": [
+      "Math Review",
+      "Differentiation"
+    ]
   },
   {
-    "objectID": "psets/pset_2.html#submission",
-    "href": "psets/pset_2.html#submission",
-    "title": "Problem Set 2",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+    "objectID": "math/differentiation.html#optimization",
+    "href": "math/differentiation.html#optimization",
+    "title": "Differentiation",
+    "section": "Optimization",
+    "text": "Optimization\nmax versus argmax\ncritical points\ncheck the second derivative",
+    "crumbs": [
+      "Math Review",
+      "Differentiation"
+    ]
   },
   {
-    "objectID": "psets/pset_1.html",
-    "href": "psets/pset_1.html",
-    "title": "Problem Set 1",
+    "objectID": "math/logexp.html",
+    "href": "math/logexp.html",
+    "title": "Rules for exponents and logarithms",
     "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+    "text": "Let \\(a\\), \\(b\\), \\(c\\), and \\(d\\) be arbitrary real numbers, and let \\(n\\) be a positive integer:\n\\[\n\\begin{aligned}\na^0&=1\\\\\na^1&=a\\\\\na^ca^d&=a^{c+d}\\\\\n\\frac{a^c}{a^d}&=a^{c - d}\\\\\na^{-c}&=\\frac{1}{a^c}\\\\\n(a^c)^d&=a^{cd}\\\\\n(ab)^c&=a^cb^c\\\\\n\\left(\\frac{a}{b}\\right)^c&=\\frac{a^c}{b^c}\\\\\na^{1/n}&=\\sqrt[n]{a}.\n\\end{aligned}\n\\]\nA particularly important function for us is the exponential function \\(e^x\\), where \\(e\\approx 2.71828\\) is Euler’s number. Because it is defined as an exponent, the exponential function obeys all the rules above: \\(e^xe^y=e^{x+y}\\), \\(e^0=1\\), etc.\nHere’s the graph of the function:\n\n\nCode\npar(mar = c(4, 4, 4, 0.5))\ncurve(exp(x), \n      from = -3, \n      to = 3, \n      n = 500, \n      col = \"red\", \n      lwd = 2,\n      yaxt = \"n\", \n      yaxs = \"i\",\n      bty = \"n\",\n      ylab = expression(e^x),\n      main = \"Graph of the exponential function\",\n      ylim = c(0, 20))\naxis(2, pos = 0)\n\n\n\n\n\n\n\n\n\nA few things to notice:\n\nthe exponential is strictly increasing (never plateaus or goes down);\nit increases very quickly;\nit is defined for all real numbers \\(x\\);\nit is strictly positive: \\(e^x&gt;0\\) for all \\(x\\in\\mathbb{R}\\).\n\n\n\n\n\n\n\nAlternative notation\n\n\n\nSometimes we will write \\(\\exp(x)\\) instead of \\(e^x\\), but they mean the same thing. We do this to make complicated expressions like this a little easier to read: \\[\ne^{-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}}=\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n\\]",
+    "crumbs": [
+      "Math Review",
+      "Exponents and logarithms"
+    ]
   },
   {
-    "objectID": "psets/pset_1.html#problem-0",
-    "href": "psets/pset_1.html#problem-0",
-    "title": "Problem Set 1",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+    "objectID": "math/logexp.html#exponent-rules",
+    "href": "math/logexp.html#exponent-rules",
+    "title": "Rules for exponents and logarithms",
+    "section": "",
+    "text": "Let \\(a\\), \\(b\\), \\(c\\), and \\(d\\) be arbitrary real numbers, and let \\(n\\) be a positive integer:\n\\[\n\\begin{aligned}\na^0&=1\\\\\na^1&=a\\\\\na^ca^d&=a^{c+d}\\\\\n\\frac{a^c}{a^d}&=a^{c - d}\\\\\na^{-c}&=\\frac{1}{a^c}\\\\\n(a^c)^d&=a^{cd}\\\\\n(ab)^c&=a^cb^c\\\\\n\\left(\\frac{a}{b}\\right)^c&=\\frac{a^c}{b^c}\\\\\na^{1/n}&=\\sqrt[n]{a}.\n\\end{aligned}\n\\]\nA particularly important function for us is the exponential function \\(e^x\\), where \\(e\\approx 2.71828\\) is Euler’s number. Because it is defined as an exponent, the exponential function obeys all the rules above: \\(e^xe^y=e^{x+y}\\), \\(e^0=1\\), etc.\nHere’s the graph of the function:\n\n\nCode\npar(mar = c(4, 4, 4, 0.5))\ncurve(exp(x), \n      from = -3, \n      to = 3, \n      n = 500, \n      col = \"red\", \n      lwd = 2,\n      yaxt = \"n\", \n      yaxs = \"i\",\n      bty = \"n\",\n      ylab = expression(e^x),\n      main = \"Graph of the exponential function\",\n      ylim = c(0, 20))\naxis(2, pos = 0)\n\n\n\n\n\n\n\n\n\nA few things to notice:\n\nthe exponential is strictly increasing (never plateaus or goes down);\nit increases very quickly;\nit is defined for all real numbers \\(x\\);\nit is strictly positive: \\(e^x&gt;0\\) for all \\(x\\in\\mathbb{R}\\).\n\n\n\n\n\n\n\nAlternative notation\n\n\n\nSometimes we will write \\(\\exp(x)\\) instead of \\(e^x\\), but they mean the same thing. We do this to make complicated expressions like this a little easier to read: \\[\ne^{-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}}=\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n\\]",
+    "crumbs": [
+      "Math Review",
+      "Exponents and logarithms"
+    ]
   },
   {
-    "objectID": "psets/pset_1.html#problem-x",
-    "href": "psets/pset_1.html#problem-x",
-    "title": "Problem Set 1",
-    "section": "Problem X",
-    "text": "Problem X\nOne day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they fit together."
-  },
-  {
-    "objectID": "psets/pset_1.html#problem-x-1",
-    "href": "psets/pset_1.html#problem-x-1",
-    "title": "Problem Set 1",
-    "section": "Problem X",
-    "text": "Problem X\nLet \\(A\\) and \\(B\\) be events in a sample space \\(S\\). Let \\(C\\) be the set of outcomes that are in either \\(A\\) or \\(B\\), but not both.\n\nDraw a well-labeled picture of \\(S\\), \\(A\\), \\(B\\), and \\(C\\).\nWrite down a formula for \\(C\\) in terms of \\(A\\) and \\(B\\) using any of the basic operations: union (\\(\\cup\\)), intersection (\\(\\cap\\)), complement (\\(^c\\)).\nUse set theory and the probability axioms to show that\n\n\\[\nP(C)=P(A)+P(B)-2P(A\\cap B).\n\\]\n\nExplain this result conceptually (with words and pictures)."
-  },
-  {
-    "objectID": "psets/pset_1.html#problem-x-2",
-    "href": "psets/pset_1.html#problem-x-2",
-    "title": "Problem Set 1",
-    "section": "Problem X",
-    "text": "Problem X\nLet \\(S\\) be a sample space, and consider events \\(A,\\, B,\\, C\\subseteq S\\). Recall that the law of inclusion/exclusion says that\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B).\n\\]\n\nHow should this be extended to unions of three events? \\[\nP(A\\cup B\\cup C)=P(A)+P(B)+P(C) +\\,...{???}\n\\] Explain your conjecture with words and pictures.\nUse set theory and the probabiity axioms to prove your conjecture in the previous part."
-  },
-  {
-    "objectID": "psets/pset_1.html#problem-9",
-    "href": "psets/pset_1.html#problem-9",
-    "title": "Problem Set 1",
-    "section": "Problem 9",
-    "text": "Problem 9\nA few months ago I went to Harris Teeter to get some junk food, and when I looked at my receipt, I saw this:\n\n\n\n\n\nI thought, “Strange. What are the odds the total would be a whole number?” Well, let’s find out!\n\nImagine you randomly purchase two items that each cost less than $10, and assume all prices are equally likely. The prices of the two items are quoted to two decimal places. What is the probability that the two prices add up to a whole number total?\nNow let’s add a wrinkle. Imagine sales tax is 5%. This is calculated, rounded up to the nearest cent, and then added to your bill. What is the probability that the cost of the two items plus the rounded sales tax adds up to a whole number?"
-  },
-  {
-    "objectID": "psets/pset_1.html#problem-10",
-    "href": "psets/pset_1.html#problem-10",
-    "title": "Problem Set 1",
-    "section": "Problem 10",
-    "text": "Problem 10\nSeven balls are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green balls. Find the probability that\n\n3 red, 2 blue, and 2 green balls are withdrawn;\nat least 2 red balls are withdrawn;\nall withdrawn balls are the same color;\neither exactly 3 red balls or exactly 3 blue balls are withdrawn."
-  },
-  {
-    "objectID": "psets/pset_1.html#submission",
-    "href": "psets/pset_1.html#submission",
-    "title": "Problem Set 1",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+    "objectID": "math/logexp.html#logarithm-rules",
+    "href": "math/logexp.html#logarithm-rules",
+    "title": "Rules for exponents and logarithms",
+    "section": "Logarithm rules",
+    "text": "Logarithm rules\nThe natural logarithm function \\(\\ln(x)\\) is the inverse of the exponential function \\(e^x\\). So when we write \\(\\ln(4)\\), we’re asking “\\(e\\) raised to what power is equal to 4?” Turns out it’s \\(\\ln(4)\\approx 1.386\\), so \\(e^{1.386}\\approx 4\\).\nHere’s the graph of the function:\n\n\nCode\npar(mar = c(4, 4, 1, 0.5))\ncurve(log(x), \n      from = 0, \n      to = 8, \n      n = 500, \n      col = \"red\", \n      lwd = 2,\n      xaxt = \"n\", \n      xaxs = \"i\",\n      bty = \"n\",\n      ylab = \"ln(x)\",\n      main = \"Graph of the natural logarithm\")\naxis(1, pos = 0)\n\n\n\n\n\n\n\n\n\nA few things to notice:\n\nthe natural log is strictly increasing (never plateaus or goes down);\nit increases veeery slowly;\nit is only defined for strictly positive numbers;\nit returns both positive and negative values;\nthere is a vertical asymptote at \\(x=0\\).\n\nSo, word to the wise: if you find yourself plugging negative numbers into the natural log, you’ve probably made a mistake someplace.\nAnyhow, the natural logarithm has several properties you need to know. Let \\(x\\) and \\(y\\) be arbitrary positive numbers, and let \\(c\\) be any real number (could be negative):\n\\[\n\\begin{aligned}\n\\ln(xy)&=\\ln(x)+\\ln(y)\\\\\n\\ln\\left(\\frac{x}{y}\\right)&=\\ln(x)-\\ln(y)\\\\\n\\ln(x^c)&=c\\ln(x)\\\\\n\\ln(1/x)&=-\\ln(x)\\\\\n\\ln(e^x)&=x\\\\\n\\ln(e)&=1\\\\\n\\ln(1)&=0.\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Math Review",
+      "Exponents and logarithms"
+    ]
   },
   {
     "objectID": "slides/slides_2025_08_25.html#welcome-to-sta-240",
@@ -929,6 +1193,50 @@
     "crumbs": [
       "Syllabus",
       "Teaching team"
+    ]
+  },
+  {
+    "objectID": "explainers/vectors.html",
+    "href": "explainers/vectors.html",
+    "title": "Vectors",
+    "section": "",
+    "text": "A vector in R is just an ordered set of values that have the same type. The easiest way to create one is to manually list out the values, separated by commas, inside c():\n\nmyvec &lt;- c(pi, 5, 3.6, 2, 9, 6000) \nmyvec\n\n[1]    3.141593    5.000000    3.600000    2.000000    9.000000 6000.000000\n\n\nIf you want to list out all of the integers between some min and max, you can use this shortcut:\n\n5:15\n\n [1]  5  6  7  8  9 10 11 12 13 14 15\n\n\nMore generally, if you want a vector of evenly spaced numbers between a min and a max, do this:\n\na &lt;- seq(0, 1, length.out = 11) \na\n\n [1] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0\n\n\nIf you want to create a “blank” vector that just has zeros in it, here you go:\n\nz &lt;- numeric(10)\nz\n\n [1] 0 0 0 0 0 0 0 0 0 0\n\n\nIn all of those cases, our vector contained numbers, but there is nothing special about numbers. Here is a vector where each value is a string (a piece of text):\n\npoetry &lt;- c(\"Mary\", \"had\", \"a\", \"little\", \"chainsaw\")\npoetry\n\n[1] \"Mary\"     \"had\"      \"a\"        \"little\"   \"chainsaw\"\n\n\nIf you have two vectors and you want to combine them into one, you can just use the c() commands again. The “c” stands for “concatenate.” You’re concatenating, or joint, the vectors end-to-end:\n\nmore &lt;- c(\"whose\", \"chain\", \"was\", \"red\", \"as\")\n\nmasterpiece &lt;- c(poetry, more)\nmasterpiece\n\n [1] \"Mary\"     \"had\"      \"a\"        \"little\"   \"chainsaw\" \"whose\"   \n [7] \"chain\"    \"was\"      \"red\"      \"as\"",
+    "crumbs": [
+      "R Explainers",
+      "Vectors"
+    ]
+  },
+  {
+    "objectID": "explainers/setup.html",
+    "href": "explainers/setup.html",
+    "title": "Getting started",
+    "section": "",
+    "text": "The path of least resistance to using R in this class is to reserve a container from the Duke Container Manager. It’s hosted in the cloud, and it has all of the software you will ever need for this class.\n\nGo here: https://cmgr.oit.duke.edu/containers. You may have to log in with your NetID at some point;\n(The first time you do this, you look for STA240 under “Reservations available” on the righthand side, and click “reserve STA240”. After you do that once, STA240 will appear under “My reservations” on the lefthand side forever more)\nClick STA240 under “My reservations”;\nLogin;\nStart. It may take a while, but then RStudio should launch in your browser.",
+    "crumbs": [
+      "R Explainers",
+      "Getting started"
+    ]
+  },
+  {
+    "objectID": "explainers/setup.html#option-1-reserve-a-container",
+    "href": "explainers/setup.html#option-1-reserve-a-container",
+    "title": "Getting started",
+    "section": "",
+    "text": "The path of least resistance to using R in this class is to reserve a container from the Duke Container Manager. It’s hosted in the cloud, and it has all of the software you will ever need for this class.\n\nGo here: https://cmgr.oit.duke.edu/containers. You may have to log in with your NetID at some point;\n(The first time you do this, you look for STA240 under “Reservations available” on the righthand side, and click “reserve STA240”. After you do that once, STA240 will appear under “My reservations” on the lefthand side forever more)\nClick STA240 under “My reservations”;\nLogin;\nStart. It may take a while, but then RStudio should launch in your browser.",
+    "crumbs": [
+      "R Explainers",
+      "Getting started"
+    ]
+  },
+  {
+    "objectID": "explainers/setup.html#option-2-download-it-yourself",
+    "href": "explainers/setup.html#option-2-download-it-yourself",
+    "title": "Getting started",
+    "section": "Option 2: download it yourself",
+    "text": "Option 2: download it yourself\nOf course, you won’t have containers after you graduate, so maybe it’s a good idea to hike up your big girl pants and actually install something. It’s pretty easy:\n\nDownload R: https://cran.r-project.org\nDownload RStudio: https://posit.co/download/rstudio-desktop/\n(optional) Install tinytex: https://yihui.org/tinytex/",
+    "crumbs": [
+      "R Explainers",
+      "Getting started"
     ]
   }
 ]
