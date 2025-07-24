@@ -5,8 +5,7 @@ editor:
   mode: source
 ---
 
-Midterm Exam 1 will take place on **Thursday October 9** during your lab section. There will be XX
-problems, and they will break down as follows:
+Midterm Exam 1 will take place on **Thursday October 9** during your lab section. There will be XX problems, and they will break down as follows:
 
 0. 
 1.
