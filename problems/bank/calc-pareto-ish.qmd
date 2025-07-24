@@ -1,0 +1,18 @@
+Consider this integral:
+
+$$
+    \int_2^\infty 
+    \frac{1}{x(\ln x)^p}\textrm{d} x
+    .
+$$
+
+a.  [Use `R`](https://sta240-f25.github.io/explainers/lineplot.html) to create a single plot with many lines, each graphing the *integrand* for a different value of $p$. Consider $p$ equal to -2, -1.5, -1, 0, 1, and 5, and make the $x$-axis of your plot run from 2 to 15.
+b.  Show that $\lim_{x\to\infty}\frac{1}{x(\ln x)^p}=0$ for all values of $-\infty<p<\infty$.
+c.  For what values of $p$ does the integral converge? When it does converge, what is its value?
+d.  Consult the picture you created in part (a), and write a few sentences explaining conceptually why the integral converges for some values of $p$ but not others.
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+When taking the limit or evaluating the integral, can you use the same technique for all values of $p$, or do you need a different technique depending on what $p$ is?
+:::

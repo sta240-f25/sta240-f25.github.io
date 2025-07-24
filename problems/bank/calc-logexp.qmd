@@ -1,0 +1,5 @@
+Simplify this:
+
+$$
+\ln\left(e^{a_1}e^{a_2}e^{a_3}\cdots e^{a_n}\right).
+$$

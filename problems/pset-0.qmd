@@ -15,123 +15,31 @@ Recommend some music for us to listen to while we grade this.
 
 ## Problem 1
 
-Explain why this is horrific notation:
-
-$$
-    \int_0^x f(x)\,\textrm{d} x.
-$$
+{{< include bank/calc-bad-notation.qmd >}}
 
 ## Problem 2
 
-Simplify this:
-
-$$
-\ln\left(e^{a_1}e^{a_2}e^{a_3}\cdots e^{a_n}\right).
-$$
+{{< include bank/calc-logexp.qmd >}}
 
 ## Problem 3
 
-Assume $\lambda>0$ is a constant and compute
-
-$$
-    \sum\limits_{n=0}^\infty n \frac{\lambda^n}{n!}e^{-\lambda}
-    .
-$$
+{{< include bank/calc-series.qmd >}}
 
 ## Problem 4
 
-Here is a very silly function:
-
-$$
-    h(x)
-    =
-    \exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)
-    ,\quad 
-    -\infty<x<\infty
-    .
-$$
-
-Treat $-\infty<\mu<\infty$ and $\sigma>0$ as constants and compute the value(s) of $x$ at which $h$ has *inflection points*.
-
-::: {.callout-tip collapse="true"}
-## Hint
-
-Here is an example of what $h$ might look like in the special case where $\mu = 1$ and $\sigma=2$:
-
-```{r}
-#| label: silly
-#| code-fold: true
-#| fig-align: center
-#| fig-asp: 0.5
-m = 1
-s = 2
-par(mar = c(4, 4, 0.1, 4))
-curve(exp(-0.5 * ((x - m) / s)^2), 
-      from = -6, to = 8, n = 500,
-      xlab = "x", ylab = "h(x)")
-```
-
-Before you start doing any math, can you use the picture to guess what the answer will be?
-:::
+{{< include bank/calc-inflection.qmd >}}
 
 ## Problem 5
 
-Here is another inordinately silly function:
-
-$$
-\Gamma(x)=\int_0^\infty y^{x-1}e^{-y}\,\textrm{d} y,\quad x>0.
-$$
-
-Prove that $\Gamma(x+1)=x\Gamma(x)$.
-
-::: {.callout-tip collapse="true"}
-## Hint
-
-Start on the left-hand side by writing out $\Gamma(x+1)$ and evaluating the integral *by parts*.
-:::
+{{< include bank/calc-gamma.qmd >}}
 
 ## Problem 6
 
-Let $f$ be any function with the following properties:
-
--   $f$ is twice continuously differentiable in a neighborhood of 0;
--   $f(0) = 0$;
--   $f'(0) = 0$;
--   $f''(0) = 1$.
-
-Assume $t$ is a constant and compute
-
-$$
-    \lim_{x\to\infty} xf\left(\frac{t}{\sqrt{x}}\right)
-    .
-$$
-
-::: callout-warning
-## Continuity?
-
-"\[T\]wice continuously differentiable" means that $f$, $f'$, and $f''$ are all continuous functions at and around zero. A full credit solution must clearly explain how and why continuity is being used along the way.
-:::
+{{< include bank/calc-limit.qmd >}}
 
 ## Problem 7
 
-Consider this integral:
-
-$$
-    \int_2^\infty 
-    \frac{1}{x(\ln x)^p}\textrm{d} x
-    .
-$$
-
-a.  [Use `R`](https://sta240-f25.github.io/explainers/lineplot.html) to create a single plot with many lines, each graphing the *integrand* for a different value of $p$. Consider $p$ equal to -2, -1.5, -1, 0, 1, and 5, and make the $x$-axis of your plot run from 2 to 15.
-b.  Show that $\lim_{x\to\infty}\frac{1}{x(\ln x)^p}=0$ for all values of $-\infty<p<\infty$.
-c.  For what values of $p$ does the integral converge? When it does converge, what is its value?
-d.  Consult the picture you created in part (a), and write a few sentences explaining conceptually why the integral converges for some values of $p$ but not others.
-
-::: {.callout-tip collapse="true"}
-## Hint
-
-When taking the limit or evaluating the integral, can you use the same technique for all values of $p$, or do you need a different technique depending on what $p$ is?
-:::
+{{< include bank/calc-pareto-ish.qmd >}}
 
 ## Submission
 
