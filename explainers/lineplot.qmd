@@ -15,7 +15,7 @@ This function takes many arguments.
 
 - the first argument is a formula for the function you want to graph. The `curve` command implicitly assumes that `x` is the argument, and everything else is constant;
 - `from` and `to` give the bounds of the $x$-axis;
-- This command is basicall6 evaluating the function at many points and connecting the dots. `n` specifies how many dots. Too few, and the picture would look all cattywampus:
+- This command is basically evaluating the function at many points and connecting the dots. `n` specifies how many dots. Too few, and the picture would look all cattywampus:
 
 ```{r}
 curve(x^2, from = -5, to = 5, n = 5)
