@@ -87,6 +87,20 @@ website:
             text: Sequences and series
           - href: math/latex.qmd
             text: Typing math
+      - section: "R Explainers"
+        contents:
+          - href: explainers/setup.qmd
+            text: Getting started
+          - href: explainers/RStudio.qmd
+            text: The lay of the land
+          - href: explainers/math.qmd
+            text: Basic math
+          - href: explainers/vectors.qmd
+            text: Vectors
+          - href: explainers/vectorization.qmd
+            text: Vectorization
+          - href: explainers/lineplot.qmd
+            text: Plotting lines
       - section: "Problem Sets"
         contents:
           - href: psets/pset_0.qmd
