@@ -21,7 +21,7 @@ This function takes many arguments.
 curve(x^2, from = -5, to = 5, n = 5)
 ```
 
-If you want multiple lines on one graph, you can call `curve` multiple times, and include the `add` argument to all but the first call:
+If you want multiple lines on one graph, you can call `curve` multiple times, and include the `add` argument in all but the first call:
 
 ```{r}
 #| code-overflow: scroll
