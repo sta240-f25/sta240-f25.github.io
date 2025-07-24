@@ -29,5 +29,5 @@ curve(1*x^2, from = -5, to = 5, n = 500, col = "red", ylab = "")
 curve(2*x^2, from = -5, to = 5, n = 500, col = "blue", ylab = "", add = TRUE)
 curve(3*x^2, from = -5, to = 5, n = 500, col = "darkgreen", ylab = "", add = TRUE)
 legend("bottomleft", c("a = 1", "a = 2", "a = 3"), 
-       col = c("red", "blue", "green"), lty = 1, bty = "n")
+       col = c("red", "blue", "darkgreen"), lty = 1, bty = "n")
 ```
