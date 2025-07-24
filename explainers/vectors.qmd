@@ -39,7 +39,7 @@ poetry <- c("Mary", "had", "a", "little", "chainsaw")
 poetry
 ```
 
-If you have two vectors and you want to combine them into one, you can just use the `c()` commands again. The "c" stands for "concatenate." You're concatenating, or joint, the vectors end-to-end:
+If you have two vectors and you want to combine them into one, you can just use the `c()` command again. The "c" stands for "concatenate." You're concatenating, or joining, the vectors end-to-end:
 
 ```{r}
 more <- c("whose", "chain", "was", "red", "as")
