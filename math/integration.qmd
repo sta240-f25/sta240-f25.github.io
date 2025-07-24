@@ -1,16 +1,42 @@
 ---
-title: "integration"
+title: "Integration"
 format: html
 editor: 
   mode: source
 ---
 
-Crudely, the **definite integral** of a function gives you the (signed) area between the curve and the $x$-axis. 
+Crudely, the **definite integral** of a function gives you the (signed) area between the graph of the function and the $x$-axis. 
 
-## fundamental theorem of calculus
+## The fundamental theorem of calculus
 
-## u-substitution
+The **fundamental theorem of calculus** is a bridge between the seemingly unrelated worlds of derivatives and integrals:
 
-## integration by parts
+$$
+\int_a^bf'(x)\,\text{d}x=f(b)-f(a).
+$$
+
+It provides a route for evaluating definite integrals by **antidifferentiation**. The function you are trying to integrate (called the **integrand**) is $f'$. You imagine $f'$ is the derivative of some function $f$ which you don't yet know. If you can figure out what $f$ is, then you can evaluate the integral. 
+
+**Example**: Consider 
+$$
+\int_1^2\frac{1}{x^2}\,\text{d}x.
+$$
+What function, when you take its derivative, gives you $1/x^2=x^{-2}$? To answer that, you're essentially *undoing* the [power rule](https://sta240-f25.github.io/math/differentiation.html#derivative-rules). After a while, you realize
+$$
+\frac{\text{d}}{\text{d}x}\left(-\frac{1}{x}\right)=\frac{1}{x^2},
+$$
+and so 
+
+$$
+\int_1^2\frac{1}{x^2}\,\text{d}x=\left[-\frac{1}{x}\right]_1^2=-\frac{1}{2}-\left(-\frac{1}{1}\right)=\frac{1}{2}.
+$$
+
+## Integration by substitution
+
+When you perform a **$u$-substitution**, you're basically trying to undo the chain rule. The goal is to rewrite the integral in a nicer form so that you can recognize what the appropriate antiderivative is and then apply the FTOC. 
+
+## Integration by parts
+
+Let's face it; this sucks. But sometimes there's no way around it. 
 
 ## Improper integration
