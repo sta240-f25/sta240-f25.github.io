@@ -1,5 +1,5 @@
 ---
-title: "Midterm 1 Review"
+title: "Midterm 1 Study Guide"
 format: html
 editor: 
   mode: source
