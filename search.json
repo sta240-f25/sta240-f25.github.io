@@ -196,31 +196,31 @@
   {
     "objectID": "math/integration.html",
     "href": "math/integration.html",
-    "title": "integration",
+    "title": "Integration",
     "section": "",
-    "text": "Crudely, the definite integral of a function gives you the (signed) area between the curve and the \\(x\\)-axis.",
+    "text": "Crudely, the definite integral of a function gives you the (signed) area between the graph of the function and the \\(x\\)-axis.",
     "crumbs": [
       "Math Review",
       "Integration"
     ]
   },
   {
-    "objectID": "math/integration.html#fundamental-theorem-of-calculus",
-    "href": "math/integration.html#fundamental-theorem-of-calculus",
-    "title": "integration",
-    "section": "fundamental theorem of calculus",
-    "text": "fundamental theorem of calculus",
+    "objectID": "math/integration.html#the-fundamental-theorem-of-calculus",
+    "href": "math/integration.html#the-fundamental-theorem-of-calculus",
+    "title": "Integration",
+    "section": "The fundamental theorem of calculus",
+    "text": "The fundamental theorem of calculus\nThe fundamental theorem of calculus is a bridge between the seemingly unrelated worlds of derivatives and integrals:\n\\[\n\\int_a^bf'(x)\\,\\text{d}x=f(b)-f(a).\n\\]\nIt provides a route for evaluating definite integrals by antidifferentiation. The function you are trying to integrate (called the integrand) is \\(f'\\). You imagine \\(f'\\) is the derivative of some function \\(f\\) which you don’t yet know. If you can figure out what \\(f\\) is, then you can evaluate the integral.\nExample: Consider \\[\n\\int_1^2\\frac{1}{x^2}\\,\\text{d}x.\n\\] What function, when you take its derivative, gives you \\(1/x^2=x^{-2}\\)? To answer that, you’re essentially undoing the power rule. After a while, you realize \\[\n\\frac{\\text{d}}{\\text{d}x}\\left(-\\frac{1}{x}\\right)=\\frac{1}{x^2},\n\\] and so\n\\[\n\\int_1^2\\frac{1}{x^2}\\,\\text{d}x=\\left[-\\frac{1}{x}\\right]_1^2=-\\frac{1}{2}-\\left(-\\frac{1}{1}\\right)=\\frac{1}{2}.\n\\]",
     "crumbs": [
       "Math Review",
       "Integration"
     ]
   },
   {
-    "objectID": "math/integration.html#u-substitution",
-    "href": "math/integration.html#u-substitution",
-    "title": "integration",
-    "section": "u-substitution",
-    "text": "u-substitution",
+    "objectID": "math/integration.html#integration-by-substitution",
+    "href": "math/integration.html#integration-by-substitution",
+    "title": "Integration",
+    "section": "Integration by substitution",
+    "text": "Integration by substitution\nWhen you perform a \\(u\\)-substitution, you’re basically trying to undo the chain rule. The goal is to rewrite the integral in a nicer form so that you can recognize what the appropriate antiderivative is and then apply the FTOC.",
     "crumbs": [
       "Math Review",
       "Integration"
@@ -229,9 +229,9 @@
   {
     "objectID": "math/integration.html#integration-by-parts",
     "href": "math/integration.html#integration-by-parts",
-    "title": "integration",
-    "section": "integration by parts",
-    "text": "integration by parts",
+    "title": "Integration",
+    "section": "Integration by parts",
+    "text": "Integration by parts\nLet’s face it; this sucks. But sometimes there’s no way around it.",
     "crumbs": [
       "Math Review",
       "Integration"
@@ -240,7 +240,7 @@
   {
     "objectID": "math/integration.html#improper-integration",
     "href": "math/integration.html#improper-integration",
-    "title": "integration",
+    "title": "Integration",
     "section": "Improper integration",
     "text": "Improper integration",
     "crumbs": [
@@ -812,7 +812,7 @@
     "href": "slides/slides_2025_08_25.html#example-the-folly-of-doctors",
     "title": "Welcome to STA 240!",
     "section": "Example: the folly of doctors",
-    "text": "Example: the folly of doctors\n\nA 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the false negative rate of the test is 10%, and if the false positive rate is 9%, what is the chance that the woman actually has cancer, given that she tested positive?\n\n\nYou will know how to answer this by October. Doctors though…\n\n\n\n\n\n\n\n\nBBC News 2014\n\n\nOnly 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.\n\nWe can only imagine how much anxiety those innumerate doctors instil in women."
+    "text": "Example: the folly of doctors\n\nA 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the true positive rate of the test is 10%, and if the false positive rate is 9%, what is the chance that the woman actually has cancer, given that she tested positive?\n\n\nYou will know how to answer this by October. Doctors though…\n\n\n\n\n\n\n\n\nBBC News 2014\n\n\nOnly 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.\n\nWe can only imagine how much anxiety those innumerate doctors instil in women."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#reason-1-its-necessary.-1",

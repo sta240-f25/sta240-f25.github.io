@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>integration – STA 240 Fall 2025</title>
+<title>Integration – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -98,7 +98,7 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="integration – STA 240 Fall 2025">
+<meta property="og:title" content="Integration – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
@@ -288,6 +288,12 @@ window.Quarto = {
  <span class="menu-text">Plotting lines</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/sample.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><code>sample</code></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -325,9 +331,9 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#fundamental-theorem-of-calculus" id="toc-fundamental-theorem-of-calculus" class="nav-link active" data-scroll-target="#fundamental-theorem-of-calculus">fundamental theorem of calculus</a></li>
-  <li><a href="#u-substitution" id="toc-u-substitution" class="nav-link" data-scroll-target="#u-substitution">u-substitution</a></li>
-  <li><a href="#integration-by-parts" id="toc-integration-by-parts" class="nav-link" data-scroll-target="#integration-by-parts">integration by parts</a></li>
+  <li><a href="#the-fundamental-theorem-of-calculus" id="toc-the-fundamental-theorem-of-calculus" class="nav-link active" data-scroll-target="#the-fundamental-theorem-of-calculus">The fundamental theorem of calculus</a></li>
+  <li><a href="#integration-by-substitution" id="toc-integration-by-substitution" class="nav-link" data-scroll-target="#integration-by-substitution">Integration by substitution</a></li>
+  <li><a href="#integration-by-parts" id="toc-integration-by-parts" class="nav-link" data-scroll-target="#integration-by-parts">Integration by parts</a></li>
   <li><a href="#improper-integration" id="toc-improper-integration" class="nav-link" data-scroll-target="#improper-integration">Improper integration</a></li>
   </ul>
 </nav>
@@ -337,7 +343,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Review</a></li><li class="breadcrumb-item"><a href="../math/integration.html">Integration</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">integration</h1>
+<h1 class="title">Integration</h1>
 </div>
 
 
@@ -354,15 +360,30 @@ window.Quarto = {
 </header>
 
 
-<p>Crudely, the <strong>definite integral</strong> of a function gives you the (signed) area between the curve and the <span class="math inline">\(x\)</span>-axis.</p>
-<section id="fundamental-theorem-of-calculus" class="level2">
-<h2 class="anchored" data-anchor-id="fundamental-theorem-of-calculus">fundamental theorem of calculus</h2>
+<p>Crudely, the <strong>definite integral</strong> of a function gives you the (signed) area between the graph of the function and the <span class="math inline">\(x\)</span>-axis.</p>
+<section id="the-fundamental-theorem-of-calculus" class="level2">
+<h2 class="anchored" data-anchor-id="the-fundamental-theorem-of-calculus">The fundamental theorem of calculus</h2>
+<p>The <strong>fundamental theorem of calculus</strong> is a bridge between the seemingly unrelated worlds of derivatives and integrals:</p>
+<p><span class="math display">\[
+\int_a^bf'(x)\,\text{d}x=f(b)-f(a).
+\]</span></p>
+<p>It provides a route for evaluating definite integrals by <strong>antidifferentiation</strong>. The function you are trying to integrate (called the <strong>integrand</strong>) is <span class="math inline">\(f'\)</span>. You imagine <span class="math inline">\(f'\)</span> is the derivative of some function <span class="math inline">\(f\)</span> which you don’t yet know. If you can figure out what <span class="math inline">\(f\)</span> is, then you can evaluate the integral.</p>
+<p><strong>Example</strong>: Consider <span class="math display">\[
+\int_1^2\frac{1}{x^2}\,\text{d}x.
+\]</span> What function, when you take its derivative, gives you <span class="math inline">\(1/x^2=x^{-2}\)</span>? To answer that, you’re essentially <em>undoing</em> the <a href="https://sta240-f25.github.io/math/differentiation.html#derivative-rules">power rule</a>. After a while, you realize <span class="math display">\[
+\frac{\text{d}}{\text{d}x}\left(-\frac{1}{x}\right)=\frac{1}{x^2},
+\]</span> and so</p>
+<p><span class="math display">\[
+\int_1^2\frac{1}{x^2}\,\text{d}x=\left[-\frac{1}{x}\right]_1^2=-\frac{1}{2}-\left(-\frac{1}{1}\right)=\frac{1}{2}.
+\]</span></p>
 </section>
-<section id="u-substitution" class="level2">
-<h2 class="anchored" data-anchor-id="u-substitution">u-substitution</h2>
+<section id="integration-by-substitution" class="level2">
+<h2 class="anchored" data-anchor-id="integration-by-substitution">Integration by substitution</h2>
+<p>When you perform a <strong><span class="math inline">\(u\)</span>-substitution</strong>, you’re basically trying to undo the chain rule. The goal is to rewrite the integral in a nicer form so that you can recognize what the appropriate antiderivative is and then apply the FTOC.</p>
 </section>
 <section id="integration-by-parts" class="level2">
-<h2 class="anchored" data-anchor-id="integration-by-parts">integration by parts</h2>
+<h2 class="anchored" data-anchor-id="integration-by-parts">Integration by parts</h2>
+<p>Let’s face it; this sucks. But sometimes there’s no way around it.</p>
 </section>
 <section id="improper-integration" class="level2">
 <h2 class="anchored" data-anchor-id="improper-integration">Improper integration</h2>
