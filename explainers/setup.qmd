@@ -1,0 +1,28 @@
+---
+title: "Getting started"
+format: html
+editor: 
+  mode: source
+---
+
+## Option 1: reserve a container
+
+The path of least resistance to using `R` in this class is to reserve a *container* from the [Duke Container Manager](https://cmgr.oit.duke.edu/containers). It's hosted in the cloud, and it has all of the software you will ever need for this class. 
+
+1. Go here: <https://cmgr.oit.duke.edu/containers>. You may have to log in with your NetID at some point;
+
+2. (The first time you do this, you look for STA240 under “Reservations available” on the righthand side, and click “reserve STA240”. After you do that once, STA240 will appear under “My reservations” on the lefthand side forever more)
+
+3. Click STA240 under “My reservations”;
+
+4. Login;
+
+5. Start. It may take a while, but then RStudio should launch in your browser.
+
+## Option 2: download it yourself
+
+Of course, you won't have containers after you graduate, so maybe it's a good idea to hike up your big girl pants and actually install something. It's pretty easy:
+
+1. Download `R`: <https://cran.r-project.org>
+2. Download `RStudio`: <https://posit.co/download/rstudio-desktop/>
+3. (optional) Install `tinytex`: <https://yihui.org/tinytex/>

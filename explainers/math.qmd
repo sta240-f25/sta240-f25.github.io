@@ -1,0 +1,24 @@
+---
+title: "Basic math in `R`"
+format: html
+editor: 
+  mode: source
+---
+
+Using `R` for the calculator is like buying a plane ticket to get free peanuts. But I have done my taxes in `R`, so...
+
+```{r}
+2 + 2 # addition
+5 - 2 # subtraction
+0.5 * 6 # multiplication
+3 / 4 # division
+sqrt(2) # square root
+4 ^ 2 # exponent
+exp(4.9) # base-e exponent
+log(7) # natural log
+abs(-6) # absolute value
+ceiling(4.6) # round up
+floor(4.6) # round down
+factorial(4) # n! = n x (n-1) x ... x 2 x 1
+choose(8, 3) # binomial coefficient (we'll get there)
+```
