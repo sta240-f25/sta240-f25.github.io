@@ -16,6 +16,10 @@ Recommend some music for us to listen to while we grade this.
 
 ## Problem X
 
+{{< include bank/diaconis.qmd >}}
+
+## Problem X
+
 {{< include bank/weather-app.qmd >}}
 
 ## Problem X
