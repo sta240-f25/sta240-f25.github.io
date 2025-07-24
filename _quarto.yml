@@ -105,6 +105,8 @@ website:
         contents:
           - href: psets/pset_0.qmd
             text: Problem Set 0
+      - section: "Labs"
+      - section: "Exam Review"
             
   page-footer:
     right: 'This page is built with [Quarto](https://quarto.org/).'
