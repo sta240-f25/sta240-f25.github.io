@@ -91,7 +91,7 @@ points(0, 0, pch = 19, col = "red", cex = 2)
 
 When the first derivative changes sign (at $x=\pm1/\sqrt{3}$), that corresponds to the original function switching from increasing to decreasing, or vice versa. When the second derivative changes sign (at $x=0$), that corresponds to the original function switching from concave down (frowning) to concave up (smiling). 
 
-A point like $x=0$ in this example where the second derivative changes sign and the concavity changes is called an **inflection point**. "Second derivative changes sign" is the same thing as saying the graph of $f''$ crosses the $x$-axis, so an inflection point happens where the second derivative has roots: $f''=0$. 
+A point like $x=0$ in this example where the second derivative changes sign and the concavity changes is called an **inflection point**. "Second derivative changes sign" is the same thing as saying the graph of $f''$ crosses the $x$-axis, so an inflection point $x_0$ occurs where the second derivative has roots: $f''(x_0)=0$. 
 
 ## Optimization
 
