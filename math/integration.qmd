@@ -1,6 +1,8 @@
 ---
 title: "integration"
 format: html
+editor: 
+  mode: source
 ---
 
 Crudely, the **definite integral** of a function gives you the (signed) area between the curve and the $x$-axis. 
