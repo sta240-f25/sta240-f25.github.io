@@ -307,7 +307,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../psets/pset_0.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
   </div>
 </li>
@@ -365,9 +365,9 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="the-fundamental-theorem-of-calculus">The fundamental theorem of calculus</h2>
 <p>The <strong>fundamental theorem of calculus</strong> is a bridge between the seemingly unrelated worlds of derivatives and integrals:</p>
 <p><span class="math display">\[
-\int_a^bf'(x)\,\text{d}x=f(b)-f(a).
+\int_a^bf(x)\,\text{d}x=F(b)-F(a),\quad f(x)=F'(x).
 \]</span></p>
-<p>It provides a route for evaluating definite integrals by <strong>antidifferentiation</strong>. The function you are trying to integrate (called the <strong>integrand</strong>) is <span class="math inline">\(f'\)</span>. You imagine <span class="math inline">\(f'\)</span> is the derivative of some function <span class="math inline">\(f\)</span> which you don’t yet know. If you can figure out what <span class="math inline">\(f\)</span> is, then you can evaluate the integral.</p>
+<p>On a practical level, it provides a route for evaluating definite integrals by <strong>antidifferentiation</strong>. The function you are trying to integrate (called the <strong>integrand</strong>) is <span class="math inline">\(f\)</span>. You imagine <span class="math inline">\(f\)</span> is the derivative of some function <span class="math inline">\(F\)</span> which you don’t yet know. If you can figure out what <span class="math inline">\(F\)</span> is, then you can evaluate the integral.</p>
 <p><strong>Example</strong>: Consider <span class="math display">\[
 \int_1^2\frac{1}{x^2}\,\text{d}x.
 \]</span> What function, when you take its derivative, gives you <span class="math inline">\(1/x^2=x^{-2}\)</span>? To answer that, you’re essentially <em>undoing</em> the <a href="https://sta240-f25.github.io/math/differentiation.html#derivative-rules">power rule</a>. After a while, you realize <span class="math display">\[

@@ -37,676 +37,153 @@
     "href": "explainers/lineplot.html",
     "title": "Plotting lines",
     "section": "",
-    "text": "You can use the curve function to plot a line graph of a function. If that function were \\(f(x) = x^2\\) for example, you would type this:\n\ncurve(x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"f(x)\")\n\n\n\n\n\n\n\n\nThis function takes many arguments.\n\nthe first argument is a formula for the function you want to graph. The curve command implicitly assumes that x is the argument, and everything else is constant;\nfrom and to give the bounds of the \\(x\\)-axis;\nThis command is basically evaluating the function at many points and connecting the dots. n specifies how many dots. Too few, and the picture would look all cattywampus:\n\n\ncurve(x^2, from = -5, to = 5, n = 5)\n\n\n\n\n\n\n\n\nIf you want multiple lines on one graph, you can call curve multiple times, and include the add argument to all but the first call:\n\ncurve(1*x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"\")\ncurve(2*x^2, from = -5, to = 5, n = 500, col = \"blue\", ylab = \"\", add = TRUE)\ncurve(3*x^2, from = -5, to = 5, n = 500, col = \"darkgreen\", ylab = \"\", add = TRUE)\nlegend(\"bottomleft\", c(\"a = 1\", \"a = 2\", \"a = 3\"), \n       col = c(\"red\", \"blue\", \"green\"), lty = 1, bty = \"n\")",
+    "text": "You can use the curve function to plot a line graph of a function. If that function were \\(f(x) = x^2\\) for example, you would type this:\n\ncurve(x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"f(x)\")\n\n\n\n\n\n\n\n\nThis function takes many arguments.\n\nthe first argument is a formula for the function you want to graph. The curve command implicitly assumes that x is the argument, and everything else is constant;\nfrom and to give the bounds of the \\(x\\)-axis;\nThis command is basically evaluating the function at many points and connecting the dots. n specifies how many dots. Too few, and the picture would look all cattywampus:\n\n\ncurve(x^2, from = -5, to = 5, n = 5)\n\n\n\n\n\n\n\n\nIf you want multiple lines on one graph, you can call curve multiple times, and include the add argument in all but the first call:\n\ncurve(1*x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"\")\ncurve(2*x^2, from = -5, to = 5, n = 500, col = \"blue\", ylab = \"\", add = TRUE)\ncurve(3*x^2, from = -5, to = 5, n = 500, col = \"darkgreen\", ylab = \"\", add = TRUE)\nlegend(\"bottomleft\", c(\"a = 1\", \"a = 2\", \"a = 3\"), \n       col = c(\"red\", \"blue\", \"green\"), lty = 1, bty = \"n\")",
     "crumbs": [
       "R Explainers",
       "Plotting lines"
     ]
   },
   {
-    "objectID": "exams/midterm-1.html",
-    "href": "exams/midterm-1.html",
-    "title": "midterm-1",
+    "objectID": "syllabus/syllabus_team.html",
+    "href": "syllabus/syllabus_team.html",
+    "title": "Teaching team",
     "section": "",
-    "text": "Midterm Exam 1 will take place on Thursday October 9 during your lab section. There will be XX problems, and they will break down as follows:\n\n\n\n\n\nBelow are practice problems for each of these areas, as well as guidance about what course materials to refer to if you want more review on a particular topic.\n\nProbability spaces\n\n\nCounting\n\n\nConditional probability\n\n\nDiscrete random variables"
-  },
-  {
-    "objectID": "syllabus/syllabus_assignments.html",
-    "href": "syllabus/syllabus_assignments.html",
-    "title": "Assignments and grading",
-    "section": "",
-    "text": "Your final course grade will be calculated as follows:\nYour final letter grade will be determined based on the usual thresholds:",
+    "text": "Mug\nName\nRole\nOffice Hours\n\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\nZito, John\nInstructor\nTue 3:00 PM - 5:00 PM\nor by appointment\nOld Chem 207",
     "crumbs": [
       "Syllabus",
-      "Assignments and grading"
+      "Teaching team"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_assignments.html#labs-10",
-    "href": "syllabus/syllabus_assignments.html#labs-10",
-    "title": "Assignments and grading",
-    "section": "Labs (10%)",
-    "text": "Labs (10%)\nIn lab every Thursday, you will complete a guided activity that introduces you to special topics, extensions, or applications of the latest course material. Along the way, we will teach you how to implement some of the ideas from the course in the R programming language. Ideally you should be able to finish the activity by the end of your lab period, but in any case, you must submit your lab work by 11:59 ET PM that same day.\nEach lab assignment will be graded on the following scale:\n\n1.0: a complete, good faith attempt at every part of every problem;\n0.5: partially complete;\n0.0: no submission, or mostly incomplete.\n\n\n\n\n\n\n\nGrace\n\n\n\nYour two lowest lab scores will be dropped at the end of the semester.",
+    "objectID": "syllabus/syllabus_policies.html",
+    "href": "syllabus/syllabus_policies.html",
+    "title": "Policies",
+    "section": "",
+    "text": "You are enthusiastically encouraged to work together and help one another on labs and problem sets. I would much rather you consult your peers than some daft language model. What I ask is that you acknowledge your collaborators. So, at the end of each problem in your write-up, leave a comment like “Ursula, Ignatius and I worked together on this problem,” or “Ethel explained to me how to do part b.” You are not being judged based on your acknowledgements, and there is no penalty for getting “too much” help from others. If you omit acknowledgements, I will assume you did your work solo. If your classmates tell a different story, I will have questions. But otherwise, so long as you are thorough and honest, there will be no problems.\nHaving said all of that, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment, sharers and recipients alike. The write-up you submit must be your own work.",
     "crumbs": [
       "Syllabus",
-      "Assignments and grading"
+      "Policies"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_assignments.html#problem-sets-30",
-    "href": "syllabus/syllabus_assignments.html#problem-sets-30",
-    "title": "Assignments and grading",
-    "section": "Problem Sets (30%)",
-    "text": "Problem Sets (30%)\nMathematics is like everything else in life; if you practice, you improve. As such, the problem sets are really the heart of the course. They will mostly consist of pencil-and-paper math problems, but sometimes you will be asked to do some coding. You may compose you solutions however you like (scan or photograph written work, LaTeX, Quarto, handwriting capture on a tablet, whatever) so long as you ultimately upload a single .pdf file to Gradescope.\n\n\n\n\n\n\nGrace\n\n\n\nYour lowest problem set score will be dropped at the end of the semester.",
+    "objectID": "syllabus/syllabus_policies.html#collaboration",
+    "href": "syllabus/syllabus_policies.html#collaboration",
+    "title": "Policies",
+    "section": "",
+    "text": "You are enthusiastically encouraged to work together and help one another on labs and problem sets. I would much rather you consult your peers than some daft language model. What I ask is that you acknowledge your collaborators. So, at the end of each problem in your write-up, leave a comment like “Ursula, Ignatius and I worked together on this problem,” or “Ethel explained to me how to do part b.” You are not being judged based on your acknowledgements, and there is no penalty for getting “too much” help from others. If you omit acknowledgements, I will assume you did your work solo. If your classmates tell a different story, I will have questions. But otherwise, so long as you are thorough and honest, there will be no problems.\nHaving said all of that, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment, sharers and recipients alike. The write-up you submit must be your own work.",
     "crumbs": [
       "Syllabus",
-      "Assignments and grading"
+      "Policies"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_assignments.html#exams-20-each",
-    "href": "syllabus/syllabus_assignments.html#exams-20-each",
-    "title": "Assignments and grading",
-    "section": "Exams (20% each)",
-    "text": "Exams (20% each)\nThere will be three exams. The dates, times, and locations are firm, so mark your calendar now:\n\nMidterm 1: Thursday October 9 during your lab;\nMidterm 2: Thursday November 13 during your lab;\nFinal: Friday December 12 from 9 AM - 12 PM in Physics 130.\n\nThese will be old school, pencil-and-paper, in-class exams. The only resources you are allowed are a simple four-function calculator (which you won’t actually need) and a note sheet that you and only you have prepared (both sides of a standard 8.5” x 11” piece of paper).\n\n\n\n\n\n\nGrace\n\n\n\nIf you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.\n\n\n\n\n\n\n\n\nNo make-up exams\n\n\n\nIf you are absent from one of the midterms for whatever reason, there will not be a make-up. Pursuant to the above policy, we will simply replace the missed midterm score with the final exam score. If you miss the final exam, you get a zero unless you have a Dean’s Excuse.",
+    "objectID": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
+    "href": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
+    "title": "Policies",
+    "section": "Use of outside resources, including AI",
+    "text": "Use of outside resources, including AI\nThere are at least two reasons you might seek outside resources:\n\n✅ Extra practice or alternative instruction: Go crazy. Knock yourself out. Have a ball. The internet is saturated with good (and horrible) resources for learning this material, so if you find something that really resonates with you, have at it;\n❌ Doing the problems for you: If you find a solution online, or ask a language model to generate one, and you copy it down and submit it as your own work, that is plagiarism. If we detect it, you will earn a zero for that part of your write-up.\n\n“Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.” Furthermore, 60% of your final course grade is determined by your performance on old school, no-tech exams. As such, outsourcing all of your thinking to an AI will probably end in humiliating disaster. To avoid this, I suggest you abstain from using language models to do the problems for you.",
     "crumbs": [
       "Syllabus",
-      "Assignments and grading"
+      "Policies"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_resources.html",
-    "href": "syllabus/syllabus_resources.html",
-    "title": "University resources",
-    "section": "",
-    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
+    "objectID": "syllabus/syllabus_policies.html#communication",
+    "href": "syllabus/syllabus_policies.html#communication",
+    "title": "Policies",
+    "section": "Communication",
+    "text": "Communication\nIf you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum Ed Discussion. That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.\nIf you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructor directly (john.zito@duke.edu).\n\n\n\n\n\n\nNote\n\n\n\nYou can ask questions anonymously on Ed. The teaching team will still know your identity, but your peers will not.",
     "crumbs": [
       "Syllabus",
-      "University resources"
+      "Policies"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_resources.html#course-costs",
-    "href": "syllabus/syllabus_resources.html#course-costs",
-    "title": "University resources",
-    "section": "",
-    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
+    "objectID": "syllabus/syllabus_policies.html#late-work-and-extensions",
+    "href": "syllabus/syllabus_policies.html#late-work-and-extensions",
+    "title": "Policies",
+    "section": "Late work and extensions",
+    "text": "Late work and extensions\nNo late work will be accepted unless you request an extension in advance by e-mailing the instructor directly (john.zito@duke.edu). All reasonable requests will be entertained, but extensions will not be long.",
     "crumbs": [
       "Syllabus",
-      "University resources"
+      "Policies"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_resources.html#tech-support",
-    "href": "syllabus/syllabus_resources.html#tech-support",
-    "title": "University resources",
-    "section": "Tech support",
-    "text": "Tech support\nContact the Duke OIT Service Desk at oit.duke.edu/help.",
+    "objectID": "syllabus/syllabus_policies.html#regrade-requests",
+    "href": "syllabus/syllabus_policies.html#regrade-requests",
+    "title": "Policies",
+    "section": "Regrade requests",
+    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a regrade request in Gradescope. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nNo grades will be changed after the final exam has been administered on Friday December 12;\n\n\n\n\n\n\n\nWarning\n\n\n\nA regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.",
     "crumbs": [
       "Syllabus",
-      "University resources"
+      "Policies"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_resources.html#academic-support",
-    "href": "syllabus/syllabus_resources.html#academic-support",
-    "title": "University resources",
-    "section": "Academic support",
-    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact ARC@duke.edu, 919-684-5917.",
+    "objectID": "syllabus/syllabus_policies.html#attendance",
+    "href": "syllabus/syllabus_policies.html#attendance",
+    "title": "Policies",
+    "section": "Attendance",
+    "text": "Attendance\nLive your life. Attendance is not strictly required for any of the class meetings. The responsibility lies with us to make class meetings sufficiently engaging and informative that you choose to attend. Having said that, success in this class and regular attendance are probably highly positively correlated. Furthermore, while lab attendance is not required, regular attendance is probably the path of least resistance to earning full credit for the lab component of your final grade. The labs are designed so that they can be completed in one sitting more or less, and they are due at midnight the same day. So show up to lab, bang it out, and move on with your life.",
     "crumbs": [
       "Syllabus",
-      "University resources"
+      "Policies"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_resources.html#accessibility",
-    "href": "syllabus/syllabus_resources.html#accessibility",
-    "title": "University resources",
-    "section": "Accessibility",
-    "text": "Accessibility\nIf any portion of the course is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nThe Student Disability Access Office (SDAO) is available to ensure that students can engage with their courses and related assignments. Students should contact the SDAO to request or update accommodations under these circumstances.",
+    "objectID": "syllabus/syllabus_policies.html#accommodations",
+    "href": "syllabus/syllabus_policies.html#accommodations",
+    "title": "Policies",
+    "section": "Accommodations",
+    "text": "Accommodations\nIf you need accommodations for this class, you will need to register with the Student Disability Access Office (SDAO) and provide them with documentation related to your needs. SDAO will work with you to determine what accommodations are appropriate for your situation. Please note that accommodations are not retroactive and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me. Please contact SDAO for more information: sdao@duke.edu or access.duke.edu.",
     "crumbs": [
       "Syllabus",
-      "University resources"
+      "Policies"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_resources.html#mental-health-and-well-being",
-    "href": "syllabus/syllabus_resources.html#mental-health-and-well-being",
-    "title": "University resources",
-    "section": "Mental health and well-being",
-    "text": "Mental health and well-being\nDuke is committed to holistic student well-being, including mental, emotional, and physical health. The university offers resources to help students manage daily stress, encourage intentional self-care, and access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities and your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of well-being, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can reach the DukeReach team at dukereach@duke.edu.\nCounseling and Psychological Services (CAPS): CAPS services include individual and group counseling services, psychiatric services, and workshops. CAPS also provides referrals to off-campus resources for specialized care. You can reach CAPS at (919) 660-1000.\nTimelyCare: TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling.\nBC Fellows for Healthy Relationship: The BC Fellows meet with students individually and in groups, supporting the development of healthy relationships and building meaningful community in all areas of a student’s life.\nDukeLine: Students who want to connect anonymously with a Peer Coach can text 984-230-4888 from 5 to 11 p.m. daily. DukeLine offers in-the-moment anonymous, non-emergency text support from a peer.\nDuWell: DuWell provides Moments of Mindfulness (stress management and resilience building) and meditation programming (Koru workshop) to assist students in developing a daily emotional well-being practice. All are welcome, and no experience is necessary. You can reach DuWell at (919) 681-8421.",
+    "objectID": "syllabus/syllabus_policies.html#duke-community-standard",
+    "href": "syllabus/syllabus_policies.html#duke-community-standard",
+    "title": "Policies",
+    "section": "Duke Community Standard",
+    "text": "Duke Community Standard\nAs a student in this course, you have agreed to uphold the Duke Community Standard and the practices specific to this course.\n\n\nAny violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically results in a zero for the relevant portion or the entire assignment, and will be reported to the Office of Student Conduct & Community Standards for further action. Furthermore:\n\nIf a conduct violation results in a zero on a lab or problem set, that zero will not be dropped;\nIf a conduct violation results in a zero on a midterm, that zero will not be replaced with your final exam score;\nIf we discover that students are sharing and copying assignment solutions, all students involved will be penalized equally, the sharers the same as the recipients.",
     "crumbs": [
       "Syllabus",
-      "University resources"
+      "Policies"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_overview.html",
-    "href": "syllabus/syllabus_overview.html",
-    "title": "Course overview",
+    "objectID": "syllabus/syllabus_materials.html",
+    "href": "syllabus/syllabus_materials.html",
+    "title": "Course materials",
     "section": "",
-    "text": "In probability, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon typically behave. In statistics, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. We will spend twelve weeks on the first, and then three weeks on the second.\nPrerequisites: single-variable calculus.",
+    "text": "You are not required to purchase a textbook for this class. However, if you wish to follow along with one, these are all good options:\n\n[Ross] A First Course in Probability by Sheldon Ross;\n[HTZ] Probability and Statistical Inference by Robert Hogg, Elliot Tanis, and Dale Zimmerman;\n[DS] Probability and Statistics by Morris Degroot and Mark Schervish;\n[Wass] All of Statistics by Larry Wasserman.\n\nIn the PREPARE column of the course schedule, I will indicate which parts of a book correspond to the lectures.",
     "crumbs": [
       "Syllabus",
-      "Overview"
+      "Materials"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_overview.html#description",
-    "href": "syllabus/syllabus_overview.html#description",
-    "title": "Course overview",
+    "objectID": "syllabus/syllabus_materials.html#textbooks",
+    "href": "syllabus/syllabus_materials.html#textbooks",
+    "title": "Course materials",
     "section": "",
-    "text": "In probability, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon typically behave. In statistics, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. We will spend twelve weeks on the first, and then three weeks on the second.\nPrerequisites: single-variable calculus.",
+    "text": "You are not required to purchase a textbook for this class. However, if you wish to follow along with one, these are all good options:\n\n[Ross] A First Course in Probability by Sheldon Ross;\n[HTZ] Probability and Statistical Inference by Robert Hogg, Elliot Tanis, and Dale Zimmerman;\n[DS] Probability and Statistics by Morris Degroot and Mark Schervish;\n[Wass] All of Statistics by Larry Wasserman.\n\nIn the PREPARE column of the course schedule, I will indicate which parts of a book correspond to the lectures.",
     "crumbs": [
       "Syllabus",
-      "Overview"
+      "Materials"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_overview.html#meetings",
-    "href": "syllabus/syllabus_overview.html#meetings",
-    "title": "Course overview",
-    "section": "Meetings",
-    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nOld Chem 116\nMoWe 3:05 PM - 4:20 PM\nJohn\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nTh 1:25 PM - 2:40 PM\n????\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nTh 3:05 PM - 4:20 PM\n????",
+    "objectID": "syllabus/syllabus_materials.html#technology",
+    "href": "syllabus/syllabus_materials.html#technology",
+    "title": "Course materials",
+    "section": "Technology",
+    "text": "Technology\nLecture will largely be a low tech affair: pencil and paper should be sufficient most of the time. You should always plan to bring a laptop or tablet device to lab. In general, you will need access to a device with internet so that you can use the following:\n\nThis course page that you are on right now;\nR/RStudio via the Duke Container Manager;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.",
     "crumbs": [
       "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "math/integration.html",
-    "href": "math/integration.html",
-    "title": "Integration",
-    "section": "",
-    "text": "Crudely, the definite integral of a function gives you the (signed) area between the graph of the function and the \\(x\\)-axis.",
-    "crumbs": [
-      "Math Review",
-      "Integration"
-    ]
-  },
-  {
-    "objectID": "math/integration.html#the-fundamental-theorem-of-calculus",
-    "href": "math/integration.html#the-fundamental-theorem-of-calculus",
-    "title": "Integration",
-    "section": "The fundamental theorem of calculus",
-    "text": "The fundamental theorem of calculus\nThe fundamental theorem of calculus is a bridge between the seemingly unrelated worlds of derivatives and integrals:\n\\[\n\\int_a^bf'(x)\\,\\text{d}x=f(b)-f(a).\n\\]\nIt provides a route for evaluating definite integrals by antidifferentiation. The function you are trying to integrate (called the integrand) is \\(f'\\). You imagine \\(f'\\) is the derivative of some function \\(f\\) which you don’t yet know. If you can figure out what \\(f\\) is, then you can evaluate the integral.\nExample: Consider \\[\n\\int_1^2\\frac{1}{x^2}\\,\\text{d}x.\n\\] What function, when you take its derivative, gives you \\(1/x^2=x^{-2}\\)? To answer that, you’re essentially undoing the power rule. After a while, you realize \\[\n\\frac{\\text{d}}{\\text{d}x}\\left(-\\frac{1}{x}\\right)=\\frac{1}{x^2},\n\\] and so\n\\[\n\\int_1^2\\frac{1}{x^2}\\,\\text{d}x=\\left[-\\frac{1}{x}\\right]_1^2=-\\frac{1}{2}-\\left(-\\frac{1}{1}\\right)=\\frac{1}{2}.\n\\]",
-    "crumbs": [
-      "Math Review",
-      "Integration"
-    ]
-  },
-  {
-    "objectID": "math/integration.html#integration-by-substitution",
-    "href": "math/integration.html#integration-by-substitution",
-    "title": "Integration",
-    "section": "Integration by substitution",
-    "text": "Integration by substitution\nWhen you perform a \\(u\\)-substitution, you’re basically trying to undo the chain rule. The goal is to rewrite the integral in a nicer form so that you can recognize what the appropriate antiderivative is and then apply the FTOC.",
-    "crumbs": [
-      "Math Review",
-      "Integration"
-    ]
-  },
-  {
-    "objectID": "math/integration.html#integration-by-parts",
-    "href": "math/integration.html#integration-by-parts",
-    "title": "Integration",
-    "section": "Integration by parts",
-    "text": "Integration by parts\nLet’s face it; this sucks. But sometimes there’s no way around it.",
-    "crumbs": [
-      "Math Review",
-      "Integration"
-    ]
-  },
-  {
-    "objectID": "math/integration.html#improper-integration",
-    "href": "math/integration.html#improper-integration",
-    "title": "Integration",
-    "section": "Improper integration",
-    "text": "Improper integration",
-    "crumbs": [
-      "Math Review",
-      "Integration"
-    ]
-  },
-  {
-    "objectID": "math/limits.html",
-    "href": "math/limits.html",
-    "title": "limits",
-    "section": "",
-    "text": "limits, continuity, left versus right, l’hopital",
-    "crumbs": [
-      "Math Review",
-      "Limits and continuity"
-    ]
-  },
-  {
-    "objectID": "math/latex.html",
-    "href": "math/latex.html",
-    "title": "Typesetting math with LaTeX and Quarto",
-    "section": "",
-    "text": "This is optional!\n\n\n\nYou can get a 100% A+ in this class without doing any of the stuff described below, so please skip it if you’re not interested. However, if you plan on doing research in the mathematical sciences, you will have to learn this stuff eventually, so here goes nothing…\nLaTeX is a software system for typesetting documents with a bunch of math in them1. It is fully integrated into Quarto, so you can do all of your writing and coding and plotting and math-ing in one place. Pretty neat. We’ll just show you a few things to get you going, but if you want to use the entire system for realz, you should make an Overleaf account and start playing.",
-    "crumbs": [
-      "Math Review",
-      "Typing math"
-    ]
-  },
-  {
-    "objectID": "math/latex.html#inline-math-goes-between-single-dollar-signs",
-    "href": "math/latex.html#inline-math-goes-between-single-dollar-signs",
-    "title": "Typesetting math with LaTeX and Quarto",
-    "section": "Inline math goes between single dollar signs",
-    "text": "Inline math goes between single dollar signs\n\n\n\n\n\n\n\nGoal\ninclude an equation in the middle of a sentence\n\n\nWhat you type in the .qmd file\nThe function $h(x)=\\ln x^2$ is my favorite\n\n\nHow it will look when you render\nThe function \\(h(x)=\\ln x^2\\) is my favorite.",
-    "crumbs": [
-      "Math Review",
-      "Typing math"
-    ]
-  },
-  {
-    "objectID": "math/latex.html#a-math-block-goes-between-double-dollar-signs",
-    "href": "math/latex.html#a-math-block-goes-between-double-dollar-signs",
-    "title": "Typesetting math with LaTeX and Quarto",
-    "section": "A math block goes between double dollar signs",
-    "text": "A math block goes between double dollar signs\nSay you want a whole bunch of math set off on a new line, in between your paragraphs, like this:\n\\[\nf(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n\\]\nIn that case, you put this into your source .qmd file:\n\n$$\nf(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n$$\n\nWhen you render, you’ll get the pretty math. Notice some of the commands we used:\n\n\\exp for \\(\\exp\\);\n\\sqrt{2} for the square root \\(\\sqrt{2}\\);\n\\frac{1}{2} to get a fraction \\(\\frac{1}{2}\\);\n(x-\\mu)^2 to get an exponent \\((x-\\mu)^2\\);\n\\mu, \\sigma, \\pi for the Greek letters \\(\\mu\\), \\(\\sigma\\), and \\(\\pi\\);\nand so on.\n\n\n\n\n\n\n\nMath commands in LaTeX\n\n\n\nHere is a bank of common LaTeX commands. You won’t use most of them. Alternatively, Detexify is a very useful site where you can draw a symbol and it will tell you what the LaTeX command is for it.",
-    "crumbs": [
-      "Math Review",
-      "Typing math"
-    ]
-  },
-  {
-    "objectID": "math/latex.html#lining-equations-up",
-    "href": "math/latex.html#lining-equations-up",
-    "title": "Typesetting math with LaTeX and Quarto",
-    "section": "Lining equations up",
-    "text": "Lining equations up\nIf you are typesetting a sequence of equalities, you should do it inside an aligned environment so that the equal signs are all lined up nice.\nIf you type this:\n\n$$\n\\begin{aligned}\nx(x+1)(x-1) &= (x^2+x)(x-1)\\\\\n&=x^3-x^2+x^2-x\\\\\n&=x^3-x.\n\\end{aligned}\n$$\n\nYou will get this:\n\\[\n\\begin{aligned}\nx(x+1)(x-1) &= (x^2+x)(x-1)\\\\\n&=x^3-x^2+x^2-x\\\\\n&=x^3-x.\n\\end{aligned}\n\\]\nThe \\\\ introduces a line break, and the & in each equation tells it where to line things up.",
-    "crumbs": [
-      "Math Review",
-      "Typing math"
-    ]
-  },
-  {
-    "objectID": "math/latex.html#footnotes",
-    "href": "math/latex.html#footnotes",
-    "title": "Typesetting math with LaTeX and Quarto",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nThere is no consensus on how to pronounce “LaTeX.” JZ says “lah-tech.” Some folks say “lay-tech.” Some even say “lay-techs,” just like a latex glove. But we all agree that the emphasis is on the first syllable. Perhaps I’ll award 2.56 bonus points if you invent a new way to pronounce it. But probably not.↩︎",
-    "crumbs": [
-      "Math Review",
-      "Typing math"
-    ]
-  },
-  {
-    "objectID": "math/series.html",
-    "href": "math/series.html",
-    "title": "series",
-    "section": "",
-    "text": "geometric taylor",
-    "crumbs": [
-      "Math Review",
-      "Sequences and series"
-    ]
-  },
-  {
-    "objectID": "psets/pset_1.html",
-    "href": "psets/pset_1.html",
-    "title": "Problem Set 1",
-    "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
-  },
-  {
-    "objectID": "psets/pset_1.html#problem-0",
-    "href": "psets/pset_1.html#problem-0",
-    "title": "Problem Set 1",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
-  },
-  {
-    "objectID": "psets/pset_1.html#problem-x",
-    "href": "psets/pset_1.html#problem-x",
-    "title": "Problem Set 1",
-    "section": "Problem X",
-    "text": "Problem X\nOne day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they fit together."
-  },
-  {
-    "objectID": "psets/pset_1.html#problem-x-1",
-    "href": "psets/pset_1.html#problem-x-1",
-    "title": "Problem Set 1",
-    "section": "Problem X",
-    "text": "Problem X\nLet \\(A\\) and \\(B\\) be events in a sample space \\(S\\). Let \\(C\\) be the set of outcomes that are in either \\(A\\) or \\(B\\), but not both.\n\nDraw a well-labeled picture of \\(S\\), \\(A\\), \\(B\\), and \\(C\\).\nWrite down a formula for \\(C\\) in terms of \\(A\\) and \\(B\\) using any of the basic operations: union (\\(\\cup\\)), intersection (\\(\\cap\\)), complement (\\(^c\\)).\nUse set theory and the probability axioms to show that\n\n\\[\nP(C)=P(A)+P(B)-2P(A\\cap B).\n\\]\n\nExplain this result conceptually (with words and pictures)."
-  },
-  {
-    "objectID": "psets/pset_1.html#problem-x-2",
-    "href": "psets/pset_1.html#problem-x-2",
-    "title": "Problem Set 1",
-    "section": "Problem X",
-    "text": "Problem X\nLet \\(S\\) be a sample space, and consider events \\(A,\\, B,\\, C\\subseteq S\\). Recall that the law of inclusion/exclusion says that\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B).\n\\]\n\nHow should this be extended to unions of three events? \\[\nP(A\\cup B\\cup C)=P(A)+P(B)+P(C) +\\,...{???}\n\\] Explain your conjecture with words and pictures.\nUse set theory and the probabiity axioms to prove your conjecture in the previous part."
-  },
-  {
-    "objectID": "psets/pset_1.html#problem-9",
-    "href": "psets/pset_1.html#problem-9",
-    "title": "Problem Set 1",
-    "section": "Problem 9",
-    "text": "Problem 9\nA few months ago I went to Harris Teeter to get some junk food, and when I looked at my receipt, I saw this:\n\n\n\n\n\nI thought, “Strange. What are the odds the total would be a whole number?” Well, let’s find out!\n\nImagine you randomly purchase two items that each cost less than $10, and assume all prices are equally likely. The prices of the two items are quoted to two decimal places. What is the probability that the two prices add up to a whole number total?\nNow let’s add a wrinkle. Imagine sales tax is 5%. This is calculated, rounded up to the nearest cent, and then added to your bill. What is the probability that the cost of the two items plus the rounded sales tax adds up to a whole number?"
-  },
-  {
-    "objectID": "psets/pset_1.html#problem-10",
-    "href": "psets/pset_1.html#problem-10",
-    "title": "Problem Set 1",
-    "section": "Problem 10",
-    "text": "Problem 10\nSeven balls are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green balls. Find the probability that\n\n3 red, 2 blue, and 2 green balls are withdrawn;\nat least 2 red balls are withdrawn;\nall withdrawn balls are the same color;\neither exactly 3 red balls or exactly 3 blue balls are withdrawn."
-  },
-  {
-    "objectID": "psets/pset_1.html#submission",
-    "href": "psets/pset_1.html#submission",
-    "title": "Problem Set 1",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
-  },
-  {
-    "objectID": "psets/pset_2.html",
-    "href": "psets/pset_2.html",
-    "title": "Problem Set 2",
-    "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
-  },
-  {
-    "objectID": "psets/pset_2.html#problem-0",
-    "href": "psets/pset_2.html#problem-0",
-    "title": "Problem Set 2",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
-  },
-  {
-    "objectID": "psets/pset_2.html#problem-x",
-    "href": "psets/pset_2.html#problem-x",
-    "title": "Problem Set 2",
-    "section": "Problem X",
-    "text": "Problem X\nLet \\(A\\) and \\(B\\) be independent events. Prove that \\(A^c\\) and \\(B^c\\) are independent events."
-  },
-  {
-    "objectID": "psets/pset_2.html#submission",
-    "href": "psets/pset_2.html#submission",
-    "title": "Problem Set 2",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
-  },
-  {
-    "objectID": "psets/pset_4.html",
-    "href": "psets/pset_4.html",
-    "title": "Problem Set 4",
-    "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
-  },
-  {
-    "objectID": "psets/pset_4.html#problem-0",
-    "href": "psets/pset_4.html#problem-0",
-    "title": "Problem Set 4",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
-  },
-  {
-    "objectID": "psets/pset_4.html#problem-x",
-    "href": "psets/pset_4.html#problem-x",
-    "title": "Problem Set 4",
-    "section": "Problem X",
-    "text": "Problem X\nAn urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
-  },
-  {
-    "objectID": "psets/pset_4.html#problem-x-1",
-    "href": "psets/pset_4.html#problem-x-1",
-    "title": "Problem Set 4",
-    "section": "Problem X",
-    "text": "Problem X\nKing Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 knights;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten knights. We can then identify which knights are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
-  },
-  {
-    "objectID": "psets/pset_4.html#problem-x-2",
-    "href": "psets/pset_4.html#problem-x-2",
-    "title": "Problem Set 4",
-    "section": "Problem X",
-    "text": "Problem X\nelection thing"
-  },
-  {
-    "objectID": "psets/pset_4.html#submission",
-    "href": "psets/pset_4.html#submission",
-    "title": "Problem Set 4",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
-  },
-  {
-    "objectID": "psets/pset_3.html",
-    "href": "psets/pset_3.html",
-    "title": "Problem Set 3",
-    "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
-  },
-  {
-    "objectID": "psets/pset_3.html#problem-0",
-    "href": "psets/pset_3.html#problem-0",
-    "title": "Problem Set 3",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
-  },
-  {
-    "objectID": "psets/pset_3.html#problem-x",
-    "href": "psets/pset_3.html#problem-x",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\nWe studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\). Table 1 enumerates all of the possible states of the world together with their individual probabilities.\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n\n-\n-\n-\n0.32\n\n\n-\n-\n+\n0.24\n\n\n-\n+\n-\n0.16\n\n\n-\n+\n+\n0.08\n\n\n+\n-\n-\n0.02\n\n\n+\n-\n+\n0.04\n\n\n+\n+\n-\n0.06\n\n\n+\n+\n+\n0.08\n\n\n\n\n\n\n\nWhat is the overall prevalence of this disease?\nWhat is the sensitivity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you truly have the disease?"
-  },
-  {
-    "objectID": "psets/pset_3.html#problem-x-1",
-    "href": "psets/pset_3.html#problem-x-1",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\nAn encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
-  },
-  {
-    "objectID": "psets/pset_3.html#problem-x-2",
-    "href": "psets/pset_3.html#problem-x-2",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\n\n\n\n\n\nThe figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
-  },
-  {
-    "objectID": "psets/pset_3.html#problem-x-3",
-    "href": "psets/pset_3.html#problem-x-3",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\nTwo balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
-  },
-  {
-    "objectID": "psets/pset_3.html#submission",
-    "href": "psets/pset_3.html#submission",
-    "title": "Problem Set 3",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
-  },
-  {
-    "objectID": "psets/pset_0.html",
-    "href": "psets/pset_0.html",
-    "title": "Problem Set 0",
-    "section": "",
-    "text": "Nature laughs at the difficulties of integration.\nThis is ostensibly calculus review, but each problem is a piece of probability in disguise. We will illuminate these connections throughout the semester, and I will refer to Problem Set 0 often. Stay tuned!",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
-    ]
-  },
-  {
-    "objectID": "psets/pset_0.html#problem-0",
-    "href": "psets/pset_0.html#problem-0",
-    "title": "Problem Set 0",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
-    ]
-  },
-  {
-    "objectID": "psets/pset_0.html#problem-1",
-    "href": "psets/pset_0.html#problem-1",
-    "title": "Problem Set 0",
-    "section": "Problem 1",
-    "text": "Problem 1\nExplain why this is horrific notation:\n\\[\n    \\int_0^x f(x)\\,\\textrm{d} x.\n\\]",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
-    ]
-  },
-  {
-    "objectID": "psets/pset_0.html#problem-2",
-    "href": "psets/pset_0.html#problem-2",
-    "title": "Problem Set 0",
-    "section": "Problem 2",
-    "text": "Problem 2\nSimplify this:\n\\[\n\\ln\\left(e^{a_1}e^{a_2}e^{a_3}\\cdots e^{a_n}\\right).\n\\]",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
-    ]
-  },
-  {
-    "objectID": "psets/pset_0.html#problem-3",
-    "href": "psets/pset_0.html#problem-3",
-    "title": "Problem Set 0",
-    "section": "Problem 3",
-    "text": "Problem 3\nAssume \\(\\lambda&gt;0\\) is a constant and compute\n\\[\n    \\sum\\limits_{n=0}^\\infty n \\frac{\\lambda^n}{n!}e^{-\\lambda}\n    .\n\\]",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
-    ]
-  },
-  {
-    "objectID": "psets/pset_0.html#problem-4",
-    "href": "psets/pset_0.html#problem-4",
-    "title": "Problem Set 0",
-    "section": "Problem 4",
-    "text": "Problem 4\nHere is a very silly function:\n\\[\n    h(x)\n    =\n    \\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\n    ,\\quad\n    -\\infty&lt;x&lt;\\infty\n    .\n\\]\nTreat \\(-\\infty&lt;\\mu&lt;\\infty\\) and \\(\\sigma&gt;0\\) as constants and compute the value(s) of \\(x\\) at which \\(h\\) has inflection points.\n\n\n\n\n\n\nHint\n\n\n\n\n\nHere is an example of what \\(h\\) might look like in the special case where \\(\\mu = 1\\) and \\(\\sigma=2\\):\n\n\nCode\nm = 1\ns = 2\npar(mar = c(4, 4, 0.1, 4))\ncurve(exp(-0.5 * ((x - m) / s)^2), \n      from = -6, to = 8, n = 500,\n      xlab = \"x\", ylab = \"h(x)\")\n\n\n\n\n\n\n\n\n\nBefore you start doing any math, can you use the picture to guess what the answer will be?",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
-    ]
-  },
-  {
-    "objectID": "psets/pset_0.html#problem-5",
-    "href": "psets/pset_0.html#problem-5",
-    "title": "Problem Set 0",
-    "section": "Problem 5",
-    "text": "Problem 5\nHere is another inordinately silly function:\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\textrm{d} y,\\quad x&gt;0.\n\\]\nProve that \\(\\Gamma(x+1)=x\\Gamma(x)\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nStart on the left-hand side by writing out \\(\\Gamma(x+1)\\) and evaluating the integral by parts.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
-    ]
-  },
-  {
-    "objectID": "psets/pset_0.html#problem-6",
-    "href": "psets/pset_0.html#problem-6",
-    "title": "Problem Set 0",
-    "section": "Problem 6",
-    "text": "Problem 6\nLet \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\n“[T]wice continuously differentiable” means that \\(f\\), \\(f'\\), and \\(f''\\) are all continuous functions at and around zero. A full credit solution must clearly explain how and why continuity is being used along the way.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
-    ]
-  },
-  {
-    "objectID": "psets/pset_0.html#problem-7",
-    "href": "psets/pset_0.html#problem-7",
-    "title": "Problem Set 0",
-    "section": "Problem 7",
-    "text": "Problem 7\nConsider this integral:\n\\[\n    \\int_2^\\infty\n    \\frac{1}{x(\\ln x)^p}\\textrm{d} x\n    .\n\\]\n\nUse R to create a single plot with many lines, each graphing the integrand for a different value of \\(p\\). Consider \\(p\\) equal to -2, -1.5, -1, 0, 1, and 5, and make the \\(x\\)-axis of your plot run from 2 to 15.\nShow that \\(\\lim_{x\\to\\infty}\\frac{1}{x(\\ln x)^p}=0\\) for all values of \\(-\\infty&lt;p&lt;\\infty\\).\nFor what values of \\(p\\) does the integral converge? When it does converge, what is its value?\nConsult the picture you created in part (a), and write a few sentences explaining conceptually why the integral converges for some values of \\(p\\) but not others.\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nWhen taking the limit or evaluating the integral, can you use the same technique for all values of \\(p\\), or do you need a different technique depending on what \\(p\\) is?",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
-    ]
-  },
-  {
-    "objectID": "psets/pset_0.html#submission",
-    "href": "psets/pset_0.html#submission",
-    "title": "Problem Set 0",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.",
-    "crumbs": [
-      "Problem Sets",
-      "Problem Set 0"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA 240 Probability for Statistical Inference",
-    "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nMon, Aug 25\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\n\n\n\n\n\n\n\n\nWed, Aug 27\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\n\n\nIntro Survey @ 3 PM\n\n\n\n\nThu, Aug 28\n\n\n💻 Lab 0 (calculus review)\n\n\n\n\n\n\n2\nMon, Sep 1\n\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\n\n\nWed, Sep 3\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\n\n\n\n\n\n\n\nThu, Sep 4\n\n\n💻 Lab 1\n\n\nLab 1 @ 11:59 PM\n\n\n\n\nFri, Sep 5\n\n\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nWed, Sep 10\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nThu, Sep 11\n\n\n💻 Lab 2\n\n\nLab 2 @ 11:59 PM\n\n\n\n\nFri, Sep 12\n\n\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\nDS: 2\n🧑‍🏫 Conditional Probability\nPlay around!\n\n\n\n\n\n\nWed, Sep 17\nDS: 2\n🧑‍🏫 Conditional Probability\nPlay around!\n\n\n\n\n\n\nThu, Sep 18\n\n\n💻 Lab 3\n\n\nLab 3 @ 11:59 PM\n\n\n\n\nFri, Sep 19\n\n\n\n\n\n\nPSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nWed, Sep 24\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nThu, Sep 25\n\n\n💻 Lab 4\n\n\nLab 4 @ 11:59 PM\n\n\n\n\nFri, Sep 26\n\n\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nWed, Oct 1\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nThu, Oct 2\n\n\n💻 Lab 5\n\n\nLab 5 @ 11:59 PM\n\n\n\n\nFri, Oct 3\n\n\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nWed, Oct 8\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nThu, Oct 9\n\n\n📝 Midterm 1\n\n\n\n\n\n\n8\nMon, Oct 13\n\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\n\n\nWed, Oct 15\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nThu, Oct 16\n\n\n💻 Lab 6\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nWed, Oct 22\n\n\n🧑‍🏫 Jointly Discrete\n\n\n\n\n\n\n\n\nThu, Oct 23\n\n\n💻 Lab 7\n\n\nLab 7 @ 11:59 PM\n\n\n\n\nFri, Oct 24\n\n\n\n\n\n\nPSET 5 @ 5PM\n\n\n10\nMon, Oct 27\n\n\n🧑‍🏫 Jointly Continuous\n\n\n\n\n\n\n\n\nWed, Oct 29\n\n\n🧑‍🏫 Hierarchies\n\n\n\n\n\n\n\n\nThu, Oct 30\n\n\n💻 Lab 8\n\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\n\n\n\nWed, Nov 5\n\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\n\n\n\nThu, Nov 6\n\n\n💻 Lab 9\n\n\nLab 9 @ 11:59 PM\n\n\n\n\nFri, Nov 7\n\n\n\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\n\n\n\nWed, Nov 12\n\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\n\n\n\nThu, Nov 13\n\n\n📝 Midterm 2\n\n\n\n\n\n\n13\nMon, Nov 17\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nWed, Nov 19\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nThu, Nov 20\n\n\n💻 Lab 10\n\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\n\n\n\nWed, Nov 26\n\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\n\n\nThu, Nov 27\n\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n\n15\nMon, Dec 1\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nWed, Dec 3\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nThu, Dec 4\n\n\n💻 Lab 11\n\n\nLab 11 @ 11:59 PM\n\n\n\n\nFri, Dec 5\n\n\n\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n\n📝 Final (9AM - 12PM)",
-    "crumbs": [
-      "Syllabus",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "math/greeks.html",
-    "href": "math/greeks.html",
-    "title": "Greek alphabet",
-    "section": "",
-    "text": "For better or worse, Greek letters will be flying in this class, so you should have a working knowledge of the most common ones used in mathematics:\n\n\n\nGreek Letter\nEnglish Name\n\n\n\n\n\\(A, \\alpha\\)\nalpha\n\n\n\\(B, \\beta\\)\nbeta\n\n\n\\(\\Gamma, \\gamma\\)\ngamma\n\n\n\\(\\Delta, \\delta\\)\ndelta\n\n\n\\(E, \\epsilon\\)\nepsilon\n\n\n\\(Z, \\zeta\\)\nzeta\n\n\n\\(H, \\eta\\)\neta\n\n\n\\(\\Theta, \\theta\\)\ntheta\n\n\n\\(I, \\iota\\)\niota\n\n\n\\(K, \\kappa\\)\nkappa\n\n\n\\(\\Lambda, \\lambda\\)\nlambda\n\n\n\\(M, \\mu\\)\nmu (“mew”)\n\n\n\\(N, \\nu\\)\nnu\n\n\n\\(\\Xi, \\xi\\)\nxi\n\n\n\\(O, o\\)\nomicron\n\n\n\\(\\Pi, \\pi\\)\npi\n\n\n\\(P, \\rho\\)\nrho (“row”)\n\n\n\\(\\Sigma, \\sigma\\)\nsigma\n\n\n\\(T, \\tau\\)\ntau\n\n\n\\(Y, \\upsilon\\)\nupsilon\n\n\n\\(\\Phi, \\phi\\)\nphi\n\n\n\\(X, \\chi\\)\nchi (“kai”)\n\n\n\\(\\Psi, \\psi\\)\npsi\n\n\n\\(\\Omega, \\omega\\)\nomega",
-    "crumbs": [
-      "Math Review",
-      "Greek alphabet"
-    ]
-  },
-  {
-    "objectID": "math/differentiation.html",
-    "href": "math/differentiation.html",
-    "title": "Differentiation",
-    "section": "",
-    "text": "The derivative of a function \\(f(x)\\) is its instantaneous rate of change. On a graph, this corresponds to the slope of the tangent line. We will denote derivatives by \\(f'(x)\\) or \\(\\text{d}f/\\text{d}x\\) or something like that.\nWhen it exists, which it doesn’t always, the derivative is defined as the limit of difference quotients:\n\\[\nf'(x)=\\lim_{\\Delta x\\to0}\\frac{f(x+\\Delta x)-f(x)}{\\Delta x}\n\\]\nSo, “rise over run” as the “run” bit gets arbitrarily small.",
-    "crumbs": [
-      "Math Review",
-      "Differentiation"
-    ]
-  },
-  {
-    "objectID": "math/differentiation.html#derivative-rules",
-    "href": "math/differentiation.html#derivative-rules",
-    "title": "Differentiation",
-    "section": "Derivative rules",
-    "text": "Derivative rules\n\n\n\n\n\n\n\n\nrule\nfunction\nderivative\n\n\n\n\nconstant\n\\(h(x)=c\\)\n\\(h'(x)=0\\)\n\n\nscaling\n\\(h(x)=c\\cdot f(x)\\)\n\\(h'(x)=c\\cdot f'(x)\\)\n\n\nsum/difference\n\\(h(x)=f(x)\\pm g(x)\\)\n\\(h'(x)=f'(x)\\pm g'(x)\\)\n\n\nlinearity\n\\(h(x)=a\\cdot f(x)\\pm b\\cdot g(x)\\)\n\\(h'(x)=a\\cdot f'(x)\\pm b\\cdot g'(x)\\)\n\n\npower\n\\(h(x)=x^n\\)\n\\(h'(x)=nx^{n-1}\\)\n\n\nproduct\n\\(h(x)=f(x)g(x)\\)\n\\(h'(x)=f'(x)g(x)+f(x)g'(x)\\)\n\n\nquotient\n\\(h(x)=f(x)/g(x)\\)\n\\(h'(x)=\\frac{f'(x)g(x)+f(x)g'(x)}{g(x)^2}\\)\n\n\nchain\n\\(h(x)=f(g(x))\\)\n\\(h'(x)=f'(g(x))g'(x)\\)\n\n\nexponential\n\\(h(x)=e^x\\)\n\\(h'(x)=e^x\\)\n\n\nnatural log\n\\(h(x)=\\ln(x)\\)\n\\(h'(x)=1/x\\)",
-    "crumbs": [
-      "Math Review",
-      "Differentiation"
-    ]
-  },
-  {
-    "objectID": "math/differentiation.html#curvature",
-    "href": "math/differentiation.html#curvature",
-    "title": "Differentiation",
-    "section": "Curvature",
-    "text": "Curvature\nIf you take the derivative of \\(f\\), you get the first derivative \\(f'\\). If you take the derivative of the derivative, you get the second derivative \\(f''\\). The derivative of the derivative of the derivative is the third derivative \\(f'''\\), and on and on. But let’s focus on the first two. The derivatives contain information about the shape of the original function:\n\nthe first derivative tells you if the function is increasing or decreasing;\n\nif \\(f'(x)&gt;0\\), then \\(f\\) is increasing at \\(x\\);\nif \\(f'(x)&lt;0\\), then \\(f\\) is decreasing at \\(x\\);\nif \\(f'(x)=0\\), then \\(f\\) is not changing at \\(x\\);\n\nif the second derivative tells you about the curvature (aka concavity) of the function:\n\nif \\(f''(x)&gt;0\\), then \\(f\\) is concave up (\\(\\cup\\), smiling) at \\(x\\);\nif \\(f''(x)&lt;0\\), then \\(f\\) is concave down (\\(\\cap\\), frowning) at \\(x\\).\n\n\nHere is an illustration with the function \\(f(x)=x^3-x\\) and its derivatives \\(f'(x)=3x^2-1\\) and \\(f''(x)=6x\\) (power rule!):\n\n\n\n\n\n\n\n\n\nWhen the first derivative changes sign (at \\(x=\\pm1/\\sqrt{3}\\)), that corresponds to the original function switching from increasing to decreasing, or vice versa. When the second derivative changes sign (at \\(x=0\\)), that corresponds to the original function switching from concave down (frowning) to concave up (smiling).\nA point like \\(x=0\\) in this example where the second derivative changes sign and the concavity changes is called an inflection point. “Second derivative changes sign” is the same thing as saying the graph of \\(f''\\) crosses the \\(x\\)-axis, so an inflection point happens where the second derivative has roots: \\(f''=0\\).",
-    "crumbs": [
-      "Math Review",
-      "Differentiation"
-    ]
-  },
-  {
-    "objectID": "math/differentiation.html#optimization",
-    "href": "math/differentiation.html#optimization",
-    "title": "Differentiation",
-    "section": "Optimization",
-    "text": "Optimization\nmax versus argmax\ncritical points\ncheck the second derivative",
-    "crumbs": [
-      "Math Review",
-      "Differentiation"
-    ]
-  },
-  {
-    "objectID": "math/logexp.html",
-    "href": "math/logexp.html",
-    "title": "Rules for exponents and logarithms",
-    "section": "",
-    "text": "Let \\(a\\), \\(b\\), \\(c\\), and \\(d\\) be arbitrary real numbers, and let \\(n\\) be a positive integer:\n\\[\n\\begin{aligned}\na^0&=1\\\\\na^1&=a\\\\\na^ca^d&=a^{c+d}\\\\\n\\frac{a^c}{a^d}&=a^{c - d}\\\\\na^{-c}&=\\frac{1}{a^c}\\\\\n(a^c)^d&=a^{cd}\\\\\n(ab)^c&=a^cb^c\\\\\n\\left(\\frac{a}{b}\\right)^c&=\\frac{a^c}{b^c}\\\\\na^{1/n}&=\\sqrt[n]{a}.\n\\end{aligned}\n\\]\nA particularly important function for us is the exponential function \\(e^x\\), where \\(e\\approx 2.71828\\) is Euler’s number. Because it is defined as an exponent, the exponential function obeys all the rules above: \\(e^xe^y=e^{x+y}\\), \\(e^0=1\\), etc.\nHere’s the graph of the function:\n\n\nCode\npar(mar = c(4, 4, 4, 0.5))\ncurve(exp(x), \n      from = -3, \n      to = 3, \n      n = 500, \n      col = \"red\", \n      lwd = 2,\n      yaxt = \"n\", \n      yaxs = \"i\",\n      bty = \"n\",\n      ylab = expression(e^x),\n      main = \"Graph of the exponential function\",\n      ylim = c(0, 20))\naxis(2, pos = 0)\n\n\n\n\n\n\n\n\n\nA few things to notice:\n\nthe exponential is strictly increasing (never plateaus or goes down);\nit increases very quickly;\nit is defined for all real numbers \\(x\\);\nit is strictly positive: \\(e^x&gt;0\\) for all \\(x\\in\\mathbb{R}\\).\n\n\n\n\n\n\n\nAlternative notation\n\n\n\nSometimes we will write \\(\\exp(x)\\) instead of \\(e^x\\), but they mean the same thing. We do this to make complicated expressions like this a little easier to read: \\[\ne^{-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}}=\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n\\]",
-    "crumbs": [
-      "Math Review",
-      "Exponents and logarithms"
-    ]
-  },
-  {
-    "objectID": "math/logexp.html#exponent-rules",
-    "href": "math/logexp.html#exponent-rules",
-    "title": "Rules for exponents and logarithms",
-    "section": "",
-    "text": "Let \\(a\\), \\(b\\), \\(c\\), and \\(d\\) be arbitrary real numbers, and let \\(n\\) be a positive integer:\n\\[\n\\begin{aligned}\na^0&=1\\\\\na^1&=a\\\\\na^ca^d&=a^{c+d}\\\\\n\\frac{a^c}{a^d}&=a^{c - d}\\\\\na^{-c}&=\\frac{1}{a^c}\\\\\n(a^c)^d&=a^{cd}\\\\\n(ab)^c&=a^cb^c\\\\\n\\left(\\frac{a}{b}\\right)^c&=\\frac{a^c}{b^c}\\\\\na^{1/n}&=\\sqrt[n]{a}.\n\\end{aligned}\n\\]\nA particularly important function for us is the exponential function \\(e^x\\), where \\(e\\approx 2.71828\\) is Euler’s number. Because it is defined as an exponent, the exponential function obeys all the rules above: \\(e^xe^y=e^{x+y}\\), \\(e^0=1\\), etc.\nHere’s the graph of the function:\n\n\nCode\npar(mar = c(4, 4, 4, 0.5))\ncurve(exp(x), \n      from = -3, \n      to = 3, \n      n = 500, \n      col = \"red\", \n      lwd = 2,\n      yaxt = \"n\", \n      yaxs = \"i\",\n      bty = \"n\",\n      ylab = expression(e^x),\n      main = \"Graph of the exponential function\",\n      ylim = c(0, 20))\naxis(2, pos = 0)\n\n\n\n\n\n\n\n\n\nA few things to notice:\n\nthe exponential is strictly increasing (never plateaus or goes down);\nit increases very quickly;\nit is defined for all real numbers \\(x\\);\nit is strictly positive: \\(e^x&gt;0\\) for all \\(x\\in\\mathbb{R}\\).\n\n\n\n\n\n\n\nAlternative notation\n\n\n\nSometimes we will write \\(\\exp(x)\\) instead of \\(e^x\\), but they mean the same thing. We do this to make complicated expressions like this a little easier to read: \\[\ne^{-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}}=\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n\\]",
-    "crumbs": [
-      "Math Review",
-      "Exponents and logarithms"
-    ]
-  },
-  {
-    "objectID": "math/logexp.html#logarithm-rules",
-    "href": "math/logexp.html#logarithm-rules",
-    "title": "Rules for exponents and logarithms",
-    "section": "Logarithm rules",
-    "text": "Logarithm rules\nThe natural logarithm function \\(\\ln(x)\\) is the inverse of the exponential function \\(e^x\\). So when we write \\(\\ln(4)\\), we’re asking “\\(e\\) raised to what power is equal to 4?” Turns out it’s \\(\\ln(4)\\approx 1.386\\), so \\(e^{1.386}\\approx 4\\).\nHere’s the graph of the function:\n\n\nCode\npar(mar = c(4, 4, 1, 0.5))\ncurve(log(x), \n      from = 0, \n      to = 8, \n      n = 500, \n      col = \"red\", \n      lwd = 2,\n      xaxt = \"n\", \n      xaxs = \"i\",\n      bty = \"n\",\n      ylab = \"ln(x)\",\n      main = \"Graph of the natural logarithm\")\naxis(1, pos = 0)\n\n\n\n\n\n\n\n\n\nA few things to notice:\n\nthe natural log is strictly increasing (never plateaus or goes down);\nit increases veeery slowly;\nit is only defined for strictly positive numbers;\nit returns both positive and negative values;\nthere is a vertical asymptote at \\(x=0\\).\n\nSo, word to the wise: if you find yourself plugging negative numbers into the natural log, you’ve probably made a mistake someplace.\nAnyhow, the natural logarithm has several properties you need to know. Let \\(x\\) and \\(y\\) be arbitrary positive numbers, and let \\(c\\) be any real number (could be negative):\n\\[\n\\begin{aligned}\n\\ln(xy)&=\\ln(x)+\\ln(y)\\\\\n\\ln\\left(\\frac{x}{y}\\right)&=\\ln(x)-\\ln(y)\\\\\n\\ln(x^c)&=c\\ln(x)\\\\\n\\ln(1/x)&=-\\ln(x)\\\\\n\\ln(e^x)&=x\\\\\n\\ln(e)&=1\\\\\n\\ln(1)&=0.\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Math Review",
-      "Exponents and logarithms"
+      "Materials"
     ]
   },
   {
@@ -1053,146 +530,767 @@
     "text": "The philosophy of probability\n\nTwo common interpretive perspectives:\n\n\nFrequentist: probability describes the long run frequency of repeatable events;\nSubjective: probability describes an observer’s subjective experience of uncertainty. Their “degrees of belief.”\n\n\n\n\n\n\n\n\n\n\nYou need both perspectives.\n\n\nLike the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.\n\n\n\n\n\n\n\n\n\n\n\nThe math doesn’t care which you prefer.\n\n\nRegardless your interpretation, the mathematics of probability is the same."
   },
   {
-    "objectID": "syllabus/syllabus_materials.html",
-    "href": "syllabus/syllabus_materials.html",
-    "title": "Course materials",
+    "objectID": "math/logexp.html",
+    "href": "math/logexp.html",
+    "title": "Rules for exponents and logarithms",
     "section": "",
-    "text": "You are not required to purchase a textbook for this class. However, if you wish to follow along with one, these are all good options:\n\n[Ross] A First Course in Probability by Sheldon Ross;\n[HTZ] Probability and Statistical Inference by Robert Hogg, Elliot Tanis, and Dale Zimmerman;\n[DS] Probability and Statistics by Morris Degroot and Mark Schervish;\n[Wass] All of Statistics by Larry Wasserman.\n\nIn the PREPARE column of the course schedule, I will indicate which parts of a book correspond to the lectures.",
+    "text": "Let \\(a\\), \\(b\\), \\(c\\), and \\(d\\) be arbitrary real numbers, and let \\(n\\) be a positive integer:\n\\[\n\\begin{aligned}\na^0&=1\\\\\na^1&=a\\\\\na^ca^d&=a^{c+d}\\\\\n\\frac{a^c}{a^d}&=a^{c - d}\\\\\na^{-c}&=\\frac{1}{a^c}\\\\\n(a^c)^d&=a^{cd}\\\\\n(ab)^c&=a^cb^c\\\\\n\\left(\\frac{a}{b}\\right)^c&=\\frac{a^c}{b^c}\\\\\na^{1/n}&=\\sqrt[n]{a}.\n\\end{aligned}\n\\]\nA particularly important function for us is the exponential function \\(e^x\\), where \\(e\\approx 2.71828\\) is Euler’s number. Because it is defined as an exponent, the exponential function obeys all the rules above: \\(e^xe^y=e^{x+y}\\), \\(e^0=1\\), etc.\nHere’s the graph of the function:\n\n\nCode\npar(mar = c(4, 4, 4, 0.5))\ncurve(exp(x), \n      from = -3, \n      to = 3, \n      n = 500, \n      col = \"red\", \n      lwd = 2,\n      yaxt = \"n\", \n      yaxs = \"i\",\n      bty = \"n\",\n      ylab = expression(e^x),\n      main = \"Graph of the exponential function\",\n      ylim = c(0, 20))\naxis(2, pos = 0)\n\n\n\n\n\n\n\n\n\nA few things to notice:\n\nthe exponential is strictly increasing (never plateaus or goes down);\nit increases very quickly;\nit is defined for all real numbers \\(x\\);\nit is strictly positive: \\(e^x&gt;0\\) for all \\(x\\in\\mathbb{R}\\).\n\n\n\n\n\n\n\nAlternative notation\n\n\n\nSometimes we will write \\(\\exp(x)\\) instead of \\(e^x\\), but they mean the same thing. We do this to make complicated expressions like this a little easier to read: \\[\ne^{-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}}=\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n\\]",
     "crumbs": [
-      "Syllabus",
-      "Materials"
+      "Math Review",
+      "Exponents and logarithms"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_materials.html#textbooks",
-    "href": "syllabus/syllabus_materials.html#textbooks",
-    "title": "Course materials",
+    "objectID": "math/logexp.html#exponent-rules",
+    "href": "math/logexp.html#exponent-rules",
+    "title": "Rules for exponents and logarithms",
     "section": "",
-    "text": "You are not required to purchase a textbook for this class. However, if you wish to follow along with one, these are all good options:\n\n[Ross] A First Course in Probability by Sheldon Ross;\n[HTZ] Probability and Statistical Inference by Robert Hogg, Elliot Tanis, and Dale Zimmerman;\n[DS] Probability and Statistics by Morris Degroot and Mark Schervish;\n[Wass] All of Statistics by Larry Wasserman.\n\nIn the PREPARE column of the course schedule, I will indicate which parts of a book correspond to the lectures.",
+    "text": "Let \\(a\\), \\(b\\), \\(c\\), and \\(d\\) be arbitrary real numbers, and let \\(n\\) be a positive integer:\n\\[\n\\begin{aligned}\na^0&=1\\\\\na^1&=a\\\\\na^ca^d&=a^{c+d}\\\\\n\\frac{a^c}{a^d}&=a^{c - d}\\\\\na^{-c}&=\\frac{1}{a^c}\\\\\n(a^c)^d&=a^{cd}\\\\\n(ab)^c&=a^cb^c\\\\\n\\left(\\frac{a}{b}\\right)^c&=\\frac{a^c}{b^c}\\\\\na^{1/n}&=\\sqrt[n]{a}.\n\\end{aligned}\n\\]\nA particularly important function for us is the exponential function \\(e^x\\), where \\(e\\approx 2.71828\\) is Euler’s number. Because it is defined as an exponent, the exponential function obeys all the rules above: \\(e^xe^y=e^{x+y}\\), \\(e^0=1\\), etc.\nHere’s the graph of the function:\n\n\nCode\npar(mar = c(4, 4, 4, 0.5))\ncurve(exp(x), \n      from = -3, \n      to = 3, \n      n = 500, \n      col = \"red\", \n      lwd = 2,\n      yaxt = \"n\", \n      yaxs = \"i\",\n      bty = \"n\",\n      ylab = expression(e^x),\n      main = \"Graph of the exponential function\",\n      ylim = c(0, 20))\naxis(2, pos = 0)\n\n\n\n\n\n\n\n\n\nA few things to notice:\n\nthe exponential is strictly increasing (never plateaus or goes down);\nit increases very quickly;\nit is defined for all real numbers \\(x\\);\nit is strictly positive: \\(e^x&gt;0\\) for all \\(x\\in\\mathbb{R}\\).\n\n\n\n\n\n\n\nAlternative notation\n\n\n\nSometimes we will write \\(\\exp(x)\\) instead of \\(e^x\\), but they mean the same thing. We do this to make complicated expressions like this a little easier to read: \\[\ne^{-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}}=\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n\\]",
     "crumbs": [
-      "Syllabus",
-      "Materials"
+      "Math Review",
+      "Exponents and logarithms"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_materials.html#technology",
-    "href": "syllabus/syllabus_materials.html#technology",
-    "title": "Course materials",
-    "section": "Technology",
-    "text": "Technology\nLecture will largely be a low tech affair: pencil and paper should be sufficient most of the time. You should always plan to bring a laptop or tablet device to lab. In general, you will need access to a device with internet so that you can use the following:\n\nThis course page that you are on right now;\nR/RStudio via the Duke Container Manager;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.",
+    "objectID": "math/logexp.html#logarithm-rules",
+    "href": "math/logexp.html#logarithm-rules",
+    "title": "Rules for exponents and logarithms",
+    "section": "Logarithm rules",
+    "text": "Logarithm rules\nThe natural logarithm function \\(\\ln(x)\\) is the inverse of the exponential function \\(e^x\\). So when we write \\(\\ln(4)\\), we’re asking “\\(e\\) raised to what power is equal to 4?” Turns out it’s \\(\\ln(4)\\approx 1.386\\), so \\(e^{1.386}\\approx 4\\).\nHere’s the graph of the function:\n\n\nCode\npar(mar = c(4, 4, 1, 0.5))\ncurve(log(x), \n      from = 0, \n      to = 8, \n      n = 500, \n      col = \"red\", \n      lwd = 2,\n      xaxt = \"n\", \n      xaxs = \"i\",\n      bty = \"n\",\n      ylab = \"ln(x)\",\n      main = \"Graph of the natural logarithm\")\naxis(1, pos = 0)\n\n\n\n\n\n\n\n\n\nA few things to notice:\n\nthe natural log is strictly increasing (never plateaus or goes down);\nit increases veeery slowly;\nit is only defined for strictly positive numbers;\nit returns both positive and negative values;\nthere is a vertical asymptote at \\(x=0\\).\n\nSo, word to the wise: if you find yourself plugging negative numbers into the natural log, you’ve probably made a mistake someplace.\nAnyhow, the natural logarithm has several properties you need to know. Let \\(x\\) and \\(y\\) be arbitrary positive numbers, and let \\(c\\) be any real number (could be negative):\n\\[\n\\begin{aligned}\n\\ln(xy)&=\\ln(x)+\\ln(y)\\\\\n\\ln\\left(\\frac{x}{y}\\right)&=\\ln(x)-\\ln(y)\\\\\n\\ln(x^c)&=c\\ln(x)\\\\\n\\ln(1/x)&=-\\ln(x)\\\\\n\\ln(e^x)&=x\\\\\n\\ln(e)&=1\\\\\n\\ln(1)&=0.\n\\end{aligned}\n\\]",
     "crumbs": [
-      "Syllabus",
-      "Materials"
+      "Math Review",
+      "Exponents and logarithms"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_policies.html",
-    "href": "syllabus/syllabus_policies.html",
-    "title": "Policies",
+    "objectID": "math/differentiation.html",
+    "href": "math/differentiation.html",
+    "title": "Differentiation",
     "section": "",
-    "text": "You are enthusiastically encouraged to work together and help one another on labs and problem sets. I would much rather you consult your peers than some daft language model. What I ask is that you acknowledge your collaborators. So, at the end of each problem in your write-up, leave a comment like “Ursula, Ignatius and I worked together on this problem,” or “Ethel explained to me how to do part b.” You are not being judged based on your acknowledgements, and there is no penalty for getting “too much” help from others. If you omit acknowledgements, I will assume you did your work solo. If your classmates tell a different story, I will have questions. But otherwise, so long as you are thorough and honest, there will be no problems.\nHaving said all of that, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment, sharers and recipients alike. The write-up you submit must be your own work.",
+    "text": "The derivative of a function \\(f(x)\\) is its instantaneous rate of change. On a graph, this corresponds to the slope of the tangent line. We will denote derivatives by \\(f'(x)\\) or \\(\\text{d}f/\\text{d}x\\) or something like that.\nWhen it exists, which it doesn’t always, the derivative is defined as the limit of difference quotients:\n\\[\nf'(x)=\\lim_{\\Delta x\\to0}\\frac{f(x+\\Delta x)-f(x)}{\\Delta x}\n\\]\nSo, “rise over run” as the “run” bit gets arbitrarily small.",
     "crumbs": [
-      "Syllabus",
-      "Policies"
+      "Math Review",
+      "Differentiation"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_policies.html#collaboration",
-    "href": "syllabus/syllabus_policies.html#collaboration",
-    "title": "Policies",
+    "objectID": "math/differentiation.html#derivative-rules",
+    "href": "math/differentiation.html#derivative-rules",
+    "title": "Differentiation",
+    "section": "Derivative rules",
+    "text": "Derivative rules\n\n\n\n\n\n\n\n\nrule\nfunction\nderivative\n\n\n\n\nconstant\n\\(h(x)=c\\)\n\\(h'(x)=0\\)\n\n\nscaling\n\\(h(x)=c\\cdot f(x)\\)\n\\(h'(x)=c\\cdot f'(x)\\)\n\n\nsum/difference\n\\(h(x)=f(x)\\pm g(x)\\)\n\\(h'(x)=f'(x)\\pm g'(x)\\)\n\n\nlinearity\n\\(h(x)=a\\cdot f(x)\\pm b\\cdot g(x)\\)\n\\(h'(x)=a\\cdot f'(x)\\pm b\\cdot g'(x)\\)\n\n\npower\n\\(h(x)=x^n\\)\n\\(h'(x)=nx^{n-1}\\)\n\n\nproduct\n\\(h(x)=f(x)g(x)\\)\n\\(h'(x)=f'(x)g(x)+f(x)g'(x)\\)\n\n\nquotient\n\\(h(x)=f(x)/g(x)\\)\n\\(h'(x)=\\frac{f'(x)g(x)+f(x)g'(x)}{g(x)^2}\\)\n\n\nchain\n\\(h(x)=f(g(x))\\)\n\\(h'(x)=f'(g(x))g'(x)\\)\n\n\nexponential\n\\(h(x)=e^x\\)\n\\(h'(x)=e^x\\)\n\n\nnatural log\n\\(h(x)=\\ln(x)\\)\n\\(h'(x)=1/x\\)",
+    "crumbs": [
+      "Math Review",
+      "Differentiation"
+    ]
+  },
+  {
+    "objectID": "math/differentiation.html#curvature",
+    "href": "math/differentiation.html#curvature",
+    "title": "Differentiation",
+    "section": "Curvature",
+    "text": "Curvature\nIf you take the derivative of \\(f\\), you get the first derivative \\(f'\\). If you take the derivative of the derivative, you get the second derivative \\(f''\\). The derivative of the derivative of the derivative is the third derivative \\(f'''\\), and on and on. But let’s focus on the first two. The derivatives contain information about the shape of the original function:\n\nthe first derivative tells you if the function is increasing or decreasing;\n\nif \\(f'(x)&gt;0\\), then \\(f\\) is increasing at \\(x\\);\nif \\(f'(x)&lt;0\\), then \\(f\\) is decreasing at \\(x\\);\nif \\(f'(x)=0\\), then \\(f\\) is not changing at \\(x\\);\n\nif the second derivative tells you about the curvature (aka concavity) of the function:\n\nif \\(f''(x)&gt;0\\), then \\(f\\) is concave up (\\(\\cup\\), smiling) at \\(x\\);\nif \\(f''(x)&lt;0\\), then \\(f\\) is concave down (\\(\\cap\\), frowning) at \\(x\\).\n\n\nHere is an illustration with the function \\(f(x)=x^3-x\\) and its derivatives \\(f'(x)=3x^2-1\\) and \\(f''(x)=6x\\) (power rule!):\n\n\n\n\n\n\n\n\n\nWhen the first derivative changes sign (at \\(x=\\pm1/\\sqrt{3}\\)), that corresponds to the original function switching from increasing to decreasing, or vice versa. When the second derivative changes sign (at \\(x=0\\)), that corresponds to the original function switching from concave down (frowning) to concave up (smiling).\nA point like \\(x=0\\) in this example where the second derivative changes sign and the concavity changes is called an inflection point. “Second derivative changes sign” is the same thing as saying the graph of \\(f''\\) crosses the \\(x\\)-axis, so an inflection point happens where the second derivative has roots: \\(f''=0\\).",
+    "crumbs": [
+      "Math Review",
+      "Differentiation"
+    ]
+  },
+  {
+    "objectID": "math/differentiation.html#optimization",
+    "href": "math/differentiation.html#optimization",
+    "title": "Differentiation",
+    "section": "Optimization",
+    "text": "Optimization\nmax versus argmax\ncritical points\ncheck the second derivative",
+    "crumbs": [
+      "Math Review",
+      "Differentiation"
+    ]
+  },
+  {
+    "objectID": "math/greeks.html",
+    "href": "math/greeks.html",
+    "title": "Greek alphabet",
     "section": "",
-    "text": "You are enthusiastically encouraged to work together and help one another on labs and problem sets. I would much rather you consult your peers than some daft language model. What I ask is that you acknowledge your collaborators. So, at the end of each problem in your write-up, leave a comment like “Ursula, Ignatius and I worked together on this problem,” or “Ethel explained to me how to do part b.” You are not being judged based on your acknowledgements, and there is no penalty for getting “too much” help from others. If you omit acknowledgements, I will assume you did your work solo. If your classmates tell a different story, I will have questions. But otherwise, so long as you are thorough and honest, there will be no problems.\nHaving said all of that, you should not be crassly handing your solutions to others for them to brainlessly copy. This is plagiarism, and all involved will earn a zero on the assignment, sharers and recipients alike. The write-up you submit must be your own work.",
+    "text": "For better or worse, Greek letters will be flying in this class, so you should have a working knowledge of the most common ones used in mathematics:\n\n\n\nGreek Letter\nEnglish Name\n\n\n\n\n\\(A, \\alpha\\)\nalpha\n\n\n\\(B, \\beta\\)\nbeta\n\n\n\\(\\Gamma, \\gamma\\)\ngamma\n\n\n\\(\\Delta, \\delta\\)\ndelta\n\n\n\\(E, \\epsilon\\)\nepsilon\n\n\n\\(Z, \\zeta\\)\nzeta\n\n\n\\(H, \\eta\\)\neta\n\n\n\\(\\Theta, \\theta\\)\ntheta\n\n\n\\(I, \\iota\\)\niota\n\n\n\\(K, \\kappa\\)\nkappa\n\n\n\\(\\Lambda, \\lambda\\)\nlambda\n\n\n\\(M, \\mu\\)\nmu (“mew”)\n\n\n\\(N, \\nu\\)\nnu\n\n\n\\(\\Xi, \\xi\\)\nxi\n\n\n\\(O, o\\)\nomicron\n\n\n\\(\\Pi, \\pi\\)\npi\n\n\n\\(P, \\rho\\)\nrho (“row”)\n\n\n\\(\\Sigma, \\sigma\\)\nsigma\n\n\n\\(T, \\tau\\)\ntau\n\n\n\\(Y, \\upsilon\\)\nupsilon\n\n\n\\(\\Phi, \\phi\\)\nphi\n\n\n\\(X, \\chi\\)\nchi (“kai”)\n\n\n\\(\\Psi, \\psi\\)\npsi\n\n\n\\(\\Omega, \\omega\\)\nomega",
     "crumbs": [
-      "Syllabus",
-      "Policies"
+      "Math Review",
+      "Greek alphabet"
     ]
   },
   {
-    "objectID": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
-    "href": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
-    "title": "Policies",
-    "section": "Use of outside resources, including AI",
-    "text": "Use of outside resources, including AI\nThere are at least two reasons you might seek outside resources:\n\n✅ Extra practice or alternative instruction: Go crazy. Knock yourself out. Have a ball. The internet is saturated with good (and horrible) resources for learning this material, so if you find something that really resonates with you, have at it;\n❌ Doing the problems for you: If you find a solution online, or ask a language model to generate one, and you copy it down and submit it as your own work, that is plagiarism. If we detect it, you will earn a zero for that part of your write-up.\n\n“Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.” Furthermore, 60% of your final course grade is determined by your performance on old school, no-tech exams. As such, outsourcing all of your thinking to an AI will probably end in humiliating disaster. To avoid this, I suggest you abstain from using language models to do the problems for you.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_policies.html#communication",
-    "href": "syllabus/syllabus_policies.html#communication",
-    "title": "Policies",
-    "section": "Communication",
-    "text": "Communication\nIf you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum Ed Discussion. That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.\nIf you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructor directly (john.zito@duke.edu).\n\n\n\n\n\n\nNote\n\n\n\nYou can ask questions anonymously on Ed. The teaching team will still know your identity, but your peers will not.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_policies.html#late-work-and-extensions",
-    "href": "syllabus/syllabus_policies.html#late-work-and-extensions",
-    "title": "Policies",
-    "section": "Late work and extensions",
-    "text": "Late work and extensions\nNo late work will be accepted unless you request an extension in advance by e-mailing the instructor directly (john.zito@duke.edu). All reasonable requests will be entertained, but extensions will not be long.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_policies.html#regrade-requests",
-    "href": "syllabus/syllabus_policies.html#regrade-requests",
-    "title": "Policies",
-    "section": "Regrade requests",
-    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a regrade request in Gradescope. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nNo grades will be changed after the final exam has been administered on Friday December 12;\n\n\n\n\n\n\n\nWarning\n\n\n\nA regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_policies.html#attendance",
-    "href": "syllabus/syllabus_policies.html#attendance",
-    "title": "Policies",
-    "section": "Attendance",
-    "text": "Attendance\nLive your life. Attendance is not strictly required for any of the class meetings. The responsibility lies with us to make class meetings sufficiently engaging and informative that you choose to attend. Having said that, success in this class and regular attendance are probably highly positively correlated. Furthermore, while lab attendance is not required, regular attendance is probably the path of least resistance to earning full credit for the lab component of your final grade. The labs are designed so that they can be completed in one sitting more or less, and they are due at midnight the same day. So show up to lab, bang it out, and move on with your life.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_policies.html#accommodations",
-    "href": "syllabus/syllabus_policies.html#accommodations",
-    "title": "Policies",
-    "section": "Accommodations",
-    "text": "Accommodations\nIf you need accommodations for this class, you will need to register with the Student Disability Access Office (SDAO) and provide them with documentation related to your needs. SDAO will work with you to determine what accommodations are appropriate for your situation. Please note that accommodations are not retroactive and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me. Please contact SDAO for more information: sdao@duke.edu or access.duke.edu.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_policies.html#duke-community-standard",
-    "href": "syllabus/syllabus_policies.html#duke-community-standard",
-    "title": "Policies",
-    "section": "Duke Community Standard",
-    "text": "Duke Community Standard\nAs a student in this course, you have agreed to uphold the Duke Community Standard and the practices specific to this course.\n\n\nAny violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically results in a zero for the relevant portion or the entire assignment, and will be reported to the Office of Student Conduct & Community Standards for further action. Furthermore:\n\nIf a conduct violation results in a zero on a lab or problem set, that zero will not be dropped;\nIf a conduct violation results in a zero on a midterm, that zero will not be replaced with your final exam score;\nIf we discover that students are sharing and copying assignment solutions, all students involved will be penalized equally, the sharers the same as the recipients.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_team.html",
-    "href": "syllabus/syllabus_team.html",
-    "title": "Teaching team",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 240 Probability for Statistical Inference",
     "section": "",
-    "text": "Mug\nName\nRole\nOffice Hours\n\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\nZito, John\nInstructor\nTue 3:00 PM - 5:00 PM\nor by appointment\nOld Chem 207",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n\n1\nMon, Aug 25\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\n\n\n\n\n\n\n\n\nWed, Aug 27\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\n\n\nIntro Survey @ 3 PM\n\n\n\n\nThu, Aug 28\n\n\n💻 Lab 0 (calculus review)\n\n\n\n\n\n\n2\nMon, Sep 1\n\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\n\n\nWed, Sep 3\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\n\n\n\n\n\n\n\nThu, Sep 4\n\n\n💻 Lab 1\n\n\nLab 1 @ 11:59 PM\n\n\n\n\nFri, Sep 5\n\n\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nWed, Sep 10\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\n\n\n\n\n\n\n\n\nThu, Sep 11\n\n\n💻 Lab 2\n\n\nLab 2 @ 11:59 PM\n\n\n\n\nFri, Sep 12\n\n\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\nDS: 2\n🧑‍🏫 Conditional Probability\nPlay around!\n\n\n\n\n\n\nWed, Sep 17\nDS: 2\n🧑‍🏫 Conditional Probability\nPlay around!\n\n\n\n\n\n\nThu, Sep 18\n\n\n💻 Lab 3\n\n\nLab 3 @ 11:59 PM\n\n\n\n\nFri, Sep 19\n\n\n\n\n\n\nPSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nWed, Sep 24\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nThu, Sep 25\n\n\n💻 Lab 4\n\n\nLab 4 @ 11:59 PM\n\n\n\n\nFri, Sep 26\n\n\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nWed, Oct 1\n\n\n🧑‍🏫 Discrete\n\n\n\n\n\n\n\n\nThu, Oct 2\n\n\n💻 Lab 5\n\n\nLab 5 @ 11:59 PM\n\n\n\n\nFri, Oct 3\n\n\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nWed, Oct 8\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nThu, Oct 9\n\n\n📝 Midterm 1\n\n\n\n\n\n\n8\nMon, Oct 13\n\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\n\n\nWed, Oct 15\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nThu, Oct 16\n\n\n💻 Lab 6\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n\n🧑‍🏫 Continuous\n\n\n\n\n\n\n\n\nWed, Oct 22\n\n\n🧑‍🏫 Jointly Discrete\n\n\n\n\n\n\n\n\nThu, Oct 23\n\n\n💻 Lab 7\n\n\nLab 7 @ 11:59 PM\n\n\n\n\nFri, Oct 24\n\n\n\n\n\n\nPSET 5 @ 5PM\n\n\n10\nMon, Oct 27\n\n\n🧑‍🏫 Jointly Continuous\n\n\n\n\n\n\n\n\nWed, Oct 29\n\n\n🧑‍🏫 Hierarchies\n\n\n\n\n\n\n\n\nThu, Oct 30\n\n\n💻 Lab 8\n\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\n\n\n\nWed, Nov 5\n\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\n\n\n\nThu, Nov 6\n\n\n💻 Lab 9\n\n\nLab 9 @ 11:59 PM\n\n\n\n\nFri, Nov 7\n\n\n\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\n\n\n\nWed, Nov 12\n\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\n\n\n\nThu, Nov 13\n\n\n📝 Midterm 2\n\n\n\n\n\n\n13\nMon, Nov 17\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nWed, Nov 19\n\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\n\n\n\nThu, Nov 20\n\n\n💻 Lab 10\n\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\n\n\n\nWed, Nov 26\n\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\n\n\nThu, Nov 27\n\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n\n15\nMon, Dec 1\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nWed, Dec 3\n\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\n\n\n\nThu, Dec 4\n\n\n💻 Lab 11\n\n\nLab 11 @ 11:59 PM\n\n\n\n\nFri, Dec 5\n\n\n\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n\n📝 Final (9AM - 12PM)",
     "crumbs": [
       "Syllabus",
-      "Teaching team"
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "problems/pset-2.html",
+    "href": "problems/pset-2.html",
+    "title": "Problem Set 2",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "problems/pset-2.html#problem-0",
+    "href": "problems/pset-2.html#problem-0",
+    "title": "Problem Set 2",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "problems/pset-2.html#problem-x",
+    "href": "problems/pset-2.html#problem-x",
+    "title": "Problem Set 2",
+    "section": "Problem X",
+    "text": "Problem X\nLet \\(A\\) and \\(B\\) be independent events. Prove that \\(A^c\\) and \\(B^c\\) are independent events."
+  },
+  {
+    "objectID": "problems/pset-2.html#submission",
+    "href": "problems/pset-2.html#submission",
+    "title": "Problem Set 2",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+  },
+  {
+    "objectID": "problems/pset-0.html",
+    "href": "problems/pset-0.html",
+    "title": "Problem Set 0",
+    "section": "",
+    "text": "Nature laughs at the difficulties of integration.\nThis is ostensibly calculus review, but each problem is a piece of probability in disguise. We will illuminate these connections throughout the semester, and I will refer to Problem Set 0 often. Stay tuned!",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "problems/pset-0.html#problem-0",
+    "href": "problems/pset-0.html#problem-0",
+    "title": "Problem Set 0",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "problems/pset-0.html#problem-1",
+    "href": "problems/pset-0.html#problem-1",
+    "title": "Problem Set 0",
+    "section": "Problem 1",
+    "text": "Problem 1\nExplain why this is horrific notation:\n\\[\n    \\int_0^x f(x)\\,\\textrm{d} x.\n\\]",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "problems/pset-0.html#problem-2",
+    "href": "problems/pset-0.html#problem-2",
+    "title": "Problem Set 0",
+    "section": "Problem 2",
+    "text": "Problem 2\nSimplify this:\n\\[\n\\ln\\left(e^{a_1}e^{a_2}e^{a_3}\\cdots e^{a_n}\\right).\n\\]",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "problems/pset-0.html#problem-3",
+    "href": "problems/pset-0.html#problem-3",
+    "title": "Problem Set 0",
+    "section": "Problem 3",
+    "text": "Problem 3\nAssume \\(\\lambda&gt;0\\) is a constant and compute\n\\[\n    \\sum\\limits_{n=0}^\\infty n \\frac{\\lambda^n}{n!}e^{-\\lambda}\n    .\n\\]",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "problems/pset-0.html#problem-4",
+    "href": "problems/pset-0.html#problem-4",
+    "title": "Problem Set 0",
+    "section": "Problem 4",
+    "text": "Problem 4\nHere is a very silly function:\n\\[\n    h(x)\n    =\n    \\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\n    ,\\quad\n    -\\infty&lt;x&lt;\\infty\n    .\n\\]\nTreat \\(-\\infty&lt;\\mu&lt;\\infty\\) and \\(\\sigma&gt;0\\) as constants and compute the value(s) of \\(x\\) at which \\(h\\) has inflection points.\n\n\n\n\n\n\nHint\n\n\n\n\n\nHere is an example of what \\(h\\) might look like in the special case where \\(\\mu = 1\\) and \\(\\sigma=2\\):\n\n\nCode\nm = 1\ns = 2\npar(mar = c(4, 4, 0.1, 4))\ncurve(exp(-0.5 * ((x - m) / s)^2), \n      from = -6, to = 8, n = 500,\n      xlab = \"x\", ylab = \"h(x)\")\n\n\n\n\n\n\n\n\n\nBefore you start doing any math, can you use the picture to guess what the answer will be?",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "problems/pset-0.html#problem-5",
+    "href": "problems/pset-0.html#problem-5",
+    "title": "Problem Set 0",
+    "section": "Problem 5",
+    "text": "Problem 5\nHere is another inordinately silly function:\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\textrm{d} y,\\quad x&gt;0.\n\\]\nProve that \\(\\Gamma(x+1)=x\\Gamma(x)\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nStart on the left-hand side by writing out \\(\\Gamma(x+1)\\) and evaluating the integral by parts.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "problems/pset-0.html#problem-6",
+    "href": "problems/pset-0.html#problem-6",
+    "title": "Problem Set 0",
+    "section": "Problem 6",
+    "text": "Problem 6\nLet \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\n“[T]wice continuously differentiable” means that \\(f\\), \\(f'\\), and \\(f''\\) are all continuous functions at and around zero. A full credit solution must clearly explain how and why continuity is being used along the way.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "problems/pset-0.html#problem-7",
+    "href": "problems/pset-0.html#problem-7",
+    "title": "Problem Set 0",
+    "section": "Problem 7",
+    "text": "Problem 7\nConsider this integral:\n\\[\n    \\int_2^\\infty\n    \\frac{1}{x(\\ln x)^p}\\textrm{d} x\n    .\n\\]\n\nUse R to create a single plot with many lines, each graphing the integrand for a different value of \\(p\\). Consider \\(p\\) equal to -2, -1.5, -1, 0, 1, and 5, and make the \\(x\\)-axis of your plot run from 2 to 15.\nShow that \\(\\lim_{x\\to\\infty}\\frac{1}{x(\\ln x)^p}=0\\) for all values of \\(-\\infty&lt;p&lt;\\infty\\).\nFor what values of \\(p\\) does the integral converge? When it does converge, what is its value?\nConsult the picture you created in part (a), and write a few sentences explaining conceptually why the integral converges for some values of \\(p\\) but not others.\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nWhen taking the limit or evaluating the integral, can you use the same technique for all values of \\(p\\), or do you need a different technique depending on what \\(p\\) is?",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "problems/pset-0.html#submission",
+    "href": "problems/pset-0.html#submission",
+    "title": "Problem Set 0",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "problems/pset-4.html",
+    "href": "problems/pset-4.html",
+    "title": "Problem Set 4",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-0",
+    "href": "problems/pset-4.html#problem-0",
+    "title": "Problem Set 4",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-x",
+    "href": "problems/pset-4.html#problem-x",
+    "title": "Problem Set 4",
+    "section": "Problem X",
+    "text": "Problem X\nAn urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-x-1",
+    "href": "problems/pset-4.html#problem-x-1",
+    "title": "Problem Set 4",
+    "section": "Problem X",
+    "text": "Problem X\nKing Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 knights;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten knights. We can then identify which knights are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-x-2",
+    "href": "problems/pset-4.html#problem-x-2",
+    "title": "Problem Set 4",
+    "section": "Problem X",
+    "text": "Problem X\nelection thing"
+  },
+  {
+    "objectID": "problems/pset-4.html#submission",
+    "href": "problems/pset-4.html#submission",
+    "title": "Problem Set 4",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+  },
+  {
+    "objectID": "problems/bank/ht-receipt.html",
+    "href": "problems/bank/ht-receipt.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "A few months ago I went to Harris Teeter to get some junk food, and when I looked at my receipt, I saw this:\n\n\n\n\n\nI thought, “Strange. What are the odds the total would be a whole number?” Well, let’s find out!\n\nImagine you randomly purchase two items that each cost less than $10, and assume all prices are equally likely. The prices of the two items are quoted to two decimal places. What is the probability that the two prices add up to a whole number total?\nNow let’s add a wrinkle. Imagine sales tax is 5%. This is calculated, rounded up to the nearest cent, and then added to your bill. What is the probability that the cost of the two items plus the rounded sales tax adds up to a whole number?"
+  },
+  {
+    "objectID": "problems/bank/bdj-rv.html",
+    "href": "problems/bank/bdj-rv.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "An urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
+  },
+  {
+    "objectID": "problems/bank/incl-excl-3.html",
+    "href": "problems/bank/incl-excl-3.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Let \\(S\\) be a sample space, and consider events \\(A,\\, B,\\, C\\subseteq S\\). Recall that the law of inclusion/exclusion says that\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B).\n\\]\n\nHow should this be extended to unions of three events? \\[\nP(A\\cup B\\cup C)=P(A)+P(B)+P(C) +\\,...{???}\n\\] Explain your conjecture with words and pictures.\nUse set theory and the probabiity axioms to prove your conjecture in the previous part."
+  },
+  {
+    "objectID": "problems/bank/diaconis.html",
+    "href": "problems/bank/diaconis.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Persi Diaconis is a famous researcher in probability and statistics. He has a cute line of research where he probes the randomness that we take for granted in simple things like coin tossing, dice, and playing cards. In this Numberphile interview, he discusses coin tossing, and says both “coin tossing is as close to a random phenomenon as I know” and “coin tossing is a deterministic process. What’s random about it?” Wut?\nWatch the interview, and report back with a brief summary of Diaconis’ explanation of what makes a coin toss random. Do you agree or disagree?"
+  },
+  {
+    "objectID": "problems/bank/weather-app.html",
+    "href": "problems/bank/weather-app.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "One day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they fit together."
+  },
+  {
+    "objectID": "problems/bank/bdj-circuit.html",
+    "href": "problems/bank/bdj-circuit.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "The figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
+  },
+  {
+    "objectID": "problems/bank/testing-symptoms.html",
+    "href": "problems/bank/testing-symptoms.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\). Table 1 enumerates all of the possible states of the world together with their individual probabilities.\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n\n-\n-\n-\n0.32\n\n\n-\n-\n+\n0.24\n\n\n-\n+\n-\n0.16\n\n\n-\n+\n+\n0.08\n\n\n+\n-\n-\n0.02\n\n\n+\n-\n+\n0.04\n\n\n+\n+\n-\n0.06\n\n\n+\n+\n+\n0.08\n\n\n\n\n\n\n\nWhat is the overall prevalence of this disease?\nWhat is the sensitivity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you truly have the disease?"
+  },
+  {
+    "objectID": "problems/bank/ross-rv.html",
+    "href": "problems/bank/ross-rv.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Two balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
+  },
+  {
+    "objectID": "problems/bank/xor.html",
+    "href": "problems/bank/xor.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Let \\(A\\) and \\(B\\) be events in a sample space \\(S\\). Let \\(C\\) be the set of outcomes that are in either \\(A\\) or \\(B\\), but not both.\n\nDraw a well-labeled picture of \\(S\\), \\(A\\), \\(B\\), and \\(C\\).\nWrite down a formula for \\(C\\) in terms of \\(A\\) and \\(B\\) using any of the basic operations: union (\\(\\cup\\)), intersection (\\(\\cap\\)), complement (\\(^c\\)).\nUse set theory and the probability axioms to show that\n\n\\[\nP(C)=P(A)+P(B)-2P(A\\cap B).\n\\]\n\nExplain this result conceptually (with words and pictures)."
+  },
+  {
+    "objectID": "problems/bank/bdj-encryption.html",
+    "href": "problems/bank/bdj-encryption.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "An encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
+  },
+  {
+    "objectID": "problems/bank/gandalf-test.html",
+    "href": "problems/bank/gandalf-test.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "King Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 knights;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten knights. We can then identify which knights are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
+  },
+  {
+    "objectID": "problems/bank/ross-balls.html",
+    "href": "problems/bank/ross-balls.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Seven balls are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green balls. Find the probability that\n\n3 red, 2 blue, and 2 green balls are withdrawn;\nat least 2 red balls are withdrawn;\nall withdrawn balls are the same color;\neither exactly 3 red balls or exactly 3 blue balls are withdrawn."
+  },
+  {
+    "objectID": "problems/bank/independent-complements.html",
+    "href": "problems/bank/independent-complements.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Let \\(A\\) and \\(B\\) be independent events. Prove that \\(A^c\\) and \\(B^c\\) are independent events."
+  },
+  {
+    "objectID": "problems/pset-1.html",
+    "href": "problems/pset-1.html",
+    "title": "Problem Set 1",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "problems/pset-1.html#problem-0",
+    "href": "problems/pset-1.html#problem-0",
+    "title": "Problem Set 1",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "problems/pset-1.html#problem-x",
+    "href": "problems/pset-1.html#problem-x",
+    "title": "Problem Set 1",
+    "section": "Problem X",
+    "text": "Problem X\nPersi Diaconis is a famous researcher in probability and statistics. He has a cute line of research where he probes the randomness that we take for granted in simple things like coin tossing, dice, and playing cards. In this Numberphile interview, he discusses coin tossing, and says both “coin tossing is as close to a random phenomenon as I know” and “coin tossing is a deterministic process. What’s random about it?” Wut?\nWatch the interview, and report back with a brief summary of Diaconis’ explanation of what makes a coin toss random. Do you agree or disagree?"
+  },
+  {
+    "objectID": "problems/pset-1.html#problem-x-1",
+    "href": "problems/pset-1.html#problem-x-1",
+    "title": "Problem Set 1",
+    "section": "Problem X",
+    "text": "Problem X\nOne day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they fit together."
+  },
+  {
+    "objectID": "problems/pset-1.html#problem-x-2",
+    "href": "problems/pset-1.html#problem-x-2",
+    "title": "Problem Set 1",
+    "section": "Problem X",
+    "text": "Problem X\nLet \\(A\\) and \\(B\\) be events in a sample space \\(S\\). Let \\(C\\) be the set of outcomes that are in either \\(A\\) or \\(B\\), but not both.\n\nDraw a well-labeled picture of \\(S\\), \\(A\\), \\(B\\), and \\(C\\).\nWrite down a formula for \\(C\\) in terms of \\(A\\) and \\(B\\) using any of the basic operations: union (\\(\\cup\\)), intersection (\\(\\cap\\)), complement (\\(^c\\)).\nUse set theory and the probability axioms to show that\n\n\\[\nP(C)=P(A)+P(B)-2P(A\\cap B).\n\\]\n\nExplain this result conceptually (with words and pictures)."
+  },
+  {
+    "objectID": "problems/pset-1.html#problem-x-3",
+    "href": "problems/pset-1.html#problem-x-3",
+    "title": "Problem Set 1",
+    "section": "Problem X",
+    "text": "Problem X\nLet \\(S\\) be a sample space, and consider events \\(A,\\, B,\\, C\\subseteq S\\). Recall that the law of inclusion/exclusion says that\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B).\n\\]\n\nHow should this be extended to unions of three events? \\[\nP(A\\cup B\\cup C)=P(A)+P(B)+P(C) +\\,...{???}\n\\] Explain your conjecture with words and pictures.\nUse set theory and the probabiity axioms to prove your conjecture in the previous part."
+  },
+  {
+    "objectID": "problems/pset-1.html#problem-9",
+    "href": "problems/pset-1.html#problem-9",
+    "title": "Problem Set 1",
+    "section": "Problem 9",
+    "text": "Problem 9\nA few months ago I went to Harris Teeter to get some junk food, and when I looked at my receipt, I saw this:\n\n\n\n\n\nI thought, “Strange. What are the odds the total would be a whole number?” Well, let’s find out!\n\nImagine you randomly purchase two items that each cost less than $10, and assume all prices are equally likely. The prices of the two items are quoted to two decimal places. What is the probability that the two prices add up to a whole number total?\nNow let’s add a wrinkle. Imagine sales tax is 5%. This is calculated, rounded up to the nearest cent, and then added to your bill. What is the probability that the cost of the two items plus the rounded sales tax adds up to a whole number?"
+  },
+  {
+    "objectID": "problems/pset-1.html#problem-10",
+    "href": "problems/pset-1.html#problem-10",
+    "title": "Problem Set 1",
+    "section": "Problem 10",
+    "text": "Problem 10\nSeven balls are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green balls. Find the probability that\n\n3 red, 2 blue, and 2 green balls are withdrawn;\nat least 2 red balls are withdrawn;\nall withdrawn balls are the same color;\neither exactly 3 red balls or exactly 3 blue balls are withdrawn."
+  },
+  {
+    "objectID": "problems/pset-1.html#submission",
+    "href": "problems/pset-1.html#submission",
+    "title": "Problem Set 1",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+  },
+  {
+    "objectID": "problems/midterm-1.html",
+    "href": "problems/midterm-1.html",
+    "title": "Midterm 1 Review",
+    "section": "",
+    "text": "Midterm Exam 1 will take place on Thursday October 9 during your lab section. There will be XX problems, and they will break down as follows:\n\n\n\n\n\nBelow are practice problems for each of these areas, as well as guidance about what course materials to refer to if you want more review on a particular topic.\n\nProbability spaces\n\n\nCounting\n\n\nConditional probability\n\n\nDiscrete random variables"
+  },
+  {
+    "objectID": "problems/pset-3.html",
+    "href": "problems/pset-3.html",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-0",
+    "href": "problems/pset-3.html#problem-0",
+    "title": "Problem Set 3",
+    "section": "Problem 0",
+    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-x",
+    "href": "problems/pset-3.html#problem-x",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\nWe studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\). Table 1 enumerates all of the possible states of the world together with their individual probabilities.\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n\n-\n-\n-\n0.32\n\n\n-\n-\n+\n0.24\n\n\n-\n+\n-\n0.16\n\n\n-\n+\n+\n0.08\n\n\n+\n-\n-\n0.02\n\n\n+\n-\n+\n0.04\n\n\n+\n+\n-\n0.06\n\n\n+\n+\n+\n0.08\n\n\n\n\n\n\n\nWhat is the overall prevalence of this disease?\nWhat is the sensitivity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you truly have the disease?"
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-x-1",
+    "href": "problems/pset-3.html#problem-x-1",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\nAn encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-x-2",
+    "href": "problems/pset-3.html#problem-x-2",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\n\n\n\n\n\nThe figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-x-3",
+    "href": "problems/pset-3.html#problem-x-3",
+    "title": "Problem Set 3",
+    "section": "Problem X",
+    "text": "Problem X\nTwo balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
+  },
+  {
+    "objectID": "problems/pset-3.html#submission",
+    "href": "problems/pset-3.html#submission",
+    "title": "Problem Set 3",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+  },
+  {
+    "objectID": "math/series.html",
+    "href": "math/series.html",
+    "title": "series",
+    "section": "",
+    "text": "geometric taylor",
+    "crumbs": [
+      "Math Review",
+      "Sequences and series"
+    ]
+  },
+  {
+    "objectID": "math/latex.html",
+    "href": "math/latex.html",
+    "title": "Typesetting math with LaTeX and Quarto",
+    "section": "",
+    "text": "This is optional!\n\n\n\nYou can get a 100% A+ in this class without doing any of the stuff described below, so please skip it if you’re not interested. However, if you plan on doing research in the mathematical sciences, you will have to learn this stuff eventually, so here goes nothing…\nLaTeX is a software system for typesetting documents with a bunch of math in them1. It is fully integrated into Quarto, so you can do all of your writing and coding and plotting and math-ing in one place. Pretty neat. We’ll just show you a few things to get you going, but if you want to use the entire system for realz, you should make an Overleaf account and start playing.",
+    "crumbs": [
+      "Math Review",
+      "Typing math"
+    ]
+  },
+  {
+    "objectID": "math/latex.html#inline-math-goes-between-single-dollar-signs",
+    "href": "math/latex.html#inline-math-goes-between-single-dollar-signs",
+    "title": "Typesetting math with LaTeX and Quarto",
+    "section": "Inline math goes between single dollar signs",
+    "text": "Inline math goes between single dollar signs\n\n\n\n\n\n\n\nGoal\ninclude an equation in the middle of a sentence\n\n\nWhat you type in the .qmd file\nThe function $h(x)=\\ln x^2$ is my favorite\n\n\nHow it will look when you render\nThe function \\(h(x)=\\ln x^2\\) is my favorite.",
+    "crumbs": [
+      "Math Review",
+      "Typing math"
+    ]
+  },
+  {
+    "objectID": "math/latex.html#a-math-block-goes-between-double-dollar-signs",
+    "href": "math/latex.html#a-math-block-goes-between-double-dollar-signs",
+    "title": "Typesetting math with LaTeX and Quarto",
+    "section": "A math block goes between double dollar signs",
+    "text": "A math block goes between double dollar signs\nSay you want a whole bunch of math set off on a new line, in between your paragraphs, like this:\n\\[\nf(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n\\]\nIn that case, you put this into your source .qmd file:\n\n$$\nf(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n$$\n\nWhen you render, you’ll get the pretty math. Notice some of the commands we used:\n\n\\exp for \\(\\exp\\);\n\\sqrt{2} for the square root \\(\\sqrt{2}\\);\n\\frac{1}{2} to get a fraction \\(\\frac{1}{2}\\);\n(x-\\mu)^2 to get an exponent \\((x-\\mu)^2\\);\n\\mu, \\sigma, \\pi for the Greek letters \\(\\mu\\), \\(\\sigma\\), and \\(\\pi\\);\nand so on.\n\n\n\n\n\n\n\nMath commands in LaTeX\n\n\n\nHere is a bank of common LaTeX commands. You won’t use most of them. Alternatively, Detexify is a very useful site where you can draw a symbol and it will tell you what the LaTeX command is for it.",
+    "crumbs": [
+      "Math Review",
+      "Typing math"
+    ]
+  },
+  {
+    "objectID": "math/latex.html#lining-equations-up",
+    "href": "math/latex.html#lining-equations-up",
+    "title": "Typesetting math with LaTeX and Quarto",
+    "section": "Lining equations up",
+    "text": "Lining equations up\nIf you are typesetting a sequence of equalities, you should do it inside an aligned environment so that the equal signs are all lined up nice.\nIf you type this:\n\n$$\n\\begin{aligned}\nx(x+1)(x-1) &= (x^2+x)(x-1)\\\\\n&=x^3-x^2+x^2-x\\\\\n&=x^3-x.\n\\end{aligned}\n$$\n\nYou will get this:\n\\[\n\\begin{aligned}\nx(x+1)(x-1) &= (x^2+x)(x-1)\\\\\n&=x^3-x^2+x^2-x\\\\\n&=x^3-x.\n\\end{aligned}\n\\]\nThe \\\\ introduces a line break, and the & in each equation tells it where to line things up.",
+    "crumbs": [
+      "Math Review",
+      "Typing math"
+    ]
+  },
+  {
+    "objectID": "math/latex.html#footnotes",
+    "href": "math/latex.html#footnotes",
+    "title": "Typesetting math with LaTeX and Quarto",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThere is no consensus on how to pronounce “LaTeX.” JZ says “lah-tech.” Some folks say “lay-tech.” Some even say “lay-techs,” just like a latex glove. But we all agree that the emphasis is on the first syllable. Perhaps I’ll award 2.56 bonus points if you invent a new way to pronounce it. But probably not.↩︎",
+    "crumbs": [
+      "Math Review",
+      "Typing math"
+    ]
+  },
+  {
+    "objectID": "math/limits.html",
+    "href": "math/limits.html",
+    "title": "limits",
+    "section": "",
+    "text": "limits, continuity, left versus right, l’hopital",
+    "crumbs": [
+      "Math Review",
+      "Limits and continuity"
+    ]
+  },
+  {
+    "objectID": "math/integration.html",
+    "href": "math/integration.html",
+    "title": "Integration",
+    "section": "",
+    "text": "Crudely, the definite integral of a function gives you the (signed) area between the graph of the function and the \\(x\\)-axis.",
+    "crumbs": [
+      "Math Review",
+      "Integration"
+    ]
+  },
+  {
+    "objectID": "math/integration.html#the-fundamental-theorem-of-calculus",
+    "href": "math/integration.html#the-fundamental-theorem-of-calculus",
+    "title": "Integration",
+    "section": "The fundamental theorem of calculus",
+    "text": "The fundamental theorem of calculus\nThe fundamental theorem of calculus is a bridge between the seemingly unrelated worlds of derivatives and integrals:\n\\[\n\\int_a^bf(x)\\,\\text{d}x=F(b)-F(a),\\quad f(x)=F'(x).\n\\]\nOn a practical level, it provides a route for evaluating definite integrals by antidifferentiation. The function you are trying to integrate (called the integrand) is \\(f\\). You imagine \\(f\\) is the derivative of some function \\(F\\) which you don’t yet know. If you can figure out what \\(F\\) is, then you can evaluate the integral.\nExample: Consider \\[\n\\int_1^2\\frac{1}{x^2}\\,\\text{d}x.\n\\] What function, when you take its derivative, gives you \\(1/x^2=x^{-2}\\)? To answer that, you’re essentially undoing the power rule. After a while, you realize \\[\n\\frac{\\text{d}}{\\text{d}x}\\left(-\\frac{1}{x}\\right)=\\frac{1}{x^2},\n\\] and so\n\\[\n\\int_1^2\\frac{1}{x^2}\\,\\text{d}x=\\left[-\\frac{1}{x}\\right]_1^2=-\\frac{1}{2}-\\left(-\\frac{1}{1}\\right)=\\frac{1}{2}.\n\\]",
+    "crumbs": [
+      "Math Review",
+      "Integration"
+    ]
+  },
+  {
+    "objectID": "math/integration.html#integration-by-substitution",
+    "href": "math/integration.html#integration-by-substitution",
+    "title": "Integration",
+    "section": "Integration by substitution",
+    "text": "Integration by substitution\nWhen you perform a \\(u\\)-substitution, you’re basically trying to undo the chain rule. The goal is to rewrite the integral in a nicer form so that you can recognize what the appropriate antiderivative is and then apply the FTOC.",
+    "crumbs": [
+      "Math Review",
+      "Integration"
+    ]
+  },
+  {
+    "objectID": "math/integration.html#integration-by-parts",
+    "href": "math/integration.html#integration-by-parts",
+    "title": "Integration",
+    "section": "Integration by parts",
+    "text": "Integration by parts\nLet’s face it; this sucks. But sometimes there’s no way around it.",
+    "crumbs": [
+      "Math Review",
+      "Integration"
+    ]
+  },
+  {
+    "objectID": "math/integration.html#improper-integration",
+    "href": "math/integration.html#improper-integration",
+    "title": "Integration",
+    "section": "Improper integration",
+    "text": "Improper integration",
+    "crumbs": [
+      "Math Review",
+      "Integration"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_overview.html",
+    "href": "syllabus/syllabus_overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "In probability, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon typically behave. In statistics, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. We will spend twelve weeks on the first, and then three weeks on the second.\nPrerequisites: single-variable calculus.",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_overview.html#description",
+    "href": "syllabus/syllabus_overview.html#description",
+    "title": "Course overview",
+    "section": "",
+    "text": "In probability, we describe the distribution of a random phenomenon and then study how the realizations of that phenomenon typically behave. In statistics, we do the reverse; we start with the realizations of a random phenomenon, and then try to figure out what distribution generated them. We will spend twelve weeks on the first, and then three weeks on the second.\nPrerequisites: single-variable calculus.",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_overview.html#meetings",
+    "href": "syllabus/syllabus_overview.html#meetings",
+    "title": "Course overview",
+    "section": "Meetings",
+    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nOld Chem 116\nMoWe 3:05 PM - 4:20 PM\nJohn\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nTh 1:25 PM - 2:40 PM\n????\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nTh 3:05 PM - 4:20 PM\n????",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_resources.html",
+    "href": "syllabus/syllabus_resources.html",
+    "title": "University resources",
+    "section": "",
+    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_resources.html#course-costs",
+    "href": "syllabus/syllabus_resources.html#course-costs",
+    "title": "University resources",
+    "section": "",
+    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_resources.html#tech-support",
+    "href": "syllabus/syllabus_resources.html#tech-support",
+    "title": "University resources",
+    "section": "Tech support",
+    "text": "Tech support\nContact the Duke OIT Service Desk at oit.duke.edu/help.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_resources.html#academic-support",
+    "href": "syllabus/syllabus_resources.html#academic-support",
+    "title": "University resources",
+    "section": "Academic support",
+    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact ARC@duke.edu, 919-684-5917.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_resources.html#accessibility",
+    "href": "syllabus/syllabus_resources.html#accessibility",
+    "title": "University resources",
+    "section": "Accessibility",
+    "text": "Accessibility\nIf any portion of the course is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nThe Student Disability Access Office (SDAO) is available to ensure that students can engage with their courses and related assignments. Students should contact the SDAO to request or update accommodations under these circumstances.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_resources.html#mental-health-and-well-being",
+    "href": "syllabus/syllabus_resources.html#mental-health-and-well-being",
+    "title": "University resources",
+    "section": "Mental health and well-being",
+    "text": "Mental health and well-being\nDuke is committed to holistic student well-being, including mental, emotional, and physical health. The university offers resources to help students manage daily stress, encourage intentional self-care, and access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities and your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of well-being, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can reach the DukeReach team at dukereach@duke.edu.\nCounseling and Psychological Services (CAPS): CAPS services include individual and group counseling services, psychiatric services, and workshops. CAPS also provides referrals to off-campus resources for specialized care. You can reach CAPS at (919) 660-1000.\nTimelyCare: TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling.\nBC Fellows for Healthy Relationship: The BC Fellows meet with students individually and in groups, supporting the development of healthy relationships and building meaningful community in all areas of a student’s life.\nDukeLine: Students who want to connect anonymously with a Peer Coach can text 984-230-4888 from 5 to 11 p.m. daily. DukeLine offers in-the-moment anonymous, non-emergency text support from a peer.\nDuWell: DuWell provides Moments of Mindfulness (stress management and resilience building) and meditation programming (Koru workshop) to assist students in developing a daily emotional well-being practice. All are welcome, and no experience is necessary. You can reach DuWell at (919) 681-8421.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_assignments.html",
+    "href": "syllabus/syllabus_assignments.html",
+    "title": "Assignments and grading",
+    "section": "",
+    "text": "Your final course grade will be calculated as follows:\nYour final letter grade will be determined based on the usual thresholds:",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_assignments.html#labs-10",
+    "href": "syllabus/syllabus_assignments.html#labs-10",
+    "title": "Assignments and grading",
+    "section": "Labs (10%)",
+    "text": "Labs (10%)\nIn lab every Thursday, you will complete a guided activity that introduces you to special topics, extensions, or applications of the latest course material. Along the way, we will teach you how to implement some of the ideas from the course in the R programming language. Ideally you should be able to finish the activity by the end of your lab period, but in any case, you must submit your lab work by 11:59 ET PM that same day.\nEach lab assignment will be graded on the following scale:\n\n1.0: a complete, good faith attempt at every part of every problem;\n0.5: partially complete;\n0.0: no submission, or mostly incomplete.\n\n\n\n\n\n\n\nGrace\n\n\n\nYour two lowest lab scores will be dropped at the end of the semester.",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_assignments.html#problem-sets-30",
+    "href": "syllabus/syllabus_assignments.html#problem-sets-30",
+    "title": "Assignments and grading",
+    "section": "Problem Sets (30%)",
+    "text": "Problem Sets (30%)\nMathematics is like everything else in life; if you practice, you improve. As such, the problem sets are really the heart of the course. They will mostly consist of pencil-and-paper math problems, but sometimes you will be asked to do some coding. You may compose you solutions however you like (scan or photograph written work, LaTeX, Quarto, handwriting capture on a tablet, whatever) so long as you ultimately upload a single .pdf file to Gradescope.\n\n\n\n\n\n\nGrace\n\n\n\nYour lowest problem set score will be dropped at the end of the semester.",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_assignments.html#exams-20-each",
+    "href": "syllabus/syllabus_assignments.html#exams-20-each",
+    "title": "Assignments and grading",
+    "section": "Exams (20% each)",
+    "text": "Exams (20% each)\nThere will be three exams. The dates, times, and locations are firm, so mark your calendar now:\n\nMidterm 1: Thursday October 9 during your lab;\nMidterm 2: Thursday November 13 during your lab;\nFinal: Friday December 12 from 9 AM - 12 PM in Physics 130.\n\nThese will be old school, pencil-and-paper, in-class exams. The only resources you are allowed are a simple four-function calculator (which you won’t actually need) and a note sheet that you and only you have prepared (both sides of a standard 8.5” x 11” piece of paper).\n\n\n\n\n\n\nGrace\n\n\n\nIf you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.\n\n\n\n\n\n\n\n\nNo make-up exams\n\n\n\nIf you are absent from one of the midterms for whatever reason, there will not be a make-up. Pursuant to the above policy, we will simply replace the missed midterm score with the final exam score. If you miss the final exam, you get a zero unless you have a Dean’s Excuse.",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
     ]
   },
   {
