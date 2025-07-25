@@ -51,7 +51,7 @@ If you take the derivative of $f$, you get the **first derivative** $f'$. If you
 Here is an illustration with the function $f(x)=x^3-x$ and its derivatives $f'(x)=3x^2-1$ and $f''(x)=6x$ (power rule!):
 
 ```{r}
-#| label: log
+#| label: fig-derivatives
 #| echo: false
 #| fig-align: center
 #| fig-asp: 1
@@ -91,14 +91,41 @@ points(0, 0, pch = 19, col = "red", cex = 2)
 
 When the first derivative changes sign (at $x=\pm1/\sqrt{3}$), that corresponds to the original function switching from increasing to decreasing, or vice versa. When the second derivative changes sign (at $x=0$), that corresponds to the original function switching from concave down (frowning) to concave up (smiling). 
 
-A point like $x=0$ in this example where the second derivative changes sign and the concavity changes is called an **inflection point**. "Second derivative changes sign" is the same thing as saying the graph of $f''$ crosses the $x$-axis, so an inflection point $x_0$ occurs where the second derivative has roots: $f''(x_0)=0$. 
+A point like $x=0$ in this example where the concavity changes is called an **inflection point**. If $x_0$ is an inflection point, then that means it's also a root of the second derivative: $f''(x_0)=0$. In order for the second derivative to change sign, it has to cross the $x$-axis. 
 
 ## Optimization
 
+When we study the topic of maximum likelihood estimation (MLE), we will have to do some optimization. That is, given an **objective function** $f$, we seek to find the $x$-values at which $f$ has a maximum:
+
+$$
+\underset{x\in\mathbb{R}}{\arg\max}\,f(x).
+$$
+
+Notice that I did not write $\max f(x)$. In this class, it turns out that we will seldom care about the actual largest value that the function obtains. Instead, we care only for *where* that value occurs. So we are interested in the *location* of the maximum. We are interested in the $x$-value *that does* the maximizing. Hence, argmax and not max. Here's an illustration:
+
+```{r}
+par(mar = c(2, 6, 1, 0))
+curve(-(x-3)^2 + 5, from = 0, to = 6, ylim = c(-4, 6),
+      xaxt = "n", yaxt = "n", bty = "n", ylab = "",
+      col = "red", lwd = 3)
+axis(1, pos = 0)
+axis(2, pos = 0)
+mtext("max f(x)", side = 2, at = 5, las = 1, line = 1, col = "blue")
+mtext("argmax f(x)", side = 1, at = 3, col = "blue")
+segments(3, -4, 3, 5, lty = 2, col = "pink", lwd = 2)
+segments(0, 5, 3, 5, lty = 2, col = "pink", lwd = 2)
+
+```
+
+Inspecting this picture, we notice that the maximum corresponds to a point where the derivative (slope of the tangent line) is zero. So to optimize $f$, we can compute its first derivative, set it equal to 0, and solve.
+
+A point like blah in this example is called a **critical point**. A critical point *may* be the location of an optimum, but you have to check. If you recall the example in @fig-derivatives, there are two critical points $x^\star = \pm 1/sqrt{3}$, but they correspond to different things: one is a minimum and one is a maximum. In order to classify the critical points as maximizers or minimizers, you perform the **second derivative test**: 
+
+- 
+- 
+- 
 
 
-max versus argmax 
 
-critical points
 
-check the second derivative
+
