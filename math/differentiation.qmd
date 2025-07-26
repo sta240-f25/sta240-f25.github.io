@@ -10,12 +10,14 @@ The **derivative** of a function $f(x)$ is its instantaneous rate of change. On 
 When it exists, **which it doesn't always**, the derivative is defined as the limit of difference quotients:
 
 $$
-f'(x)=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}
+f'(x)=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}.
 $$
 
 So, "rise over run" as the "run" bit gets arbitrarily small.
 
 ![](images/tangent.gif){fig-align="center"}
+
+As such, the derivative is the continuous analog to a discrete difference.
 
 ## Derivative rules 
 
@@ -62,7 +64,20 @@ curve(x^3 - x, from = -2, to = 2,
       xaxt = "n", xaxs = "i", col = "red", 
       yaxt = "n", yaxs = "i",
       lwd = 2, xlim = c(-1.5, 1.5), ylim = c(-1, 1),
-      ylab = "original function")
+      ylab = "original function", 
+      panel.first = c(polygon(x = c(-10, 0, 0, -10),
+                            y = c(-100, -100, 100, 100),
+                            col = rgb(1, 0.5, 0, 0.1),
+                            border = NA),
+                      polygon(x = c(10, 0, 0, 10),
+                            y = c(-100, -100, 100, 100),
+                            col = rgb(0, 0, 1, 0.1),
+                            border = NA))
+      )
+legend("topleft", "concave down", text.col = "orange", 
+       bty = "n", bg = "transparent", cex = 1.5)
+legend("bottomright", "concave up", text.col = "blue", 
+       bty = "n", bg = "transparent", cex = 1.5)
 box(lwd = 3)
 abline(v = c(0, -1/sqrt(3), 1/sqrt(3)), lty = c(1, 2, 2))
 axis(1, pos = 0, at = ticks, labels = labs)
@@ -77,12 +92,19 @@ axis(1, pos = 0, at = ticks, labels = labs)
 points(c(-1/sqrt(3), 1/sqrt(3)), c(0, 0), pch = 19, cex = 2, col = "red")
 box(lwd = 3)
 abline(v = 0)
-
 curve(6*x, from = -2, to = 2, 
       xaxt = "n", xaxs = "i", col = "red", 
       yaxt = "n", yaxs = "i",
       lwd = 2, , xlim = c(-1.5, 1.5),
-      ylab = "second derivative")
+      ylab = "second derivative",
+            panel.first = c(polygon(x = c(-10, 0, 0, -10),
+                            y = c(-100, -100, 100, 100),
+                            col = rgb(1, 0.5, 0, 0.1),
+                            border = NA),
+                      polygon(x = c(10, 0, 0, 10),
+                            y = c(-100, -100, 100, 100),
+                            col = rgb(0, 0, 1, 0.1),
+                            border = NA)))
 box(lwd = 3)
 abline(v = 0)
 axis(1, pos = 0, at = ticks, labels = labs)
@@ -104,17 +126,17 @@ $$
 Notice that I did not write $\max f(x)$. In this class, it turns out that we will seldom care about the actual largest value that the function obtains. Instead, we care only for *where* that value occurs. So we are interested in the *location* of the maximum. We are interested in the $x$-value *that does* the maximizing. Hence, argmax and not max. Here's an illustration:
 
 ```{r}
+#| echo: false
 par(mar = c(2, 6, 1, 0))
 curve(-(x-3)^2 + 5, from = 0, to = 6, ylim = c(-4, 6),
       xaxt = "n", yaxt = "n", bty = "n", ylab = "",
-      col = "red", lwd = 3)
+      col = "red", lwd = 3,
+      panel.first = c(segments(3, -4, 3, 5, lty = 2, col = "pink", lwd = 2),
+                      segments(0, 5, 3, 5, lty = 2, col = "pink", lwd = 2)))
 axis(1, pos = 0)
 axis(2, pos = 0)
 mtext("max f(x)", side = 2, at = 5, las = 1, line = 1, col = "blue")
 mtext("argmax f(x)", side = 1, at = 3, col = "blue")
-segments(3, -4, 3, 5, lty = 2, col = "pink", lwd = 2)
-segments(0, 5, 3, 5, lty = 2, col = "pink", lwd = 2)
-
 ```
 
 Inspecting this picture, we notice that the maximum corresponds to a point where the derivative (slope of the tangent line) is zero. So to optimize $f$, we can compute its first derivative, set it equal to 0, and solve.
