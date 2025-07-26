@@ -1,6 +1,8 @@
 ---
 title: "Lab 3"
 subtitle: Due Thursday September 18 at 11:59 PM
+editor: 
+  mode: source
 ---
 
 *Car Talk* (1977 - 2012) was a popular show on NPR. It featured a segment called the "Puzzler," where the hosts would read a brain teaser and invite listeners to send in solutions for the chance to win a prize. Here is the text of one such Puzzler (original audio at around 19:19 [here](https://www.npr.org/2015/07/11/422108689/-1528-forget-the-car-find-a-convent)):
