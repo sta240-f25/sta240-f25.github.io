@@ -125,7 +125,9 @@ A point like blah in this example is called a **critical point**. A critical poi
 - 
 - 
 
-
+::: callout-tip
+## Example
+:::
 
 
 
