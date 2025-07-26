@@ -15,7 +15,7 @@ $$
 \int_a^bf(x)\,\text{d}x=F(b)-F(a),\quad f(x)=F'(x).
 $$
 
-On a practical level, it provides a route for evaluating definite integrals by **antidifferentiation**. The function you are trying to integrate (called the **integrand**) is $f$. You imagine $f$ is the derivative of some function $F$ which you don't yet know. If you can figure out what $F$ is, then you can evaluate the integral. 
+On a practical level, it provides a route for evaluating definite integrals by **antidifferentiation**. The function you are trying to integrate (called the **integrand**) is $f$. You imagine $f$ is the derivative of some function $F$ which you don't yet know. If you can "undo" the differentiation and figure out what $F$ is, then you can evaluate the integral. 
 
 ::: callout-tip
 ## Example: antidifferentiation
@@ -40,8 +40,17 @@ $$
 
 When you perform a **$u$-substitution**, you're basically trying to undo the chain rule. The goal is to rewrite the integral in a nicer form so that you can recognize what the appropriate antiderivative is and then apply the FTOC. 
 
+::: callout-tip 
+## Example: $u$-sub
+:::
+
 ## Integration by parts
 
 Let's face it; this sucks. But sometimes there's no way around it. 
 
-## Improper integration
+::: callout-tip 
+## Example: IBP
+:::
+
+## Improper integration (we will do this a lot!)
+
