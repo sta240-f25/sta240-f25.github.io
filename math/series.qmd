@@ -7,24 +7,23 @@ $$
 \sum\limits_{n=0}^\infty a_n=a_0+a_1+a_2+a_3+\cdots
 $$
 
-
+Oy
 
 $$
 \frac{a}{1-r}=\sum\limits_{i=0}^\infty ar^i,\quad |r|<1.
 $$
 
-
+Oy
 
 $$
 \begin{aligned}
 \sum\limits_{n=1}^\infty\frac{1}{n}&=\infty &&\text{(harmonic series)}\\
-
 \sum\limits_{n=1}^\infty\frac{1}{n^2}&=\frac{\pi^2}{6}\\
 \sum\limits_{n=1}^\infty\frac{1}{n^3}&\approx 1.202057\\
 \end{aligned}
 $$
 
-
+Oy
 
 $$
 f(x)
@@ -32,7 +31,7 @@ f(x)
 \sum\limits_{n=0}^\infty \frac{f^{(n)}(0)}{n!}x^n.
 $$
 
-
+Oy
 
 $$
 \begin{aligned}
