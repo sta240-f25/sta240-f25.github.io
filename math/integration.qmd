@@ -7,6 +7,19 @@ editor:
 
 Crudely, the **definite integral** of a function gives you the (signed) area between the graph of the function and the $x$-axis. 
 
+![](images/integral.png){fig-align="center" width="40%"}
+
+
+When it exists, which it doesn't always, the definite integral can be defined as the limit of Riemann sums:
+
+$$
+\int_a^b f(x)\,\text{d}x=\lim_{\Delta x\to 0}\sum\limits_{i=1}^n f(x_i^*)\Delta x.
+$$
+
+Just as the [derivative](https://sta240-f25.github.io/math/differentiation.html) is the continuous analog to a discrete difference, the integral is the continuous analog to a discrete sum. 
+
+![](images/riemann.gif){fig-align="center"}
+
 ## The fundamental theorem of calculus
 
 The **fundamental theorem of calculus** is a bridge between the seemingly unrelated worlds of derivatives and integrals:
