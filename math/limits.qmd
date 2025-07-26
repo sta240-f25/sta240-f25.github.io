@@ -6,3 +6,14 @@ editor:
 ---
 
 limits, continuity, left versus right, l'hopital
+
+$$
+\lim_{x\to c}f(x)=f(c)
+$$
+
+![](images/continuity-types.png){fig-align="center" width="60%"}
+
+
+$$
+\lim_{x\to c}\frac{f(x)}{g(x)}=\lim_{x\to c}\frac{f'(x)}{g'(x)}
+$$
