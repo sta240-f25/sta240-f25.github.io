@@ -191,27 +191,7 @@ What method does ChatGPT use to generate the next word in one of its responses?
 
 [Let's ask!](https://chatgpt.com)
 
-## Example: portfolio selection
-
-::: callout-important
-## Problem
-
-How do you optimally allocate your savings to different assets (stocks vs bonds, Apple stock vs Microsoft, etc)?
-:::
-
-::: callout-note
-## Objective
-
-You want to make the most stable and lucrative choice possible, subject to uncertainty about how the competing assets will ultimately perform.
-:::
-
-::: callout-tip
-## Thoroughly Modern Markowitz
-
-The mathematics of this won a Nobel Prize in Economic Sciences in 1990, but it's "just" the creative application of basic probability.
-:::
-
-## Example: the mathematics of insurance
+## Example: the mathematics of insurance (upgrade!)
 
 When an insurance company sells you a policy, they are making a bet that you won't need it -- that you'll pay them but they won't ultimately pay you. They make thousands of such bets, and if everyone makes a claim, the company is ruined. How do they navigate this uncertainty?
 
@@ -223,11 +203,7 @@ When an insurance company sells you a policy, they are making a bet that you won
 Every insurance company employs armies of *actuaries*, certified professionals with a deep understanding of probability and statistics, to help them make decisions about profit, loss, and risk of ruin.
 :::
 
-## Example: mathematical biology
-
-The metastasis of cancer cells is frequently modeled using something called a *branching process*, a kind of random evolution process that builds on the fundamentals of our course:
-
-![](images/branching.png){fig-align="center"}
+## Contested elections
 
 ## Reason 2: It's useful {.large}
 
