@@ -261,9 +261,10 @@ Pure mathematics is, in its way, the poetry of logical ideas.
 
 ![](images/galton.gif){fig-align="center"}
 
-## XXX
+## We're building a cathedral! {.scrollable}
 
-Cathedral!
+From the simplest building blocks, we will erect an impressive edifice of thought.
+
 
 ## Reason 3: It's beautiful {.large}
 
