@@ -11,7 +11,7 @@ This is ostensibly calculus review, but each problem is a piece of probability i
 
 ## Problem 0
 
-Recommend some music for us to listen to while we grade this.
+{{< include bank/_music-rec.qmd >}}
 
 ## Problem 1
 
@@ -43,4 +43,4 @@ Recommend some music for us to listen to while we grade this.
 
 ## Submission
 
-You are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.
+{{< include bank/_submission.qmd >}}
