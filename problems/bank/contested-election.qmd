@@ -1,14 +1,12 @@
-Not all election disputes are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate mounts a legal challenge, a court must make a decision: certify the original results? adjust the results somehow? order a new election? The concern of course is that the presence of the bad ballots swung the outcome, but how likely is this? Let's model it. 
+Not all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the results somehow, possibly reversing the election? order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let's model it.
 
-a. derive hypergeom pmf 
-b. what's the event 
-c. compute it for these numbers. 
-d. generalize
-e. plot 
-f. add table to plot 
-g. vague discussion
-
-
+a.  derive hypergeom pmf
+b.  what's the event
+c.  compute it for these numbers.
+d.  generalize
+e.  plot
+f.  add table to plot
+g.  vague discussion
 
 ```{r}
 #| echo: false
