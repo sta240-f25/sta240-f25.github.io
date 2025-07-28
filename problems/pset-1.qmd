@@ -10,9 +10,13 @@ editor:
 This assignment is not finalized. 
 :::
 
+## Before you start
+
+On this problem set you are asked to prove some new probability rules using a small set of raw materials: set theory, the axioms, and the basic rules we saw in lecture. The purpose of these problems is to demonstrate that you understand every step in the reasoning, even if it seems trivial and obvious. So, don't leave anything out! Every step of the argument should be explicit, and you should clearly indicate which axioms/results you are invoking when you move from point A to point B. [After you've paid your dues](https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/), we'll give you some latitude to hand wave and yada-yada your way through certain basic arguments. But not yet. 
+
 ## Problem 0
 
-Recommend some music for us to listen to while we grade this.
+{{< include bank/_music-rec.qmd >}}
 
 ## Problem X
 
@@ -38,7 +42,6 @@ Recommend some music for us to listen to while we grade this.
 
 {{< include bank/ross-balls.qmd >}}
 
-
 ## Submission
 
-You are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.
+{{< include bank/_submission.qmd >}}
