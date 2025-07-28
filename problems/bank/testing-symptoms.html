@@ -333,11 +333,12 @@ window.Quarto = {
 
 
 
-<p>We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status <span class="math inline">\(D\)</span> and their test result <span class="math inline">\(T\)</span>. In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms <span class="math inline">\(S\)</span>. <a href="#tbl-disease" class="quarto-xref">Table&nbsp;1</a> enumerates all of the possible states of the world together with their individual probabilities.</p>
+<p>We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status <span class="math inline">\(D\)</span> and their test result <span class="math inline">\(T\)</span>. In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms <span class="math inline">\(S\)</span>.</p>
+<p><a href="#tbl-disease" class="quarto-xref">Table&nbsp;1</a> enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients’ “true” disease status was determined by a PCR test that we assume is hella accurate.</p>
 <div id="tbl-disease" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[25, 25, 25, 25]">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-disease-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-disease-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Some COVID-19 numbers. Source: <a href="https://www.cdc.gov/mmwr/volumes/69/wr/mm695152a3.htm">CDC</a>
 </figcaption>
 <div aria-describedby="tbl-disease-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -360,49 +361,49 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td>0.32</td>
+<td>0.7650</td>
 </tr>
 <tr class="even">
 <td>-</td>
 <td>-</td>
 <td>+</td>
-<td>0.24</td>
+<td>0.0128</td>
 </tr>
 <tr class="odd">
 <td>-</td>
 <td>+</td>
 <td>-</td>
-<td>0.16</td>
+<td>0.1685</td>
 </tr>
 <tr class="even">
 <td>-</td>
 <td>+</td>
 <td>+</td>
-<td>0.08</td>
+<td>0.0018</td>
 </tr>
 <tr class="odd">
 <td>+</td>
 <td>-</td>
 <td>-</td>
-<td>0.02</td>
+<td>0.0091</td>
 </tr>
 <tr class="even">
 <td>+</td>
 <td>-</td>
 <td>+</td>
-<td>0.04</td>
+<td>0.0064</td>
 </tr>
 <tr class="odd">
 <td>+</td>
 <td>+</td>
 <td>-</td>
-<td>0.06</td>
+<td>0.0073</td>
 </tr>
 <tr class="even">
 <td>+</td>
 <td>+</td>
 <td>+</td>
-<td>0.08</td>
+<td>0.0291</td>
 </tr>
 </tbody>
 </table>
@@ -410,9 +411,11 @@ Table&nbsp;1
 </figure>
 </div>
 <ol type="a">
-<li><p>What is the overall prevalence of this disease?</p></li>
+<li><p>What is the overall disease prevalence?</p></li>
 <li><p>What is the sensitivity of the test?</p></li>
-<li><p>Imagine you develop symptoms. So you visit Dr.&nbsp;Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you truly have the disease?</p></li>
+<li><p>What is the specificity of the test?</p></li>
+<li><p>Imagine you develop symptoms. So you visit <a href="https://youtu.be/Bg36PU96U0w?si=3rmlqIYRpsXbAH1L">Dr.&nbsp;Vinnie Boombatz</a> to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?</p></li>
+<li><p>What is the overall probability that the test is wrong?</p></li>
 </ol>
 
 

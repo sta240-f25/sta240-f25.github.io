@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ht-receipt – STA 240 Fall 2025</title>
+<title>calc-gamma – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,10 +66,38 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
-<meta property="og:image" content="https://sta240-f25.github.io/problems/bank/images/ht-receipt.png">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
 
@@ -305,17 +333,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>A few months ago I went to Harris Teeter to get some junk food, and when I looked at my receipt, I saw this:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/ht-receipt.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
-</div>
-<p>I thought, “Strange. What are the odds the total would be a whole number?” Well, let’s find out!</p>
-<ol type="a">
-<li>Imagine you randomly purchase two items that each cost less than $10, and assume all prices are equally likely. The prices of the two items are quoted to two decimal places. What is the probability that the two prices add up to a whole number total?</li>
-<li>Now let’s add a wrinkle. Imagine sales tax is 5%. This is calculated, <em>rounded up</em> to the nearest cent, and then added to your bill. What is the probability that the cost of the two items plus the rounded sales tax adds up to a whole number?</li>
-</ol>
+<p>Here is another inordinately silly function:</p>
+<p><span class="math display">\[
+\Gamma(x)=\int_0^\infty y^{x-1}e^{-y}\,\textrm{d} y,\quad x&gt;0.
+\]</span></p>
+<p>Prove that <span class="math inline">\(\Gamma(x+1)=x\Gamma(x)\)</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -328,7 +350,7 @@ Hint
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The correct answer to part b is 0.010096, but getting there is pretty tricky. Give it a shot!</p>
+<p>Start on the left-hand side by writing out <span class="math inline">\(\Gamma(x+1)\)</span> and evaluating the integral <em>by parts</em>.</p>
 </div>
 </div>
 </div>

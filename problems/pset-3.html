@@ -337,6 +337,7 @@ window.Quarto = {
   <li><a href="#problem-x-1" id="toc-problem-x-1" class="nav-link" data-scroll-target="#problem-x-1">Problem X</a></li>
   <li><a href="#problem-x-2" id="toc-problem-x-2" class="nav-link" data-scroll-target="#problem-x-2">Problem X</a></li>
   <li><a href="#problem-x-3" id="toc-problem-x-3" class="nav-link" data-scroll-target="#problem-x-3">Problem X</a></li>
+  <li><a href="#problem-x-4" id="toc-problem-x-4" class="nav-link" data-scroll-target="#problem-x-4">Problem X</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul>
 </nav>
@@ -383,11 +384,21 @@ Under construction!
 </section>
 <section id="problem-x" class="level2">
 <h2 class="anchored" data-anchor-id="problem-x">Problem X</h2>
-<p>We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status <span class="math inline">\(D\)</span> and their test result <span class="math inline">\(T\)</span>. In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms <span class="math inline">\(S\)</span>. <a href="#tbl-disease" class="quarto-xref">Table&nbsp;1</a> enumerates all of the possible states of the world together with their individual probabilities.</p>
+<p>Let <span class="math inline">\(S\)</span> be a sample space with probability measure <span class="math inline">\(P\)</span>, and let <span class="math inline">\(B\subseteq S\)</span> be some event with <span class="math inline">\(P(B)&gt;0\)</span>. Show that the function <span class="math inline">\(G(A)=P(A\,|\, B)\)</span> is a <em>new</em> probability measure on <span class="math inline">\(S\)</span>. That is, show that <span class="math inline">\(G\)</span> satisfies the axioms:</p>
+<ol type="a">
+<li>total measure 1;</li>
+<li>nonnegativity;</li>
+<li>countable additivity.</li>
+</ol>
+</section>
+<section id="problem-x-1" class="level2">
+<h2 class="anchored" data-anchor-id="problem-x-1">Problem X</h2>
+<p>We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status <span class="math inline">\(D\)</span> and their test result <span class="math inline">\(T\)</span>. In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms <span class="math inline">\(S\)</span>.</p>
+<p><a href="#tbl-disease" class="quarto-xref">Table&nbsp;1</a> enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients’ “true” disease status was determined by a PCR test that we assume is hella accurate.</p>
 <div id="tbl-disease" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[25, 25, 25, 25]">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-disease-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-disease-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Some COVID-19 numbers. Source: <a href="https://www.cdc.gov/mmwr/volumes/69/wr/mm695152a3.htm">CDC</a>
 </figcaption>
 <div aria-describedby="tbl-disease-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -410,49 +421,49 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td>0.32</td>
+<td>0.7650</td>
 </tr>
 <tr class="even">
 <td>-</td>
 <td>-</td>
 <td>+</td>
-<td>0.24</td>
+<td>0.0128</td>
 </tr>
 <tr class="odd">
 <td>-</td>
 <td>+</td>
 <td>-</td>
-<td>0.16</td>
+<td>0.1685</td>
 </tr>
 <tr class="even">
 <td>-</td>
 <td>+</td>
 <td>+</td>
-<td>0.08</td>
+<td>0.0018</td>
 </tr>
 <tr class="odd">
 <td>+</td>
 <td>-</td>
 <td>-</td>
-<td>0.02</td>
+<td>0.0091</td>
 </tr>
 <tr class="even">
 <td>+</td>
 <td>-</td>
 <td>+</td>
-<td>0.04</td>
+<td>0.0064</td>
 </tr>
 <tr class="odd">
 <td>+</td>
 <td>+</td>
 <td>-</td>
-<td>0.06</td>
+<td>0.0073</td>
 </tr>
 <tr class="even">
 <td>+</td>
 <td>+</td>
 <td>+</td>
-<td>0.08</td>
+<td>0.0291</td>
 </tr>
 </tbody>
 </table>
@@ -460,13 +471,15 @@ Table&nbsp;1
 </figure>
 </div>
 <ol type="a">
-<li><p>What is the overall prevalence of this disease?</p></li>
+<li><p>What is the overall disease prevalence?</p></li>
 <li><p>What is the sensitivity of the test?</p></li>
-<li><p>Imagine you develop symptoms. So you visit Dr.&nbsp;Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you truly have the disease?</p></li>
+<li><p>What is the specificity of the test?</p></li>
+<li><p>Imagine you develop symptoms. So you visit <a href="https://youtu.be/Bg36PU96U0w?si=3rmlqIYRpsXbAH1L">Dr.&nbsp;Vinnie Boombatz</a> to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?</p></li>
+<li><p>What is the overall probability that the test is wrong?</p></li>
 </ol>
 </section>
-<section id="problem-x-1" class="level2">
-<h2 class="anchored" data-anchor-id="problem-x-1">Problem X</h2>
+<section id="problem-x-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-x-2">Problem X</h2>
 <p>An encryption algorithm generates a seed value <span class="math inline">\(z\)</span> in the following way:</p>
 <ul>
 <li><p>A binary operator is chosen at random from <span class="math inline">\(\{+,\,\cdot\}\)</span>;</p></li>
@@ -477,8 +490,8 @@ Table&nbsp;1
 <li>You notice that the algorithm generates an even <span class="math inline">\(z\)</span> value. Given this, what is the probability that the <span class="math inline">\(+\)</span> operator was used to generate it?</li>
 </ol>
 </section>
-<section id="problem-x-2" class="level2">
-<h2 class="anchored" data-anchor-id="problem-x-2">Problem X</h2>
+<section id="problem-x-3" class="level2">
+<h2 class="anchored" data-anchor-id="problem-x-3">Problem X</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/circuit.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
@@ -486,8 +499,8 @@ Table&nbsp;1
 </div>
 <p>The figure above displays a circuit. Switch <span class="math inline">\(S_i\)</span> closes with probability <span class="math inline">\(p_i\)</span>, and the switches close independently of one another. What is the probability that electricity can flow from <span class="math inline">\(A\)</span> to <span class="math inline">\(G\)</span>?</p>
 </section>
-<section id="problem-x-3" class="level2">
-<h2 class="anchored" data-anchor-id="problem-x-3">Problem X</h2>
+<section id="problem-x-4" class="level2">
+<h2 class="anchored" data-anchor-id="problem-x-4">Problem X</h2>
 <p>Two balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let <span class="math inline">\(X\)</span> denote our winnings.</p>
 <ol type="a">
 <li><p>Make a table with the possible values of <span class="math inline">\(X\)</span> and the probabilities of each value.</p></li>

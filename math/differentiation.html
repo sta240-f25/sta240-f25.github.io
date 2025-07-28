@@ -363,7 +363,7 @@ window.Quarto = {
 <p>The <strong>derivative</strong> of a function <span class="math inline">\(f(x)\)</span> is its instantaneous rate of change. On a graph, this corresponds to the slope of the tangent line. We will denote derivatives by <span class="math inline">\(f'(x)\)</span> or <span class="math inline">\(\text{d}f/\text{d}x\)</span> or something like that.</p>
 <p>When it exists, <strong>which it doesn’t always</strong>, the derivative is defined as the limit of difference quotients:</p>
 <p><span class="math display">\[
-f'(x)=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}
+f'(x)=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}.
 \]</span></p>
 <p>So, “rise over run” as the “run” bit gets arbitrarily small.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -371,6 +371,7 @@ f'(x)=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}
 <p><img src="images/tangent.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
+<p>As such, the derivative is the continuous analog to a discrete difference.</p>
 <section id="derivative-rules" class="level2">
 <h2 class="anchored" data-anchor-id="derivative-rules">Derivative rules</h2>
 <table class="caption-top table">
@@ -459,21 +460,57 @@ f'(x)=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}
 <p>Here is an illustration with the function <span class="math inline">\(f(x)=x^3-x\)</span> and its derivatives <span class="math inline">\(f'(x)=3x^2-1\)</span> and <span class="math inline">\(f''(x)=6x\)</span> (power rule!):</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="differentiation_files/figure-html/log-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<div id="fig-derivatives" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-derivatives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="differentiation_files/figure-html/fig-derivatives-1.png" id="fig-derivatives" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-derivatives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>When the first derivative changes sign (at <span class="math inline">\(x=\pm1/\sqrt{3}\)</span>), that corresponds to the original function switching from increasing to decreasing, or vice versa. When the second derivative changes sign (at <span class="math inline">\(x=0\)</span>), that corresponds to the original function switching from concave down (frowning) to concave up (smiling).</p>
-<p>A point like <span class="math inline">\(x=0\)</span> in this example where the second derivative changes sign and the concavity changes is called an <strong>inflection point</strong>. “Second derivative changes sign” is the same thing as saying the graph of <span class="math inline">\(f''\)</span> crosses the <span class="math inline">\(x\)</span>-axis, so an inflection point happens where the second derivative has roots: <span class="math inline">\(f''=0\)</span>.</p>
+<p>A point like <span class="math inline">\(x=0\)</span> in this example where the concavity changes is called an <strong>inflection point</strong>. If <span class="math inline">\(x_0\)</span> is an inflection point, then that means it’s also a root of the second derivative: <span class="math inline">\(f''(x_0)=0\)</span>. In order for the second derivative to change sign, it has to cross the <span class="math inline">\(x\)</span>-axis.</p>
 </section>
 <section id="optimization" class="level2">
 <h2 class="anchored" data-anchor-id="optimization">Optimization</h2>
-<p>max versus argmax</p>
-<p>critical points</p>
-<p>check the second derivative</p>
+<p>When we study the topic of maximum likelihood estimation (MLE), we will have to do some optimization. That is, given an <strong>objective function</strong> <span class="math inline">\(f\)</span>, we seek to find the <span class="math inline">\(x\)</span>-values at which <span class="math inline">\(f\)</span> has a maximum:</p>
+<p><span class="math display">\[
+\underset{x\in\mathbb{R}}{\arg\max}\,f(x).
+\]</span></p>
+<p>Notice that I did not write <span class="math inline">\(\max f(x)\)</span>. In this class, it turns out that we will seldom care about the actual largest value that the function obtains. Instead, we care only for <em>where</em> that value occurs. So we are interested in the <em>location</em> of the maximum. We are interested in the <span class="math inline">\(x\)</span>-value <em>that does</em> the maximizing. Hence, argmax and not max. Here’s an illustration:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="differentiation_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Inspecting this picture, we notice that the maximum corresponds to a point where the derivative (slope of the tangent line) is zero. So to optimize <span class="math inline">\(f\)</span>, we can compute its first derivative, set it equal to 0, and solve.</p>
+<p>A point like blah in this example is called a <strong>critical point</strong>. A critical point <em>may</em> be the location of an optimum, but you have to check. If you recall the example in <a href="#fig-derivatives" class="quarto-xref">Figure&nbsp;1</a>, there are two critical points <span class="math inline">\(x^\star = \pm 1/sqrt{3}\)</span>, but they correspond to different things: one is a minimum and one is a maximum. In order to classify the critical points as maximizers or minimizers, you perform the <strong>second derivative test</strong>:</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
 
 
 </section>

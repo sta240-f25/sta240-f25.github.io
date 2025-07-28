@@ -100,7 +100,10 @@ window.Quarto = {
 
 <meta property="og:title" content="Integration – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
+<meta property="og:image" content="https://sta240-f25.github.io/math/images/integral.png">
 <meta property="og:site_name" content="STA 240 Fall 2025">
+<meta property="og:image:height" content="1393">
+<meta property="og:image:width" content="1423">
 </head>
 
 <body class="nav-sidebar docked">
@@ -334,7 +337,7 @@ window.Quarto = {
   <li><a href="#the-fundamental-theorem-of-calculus" id="toc-the-fundamental-theorem-of-calculus" class="nav-link active" data-scroll-target="#the-fundamental-theorem-of-calculus">The fundamental theorem of calculus</a></li>
   <li><a href="#integration-by-substitution" id="toc-integration-by-substitution" class="nav-link" data-scroll-target="#integration-by-substitution">Integration by substitution</a></li>
   <li><a href="#integration-by-parts" id="toc-integration-by-parts" class="nav-link" data-scroll-target="#integration-by-parts">Integration by parts</a></li>
-  <li><a href="#improper-integration" id="toc-improper-integration" class="nav-link" data-scroll-target="#improper-integration">Improper integration</a></li>
+  <li><a href="#improper-integration-we-will-do-this-a-lot" id="toc-improper-integration-we-will-do-this-a-lot" class="nav-link" data-scroll-target="#improper-integration-we-will-do-this-a-lot">Improper integration (we will do this a lot!)</a></li>
   </ul>
 </nav>
     </div>
@@ -361,14 +364,39 @@ window.Quarto = {
 
 
 <p>Crudely, the <strong>definite integral</strong> of a function gives you the (signed) area between the graph of the function and the <span class="math inline">\(x\)</span>-axis.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/integral.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>When it exists, which it doesn’t always, the definite integral can be defined as the limit of Riemann sums:</p>
+<p><span class="math display">\[
+\int_a^b f(x)\,\text{d}x=\lim_{\Delta x\to 0}\sum\limits_{i=1}^n f(x_i^*)\Delta x.
+\]</span></p>
+<p>Just as the <a href="https://sta240-f25.github.io/math/differentiation.html">derivative</a> is the continuous analog to a discrete difference, the integral is the continuous analog to a discrete sum.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/riemann.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
 <section id="the-fundamental-theorem-of-calculus" class="level2">
 <h2 class="anchored" data-anchor-id="the-fundamental-theorem-of-calculus">The fundamental theorem of calculus</h2>
 <p>The <strong>fundamental theorem of calculus</strong> is a bridge between the seemingly unrelated worlds of derivatives and integrals:</p>
 <p><span class="math display">\[
 \int_a^bf(x)\,\text{d}x=F(b)-F(a),\quad f(x)=F'(x).
 \]</span></p>
-<p>On a practical level, it provides a route for evaluating definite integrals by <strong>antidifferentiation</strong>. The function you are trying to integrate (called the <strong>integrand</strong>) is <span class="math inline">\(f\)</span>. You imagine <span class="math inline">\(f\)</span> is the derivative of some function <span class="math inline">\(F\)</span> which you don’t yet know. If you can figure out what <span class="math inline">\(F\)</span> is, then you can evaluate the integral.</p>
-<p><strong>Example</strong>: Consider <span class="math display">\[
+<p>On a practical level, it provides a route for evaluating definite integrals by <strong>antidifferentiation</strong>. The function you are trying to integrate (called the <strong>integrand</strong>) is <span class="math inline">\(f\)</span>. You imagine <span class="math inline">\(f\)</span> is the derivative of some function <span class="math inline">\(F\)</span> which you don’t yet know. If you can “undo” the differentiation and figure out what <span class="math inline">\(F\)</span> is, then you can evaluate the integral.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example: antidifferentiation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider <span class="math display">\[
 \int_1^2\frac{1}{x^2}\,\text{d}x.
 \]</span> What function, when you take its derivative, gives you <span class="math inline">\(1/x^2=x^{-2}\)</span>? To answer that, you’re essentially <em>undoing</em> the <a href="https://sta240-f25.github.io/math/differentiation.html#derivative-rules">power rule</a>. After a while, you realize <span class="math display">\[
 \frac{\text{d}}{\text{d}x}\left(-\frac{1}{x}\right)=\frac{1}{x^2},
@@ -376,17 +404,45 @@ window.Quarto = {
 <p><span class="math display">\[
 \int_1^2\frac{1}{x^2}\,\text{d}x=\left[-\frac{1}{x}\right]_1^2=-\frac{1}{2}-\left(-\frac{1}{1}\right)=\frac{1}{2}.
 \]</span></p>
+</div>
+</div>
 </section>
 <section id="integration-by-substitution" class="level2">
 <h2 class="anchored" data-anchor-id="integration-by-substitution">Integration by substitution</h2>
 <p>When you perform a <strong><span class="math inline">\(u\)</span>-substitution</strong>, you’re basically trying to undo the chain rule. The goal is to rewrite the integral in a nicer form so that you can recognize what the appropriate antiderivative is and then apply the FTOC.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example: <span class="math inline">\(u\)</span>-sub
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
 </section>
 <section id="integration-by-parts" class="level2">
 <h2 class="anchored" data-anchor-id="integration-by-parts">Integration by parts</h2>
 <p>Let’s face it; this sucks. But sometimes there’s no way around it.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example: IBP
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
 </section>
-<section id="improper-integration" class="level2">
-<h2 class="anchored" data-anchor-id="improper-integration">Improper integration</h2>
+<section id="improper-integration-we-will-do-this-a-lot" class="level2">
+<h2 class="anchored" data-anchor-id="improper-integration-we-will-do-this-a-lot">Improper integration (we will do this a lot!)</h2>
 
 
 </section>

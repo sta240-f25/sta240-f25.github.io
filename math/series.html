@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>series – STA 240 Fall 2025</title>
+<title>Infinite series – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,8 +68,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="series – STA 240 Fall 2025">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Infinite series – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
@@ -305,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Review</a></li><li class="breadcrumb-item"><a href="../math/series.html">Sequences and series</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">series</h1>
+<h1 class="title">Infinite series</h1>
 </div>
 
 
@@ -322,7 +351,35 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>geometric taylor</p>
+<p><span class="math display">\[
+\sum\limits_{n=0}^\infty a_n=a_0+a_1+a_2+a_3+\cdots
+\]</span></p>
+<p>Oy</p>
+<p><span class="math display">\[
+\frac{a}{1-r}=\sum\limits_{i=0}^\infty ar^i,\quad |r|&lt;1.
+\]</span></p>
+<p>Oy</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum\limits_{n=1}^\infty\frac{1}{n}&amp;=\infty &amp;&amp;\text{(harmonic series)}\\
+\sum\limits_{n=1}^\infty\frac{1}{n^2}&amp;=\frac{\pi^2}{6}\\
+\sum\limits_{n=1}^\infty\frac{1}{n^3}&amp;\approx 1.202057\\
+\end{aligned}
+\]</span></p>
+<p>Oy</p>
+<p><span class="math display">\[
+f(x)
+=
+\sum\limits_{n=0}^\infty \frac{f^{(n)}(0)}{n!}x^n.
+\]</span></p>
+<p>Oy</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{1}{1-x}&amp;=\sum\limits_{n=0}^\infty x^n,&amp;&amp;-1&lt;x&lt;1\\
+e^x&amp;=\sum\limits_{n=0}^\infty\frac{x^n}{n!},&amp;&amp;-\infty &lt; x &lt; \infty\\
+\ln(1-x)&amp;=-\sum\limits_{n=0}^\infty\frac{x^n}{n},&amp;&amp;-1\leq x &lt; 1.
+\end{aligned}
+\]</span></p>
 
 
 
