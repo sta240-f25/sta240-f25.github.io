@@ -8,7 +8,7 @@ You are not required to purchase a textbook for this class. However, if you wish
 
 -   `[Ross]` *A First Course in Probability* by Sheldon Ross;
 -   `[HTZ]` *Probability and Statistical Inference* by Robert Hogg, Elliot Tanis, and Dale Zimmerman;
--   `[DS]` *Probability and Statistics* by Morris Degroot and Mark Schervish;
+-   `[DS]` *Probability and Statistics* by Morris DeGroot and Mark Schervish;
 -   `[Wass]` *All of Statistics* by Larry Wasserman.
 
 In the **PREPARE** column of the [course schedule](https://sta240-f25.github.io/), I will indicate which parts of a book correspond to the lectures.
