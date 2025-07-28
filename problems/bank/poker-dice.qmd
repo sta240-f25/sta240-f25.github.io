@@ -1,0 +1,5 @@
+Poker dice is played by simultaneously rolling five dice. The dice are fair, six-sided, and *distinct* (imagine that each one is a different color). Find the probabilities of the following dice rolls:
+
+a. five different numbers;
+b. three of a kind (three dice show the same number, while the other two dice are singles);
+c. full house (three dice show the same number, while the other two show a separate pair).
