@@ -1,0 +1,19 @@
+---
+title: "Hypergeometric distribution"
+format: html
+editor: 
+  mode: source
+---
+
+$$
+P(X = k) 
+= \frac{\binom{K}{k} \binom{N - K}{n-k}}{\binom{N}{n}}.
+$$
+
+```{r}
+#| eval: false
+dhyper(x, m, n, k)
+phyper(q, m, n, k)
+qhyper(p, m, n, k)
+rhyper(ndraw, m, n, k)
+```
