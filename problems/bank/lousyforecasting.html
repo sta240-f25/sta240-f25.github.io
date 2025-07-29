@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>contested-election – STA 240 Fall 2025</title>
+<title>lousyforecasting – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,35 +66,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <meta property="og:title" content="STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
@@ -333,122 +304,15 @@ window.Quarto = {
 
 
 
-<p>Not all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.</p>
-<p>Imagine an election where Aloysius receives <span class="math inline">\(a\)</span> votes, Bernadette receives <span class="math inline">\(b\)</span> votes, and Aloysius provisionally wins with a margin of victory <span class="math inline">\(a-b&gt;0\)</span>. However, of the total <span class="math inline">\(a+b\)</span> votes, we learn that <span class="math inline">\(k&gt;a-b\)</span> were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the <span class="math inline">\(k\)</span> invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.</p>
-<p>To model this, think of the original <span class="math inline">\(a+b\)</span> ballots as balls in the proverbial urn. <span class="math inline">\(a\)</span> of these balls are red, and <span class="math inline">\(b\)</span> of these balls are black. Removing the <span class="math inline">\(k\)</span> invalid ballots is like drawing <span class="math inline">\(k\)</span> balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the <span class="math inline">\(a+b\)</span> original ballots is <em>equally likely</em> to have been invalid. Next, imagine we randomly remove <span class="math inline">\(k\)</span> balls from the urn, and let <span class="math inline">\(X\)</span> be a random variable that counts the number of the removed/invalid ballots that belong to Aloysius. In other words, the number of red balls removed. If <span class="math inline">\(X\)</span> is large enough, it will swing the election in Bernadette’s favor.</p>
-<ol type="a">
-<li>What are the range and the pmf of the random variable <span class="math inline">\(X\)</span>?</li>
-<li>For what values of <span class="math inline">\(X\)</span> does removing <span class="math inline">\(k\)</span> ballots reverse the outcome of the election?</li>
-<li>Based on your answers to parts a and b, what is the probability that the election result is reversed when the <span class="math inline">\(k\)</span> bad ballots are removed?</li>
-<li>Let’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a figure in <code>R</code> that has the margin of victory <span class="math inline">\(a-b\)</span> on the horizontal axis and the number of bad ballots <span class="math inline">\(k\)</span> on the vertical axis. In this figure, draw a line that splits the plane into two parts: the part where the reversal probability is greater than 5% and the part where it is less than 5%;</li>
-<li><a href="#tbl-elections" class="quarto-xref">Table&nbsp;1</a> features real data on some contested American elections. Add a scatterplot to your previous picture where each point represents an election, and comment on the match or lack thereof between our model and the decision that was actually made;</li>
-<li>How do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what shoudl they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?</li>
-</ol>
-<div id="tbl-elections" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-elections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Close elections
-</figcaption>
-<div aria-describedby="tbl-elections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 9%">
-<col style="width: 8%">
-<col style="width: 9%">
-<col style="width: 11%">
-<col style="width: 13%">
-<col style="width: 14%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>election</th>
-<th>year</th>
-<th>win</th>
-<th>loss</th>
-<th>total</th>
-<th>margin</th>
-<th>invalid</th>
-<th>decision</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><em>Ippolito v. Power</em></td>
-<td>1968</td>
-<td>1,422</td>
-<td>1,405</td>
-<td>2,287</td>
-<td>17</td>
-<td>101</td>
-<td>void</td>
-</tr>
-<tr class="even">
-<td><em>Santucci v. Power</em></td>
-<td>1969</td>
-<td>58,076</td>
-<td>57,981</td>
-<td>116,057</td>
-<td>95</td>
-<td>448</td>
-<td>void</td>
-</tr>
-<tr class="odd">
-<td><em>DeMartini v. Power</em></td>
-<td>1970</td>
-<td>2,656</td>
-<td>2,594</td>
-<td>5,250</td>
-<td>62</td>
-<td>136</td>
-<td>upheld</td>
-</tr>
-<tr class="even">
-<td>Maine House</td>
-<td>1976</td>
-<td>1,193</td>
-<td>1,060</td>
-<td>2,253</td>
-<td>133</td>
-<td>208</td>
-<td>void</td>
-</tr>
-<tr class="odd">
-<td>Ann Arbor mayor</td>
-<td>1977</td>
-<td>10,660</td>
-<td>10,659</td>
-<td>21,319</td>
-<td>1</td>
-<td>20</td>
-<td>void</td>
-</tr>
-<tr class="even">
-<td>Brunswick ME town council</td>
-<td>1980</td>
-<td>2,390</td>
-<td>2,383</td>
-<td>4,773</td>
-<td>7</td>
-<td>16</td>
-<td>upheld</td>
-</tr>
-<tr class="odd">
-<td>Washington governor</td>
-<td>2004</td>
-<td>1,373,357</td>
-<td>1,373,228</td>
-<td>2,746,585</td>
-<td>129</td>
-<td>1,439</td>
-<td>upheld</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
+<p>Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:</p>
+<ul>
+<li>Zohran Mamdani wins the New York City mayoral election;</li>
+<li><em>Wicked: For Good</em> makes more money (inflation adjusted) on its opening weekend than <em>Wicked: Part I</em>;</li>
+<li>“The Epstein files” (whatever the hell those even are) are somehow made publicly available;</li>
+<li>Duke University settles with the Trump administration (need to make this more precise)</li>
+<li>Something to do with Duke Football</li>
+</ul>
+<p>Choose one of these, state the probability that you assign to the event happening, and explain in a few paragraphs how you formulated your belief. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed.</p>
 
 
 
