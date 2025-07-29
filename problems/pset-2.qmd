@@ -1,14 +1,10 @@
 ---
 title: "Problem Set 2"
 subtitle: Due Friday September 19 at 5PM
+draft: true
 editor: 
   mode: source
 ---
-
-::: callout-important
-## Under construction!
-This assignment is not finalized. 
-:::
 
 ## Problem 0
 
