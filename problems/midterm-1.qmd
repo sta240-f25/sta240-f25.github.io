@@ -17,6 +17,10 @@ Below are practice problems for each of these areas, as well as guidance about w
 
 # Counting
 
+## Problem X
+
+{{< include bank/counting/poker-dice.qmd >}}
+
 # Conditional probability 
 
 # Discrete random variables
