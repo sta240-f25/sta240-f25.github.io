@@ -5,18 +5,18 @@ Imagine an election where Aloysius receives $a$ votes, Bernadette receives $b$ v
 To model this, think of the original $a+b$ ballots as balls in the proverbial urn. $a$ of these balls are red, and $b$ of these balls are black. Removing the $k$ invalid ballots is like drawing $k$ balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the $a+b$ original ballots is *equally likely* to have been invalid. Next, imagine we randomly remove $k$ balls from the urn, and let $X$ be a random variable that counts the number of the removed/invalid ballots that belong to Aloysius. In other words, the number of red balls removed. If $X$ is large enough, it will swing the election in Bernadette's favor.
 
 a.  What are the range and the pmf of the random variable $X$?
-a.  For what values of $X$ does removing $k$ ballots reverse the outcome of the election?
-a.  Based on your answers to parts a and b, what is the probability that the election result is reversed when the $k$ bad ballots are removed?
-a.  Let's say that we consider the probability of reversal "too big" if it is greater than 5%. Create a figure in `R` that has the margin of victory $a-b$ on the horizontal axis and the number of bad ballots $k$ on the vertical axis. In this figure, draw a line that splits the plane into two parts: the part where the reversal probability is greater than 5% and the part where it is less than 5%;
-a.  @tbl-elections features real data on some contested American elections. Add a scatterplot to your previous picture where each point represents an election, and comment on the match or lack thereof between our model and the decision that was actually made;
-a.  How do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what shoudl they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?
+b.  For what values of $X$ does removing $k$ ballots reverse the outcome of the election?
+c.  Based on your answers to parts a and b, what is the probability that the election result is reversed when the $k$ bad ballots are removed?
+d.  Let's say that we consider the probability of reversal "too big" if it is greater than 5%. Create a figure in `R` that has the margin of victory $a-b$ on the horizontal axis and the number of bad ballots $k$ on the vertical axis. In this figure, draw a line that splits the plane into two parts: the part where the reversal probability is greater than 5% and the part where it is less than 5%;
+e.  @tbl-elections features real data on some contested American elections. Add a scatterplot to your previous picture where each point represents an election, and comment on the match or lack thereof between our model and the decision that was actually made;
+f.  How do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?
 
 | election | year | win | loss | total | margin | invalid | decision |
-|----------|------|-----|------|-------|--------|---------|----------|
-| *Ippolito v. Power* | 1968 | 1,422 | 1,405 | 2,287  | 17 | 101 | void |
-| *Santucci v. Power* | 1969 | 58,076 | 57,981 | 116,057  | 95 | 448 | void |
-| *DeMartini v. Power* | 1970 | 2,656 | 2,594 | 5,250  | 62 | 136 | upheld |
-| Maine House | 1976 | 1,193 | 1,060 | 2,253  | 133 | 208 | void |
+|---------|---------|---------|---------|---------|---------|---------|---------|
+| *Ippolito v. Power* | 1968 | 1,422 | 1,405 | 2,287 | 17 | 101 | void |
+| *Santucci v. Power* | 1969 | 58,076 | 57,981 | 116,057 | 95 | 448 | void |
+| *DeMartini v. Power* | 1970 | 2,656 | 2,594 | 5,250 | 62 | 136 | upheld |
+| Maine House | 1976 | 1,193 | 1,060 | 2,253 | 133 | 208 | void |
 | Ann Arbor mayor | 1977 | 10,660 | 10,659 | 21,319 | 1 | 20 | void |
 | Brunswick ME town council | 1980 | 2,390 | 2,383 | 4,773 | 7 | 16 | upheld |
 | Washington governor | 2004 | 1,373,357 | 1,373,228 | 2,746,585 | 129 | 1,439 | upheld |
