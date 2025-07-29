@@ -392,14 +392,14 @@ Under construction!
 <h2 class="anchored" data-anchor-id="problem-x-1">Problem X</h2>
 <p>King Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive <em>and</em> 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:</p>
 <ol type="1">
-<li>Take a blood sample from each of the 1000 knights;</li>
+<li>Take a blood sample from each of the 1000 soldiers;</li>
 <li>Split each of these samples into two parts;</li>
 <li>Take one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.</li>
 <li>Test each of those mixed samples;</li>
 <li>A few things could happen:
 <ul>
 <li>If the test gives a negative result, we know all of the original ten samples are clear, and we can move on;</li>
-<li>If the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten knights. We can then identify which knights are positive.</li>
+<li>If the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten soldiers. We can then identify which soldiers are positive.</li>
 </ul></li>
 </ol>
 <p>Gandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”</p>
@@ -419,7 +419,7 @@ Under construction!
 <li>Based on your answers to parts a and b, what is the probability that the election result is reversed when the <span class="math inline">\(k\)</span> bad ballots are removed?</li>
 <li>Let’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a figure in <code>R</code> that has the margin of victory <span class="math inline">\(a-b\)</span> on the horizontal axis and the number of bad ballots <span class="math inline">\(k\)</span> on the vertical axis. In this figure, draw a line that splits the plane into two parts: the part where the reversal probability is greater than 5% and the part where it is less than 5%;</li>
 <li><a href="#tbl-elections" class="quarto-xref">Table&nbsp;1</a> features real data on some contested American elections. Add a scatterplot to your previous picture where each point represents an election, and comment on the match or lack thereof between our model and the decision that was actually made;</li>
-<li>How do you think a court should handle a legitimate election challenge?</li>
+<li>How do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?</li>
 </ol>
 <div id="tbl-elections" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -429,14 +429,14 @@ Table&nbsp;1: Close elections
 <div aria-describedby="tbl-elections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 9%">
-<col style="width: 8%">
-<col style="width: 9%">
-<col style="width: 11%">
-<col style="width: 13%">
-<col style="width: 14%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">

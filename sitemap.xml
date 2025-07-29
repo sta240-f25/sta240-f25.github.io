@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/pset-3.html</loc>
-    <lastmod>2025-07-28T07:29:17.974Z</lastmod>
+    <lastmod>2025-07-29T21:23:25.544Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/midterm-1.html</loc>
@@ -58,127 +58,151 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/pset-1.html</loc>
-    <lastmod>2025-07-28T07:29:30.568Z</lastmod>
+    <lastmod>2025-07-29T21:22:39.883Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/calc-series.html</loc>
-    <lastmod>2025-07-24T09:19:58.067Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/conditional-probability/clark-meadow.html</loc>
+    <lastmod>2025-07-28T05:23:03.992Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/calc-bad-notation.html</loc>
-    <lastmod>2025-07-24T09:19:20.080Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/conditional-probability/independent-complements.html</loc>
+    <lastmod>2025-07-24T08:35:54.788Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/target-practice.html</loc>
-    <lastmod>2025-07-28T01:22:38.848Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/conditional-probability/bdj-encryption.html</loc>
+    <lastmod>2025-07-24T08:37:08.803Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/calc-limit.html</loc>
-    <lastmod>2025-07-24T09:21:28.027Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/conditional-probability/bdj-circuit.html</loc>
+    <lastmod>2025-07-24T08:39:09.547Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/ht-receipt.html</loc>
-    <lastmod>2025-07-26T22:07:56.421Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/set-theory/demorgan-picture.html</loc>
+    <lastmod>2025-07-29T20:46:12.671Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/ross-balls.html</loc>
-    <lastmod>2025-07-24T08:33:53.891Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/random-variables-discrete/contested-election.html</loc>
+    <lastmod>2025-07-29T09:53:38.191Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/gandalf-test.html</loc>
+    <loc>https://sta240-f25.github.io/problems/bank/random-variables-discrete/gandalf-test.html</loc>
     <lastmod>2025-07-29T09:50:56.017Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/calc-inflection.html</loc>
+    <loc>https://sta240-f25.github.io/problems/bank/conceptual/lousyforecasting.html</loc>
+    <lastmod>2025-07-29T20:31:32.641Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/calculus-review/calc-series.html</loc>
+    <lastmod>2025-07-24T09:19:58.067Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/calculus-review/calc-limit.html</loc>
+    <lastmod>2025-07-24T09:21:28.027Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/calculus-review/calc-inflection.html</loc>
     <lastmod>2025-07-24T09:20:51.370Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/calc-logexp.html</loc>
-    <lastmod>2025-07-24T09:19:41.476Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/calculus-review/calc-gamma.html</loc>
+    <lastmod>2025-07-24T09:21:11.472Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/poker-dice.html</loc>
-    <lastmod>2025-07-28T01:12:38.614Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/incl-excl-3.html</loc>
+    <lastmod>2025-07-24T08:33:01.722Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/weather-app.html</loc>
-    <lastmod>2025-07-24T08:30:48.580Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/xor.html</loc>
+    <lastmod>2025-07-24T08:32:33.303Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/ross-rv.html</loc>
-    <lastmod>2025-07-24T08:38:48.615Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/basic-counting.html</loc>
+    <lastmod>2025-07-29T20:52:13.967Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/bdj-circuit.html</loc>
-    <lastmod>2025-07-24T08:39:09.547Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/ross-balls.html</loc>
+    <lastmod>2025-07-24T08:33:53.891Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/labs/lab-3.html</loc>
     <lastmod>2025-07-26T08:23:12.896Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/testing-symptoms.html</loc>
-    <lastmod>2025-07-27T03:11:07.043Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/poker-dice.html</loc>
+    <lastmod>2025-07-28T01:12:38.614Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/axioms-conditional.html</loc>
-    <lastmod>2025-07-28T01:26:50.472Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/ht-receipt.html</loc>
+    <lastmod>2025-07-26T22:07:56.421Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/calc-gamma.html</loc>
-    <lastmod>2025-07-24T09:21:11.472Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/weather-app.html</loc>
+    <lastmod>2025-07-24T08:30:48.580Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/xor.html</loc>
-    <lastmod>2025-07-24T08:32:33.303Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/basic-inequality.html</loc>
+    <lastmod>2025-07-29T20:51:31.255Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/diaconis.html</loc>
-    <lastmod>2025-07-24T08:43:56.967Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/set-minus.html</loc>
+    <lastmod>2025-07-29T20:56:54.544Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/bdj-encryption.html</loc>
-    <lastmod>2025-07-24T08:37:08.803Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/calculus-review/calc-logexp.html</loc>
+    <lastmod>2025-07-24T09:19:41.476Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/incl-excl-3.html</loc>
-    <lastmod>2025-07-24T08:33:01.722Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/problems/bank/bdj-rv.html</loc>
-    <lastmod>2025-07-24T08:40:58.548Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/problems/bank/calc-pareto-ish.html</loc>
+    <loc>https://sta240-f25.github.io/problems/bank/calculus-review/calc-pareto-ish.html</loc>
     <lastmod>2025-07-24T09:21:55.481Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/contested-election.html</loc>
-    <lastmod>2025-07-29T09:53:38.191Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/calculus-review/calc-bad-notation.html</loc>
+    <lastmod>2025-07-24T09:19:20.080Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/independent-complements.html</loc>
-    <lastmod>2025-07-24T08:35:54.788Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/conceptual/diaconis.html</loc>
+    <lastmod>2025-07-24T08:43:56.967Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/clark-meadow.html</loc>
-    <lastmod>2025-07-28T05:23:03.992Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/random-variables-discrete/ross-rv.html</loc>
+    <lastmod>2025-07-24T08:38:48.615Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/lousyforecasting.html</loc>
-    <lastmod>2025-07-29T09:36:02.681Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/random-variables-discrete/bdj-rv.html</loc>
+    <lastmod>2025-07-24T08:40:58.548Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/set-theory/basic-set-practice.html</loc>
+    <lastmod>2025-07-29T20:45:51.225Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/conditional-probability/testing-symptoms.html</loc>
+    <lastmod>2025-07-27T03:11:07.043Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/conditional-probability/axioms-conditional.html</loc>
+    <lastmod>2025-07-28T01:26:50.472Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/conditional-probability/conditional-inequality.html</loc>
+    <lastmod>2025-07-29T20:52:57.599Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/conditional-probability/target-practice.html</loc>
+    <lastmod>2025-07-28T01:22:38.848Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/pset-4.html</loc>
-    <lastmod>2025-07-28T07:28:45.452Z</lastmod>
+    <lastmod>2025-07-29T21:23:42.980Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/pset-0.html</loc>
-    <lastmod>2025-07-28T07:29:27.273Z</lastmod>
+    <lastmod>2025-07-29T21:21:33.827Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/pset-2.html</loc>
-    <lastmod>2025-07-29T08:52:42.343Z</lastmod>
+    <lastmod>2025-07-29T21:22:57.065Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/index.html</loc>
