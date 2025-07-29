@@ -16,6 +16,10 @@ This assignment is not finalized.
 
 ## Problem X
 
+{{< include bank/lousyforecasting.qmd >}}
+
+## Problem X
+
 {{< include bank/independent-complements.qmd >}}
 
 ## Submission
