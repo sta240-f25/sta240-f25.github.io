@@ -20,6 +20,10 @@ On this problem set you are asked to prove some new probability rules using a sm
 
 ## Problem X
 
+{{< include bank/set-theory/demorgan-picture.qmd >}}
+
+## Problem X
+
 {{< include bank/basic-rules/weather-app.qmd >}}
 
 ## Problem X
