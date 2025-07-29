@@ -1,0 +1,5 @@
+"Prove" De Morgan's second law with a picture:
+
+$$
+(A\cap B)^{c}=A^{c}\cup B^{c}.
+$$

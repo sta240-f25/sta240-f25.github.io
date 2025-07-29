@@ -1,0 +1,17 @@
+Take $\mathbb{R}$ to be your reference set, and consider these subsets: 
+
+$$
+\begin{align*}
+A&=[1,\,5]\\
+B&=\{x\in\mathbb{R}\,:\,|x|>2\}\\
+C&=(-\infty,\,0].
+\end{align*}
+$$ 
+
+Express each of the following in as simplified and concise a form as possible:
+
+a.  $A^c$
+b.  $A \cup B$
+c.  $B \cap C^c$
+d.  $A^c \cap B^c \cap C^c$
+e.  $(A \cup B) \cap C$
