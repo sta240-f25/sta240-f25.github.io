@@ -16,11 +16,11 @@ This assignment is not finalized.
 
 ## Problem X
 
-{{< include bank/lousyforecasting.qmd >}}
+{{< include bank/conceptual/lousyforecasting.qmd >}}
 
 ## Problem X
 
-{{< include bank/independent-complements.qmd >}}
+{{< include bank/conditional-probability/independent-complements.qmd >}}
 
 ## Submission
 

@@ -16,15 +16,15 @@ This assignment is not finalized.
 
 ## Problem X
 
-{{< include bank/bdj-rv.qmd >}}
+{{< include bank/random-variables-discrete/bdj-rv.qmd >}}
 
 ## Problem X
 
-{{< include bank/gandalf-test.qmd >}}
+{{< include bank/random-variables-discrete/gandalf-test.qmd >}}
 
 ## Problem X
 
-{{< include bank/contested-election.qmd >}}
+{{< include bank/random-variables-discrete/contested-election.qmd >}}
 
 ## Submission
 

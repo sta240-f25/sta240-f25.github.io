@@ -20,27 +20,27 @@ On this problem set you are asked to prove some new probability rules using a sm
 
 ## Problem X
 
-{{< include bank/diaconis.qmd >}}
+{{< include bank/conceptual/diaconis.qmd >}}
 
 ## Problem X
 
-{{< include bank/weather-app.qmd >}}
+{{< include bank/basic-rules/weather-app.qmd >}}
 
 ## Problem X
 
-{{< include bank/xor.qmd >}}
+{{< include bank/basic-rules/xor.qmd >}}
 
 ## Problem X
 
-{{< include bank/incl-excl-3.qmd >}}
+{{< include bank/basic-rules/incl-excl-3.qmd >}}
 
 ## Problem 9
 
-{{< include bank/ht-receipt.qmd >}}
+{{< include bank/counting/ht-receipt.qmd >}}
 
 ## Problem 10
 
-{{< include bank/ross-balls.qmd >}}
+{{< include bank/counting/ross-balls.qmd >}}
 
 ## Submission
 

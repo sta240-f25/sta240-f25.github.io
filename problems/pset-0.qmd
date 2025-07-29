@@ -15,31 +15,31 @@ This is ostensibly calculus review, but each problem is a piece of probability i
 
 ## Problem 1
 
-{{< include bank/calc-bad-notation.qmd >}}
+{{< include bank/calculus-review/calc-bad-notation.qmd >}}
 
 ## Problem 2
 
-{{< include bank/calc-logexp.qmd >}}
+{{< include bank/calculus-review/calc-logexp.qmd >}}
 
 ## Problem 3
 
-{{< include bank/calc-series.qmd >}}
+{{< include bank/calculus-review/calc-series.qmd >}}
 
 ## Problem 4
 
-{{< include bank/calc-inflection.qmd >}}
+{{< include bank/calculus-review/calc-inflection.qmd >}}
 
 ## Problem 5
 
-{{< include bank/calc-gamma.qmd >}}
+{{< include bank/calculus-review/calc-gamma.qmd >}}
 
 ## Problem 6
 
-{{< include bank/calc-limit.qmd >}}
+{{< include bank/calculus-review/calc-limit.qmd >}}
 
 ## Problem 7
 
-{{< include bank/calc-pareto-ish.qmd >}}
+{{< include bank/calculus-review/calc-pareto-ish.qmd >}}
 
 ## Submission
 

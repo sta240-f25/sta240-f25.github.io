@@ -16,23 +16,23 @@ This assignment is not finalized.
 
 ## Problem X
 
-{{< include bank/axioms-conditional.qmd >}}
+{{< include bank/conditional-probability/axioms-conditional.qmd >}}
 
 ## Problem X
 
-{{< include bank/testing-symptoms.qmd >}}
+{{< include bank/conditional-probability/testing-symptoms.qmd >}}
 
 ## Problem X
 
-{{< include bank/bdj-encryption.qmd >}}
+{{< include bank/conditional-probability/bdj-encryption.qmd >}}
 
 ## Problem X
 
-{{< include bank/bdj-circuit.qmd >}}
+{{< include bank/conditional-probability/bdj-circuit.qmd >}}
 
 ## Problem X
 
-{{< include bank/ross-rv.qmd >}}
+{{< include bank/random-variables-discrete/ross-rv.qmd >}}
 
 ## Submission
 
