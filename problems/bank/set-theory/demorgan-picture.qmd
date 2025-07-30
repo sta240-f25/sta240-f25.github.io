@@ -1,5 +1,4 @@
-"Prove" De Morgan's second law with a picture:
+"Prove" each of De Morgan's laws with a picture:
 
-$$
-(A\cap B)^{c}=A^{c}\cup B^{c}.
-$$
+a. $(A\cap B)^{c}=A^{c}\cup B^{c}$;
+a. $(A\cup B)^{c}=A^{c}\cap B^{c}$.
