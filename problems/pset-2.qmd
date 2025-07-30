@@ -12,7 +12,7 @@ editor:
 
 ## Problem X
 
-{{< include bank/conceptual/lousyforecasting.qmd >}}
+{{< include bank/conceptual/lousy-forecasting.qmd >}}
 
 ## Problem X
 
