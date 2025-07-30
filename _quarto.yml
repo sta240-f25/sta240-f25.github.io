@@ -87,7 +87,7 @@ website:
             text: Sequences and series
           - href: math/latex.qmd
             text: Typing math
-      - section: "R Explainers"
+      - section: "`R` Explainers"
         contents:
           - href: explainers/setup.qmd
             text: Getting started
