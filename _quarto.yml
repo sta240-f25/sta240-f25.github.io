@@ -12,7 +12,7 @@ website:
 
   open-graph: true
 
-#  draft-mode: unlinked
+  draft-mode: unlinked
 
   sidebar:
     background: "#FFFB71"
