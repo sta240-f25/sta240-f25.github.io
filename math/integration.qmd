@@ -61,8 +61,54 @@ When you perform a **$u$-substitution**, you're basically trying to undo the cha
 
 Let's face it; this sucks. But sometimes there's no way around it. 
 
+$$
+\int_a^b u(x) v'(x) \, \text{d}x 
+    = \left[u(x) v(x)\right]_a^b - \int_a^b u'(x) v(x) \, \text{d}x
+$$
+
 ::: callout-tip 
 ## Example: IBP
+
+Consider this integral:
+
+$$
+\int_1^2\frac{\ln(x)}{x^2}\text{d}x
+$$
+$\ln(x)$ is easier to differentiate, and $1/x^2$ is easier to antidifferentiate, which suggests the following choice:
+
+$$
+\begin{aligned}
+u&=\ln(x)\\
+\text{d}u&=\frac{\text{d}x}{x}\\
+v&=-x^{-1}\\
+\text{d}v&=x^{-2}.
+\end{aligned}
+$$
+
+Let the fun begin:
+
+$$
+\begin{aligned}
+\int_1^2\frac{\ln(x)}{x^2}\text{d}x
+&=
+\left[-\frac{\ln(x)}{x}\right]_1^2
++
+\int_1^2\frac{\text{d}x}{x^2}
+\\
+&=
+\left[-\frac{\ln(x)}{x}\right]_1^2
++
+\left[-x^{-1}\right]_1^2
+\\
+&=
+\left[-\frac{\ln(2)}{2}-\left(-\frac{\ln(1)}{1}\right)\right]
++
+\left[-\frac{1}{2}-\left(-\frac{1}{1}\right)\right]
+\\
+&=
+-\frac{\ln(2)}{2} + \frac{1}{2}.
+\end{aligned}
+$$
 :::
 
 ## Improper integration (we will do this a lot!)
