@@ -1,12 +1,12 @@
 Here is a very silly function:
 
 $$
-    h(x)
-    =
-    \exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)
-    ,\quad 
-    -\infty<x<\infty
-    .
+h(x)
+=
+\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)
+,\quad 
+-\infty<x<\infty
+.
 $$
 
 Treat $-\infty<\mu<\infty$ and $\sigma>0$ as constants and compute the value(s) of $x$ at which $h$ has *inflection points*.
@@ -31,3 +31,4 @@ curve(exp(-0.5 * ((x - m) / s)^2),
 
 Before you start doing any math, can you use the picture to guess what the answer will be?
 :::
+
