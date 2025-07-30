@@ -326,137 +326,25 @@
     ]
   },
   {
-    "objectID": "problems/pset-3.html",
-    "href": "problems/pset-3.html",
-    "title": "Problem Set 3",
-    "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
-  },
-  {
-    "objectID": "problems/pset-3.html#problem-0",
-    "href": "problems/pset-3.html#problem-0",
-    "title": "Problem Set 3",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
-  },
-  {
-    "objectID": "problems/pset-3.html#problem-x",
-    "href": "problems/pset-3.html#problem-x",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\nLet \\(S\\) be a sample space with probability measure \\(P\\), and let \\(B\\subseteq S\\) be some event with \\(P(B)&gt;0\\). Show that the function \\(G(A)=P(A\\,|\\, B)\\) is a new probability measure on \\(S\\). That is, show that \\(G\\) satisfies the axioms:\n\ntotal measure 1;\nnonnegativity;\ncountable additivity."
-  },
-  {
-    "objectID": "problems/pset-3.html#problem-x-1",
-    "href": "problems/pset-3.html#problem-x-1",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\nWe studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\).\nTable 1 enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients’ “true” disease status was determined by a PCR test that we assume is hella accurate.\n\n\n\nTable 1: Some COVID-19 numbers. Source: CDC\n\n\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n\n-\n-\n-\n0.7650\n\n\n-\n-\n+\n0.0128\n\n\n-\n+\n-\n0.1685\n\n\n-\n+\n+\n0.0018\n\n\n+\n-\n-\n0.0091\n\n\n+\n-\n+\n0.0064\n\n\n+\n+\n-\n0.0073\n\n\n+\n+\n+\n0.0291\n\n\n\n\n\n\n\nWhat is the overall disease prevalence?\nWhat is the sensitivity of the test?\nWhat is the specificity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?\nWhat is the overall probability that the test is wrong?"
-  },
-  {
-    "objectID": "problems/pset-3.html#problem-x-2",
-    "href": "problems/pset-3.html#problem-x-2",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\nAn encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
-  },
-  {
-    "objectID": "problems/pset-3.html#problem-x-3",
-    "href": "problems/pset-3.html#problem-x-3",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\n\n\n\n\n\nThe figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
-  },
-  {
-    "objectID": "problems/pset-3.html#problem-x-4",
-    "href": "problems/pset-3.html#problem-x-4",
-    "title": "Problem Set 3",
-    "section": "Problem X",
-    "text": "Problem X\nTwo balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
-  },
-  {
-    "objectID": "problems/pset-3.html#submission",
-    "href": "problems/pset-3.html#submission",
-    "title": "Problem Set 3",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
-  },
-  {
     "objectID": "problems/midterm-1.html",
     "href": "problems/midterm-1.html",
     "title": "Midterm 1 Study Guide",
     "section": "",
-    "text": "Midterm Exam 1 will take place on Thursday October 9 during your lab section. There will be XX problems, and they will break down as follows:\n\n\n\n\n\nBelow are practice problems for each of these areas, as well as guidance about what course materials to refer to if you want more review on a particular topic.\n\nProbability spaces\n\n\nCounting\n\n\nConditional probability\n\n\nDiscrete random variables"
+    "text": "Midterm Exam 1 will take place on Thursday October 9 during your lab section. There will be XX problems, and they will break down as follows:\nBelow are practice problems for each of these areas, as well as guidance about what course materials to refer to if you want more review on a particular topic."
   },
   {
-    "objectID": "problems/pset-1.html",
-    "href": "problems/pset-1.html",
-    "title": "Problem Set 1",
-    "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
-  },
-  {
-    "objectID": "problems/pset-1.html#before-you-start",
-    "href": "problems/pset-1.html#before-you-start",
-    "title": "Problem Set 1",
-    "section": "Before you start",
-    "text": "Before you start\nOn this problem set you are asked to prove some new probability rules using a small set of raw materials: set theory, the axioms, and the basic rules we saw in lecture. The purpose of these problems is to demonstrate that you understand every step in the reasoning, even if it seems trivial and obvious. So, don’t leave anything out! Every step of the argument should be explicit, and you should clearly indicate which axioms/results you are invoking when you move from point A to point B. After you’ve paid your dues, we’ll give you some latitude to hand wave and yada-yada your way through certain basic arguments. But not yet."
-  },
-  {
-    "objectID": "problems/pset-1.html#problem-0",
-    "href": "problems/pset-1.html#problem-0",
-    "title": "Problem Set 1",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
-  },
-  {
-    "objectID": "problems/pset-1.html#problem-x",
-    "href": "problems/pset-1.html#problem-x",
-    "title": "Problem Set 1",
+    "objectID": "problems/midterm-1.html#problem-x",
+    "href": "problems/midterm-1.html#problem-x",
+    "title": "Midterm 1 Study Guide",
     "section": "Problem X",
-    "text": "Problem X\nPersi Diaconis is a famous researcher in probability and statistics. He has a cute line of research where he probes the randomness that we take for granted in simple things like coin tossing, dice, and playing cards. In this Numberphile interview, he discusses coin tossing, and says both “coin tossing is as close to a random phenomenon as I know” and “coin tossing is a deterministic process. What’s random about it?” Wut?\nWatch the interview, and report back with a brief summary of Diaconis’ explanation of what makes a coin toss random. Do you agree or disagree?"
+    "text": "Problem X\nLet \\(S\\) be a sample space, let \\(A,\\, B\\subseteq S\\) be events, and define a new set\n\\[\nA-B = \\{x\\in S:x\\in A\\text{ and }x\\notin B\\}.\n\\]\n\nDraw a well-labeled picture of \\(A\\), \\(B\\), \\(S\\), and the set \\(A-B\\);\nWrite down an equivalent expression for \\(A-B\\) that only makes use of our three basic operations: union, intersection, and complement;\nProve that \\(P(A-B)=P(A)-P(A\\cap B)\\)."
   },
   {
-    "objectID": "problems/pset-1.html#problem-x-1",
-    "href": "problems/pset-1.html#problem-x-1",
-    "title": "Problem Set 1",
+    "objectID": "problems/midterm-1.html#problem-x-1",
+    "href": "problems/midterm-1.html#problem-x-1",
+    "title": "Midterm 1 Study Guide",
     "section": "Problem X",
-    "text": "Problem X\nOne day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they fit together."
-  },
-  {
-    "objectID": "problems/pset-1.html#problem-x-2",
-    "href": "problems/pset-1.html#problem-x-2",
-    "title": "Problem Set 1",
-    "section": "Problem X",
-    "text": "Problem X\nLet \\(A\\) and \\(B\\) be events in a sample space \\(S\\). Let \\(C\\) be the set of outcomes that are in either \\(A\\) or \\(B\\), but not both.\n\nDraw a well-labeled picture of \\(S\\), \\(A\\), \\(B\\), and \\(C\\).\nWrite down a formula for \\(C\\) in terms of \\(A\\) and \\(B\\) using any of the basic operations: union (\\(\\cup\\)), intersection (\\(\\cap\\)), complement (\\(^c\\)).\nUse set theory and the probability axioms to show that\n\n\\[\nP(C)=P(A)+P(B)-2P(A\\cap B).\n\\]\n\nExplain this result conceptually (with words and pictures)."
-  },
-  {
-    "objectID": "problems/pset-1.html#problem-x-3",
-    "href": "problems/pset-1.html#problem-x-3",
-    "title": "Problem Set 1",
-    "section": "Problem X",
-    "text": "Problem X\nLet \\(S\\) be a sample space, and consider events \\(A,\\, B,\\, C\\subseteq S\\). Recall that the law of inclusion/exclusion says that\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B).\n\\]\n\nHow should this be extended to unions of three events? \\[\nP(A\\cup B\\cup C)=P(A)+P(B)+P(C) +\\,...{???}\n\\] Explain your conjecture with words and pictures.\nUse set theory and the probabiity axioms to prove your conjecture in the previous part."
-  },
-  {
-    "objectID": "problems/pset-1.html#problem-9",
-    "href": "problems/pset-1.html#problem-9",
-    "title": "Problem Set 1",
-    "section": "Problem 9",
-    "text": "Problem 9\nA few months ago I went to Harris Teeter to get some junk food, and when I looked at my receipt, I saw this:\n\n\n\n\n\nI thought, “Strange. What are the odds the total would be a whole number?” Well, let’s find out!\n\nImagine you randomly purchase two items that each cost less than $10, and assume all prices are equally likely. The prices of the two items are quoted to two decimal places. What is the probability that the two prices add up to a whole number total?\nNow let’s add a wrinkle. Imagine sales tax is 5%. This is calculated, rounded up to the nearest cent, and then added to your bill. What is the probability that the cost of the two items plus the rounded sales tax adds up to a whole number?\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nThe correct answer to part b is 0.010096, but getting there is pretty tricky. Give it a shot!"
-  },
-  {
-    "objectID": "problems/pset-1.html#problem-10",
-    "href": "problems/pset-1.html#problem-10",
-    "title": "Problem Set 1",
-    "section": "Problem 10",
-    "text": "Problem 10\nSeven balls are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green balls. Find the probability that\n\n3 red, 2 blue, and 2 green balls are withdrawn;\nat least 2 red balls are withdrawn;\nall withdrawn balls are the same color;\neither exactly 3 red balls or exactly 3 blue balls are withdrawn."
-  },
-  {
-    "objectID": "problems/pset-1.html#submission",
-    "href": "problems/pset-1.html#submission",
-    "title": "Problem Set 1",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
+    "text": "Problem X\nPoker dice is played by simultaneously rolling five dice. The dice are fair, six-sided, and distinct (imagine that each one is a different color). Find the probabilities of the following dice rolls:\n\nfive different numbers;\nthree of a kind (three dice show the same number, while the other two dice are singles);\nfull house (three dice show the same number, while the other two show a separate pair)."
   },
   {
     "objectID": "problems/bank/conditional-probability/independent-complements.html",
@@ -484,7 +372,7 @@
     "href": "problems/bank/set-theory/demorgan-picture.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "“Prove” De Morgan’s second law with a picture:\n\\[\n(A\\cap B)^{c}=A^{c}\\cup B^{c}.\n\\]"
+    "text": "“Prove” each of De Morgan’s laws with a picture:\n\n\\((A\\cap B)^{c}=A^{c}\\cup B^{c}\\);\n\\((A\\cup B)^{c}=A^{c}\\cap B^{c}\\)."
   },
   {
     "objectID": "problems/bank/random-variables-discrete/contested-election.html",
@@ -501,11 +389,11 @@
     "text": "King Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 soldiers;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten soldiers. We can then identify which soldiers are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
   },
   {
-    "objectID": "problems/bank/conceptual/lousyforecasting.html",
-    "href": "problems/bank/conceptual/lousyforecasting.html",
+    "objectID": "problems/bank/conceptual/lousy-forecasting.html",
+    "href": "problems/bank/conceptual/lousy-forecasting.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:\n\nZohran Mamdani wins the New York City mayoral election;\nWicked: For Good makes more money (inflation adjusted) on its opening weekend than Wicked: Part I;\n“The Epstein files” (whatever the hell those even are) are somehow made publicly available;\nDuke University settles with the Trump administration (need to make this more precise)\nSomething to do with Duke Football\nWorld Series (in october)\noutcome of a high profile court case\nsome silly gen z thing\n\nChoose one of these, state the probability that you assign to the event happening, and explain in a few paragraphs how you formulated your belief. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed."
+    "text": "Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:\n\nZohran Mamdani wins the New York City mayoral election;\nWicked: For Good makes more money (inflation adjusted) on its opening weekend than Wicked: Part I;\n“The Epstein files” (whatever the hell those even are) are somehow made publicly available;\nDuke University settles with the Trump administration (need to make this more precise)\nSomething to do with Duke Football\nWorld Series (in october)\noutcome of a high profile court case\nsome silly gen z thing (ask TAs)\n\nChoose one of these, state the probability that you assign to the event happening, and explain in a few paragraphs how you formulated your belief. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed."
   },
   {
     "objectID": "problems/bank/calculus-review/calc-series.html",
@@ -536,32 +424,39 @@
     "text": "Here is another inordinately silly function:\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\textrm{d} y,\\quad x&gt;0.\n\\]\nProve that \\(\\Gamma(x+1)=x\\Gamma(x)\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nStart on the left-hand side by writing out \\(\\Gamma(x+1)\\) and evaluating the integral by parts."
   },
   {
-    "objectID": "problems/bank/basic-rules/incl-excl-3.html",
-    "href": "problems/bank/basic-rules/incl-excl-3.html",
+    "objectID": "problems/bank/basic-rules/union-bound.html",
+    "href": "problems/bank/basic-rules/union-bound.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(S\\) be a sample space, and consider events \\(A,\\, B,\\, C\\subseteq S\\). Recall that the law of inclusion/exclusion says that\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B).\n\\]\n\nHow should this be extended to unions of three events? \\[\nP(A\\cup B\\cup C)=P(A)+P(B)+P(C) +\\,...{???}\n\\] Explain your conjecture with words and pictures.\nUse set theory and the probabiity axioms to prove your conjecture in the previous part."
+    "text": "Let \\(A_1,\\,A_2,\\,A_3,\\,...\\subseteq S\\) be an infinite sequence of possibly overlapping events in some probability space.\n\nDefine a new sequence of events \\(B_i=A_i\\cap \\left(\\bigcup_{j=1}^{i-1}A_j\\right)^c\\), and show that these are pairwise disjoint.\nShow that\n\n\\[\n\\bigcup_{i=1}^\\infty A_i=\\bigcup_{i=1}^\\infty B_i.\n\\]\n\nUse the previous part to show that\n\n\\[\nP\\left(\\bigcup_{i=1}^\\infty A_i\\right)\\leq\\sum\\limits_{i=1}^\\infty P(A_i).\n\\]"
   },
   {
-    "objectID": "problems/bank/basic-rules/xor.html",
-    "href": "problems/bank/basic-rules/xor.html",
+    "objectID": "problems/bank/basic-rules/basic-inequality.html",
+    "href": "problems/bank/basic-rules/basic-inequality.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(A\\) and \\(B\\) be events in a sample space \\(S\\). Let \\(C\\) be the set of outcomes that are in either \\(A\\) or \\(B\\), but not both.\n\nDraw a well-labeled picture of \\(S\\), \\(A\\), \\(B\\), and \\(C\\).\nWrite down a formula for \\(C\\) in terms of \\(A\\) and \\(B\\) using any of the basic operations: union (\\(\\cup\\)), intersection (\\(\\cap\\)), complement (\\(^c\\)).\nUse set theory and the probability axioms to show that\n\n\\[\nP(C)=P(A)+P(B)-2P(A\\cap B).\n\\]\n\nExplain this result conceptually (with words and pictures)."
+    "text": "Prove that\n\\[\nP(A)+P(B)-1\\leq P(A\\cap B).\n\\]"
   },
   {
-    "objectID": "problems/bank/counting/basic-counting.html",
-    "href": "problems/bank/counting/basic-counting.html",
+    "objectID": "problems/bank/basic-rules/weather-app.html",
+    "href": "problems/bank/basic-rules/weather-app.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Suppose you are dealt six cards from a well-shuffled, standard deck of 52.\n\nWhat is the probability of getting 3 of one rank and 3 of another?\nWhat is the probability of getting 4 of one rank and 2 of another?\nWhat is the probability of getting 3 aces and 3 of another rank?\nWhat is the probability of getting 4 of one rank and 2 aces?\nWhat is the probability that all 6 cards are in the same suit?\nWhat is the probability that all 6 cards are consecutive (ie a hand with 3 hearts, 4 spades, 5 spades, 6 clubs, 7 hearts, and the 8 diamonds)? Assume that the ace can only be the high card;\nWhat is the answer to the previous question if we allow the ace to be either high or low?\nWhat is the probability of receiving the ace, king, queen, jack, 10 and 9 all in hearts?"
+    "text": "One day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they fit together."
   },
   {
-    "objectID": "problems/bank/counting/ross-balls.html",
-    "href": "problems/bank/counting/ross-balls.html",
+    "objectID": "problems/bank/counting/ht-receipt.html",
+    "href": "problems/bank/counting/ht-receipt.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Seven balls are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green balls. Find the probability that\n\n3 red, 2 blue, and 2 green balls are withdrawn;\nat least 2 red balls are withdrawn;\nall withdrawn balls are the same color;\neither exactly 3 red balls or exactly 3 blue balls are withdrawn."
+    "text": "A few months ago I went to Harris Teeter to get some junk food, and when I looked at my receipt, I saw this:\n\n\n\n\n\nI thought, “Strange. What are the odds the total would be a whole number?” Well, let’s find out!\n\nImagine you randomly purchase two items that each cost less than $10, and assume all prices are equally likely. The prices of the two items are quoted to two decimal places. What is the probability that the two prices add up to a whole number total?\nNow let’s add a wrinkle. Imagine sales tax is 5%. This is calculated, rounded up to the nearest cent, and then added to your bill. What is the probability that the cost of the two items plus the rounded sales tax adds up to a whole number?\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nThe correct answer to part b is 0.010096, but getting there is pretty tricky. Give it a shot!"
+  },
+  {
+    "objectID": "problems/bank/counting/poker-dice.html",
+    "href": "problems/bank/counting/poker-dice.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Poker dice is played by simultaneously rolling five dice. The dice are fair, six-sided, and distinct (imagine that each one is a different color). Find the probabilities of the following dice rolls:\n\nfive different numbers;\nthree of a kind (three dice show the same number, while the other two dice are singles);\nfull house (three dice show the same number, while the other two show a separate pair)."
   },
   {
     "objectID": "labs/lab-3.html",
@@ -613,39 +508,39 @@
     "text": "Problem 6\nNow let’s try to be more precise about the “wrongness” of the show’s answer. Let \\(B\\) denote the true probability, and \\(\\overline{B}\\) denote the show’s approximation. In part (c) you showed that \\(B\\leq \\overline{B}\\) under certain conditions. Now define\n\\[\n\\delta = \\frac{\\overline{B}-B}{B}.\n\\]\nThis is the relative error of the show’s answer. Prove that\n\\[\n|\\delta|\n\\leq\n\\max\n\\left\\{\n\\frac{f_-}{1-f_-}\n,\\,\n\\frac{f_+}{1+f_+}\n\\right\\}\n,\\quad \\forall p\\in[0,\\, 1].\n\\]\nInterpret this result."
   },
   {
-    "objectID": "problems/bank/counting/poker-dice.html",
-    "href": "problems/bank/counting/poker-dice.html",
+    "objectID": "problems/bank/counting/ross-balls.html",
+    "href": "problems/bank/counting/ross-balls.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Poker dice is played by simultaneously rolling five dice. The dice are fair, six-sided, and distinct (imagine that each one is a different color). Find the probabilities of the following dice rolls:\n\nfive different numbers;\nthree of a kind (three dice show the same number, while the other two dice are singles);\nfull house (three dice show the same number, while the other two show a separate pair)."
+    "text": "Seven balls are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green balls. Find the probability that\n\n3 red, 2 blue, and 2 green balls are withdrawn;\nat least 2 red balls are withdrawn;\nall withdrawn balls are the same color;\neither exactly 3 red balls or exactly 3 blue balls are withdrawn."
   },
   {
-    "objectID": "problems/bank/counting/ht-receipt.html",
-    "href": "problems/bank/counting/ht-receipt.html",
+    "objectID": "problems/bank/counting/basic-counting.html",
+    "href": "problems/bank/counting/basic-counting.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "A few months ago I went to Harris Teeter to get some junk food, and when I looked at my receipt, I saw this:\n\n\n\n\n\nI thought, “Strange. What are the odds the total would be a whole number?” Well, let’s find out!\n\nImagine you randomly purchase two items that each cost less than $10, and assume all prices are equally likely. The prices of the two items are quoted to two decimal places. What is the probability that the two prices add up to a whole number total?\nNow let’s add a wrinkle. Imagine sales tax is 5%. This is calculated, rounded up to the nearest cent, and then added to your bill. What is the probability that the cost of the two items plus the rounded sales tax adds up to a whole number?\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nThe correct answer to part b is 0.010096, but getting there is pretty tricky. Give it a shot!"
+    "text": "Suppose you are dealt six cards from a well-shuffled, standard deck of 52.\n\nWhat is the probability of getting 3 of one rank and 3 of another?\nWhat is the probability of getting 4 of one rank and 2 of another?\nWhat is the probability of getting 3 aces and 3 of another rank?\nWhat is the probability of getting 4 of one rank and 2 aces?\nWhat is the probability that all 6 cards are in the same suit?\nWhat is the probability that all 6 cards are consecutive (ie a hand with 3 hearts, 4 spades, 5 spades, 6 clubs, 7 hearts, and the 8 diamonds)? Assume that the ace can only be the high card;\nWhat is the answer to the previous question if we allow the ace to be either high or low?\nWhat is the probability of receiving the ace, king, queen, jack, 10 and 9 all in hearts?"
   },
   {
-    "objectID": "problems/bank/basic-rules/weather-app.html",
-    "href": "problems/bank/basic-rules/weather-app.html",
+    "objectID": "problems/bank/basic-rules/xor.html",
+    "href": "problems/bank/basic-rules/xor.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "One day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they fit together."
+    "text": "Let \\(A\\) and \\(B\\) be events in a sample space \\(S\\). Let \\(C\\) be the set of outcomes that are in either \\(A\\) or \\(B\\), but not both.\n\nDraw a well-labeled picture of \\(S\\), \\(A\\), \\(B\\), and \\(C\\).\nWrite down a formula for \\(C\\) in terms of \\(A\\) and \\(B\\) using any of the basic operations: union (\\(\\cup\\)), intersection (\\(\\cap\\)), complement (\\(^c\\)).\nUse set theory and the probability axioms to show that\n\n\\[\nP(C)=P(A)+P(B)-2P(A\\cap B).\n\\]\n\nExplain this result conceptually (with words and pictures)."
   },
   {
-    "objectID": "problems/bank/basic-rules/basic-inequality.html",
-    "href": "problems/bank/basic-rules/basic-inequality.html",
+    "objectID": "problems/bank/basic-rules/incl-excl-3.html",
+    "href": "problems/bank/basic-rules/incl-excl-3.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Prove that\n\\[\nP(A)+P(B)-1\\leq P(A\\cap B).\n\\]"
+    "text": "Let \\(S\\) be a sample space, and consider events \\(A,\\, B,\\, C\\subseteq S\\). Recall that the law of inclusion/exclusion says that\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B).\n\\]\n\nHow should this be extended to unions of three events? \\[\nP(A\\cup B\\cup C)=P(A)+P(B)+P(C) +\\,...{???}\n\\] Explain your conjecture with words and pictures.\nUse set theory and the probabiity axioms to prove your conjecture in the previous part."
   },
   {
     "objectID": "problems/bank/basic-rules/set-minus.html",
     "href": "problems/bank/basic-rules/set-minus.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(S\\) be a sample space, let \\(A\\com B\\subseteq S\\) be events, and define a new set\n\\[\nA-B = \\{x\\in S:x\\in A\\text{ and }x\\notin B\\}.\n\\]\n\nDraw a well-labeled picture of \\(A\\), \\(B\\), \\(S\\), and the set \\(A-B\\);\nWrite down an equivalent expression for \\(A-B\\) that only makes use of our three basic operations: union, intersection, and complement;\nProve that \\(P(A-B)=P(A)-P(A\\cap B)\\)."
+    "text": "Let \\(S\\) be a sample space, let \\(A,\\, B\\subseteq S\\) be events, and define a new set\n\\[\nA-B = \\{x\\in S:x\\in A\\text{ and }x\\notin B\\}.\n\\]\n\nDraw a well-labeled picture of \\(A\\), \\(B\\), \\(S\\), and the set \\(A-B\\);\nWrite down an equivalent expression for \\(A-B\\) that only makes use of our three basic operations: union, intersection, and complement;\nProve that \\(P(A-B)=P(A)-P(A\\cap B)\\)."
   },
   {
     "objectID": "problems/bank/calculus-review/calc-logexp.html",
@@ -723,48 +618,6 @@
     "title": "STA 240 Fall 2025",
     "section": "",
     "text": "Pearl Bailey and Elaine Stritch go target shooting. Suppose that each of Pearl’s shots hits a wooden duck target with probability \\(p_1\\), while each shot of Elaine’s hits it with probability \\(p_2\\), independent of Pearl. Suppose that they shoot simultaneously at the same target. If the wooden duck is knocked over (indicating that it was hit), what is the probability that both shots hit the duck?"
-  },
-  {
-    "objectID": "problems/pset-4.html",
-    "href": "problems/pset-4.html",
-    "title": "Problem Set 4",
-    "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
-  },
-  {
-    "objectID": "problems/pset-4.html#problem-0",
-    "href": "problems/pset-4.html#problem-0",
-    "title": "Problem Set 4",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
-  },
-  {
-    "objectID": "problems/pset-4.html#problem-x",
-    "href": "problems/pset-4.html#problem-x",
-    "title": "Problem Set 4",
-    "section": "Problem X",
-    "text": "Problem X\nAn urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
-  },
-  {
-    "objectID": "problems/pset-4.html#problem-x-1",
-    "href": "problems/pset-4.html#problem-x-1",
-    "title": "Problem Set 4",
-    "section": "Problem X",
-    "text": "Problem X\nKing Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 soldiers;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten soldiers. We can then identify which soldiers are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
-  },
-  {
-    "objectID": "problems/pset-4.html#problem-x-2",
-    "href": "problems/pset-4.html#problem-x-2",
-    "title": "Problem Set 4",
-    "section": "Problem X",
-    "text": "Problem X\nNot all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.\nImagine an election where Aloysius receives \\(a\\) votes, Bernadette receives \\(b\\) votes, and Aloysius provisionally wins with a margin of victory \\(a-b&gt;0\\). However, of the total \\(a+b\\) votes, we learn that \\(k&gt;a-b\\) were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the \\(k\\) invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.\nTo model this, think of the original \\(a+b\\) ballots as balls in the proverbial urn. \\(a\\) of these balls are red, and \\(b\\) of these balls are black. Removing the \\(k\\) invalid ballots is like drawing \\(k\\) balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the \\(a+b\\) original ballots is equally likely to have been invalid. Next, imagine we randomly remove \\(k\\) balls from the urn, and let \\(X\\) be a random variable that counts the number of the removed/invalid ballots that belong to Aloysius. In other words, the number of red balls removed. If \\(X\\) is large enough, it will swing the election in Bernadette’s favor.\n\nWhat are the range and the pmf of the random variable \\(X\\)?\nFor what values of \\(X\\) does removing \\(k\\) ballots reverse the outcome of the election?\nBased on your answers to parts a and b, what is the probability that the election result is reversed when the \\(k\\) bad ballots are removed?\nLet’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a figure in R that has the margin of victory \\(a-b\\) on the horizontal axis and the number of bad ballots \\(k\\) on the vertical axis. In this figure, draw a line that splits the plane into two parts: the part where the reversal probability is greater than 5% and the part where it is less than 5%;\nTable 1 features real data on some contested American elections. Add a scatterplot to your previous picture where each point represents an election, and comment on the match or lack thereof between our model and the decision that was actually made;\nHow do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?\n\n\n\n\nTable 1: Close elections\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nelection\nyear\nwin\nloss\ntotal\nmargin\ninvalid\ndecision\n\n\n\n\nIppolito v. Power\n1968\n1,422\n1,405\n2,287\n17\n101\nvoid\n\n\nSantucci v. Power\n1969\n58,076\n57,981\n116,057\n95\n448\nvoid\n\n\nDeMartini v. Power\n1970\n2,656\n2,594\n5,250\n62\n136\nupheld\n\n\nMaine House\n1976\n1,193\n1,060\n2,253\n133\n208\nvoid\n\n\nAnn Arbor mayor\n1977\n10,660\n10,659\n21,319\n1\n20\nvoid\n\n\nBrunswick ME town council\n1980\n2,390\n2,383\n4,773\n7\n16\nupheld\n\n\nWashington governor\n2004\n1,373,357\n1,373,228\n2,746,585\n129\n1,439\nupheld"
-  },
-  {
-    "objectID": "problems/pset-4.html#submission",
-    "href": "problems/pset-4.html#submission",
-    "title": "Problem Set 4",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
   },
   {
     "objectID": "problems/pset-0.html",
@@ -875,41 +728,6 @@
       "Problem Sets",
       "Problem Set 0"
     ]
-  },
-  {
-    "objectID": "problems/pset-2.html",
-    "href": "problems/pset-2.html",
-    "title": "Problem Set 2",
-    "section": "",
-    "text": "Under construction!\n\n\n\nThis assignment is not finalized."
-  },
-  {
-    "objectID": "problems/pset-2.html#problem-0",
-    "href": "problems/pset-2.html#problem-0",
-    "title": "Problem Set 2",
-    "section": "Problem 0",
-    "text": "Problem 0\nRecommend some music for us to listen to while we grade this."
-  },
-  {
-    "objectID": "problems/pset-2.html#problem-x",
-    "href": "problems/pset-2.html#problem-x",
-    "title": "Problem Set 2",
-    "section": "Problem X",
-    "text": "Problem X\nHere is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:\n\nZohran Mamdani wins the New York City mayoral election;\nWicked: For Good makes more money (inflation adjusted) on its opening weekend than Wicked: Part I;\n“The Epstein files” (whatever the hell those even are) are somehow made publicly available;\nDuke University settles with the Trump administration (need to make this more precise)\nSomething to do with Duke Football\nWorld Series (in october)\noutcome of a high profile court case\nsome silly gen z thing\n\nChoose one of these, state the probability that you assign to the event happening, and explain in a few paragraphs how you formulated your belief. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed."
-  },
-  {
-    "objectID": "problems/pset-2.html#problem-x-1",
-    "href": "problems/pset-2.html#problem-x-1",
-    "title": "Problem Set 2",
-    "section": "Problem X",
-    "text": "Problem X\nLet \\(A\\) and \\(B\\) be independent events. Prove that \\(A^c\\) and \\(B^c\\) are independent events."
-  },
-  {
-    "objectID": "problems/pset-2.html#submission",
-    "href": "problems/pset-2.html#submission",
-    "title": "Problem Set 2",
-    "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem."
   },
   {
     "objectID": "index.html",

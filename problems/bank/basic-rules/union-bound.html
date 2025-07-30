@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Midterm 1 Study Guide – STA 240 Fall 2025</title>
+<title>union-bound – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +23,21 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1fa1d8026083a9bddc52b4aafc7f818e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-dc10cce4b84d18b17ee277b667b16726.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-1fa1d8026083a9bddc52b4aafc7f818e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-dc10cce4b84d18b17ee277b667b16726.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -96,7 +96,7 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Midterm 1 Study Guide – STA 240 Fall 2025">
+<meta property="og:title" content="STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
@@ -110,7 +110,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Midterm 1 Study Guide</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,8 +124,8 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../../../index.html" class="sidebar-logo-link">
+      <img src="../../../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -146,43 +146,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching team</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Materials</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignments and grading</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Policies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">University resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
@@ -199,43 +199,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/logexp.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/logexp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exponents and logarithms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/differentiation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/differentiation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Differentiation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/integration.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/integration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Integration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/limits.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/limits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limits and continuity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/series.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/series.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sequences and series</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/latex.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/latex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Typing math</span></a>
   </div>
 </li>
@@ -252,43 +252,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/RStudio.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/RStudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The lay of the land</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/math.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/math.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic math</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/vectors.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/vectors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectors</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectorization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/sample.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/sample.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><code>sample</code></span></a>
   </div>
 </li>
@@ -305,7 +305,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
   </div>
 </li>
@@ -324,88 +324,31 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#probability-spaces" id="toc-probability-spaces" class="nav-link active" data-scroll-target="#probability-spaces">Probability spaces</a>
-  <ul class="collapse">
-  <li><a href="#problem-x" id="toc-problem-x" class="nav-link" data-scroll-target="#problem-x">Problem X</a></li>
-  </ul></li>
-  <li><a href="#counting" id="toc-counting" class="nav-link" data-scroll-target="#counting">Counting</a>
-  <ul class="collapse">
-  <li><a href="#problem-x-1" id="toc-problem-x-1" class="nav-link" data-scroll-target="#problem-x-1">Problem X</a></li>
-  </ul></li>
-  <li><a href="#conditional-probability" id="toc-conditional-probability" class="nav-link" data-scroll-target="#conditional-probability">Conditional probability</a></li>
-  <li><a href="#discrete-random-variables" id="toc-discrete-random-variables" class="nav-link" data-scroll-target="#discrete-random-variables">Discrete random variables</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Midterm 1 Study Guide</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>Midterm Exam 1 will take place on <strong>Thursday October 9</strong> during your lab section. There will be XX problems, and they will break down as follows:</p>
-<ol start="0" type="1">
-<li></li>
-<li></li>
-<li></li>
+<p>Let <span class="math inline">\(A_1,\,A_2,\,A_3,\,...\subseteq S\)</span> be an infinite sequence of possibly overlapping events in some probability space.</p>
+<ol type="a">
+<li><p>Define a new sequence of events <span class="math inline">\(B_i=A_i\cap \left(\bigcup_{j=1}^{i-1}A_j\right)^c\)</span>, and show that these are pairwise disjoint.</p></li>
+<li><p>Show that</p></li>
 </ol>
-<p>Below are practice problems for each of these areas, as well as guidance about what course materials to refer to if you want more review on a particular topic.</p>
-<section id="probability-spaces" class="level1">
-<h1>Probability spaces</h1>
-<section id="problem-x" class="level2">
-<h2 class="anchored" data-anchor-id="problem-x">Problem X</h2>
-<p>Let <span class="math inline">\(S\)</span> be a sample space, let <span class="math inline">\(A,\, B\subseteq S\)</span> be events, and define a new set</p>
 <p><span class="math display">\[
-A-B = \{x\in S:x\in A\text{ and }x\notin B\}.
+\bigcup_{i=1}^\infty A_i=\bigcup_{i=1}^\infty B_i.
 \]</span></p>
-<ol type="a">
-<li>Draw a well-labeled picture of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(S\)</span>, and the set <span class="math inline">\(A-B\)</span>;</li>
-<li>Write down an equivalent expression for <span class="math inline">\(A-B\)</span> that only makes use of our three basic operations: union, intersection, and complement;</li>
-<li>Prove that <span class="math inline">\(P(A-B)=P(A)-P(A\cap B)\)</span>.</li>
+<ol start="3" type="a">
+<li>Use the previous part to show that</li>
 </ol>
-</section>
-</section>
-<section id="counting" class="level1">
-<h1>Counting</h1>
-<section id="problem-x-1" class="level2">
-<h2 class="anchored" data-anchor-id="problem-x-1">Problem X</h2>
-<p>Poker dice is played by simultaneously rolling five dice. The dice are fair, six-sided, and <em>distinct</em> (imagine that each one is a different color). Find the probabilities of the following dice rolls:</p>
-<ol type="a">
-<li>five different numbers;</li>
-<li>three of a kind (three dice show the same number, while the other two dice are singles);</li>
-<li>full house (three dice show the same number, while the other two show a separate pair).</li>
-</ol>
-</section>
-</section>
-<section id="conditional-probability" class="level1">
-<h1>Conditional probability</h1>
-</section>
-<section id="discrete-random-variables" class="level1">
-<h1>Discrete random variables</h1>
+<p><span class="math display">\[
+P\left(\bigcup_{i=1}^\infty A_i\right)\leq\sum\limits_{i=1}^\infty P(A_i).
+\]</span></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

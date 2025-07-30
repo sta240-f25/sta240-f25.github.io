@@ -49,16 +49,8 @@
     <lastmod>2025-07-26T06:04:00.434Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/pset-3.html</loc>
-    <lastmod>2025-07-29T21:23:25.544Z</lastmod>
-  </url>
-  <url>
     <loc>https://sta240-f25.github.io/problems/midterm-1.html</loc>
-    <lastmod>2025-07-24T09:15:49.608Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/problems/pset-1.html</loc>
-    <lastmod>2025-07-29T21:22:39.883Z</lastmod>
+    <lastmod>2025-07-29T22:15:42.074Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/conditional-probability/clark-meadow.html</loc>
@@ -78,7 +70,7 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/set-theory/demorgan-picture.html</loc>
-    <lastmod>2025-07-29T20:46:12.671Z</lastmod>
+    <lastmod>2025-07-30T02:17:58.755Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/random-variables-discrete/contested-election.html</loc>
@@ -89,8 +81,8 @@
     <lastmod>2025-07-29T09:50:56.017Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/conceptual/lousyforecasting.html</loc>
-    <lastmod>2025-07-29T20:31:32.641Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/conceptual/lousy-forecasting.html</loc>
+    <lastmod>2025-07-30T02:20:16.538Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/calculus-review/calc-series.html</loc>
@@ -109,44 +101,48 @@
     <lastmod>2025-07-24T09:21:11.472Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/incl-excl-3.html</loc>
-    <lastmod>2025-07-24T08:33:01.722Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/xor.html</loc>
-    <lastmod>2025-07-24T08:32:33.303Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/problems/bank/counting/basic-counting.html</loc>
-    <lastmod>2025-07-29T20:52:13.967Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/problems/bank/counting/ross-balls.html</loc>
-    <lastmod>2025-07-24T08:33:53.891Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/labs/lab-3.html</loc>
-    <lastmod>2025-07-26T08:23:12.896Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/problems/bank/counting/poker-dice.html</loc>
-    <lastmod>2025-07-28T01:12:38.614Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/problems/bank/counting/ht-receipt.html</loc>
-    <lastmod>2025-07-26T22:07:56.421Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/weather-app.html</loc>
-    <lastmod>2025-07-24T08:30:48.580Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/union-bound.html</loc>
+    <lastmod>2025-07-30T02:13:50.234Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/basic-rules/basic-inequality.html</loc>
     <lastmod>2025-07-29T20:51:31.255Z</lastmod>
   </url>
   <url>
+    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/weather-app.html</loc>
+    <lastmod>2025-07-24T08:30:48.580Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/ht-receipt.html</loc>
+    <lastmod>2025-07-26T22:07:56.421Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/poker-dice.html</loc>
+    <lastmod>2025-07-28T01:12:38.614Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/labs/lab-3.html</loc>
+    <lastmod>2025-07-26T08:23:12.896Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/ross-balls.html</loc>
+    <lastmod>2025-07-24T08:33:53.891Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/basic-counting.html</loc>
+    <lastmod>2025-07-29T20:52:13.967Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/xor.html</loc>
+    <lastmod>2025-07-24T08:32:33.303Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/incl-excl-3.html</loc>
+    <lastmod>2025-07-24T08:33:01.722Z</lastmod>
+  </url>
+  <url>
     <loc>https://sta240-f25.github.io/problems/bank/basic-rules/set-minus.html</loc>
-    <lastmod>2025-07-29T20:56:54.544Z</lastmod>
+    <lastmod>2025-07-29T22:16:04.180Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/calculus-review/calc-logexp.html</loc>
@@ -193,16 +189,8 @@
     <lastmod>2025-07-28T01:22:38.848Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/pset-4.html</loc>
-    <lastmod>2025-07-29T21:23:42.980Z</lastmod>
-  </url>
-  <url>
     <loc>https://sta240-f25.github.io/problems/pset-0.html</loc>
     <lastmod>2025-07-29T21:21:33.827Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/problems/pset-2.html</loc>
-    <lastmod>2025-07-29T21:22:57.065Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/index.html</loc>
