@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-1fa1d8026083a9bddc52b4aafc7f818e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-dc10cce4b84d18b17ee277b667b16726.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-8a69060814ebe97eb485b5dc4a856627.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -249,7 +249,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">R Explainers</span></a>
+ <span class="menu-text"><code>R</code> Explainers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -427,6 +427,10 @@ Example: <span class="math inline">\(u\)</span>-sub
 <section id="integration-by-parts" class="level2">
 <h2 class="anchored" data-anchor-id="integration-by-parts">Integration by parts</h2>
 <p>Let’s face it; this sucks. But sometimes there’s no way around it.</p>
+<p><span class="math display">\[
+\int_a^b u(x) v'(x) \, \text{d}x
+    = \left[u(x) v(x)\right]_a^b - \int_a^b u'(x) v(x) \, \text{d}x
+\]</span></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -437,7 +441,41 @@ Example: IBP
 </div>
 </div>
 <div class="callout-body-container callout-body">
-
+<p>Consider this integral:</p>
+<p><span class="math display">\[
+\int_1^2\frac{\ln(x)}{x^2}\text{d}x
+\]</span> <span class="math inline">\(\ln(x)\)</span> is easier to differentiate, and <span class="math inline">\(1/x^2\)</span> is easier to antidifferentiate, which suggests the following choice:</p>
+<p><span class="math display">\[
+\begin{aligned}
+u&amp;=\ln(x)\\
+\text{d}u&amp;=\frac{\text{d}x}{x}\\
+v&amp;=-x^{-1}\\
+\text{d}v&amp;=x^{-2}.
+\end{aligned}
+\]</span></p>
+<p>Let the fun begin:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\int_1^2\frac{\ln(x)}{x^2}\text{d}x
+&amp;=
+\left[-\frac{\ln(x)}{x}\right]_1^2
++
+\int_1^2\frac{\text{d}x}{x^2}
+\\
+&amp;=
+\left[-\frac{\ln(x)}{x}\right]_1^2
++
+\left[-x^{-1}\right]_1^2
+\\
+&amp;=
+\left[-\frac{\ln(2)}{2}-\left(-\frac{\ln(1)}{1}\right)\right]
++
+\left[-\frac{1}{2}-\left(-\frac{1}{1}\right)\right]
+\\
+&amp;=
+-\frac{\ln(2)}{2} + \frac{1}{2}.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </section>
