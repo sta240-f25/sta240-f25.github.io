@@ -7,6 +7,7 @@ editor:
 
 For better or worse, [Greek letters](https://en.wikipedia.org/wiki/Greek_alphabet) will be flying in this class, so you should have a working knowledge of the most common ones used in mathematics:
 
+::: {.center-table}
 | Greek Letter       | English Name |
 |--------------------|--------------|
 | $A, \alpha$        | alpha        |
@@ -33,3 +34,4 @@ For better or worse, [Greek letters](https://en.wikipedia.org/wiki/Greek_alphabe
 | $X, \chi$          | chi ("kai")  |
 | $\Psi, \psi$       | psi          |
 | $\Omega, \omega$   | omega        |
+:::

@@ -6,6 +6,7 @@ editor:
 
 Your final course grade will be calculated as follows:
 
+::: {.center-table}
 | Category       | Percentage |
 |----------------|------------|
 | Labs           | 10%        |
@@ -13,9 +14,11 @@ Your final course grade will be calculated as follows:
 | Midterm Exam 1 | 20%        |
 | Midterm Exam 2 | 20%        |
 | Final exam     | 20%        |
+:::
 
 Your final letter grade will be determined based on the usual thresholds:
 
+::: {.center-table}
 | Letter Grade | Final Course Grade |
 |--------------|--------------------|
 | A+           | \>= 97             |
@@ -31,6 +34,7 @@ Your final letter grade will be determined based on the usual thresholds:
 | D            | 63 - 66.99         |
 | D-           | 60 - 62.99         |
 | F            | \< 60              |
+:::
 
 ::: callout-warning
 These thresholds will not change, and they will be applied exactly. This means that the final grades will not be curved, and a 92.99, for example, will not be rounded up to an A.
