@@ -66,6 +66,32 @@ When you perform a **$u$-substitution**, you're basically trying to undo the cha
 
 ::: callout-tip 
 ## Example: $u$-sub
+
+$$
+\int_0^2
+\frac{x}{\sqrt{x^2+1}}\,\text{d}x.
+$$
+
+$u=x^2+1$ and $\text{d}u=2x\,\text{d}x$
+
+$$
+\begin{aligned}
+\int_0^2
+\frac{x}{\sqrt{x^2+1}}\,\text{d}x
+&=
+\frac{1}{2}\int_1^5\frac{\text{d}u}{\sqrt{u}}
+\\
+&=
+\frac{1}{2}\left[2u^{1/2}\right]_1^5
+\\
+&=
+\frac{1}{2}
+\left(2\sqrt{5}-2\sqrt{1}\right)
+\\
+&=
+\sqrt{5}-1.
+\end{aligned}
+$$
 :::
 
 ## Integration by parts
@@ -150,6 +176,29 @@ You can pick whatever value of $c$ is most convenient. Zero will be a common cho
 ::: callout-tip 
 ## Example: improper integral with infinite bound
 
+$$
+\begin{aligned}
+\int_0^\infty e^{-x}\,\text{d}x
+&=
+\lim_{b\to\infty}\int_0^be^{-x}\,\text{d}x
+\\
+&=
+\lim_{b\to\infty}
+[-e^{-x}]_0^b
+\\
+&=
+\lim_{b\to\infty}
+\left(-e^{-b}-(-e^{-0})\right)
+\\
+&=
+-\lim_{b\to\infty}\frac{1}{e^b}+1
+\\
+&=
+-0+1
+\\
+&=1.
+\end{aligned}
+$$
 :::
 
 ::: callout-tip 
@@ -164,8 +213,11 @@ You can see why if you plot the integrand:
 
 ```{r}
 #| echo: false
+#| fig-asp: 0.5
+#| fig-width: 4
+#| fig-align: center
 par(mar = c(4, 4, 0.1, 0.1))
-curve(1 / sqrt(x), from = 0, to = 1, n = 500, col = "red")
+curve(1 / sqrt(x), from = 0, to = 1, n = 500, col = "red", lwd = 2)
 ```
 
 There's a vertical asymptote at $x=0$, so this is also an improper integral: 
