@@ -20,6 +20,17 @@ Just as the [derivative](https://sta240-f25.github.io/math/differentiation.html)
 
 ![](images/riemann.gif){fig-align="center"}
 
+## Integral rules
+
+| rule | formula |
+|------|------|
+| dummy variable | $\int_a^bf(x)\,\text{d}x=\int_a^bf(t)\,\text{d}t=\int_a^bf(u)\,\text{d}u=\cdots$ |
+| opposite | $\int_a^bf(x)\,\text{d}x=-\int_b^af(x)\,\text{d}x$ |
+| scaling | $\int_a^bcf(x)\,\text{d}x=c\int_a^bf(x)\,\text{d}x$ |
+| sum/difference | $\int_a^b[f(x)\pm g(x)]\text{d}x=\int_a^bf(x)\,\text{d}x \pm\int_a^bg(x)\text{d}x$ |
+| linearity | $\int_a^b[p\cdot f(x)\pm q\cdot g(x)]\text{d}x=p\int_a^bf(x)\,\text{d}x \pm q\int_a^bg(x)\text{d}x$ |
+| split | $\int_a^bf(x)\,\text{d}x=\int_a^cf(x)\,\text{d}x+\int_c^bf(x)\,\text{d}x$ |
+
 ## The fundamental theorem of calculus
 
 The **fundamental theorem of calculus** is a bridge between the seemingly unrelated worlds of derivatives and integrals:
@@ -59,12 +70,14 @@ When you perform a **$u$-substitution**, you're basically trying to undo the cha
 
 ## Integration by parts
 
-Let's face it; this sucks. But sometimes there's no way around it. 
+Let's face it; this sucks. But sometimes you have to integrate a funky product, and there's no way around it, so you do this:
 
 $$
 \int_a^b u(x) v'(x) \, \text{d}x 
-    = \left[u(x) v(x)\right]_a^b - \int_a^b u'(x) v(x) \, \text{d}x
+    = \left[u(x) v(x)\right]_a^b - \int_a^b v(x)u'(x)  \, \text{d}x
 $$
+
+Through the subtlest of black magic, you have to decide what parts of the integrand to treat as $u$ and $\text{d}v$. Typically you make $u$ something that is easy to differentiate, and you make $\text{d}v$ something that is easy to antidifferentiate. Good luck!
 
 ::: callout-tip 
 ## Example: IBP
@@ -81,7 +94,7 @@ $$
 u&=\ln(x)\\
 \text{d}u&=\frac{\text{d}x}{x}\\
 v&=-x^{-1}\\
-\text{d}v&=x^{-2}.
+\text{d}v&=x^{-2}\,\text{d}x.
 \end{aligned}
 $$
 
@@ -112,4 +125,71 @@ $$
 :::
 
 ## Improper integration (we will do this a lot!)
+
+An improper integral is the limit of a definite integral as one or more of the bounds tend toward some extreme value, typically $\pm\infty$. So a one-sided improper integral is defined like this:
+
+$$
+\int_a^\infty f(x)\,\text{d}x=\lim_{b\to\infty}\int_a^bf(x)\,\text{d}x
+$$
+
+A two-sided improper integral is defined as the sum of two one-sided improper integrals, where we make use of the "splitting" property: 
+
+$$
+\begin{aligned}
+\int_{-\infty}^\infty f(x)\,\text{d}x
+&=
+\int_{-\infty}^c f(x)\,\text{d}x + \int_c^\infty f(x)\,\text{d}x
+\\
+&=
+\lim_{a\to-\infty}\int_a^cf(x)\,\text{d}x+\lim_{b\to\infty}\int_c^bf(x)\,\text{d}x.
+\end{aligned}
+$$
+
+You can pick whatever value of $c$ is most convenient. Zero will be a common choice.
+
+::: callout-tip 
+## Example: improper integral with infinite bound
+
+:::
+
+::: callout-tip 
+## Example: improper integral with finite bound
+You still might need improper integration, even for an ordinary-looking thing like this:
+
+$$
+\int_0^1\frac{1}{\sqrt{x}}\text{d}x.
+$$
+
+You can see why if you plot the integrand:
+
+```{r}
+#| echo: false
+par(mar = c(4, 4, 0.1, 0.1))
+curve(1 / sqrt(x), from = 0, to = 1, n = 500, col = "red")
+```
+
+There's a vertical asymptote at $x=0$, so this is also an improper integral: 
+
+$$
+\begin{aligned}
+\int_0^1\frac{1}{\sqrt{x}}\text{d}x
+&=
+\lim_{a\to 0}\int_a^1\frac{1}{\sqrt{x}}\text{d}x
+\\
+&=
+\lim_{a\to 0}\left[2x^{1/2}\right]_a^1
+\\
+&=
+\lim_{a\to 0}\left[2\cdot 1^{1/2}-2a^{1/2}\right]
+\\
+&=2-2\cdot0^{1/2}
+\\
+&=
+2.
+\end{aligned}
+$$
+
+$2x^{1/2}$ is continuous at 0, so to evaluate the limit you can just plug-in.
+
+:::
 
