@@ -14,25 +14,37 @@ On this problem set you are asked to prove some new probability rules using a sm
 
 {{< include bank/_music-rec.qmd >}}
 
-## Problem X
+## Problem 1
 
 {{< include bank/conceptual/diaconis.qmd >}}
 
-## Problem X
+## Problem 2
+
+Basic set practice.
+
+## Problem 3
 
 {{< include bank/set-theory/demorgan-picture.qmd >}}
 
-## Problem X
+## Problem 4
 
 {{< include bank/basic-rules/weather-app.qmd >}}
 
-## Problem X
+## Problem 5
 
 {{< include bank/basic-rules/xor.qmd >}}
 
-## Problem X
+## Problem 6
 
 {{< include bank/basic-rules/incl-excl-3.qmd >}}
+
+## Problem 7
+
+{{< include bank/basic-rules/poisson-measure.qmd >}}
+
+## Problem 8
+
+Casella/Berger dart board?
 
 ## Problem 9
 
