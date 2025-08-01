@@ -1,5 +1,1 @@
----
-title: "darts"
-format: html
----
-
+![](images/dart-board.png){width="40%" fig-align="center"}
