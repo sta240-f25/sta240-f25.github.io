@@ -44,7 +44,7 @@ Basic set practice.
 
 ## Problem 8
 
-Casella/Berger dart board?
+{{< include bank/basic-rules/darts.qmd >}}
 
 ## Problem 9
 
