@@ -17,3 +17,7 @@ $$
 $$
 \lim_{x\to c}\frac{f(x)}{g(x)}=\lim_{x\to c}\frac{f'(x)}{g'(x)}
 $$
+
+::: callout-tip 
+## Example: 
+:::
