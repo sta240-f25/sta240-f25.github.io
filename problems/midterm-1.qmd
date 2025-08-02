@@ -17,6 +17,10 @@ Below are practice problems for each of these areas, as well as guidance about w
 
 ## Problem X
 
+{{< include bank/basic-rules/basic-inequality.qmd >}}
+
+## Problem X
+
 {{< include bank/basic-rules/set-minus.qmd >}}
 
 # Counting
