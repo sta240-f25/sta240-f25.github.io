@@ -1,0 +1,7 @@
+---
+title: "Welcome to STA 240!"
+format: revealjs
+auto-stretch: false
+editor: 
+  mode: source
+---
