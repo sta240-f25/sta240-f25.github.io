@@ -10,17 +10,45 @@ editor:
 
 {{< include bank/_music-rec.qmd >}}
 
-## Problem X
+## Problem 1
 
 {{< include bank/conceptual/lousy-forecasting.qmd >}}
 
-## Problem X
+## Problem 2
 
 {{< include bank/basic-rules/union-bound.qmd >}}
 
-## Problem X
+## Problem 3
+
+Another proof
+
+## Problem 4
+
+Counting
+
+## Problem 5
+
+Counting
+
+## Problem 6
+
+Counting
+
+## Problem 7
+
+Counting
+
+## Problem 8
+
+Counting
+
+## Problem 9
 
 {{< include bank/conditional-probability/independent-complements.qmd >}}
+
+## Problem 10
+
+Conditional probability
 
 ## Submission
 
