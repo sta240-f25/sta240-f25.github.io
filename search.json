@@ -778,7 +778,7 @@
     "href": "problems/bank/set-theory/basic-set-practice.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Take \\(\\mathbb{R}\\) to be your reference set, and consider these subsets:\n\\[\n\\begin{align*}\nA&=[1,\\,5]\\\\\nB&=\\{x\\in\\mathbb{R}\\,:\\,|x|&gt;2\\}\\\\\nC&=(-\\infty,\\,0].\n\\end{align*}\n\\]\nExpress each of the following in as simplified and concise a form as possible:\n\n\\(A^c\\)\n\\(A \\cup B\\)\n\\(B \\cap C^c\\)\n\\(A^c \\cap B^c \\cap C^c\\)\n\\((A \\cup B) \\cap C\\)"
+    "text": "Take \\(\\mathbb{R}\\) to be your reference set, and consider these subsets:\n\\[\n\\begin{align*}\nA&=[1,\\,5]\\\\\nB&=\\{x\\in\\mathbb{R}\\,:\\,|x|&gt;2\\}\\\\\nC&=(-\\infty,\\,0]\\\\\nI_n&=\\left[0,\\,\\frac{1}{n}\\right]\n\\end{align*}\n\\]\nExpress each of the following in as simplified and concise a form as possible:\n\n\\(A^c\\)\n\\(A \\cup B\\)\n\\(A\\cap C\\)\n\\(A\\cap C^c\\)\n\\(B \\cap C^c\\)\n\\(A^c \\cap B^c \\cap C^c\\)\n\\((A \\cup B) \\cap C\\)\n\\(\\bigcap_{n=1}^\\infty I_n\\)\n\\(\\bigcup_{n=1}^\\infty I_n\\)"
   },
   {
     "objectID": "problems/bank/random-variables-discrete/bdj-rv.html",
@@ -998,11 +998,11 @@
     "text": "Not all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.\nImagine an election where Aloysius receives \\(a\\) votes, Bernadette receives \\(b\\) votes, and Aloysius provisionally wins with a margin of victory \\(a-b&gt;0\\). However, of the total \\(a+b\\) votes, we learn that \\(k&gt;a-b\\) were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the \\(k\\) invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.\nTo model this, think of the original \\(a+b\\) ballots as balls in the proverbial urn. \\(a\\) of these balls are red, and \\(b\\) of these balls are blue, and assume that \\(a,\\, b&gt;k\\). Removing the \\(k\\) invalid ballots is like drawing \\(k\\) balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the \\(a+b\\) original ballots is equally likely to have been invalid. Next, imagine we randomly remove \\(k\\) balls from the urn, and let \\(X\\) be a random variable that counts the number of the removed/invalid ballots that belong to Aloysius. In other words, the number of red balls removed. If \\(X\\) is large enough, it will swing the election in Bernadette’s favor.\n\nWhat are the range and the pmf of the random variable \\(X\\)?\nFor what values of \\(X\\) does removing \\(k\\) ballots reverse the outcome of the election?\nBased on your answers to parts a and b, what is the probability that the election result is reversed when the \\(k\\) bad ballots are removed?\nLet’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a figure in R that has the margin of victory \\(a-b\\) on the horizontal axis and the number of bad ballots \\(k\\) on the vertical axis. In this figure, draw a line that splits the plane into two parts: the part where the reversal probability is greater than 5% and the part where it is less than 5%;\nTable 1 features real data on some contested American elections. Add a scatterplot to your previous picture where each point represents an election, and comment on the match or lack thereof between our model and the decision that was actually made;\nHow do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?\n\n\n\n\nTable 1: Close elections\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nelection\nyear\nwin\nloss\ntotal\nmargin\ninvalid\ndecision\n\n\n\n\nIppolito v. Power\n1968\n1,422\n1,405\n2,287\n17\n101\nvoid\n\n\nSantucci v. Power\n1969\n58,076\n57,981\n116,057\n95\n448\nvoid\n\n\nDeMartini v. Power\n1970\n2,656\n2,594\n5,250\n62\n136\nupheld\n\n\nMaine House\n1976\n1,193\n1,060\n2,253\n133\n208\nvoid\n\n\nAnn Arbor mayor\n1977\n10,660\n10,659\n21,319\n1\n20\nvoid\n\n\nBrunswick ME town council\n1980\n2,390\n2,383\n4,773\n7\n16\nupheld\n\n\nWashington governor\n2004\n1,373,357\n1,373,228\n2,746,585\n129\n1,439\nupheld"
   },
   {
-    "objectID": "problems/bank/set-theory/demorgan-picture.html",
-    "href": "problems/bank/set-theory/demorgan-picture.html",
+    "objectID": "problems/bank/set-theory/picture-proofs.html",
+    "href": "problems/bank/set-theory/picture-proofs.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "“Prove” each of De Morgan’s laws with a picture:\n\n\\((A\\cap B)^{c}=A^{c}\\cup B^{c}\\);\n\\((A\\cup B)^{c}=A^{c}\\cap B^{c}\\)."
+    "text": "“Prove” each set identity with a picture:\n\n\\((A\\cap B)\\cup C = (A\\cup C)\\cap (B\\cup C)\\);\n\\((A\\cap B)^{c}=A^{c}\\cup B^{c}\\);"
   },
   {
     "objectID": "problems/bank/conditional-probability/bdj-circuit.html",
@@ -1024,34 +1024,6 @@
     "title": "STA 240 Fall 2025",
     "section": "",
     "text": "Let \\(A\\) and \\(B\\) be independent events. Prove that \\(A^c\\) and \\(B^c\\) are independent events."
-  },
-  {
-    "objectID": "problems/midterm-1.html",
-    "href": "problems/midterm-1.html",
-    "title": "Midterm 1 Study Guide",
-    "section": "",
-    "text": "Midterm Exam 1 will take place on Thursday October 9 during your lab section. There will be XX problems, and they will break down as follows:\nBelow are practice problems for each of these areas, as well as guidance about what course materials to refer to if you want more review on a particular topic."
-  },
-  {
-    "objectID": "problems/midterm-1.html#problem-x",
-    "href": "problems/midterm-1.html#problem-x",
-    "title": "Midterm 1 Study Guide",
-    "section": "Problem X",
-    "text": "Problem X\nProve that\n\\[\nP(A)+P(B)-1\\leq P(A\\cap B).\n\\]"
-  },
-  {
-    "objectID": "problems/midterm-1.html#problem-x-1",
-    "href": "problems/midterm-1.html#problem-x-1",
-    "title": "Midterm 1 Study Guide",
-    "section": "Problem X",
-    "text": "Problem X\nLet \\(S\\) be a sample space, let \\(A,\\, B\\subseteq S\\) be events, and define a new set\n\\[\nA-B = \\{x\\in S:x\\in A\\text{ and }x\\notin B\\}.\n\\]\n\nDraw a well-labeled picture of \\(A\\), \\(B\\), \\(S\\), and the set \\(A-B\\);\nWrite down an equivalent expression for \\(A-B\\) that only makes use of our three basic operations: union, intersection, and complement;\nProve that \\(P(A-B)=P(A)-P(A\\cap B)\\)."
-  },
-  {
-    "objectID": "problems/midterm-1.html#problem-x-2",
-    "href": "problems/midterm-1.html#problem-x-2",
-    "title": "Midterm 1 Study Guide",
-    "section": "Problem X",
-    "text": "Problem X\nPoker dice is played by simultaneously rolling five dice. The dice are fair, six-sided, and distinct (imagine that each one is a different color). Find the probabilities of the following dice rolls:\n\nfive different numbers;\nthree of a kind (three dice show the same number, while the other two dice are singles);\nfull house (three dice show the same number, while the other two show a separate pair)."
   },
   {
     "objectID": "math/series.html",
