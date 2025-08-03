@@ -24,7 +24,7 @@ Basic set practice.
 
 ## Problem 3
 
-{{< include bank/set-theory/demorgan-picture.qmd >}}
+{{< include bank/set-theory/picture-proofs.qmd >}}
 
 ## Problem 4
 

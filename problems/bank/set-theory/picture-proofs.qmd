@@ -1,0 +1,4 @@
+"Prove" each set identity with a picture:
+
+a.  $(A\cap B)\cup C = (A\cup C)\cap (B\cup C)$;
+a.  $(A\cap B)^{c}=A^{c}\cup B^{c}$;
