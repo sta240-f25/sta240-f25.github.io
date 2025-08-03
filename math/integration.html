@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-1fa1d8026083a9bddc52b4aafc7f818e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-8a69060814ebe97eb485b5dc4a856627.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-de752134ec4b235ca5231ef73f7d15b6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -334,7 +334,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-fundamental-theorem-of-calculus" id="toc-the-fundamental-theorem-of-calculus" class="nav-link active" data-scroll-target="#the-fundamental-theorem-of-calculus">The fundamental theorem of calculus</a></li>
+  <li><a href="#integral-rules" id="toc-integral-rules" class="nav-link active" data-scroll-target="#integral-rules">Integral rules</a></li>
+  <li><a href="#the-fundamental-theorem-of-calculus" id="toc-the-fundamental-theorem-of-calculus" class="nav-link" data-scroll-target="#the-fundamental-theorem-of-calculus">The fundamental theorem of calculus</a></li>
   <li><a href="#integration-by-substitution" id="toc-integration-by-substitution" class="nav-link" data-scroll-target="#integration-by-substitution">Integration by substitution</a></li>
   <li><a href="#integration-by-parts" id="toc-integration-by-parts" class="nav-link" data-scroll-target="#integration-by-parts">Integration by parts</a></li>
   <li><a href="#improper-integration-we-will-do-this-a-lot" id="toc-improper-integration-we-will-do-this-a-lot" class="nav-link" data-scroll-target="#improper-integration-we-will-do-this-a-lot">Improper integration (we will do this a lot!)</a></li>
@@ -379,6 +380,47 @@ window.Quarto = {
 <p><img src="images/riemann.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
+<section id="integral-rules" class="level2">
+<h2 class="anchored" data-anchor-id="integral-rules">Integral rules</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>rule</th>
+<th>formula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>dummy variable</td>
+<td><span class="math inline">\(\int_a^bf(x)\,\text{d}x=\int_a^bf(t)\,\text{d}t=\int_a^bf(u)\,\text{d}u=\cdots\)</span></td>
+</tr>
+<tr class="even">
+<td>opposite</td>
+<td><span class="math inline">\(\int_a^bf(x)\,\text{d}x=-\int_b^af(x)\,\text{d}x\)</span></td>
+</tr>
+<tr class="odd">
+<td>scaling</td>
+<td><span class="math inline">\(\int_a^bcf(x)\,\text{d}x=c\int_a^bf(x)\,\text{d}x\)</span></td>
+</tr>
+<tr class="even">
+<td>sum/difference</td>
+<td><span class="math inline">\(\int_a^b[f(x)\pm g(x)]\text{d}x=\int_a^bf(x)\,\text{d}x \pm\int_a^bg(x)\text{d}x\)</span></td>
+</tr>
+<tr class="odd">
+<td>linearity</td>
+<td><span class="math inline">\(\int_a^b[p\cdot f(x)\pm q\cdot g(x)]\text{d}x=p\int_a^bf(x)\,\text{d}x \pm q\int_a^bg(x)\text{d}x\)</span></td>
+</tr>
+<tr class="even">
+<td>split</td>
+<td><span class="math inline">\(\int_a^bf(x)\,\text{d}x=\int_a^cf(x)\,\text{d}x+\int_c^bf(x)\,\text{d}x\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="the-fundamental-theorem-of-calculus" class="level2">
 <h2 class="anchored" data-anchor-id="the-fundamental-theorem-of-calculus">The fundamental theorem of calculus</h2>
 <p>The <strong>fundamental theorem of calculus</strong> is a bridge between the seemingly unrelated worlds of derivatives and integrals:</p>
@@ -420,17 +462,40 @@ Example: <span class="math inline">\(u\)</span>-sub
 </div>
 </div>
 <div class="callout-body-container callout-body">
-
+<p><span class="math display">\[
+\int_0^2
+\frac{x}{\sqrt{x^2+1}}\,\text{d}x.
+\]</span></p>
+<p><span class="math inline">\(u=x^2+1\)</span> and <span class="math inline">\(\text{d}u=2x\,\text{d}x\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\int_0^2
+\frac{x}{\sqrt{x^2+1}}\,\text{d}x
+&amp;=
+\frac{1}{2}\int_1^5\frac{\text{d}u}{\sqrt{u}}
+\\
+&amp;=
+\frac{1}{2}\left[2u^{1/2}\right]_1^5
+\\
+&amp;=
+\frac{1}{2}
+\left(2\sqrt{5}-2\sqrt{1}\right)
+\\
+&amp;=
+\sqrt{5}-1.
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </section>
 <section id="integration-by-parts" class="level2">
 <h2 class="anchored" data-anchor-id="integration-by-parts">Integration by parts</h2>
-<p>Let’s face it; this sucks. But sometimes there’s no way around it.</p>
+<p>Let’s face it; this sucks. But sometimes you have to integrate a funky product, and there’s no way around it, so you do this:</p>
 <p><span class="math display">\[
 \int_a^b u(x) v'(x) \, \text{d}x
-    = \left[u(x) v(x)\right]_a^b - \int_a^b u'(x) v(x) \, \text{d}x
+    = \left[u(x) v(x)\right]_a^b - \int_a^b v(x)u'(x)  \, \text{d}x
 \]</span></p>
+<p>Through the subtlest of black magic, you have to decide what parts of the integrand to treat as <span class="math inline">\(u\)</span> and <span class="math inline">\(\text{d}v\)</span>. Typically you make <span class="math inline">\(u\)</span> something that is easy to differentiate, and you make <span class="math inline">\(\text{d}v\)</span> something that is easy to antidifferentiate. Good luck!</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -450,7 +515,7 @@ Example: IBP
 u&amp;=\ln(x)\\
 \text{d}u&amp;=\frac{\text{d}x}{x}\\
 v&amp;=-x^{-1}\\
-\text{d}v&amp;=x^{-2}.
+\text{d}v&amp;=x^{-2}\,\text{d}x.
 \end{aligned}
 \]</span></p>
 <p>Let the fun begin:</p>
@@ -481,6 +546,103 @@ v&amp;=-x^{-1}\\
 </section>
 <section id="improper-integration-we-will-do-this-a-lot" class="level2">
 <h2 class="anchored" data-anchor-id="improper-integration-we-will-do-this-a-lot">Improper integration (we will do this a lot!)</h2>
+<p>An improper integral is the limit of a definite integral as one or more of the bounds tend toward some extreme value, typically <span class="math inline">\(\pm\infty\)</span>. So a one-sided improper integral is defined like this:</p>
+<p><span class="math display">\[
+\int_a^\infty f(x)\,\text{d}x=\lim_{b\to\infty}\int_a^bf(x)\,\text{d}x
+\]</span></p>
+<p>A two-sided improper integral is defined as the sum of two one-sided improper integrals, where we make use of the “splitting” property:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\int_{-\infty}^\infty f(x)\,\text{d}x
+&amp;=
+\int_{-\infty}^c f(x)\,\text{d}x + \int_c^\infty f(x)\,\text{d}x
+\\
+&amp;=
+\lim_{a\to-\infty}\int_a^cf(x)\,\text{d}x+\lim_{b\to\infty}\int_c^bf(x)\,\text{d}x.
+\end{aligned}
+\]</span></p>
+<p>You can pick whatever value of <span class="math inline">\(c\)</span> is most convenient. Zero will be a common choice.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example: improper integral with infinite bound
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{aligned}
+\int_0^\infty e^{-x}\,\text{d}x
+&amp;=
+\lim_{b\to\infty}\int_0^be^{-x}\,\text{d}x
+\\
+&amp;=
+\lim_{b\to\infty}
+[-e^{-x}]_0^b
+\\
+&amp;=
+\lim_{b\to\infty}
+\left(-e^{-b}-(-e^{-0})\right)
+\\
+&amp;=
+-\lim_{b\to\infty}\frac{1}{e^b}+1
+\\
+&amp;=
+-0+1
+\\
+&amp;=1.
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example: improper integral with finite bound
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You still might need improper integration, even for an ordinary-looking thing like this:</p>
+<p><span class="math display">\[
+\int_0^1\frac{1}{\sqrt{x}}\text{d}x.
+\]</span></p>
+<p>You can see why if you plot the integrand:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="integration_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>There’s a vertical asymptote at <span class="math inline">\(x=0\)</span>, so this is also an improper integral:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\int_0^1\frac{1}{\sqrt{x}}\text{d}x
+&amp;=
+\lim_{a\to 0}\int_a^1\frac{1}{\sqrt{x}}\text{d}x
+\\
+&amp;=
+\lim_{a\to 0}\left[2x^{1/2}\right]_a^1
+\\
+&amp;=
+\lim_{a\to 0}\left[2\cdot 1^{1/2}-2a^{1/2}\right]
+\\
+&amp;=2-2\cdot0^{1/2}
+\\
+&amp;=
+2.
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(2x^{1/2}\)</span> is continuous at 0, so to evaluate the limit you can just plug-in.</p>
+</div>
+</div>
 
 
 </section>
