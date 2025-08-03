@@ -12,6 +12,18 @@ editor:
 
 ## Problem X
 
+Something conceptual
+
+## Problem X
+
+Counting
+
+## Problem X
+
+Counting
+
+## Problem X
+
 {{< include bank/conditional-probability/axioms-conditional.qmd >}}
 
 ## Problem X
@@ -25,6 +37,14 @@ editor:
 ## Problem X
 
 {{< include bank/conditional-probability/bdj-circuit.qmd >}}
+
+## Problem X
+
+More conditional
+
+## Problem X
+
+Random variables
 
 ## Problem X
 
