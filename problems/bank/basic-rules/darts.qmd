@@ -1,5 +1,11 @@
-![](images/dart-board.png){width="40%" fig-align="center"}
+![A dart board of radius $r$ with five numbered regions.](images/dart-board.png){#fig-dart width="40%" fig-align="center"}
 
+A novice is throwing darts at the board pictured in @fig-dart. The board has radius $r$ and the distance between rings is $r/5$. The player is guaranteed to hit the board, and the probability that their dart lands in one of the five numbered regions is proportional to the area of that region. So
 
-a. 
-a. 
+$$
+P(\text{dart lands in }i)=\frac{\text{area of }i}{\text{total area}}.
+$$
+
+a. Derive a general formula for $P(\text{dart lands in }i)$ that depends on $i=1,\,2,\,3,\,4,\,5$.
+
+b. Does the probability measure $P$ satisfy the axioms?
