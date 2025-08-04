@@ -44,7 +44,7 @@ Some of these problems ask you to prove new probability rules using a small set 
 
 ## Problem 8
 
-{{< include bank/basic-rules/darts.qmd >}}
+
 
 ## Problem 9
 

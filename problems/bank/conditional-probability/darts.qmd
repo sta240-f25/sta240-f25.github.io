@@ -1,11 +1,11 @@
-![A dart board of radius $r$ with five numbered regions.](images/dart-board.png){#fig-dart width="40%" fig-align="center"}
+![](images/dart-board.png){#fig-dart width="40%" fig-align="center"}
 
-A novice is throwing darts at the board pictured in @fig-dart. The board has radius $r$ and the distance between rings is $r/5$. The player is guaranteed to hit the board, and the probability that their dart lands in one of the five numbered regions is proportional to the area of that region. So
+A novice is throwing darts at the board pictured in @fig-dart. It has the following properties:
 
-$$
-P(\text{dart lands in }i)=\frac{\text{area of }i}{\text{total area}}.
-$$
+- The board has radius $r$;
+- The board is partitioned into five rings, each with the same "thickness" $r/5$;
+- The board is mounted on a wall of area $A$.
 
-a. Derive a general formula for $P(\text{dart lands in }i)$ that depends on $i=1,\,2,\,3,\,4,\,5$.
+The player is not very skilled. Their dart is guaranteed to reach the wall, but beyond that, the probability that it lands in any given region is just proportional to that region's area.
 
-b. Does the probability measure $P$ satisfy the axioms?
+**Task**: Derive a general formula for the *conditional* probability that a dart lands in ring $i$ given that it hits the board and not the wall. Your formula should be a function of $i=1,\,2,\,...,\,5$. 
