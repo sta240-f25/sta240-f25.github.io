@@ -746,81 +746,81 @@
     ]
   },
   {
-    "objectID": "problems/bank/conditional-probability/target-practice.html",
-    "href": "problems/bank/conditional-probability/target-practice.html",
+    "objectID": "problems/bank/conditional-probability/independent-complements.html",
+    "href": "problems/bank/conditional-probability/independent-complements.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Pearl Bailey and Elaine Stritch go target shooting. Suppose that each of Pearl’s shots hits a wooden duck target with probability \\(p_1\\), while each shot of Elaine’s hits it with probability \\(p_2\\), independent of Pearl. Suppose that they shoot simultaneously at the same target. If the wooden duck is knocked over (indicating that it was hit), what is the probability that both shots hit the duck?"
+    "text": "Let \\(A\\) and \\(B\\) be independent events. Prove that \\(A^c\\) and \\(B^c\\) are independent events."
   },
   {
-    "objectID": "problems/bank/conditional-probability/conditional-inequality.html",
-    "href": "problems/bank/conditional-probability/conditional-inequality.html",
+    "objectID": "problems/bank/conditional-probability/bdj-encryption.html",
+    "href": "problems/bank/conditional-probability/bdj-encryption.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Assume that \\(P(A)&gt;0\\) and prove that\n\\[\nP(A\\cap B\\,|\\, A)\\geq P(A\\cap B\\,|\\, A\\cup B).\n\\]"
+    "text": "An encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/axioms-conditional.html",
-    "href": "problems/bank/conditional-probability/axioms-conditional.html",
+    "objectID": "problems/bank/conditional-probability/bdj-circuit.html",
+    "href": "problems/bank/conditional-probability/bdj-circuit.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(S\\) be a sample space with probability measure \\(P\\), and let \\(B\\subseteq S\\) be some event with \\(P(B)&gt;0\\). Show that the function \\(G(A)=P(A\\,|\\, B)\\) is a new probability measure on \\(S\\). That is, show that \\(G\\) satisfies the axioms:\n\ntotal measure 1;\nnonnegativity;\ncountable additivity."
+    "text": "The figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/testing-symptoms.html",
-    "href": "problems/bank/conditional-probability/testing-symptoms.html",
+    "objectID": "problems/bank/set-theory/picture-proofs.html",
+    "href": "problems/bank/set-theory/picture-proofs.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\).\nTable 1 enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients’ “true” disease status was determined by a PCR test that we assume is hella accurate.\n\n\n\n\nTable 1: Some COVID-19 numbers. Source: CDC\n\n\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n\n-\n-\n-\n0.7650\n\n\n-\n-\n+\n0.0128\n\n\n-\n+\n-\n0.1685\n\n\n-\n+\n+\n0.0018\n\n\n+\n-\n-\n0.0091\n\n\n+\n-\n+\n0.0064\n\n\n+\n+\n-\n0.0073\n\n\n+\n+\n+\n0.0291\n\n\n\n\n\n\n\n\nWhat is the overall disease prevalence?\nWhat is the sensitivity of the test?\nWhat is the specificity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?\nWhat is the overall probability that the test is wrong?"
+    "text": "“Prove” each set identity with a picture:\n\nDistributive property: \\(A\\cup(B\\cap C)=(A\\cup B)\\cap(A\\cup C)\\);\nDe Morgan: \\((A\\cap B)^{c}=A^{c}\\cup B^{c}\\);"
   },
   {
-    "objectID": "problems/bank/set-theory/basic-set-practice.html",
-    "href": "problems/bank/set-theory/basic-set-practice.html",
+    "objectID": "problems/bank/random-variables-discrete/contested-election.html",
+    "href": "problems/bank/random-variables-discrete/contested-election.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Take \\(\\mathbb{R}\\) to be your reference set, and consider these subsets:\n\\[\n\\begin{align*}\nA&=[1,\\,5]\\\\\nB&=\\{x\\in\\mathbb{R}\\,:\\,|x|&gt;2\\}\\\\\nC&=(-\\infty,\\,0]\\\\\nI_n&=\\left[0,\\,\\frac{1}{n}\\right]\n\\end{align*}\n\\]\nExpress each of the following in as simplified and concise a form as possible:\n\n\\(A^c\\)\n\\(A \\cup B\\)\n\\(A\\cap C\\)\n\\(A\\cap C^c\\)\n\\(B \\cap C^c\\)\n\\(A^c \\cap B^c \\cap C^c\\)\n\\((A \\cup B) \\cap C\\)\n\\(\\bigcap_{n=1}^\\infty I_n\\)\n\\(\\bigcup_{n=1}^\\infty I_n\\)"
+    "text": "Not all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.\nImagine an election where Aloysius receives \\(a\\) votes, Bernadette receives \\(b\\) votes, and Aloysius provisionally wins with a margin of victory \\(a-b&gt;0\\). However, of the total \\(a+b\\) votes, we learn that \\(k&gt;a-b\\) were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the \\(k\\) invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.\nTo model this, think of the original \\(a+b\\) ballots as balls in the proverbial urn. \\(a\\) of these balls are red, and \\(b\\) of these balls are blue, and assume that \\(a,\\, b&gt;k\\). Removing the \\(k\\) invalid ballots is like drawing \\(k\\) balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the \\(a+b\\) original ballots is equally likely to have been invalid. Next, imagine we randomly remove \\(k\\) balls from the urn, and let \\(X\\) be a random variable that counts the number of the removed/invalid ballots that belong to Aloysius. In other words, the number of red balls removed. If \\(X\\) is large enough, it will swing the election in Bernadette’s favor.\n\nWhat are the range and the pmf of the random variable \\(X\\)?\nFor what values of \\(X\\) does removing \\(k\\) ballots reverse the outcome of the election?\nBased on your answers to parts a and b, what is the probability that the election result is reversed when the \\(k\\) bad ballots are removed?\nLet’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a figure in R that has the margin of victory \\(a-b\\) on the horizontal axis and the number of bad ballots \\(k\\) on the vertical axis. In this figure, draw a line that splits the plane into two parts: the part where the reversal probability is greater than 5% and the part where it is less than 5%;\nTable 1 features real data on some contested American elections. Add a scatterplot to your previous picture where each point represents an election, and comment on the match or lack thereof between our model and the decision that was actually made;\nHow do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?\n\n\n\n\nTable 1: Close elections\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nelection\nyear\nwin\nloss\ntotal\nmargin\ninvalid\ndecision\n\n\n\n\nIppolito v. Power\n1968\n1,422\n1,405\n2,287\n17\n101\nvoid\n\n\nSantucci v. Power\n1969\n58,076\n57,981\n116,057\n95\n448\nvoid\n\n\nDeMartini v. Power\n1970\n2,656\n2,594\n5,250\n62\n136\nupheld\n\n\nMaine House\n1976\n1,193\n1,060\n2,253\n133\n208\nvoid\n\n\nAnn Arbor mayor\n1977\n10,660\n10,659\n21,319\n1\n20\nvoid\n\n\nBrunswick ME town council\n1980\n2,390\n2,383\n4,773\n7\n16\nupheld\n\n\nWashington governor\n2004\n1,373,357\n1,373,228\n2,746,585\n129\n1,439\nupheld"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/bdj-rv.html",
-    "href": "problems/bank/random-variables-discrete/bdj-rv.html",
+    "objectID": "problems/bank/random-variables-discrete/gandalf-test.html",
+    "href": "problems/bank/random-variables-discrete/gandalf-test.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "An urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
+    "text": "King Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 soldiers;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten soldiers. We can then identify which soldiers are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/ross-rv.html",
-    "href": "problems/bank/random-variables-discrete/ross-rv.html",
+    "objectID": "problems/bank/conceptual/lousy-forecasting.html",
+    "href": "problems/bank/conceptual/lousy-forecasting.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Two balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
+    "text": "Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:\n\nZohran Mamdani wins the New York City mayoral election;\nWicked: For Good makes more money (inflation adjusted) on its opening weekend than Wicked: Part I;\n“The Epstein files” (whatever the hell those even are) are somehow made publicly available;\nDuke University settles with the Trump administration (need to make this more precise)\nSomething to do with Duke Football\nWorld Series (in october)\noutcome of a high profile court case\nsome silly gen z thing (ask TAs)\n\nChoose one of these, state the probability that you assign to the event happening, and explain in a few paragraphs how you formulated your belief. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed."
   },
   {
-    "objectID": "problems/bank/conceptual/diaconis.html",
-    "href": "problems/bank/conceptual/diaconis.html",
+    "objectID": "problems/bank/calculus-review/calc-series.html",
+    "href": "problems/bank/calculus-review/calc-series.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Persi Diaconis is a famous researcher in probability and statistics. He has a cute line of research where he probes the randomness that we take for granted in simple things like coin tossing, dice, and playing cards. In this Numberphile interview, he discusses coin tossing, and says both “coin tossing is as close to a random phenomenon as I know” and “coin tossing is a deterministic process. What’s random about it?” Wut?\nWatch the interview, and report back with a brief summary of Diaconis’ explanation of what makes a coin toss random. Do you agree or disagree?"
+    "text": "Assume \\(\\lambda&gt;0\\) is a constant and compute\n\\[\n    \\sum\\limits_{n=0}^\\infty n \\frac{\\lambda^n}{n!}e^{-\\lambda}\n    .\n\\]"
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-bad-notation.html",
-    "href": "problems/bank/calculus-review/calc-bad-notation.html",
+    "objectID": "problems/bank/calculus-review/calc-limit.html",
+    "href": "problems/bank/calculus-review/calc-limit.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Explain why this is horrific notation:\n\\[\n    \\int_0^x f(x)\\,\\textrm{d} x.\n\\]"
+    "text": "Let \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\n“[T]wice continuously differentiable” means that \\(f\\), \\(f'\\), and \\(f''\\) are all continuous functions at and around zero. A full credit solution must clearly explain how and why continuity is being used along the way."
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-pareto-ish.html",
-    "href": "problems/bank/calculus-review/calc-pareto-ish.html",
+    "objectID": "problems/bank/calculus-review/calc-inflection.html",
+    "href": "problems/bank/calculus-review/calc-inflection.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider this integral:\n\\[\n    \\int_2^\\infty\n    \\frac{1}{x(\\ln x)^p}\\textrm{d} x\n    .\n\\]\n\nUse R to create a single plot with many lines, each graphing the integrand for a different value of \\(p\\). Consider \\(p\\) equal to -2, -1.5, -1, 0, 1, and 5, and make the \\(x\\)-axis of your plot run from 2 to 15.\nShow that \\(\\lim_{x\\to\\infty}\\frac{1}{x(\\ln x)^p}=0\\) for all values of \\(-\\infty&lt;p&lt;\\infty\\).\nFor what values of \\(p\\) does the integral converge? When it does converge, what is its value?\nConsult the picture you created in part (a), and write a few sentences explaining conceptually why the integral converges for some values of \\(p\\) but not others.\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nWhen taking the limit or evaluating the integral, can you use the same technique for all values of \\(p\\), or do you need a different technique depending on what \\(p\\) is?"
+    "text": "Here is a very silly function:\n\\[\nh(x)\n=\n\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\n,\\quad\n-\\infty&lt;x&lt;\\infty\n.\n\\]\nTreat \\(-\\infty&lt;\\mu&lt;\\infty\\) and \\(\\sigma&gt;0\\) as constants and compute the value(s) of \\(x\\) at which \\(h\\) has inflection points.\n\n\n\n\n\n\nHint\n\n\n\n\n\nHere is an example of what \\(h\\) might look like in the special case where \\(\\mu = 1\\) and \\(\\sigma=2\\):\n\n\nCode\nm = 1\ns = 2\npar(mar = c(4, 4, 0.1, 4))\ncurve(exp(-0.5 * ((x - m) / s)^2), \n      from = -6, to = 8, n = 500,\n      xlab = \"x\", ylab = \"h(x)\")\n\n\n\n\n\n\n\n\n\nBefore you start doing any math, can you use the picture to guess what the answer will be?"
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-logexp.html",
-    "href": "problems/bank/calculus-review/calc-logexp.html",
+    "objectID": "problems/bank/calculus-review/calc-gamma.html",
+    "href": "problems/bank/calculus-review/calc-gamma.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Simplify this:\n\\[\n\\ln\\left(e^{a_1}e^{a_2}e^{a_3}\\cdots e^{a_n}\\right).\n\\]"
+    "text": "Here is another inordinately silly function:\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\textrm{d} y,\\quad x&gt;0.\n\\]\nProve that \\(\\Gamma(x+1)=x\\Gamma(x)\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nStart on the left-hand side by writing out \\(\\Gamma(x+1)\\) and evaluating the integral by parts."
   },
   {
     "objectID": "problems/bank/basic-rules/union-bound.html",
@@ -949,81 +949,88 @@
     "text": "Let \\(S\\) be a sample space, let \\(A,\\, B\\subseteq S\\) be events, and define a new set\n\\[\nA-B = \\{x\\in S:x\\in A\\text{ and }x\\notin B\\}.\n\\]\n\nDraw a well-labeled picture of \\(A\\), \\(B\\), \\(S\\), and the set \\(A-B\\);\nWrite down an equivalent expression for \\(A-B\\) that only makes use of our three basic operations: union, intersection, and complement;\nProve that \\(P(A-B)=P(A)-P(A\\cap B)\\)."
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-gamma.html",
-    "href": "problems/bank/calculus-review/calc-gamma.html",
+    "objectID": "problems/bank/calculus-review/calc-logexp.html",
+    "href": "problems/bank/calculus-review/calc-logexp.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is another inordinately silly function:\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\textrm{d} y,\\quad x&gt;0.\n\\]\nProve that \\(\\Gamma(x+1)=x\\Gamma(x)\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nStart on the left-hand side by writing out \\(\\Gamma(x+1)\\) and evaluating the integral by parts."
+    "text": "Simplify this:\n\\[\n\\ln\\left(e^{a_1}e^{a_2}e^{a_3}\\cdots e^{a_n}\\right).\n\\]"
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-inflection.html",
-    "href": "problems/bank/calculus-review/calc-inflection.html",
+    "objectID": "problems/bank/calculus-review/calc-pareto-ish.html",
+    "href": "problems/bank/calculus-review/calc-pareto-ish.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is a very silly function:\n\\[\nh(x)\n=\n\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\n,\\quad\n-\\infty&lt;x&lt;\\infty\n.\n\\]\nTreat \\(-\\infty&lt;\\mu&lt;\\infty\\) and \\(\\sigma&gt;0\\) as constants and compute the value(s) of \\(x\\) at which \\(h\\) has inflection points.\n\n\n\n\n\n\nHint\n\n\n\n\n\nHere is an example of what \\(h\\) might look like in the special case where \\(\\mu = 1\\) and \\(\\sigma=2\\):\n\n\nCode\nm = 1\ns = 2\npar(mar = c(4, 4, 0.1, 4))\ncurve(exp(-0.5 * ((x - m) / s)^2), \n      from = -6, to = 8, n = 500,\n      xlab = \"x\", ylab = \"h(x)\")\n\n\n\n\n\n\n\n\n\nBefore you start doing any math, can you use the picture to guess what the answer will be?"
+    "text": "Consider this integral:\n\\[\n    \\int_2^\\infty\n    \\frac{1}{x(\\ln x)^p}\\textrm{d} x\n    .\n\\]\n\nUse R to create a single plot with many lines, each graphing the integrand for a different value of \\(p\\). Consider \\(p\\) equal to -2, -1.5, -1, 0, 1, and 5, and make the \\(x\\)-axis of your plot run from 2 to 15.\nShow that \\(\\lim_{x\\to\\infty}\\frac{1}{x(\\ln x)^p}=0\\) for all values of \\(-\\infty&lt;p&lt;\\infty\\).\nFor what values of \\(p\\) does the integral converge? When it does converge, what is its value?\nConsult the picture you created in part (a), and write a few sentences explaining conceptually why the integral converges for some values of \\(p\\) but not others.\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nWhen taking the limit or evaluating the integral, can you use the same technique for all values of \\(p\\), or do you need a different technique depending on what \\(p\\) is?"
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-limit.html",
-    "href": "problems/bank/calculus-review/calc-limit.html",
+    "objectID": "problems/bank/calculus-review/calc-bad-notation.html",
+    "href": "problems/bank/calculus-review/calc-bad-notation.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\n“[T]wice continuously differentiable” means that \\(f\\), \\(f'\\), and \\(f''\\) are all continuous functions at and around zero. A full credit solution must clearly explain how and why continuity is being used along the way."
+    "text": "Explain why this is horrific notation:\n\\[\n    \\int_0^x f(x)\\,\\textrm{d} x.\n\\]"
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-series.html",
-    "href": "problems/bank/calculus-review/calc-series.html",
+    "objectID": "problems/bank/conceptual/diaconis.html",
+    "href": "problems/bank/conceptual/diaconis.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Assume \\(\\lambda&gt;0\\) is a constant and compute\n\\[\n    \\sum\\limits_{n=0}^\\infty n \\frac{\\lambda^n}{n!}e^{-\\lambda}\n    .\n\\]"
+    "text": "Persi Diaconis is a famous researcher in probability and statistics. He has a cute line of research where he probes the randomness that we take for granted in simple things like coin tossing, dice, and playing cards. In this Numberphile interview, he discusses coin tossing, and says both “coin tossing is as close to a random phenomenon as I know” and “coin tossing is a deterministic process. What’s random about it?” Wut?\nWatch the interview, and report back with a brief summary of Diaconis’ explanation of what makes a coin toss random. Do you agree or disagree?"
   },
   {
-    "objectID": "problems/bank/conceptual/lousy-forecasting.html",
-    "href": "problems/bank/conceptual/lousy-forecasting.html",
+    "objectID": "problems/bank/random-variables-discrete/ross-rv.html",
+    "href": "problems/bank/random-variables-discrete/ross-rv.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:\n\nZohran Mamdani wins the New York City mayoral election;\nWicked: For Good makes more money (inflation adjusted) on its opening weekend than Wicked: Part I;\n“The Epstein files” (whatever the hell those even are) are somehow made publicly available;\nDuke University settles with the Trump administration (need to make this more precise)\nSomething to do with Duke Football\nWorld Series (in october)\noutcome of a high profile court case\nsome silly gen z thing (ask TAs)\n\nChoose one of these, state the probability that you assign to the event happening, and explain in a few paragraphs how you formulated your belief. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed."
+    "text": "Two balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/gandalf-test.html",
-    "href": "problems/bank/random-variables-discrete/gandalf-test.html",
+    "objectID": "problems/bank/random-variables-discrete/bdj-rv.html",
+    "href": "problems/bank/random-variables-discrete/bdj-rv.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "King Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 soldiers;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten soldiers. We can then identify which soldiers are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
+    "text": "An urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/contested-election.html",
-    "href": "problems/bank/random-variables-discrete/contested-election.html",
+    "objectID": "problems/bank/set-theory/basic-set-practice.html",
+    "href": "problems/bank/set-theory/basic-set-practice.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Not all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.\nImagine an election where Aloysius receives \\(a\\) votes, Bernadette receives \\(b\\) votes, and Aloysius provisionally wins with a margin of victory \\(a-b&gt;0\\). However, of the total \\(a+b\\) votes, we learn that \\(k&gt;a-b\\) were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the \\(k\\) invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.\nTo model this, think of the original \\(a+b\\) ballots as balls in the proverbial urn. \\(a\\) of these balls are red, and \\(b\\) of these balls are blue, and assume that \\(a,\\, b&gt;k\\). Removing the \\(k\\) invalid ballots is like drawing \\(k\\) balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the \\(a+b\\) original ballots is equally likely to have been invalid. Next, imagine we randomly remove \\(k\\) balls from the urn, and let \\(X\\) be a random variable that counts the number of the removed/invalid ballots that belong to Aloysius. In other words, the number of red balls removed. If \\(X\\) is large enough, it will swing the election in Bernadette’s favor.\n\nWhat are the range and the pmf of the random variable \\(X\\)?\nFor what values of \\(X\\) does removing \\(k\\) ballots reverse the outcome of the election?\nBased on your answers to parts a and b, what is the probability that the election result is reversed when the \\(k\\) bad ballots are removed?\nLet’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a figure in R that has the margin of victory \\(a-b\\) on the horizontal axis and the number of bad ballots \\(k\\) on the vertical axis. In this figure, draw a line that splits the plane into two parts: the part where the reversal probability is greater than 5% and the part where it is less than 5%;\nTable 1 features real data on some contested American elections. Add a scatterplot to your previous picture where each point represents an election, and comment on the match or lack thereof between our model and the decision that was actually made;\nHow do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?\n\n\n\n\nTable 1: Close elections\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nelection\nyear\nwin\nloss\ntotal\nmargin\ninvalid\ndecision\n\n\n\n\nIppolito v. Power\n1968\n1,422\n1,405\n2,287\n17\n101\nvoid\n\n\nSantucci v. Power\n1969\n58,076\n57,981\n116,057\n95\n448\nvoid\n\n\nDeMartini v. Power\n1970\n2,656\n2,594\n5,250\n62\n136\nupheld\n\n\nMaine House\n1976\n1,193\n1,060\n2,253\n133\n208\nvoid\n\n\nAnn Arbor mayor\n1977\n10,660\n10,659\n21,319\n1\n20\nvoid\n\n\nBrunswick ME town council\n1980\n2,390\n2,383\n4,773\n7\n16\nupheld\n\n\nWashington governor\n2004\n1,373,357\n1,373,228\n2,746,585\n129\n1,439\nupheld"
+    "text": "Take \\(\\mathbb{R}\\) to be your reference set, and consider these subsets:\n\\[\n\\begin{align*}\nA&=[1,\\,5]\\\\\nB&=\\{x\\in\\mathbb{R}\\,:\\,|x|&gt;2\\}\\\\\nC&=(-\\infty,\\,0]\\\\\nI_n&=\\left[0,\\,\\frac{1}{n}\\right]\n\\end{align*}\n\\]\nExpress each of the following in as simplified and concise a form as possible:\n\n\\(A^c\\)\n\\(A \\cup B\\)\n\\(A\\cap C\\)\n\\(A\\cap C^c\\)\n\\(B \\cap C^c\\)\n\\(A^c \\cap B^c \\cap C^c\\)\n\\((A \\cup B) \\cap C\\)\n\\(\\bigcap_{n=1}^\\infty I_n\\)\n\\(\\bigcup_{n=1}^\\infty I_n\\)"
   },
   {
-    "objectID": "problems/bank/set-theory/picture-proofs.html",
-    "href": "problems/bank/set-theory/picture-proofs.html",
+    "objectID": "problems/bank/conditional-probability/testing-symptoms.html",
+    "href": "problems/bank/conditional-probability/testing-symptoms.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "“Prove” each set identity with a picture:\n\n\\((A\\cap B)\\cup C = (A\\cup C)\\cap (B\\cup C)\\);\n\\((A\\cap B)^{c}=A^{c}\\cup B^{c}\\);"
+    "text": "We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\).\nTable 1 enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients’ “true” disease status was determined by a PCR test that we assume is hella accurate.\n\n\n\n\nTable 1: Some COVID-19 numbers. Source: CDC\n\n\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n\n-\n-\n-\n0.7650\n\n\n-\n-\n+\n0.0128\n\n\n-\n+\n-\n0.1685\n\n\n-\n+\n+\n0.0018\n\n\n+\n-\n-\n0.0091\n\n\n+\n-\n+\n0.0064\n\n\n+\n+\n-\n0.0073\n\n\n+\n+\n+\n0.0291\n\n\n\n\n\n\n\n\nWhat is the overall disease prevalence?\nWhat is the sensitivity of the test?\nWhat is the specificity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?\nWhat is the overall probability that the test is wrong?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/bdj-circuit.html",
-    "href": "problems/bank/conditional-probability/bdj-circuit.html",
+    "objectID": "problems/bank/conditional-probability/axioms-conditional.html",
+    "href": "problems/bank/conditional-probability/axioms-conditional.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "The figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
+    "text": "Let \\(S\\) be a sample space with probability measure \\(P\\), and let \\(B\\subseteq S\\) be some event with \\(P(B)&gt;0\\). Show that the function \\(G(A)=P(A\\,|\\, B)\\) is a new probability measure on \\(S\\). That is, show that \\(G\\) satisfies the axioms:\n\ntotal measure 1;\nnonnegativity;\ncountable additivity."
   },
   {
-    "objectID": "problems/bank/conditional-probability/bdj-encryption.html",
-    "href": "problems/bank/conditional-probability/bdj-encryption.html",
+    "objectID": "problems/bank/conditional-probability/conditional-inequality.html",
+    "href": "problems/bank/conditional-probability/conditional-inequality.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "An encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
+    "text": "Assume that \\(P(A)&gt;0\\) and prove that\n\\[\nP(A\\cap B\\,|\\, A)\\geq P(A\\cap B\\,|\\, A\\cup B).\n\\]"
   },
   {
-    "objectID": "problems/bank/conditional-probability/independent-complements.html",
-    "href": "problems/bank/conditional-probability/independent-complements.html",
+    "objectID": "problems/bank/conditional-probability/target-practice.html",
+    "href": "problems/bank/conditional-probability/target-practice.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(A\\) and \\(B\\) be independent events. Prove that \\(A^c\\) and \\(B^c\\) are independent events."
+    "text": "Pearl Bailey and Elaine Stritch go target shooting. Suppose that each of Pearl’s shots hits a wooden duck target with probability \\(p_1\\), while each shot of Elaine’s hits it with probability \\(p_2\\), independent of Pearl. Suppose that they shoot simultaneously at the same target. If the wooden duck is knocked over (indicating that it was hit), what is the probability that both shots hit the duck?"
+  },
+  {
+    "objectID": "problems/bank/conditional-probability/darts.html",
+    "href": "problems/bank/conditional-probability/darts.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Figure 1\n\n\n\nA novice is throwing darts at the board pictured in Figure 1. It has the following properties:\n\nThe board has radius \\(r\\);\nThe board is partitioned into five rings, each with the same “thickness” \\(r/5\\);\nThe board is mounted on a wall of area \\(A\\).\n\nThe player is not very skilled. Their dart is guaranteed to reach the wall, but beyond that, the probability that it lands in any given region is just proportional to that region’s area.\nTask: Derive a general formula for the conditional probability that a dart lands in ring \\(i\\) given that it hits the board and not the wall. Your formula should be a function of \\(i=1,\\,2,\\,...,\\,5\\)."
   },
   {
     "objectID": "math/series.html",
