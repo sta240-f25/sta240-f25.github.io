@@ -5,11 +5,17 @@ Imagine an election where Aloysius receives $a$ votes, Bernadette receives $b$ v
 To model this, think of the original $a+b$ ballots as balls in the proverbial urn. $a$ of these balls are red, and $b$ of these balls are blue, and assume that $a,\, b>k$. Removing the $k$ invalid ballots is like drawing $k$ balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the $a+b$ original ballots is *equally likely* to have been invalid. Next, imagine we randomly remove $k$ balls from the urn, and let $X$ be a random variable that counts the number of the removed/invalid ballots that belong to Aloysius. In other words, the number of red balls removed. If $X$ is large enough, it will swing the election in Bernadette's favor.
 
 a.  What are the range and the pmf of the random variable $X$?
-b.  For what values of $X$ does removing $k$ ballots reverse the outcome of the election?
-c.  Based on your answers to parts a and b, what is the probability that the election result is reversed when the $k$ bad ballots are removed?
-d.  Let's say that we consider the probability of reversal "too big" if it is greater than 5%. Create a figure in `R` that has the margin of victory $a-b$ on the horizontal axis and the number of bad ballots $k$ on the vertical axis. In this figure, draw a line that splits the plane into two parts: the part where the reversal probability is greater than 5% and the part where it is less than 5%;
-e.  @tbl-elections features real data on some contested American elections. Add a scatterplot to your previous picture where each point represents an election, and comment on the match or lack thereof between our model and the decision that was actually made;
-f.  How do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?
+a.  For what values of $X$ does removing $k$ ballots reverse the outcome of the election?
+a.  Based on your answers to the previous parts, what is the probability that the election result is reversed when the $k$ bad ballots are removed? Give a general formula for this probability, and then compute the probability for each of the real elections listed in @tbl-elections;
+a.  The random variable $X$ that you derived in the first part can be approximated by $\text{Binom}(k,\,1/2)$. Explain why this approximation might be "good enough," and verify that it's not too bad by computing the *approximate* probability of reversal for the elections in @tbl-elections. Compare the approximate probabilities to the actual ones from the previous part;
+a.  Let's say that we consider the probability of reversal "too big" if it is greater than 5%. Create a figure in `R` with the following features:
+    - the margin of victory $a-b$ on the horizontal axis;
+    - the number of bad ballots $k$ on the vertical axis;
+    - scatterplot where each point represents an election in @tbl-elections, with the points colored according to the decision that was made in the case;
+    - divide the plane into two regions, one where the *approximate* probability of reversal is less than 0.05 and one where it is greater. 
+a.  Use the figure to comment on the match or lack thereof between our model and the decision that was actually made;
+a.  How do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?
+
 
 | election | year | win | loss | total | margin | invalid | decision |
 |---------|---------|---------|---------|---------|---------|---------|---------|
