@@ -13,8 +13,10 @@ a.  Let's say that we consider the probability of reversal "too big" if it is gr
     - the number of bad ballots $k$ on the vertical axis;
     - scatterplot where each point represents an election in @tbl-elections, with the points colored according to the decision that was made in the case;
     - divide the plane into two regions, one where the *approximate* probability of reversal is less than 0.05 and one where it is greater. 
-a.  Use the figure to comment on the match or lack thereof between our model and the decision that was actually made;
-a.  How do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?
+a.  Write a few pithy paragraphs commenting on the following:
+    - the assumptions of our lil' model. Do you think they are innocuous? What might you change, and how?
+    - the match or lack thereof between our model and the decisions that were actually made in the real cases;
+    - How do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?
 
 
 | election | year | win | loss | total | margin | invalid | decision |
