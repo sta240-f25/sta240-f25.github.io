@@ -29,9 +29,3 @@ f.  Write a few pithy paragraphs commenting on the following:
 | Washington governor | 2004 | 1,373,357 | 1,373,228 | 2,746,585 | 129 | 1,439 | upheld |
 
 : Close elections {#tbl-elections}
-
-```{r}
-#| echo: false
-# https://www.nyulawreview.org/wp-content/uploads/2018/08/NYULawReview-83-1-Hickey.pdf
-# https://doi.org/10.1198/jasa.2009.ap08640
-```
