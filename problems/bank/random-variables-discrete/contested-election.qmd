@@ -20,7 +20,7 @@ f.  Write a few pithy paragraphs commenting on the following:
 
 | election | year | win | loss | total | margin | invalid | decision |
 |---------|---------|---------|---------|---------|---------|---------|---------|
-| *Ippolito v. Power* | 1968 | 1,422 | 1,405 | 2,287 | 17 | 101 | void |
+| *Ippolito v. Power* | 1968 | 1,422 | 1,405 | 2,827 | 17 | 101 | void |
 | *Santucci v. Power* | 1969 | 58,076 | 57,981 | 116,057 | 95 | 448 | void |
 | *DeMartini v. Power* | 1970 | 2,656 | 2,594 | 5,250 | 62 | 136 | upheld |
 | Maine House | 1976 | 1,193 | 1,060 | 2,253 | 133 | 208 | void |
