@@ -1,7 +1,32 @@
 ---
-title: "Welcome to STA 240!"
+title: "Rhapsody in `R`"
 format: revealjs
 auto-stretch: false
 editor: 
   mode: source
 ---
+
+```{r}
+#| echo: false
+library(gm)
+```
+
+## Renfei Mao's `gm` package
+
+::::: {.columns .v-center-container}
+::: {.column width="50%"}
+
+![](images/gm.png)
+
+:::
+
+::: {.column width="50%"}
+
+:::
+:::::
+
+## Ravel: Prélude in A Minor, M. 65 {.scrollable}
+
+![](images/prelude/prelude-0-full.png)
+
+
