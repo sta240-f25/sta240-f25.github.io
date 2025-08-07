@@ -1,15 +1,90 @@
 ---
 title: "Rhapsody in `R`"
+subtitle: "Exploring the intersection of probability and music"
+date: "8/9/2025"
 format: revealjs
+institute: "Duke University"
 auto-stretch: false
 editor: 
   mode: source
 ---
 
-```{r}
-#| echo: false
-library(gm)
-```
+## About me
+
+![](images/texts.jpeg){fig-align="center"}
+
+- It's my sixth go-around teaching intro probability;
+- I'm a tad weary of coins, dice, playing cards, etc.
+
+## Trying to mix it up
+
+Plenty of applications from the natural and social sciences:
+
+- 
+-
+-
+-
+-
+
+But what about the arts?
+
+## Stochastic music
+
+
+
+## Iannis Xenakis (1922 - 2001)
+
+::::: {.columns .v-center-container}
+::: {.column width="50%"}
+
+![](images/xenakis.png)
+
+:::
+
+::: {.column width="50%"}
+- yada yada
+- Applied ideas from CS, statistical mechanics, and stochastic processes to his compositional process.
+:::
+:::::
+
+
+
+## *Pithoprakta* (1956)
+
+Think of each member of a 46-piece string orchestra is a Brownian particle drifting up and down the staff:
+
+. . .
+
+![](images/pithoprakta.jpg){width="75%" fig-align="center"}
+
+. . .
+
+"[[E]very member of the orchestra is on the honor system](https://youtu.be/LfH74hlhKp0?feature=shared&t=639).” 
+Leonard Bernstein
+
+## *Pithoprakta* (1956)
+
+<iframe width="900" height="500" src="https://www.youtube.com/embed/nvH2KYYJg-o?si=FCG2k2XsaY4MKZi-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+## Main idea
+
+::::: {.columns .v-center-container}
+::: {.column width="100%"}
+
+
+
+**Thought**: Can I prompt students to use what they know about probability distributions and simulation to write their own pieces of stochastic music?
+
+
+
+**Worry**: Depends. Can you work with music in `R`?
+
+
+
+:::
+::::
 
 ## Renfei Mao's `gm` package
 
@@ -22,12 +97,44 @@ library(gm)
 
 ::: {.column width="50%"}
 
+"grammar of music"
+
+- Represent music in `R` with a `ggplot2`-style interface;
+- integration with `MuseScore` generates sheet music and MIDI output.
 :::
 :::::
 
 ## Ravel: Prélude in A Minor, M. 65 {.scrollable}
 
 ![](images/prelude/prelude-0-full.png)
+
+. . .
+
+Let's transcribe it!
+
+## The starting point is always the same
+
+We will add layers to this:
+
+```{r}
+library(gm)
+
+prelude <- Music()
+```
+
+. . .
+
+Analogous to:
+
+```{r}
+library(ggplot2)
+
+myplot <- ggplot()
+```
+
+## Add meter and tempo
+
+![](images/prelude/prelude-1-meter.png)
 
 ## Add meter and tempo
 
@@ -36,3 +143,273 @@ prelude <- Music() +
   Meter(3, 4) + 
   Tempo(60)
 ```
+
+## Add the right hand part
+
+![](images/prelude/prelude-2-right-hand.png)
+
+## Brief aside: scientific pitch notation
+
+![](images/piano.webp){fig-align="center"}
+`"F#5"` means the F♯ in the fifth octave on the piano, etc.
+
+## Add the right hand part
+
+```{r}
+#| code-line-numbers: "1-7|1,7|2-6|12"
+right_hand <- Line(
+  pitches = list(NA, "E5", "F#5", "D5", "E5", "F#5",
+                 "B5", "G5", "D5", 
+                 "E5", "G4",
+                 c("D4", "F#4", "B4"), c("C#4", "F4", "C5"),
+                 c("G3", "C4", "E4"), c("D#4", "G4"), c("C4", "E4"))
+)
+
+prelude <- Music() + 
+  Meter(3, 4) + 
+  Tempo(60) +
+  right_hand
+```
+
+## Add the right hand part
+
+```{r}
+show(prelude)
+```
+
+## Adjust the note values {.medium}
+
+```{r}
+#| code-line-numbers: "7-11"
+right_hand <- Line(
+  pitches = list(NA, "E5", "F#5", "D5", "E5", "F#5",
+                 "B5", "G5", "D5", 
+                 "E5", "G4",
+                 c("D4", "F#4", "B4"), c("C#4", "F4", "C5"),
+                 c("G3", "C4", "E4"), c("D#4", "G4"), c("C4", "E4")),
+  durations = c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 
+                1, 1, 2, 
+                1, 1, 
+                2, 1, 
+                1.5, 0.5, 1)
+)
+
+prelude <- Music() + 
+  Meter(3, 4) + 
+  Tempo(60) +
+  right_hand
+```
+
+## Adjust the note values
+
+```{r}
+show(prelude)
+```
+
+## Add the left hand part
+
+![](images/prelude/prelude-3-left-hand.png)
+
+## Add the left hand part {.medium}
+
+```{r}
+#| code-line-numbers: "1-10|2-5|6-8|16-17"
+left_hand <- Line(
+  pitches = c("A2", "E3", "G3", "C4", "E4", 
+              "G4", "C5", NA, 
+              NA, "E2", "E3", "F#3", "G#3",
+              NA, "A2", "E3", "B3", "G3"),
+  durations = c(rep(0.5, 7), 2, 
+                rep(0.5, 4), 1, 
+                rep(0.5, 4), 1),
+  bar = 2, offset = 0.5
+)
+
+prelude <- Music() + 
+  Meter(3, 4) + 
+  Tempo(60) +
+  right_hand + 
+  left_hand + 
+  Clef("F")
+```
+
+**Note**: rests correspond to missing values (`NA`) in the line.
+
+## Add the left hand part
+
+```{r}
+show(prelude)
+```
+
+## Add dynamics
+
+![](images/prelude/prelude-4-dynamics.png)
+
+## Add dynamics
+
+```{r}
+#| code-line-numbers: "5,8"
+prelude <- Music() + 
+  Meter(3, 4) + 
+  Tempo(60) +
+  right_hand + 
+  Dynamic("p", 1) + 
+  left_hand + 
+  Clef("F") +
+  Dynamic("p", 1)
+```
+
+## Add expressive indications
+
+![](images/prelude/prelude-5-expression.png)
+
+## Add expressive indications
+
+```{r}
+#| code-line-numbers: "6-7,11-14"
+prelude <- Music() + 
+  Meter(3, 4) + 
+  Tempo(60) +
+  right_hand + 
+  Dynamic("p", 1) + 
+  Slur(2, 11) + 
+  Slur(12, 16) + 
+  left_hand + 
+  Clef("F") +
+  Dynamic("p", 1) + 
+  Slur(1, 7) + 
+  Slur(10, 13) + 
+  Slur(15, 18) + 
+  Pedal(1, 7)
+```
+
+## Pretty close!
+
+```{r}
+show(prelude)
+```
+
+## Change the instrumentation (optional)
+
+```{r}
+#| code-line-numbers: "8,15"
+prelude <- Music() + 
+  Meter(3, 4) + 
+  Tempo(65) + 
+  right_hand + 
+  Dynamic("p", 1) + 
+  Slur(2, 11) + 
+  Slur(12, 16) + 
+  Instrument(47) + # Harp!
+  left_hand + 
+  Clef("F") +
+  Dynamic("p", 1) + 
+  Slur(1, 7) + 
+  Slur(10, 13) + 
+  Slur(15, 18) + 
+  Instrument(43) # Cello!
+```
+
+## Change the instrumentation (optional)
+
+```{r}
+#| eval: false
+?Instrument
+```
+
+::::: {.columns}
+::: {.column width="50%"}
+
+1. Acoustic Grand Piano
+1. Bright Acoustic Piano
+1. Electric Grand Piano
+1. Honky-Tonk Piano
+1. Electric Piano 1
+1. Electric Piano 2
+1. Harpsichord
+1. Clavinet
+
+:::
+
+::: {.column width="50%"}
+
+9. Celesta
+9. Glockenspiel
+9. Music Box
+9. Vibraphone
+9. Marimba
+9. Xylophone
+9. Tubular Bells
+
+... and so on
+
+:::
+:::::
+
+
+## Change the instrumentation (optional)
+
+```{r}
+show(prelude)
+```
+
+## Every pitch on the piano {.medium}
+
+```{r}
+pitches <- c("C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B")
+octaves <- 1:7
+all_pitches <- c("A0", "A#0", "B0", 
+                 paste(rep(pitches, length(octaves)), 
+                       sort(rep(octaves, length(pitches))), 
+                       sep = ""), 
+                 "C8")
+all_pitches
+```
+
+## Kitten on the keys
+
+## Markov
+
+## The Jacobson method
+
+::::: {.columns .v-center-container}
+::: {.column width="50%"}
+
+![](images/j.jpg)
+
+:::
+
+::: {.column width="50%"}
+
+Take an existing piece of music and "add noise." 
+
+So this:
+
+$$
+\mathbf{y}=f(\mathbf{x})+\boldsymbol{\varepsilon},
+$$
+
+only...it's music?
+:::
+:::::
+
+## For the students
+
+## Example 1
+
+## Example 2
+
+## Example 3
+
+## Things I learned
+
+## For instructors
+
+- creative 
+- if you have interests in the arts, you'll learn a ton and have lots of silly good fun
+
+# Thank you!
+
+
+
+
