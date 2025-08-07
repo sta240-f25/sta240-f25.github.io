@@ -20,13 +20,32 @@ editor:
 
 Plenty of applications from the natural and social sciences:
 
+::::: {.columns}
+::: {.column width="50%"}
+
+- Actuarial mathematics;
+- Language models;
+- Investment risk and return;
+- Expert witness testimony;
+- Contested elections;
+- Genetic mutation;
+
+:::
+
+::: {.column width="50%"}
+
+- 
 - 
 -
 -
 -
 -
 
-But what about the arts?
+:::
+:::::
+
+
+*But what about the arts?*
 
 ## Stochastic music
 
@@ -174,6 +193,7 @@ prelude <- Music() +
 ## Add the right hand part
 
 ```{r}
+#| eval: false
 show(prelude)
 ```
 
@@ -203,6 +223,7 @@ prelude <- Music() +
 ## Adjust the note values
 
 ```{r}
+#| eval: false
 show(prelude)
 ```
 
@@ -238,6 +259,7 @@ prelude <- Music() +
 ## Add the left hand part
 
 ```{r}
+#| eval: false
 show(prelude)
 ```
 
@@ -286,6 +308,7 @@ prelude <- Music() +
 ## Pretty close!
 
 ```{r}
+#| eval: false
 show(prelude)
 ```
 
@@ -350,6 +373,7 @@ prelude <- Music() +
 ## Change the instrumentation (optional)
 
 ```{r}
+#| eval: false
 show(prelude)
 ```
 
