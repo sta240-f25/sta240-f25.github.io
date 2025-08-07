@@ -29,4 +29,10 @@ library(gm)
 
 ![](images/prelude/prelude-0-full.png)
 
+## Add meter and tempo
 
+```{r}
+prelude <- Music() + 
+  Meter(3, 4) + 
+  Tempo(60)
+```
