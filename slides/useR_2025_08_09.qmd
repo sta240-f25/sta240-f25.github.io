@@ -13,12 +13,16 @@ editor:
 
 ![](images/texts.jpeg){fig-align="center"}
 
+::: incremental
 - It's my sixth go-around teaching intro probability;
 - I'm a tad weary of coins, dice, playing cards, etc.
+:::
 
 ## Trying to mix it up
 
 Plenty of applications from the natural and social sciences:
+
+. . .
 
 ::::: {.columns}
 ::: {.column width="50%"}
@@ -28,7 +32,7 @@ Plenty of applications from the natural and social sciences:
 - Investment risk and return;
 - Expert witness testimony;
 - Contested elections;
-- Genetic mutation;
+- (Genetic mutation);
 
 :::
 
@@ -44,6 +48,7 @@ Plenty of applications from the natural and social sciences:
 :::
 :::::
 
+. . .
 
 *But what about the arts?*
 
