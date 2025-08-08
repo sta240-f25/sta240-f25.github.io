@@ -127,6 +127,7 @@ Notice that I did not write $\max f(x)$. In this class, it turns out that we wil
 
 ```{r}
 #| echo: false
+#| fig-align: center
 par(mar = c(2, 6, 1, 0))
 curve(-(x-3)^2 + 5, from = 0, to = 6, ylim = c(-4, 6),
       xaxt = "n", yaxt = "n", bty = "n", ylab = "",
