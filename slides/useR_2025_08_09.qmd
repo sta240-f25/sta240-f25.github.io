@@ -22,6 +22,8 @@ editor:
 
 ## Trying to mix it up
 
+. . .
+
 Plenty of applications from the natural and social sciences:
 
 . . .
@@ -31,21 +33,21 @@ Plenty of applications from the natural and social sciences:
 
 - Actuarial mathematics;
 - Contested elections;
+- Dating apps;
+- DNA sequencing;
 - Expert witness testimony;
-- *I Ching* divination;
-- Investment risk and return;
-- Language models;
+- Extreme weather;
 
 :::
 
 ::: {.column width="50%"}
 
-- (genetics)
-- (?)
-- (?)
-- (?)
-- (?)
-- (?)
+- *I Ching* divination;
+- Investment risk and return;
+- Language models;
+- Papal conclaves;
+- Prediction markets;
+- Quantum mechanics.
 
 :::
 :::::
@@ -93,6 +95,8 @@ AKA: chance or aleatoric music.
 
 ## *Pithoprakta* (1956)
 
+. . .
+
 Think of each member of a 46-piece string orchestra as a Brownian particle drifting up and down the staff:
 
 . . .
@@ -112,7 +116,7 @@ Leonard Bernstein
 
 . . .
 
-...it's the thought that counts.
+Well ...it's the thought that counts.
 
 ## Main idea
 
@@ -148,7 +152,7 @@ Leonard Bernstein
 :::
 :::::
 
-## Ravel: Prélude in A Minor, M. 65 {.scrollable}
+## Ravel: Prélude in A Minor, M. 65
 
 ![](images/prelude/prelude-0-full.png)
 
@@ -656,23 +660,73 @@ surprise yourself
 
 
 
-## Student Example 2
+## Student Example 2 {.scrollable}
 
-Ananya
+```{r}
+#| echo: false
+set.seed(2025)
+n_measures <- 32 # Number of Chords
+mu_base    <- 60 # Centered at Middle C
+amp        <- 8         
+sigma      <- 5         
+n_min      <- 10 # Min sample size
+n_max      <- 100 # Max sample size
+
+# My mean drifts up and down linearly twice
+lower        <- mu_base - amp
+upper        <- mu_base + amp
+half_cycle   <- n_measures / 4
+up           <- seq(lower, upper, length.out = half_cycle)
+down         <- seq(upper, lower, length.out = half_cycle)
+means        <- round(rep(c(up, down), 2))
+
+# Randomize sample sizes for CI widths to vary 
+sample_sizes <- sample(n_min:n_max, n_measures, replace = TRUE)
+ci_halfwidth <- 1.96 * sigma / sqrt(sample_sizes)
+
+# Melody: Means
+melody <- Line(
+  pitches   = means,
+  durations = rep(1, n_measures),
+)
+
+# Upper harmony: mean + CI
+high <- Line(
+  pitches   = round(means + ci_halfwidth),
+  durations = rep(1, n_measures),
+)
+
+# Lower harmony: mean – CI
+low <- Line(
+  pitches   = round(means - ci_halfwidth),
+  durations = rep(1, n_measures),
+)
+
+# Put it together
+song <- Music() +
+  Meter(4, 4) +
+  Tempo(120) +
+  melody + Instrument(1) + Dynamic("mf", 1) +
+  high + Instrument(2) + Dynamic("p", 2)  +
+  low + Instrument(3) + Dynamic("p", 3)
+
+show(song)
+```
 
 ## Student Example 3
 
-## Things I learned
+## For next time
 
-- uses pitches outside the western system
-- better inspo
-- study Xenakis methods closer
+- Can `gm` handle sounds of any Hz, and not just the discrete pitches of the Western system?
+- How closely can I replicate Xenakis' methods;
+- Need to give students more time and better coaching/inspiration.
 
-## What I hope you take away
+## Some takeaways
 
-- creative 
-- completely tilts the material on its ear
-- if you have interests in the arts, you'll learn a ton and have lots of silly good fun
+- Intro probability is a mixed audience. I aim for maximum variety in the examples and applications;
+- If you as an instructor have any creative or artistic interests, mix them in. You will have a tremendous amount of fun;
+- Activities like this totally tilt the material on its ear;
+- `gm` is an excellent package!
 
 # Thank you!
 
