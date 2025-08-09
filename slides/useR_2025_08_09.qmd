@@ -3,7 +3,7 @@ title: "Rhapsody in `R`"
 subtitle: "Exploring the intersection of probability and music"
 date: "8/9/2025"
 format: revealjs
-institute: "Duke University"
+institute: "Duke Stats"
 auto-stretch: false
 editor: 
   mode: source
@@ -148,6 +148,9 @@ Well ...it's the thought that counts.
 "grammar of music"
 
 - Represent music in `R` with a `ggplot2`-style interface;
+
+"generate music"
+
 - integration with `MuseScore` generates sheet music and MIDI playback.
 :::
 :::::
@@ -223,8 +226,12 @@ prelude <- Music() +
 
 ```{r}
 #| eval: true
-show(prelude)
+gm::show(prelude)
 ```
+
+. . .
+
+(BTW: this plays nice with Quarto off-the-shelf.)
 
 ## Adjust the note values {.medium}
 
@@ -253,7 +260,7 @@ prelude <- Music() +
 
 ```{r}
 #| eval: true
-show(prelude)
+gm::show(prelude)
 ```
 
 ## Add the left hand part
@@ -289,7 +296,7 @@ prelude <- Music() +
 
 ```{r}
 #| eval: true
-show(prelude)
+gm::show(prelude)
 ```
 
 ## Add dynamics
@@ -338,7 +345,7 @@ prelude <- Music() +
 
 ```{r}
 #| eval: true
-show(prelude)
+gm::show(prelude)
 ```
 
 ## Change the instrumentation (optional)
@@ -403,7 +410,7 @@ prelude <- Music() +
 
 ```{r}
 #| eval: true
-show(prelude)
+gm::show(prelude)
 ```
 
 ## Summary: the `gm` package
@@ -436,7 +443,7 @@ prelude <- Music() +
 ::: {.column width="50%"}
 
 ```{r}
-show(prelude)
+gm::show(prelude)
 ```
 
 
@@ -445,7 +452,9 @@ Thanks Renfei!
 :::
 :::::
 
-# Now, some probability
+. . . 
+
+Now, let's write some crazy music!
 
 ## Every pitch on the piano {.medium}
 
@@ -490,11 +499,490 @@ kitten <- Music() +
 ## (Angry) Kitten on the keys {.scrollable}
 
 ```{r}
-show(kitten)
+#| echo: false
+gm::show(kitten, to = "audio")
+gm::show(kitten, to = "score")
 ```
 
 
-## Markov
+## What *is* a melody? (wrong answers only)
+
+. . .
+
+It's a time series!
+
+. . .
+
+::::: {.columns}
+::: {.column width="48%"}
+
+```{r}
+#| echo: false
+set.seed(12)
+notes <- sample(all_pitches, 8, replace = FALSE)
+
+example <- Music() +
+  Meter(4, 4) + 
+  Line(pitches = notes)
+gm::show(example, to = "score")
+```
+
+:::
+
+::: {.column width="48%"}
+
+```{r}
+#| echo: false
+#| # Convert scientific pitch notation to frequency in Hz
+note_to_freq <- function(notes) {
+  # Mapping of note names to semitone offsets from C
+  semitone_map <- c(
+    "C" = 0, "C#" = 1, "Db" = 1, "D" = 2, "D#" = 3, "Eb" = 3,
+    "E" = 4, "F" = 5, "F#" = 6, "Gb" = 6, "G" = 7, "G#" = 8,
+    "Ab" = 8, "A" = 9, "A#" = 10, "Bb" = 10, "B" = 11
+  )
+  
+  freqs <- numeric(length(notes))
+  for (i in seq_along(notes)) {
+    # Extract letter+accidental and octave
+    m <- regexpr("^[A-Ga-g][#b]?", notes[i], perl = TRUE)
+    note_name <- toupper(regmatches(notes[i], m))
+    octave <- as.numeric(sub(note_name, "", notes[i], fixed = TRUE))
+    
+    # Semitones from A4
+    semitones_from_A4 <- (octave - 4) * 12 + (semitone_map[note_name] - semitone_map["A"])
+    
+    # Frequency formula
+    freqs[i] <- 440 * 2^(semitones_from_A4 / 12)
+  }
+  
+  freqs
+}
+
+freqs <- note_to_freq(notes)
+
+# Create a time vector — each note lasts 1 beat
+time_per_note <- 1
+time_points <- seq(0, length(notes) * time_per_note, by = time_per_note)
+par(mar = c(5, 5, 0.1, 0.1))
+# Step plot of the frequencies
+plot(1:9, c(freqs, tail(freqs, 1)), type = "s",
+     xlab = "Beat", ylab = "Frequency (Hz)", lwd = 2,
+     cex.lab = 2)
+
+# Optional: grid for clarity
+grid()
+```
+
+:::
+:::::
+
+. . .
+
+Game:
+
+- Fix a key (C minor) and a stable accompaniment (waltz);
+- Simulate a melody from a Markov chain.
+
+## Un(Markov)chained melodies
+
+From Nierhaus' *Algorithmic Composition* (2009 Springer):
+
+![](images/markov-music.png){fig-align="center"}
+
+## Un(Markov)chained melodies
+
+A first-order Markov chain on the C minor scale is described by its transition probabilities: given the note we're on right now, what are the probabilities for the next note to come?
+
+. . .
+
+Loads of options to explore:
+
+. . .
+
+- uniform (sampling with replacement, again);
+- upweight leaps into "chord tones;"
+- upweight leaps between chord tones (arpeggio-like);
+- upweight leaps into the tonic ("resolutions");
+- random walk (flip a coin every beat and move $\pm1$).
+
+## IID Melody {.scrollable}
+
+```{r}
+#| echo: false
+
+# ORIGINAL IID
+
+# ===============================================
+# what pitches are fair game?
+# ===============================================
+
+pitches <- c("C", "D", "E-", "F", "G", "A-", "B-")
+octaves <- 4:5
+my_notes <- paste(rep(pitches, length(octaves)), 
+                  sort(rep(octaves, length(pitches))), sep = "")
+
+# ===============================================
+# fixed accompaniment (stolen from Shostakovich)
+# ===============================================
+
+c_octave <- c("C2", "C3")
+d_octave <- c("D2", "D3")
+g_octave <- c("G1", "G2")
+c_minor_triad <- c("C3", "E-3", "G3")
+
+chunk_1 <- list(c_octave, c_minor_triad, c_minor_triad)
+chunk_2 <- list(g_octave, c_minor_triad, c_minor_triad)
+chunk_3 <- list(d_octave, c("F3", "A-3"), c("F3", "A-3"))
+chunk_4 <- list(g_octave, c("F3", "A-3"), c("F3", "A-3"))
+
+accompaniment <- Line(c(chunk_1, chunk_2, chunk_1, chunk_2,
+                        chunk_1, chunk_2, chunk_1, chunk_2,
+                        chunk_1, chunk_2, chunk_3, chunk_4),
+                      name = "Accordion")
+
+bass <- c("C3", NA, NA, "G2", NA, NA, "C3", NA, NA, "G2", NA, NA,
+          "C3", NA, NA, "G2", NA, NA, "C3", NA, NA, "G2", NA, NA,
+          "C3", NA, NA, "G2", NA, NA, "D3", NA, NA, "G2", NA, NA)
+
+# ===============================================
+# simulate tune
+# ===============================================
+
+set.seed(1234)
+
+tune_iid <- Line(pitches = sample(my_notes, 48, replace = TRUE),
+                 durations = 0.5,
+                 bar = 5,
+                 name = "Clarinet")
+
+# ===============================================
+# compose!
+# ===============================================
+
+waltz <- Music() + 
+  Meter(3, 4) + 
+  Tempo(170) + 
+  Key(-3) + 
+  
+  tune_iid + 
+  Instrument(72) + # 72 - clarinet
+  Slur(1, 48) +
+  
+  accompaniment + 
+  Clef("F") +
+  Instrument(22) + #22 - accordion
+  Dynamic("p", 1) +
+  Dynamic("pp", 13) +
+
+  Line(bass, name = "Banjo") + 
+  Clef("F") + 
+  Instrument(106) + # 106 - banjo
+  Dynamic("p", 1) +
+  Dynamic("pp", 13) +
+  Hairpin(">", 7, 12) + 
+  
+  Line(bass, name = "Bassoon") + 
+  Clef("F") + 
+  Instrument(71) + # 71 - bassoon
+  Dynamic("p", 1) +
+  Dynamic("pp", 13) +
+  Hairpin(">", 7, 12)
+
+# add staccato mark to second and third beat of each bar of accompaniment
+
+x <- 1:36
+off_beats <- x[x %% 3 != 1]
+
+for(i in off_beats){
+  waltz <- waltz + Articulation(".", i, to = 2)
+}
+
+waltz_iid <- waltz
+
+gm::show(waltz, to = "audio")
+gm::show(waltz, to = "score")
+```
+
+## Random walk melody {.scrollable}
+
+```{r}
+#| echo: false
+
+# ORIGINAL RANDOM WALK
+
+# ===============================================
+# random walk on the elements of a vector
+# ===============================================
+
+random_walk <- function(vec, start_pos, steps) {
+  n <- length(vec)
+
+  # Initialize walk
+  positions <- numeric(steps + 1)
+  positions[1] <- start_pos
+  
+  for (i in 2:(steps + 1)) {
+    current_pos <- positions[i - 1]
+    
+    # At the left boundary
+    if (current_pos == 1) {
+      new_pos <- 2
+    }
+    # At the right boundary
+    else if (current_pos == n) {
+      new_pos <- n - 1
+    }
+    # Otherwise move left or right with equal probability
+    else {
+      direction <- sample(c(-1, 1), size = 1)
+      new_pos <- current_pos + direction
+    }
+    positions[i] <- new_pos
+  }
+  return(vec[positions])
+}
+
+# ===============================================
+# simulate tune
+# ===============================================
+
+set.seed(8675309)
+
+tune <- Line(pitches = random_walk(my_notes, 1, 47),
+             durations = 0.5,
+             bar = 5,
+             name = "Clarinet")
+
+# ===============================================
+# compose!
+# ===============================================
+
+waltz <- Music() + 
+  Meter(3, 4) + 
+  Tempo(170) + 
+  Key(-3) + 
+  
+  tune + 
+  Instrument(72) + # 72 - clarinet
+  Slur(1, 48) +
+  
+  accompaniment + 
+  Clef("F") +
+  Instrument(22) + #22 - accordion
+  Dynamic("p", 1) +
+  Dynamic("pp", 13) +
+
+  Line(bass, name = "Banjo") + 
+  Clef("F") + 
+  Instrument(106) + # 106 - banjo
+  Dynamic("p", 1) +
+  Dynamic("pp", 13) +
+  Hairpin(">", 7, 12) + 
+  
+  Line(bass, name = "Bassoon") + 
+  Clef("F") + 
+  Instrument(71) + # 71 - bassoon
+  Dynamic("p", 1) +
+  Dynamic("pp", 13) +
+  Hairpin(">", 7, 12)
+
+# add staccato mark to second and third beat of each bar of accompaniment
+
+x <- 1:36
+off_beats <- x[x %% 3 != 1]
+
+for(i in off_beats){
+  waltz <- waltz + Articulation(".", i, to = 2)
+}
+
+waltz_rw <- waltz
+
+gm::show(waltz, to = "audio")
+gm::show(waltz, to = "score")
+```
+
+## Favors leaps between chord tones {.scrollable}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(markovchain)
+library(LaplacesDemon)
+
+# -------------------------
+# setup: notes / helpers
+# -------------------------
+notes <- my_notes
+p <- length(my_notes)  # 14
+
+# helper: normalize rows so each row sums to 1
+row_normalize <- function(W){
+  W <- pmax(W, 0)              # avoid negative weights
+  rs <- rowSums(W)
+  rs[rs == 0] <- 1             # prevent div-by-zero (degenerate case)
+  W / rs
+}
+
+# distance in scale-steps (|i-j|)
+dist_mat <- abs(outer(1:p, 1:p, "-"))
+# identify chord tones of C minor (C, Eb, G)
+chord_tones <- c("C4","E-4","G4","C5","E-5","G5")
+is_chord_tone <- notes %in% chord_tones
+# indices for tonic Cs (for "resolve to tonic" option)
+tonic_idx <- which(notes %in% c("C4","C5"))
+
+# ===============================================
+# stepwise
+# ===============================================
+
+stepwise_matrix <- function(weight_step = 0.8, weight_stay = 0.15, weight_leap = 0.05){
+  W <- matrix(0, p, p)
+  for(i in 1:p){
+    # neighbor up/down (if available)
+    if(i > 1) W[i, i-1] <- weight_step/2
+    if(i < p) W[i, i+1] <- weight_step/2
+    # chance to hold the same pitch
+    W[i, i] <- weight_stay
+    # small chance to jump +/-2 (third) or +/-3 (fourth)
+    if(i > 2) W[i, i-2] <- weight_leap/2
+    if(i < p-1) W[i, i+2] <- weight_leap/2
+  }
+  row_normalize(W)
+}
+
+P_step <- stepwise_matrix()
+rownames(P_step) <- colnames(P_step) <- notes
+
+# ===============================================
+# chord tone
+# ===============================================
+
+chord_bias_matrix <- function(beta = 1.0, chord_boost = 4.0){
+  # beta controls how quickly probability decays with |scale-step|
+  W <- exp(-beta * dist_mat)   # base distance kernel
+  # multiply targets that are chord tones
+  W[, is_chord_tone] <- W[, is_chord_tone] * chord_boost
+  # small extra boost for staying on same pitch (optional)
+  W[cbind(1:p, 1:p)] <- W[cbind(1:p,1:p)] + 0.05
+  row_normalize(W)
+}
+
+P_chord <- chord_bias_matrix(beta = 0.9, chord_boost = 5)
+rownames(P_chord) <- colnames(P_chord) <- notes
+
+# ===============================================
+# aprpeggio
+# ===============================================
+
+arpeggio_matrix <- function(step_weight = 0.4, triad_weight = 0.55, other_weight = 0.05){
+  W <- matrix(other_weight, p, p)  # small baseline everywhere
+  # increase weight for step neighbors
+  for(i in 1:p){
+    if(i > 1) W[i, i-1] <- W[i, i-1] + step_weight/2
+    if(i < p) W[i, i+1] <- W[i, i+1] + step_weight/2
+  }
+  # stronger attraction to chord tones (prefer closest chord tone(s))
+  for(i in 1:p){
+    # indices of chord tones
+    ct_idx <- which(is_chord_tone)
+    # find closest chord-tone(s) by distance
+    dct <- abs(ct_idx - i)
+    closest <- ct_idx[dct == min(dct)]
+    W[i, closest] <- W[i, closest] + triad_weight / length(closest)
+  }
+  row_normalize(W)
+}
+
+P_arp <- arpeggio_matrix()
+rownames(P_arp) <- colnames(P_arp) <- notes
+
+# ===============================================
+# wander 
+# ===============================================
+
+resolve_matrix <- function(base_beta = 0.8, resolve_prob = 0.10){
+  # base kernel = exp(-beta*distance)
+  Wbase <- exp(-base_beta * dist_mat)
+  # add explicit small probability mass toward tonic pitches
+  W <- (1 - resolve_prob) * Wbase
+  W[, tonic_idx] <- W[, tonic_idx] + resolve_prob / length(tonic_idx)
+  row_normalize(W)
+}
+
+P_resolve <- resolve_matrix(base_beta = 1.0, resolve_prob = 0.12)
+rownames(P_resolve) <- colnames(P_resolve) <- notes
+
+
+# ===============================================
+# simulate tune
+# ===============================================
+
+set.seed(123)
+
+
+
+mcMelody <- new("markovchain", 
+                 states = my_notes, 
+                 byrow = TRUE,
+                 transitionMatrix = P_arp, 
+                 name = "Melody")
+
+tune <- Line(pitches = rmarkovchain(n = 48, object = mcMelody, t0 = "C5"),
+             durations = 0.5,
+             bar = 5,
+             name = "Clarinet")
+
+# ===============================================
+# compose!
+# ===============================================
+
+waltz <- Music() + 
+  Meter(3, 4) + 
+  Tempo(170) + 
+  Key(-3) + 
+  
+  tune + 
+  Instrument(72) + # 72 - clarinet
+  Slur(1, 48) +
+  
+  accompaniment + 
+  Clef("F") +
+  Instrument(22) + #22 - accordion
+  Dynamic("p", 1) +
+  Dynamic("pp", 13) +
+
+  Line(bass, name = "Banjo") + 
+  Clef("F") + 
+  Instrument(106) + # 106 - banjo
+  Dynamic("p", 1) +
+  Dynamic("pp", 13) +
+  Hairpin(">", 7, 12) + 
+  
+  Line(bass, name = "Bassoon") + 
+  Clef("F") + 
+  Instrument(71) + # 71 - bassoon
+  Dynamic("p", 1) +
+  Dynamic("pp", 13) +
+  Hairpin(">", 7, 12)
+
+# add staccato mark to second and third beat of each bar of accompaniment
+
+x <- 1:36
+off_beats <- x[x %% 3 != 1]
+
+for(i in off_beats){
+  waltz <- waltz + Articulation(".", i, to = 2)
+}
+
+#gm::show(waltz)
+gm::show(waltz, to = "audio")
+gm::show(waltz, to = "score")
+```
+
+
 
 ## The Jacobson method
 
@@ -533,6 +1021,7 @@ times_bass <- list(0.5, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 0.5, 
 
 tie_starts_treble <- c(2, 6, 12, 14, 24, 28, 34, 36, 45, 46, 47, 50, 53, 57, 58, 59, 69, 70, 71, 79, 83, 95, 114)
 tie_ends_treble <- tie_starts_treble + 1
+
 
 random_shift <- function(start_pitch, notes = c("A", "B", "C", "D", "E", "F", "G"), var){
   shift <- round(rnorm(1, mean = 0, sd = sqrt(var)))
@@ -589,7 +1078,9 @@ find_lowest <- function(chord, notes = c("C", "D", "E", "F", "G", "A", "B")){
   return(paste0(min_cand, min(octaves)))
 }
 
-set.seed(12345)
+
+#set.seed(12345)
+set.seed(8675309)
 pitches_treble_rand3 <- pitches_treble
 
 for(note in 1:43){
@@ -628,39 +1119,397 @@ for(note in 44:115){
   }
 }
 
-mystery_rand3 <- Music() + 
+treb_sub <- pitches_treble_rand3[c(37:181)]
+treb_dur_sub <- times_treble[c(37:181)]
+bass_sub <- pitches_bass[c(50:152)]
+bass_dur_sub <- times_bass[c(50:152)]
+
+i <- 116 - 36
+treb_ties <- c(-2, 5, 7, 14, 16, 26, 38, 40, 48, 58)
+treb_dot <- c(63, 120, 121, 129, 130, 153, 154)
+bass_ties <- c(50, 52, 53, 54, 55, 57, 58, 59, 61, 66, 67, 74, 75, 79, 82, 83, 117, 119, 123, 125, 129, 136, 138, 143, 147)
+bass_dot <- c(70, 112, 116, 117, 122, 123, 132, 135, 136, 150)
+shorter_roll <- Music() + 
   Meter(4, 4) + 
-  Line(pitches_treble_rand3, times_treble, name = "treble") + 
-  Line(pitches_bass, times_bass, name = "bass") + 
-  Clef("F", to = "bass") +
-  Tie(2, to = "treble") + Tie(6, to = "treble") + Tie(12, to = "treble") + Tie(14, to = "treble") + Tie(24, to = "treble") + Tie(28, to = "treble") + Tie(34, to = "treble") + Tie(36, to = "treble") + Tie(45, to = "treble") + Tie(46, to = "treble") + Tie(47, to = "treble") + Tie(50, to = "treble") + Tie(53, to = "treble") + Tie(57, to = "treble") + Tie(58, to = "treble") + Tie(59, to = "treble") + Tie(69, to = "treble") + Tie(70, to = "treble") + Tie(71, to = "treble") + Tie(79, to = "treble") + Tie(83, to = "treble") + Tie(95, to = "treble") + Tie(114, to = "treble") + Tie(121, to = "treble") + Tie(123, to = "treble") + Tie(130, to = "treble") + Tie(132, to = "treble") + Tie(142, to = "treble") + Tie(154, to = "treble") + Tie(156, to = "treble") + Tie(164, to = "treble") + Tie(174, to = "treble") + 
-  Tie(1, to = "bass") + Tie(3, to = "bass") + Tie(4, to = "bass") + Tie(5, to = "bass") + Tie(6, to = "bass") + Tie(8, to = "bass") + Tie(10, to = "bass") + Tie(11, to = "bass") + Tie(12, to = "bass") + Tie(13, to = "bass") + Tie(15, to = "bass") + Tie(17, to = "bass") + Tie(18, to = "bass") + Tie(19, to = "bass") + Tie(20, to = "bass") + Tie(22, to = "bass") + Tie(24, to = "bass") + Tie(25, to = "bass") + Tie(26, to = "bass") + Tie(27, to = "bass") + Tie(29, to = "bass") + Tie(31, to = "bass") + Tie(32, to = "bass") + Tie(33, to = "bass") + Tie(34, to = "bass") + Tie(36, to = "bass") + Tie(38, to = "bass") + Tie(39, to = "bass") + Tie(40, to = "bass") + Tie(41, to = "bass") + Tie(43, to = "bass") + Tie(45, to = "bass") + Tie(46, to = "bass") + Tie(47, to = "bass") + Tie(48, to = "bass") + Tie(50, to = "bass") + Tie(52, to = "bass") + Tie(53, to = "bass") + Tie(54, to = "bass") + Tie(55, to = "bass") + Tie(57, to = "bass") + Tie(58, to = "bass") + Tie(59, to = "bass") + Tie(61, to = "bass") + Tie(66, to = "bass") + Tie(67, to = "bass") + Tie(74, to = "bass") + Tie(75, to = "bass") + Tie(79, to = "bass") + Tie(82, to = "bass") + Tie(83, to = "bass") + Tie(117, to = "bass") + Tie(119, to = "bass") + Tie(123, to = "bass") + Tie(125, to = "bass") + Tie(129, to = "bass") + Tie(136, to = "bass") + Tie(138, to = "bass") + Tie(143, to = "bass") + Tie(147, to = "bass") +
   Tempo(114) + 
-  Articulation(">", 63, to = "treble") + Articulation(".", 63, to = "treble") + Articulation(".", 120, to = "treble") + Articulation(".", 121, to = "treble") + Articulation(".", 129, to = "treble") + Articulation(".", 130, to = "treble") + Articulation(".", 153, to = "treble") + Articulation(".", 154, to = "treble") + 
-  Articulation(">", 70, to = "bass") + Articulation(".", 70, to = "bass") + Articulation(">", 112, to = "bass") + Articulation(".", 112, to = "bass") + Articulation(".", 116, to = "bass") + Articulation(".", 117, to = "bass") + Articulation(".", 122, to = "bass") + Articulation(".", 123, to = "bass") + Articulation(".", 132, to = "bass") + Articulation(".", 135, to = "bass") + Articulation(".", 136, to = "bass") + Articulation(".", 150, to = "bass") +
-  Accidental("sharp", 65, to = "bass") + Accidental("sharp", 81, to = "bass") + Accidental("sharp", 87, to = "bass") +
-  Dynamic("mf", 1, to = "treble") + Dynamic("mf", 68, to = "treble") + Dynamic("f", 116, to = "treble")
+  Line(treb_sub, treb_dur_sub, name = "treble") + 
+  Line(bass_sub, bass_dur_sub, name = "bass") + 
+  Clef("F", to = "bass") +
+  Dynamic("mf", 1, to = "treble") + 
+  Dynamic("f", i, to = "treble") + 
+  Articulation(">", 63 - 36, to = "treble") + 
+  Articulation(">", 70 - 49, to = "bass") + 
+  Articulation(">", 112 - 49, to = "bass") + 
+  Accidental("sharp", 65 - 49, to = "bass") + 
+  Accidental("sharp", 81 - 49, to = "bass") + 
+  Accidental("sharp", 87 - 49, to = "bass")
+
+for(j in treb_ties){
+  shorter_roll <- shorter_roll + Tie(i + j, to = "treble")
+}
+
+for(j in bass_ties){
+  shorter_roll <- shorter_roll + Tie(j - 49, to = "bass")
+}
+
+for(j in treb_dot){
+  shorter_roll <- shorter_roll + Articulation(".", j - 36, to = "treble")
+}
+
+for(j in bass_dot){
+  shorter_roll <- shorter_roll + Articulation(".", j - 49, to = "bass")
+}
 ```
 
 ```{r}
 #| echo: false
-#show(mystery_rand3)
+gm::show(shorter_roll, to = "audio")
+gm::show(shorter_roll, to = "score")
 ```
 
-## For the students
+![](images/rick.gif){fig-align="center"}
 
-Explore the relationship between the probability rules governing the system and the sound of the resulting music.
+## The students' mission {.large}
 
-play
+::: incremental
+- Write your own piece of stochastic music;
+- Explore the relationship between the probability rules governing the system and the sound of the resulting music;
+- Key words:
+    - Play;
+    - Surprise yourself.
+:::
 
-surprise yourself
+
+## Randomizing the rhythm {.scrollable}
+
+```{r}
+#| echo: false
+
+set.seed(101)
+
+# SCALE
+scale <- c("E", "F", "G#", "A", "B", "C", "D#", "E")
+octaves_high <- 4:4
+octaves_low <- 2:3
+
+# PITCHES
+sample_pitches <- function(scale, octaves, n) {
+  pool <- paste0(
+    rep(scale, length(octaves)),
+    sort(rep(octaves, length(scale)))
+  )
+  sample(pool, n, replace = TRUE)
+}
+
+# DURATIONS
+sample_durations <- function(n) {
+  sample(c(0.25, 0.5, 0.75, 1, 1.5), n, replace = TRUE,
+         prob = c(0.2, 0.4, 0.15, 0.2, 0.05))
+}
+
+# RIGHT HAND
+n_right <- 30
+right_pitches <- lapply(1:n_right, function(i) {
+  if (runif(1) < 0.5) {
+    sample_pitches(scale, octaves_high, sample(2:3, 1))
+  } else {
+    sample_pitches(scale, octaves_high, 1)
+  }
+})
+
+right_hand <- Line(
+  pitches = right_pitches,
+  durations = sample_durations(n_right)
+)
+
+# LEFT HAND
+n_left <- 26
+left_pitches <- sample_pitches(scale, octaves_low, n_left)
+
+left_hand <- Line(
+  pitches = left_pitches,
+  durations = sample_durations(n_left),
+  bar = 2,
+  offset = 0.5
+)
+
+# MUSIC
+char <- Music() +
+  Meter(3, 4) +
+  Tempo(100, marking = "charlyn is cool") +
+  right_hand +
+  Dynamic("f", 1) +
+  Hairpin("<", 5, 10) +
+  Hairpin(">", 11, 15) +
+  Slur(3, 7) +
+  Slur(9, 13) +
+  left_hand +
+  Clef("F") +
+  Dynamic("ff", 2) +
+  Pedal(1, 8) +
+  Slur(2, 6) +
+  Slur(10, 14) +
+  Hairpin(">", 23, 26) + 
+  Dynamic("f", 18)
+
+# RUN
+gm::show(char, to = "audio")
+gm::show(char, to = "score")
+```
+
+## I just like how this looks {.scrollable}
+
+```{r}
+#| echo: false
+pitches <- c("C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B")
+octaves <- 1:7
+all_pitches <- c("A0", "A#0", "B0",
+                 paste(rep(pitches, length(octaves)),
+                       sort(rep(octaves, length(pitches))),
+                       sep = ""),
+                 "C8")
+set.seed(314159265)
+
+notes1 <- 50
+center_index <- which(all_pitches == "C3")
+indices1 <- round(rnorm(notes1, mean = center_index, sd = 20))
+indices1 <- pmin(pmax(indices1, 1), length(all_pitches))
+line1 <- Line(
+  pitches = all_pitches[indices1],
+  durations = pmax(round(rexp(notes1) * 256) / 256, 1 / 256)
+)
+
+notes2 <- 25
+center_index <- which(all_pitches == "C5")
+indices2 <- round(rnorm(notes2, mean = center_index, sd = 20))
+indices2 <- pmin(pmax(indices2, 1), length(all_pitches))
+line2 <- Line(
+  pitches = all_pitches[indices2],
+  durations = pmax(round(rnorm(notes2, 1.5, 2) * 256) / 256, 1 / 256)
+)
+
+music <- Music() +
+  Meter(4, 4) +
+  line1 +
+  line2
+
+gm::show(music)
+```
+
+## Playing with texture 
+
+(John, please don't forget to lower the volume on this.)
+
+```{r}
+#| echo: false
+
+set.seed(123)
+
+pitches = c("C", "D", "E", "F", "G", "A", "B")
+octaves = 4:5
+my_notes = paste(rep(pitches, length(octaves)), 
+                  sort(rep(octaves, length(pitches))), sep = "")
+
+song = Music() + 
+  Meter(4, 4) + 
+  Tempo(160)
+
+# add random instruments
+instrument_ids = sample(1:128, 50, replace = TRUE)
+
+for (i in 1:50) {
+  line_length = sample(c(4, 8, 16), 1)
+  durations = sample(c(2, 1, 0.5, 0.25), line_length, replace = TRUE)
+  
+  #add in some random rests
+  pitches_and_rests = ifelse(runif(line_length) < 0.1, NA, sample(my_notes, line_length, replace = TRUE))
+  
+  song = song +
+        Line(pitches = pitches_and_rests,
+        durations = durations) + Instrument(instrument_ids[i])}
+
+gm::show(song, to = "audio")
+#export(song, "my_song.mid")
 
 
-## Student Example 1
+```
+
+## They called it "Nightmare Ballet" {.scrollable}
+
+```{r}
+#| echo: false
 
 
+library(gm)
+set.seed(12345)
 
-## Student Example 2 {.scrollable}
+# Set up pitch list
+pitches <- c("C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B")
+octaves <- 0:8
+all_pitches <- paste0(rep(pitches, times=length(octaves)),
+                      rep(octaves, each=length(pitches)))
+valid_pitches <- all_pitches[which(all_pitches == "A0"):which(all_pitches == "C8")]
+num_pitches <- length(valid_pitches)
+
+# ---- Rhythm: Poisson ----
+dur_counts <- rpois(64, lambda = 1)
+dur_counts[dur_counts < 1] <- 1
+durations <- dur_counts * 0.25
+
+# ---- Melody: Gamma ----
+gamma_vals <- rgamma(64, shape = 5, scale = 5)
+gamma_scaled <- round(scales::rescale(gamma_vals, to = c(1, num_pitches)))
+sampled_pitches <- valid_pitches[gamma_scaled]
+
+# ---- Create Line ----
+line <- Line(
+  pitches = sampled_pitches,
+  durations = durations
+)
+
+# ---- Build Music ----
+nightmare_ballet <- Music() + 
+  Meter(4, 4) + 
+  Tempo(50) + 
+  line + 
+  Instrument(1) + 
+  Dynamic("p", 1) +
+  Dynamic("ffff", 64) +
+  Pedal(1, 64) +
+  Hairpin("<", 2, 63)
+
+gm::show(nightmare_ballet, to = "audio")
+gm::show(nightmare_ballet, to = "score")
+```
+
+## Just trolling me {.scrollable}
+
+```{r}
+#| echo: false
+# ===============================================
+# random walk on the elements of a vector
+# ===============================================
+
+random_walk <- function(vec, start_pos, steps) {
+  n <- length(vec)
+  
+  # Initialize walk
+  positions <- numeric(steps + 2)
+  positions[1] <- start_pos
+  
+  for (i in 2:(steps + 2)) {
+    current_pos <- positions[i - 1]
+    
+    # At the left boundary
+    if (current_pos == 2) {
+      new_pos <- 4
+    }
+    # At the right boundary
+    else if (current_pos == n) {
+      new_pos <- n - 2
+    }
+    # Otherwise move left or right with equal probability
+    else {
+      direction <- sample(c(-1, 1), size = 2)
+      new_pos <- current_pos + direction
+    }
+    positions[i] <- new_pos
+  }
+  return(vec[positions])
+}
+
+# ===============================================
+# what pitches are fair game?
+# ===============================================
+
+pitches <- c("G", "D", "G", "C", "F", "A", "D")
+octaves <- 2:4
+my_notes <- paste(rep(pitches, length(octaves)), 
+                  sort(rep(octaves, length(pitches))), sep = "")
+
+# ===============================================
+# fixed accompaniment (stolen from Shostakovich)
+# ===============================================
+
+c_octave <- c("C2", "C3")
+d_octave <- c("D2", "D3")
+g_octave <- c("G1", "G2")
+c_minor_triad <- c("C3", "E-3", "G3")
+
+chunk_1 <- list(c_octave, c_minor_triad, c_minor_triad)
+chunk_2 <- list(g_octave, c_minor_triad, c_minor_triad)
+chunk_3 <- list(d_octave, c("F3", "A-3"), c("F3", "A-3"))
+chunk_4 <- list(g_octave, c("F3", "A-3"), c("F3", "A-3"))
+
+accompaniment <- Line(c(chunk_1, chunk_2, chunk_1, chunk_2,
+                        chunk_1, chunk_2, chunk_1, chunk_2,
+                        chunk_1, chunk_2, chunk_3, chunk_4),
+                      name = "Accordion")
+
+bass <- c("C3", NA, NA, "G2", NA, NA, "C3", NA, NA, "G2", NA, NA,
+          "C3", NA, NA, "G2", NA, NA, "C3", NA, NA, "G2", NA, NA,
+          "C3", NA, NA, "G2", NA, NA, "D3", NA, NA, "G2", NA, NA)
+
+# ===============================================
+# simulate tune
+# ===============================================
+
+set.seed(8675309)
+
+tune <- Line(pitches = random_walk(my_notes, 1, 47),
+             durations = 0.5,
+             bar = 5,
+             name = "dj0nt")
+
+# ===============================================
+# compose!
+# ===============================================
+
+waltz <- Music() + 
+  Meter(3, 4) + 
+  Tempo(170) + 
+  Key(-3) + 
+  
+  tune + 
+  Instrument(31) + # 31 - distorted guitar
+  Slur(1, 48) +
+  
+  accompaniment + 
+  Clef("F") +
+  Instrument(22) + #22 - accordion
+  Dynamic("p", 1) +
+  Dynamic("pp", 13) +
+  
+  Line(bass, name = "Banjo") + 
+  Clef("F") + 
+  Instrument(106) + # 106 - banjo
+  Dynamic("p", 1) +
+  Dynamic("pp", 13) +
+  Hairpin(">", 7, 12) + 
+  
+  Line(bass, name = "Bassoon") + 
+  Clef("F") + 
+  Instrument(71) + # 71 - bassoon
+  Dynamic("p", 1) +
+  Dynamic("pp", 13) +
+  Hairpin(">", 7, 12)
+
+# add staccato mark to second and third beat of each bar of accompaniment
+
+x <- 1:36
+off_beats <- x[x %% 3 != 1]
+
+for(i in off_beats){
+  waltz <- waltz + Articulation(".", i, to = 2)
+}
+
+gm::show(waltz, to = "audio")
+gm::show(waltz, to = "score")
+
+
+```
+
+## Not quite random, and yet... {.scrollable}
 
 ```{r}
 #| echo: false
@@ -710,23 +1559,25 @@ song <- Music() +
   high + Instrument(2) + Dynamic("p", 2)  +
   low + Instrument(3) + Dynamic("p", 3)
 
-show(song)
+gm::show(song, to = "audio")
+gm::show(song, to = "score")
 ```
 
-## Student Example 3
+## Future improvements
 
-## For next time
+- Can `gm` handle any Hz, and not just the discrete pitches of the Western system?
+- How closely can I replicate Xenakis' methods?
+- Play with Markov melodies based on estimated transition probabilities from famous composers;
+- Randomize other features: harmony, rhythm, articulation, orchestration, dynamics, etc;
+- Students need more time and better coaching/inspiration;
+- How can I make it sillier?
 
-- Can `gm` handle sounds of any Hz, and not just the discrete pitches of the Western system?
-- How closely can I replicate Xenakis' methods;
-- Need to give students more time and better coaching/inspiration.
-
-## Some takeaways
+## Quick takeaways
 
 - Intro probability is a mixed audience. I aim for maximum variety in the examples and applications;
 - If you as an instructor have any creative or artistic interests, mix them in. You will have a tremendous amount of fun;
 - Activities like this totally tilt the material on its ear;
-- `gm` is an excellent package!
+- The `gm` package is so much fun to play with!
 
 # Thank you!
 
