@@ -1,6 +1,7 @@
 ---
 title: "Lab 3"
 subtitle: Due Thursday September 18 at 11:59 PM
+draft: true
 editor: 
   mode: source
 ---
