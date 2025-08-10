@@ -194,7 +194,7 @@ The function `next_word_probs` that we gave you has a fourth argument `temp` whe
 
 ## Task 7
 
-Code temperature sampling yourself. Take the probabilities that `probs <- next_word_probs(...)` gives you when `temp = 1.0`, and then use basic R commands like `exp`, `log`, etc to apply the formula above and compute a vector `temp_probs` with the revised numbers for `temp = 0.5`. Check that your numbers agree with the ones that our function `next_word_probs` gives when you supply `0.5` as the fourth argument.
+Code temperature sampling yourself. Take the probabilities that `probs <- next_word_probs(...)` gives you when `temp = 1.0`, and then use basic `R` commands to apply the formula above and compute a vector `temp_probs` with the revised numbers for `temp = 0.5`. Check that your numbers agree with the ones that our function `next_word_probs` gives when you supply `0.5` as the fourth argument.
 
 # Further reading
 
