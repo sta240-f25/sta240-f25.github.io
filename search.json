@@ -858,55 +858,6 @@
     "text": "Seven balls are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green balls. Find the probability that\n\n3 red, 2 blue, and 2 green balls are withdrawn;\nat least 2 red balls are withdrawn;\nall withdrawn balls are the same color;\neither exactly 3 red balls or exactly 3 blue balls are withdrawn."
   },
   {
-    "objectID": "labs/lab-3.html",
-    "href": "labs/lab-3.html",
-    "title": "Lab 3",
-    "section": "",
-    "text": "Car Talk (1977 - 2012) was a popular show on NPR. It featured a segment called the “Puzzler,” where the hosts would read a brain teaser and invite listeners to send in solutions for the chance to win a prize. Here is the text of one such Puzzler (original audio at around 19:19 here):\nIn what follows, you may find some notation useful. Let \\(D\\) denote your true disease status, and \\(T\\) denote the result of your test. Then\n\\[\n\\begin{align*}\n    p &= P(D=+) && \\text{(prevalence)}\n    \\\\\n    f_{-}&=P(T=-\\,|\\, D=+) && \\text{(false negative rate)}\n    \\\\\n    f_{+}&=P(T=+\\,|\\, D=-) && \\text{(false positive rate)}\n    \\\\\n    1-f_{-}&=P(T=+\\,|\\, D = +) && \\text{(sensitivity)}\n    \\\\\n    1-f_{+}&=P(T=-\\,|\\, D = -) && \\text{(specificity)}.\n\\end{align*}\n\\]"
-  },
-  {
-    "objectID": "labs/lab-3.html#problem-1",
-    "href": "labs/lab-3.html#problem-1",
-    "title": "Lab 3",
-    "section": "Problem 1",
-    "text": "Problem 1\nBefore you read anything else, try to solve the puzzler yourself. What do you come up with?"
-  },
-  {
-    "objectID": "labs/lab-3.html#problem-2",
-    "href": "labs/lab-3.html#problem-2",
-    "title": "Lab 3",
-    "section": "Problem 2",
-    "text": "Problem 2\nExplain the correct way to solve this problem. Exactly what probability are we asked to compute, and what formula should we apply to do it? Does the prompt actually provide enough information to ultimately get the job done?"
-  },
-  {
-    "objectID": "labs/lab-3.html#problem-3",
-    "href": "labs/lab-3.html#problem-3",
-    "title": "Lab 3",
-    "section": "Problem 3",
-    "text": "Problem 3\nThis is the solution that the hosts ultimately revealed (original audio at around 20:30 here):\n\nLet’s say 1000 people take the test. Fifty people will test positive and yet they will not have it. One will test positive and have it. So your chances of actually having it, even though you tested positive, are one in 51, or a little less than 2%.\n\nSo, what do you think? Did they get it right? Explain how the show interpreted the information given in the Puzzler, and explain what arithmetic formula they implicitly applied in order to compute their answer."
-  },
-  {
-    "objectID": "labs/lab-3.html#problem-4",
-    "href": "labs/lab-3.html#problem-4",
-    "title": "Lab 3",
-    "section": "Problem 4",
-    "text": "Problem 4\nExplain two things:\n\nUnder what conditions is the formula that the show used actually an upper bound on the correct answer?\nWhy might an upper bound on the true probability still be a useful thing to calculate?"
-  },
-  {
-    "objectID": "labs/lab-3.html#problem-5",
-    "href": "labs/lab-3.html#problem-5",
-    "title": "Lab 3",
-    "section": "Problem 5",
-    "text": "Problem 5\nSo, the show’s answer, while wrong, could still be potentially useful upper bound on the true probability. Neat! But how wrong is it, even? To get a sense of this, use R to create some line plots of the prevalence \\(p\\in[0,\\, 1]\\) against the true and approximate probabilities for different values of \\(f_-\\) and \\(f_+\\). Mix-and-match \\(f_-,\\, f_+\\in\\{0.1,\\, 0.2\\}\\)."
-  },
-  {
-    "objectID": "labs/lab-3.html#problem-6",
-    "href": "labs/lab-3.html#problem-6",
-    "title": "Lab 3",
-    "section": "Problem 6",
-    "text": "Problem 6\nNow let’s try to be more precise about the “wrongness” of the show’s answer. Let \\(B\\) denote the true probability, and \\(\\overline{B}\\) denote the show’s approximation. In part (c) you showed that \\(B\\leq \\overline{B}\\) under certain conditions. Now define\n\\[\n\\delta = \\frac{\\overline{B}-B}{B}.\n\\]\nThis is the relative error of the show’s answer. Prove that\n\\[\n|\\delta|\n\\leq\n\\max\n\\left\\{\n\\frac{f_-}{1-f_-}\n,\\,\n\\frac{f_+}{1+f_+}\n\\right\\}\n,\\quad \\forall p\\in[0,\\, 1].\n\\]\nInterpret this result."
-  },
-  {
     "objectID": "problems/bank/counting/poker-dice.html",
     "href": "problems/bank/counting/poker-dice.html",
     "title": "STA 240 Fall 2025",

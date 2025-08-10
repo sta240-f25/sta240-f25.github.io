@@ -365,7 +365,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link active" data-scroll-target="#your-turn">Your turn</a>
+  <li><a href="#babys-first-language-model" id="toc-babys-first-language-model" class="nav-link active" data-scroll-target="#babys-first-language-model">Baby’s first language model</a>
   <ul class="collapse">
   <li><a href="#task-1" id="toc-task-1" class="nav-link" data-scroll-target="#task-1">Task 1</a></li>
   <li><a href="#task-2" id="toc-task-2" class="nav-link" data-scroll-target="#task-2">Task 2</a></li>
@@ -402,7 +402,7 @@ window.Quarto = {
 </header>
 
 
-<p>If you’ve ever asked <a href="https://chatgpt.com/">ChatGPT</a> a question, you may have noticed something: it generates its response one word at a time right before your eyes:</p>
+<p>If you’ve ever asked <a href="https://chatgpt.com/">ChatGPT</a> a question, you may have noticed something; it generates its response one word at a time right before your eyes:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/chatgpt.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
@@ -410,7 +410,7 @@ window.Quarto = {
 </div>
 <p>What exactly is it doing? Well, <a href="https://chatgpt.com/share/677ef289-9564-8008-a662-9f8c2cfb04fc">ask it</a>! If you do, the explanation will go something like this…</p>
 <p>ChatGPT is an example of a <em>large language model</em> (LLM). Under the hood, there’s this fancy pants deep neural network machine learning mumbo jumbo that has been trained on a massive corpus of documents (books, newspaper articles, academic publications, reddit, all of Wikipedia, etc). When you ask it a question like “What color is the apple?”, the model asks itself “<em>conditional</em> on the text you just gave me, what is the likely next word?” Based on the text it was trained on and the underlying ML model, ChatGPT constructs a <em>conditional probability distribution</em> over the set of “next words” and simulates from it, like with the <code>sample</code> function. The new word that it simulates gets added to the end of the text you provided, and it repeats the process over again: given where we are <em>now</em>, what is the next word likely to be? And on and on…</p>
-<p>So say you ask it “What color is the apple?” Based on that, the model constructs a probability distribution for <span class="math inline">\(P(\text{next word}\,|\,\text{"What color is the apple?"})\)</span>. The sample space <span class="math inline">\(S\)</span> here is (basically) the set of all words that the model has seen. That set could be pretty big, but nevertheless it is finite. So we just need to list out all of the possible words together with their individual probabilities:</p>
+<p>So say you ask it “What color is the apple?” Based on that, the model constructs a probability distribution for <span class="math inline">\(P(\text{next word}\,|\,\text{"What color is the apple?"})\)</span>. The sample space <span class="math inline">\(S\)</span> here is (basically) the set of all words that the model has seen. That set could be pretty big, but nevertheless it is finite, so we just need to list out all of the possible words together with their individual probabilities:</p>
 <div class="center-table">
 <table class="caption-top table">
 <thead>
@@ -592,9 +592,9 @@ window.Quarto = {
 </div>
 <p>We see at this point that “red” is the most likely next word, but we are not searching the table for the most likely next word and slavishly returning it. We are simulating. So there’s a 35% chance we’ll come up with “red,” but also a non-trivial possibility that we’ll come up with “green.” You will notice that if you ask ChatGPT the exact same question multiple times (literally the identical text prompt), it returns different answers. That is because of this element of randomness.</p>
 <p>Obviously, the elephant in the room in the above discussion is “where did the probabilities come from?” This is the magic, such as it is, of LLMs. In order to implement this scheme, we need to be able to construct a conditional probability distribution on words given <em>any</em> context. So no matter if you give it “What color is the apple” or “Explain string theory like I’m a genius” or “Why did my wife leave me” or “que se passe t’il,” it needs to come up with a meaningful and useful distribution for the next word, and it has to repeat this thousands if not millions of times. There are so many possibilities that it’s kind of bonkers to expect to be able to do this, but with enough data and computing power and a big enough model, apparently we can pull it off, at least some of the time.</p>
-<p>So, the question of “where did the probabilities come from?” is sadly beyond the scope of our course. However, the question of “what do you do with the probabilities once you have them?” is perfectly accessible to us, even at this early stage, so let’s have some fun…</p>
-<section id="your-turn" class="level1">
-<h1>Your turn</h1>
+<p>So, the question of “where did the probabilities come from?” is sadly beyond the scope of our course. However, the question of “what do you do with the probabilities once you have them?” is perfectly accessible to us, even at this early stage, so let’s have some fun.</p>
+<section id="babys-first-language-model" class="level1">
+<h1>Baby’s first language model</h1>
 <p>The <a href="https://en.wikipedia.org/wiki/Word_n-gram_language_model"><span class="math inline">\(k\)</span>-gram language model</a> is I guess what you’d call a “small language model.” Next to ChatGPT, it looks prehistoric. But it is simple and can be comfortably run on a laptop. We have trained this SLM on a single document: the text of Shakespeare’s <em>A Midsummer Night’s Dream</em>. Given the pre-trained model we are handing you, we ask that you implement the recursive scheme above in order to generate a text response, the same way ChatGPT does.</p>
 <p>In all cases, the starting <code>context</code> is</p>
 <div class="cell">
@@ -641,7 +641,7 @@ window.Quarto = {
 <p>Up to now we’ve been worrying a lot about individual words, but individual words don’t create meaning. It’s how those words interact across phrases and sentences and paragraphs. Unfortunately, we do not have methods for inducing a probability distribution over the set of all possible sentences, or the set of all possible thoughts. But in a sense, language models are attempting to <em>approximate</em> such a thing. And on the evidence to date, maybe they succeed sometimes. Anyway, how do we go from a method that gets things right on the word level to a method that gets things right on the sentence level? Well, therein lies the art of the engineers that work on these things, and one method they have found helpful is called <em>temperature sampling</em>.</p>
 <p>So far, given the current context, the model returns a (conditional) probability <span class="math inline">\(p(i)\)</span> for each word <span class="math inline">\(i\in \text{corpus}\)</span>. So far we’ve used these probabilities unmodified. With temperature sampling, before we draw the next word, we would first adjust the probabilities based on a user-defined tuning parameter <span class="math inline">\(t&gt;0\)</span> called the <em>temperature</em>:</p>
 <p><span class="math display">\[
-p_t(i) = \frac{p(i)^{1/t}}{\sum\limits_{i\in\text{corpus}}p(i)^{1/t}},\quad i\in\text{corpus}.
+p_t(i) = \frac{p(i)^{1/t}}{\sum\limits_{j\in\text{corpus}}p(j)^{1/t}},\quad i\in\text{corpus}.
 \]</span></p>
 <p>If <span class="math inline">\(t=1\)</span>, we’re back to the original probabilities. Otherwise, to quote the <span class="math inline">\(k\)</span>-grams people, “higher and lower temperatures make the original probability distribution smoother and rougher, respectively. By making a physical analogy, we can think of less probable words as states with higher energies, and the effect of higher (lower) temperatures is to make more (less) likely to excite these high energy states.” Why do people do this? To the best of my knowledge, it is no deeper than “it seems to work well.” In practice, adjusting the temperature seems to have a macro effect on the overall character of the <em>sentences</em>.</p>
 <p>The function <code>next_word_probs</code> that we gave you has a fourth argument <code>temp</code> where you can give it a number and it will give you the <em>tempered</em> probabilities. Play around with big and small values, and report any effect that it has on the overall quality of the sentences.</p>
@@ -658,7 +658,7 @@ p_t(i) = \frac{p(i)^{1/t}}{\sum\limits_{i\in\text{corpus}}p(i)^{1/t}},\quad i\in
 <li>The guy who created WolframAlpha has a nice <a href="https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/">primer</a>;</li>
 <li>People seemed to like <a href="https://youtu.be/zjkBMFhNj_g?feature=shared">this video</a> when it made the rounds a few years back;</li>
 <li>“<a href="https://arxiv.org/abs/2502.17814">An overview of large language models for statisticians</a>,” by several heavy-hitting ML researchers;</li>
-<li>The <span class="math inline">\(k\)</span>-grams model might serve as “baby’s first language model.” It looks naive compared to the LLMs of today, but in order to understand how it works, you have to confront ideas like tokenization and temperature sampling, which apply to many language models, large or small. <a href="https://cran.r-project.org/web/packages/kgrams/vignettes/kgrams.html">This</a> is the <code>R</code> package that we used for this lab.</li>
+<li><a href="https://cran.r-project.org/web/packages/kgrams/vignettes/kgrams.html">This</a> is the <code>R</code> package that we used for this lab. The LLMs of today are light years ahead of the simple <span class="math inline">\(k\)</span>-grams model, but some concepts are timeless: tokenization, temperature sampling, etc. Whether your language model is large or small, these things are in play. So if you play around with the <span class="math inline">\(k\)</span>-grams model, it could serve as a nice sandbox for getting familiar with those foundational concepts.</li>
 </ul>
 
 
