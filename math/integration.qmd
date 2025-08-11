@@ -155,7 +155,7 @@ $$
 An improper integral is the limit of a definite integral as one or more of the bounds tend toward some extreme value, typically $\pm\infty$. So a one-sided improper integral is defined like this:
 
 $$
-\int_a^\infty f(x)\,\text{d}x=\lim_{b\to\infty}\int_a^bf(x)\,\text{d}x
+\int_a^\infty f(x)\,\text{d}x=\lim_{b\to\infty}\int_a^bf(x)\,\text{d}x.
 $$
 
 A two-sided improper integral is defined as the sum of two one-sided improper integrals, where we make use of the "splitting" property: 
