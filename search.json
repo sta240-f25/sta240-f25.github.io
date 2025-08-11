@@ -212,7 +212,7 @@
     "href": "slides/slides_2025_08_25.html#example-the-birthday-problem",
     "title": "Welcome to STA 240!",
     "section": "Example: the birthday problem",
-    "text": "Example: the birthday problem\n\\(k\\) people convene for a birthday party:\n\nWhat is the probability that at least two of the attendees share a birthday?\nHow many people need to show up to the party for there to be a 50% chance of at least one match?\n\nMost people guess that you need a hundred or more people."
+    "text": "Example: the birthday problem\n\\(k\\) people convene for a birthday party:\n\nWhat is the probability that at least two of the attendees share a birthday?\nHow many people need to show up to the party for there to be a 50% chance of at least one match?\n\n\nMost people guess that you need, like, a lot."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#your-guesses",
@@ -261,7 +261,14 @@
     "href": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds",
     "title": "Welcome to STA 240!",
     "section": "Example: the wisdom of crowds",
-    "text": "Example: the wisdom of crowds\n\n\n\n\nAt a 1906 country fair in Plymouth, 800 people participated in a contest to estimate the weight of an ox. Francis Galton observed that the median guess, 1207 lbs, was accurate within 1% of the true weight of 1198 lbs.\n\n\n\n\n\n\n\n\nLesson\n\n\nThe aggregation of many imperfect estimates/guesses is often better than a needle-in-haystack search for the “best” individual guess.\n\n\n\n\n\n\n\n\n\n\n\nReality check!\n\n\nIt took humans a long time to realize this. The first recorded uses of an “average” were during Isaac Newton’s lifetime (see Stigler’s Seven Pillars of Statistical Wisdom)."
+    "text": "Example: the wisdom of crowds\n\n\n\n\nAt a 1906 country fair in Plymouth, 800 people participated in a contest to estimate the weight of an ox. Francis Galton observed that the median guess, 1207 lbs, was accurate within 1% of the true weight of 1198 lbs.\n\n\n\n\n\n\n\n\nLesson\n\n\nThe aggregation of many imperfect estimates/guesses is often better than a needle-in-haystack search for the “best” individual guess.\n\n\n\n\n\n\n\n\n\n\n\nIsn’t that obvious?\n\n\nIt took humans a long time to realize this. The first recorded uses of an “average” were during Isaac Newton’s lifetime (see Stigler’s Seven Pillars of Statistical Wisdom)."
+  },
+  {
+    "objectID": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds-1",
+    "href": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds-1",
+    "title": "Welcome to STA 240!",
+    "section": "Example: the wisdom of crowds",
+    "text": "Example: the wisdom of crowds\n\n\n\n\n\n\nWe frequently forget and relearn this lesson.\n\n\n (source: CNN)"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#weight-guessing-results",
@@ -278,18 +285,11 @@
     "text": "Price guessing results\nLINK TO GOOGLE SHEET. Reveal actual price."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#price-guessing-results-1",
-    "href": "slides/slides_2025_08_25.html#price-guessing-results-1",
+    "objectID": "slides/slides_2025_08_25.html#something-else-guessing-results",
+    "href": "slides/slides_2025_08_25.html#something-else-guessing-results",
     "title": "Welcome to STA 240!",
-    "section": "Price guessing results",
-    "text": "Price guessing results\nLINK TO GOOGLE SHEET. Reveal actual price."
-  },
-  {
-    "objectID": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds-1",
-    "href": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds-1",
-    "title": "Welcome to STA 240!",
-    "section": "Example: the wisdom of crowds",
-    "text": "Example: the wisdom of crowds\n\n\n\n\n\n\nIt’s a lesson we are doomed to relearn often, apparently.\n\n\n (source: CNN)"
+    "section": "Something else guessing results",
+    "text": "Something else guessing results\nLINK TO GOOGLE SHEET. Reveal actual price."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-the-folly-of-doctors",
@@ -299,11 +299,11 @@
     "text": "Example: the folly of doctors\n\nA 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the true positive rate of the test is 90%, and if the false positive rate is 9%, what is the chance that the woman actually has cancer, given that she tested positive?\n\n\nYou will know how to answer this by October. Doctors though…\n\n\n\n\n\n\n\n\nBBC News 2014\n\n\nOnly 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.\n\nWe can only imagine how much anxiety those innumerate doctors instil in women."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#roy-meadow",
-    "href": "slides/slides_2025_08_25.html#roy-meadow",
+    "objectID": "slides/slides_2025_08_25.html#sally-clark-and-roy-meadow",
+    "href": "slides/slides_2025_08_25.html#sally-clark-and-roy-meadow",
     "title": "Welcome to STA 240!",
-    "section": "Roy Meadow",
-    "text": "Roy Meadow"
+    "section": "Sally Clark and Roy Meadow",
+    "text": "Sally Clark and Roy Meadow"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#reason-1-its-necessary.-1",
@@ -324,35 +324,42 @@
     "href": "slides/slides_2025_08_25.html#example-llms",
     "title": "Welcome to STA 240!",
     "section": "Example: LLMs",
-    "text": "Example: LLMs\n\n\n\n\n\n\nQuestion\n\n\nWhat method does ChatGPT use to generate the next word in one of its responses?\n\n\n\n\nLet’s ask!"
+    "text": "Example: LLMs\n\n\n\n\n\n\n\nQuestion\n\n\nWhat method does ChatGPT use to generate the next word in one of its responses?\n\n\n\n\n\nLet’s ask!"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-the-mathematics-of-insurance-upgrade",
     "href": "slides/slides_2025_08_25.html#example-the-mathematics-of-insurance-upgrade",
     "title": "Welcome to STA 240!",
     "section": "Example: the mathematics of insurance (upgrade!)",
-    "text": "Example: the mathematics of insurance (upgrade!)\nWhen an insurance company sells you a policy, they are making a bet that you won’t need it – that you’ll pay them but they won’t ultimately pay you. They make thousands of such bets, and if everyone makes a claim, the company is ruined. How do they navigate this uncertainty?\n\n\n\n\n\n\n\nActuarial mathematics!\n\n\nEvery insurance company employs armies of actuaries, certified professionals with a deep understanding of probability and statistics, to help them make decisions about profit, loss, and risk of ruin."
+    "text": "Example: the mathematics of insurance (upgrade!)\nWhen an insurance company sells you a policy, they are making a bet that you won’t need it – that you’ll pay them but they won’t ultimately pay you. They make thousands of such bets, and if everyone makes a claim, the company is ruined. How do they navigate this uncertainty?\n\n\n\n\n\n\n\nActuarial mathematics!\n\n\nEvery insurance company employs armies of actuaries, certified professionals with a deep understanding of probability and statistics, to help them make decisions about profit, loss, and risk of ruin.\n\n\n\nPlay the Keyes monologue?"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#contested-elections",
     "href": "slides/slides_2025_08_25.html#contested-elections",
     "title": "Welcome to STA 240!",
-    "section": "Contested elections",
-    "text": "Contested elections"
+    "section": "Contested elections?",
+    "text": "Contested elections?"
+  },
+  {
+    "objectID": "slides/slides_2025_08_25.html#example-quantum-mechanics",
+    "href": "slides/slides_2025_08_25.html#example-quantum-mechanics",
+    "title": "Welcome to STA 240!",
+    "section": "Example: quantum mechanics",
+    "text": "Example: quantum mechanics"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#reason-2-its-useful",
     "href": "slides/slides_2025_08_25.html#reason-2-its-useful",
     "title": "Welcome to STA 240!",
     "section": "Reason 2: It’s useful",
-    "text": "Reason 2: It’s useful\n\n\n\n\nLearning probability theory gives you serious wings to study large swathes of science and technology."
+    "text": "Reason 2: It’s useful\n\n\n\n\nNo area of science or technology can be properly understood without knowing something about probability. Period."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#good-ol-bert-and-al",
-    "href": "slides/slides_2025_08_25.html#good-ol-bert-and-al",
+    "objectID": "slides/slides_2025_08_25.html#two-old-hags",
+    "href": "slides/slides_2025_08_25.html#two-old-hags",
     "title": "Welcome to STA 240!",
-    "section": "Good ol’ Bert and Al",
-    "text": "Good ol’ Bert and Al\n\n\n\n\n\n\nBertrand Russell, Mysticism and Logic and Other Essays (1917)\n\n\nMathematics, rightly viewed, possesses not only truth, but supreme beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show.\n\n\n\n\n\n\n\n\n\nAlbert Einstein, “The Late Emmy Noether” (1935)\n\n\nPure mathematics is, in its way, the poetry of logical ideas."
+    "section": "Two old hags",
+    "text": "Two old hags\n\n\n\n\n\n\n\nBertrand Russell, Mysticism and Logic and Other Essays (1917)\n\n\n\n\n\n\nMathematics, rightly viewed, possesses not only truth, but supreme beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show.\n\n\n\n\n\n\n\n\n\n\n\n\nAlbert Einstein, “The Late Emmy Noether” (1935)\n\n\n\n\n\n\nPure mathematics is, in its way, the poetry of logical ideas."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#this-is-a-theorem-we-will-prove",
@@ -373,7 +380,7 @@
     "href": "slides/slides_2025_08_25.html#reason-3-its-beautiful",
     "title": "Welcome to STA 240!",
     "section": "Reason 3: It’s beautiful",
-    "text": "Reason 3: It’s beautiful\n\n\n\n\nDiscerning elegant patterns within “random” behavior can be very aesthetically pleasing."
+    "text": "Reason 3: It’s beautiful\n\n\n\n\nOstensibly random behavior can nevertheless be quite patternful, in ways that we can actually penetrate with mathematics.\nHow elegant!"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#why-study-mathematical-probstat",
@@ -457,7 +464,7 @@
     "href": "slides/slides_2025_08_25.html#whats-the-level-of-math-here",
     "title": "Welcome to STA 240!",
     "section": "What’s the level of math here?",
-    "text": "What’s the level of math here?\nThis is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:\n\n\ndifferentiation (power rule, chain rule, all that)\nintegration (FTOC, improper integrals, substitution, by parts…)\nlimits and continuity (L’Hôpital’s rule, etc)\ninfinite series (Taylor series for \\(e^x\\), anyone?)\n\n\n\nREVIEW: Problem Set 0 is due 5PM Friday September 5.\n\n\n\n\n\n\n\n\nThis is not sink-or-swim.\n\n\nLab on Thursday August 28 is a review session and work period for this assignment."
+    "text": "What’s the level of math here?\nThis is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:\n\n\ndifferentiation (power rule, chain rule, all that)\nintegration (FTOC, improper integrals, substitution, by parts…)\nlimits and continuity (L’Hôpital’s rule, etc)\ninfinite series (Taylor series for \\(e^x\\), anyone?)\n\n\n\nREVIEW: Problem Set 0 is due 5PM Friday September 5.\n\n\n\n\n\n\n\n\nThis is not sink-or-swim.\n\n\n\nLab on Thursday August 28 is a review session and work period for this assignment;\nThe course page has a math review section you can refer to."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#probability",
@@ -467,18 +474,18 @@
     "text": "Probability\n\n\n\n\n\n\n\nWhat do we do?\n\n\nState the distribution (rules) of some random phenomenon, and then study how the realizations of that phenomenon “typically” behave."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#a-canonical-probability-problem",
-    "href": "slides/slides_2025_08_25.html#a-canonical-probability-problem",
+    "objectID": "slides/slides_2025_08_25.html#an-archetypal-probability-problem",
+    "href": "slides/slides_2025_08_25.html#an-archetypal-probability-problem",
     "title": "Welcome to STA 240!",
-    "section": "A canonical probability problem",
-    "text": "A canonical probability problem\n\nGiven a fair coin, how many flips will it take on average until you observe the first head?"
+    "section": "An archetypal probability problem",
+    "text": "An archetypal probability problem\n\nGiven a fair coin, how many flips will it take on average until you observe the first head?"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#a-canonical-probability-problem-1",
-    "href": "slides/slides_2025_08_25.html#a-canonical-probability-problem-1",
+    "objectID": "slides/slides_2025_08_25.html#an-archetypal-probability-problem-1",
+    "href": "slides/slides_2025_08_25.html#an-archetypal-probability-problem-1",
     "title": "Welcome to STA 240!",
-    "section": "A canonical probability problem",
-    "text": "A canonical probability problem\n\nGiven a fair coin, how many flips will it take on average until you observe the first head?\n\nWhy is this a probability problem?\n\n\nselect a phenomenon to study (the outcome of a coin flip);\nfully specify its distribution (it’s a fair, 50-50 coin);\nstudy typical behavior of realizations (how many flips on average until the first head?)."
+    "section": "An archetypal probability problem",
+    "text": "An archetypal probability problem\n\nGiven a fair coin, how many flips will it take on average until you observe the first head?\n\nWhy is this a probability problem?\n\n\nselect a phenomenon to study (the outcome of a coin flip);\nfully specify its distribution (it’s a fair, 50-50 coin);\nstudy typical behavior of realizations (how many flips on average until the first head?)."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#statistics-is-probability-in-reverse",
@@ -488,18 +495,18 @@
     "text": "Statistics is “probability in reverse”\n\n\n\n\n\n\n\nWhat do we do?\n\n\nStart with the realizations of a random phenomenon with unknown distribution, and try to use those realizations to figure out what the distribution is."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#a-canonical-statistics-problem",
-    "href": "slides/slides_2025_08_25.html#a-canonical-statistics-problem",
+    "objectID": "slides/slides_2025_08_25.html#an-archetypal-statistics-problem",
+    "href": "slides/slides_2025_08_25.html#an-archetypal-statistics-problem",
     "title": "Welcome to STA 240!",
-    "section": "A canonical statistics problem",
-    "text": "A canonical statistics problem\n\nGiven 28 flips from a mysterious coin, can you tell if it is fair?"
+    "section": "An archetypal statistics problem",
+    "text": "An archetypal statistics problem\n\nGiven 28 flips from a mysterious coin, can you tell if it is fair?"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#a-canonical-statistics-problem-1",
-    "href": "slides/slides_2025_08_25.html#a-canonical-statistics-problem-1",
+    "objectID": "slides/slides_2025_08_25.html#an-archetypal-statistics-problem-1",
+    "href": "slides/slides_2025_08_25.html#an-archetypal-statistics-problem-1",
     "title": "Welcome to STA 240!",
-    "section": "A canonical statistics problem",
-    "text": "A canonical statistics problem\n\nGiven 28 flips from a mysterious coin, can you tell if it is fair?\n\nIn probability, we assumed that the coin was fair, and then reasoned from that. In statistics, we do not do this. We start with some coin, which may or may not be fair, and then we try to “infer” its properties."
+    "section": "An archetypal statistics problem",
+    "text": "An archetypal statistics problem\n\nGiven 28 flips from a mysterious coin, can you tell if it is fair?\n\n\n\nIn probability, we assumed that the coin was fair, and then reasoned deductively from that;\nIn statistics, we do not do this;\nWe start with some coin, which may or may not be fair, and then we try to “infer” its properties based on the data."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#probability-and-statistics",
@@ -513,28 +520,28 @@
     "href": "slides/slides_2025_08_25.html#forward-problem-versus-inverse-problem",
     "title": "Welcome to STA 240!",
     "section": "Forward problem versus inverse problem",
-    "text": "Forward problem versus inverse problem\n\n\n\n\n\nForward: read the rulebook, and then play a game of chess;\nInverse: watch a chess match, and based on the players’ behavior, try to guess the rules."
+    "text": "Forward problem versus inverse problem\n\n\n\n\n\n\nForward: read the rulebook, and then play a game of chess;\nInverse: watch a chess match, and based on the players’ behavior, try to guess the rules."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#forward-problem-versus-inverse-problem-1",
     "href": "slides/slides_2025_08_25.html#forward-problem-versus-inverse-problem-1",
     "title": "Welcome to STA 240!",
     "section": "Forward problem versus inverse problem",
-    "text": "Forward problem versus inverse problem\n\nDifferentiation is a forward problem. You grab the function \\(F\\), and you take the darn derivative;\nIntegration is an inverse problem. Given the derivative, you have to figure out what the original function was:\n\n\\[\n\\text{FTOC:}\\quad\\int_a^bF'(x)\\,\\text{d} x=F(b)-F(a).\n\\]"
+    "text": "Forward problem versus inverse problem\n\n\nDifferentiation is a forward problem. You grab the function \\(F\\), and you take the darn derivative;\nIntegration is an inverse problem. Given the derivative, you have to figure out what the original function was:\n\n\n\n\\[\n\\text{FTOC:}\\quad\\int_a^bF'(x)\\,\\text{d} x=F(b)-F(a).\n\\]"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#inverse-problems-are-tricky",
     "href": "slides/slides_2025_08_25.html#inverse-problems-are-tricky",
     "title": "Welcome to STA 240!",
     "section": "Inverse problems are tricky!",
-    "text": "Inverse problems are tricky!\n\n\nForward\n\n“Here’s the question. What’s the answer?”\n\n\nInverse\n\n“If this is the answer, then what was the question?”\n\n\n\n\n\n\n\n\nGird your loins\n\n\nLike all inverse problems, you will find that statistics is subtler, less well-defined, less straightforward, and more open-ended than probability."
+    "text": "Inverse problems are tricky!\n\n\nForward\n\n“Here’s the question. What’s the answer?”\n\n\nInverse\n\n“If this is the answer, then what was the question?”\n\n\n\n\n\n\n\n\n\nGird your loins\n\n\nLike all inverse problems, you will find that statistics is subtler, less well-defined, less straightforward, and more open-ended than probability."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#the-philosophy-of-probability",
     "href": "slides/slides_2025_08_25.html#the-philosophy-of-probability",
     "title": "Welcome to STA 240!",
     "section": "The philosophy of probability",
-    "text": "The philosophy of probability\n\nTwo common interpretive perspectives:\n\n\nFrequentist: probability describes the long run frequency of repeatable events;\nSubjective: probability describes an observer’s subjective experience of uncertainty. Their “degrees of belief.”\n\n\n\n\n\n\n\n\n\n\nYou need both perspectives.\n\n\nLike the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.\n\n\n\n\n\n\n\n\n\n\n\nThe math doesn’t care which you prefer.\n\n\nRegardless your interpretation, the mathematics of probability is the same."
+    "text": "The philosophy of probability\n\nTwo common interpretive perspectives:\n\n\nFrequentist: probability describes the long run frequency of repeatable events;\nSubjective: probability describes an observer’s subjective experience of uncertainty. AKA: their “degrees of belief.”\n\n\n\n\n\n\n\n\n\n\nYou need both perspectives.\n\n\nLike the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.\n\n\n\n\n\n\n\n\n\n\n\nThe math doesn’t care which you prefer.\n\n\nRegardless your interpretation, the mathematics of probability is the same."
   },
   {
     "objectID": "math/logexp.html",
@@ -1120,7 +1127,7 @@
     "href": "math/integration.html#improper-integration-we-will-do-this-a-lot",
     "title": "Integration",
     "section": "Improper integration (we will do this a lot!)",
-    "text": "Improper integration (we will do this a lot!)\nAn improper integral is the limit of a definite integral as one or more of the bounds tend toward some extreme value, typically \\(\\pm\\infty\\). So a one-sided improper integral is defined like this:\n\\[\n\\int_a^\\infty f(x)\\,\\text{d}x=\\lim_{b\\to\\infty}\\int_a^bf(x)\\,\\text{d}x\n\\]\nA two-sided improper integral is defined as the sum of two one-sided improper integrals, where we make use of the “splitting” property:\n\\[\n\\begin{aligned}\n\\int_{-\\infty}^\\infty f(x)\\,\\text{d}x\n&=\n\\int_{-\\infty}^c f(x)\\,\\text{d}x + \\int_c^\\infty f(x)\\,\\text{d}x\n\\\\\n&=\n\\lim_{a\\to-\\infty}\\int_a^cf(x)\\,\\text{d}x+\\lim_{b\\to\\infty}\\int_c^bf(x)\\,\\text{d}x.\n\\end{aligned}\n\\]\nYou can pick whatever value of \\(c\\) is most convenient. Zero will be a common choice.\n\n\n\n\n\n\nExample: improper integral with infinite bound\n\n\n\n\\[\n\\begin{aligned}\n\\int_0^\\infty e^{-x}\\,\\text{d}x\n&=\n\\lim_{b\\to\\infty}\\int_0^be^{-x}\\,\\text{d}x\n\\\\\n&=\n\\lim_{b\\to\\infty}\n[-e^{-x}]_0^b\n\\\\\n&=\n\\lim_{b\\to\\infty}\n\\left(-e^{-b}-(-e^{-0})\\right)\n\\\\\n&=\n-\\lim_{b\\to\\infty}\\frac{1}{e^b}+1\n\\\\\n&=\n-0+1\n\\\\\n&=1.\n\\end{aligned}\n\\]\n\n\n\n\n\n\n\n\nExample: improper integral with finite bound\n\n\n\nYou still might need improper integration, even for an ordinary-looking thing like this:\n\\[\n\\int_0^1\\frac{1}{\\sqrt{x}}\\text{d}x.\n\\]\nYou can see why if you plot the integrand:\n\n\n\n\n\n\n\n\n\nThere’s a vertical asymptote at \\(x=0\\), so this is also an improper integral:\n\\[\n\\begin{aligned}\n\\int_0^1\\frac{1}{\\sqrt{x}}\\text{d}x\n&=\n\\lim_{a\\to 0}\\int_a^1\\frac{1}{\\sqrt{x}}\\text{d}x\n\\\\\n&=\n\\lim_{a\\to 0}\\left[2x^{1/2}\\right]_a^1\n\\\\\n&=\n\\lim_{a\\to 0}\\left[2\\cdot 1^{1/2}-2a^{1/2}\\right]\n\\\\\n&=2-2\\cdot0^{1/2}\n\\\\\n&=\n2.\n\\end{aligned}\n\\]\n\\(2x^{1/2}\\) is continuous at 0, so to evaluate the limit you can just plug-in.",
+    "text": "Improper integration (we will do this a lot!)\nAn improper integral is the limit of a definite integral as one or more of the bounds tend toward some extreme value, typically \\(\\pm\\infty\\). So a one-sided improper integral is defined like this:\n\\[\n\\int_a^\\infty f(x)\\,\\text{d}x=\\lim_{b\\to\\infty}\\int_a^bf(x)\\,\\text{d}x.\n\\]\nA two-sided improper integral is defined as the sum of two one-sided improper integrals, where we make use of the “splitting” property:\n\\[\n\\begin{aligned}\n\\int_{-\\infty}^\\infty f(x)\\,\\text{d}x\n&=\n\\int_{-\\infty}^c f(x)\\,\\text{d}x + \\int_c^\\infty f(x)\\,\\text{d}x\n\\\\\n&=\n\\lim_{a\\to-\\infty}\\int_a^cf(x)\\,\\text{d}x+\\lim_{b\\to\\infty}\\int_c^bf(x)\\,\\text{d}x.\n\\end{aligned}\n\\]\nYou can pick whatever value of \\(c\\) is most convenient. Zero will be a common choice.\n\n\n\n\n\n\nExample: improper integral with infinite bound\n\n\n\n\\[\n\\begin{aligned}\n\\int_0^\\infty e^{-x}\\,\\text{d}x\n&=\n\\lim_{b\\to\\infty}\\int_0^be^{-x}\\,\\text{d}x\n\\\\\n&=\n\\lim_{b\\to\\infty}\n[-e^{-x}]_0^b\n\\\\\n&=\n\\lim_{b\\to\\infty}\n\\left(-e^{-b}-(-e^{-0})\\right)\n\\\\\n&=\n-\\lim_{b\\to\\infty}\\frac{1}{e^b}+1\n\\\\\n&=\n-0+1\n\\\\\n&=1.\n\\end{aligned}\n\\]\n\n\n\n\n\n\n\n\nExample: improper integral with finite bound\n\n\n\nYou still might need improper integration, even for an ordinary-looking thing like this:\n\\[\n\\int_0^1\\frac{1}{\\sqrt{x}}\\text{d}x.\n\\]\nYou can see why if you plot the integrand:\n\n\n\n\n\n\n\n\n\nThere’s a vertical asymptote at \\(x=0\\), so this is also an improper integral:\n\\[\n\\begin{aligned}\n\\int_0^1\\frac{1}{\\sqrt{x}}\\text{d}x\n&=\n\\lim_{a\\to 0}\\int_a^1\\frac{1}{\\sqrt{x}}\\text{d}x\n\\\\\n&=\n\\lim_{a\\to 0}\\left[2x^{1/2}\\right]_a^1\n\\\\\n&=\n\\lim_{a\\to 0}\\left[2\\cdot 1^{1/2}-2a^{1/2}\\right]\n\\\\\n&=2-2\\cdot0^{1/2}\n\\\\\n&=\n2.\n\\end{aligned}\n\\]\n\\(2x^{1/2}\\) is continuous at 0, so to evaluate the limit you can just plug-in.",
     "crumbs": [
       "Math Review",
       "Integration"

@@ -410,7 +410,7 @@ window.Quarto = {
 </div>
 <p>What exactly is it doing? Well, <a href="https://chatgpt.com/share/677ef289-9564-8008-a662-9f8c2cfb04fc">ask it</a>! If you do, the explanation will go something like this…</p>
 <p>ChatGPT is an example of a <em>large language model</em> (LLM). Under the hood, there’s this fancy pants deep neural network machine learning mumbo jumbo that has been trained on a massive corpus of documents (books, newspaper articles, academic publications, reddit, all of Wikipedia, etc). When you ask it a question like “What color is the apple?”, the model asks itself “<em>conditional</em> on the text you just gave me, what is the likely next word?” Based on the text it was trained on and the underlying ML model, ChatGPT constructs a <em>conditional probability distribution</em> over the set of “next words” and simulates from it, like with the <code>sample</code> function. The new word that it simulates gets added to the end of the text you provided, and it repeats the process over again: given where we are <em>now</em>, what is the next word likely to be? And on and on…</p>
-<p>So say you ask it “What color is the apple?” Based on that, the model constructs a probability distribution for <span class="math inline">\(P(\text{next word}\,|\,\text{"What color is the apple?"})\)</span>. The sample space <span class="math inline">\(S\)</span> here is (basically) the set of all words that the model has seen. That set could be pretty big, but nevertheless it is finite, so we just need to list out all of the possible words together with their individual probabilities:</p>
+<p>So say you ask it “What color is the apple?” Based on that, the model constructs a probability distribution for <span class="math inline">\(P(\text{next word}\,|\,\texttt{"What color is the apple?"})\)</span>. The sample space <span class="math inline">\(S\)</span> here is (basically) the set of all words that the model has seen. That set could be pretty big, but nevertheless it is finite, so we just need to list out all of the possible words together with their individual probabilities:</p>
 <div class="center-table">
 <table class="caption-top table">
 <thead>
@@ -455,7 +455,7 @@ window.Quarto = {
 </tbody>
 </table>
 </div>
-<p>Once this is constructed, the model simulates from the distribution. You could imagine that the code might look something like <code>sample(words, size = 1, prob = conditional_probs)</code>. So say that happens and the next word we simulate is “the.” That gets added to the end, and now we want to know <span class="math inline">\(P(\text{next word}\,|\,\text{"What color is the apple? the"})\)</span>. So we query the underlying model, and it constructs a new distribution on words, conditional on this revised context:</p>
+<p>Once this is constructed, the model simulates from the distribution. You could imagine that the code might look something like <code>sample(words, size = 1, prob = conditional_probs)</code>. So say that happens and the next word we simulate is “the.” That gets added to the end, and now we want to know <span class="math inline">\(P(\text{next word}\,|\,\texttt{"What color is the apple? the"})\)</span>. So we query the underlying model, and it constructs a new distribution on words, conditional on this revised context:</p>
 <div class="center-table">
 <table class="caption-top table">
 <thead>
@@ -500,7 +500,7 @@ window.Quarto = {
 </tbody>
 </table>
 </div>
-<p>Notice that the information we are conditioning on has changed, so the probabilities change. Based on the new probabilities, we simulate the next word. Let’s say it ends up being “apple.” So we add that to the end, and ask the model to construct a new distribution for <span class="math inline">\(P(\text{next word}\,|\,\text{"What color is the apple? the apple"})\)</span>:</p>
+<p>Notice that the information we are conditioning on has changed, so the probabilities change. Based on the new probabilities, we simulate the next word. Let’s say it ends up being “apple.” So we add that to the end, and ask the model to construct a new distribution for <span class="math inline">\(P(\text{next word}\,|\,\texttt{"What color is the apple? the apple"})\)</span>:</p>
 <div class="center-table">
 <table class="caption-top table">
 <thead>
@@ -545,7 +545,7 @@ window.Quarto = {
 </tbody>
 </table>
 </div>
-<p>Now we simulate “is,” add that to the end, and query the model for <span class="math inline">\(P(\text{next word}\,|\,\text{"What color is the apple? the apple is"})\)</span>:</p>
+<p>Now we simulate “is,” add that to the end, and query the model for <span class="math inline">\(P(\text{next word}\,|\,\texttt{"What color is the apple? the apple is"})\)</span>:</p>
 <div class="center-table">
 <table class="caption-top table">
 <thead>
@@ -626,11 +626,24 @@ window.Quarto = {
 </section>
 <section id="task-3" class="level2">
 <h2 class="anchored" data-anchor-id="task-3">Task 3</h2>
-<p>Write a for loop that iterates the process in Tasks 1 and 2 in order to add six new words to the context.</p>
+<p>Write a for loop that iterates the process in Tasks 1 and 2 in order to add <strong>six</strong> new words to the context.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This might be a tad slow.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The function <code>next_word_probs</code> is doing a lot of work under the hood, so in the upcoming tasks, do not be alarmed if it takes a few seconds to run.</p>
+</div>
+</div>
 </section>
 <section id="task-4" class="level2">
 <h2 class="anchored" data-anchor-id="task-4">Task 4</h2>
-<p>Rerun your code ten times to generate ten different responses. How many of them would you consider <em>basically</em> coherent?</p>
+<p>Rerun your code ten times to generate ten different responses. How many of them would you consider <em>approximately</em> coherent?</p>
 </section>
 <section id="task-5" class="level2">
 <h2 class="anchored" data-anchor-id="task-5">Task 5</h2>
