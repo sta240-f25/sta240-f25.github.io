@@ -101,8 +101,8 @@ website:
             text: Vectorization
           - href: explainers/lineplot.qmd
             text: Plotting lines
-          - href: explainers/sample.qmd
-            text: "`sample`"
+          #- href: explainers/sample.qmd
+          #  text: "`sample`"
       - section: "Problem Sets"
         contents:
           - href: problems/pset-0.qmd
