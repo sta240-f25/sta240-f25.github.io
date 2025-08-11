@@ -41,7 +41,9 @@ $k$ people convene for a birthday party:
 
 -   How many people need to show up to the party for there to be a 50% chance of at least one match?
 
-Most people guess that you need a hundred or more people.
+. . .
+
+Most people guess that you need, like, a lot.
 
 ## Your guesses
 
@@ -112,9 +114,17 @@ The aggregation of many imperfect estimates/guesses is often better than a needl
 . . .
 
 ::: callout-warning
-## Reality check!
+## Isn't that obvious?
 
 It took humans a long time to realize this. The first recorded uses of an "average" were during Isaac Newton's lifetime (see Stigler's *Seven Pillars of Statistical Wisdom*).
+:::
+
+## Example: the wisdom of crowds
+
+::: callout-warning
+## [We frequently forget and relearn this lesson.](https://polymarket.com)
+
+![](images/prediction_markets.png) (source: [CNN](https://www.cnn.com/2024/11/08/business/polymarket-election-trump-nightcap/index.html))
 :::
 
 ## Weight guessing results
@@ -125,17 +135,9 @@ LINK TO GOOGLE SHEET.
 
 LINK TO GOOGLE SHEET. Reveal actual price.
 
-## Price guessing results
+## Something else guessing results
 
 LINK TO GOOGLE SHEET. Reveal actual price.
-
-## Example: the wisdom of crowds
-
-::: callout-warning
-## [It's a lesson we are doomed to relearn often, apparently.](https://polymarket.com)
-
-![](images/prediction_markets.png) (source: [CNN](https://www.cnn.com/2024/11/08/business/polymarket-election-trump-nightcap/index.html))
-:::
 
 ## Example: the folly of doctors {.scrollable}
 
@@ -155,16 +157,16 @@ Only 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them 
 > We can only imagine how much anxiety those innumerate doctors instil in women.
 :::
 
-## Roy Meadow
+## Sally Clark and Roy Meadow
 
 ## Reason 1: It's necessary. {.large-ish}
 
 ::::: {.columns .v-center-container}
-::: {.column width="35%"}
-![](images/dumb.jpg){width="90%"}
+::: {.column width="45%"}
+![](images/tom-jerry-rake.gif)
 :::
 
-::: {.column width="65%"}
+::: {.column width="55%"}
 Human intuition and “common sense” about probability and statistics are often just flat out wrong, in silly and dangerous ways. Mere mortals require the scaffolding of mathematics to discipline our thinking.
 :::
 :::::
@@ -180,6 +182,8 @@ Human intuition and “common sense” about probability and statistics are ofte
 :::
 
 ## Example: LLMs
+
+. . .
 
 ::: callout-note
 ## Question
@@ -205,36 +209,60 @@ Every insurance company employs armies of *actuaries*, certified professionals w
 
 Play the Keyes monologue?
 
-## Quantum mechanics
-
 ## Contested elections?
+
+## Example: quantum mechanics
 
 ## Reason 2: It's useful {.large}
 
 ::::: {.columns .v-center-container}
 ::: {.column width="45%"}
-![](images/brazil.jpg)
+![](images/popeye.gif)
 :::
 
 ::: {.column width="55%"}
-Learning probability theory gives you serious wings to study large swathes of science and technology.
+No area of science or technology can be properly understood without knowing something about probability. Period.
 :::
 :::::
 
 # Reason 3: It's beautiful.
 
-## Good ol' Bert and Al
+## Two old hags
+
+. . .
 
 ::: callout-tip
 ## Bertrand Russell, [*Mysticism and Logic and Other Essays*](https://en.wikisource.org/wiki/Mysticism_and_Logic_and_Other_Essays/Chapter_04) (1917)
 
+::::: {.columns .v-center-container}
+::: {.column width="15%"}
+![](images/russell.webp)
+:::
+
+::: {.column width="85%"}
 Mathematics, rightly viewed, possesses not only truth, but supreme beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show.
 :::
+:::::
+
+:::
+
+. . .
 
 ::: callout-tip
 ## Albert Einstein, ["The Late Emmy Noether"](https://www.nytimes.com/1935/05/04/archives/the-late-emmy-noether-professor-einstein-writes-in-appreciation-of.html?smid=url-share) (1935)
 
+::::: {.columns .v-center-container}
+
+::: {.column width="15%"}
+![](images/einstein.jpg)
+:::
+
+::: {.column width="85%"}
 Pure mathematics is, in its way, the poetry of logical ideas.
+:::
+
+:::::
+
 :::
 
 ## This is a theorem we will prove:
@@ -246,15 +274,17 @@ Pure mathematics is, in its way, the poetry of logical ideas.
 From the simplest building blocks, we will erect an impressive edifice of thought.
 
 
-## Reason 3: It's beautiful {.large}
+## Reason 3: It's beautiful {.large-ish}
 
 ::::: {.columns .v-center-container}
-::: {.column width="50%"}
-![](images/agony.jpg){width="70%"}
+::: {.column width="45%"}
+![](images/whats-opera-doc.gif)
 :::
 
-::: {.column width="50%"}
-Discerning elegant patterns within "random" behavior can be very aesthetically pleasing.
+::: {.column width="55%"}
+Ostensibly random behavior can nevertheless be quite patternful, in ways that we can actually penetrate with mathematics. 
+
+How elegant!
 :::
 :::::
 
@@ -405,14 +435,15 @@ This is essentially a pencil-and-paper math class. We will use all of the basic 
 
 . . .
 
-**REVIEW**: [Problem Set 0](https://sta240-f25.github.io/psets/pset_0.html) is due 5PM Friday September 5.
+**REVIEW**: [Problem Set 0](https://sta240-f25.github.io/psets/pset-0.html) is due 5PM Friday September 5.
 
 . . .
 
 ::: callout-note
 ## This is not sink-or-swim.
 
-Lab on Thursday August 28 is a review session and work period for this assignment.
+- Lab on Thursday August 28 is a review session and work period for this assignment;
+- The course page has a [math review section](https://sta240-f25.github.io/math/differentiation.html) you can refer to.
 :::
 
 # So, what are we studying, anyway?
@@ -430,7 +461,7 @@ State the *distribution* (rules) of some random phenomenon, and then study how t
 :::
 
 
-## A canonical probability problem
+## An archetypal probability problem
 
 > Given a **fair** coin, how many flips will it take *on average* until you observe the first head?
 
@@ -439,7 +470,7 @@ State the *distribution* (rules) of some random phenomenon, and then study how t
 ![](images/prob-example.svg)
 
 
-## A canonical probability problem
+## An archetypal probability problem
 
 > Given a **fair** coin, how many flips will it take *on average* until you observe the first head?
 
@@ -462,7 +493,7 @@ Start with the realizations of a random phenomenon with *unknown* distribution, 
 
 :::
 
-## A canonical statistics problem
+## An archetypal statistics problem
 
 > Given 28 flips from a mysterious coin, can you tell if it is fair?
 
@@ -470,13 +501,16 @@ Start with the realizations of a random phenomenon with *unknown* distribution, 
 
 ![](images/stat-example.svg)
 
-## A canonical statistics problem
+## An archetypal statistics problem
 
 > Given 28 flips from a mysterious coin, can you tell if it is fair?
 
 
-
-In probability, we *assumed* that the coin was fair, and then reasoned from that. In statistics, we do not do this. We start with some coin, which may or may not be fair, and then we try to "infer" its properties.
+::: incremental 
+- In probability, we *assumed* that the coin was fair, and then reasoned deductively from that;
+- In statistics, we do not do this;
+- We start with *some* coin, which may or may not be fair, and then we try to "infer" its properties based on the data.
+:::
 
 
 ## Probability and statistics {.scrollable}
@@ -503,9 +537,13 @@ In probability, we *assumed* that the coin was fair, and then reasoned from that
 :::
 
 ::: {.column width="50%"}
+
+::: incremental
 - **Forward**: read the rulebook, and then play a game of chess;
 
 - **Inverse**: watch a chess match, and based on the players' behavior, try to guess the rules.
+:::
+
 :::
 :::::
 
@@ -513,9 +551,13 @@ In probability, we *assumed* that the coin was fair, and then reasoned from that
 
 ## Forward problem versus inverse problem
 
+::: incremental
 - *Differentiation* is a forward problem. You grab the function $F$, and you take the darn derivative;
 
 - *Integration* is an inverse problem. Given the derivative, you have to figure out what the original function was:
+:::
+
+. . .
 
 $$
 \text{FTOC:}\quad\int_a^bF'(x)\,\text{d} x=F(b)-F(a).
@@ -537,6 +579,8 @@ $$
 :::
 :::::
 
+. . .
+
 ::: callout-warning
 ## Gird your loins
 Like all inverse problems, you will find that statistics is subtler, less well-defined, less straightforward, and more open-ended than probability.
@@ -550,7 +594,7 @@ Two common interpretive perspectives:
 
 ::: incremental
 -   **Frequentist**: probability describes the long run frequency of repeatable events;
--   **Subjective**: probability describes an observer's subjective experience of uncertainty. Their "degrees of belief."
+-   **Subjective**: probability describes an observer's subjective experience of uncertainty. AKA: their "degrees of belief."
 :::
 
 . . .
