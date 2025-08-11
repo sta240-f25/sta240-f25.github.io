@@ -531,7 +531,7 @@ Start with the realizations of a random phenomenon with *unknown* distribution, 
 
 ## Forward problem versus inverse problem
 
-::::: {.columns}
+::::: {.columns .v-center-container}
 ::: {.column width="50%"}
 ![](images/chess.jpg)
 :::
