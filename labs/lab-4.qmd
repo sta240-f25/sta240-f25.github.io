@@ -191,7 +191,7 @@ The function `next_word_probs` is doing a lot of work under the hood, so in the 
 
 ## Task 4
 
-Rerun your code ten times to generate ten different responses. How many of them would you consider *basically* coherent?
+Rerun your code ten times to generate ten different responses. How many of them would you consider *approximately* coherent?
 
 ## Task 5
 
