@@ -15,7 +15,7 @@ What exactly is it doing? Well, [ask it](https://chatgpt.com/share/677ef289-9564
 
 ChatGPT is an example of a *large language model* (LLM). Under the hood, there's this fancy pants deep neural network machine learning mumbo jumbo that has been trained on a massive corpus of documents (books, newspaper articles, academic publications, reddit, all of Wikipedia, etc). When you ask it a question like "What color is the apple?", the model asks itself "*conditional* on the text you just gave me, what is the likely next word?" Based on the text it was trained on and the underlying ML model, ChatGPT constructs a *conditional probability distribution* over the set of "next words" and simulates from it, like with the `sample` function. The new word that it simulates gets added to the end of the text you provided, and it repeats the process over again: given where we are *now*, what is the next word likely to be? And on and on...
 
-So say you ask it "What color is the apple?" Based on that, the model constructs a probability distribution for $P(\text{next word}\,|\,\text{"What color is the apple?"})$. The sample space $S$ here is (basically) the set of all words that the model has seen. That set could be pretty big, but nevertheless it is finite, so we just need to list out all of the possible words together with their individual probabilities:
+So say you ask it "What color is the apple?" Based on that, the model constructs a probability distribution for $P(\text{next word}\,|\,\texttt{"What color is the apple?"})$. The sample space $S$ here is (basically) the set of all words that the model has seen. That set could be pretty big, but nevertheless it is finite, so we just need to list out all of the possible words together with their individual probabilities:
 
 ::: {.center-table}
 | Next word | Conditional probability |
@@ -30,7 +30,7 @@ So say you ask it "What color is the apple?" Based on that, the model constructs
 | *etc*     | *etc*                   |
 :::
 
-Once this is constructed, the model simulates from the distribution. You could imagine that the code might look something like `sample(words, size = 1, prob = conditional_probs)`. So say that happens and the next word we simulate is "the." That gets added to the end, and now we want to know $P(\text{next word}\,|\,\text{"What color is the apple? the"})$. So we query the underlying model, and it constructs a new distribution on words, conditional on this revised context:
+Once this is constructed, the model simulates from the distribution. You could imagine that the code might look something like `sample(words, size = 1, prob = conditional_probs)`. So say that happens and the next word we simulate is "the." That gets added to the end, and now we want to know $P(\text{next word}\,|\,\texttt{"What color is the apple? the"})$. So we query the underlying model, and it constructs a new distribution on words, conditional on this revised context:
 
 ::: {.center-table}
 | Next word | Conditional probability |
@@ -45,7 +45,7 @@ Once this is constructed, the model simulates from the distribution. You could i
 | *etc*     | *etc*                   |
 :::
 
-Notice that the information we are conditioning on has changed, so the probabilities change. Based on the new probabilities, we simulate the next word. Let's say it ends up being "apple." So we add that to the end, and ask the model to construct a new distribution for $P(\text{next word}\,|\,\text{"What color is the apple? the apple"})$:
+Notice that the information we are conditioning on has changed, so the probabilities change. Based on the new probabilities, we simulate the next word. Let's say it ends up being "apple." So we add that to the end, and ask the model to construct a new distribution for $P(\text{next word}\,|\,\texttt{"What color is the apple? the apple"})$:
 
 ::: {.center-table}
 | Next word | Conditional probability |
@@ -60,7 +60,7 @@ Notice that the information we are conditioning on has changed, so the probabili
 | *etc*     | *etc*                   |
 :::
 
-Now we simulate "is," add that to the end, and query the model for $P(\text{next word}\,|\,\text{"What color is the apple? the apple is"})$:
+Now we simulate "is," add that to the end, and query the model for $P(\text{next word}\,|\,\texttt{"What color is the apple? the apple is"})$:
 
 ::: {.center-table}
 | Next word | Conditional probability |
@@ -182,7 +182,12 @@ Use the `paste` function to append the word you simulated in Task 1 to the end o
 
 ## Task 3
 
-Write a for loop that iterates the process in Tasks 1 and 2 in order to add six new words to the context.
+Write a for loop that iterates the process in Tasks 1 and 2 in order to add **six** new words to the context.
+
+::: callout-note
+## This might be a tad slow.
+The function `next_word_probs` is doing a lot of work under the hood, so in the upcoming tasks, do not be alarmed if it takes a few seconds to run. 
+:::
 
 ## Task 4
 
