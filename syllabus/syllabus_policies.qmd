@@ -35,7 +35,7 @@ No late work will be accepted unless you request an extension in advance by e-ma
 
 ## Regrade requests
 
-If you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a [regrade request](https://guides.gradescope.com/hc/en-us/articles/21854736042253-Submitting-a-Regrade-Request) in Gradescope. Note the following:
+If you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a [regrade request](https://guides.gradescope.com/hc/en-us/articles/21854736042253-Submitting-a-Regrade-Request) in Gradescope. JZ is the sole reviewer of these. Note the following:
 
 -   You have one week after you receive a grade to submit a regrade request;
 -   You should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;
