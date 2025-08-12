@@ -1,0 +1,7 @@
+---
+title: "Setting a random number seed"
+format: html
+editor: 
+  mode: source
+---
+
