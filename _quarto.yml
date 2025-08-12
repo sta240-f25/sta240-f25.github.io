@@ -93,6 +93,8 @@ website:
             text: Getting started
           - href: explainers/RStudio.qmd
             text: The lay of the land
+          - href: explainers/quarto.qmd
+            text: Quarto
           - href: explainers/math.qmd
             text: Basic math
           - href: explainers/vectors.qmd
