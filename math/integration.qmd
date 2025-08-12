@@ -62,17 +62,25 @@ $$
 
 ## Integration by substitution
 
-When you perform a **$u$-substitution**, you're basically trying to undo the chain rule. The goal is to rewrite the integral in a nicer form so that you can recognize what the appropriate antiderivative is and then apply the FTOC. 
+When you perform a **$u$-substitution**, you're basically trying to undo the chain rule:
+
+$$
+\int_a^bf(g(x))g'(x)\,\text{d}x=\int_{g(a)}^{g(b)}f(u)\,\text{d}u.
+$$
+
+The goal is ultimately to rewrite the integral in a nicer form so that you can recognize what the appropriate antiderivative is and then apply the FTOC. 
 
 ::: callout-tip 
 ## Example: $u$-sub
+
+Check out this ugly thing:
 
 $$
 \int_0^2
 \frac{x}{\sqrt{x^2+1}}\,\text{d}x.
 $$
 
-$u=x^2+1$ and $\text{d}u=2x\,\text{d}x$
+It's actually not too bad if you make the right substitution: $u=x^2+1$ and $\text{d}u=2x\,\text{d}x$. Then you can polish it off by undoing the power rule:
 
 $$
 \begin{aligned}
@@ -92,6 +100,9 @@ $$
 \sqrt{5}-1.
 \end{aligned}
 $$
+
+Please please please do not forget to **change the bounds** of the integral when you do a substitution. We had $u=g(x)=x^2+1$, so after the change of variables, the lower bound becomes $g(0)=1$ and the upper bound becomes $g(2)=5$.
+
 :::
 
 ## Integration by parts
@@ -103,7 +114,7 @@ $$
     = \left[u(x) v(x)\right]_a^b - \int_a^b v(x)u'(x)  \, \text{d}x
 $$
 
-Through the subtlest of black magic, you have to decide what parts of the integrand to treat as $u$ and $\text{d}v$. Typically you make $u$ something that is easy to differentiate, and you make $\text{d}v$ something that is easy to antidifferentiate. Good luck!
+Through the subtlest of black magic, you have to decide what parts of the integrand to treat as $u$ and $\text{d}v=v'\,\text{d}x$. Typically you make $u$ something that is easy to differentiate, and you make $\text{d}v$ something that is easy to antidifferentiate. Good luck!
 
 ::: callout-tip 
 ## Example: IBP
