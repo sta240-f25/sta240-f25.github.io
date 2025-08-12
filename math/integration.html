@@ -451,7 +451,11 @@ Example: antidifferentiation
 </section>
 <section id="integration-by-substitution" class="level2">
 <h2 class="anchored" data-anchor-id="integration-by-substitution">Integration by substitution</h2>
-<p>When you perform a <strong><span class="math inline">\(u\)</span>-substitution</strong>, you’re basically trying to undo the chain rule. The goal is to rewrite the integral in a nicer form so that you can recognize what the appropriate antiderivative is and then apply the FTOC.</p>
+<p>When you perform a <strong><span class="math inline">\(u\)</span>-substitution</strong>, you’re basically trying to undo the chain rule:</p>
+<p><span class="math display">\[
+\int_a^bf(g(x))g'(x)\,\text{d}x=\int_{g(a)}^{g(b)}f(u)\,\text{d}u.
+\]</span></p>
+<p>The goal is ultimately to rewrite the integral in a nicer form so that you can recognize what the appropriate antiderivative is and then apply the FTOC.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -462,11 +466,12 @@ Example: <span class="math inline">\(u\)</span>-sub
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Check out this ugly thing:</p>
 <p><span class="math display">\[
 \int_0^2
 \frac{x}{\sqrt{x^2+1}}\,\text{d}x.
 \]</span></p>
-<p><span class="math inline">\(u=x^2+1\)</span> and <span class="math inline">\(\text{d}u=2x\,\text{d}x\)</span></p>
+<p>It’s actually not too bad if you make the right substitution: <span class="math inline">\(u=x^2+1\)</span> and <span class="math inline">\(\text{d}u=2x\,\text{d}x\)</span>. Then you can polish it off by undoing the power rule:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \int_0^2
@@ -485,6 +490,7 @@ Example: <span class="math inline">\(u\)</span>-sub
 \sqrt{5}-1.
 \end{aligned}
 \]</span></p>
+<p>Please please please do not forget to <strong>change the bounds</strong> of the integral when you do a substitution. We had <span class="math inline">\(u=g(x)=x^2+1\)</span>, so after the change of variables, the lower bound becomes <span class="math inline">\(g(0)=1\)</span> and the upper bound becomes <span class="math inline">\(g(2)=5\)</span>.</p>
 </div>
 </div>
 </section>
@@ -495,7 +501,7 @@ Example: <span class="math inline">\(u\)</span>-sub
 \int_a^b u(x) v'(x) \, \text{d}x
     = \left[u(x) v(x)\right]_a^b - \int_a^b v(x)u'(x)  \, \text{d}x
 \]</span></p>
-<p>Through the subtlest of black magic, you have to decide what parts of the integrand to treat as <span class="math inline">\(u\)</span> and <span class="math inline">\(\text{d}v\)</span>. Typically you make <span class="math inline">\(u\)</span> something that is easy to differentiate, and you make <span class="math inline">\(\text{d}v\)</span> something that is easy to antidifferentiate. Good luck!</p>
+<p>Through the subtlest of black magic, you have to decide what parts of the integrand to treat as <span class="math inline">\(u\)</span> and <span class="math inline">\(\text{d}v=v'\,\text{d}x\)</span>. Typically you make <span class="math inline">\(u\)</span> something that is easy to differentiate, and you make <span class="math inline">\(\text{d}v\)</span> something that is easy to antidifferentiate. Good luck!</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
