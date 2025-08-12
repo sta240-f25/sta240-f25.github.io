@@ -63,7 +63,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../explainers/sample.html" rel="next">
+<link href="../problems/pset-0.html" rel="next">
 <link href="../explainers/vectorization.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -303,6 +303,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../explainers/quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../explainers/math.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic math</span></a>
   </div>
@@ -323,12 +329,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../explainers/lineplot.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Plotting lines</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../explainers/sample.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>sample</code></span></a>
   </div>
 </li>
       </ul>
@@ -389,12 +389,12 @@ window.Quarto = {
 
 
 <p>You can use the <code>curve</code> function to plot a line graph of a function. If that function were <span class="math inline">\(f(x) = x^2\)</span> for example, you would type this:</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(x<span class="sc">^</span><span class="dv">2</span>, <span class="at">from =</span> <span class="sc">-</span><span class="dv">5</span>, <span class="at">to =</span> <span class="dv">5</span>, <span class="at">n =</span> <span class="dv">500</span>, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">ylab =</span> <span class="st">"f(x)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="lineplot_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="lineplot_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -405,27 +405,27 @@ window.Quarto = {
 <li><code>from</code> and <code>to</code> give the bounds of the <span class="math inline">\(x\)</span>-axis;</li>
 <li>This command is basically evaluating the function at many points and connecting the dots. <code>n</code> specifies how many dots. Too few, and the picture would look all cattywampus:</li>
 </ul>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(x<span class="sc">^</span><span class="dv">2</span>, <span class="at">from =</span> <span class="sc">-</span><span class="dv">5</span>, <span class="at">to =</span> <span class="dv">5</span>, <span class="at">n =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="lineplot_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="lineplot_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>If you want multiple lines on one graph, you can call <code>curve</code> multiple times, and include the <code>add</code> argument in all but the first call:</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="dv">1</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span>, <span class="at">from =</span> <span class="sc">-</span><span class="dv">5</span>, <span class="at">to =</span> <span class="dv">5</span>, <span class="at">n =</span> <span class="dv">500</span>, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">ylab =</span> <span class="st">""</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="dv">2</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span>, <span class="at">from =</span> <span class="sc">-</span><span class="dv">5</span>, <span class="at">to =</span> <span class="dv">5</span>, <span class="at">n =</span> <span class="dv">500</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">ylab =</span> <span class="st">""</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span>, <span class="at">from =</span> <span class="sc">-</span><span class="dv">5</span>, <span class="at">to =</span> <span class="dv">5</span>, <span class="at">n =</span> <span class="dv">500</span>, <span class="at">col =</span> <span class="st">"darkgreen"</span>, <span class="at">ylab =</span> <span class="st">""</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottomleft"</span>, <span class="fu">c</span>(<span class="st">"a = 1"</span>, <span class="st">"a = 2"</span>, <span class="st">"a = 3"</span>), </span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"darkgreen"</span>), <span class="at">lty =</span> <span class="dv">1</span>, <span class="at">bty =</span> <span class="st">"n"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="lineplot_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="lineplot_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -858,8 +858,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../explainers/sample.html" class="pagination-link" aria-label="`sample`">
-        <span class="nav-page-text"><code>sample</code></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../problems/pset-0.html" class="pagination-link" aria-label="Problem Set 0">
+        <span class="nav-page-text">Problem Set 0</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

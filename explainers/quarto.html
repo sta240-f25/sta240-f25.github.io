@@ -29,6 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../explainers/math.html" rel="next">
+<link href="../explainers/RStudio.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,7 +70,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Quarto – STA 240 Fall 2025">
+<meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
+<meta property="og:image" content="https://sta240-f25.github.io/explainers/images/quarto.png">
 <meta property="og:site_name" content="STA 240 Fall 2025">
+<meta property="og:image:height" content="1733">
+<meta property="og:image:width" content="3023">
 </head>
 
 <body class="nav-sidebar docked">
@@ -80,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Quarto</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../explainers/setup.html"><code>R</code> Explainers</a></li><li class="breadcrumb-item"><a href="../explainers/quarto.html">Quarto</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -213,13 +219,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text"><code>R</code> Explainers</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
@@ -230,6 +236,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../explainers/RStudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The lay of the land</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/quarto.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -254,12 +266,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting lines</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../explainers/sample.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>sample</code></span></a>
   </div>
 </li>
       </ul>
@@ -294,13 +300,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#quick-start" id="toc-quick-start" class="nav-link active" data-scroll-target="#quick-start">Quick start</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../explainers/setup.html"><code>R</code> Explainers</a></li><li class="breadcrumb-item"><a href="../explainers/quarto.html">Quarto</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Quarto</h1>
 </div>
@@ -319,8 +331,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Quarto is a technical publishing system that allows you to write documents where text, math, code, and the output of that code are seamlessly integrated in a reproducible way. Quarto is baller. I had never used it before coming to Duke, and now I am low-key obsessed. You will mainly use Quarto for the lab write-ups in this class, but if you wish to use it for your problem set solutions as well, be my guest!</p>
+<p>Below is a very brief primer to get you started. If you took STA 101 or STA 199, you have already used Quarto extensively and can probably skip this. If you wish to go deeper and become a Quarto power user, <a href="https://quarto.org/docs/get-started/hello/rstudio.html">what are you waiting for</a>?</p>
+<section id="quick-start" class="level2">
+<h2 class="anchored" data-anchor-id="quick-start">Quick start</h2>
+<p>Here is a screenshot of my RStudio container:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/quarto.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>In the upper left, I have the editor open, and I’m working on a <code>.qmd</code> file. This is just a text file with a special format. When I’m done editing, I hit the <strong>Render</strong> button (circled in red), and if there are no errors, a nice <code>.pdf</code> file is produced in the Viewer tab in the bottom right.</p>
+<p>That’s pretty much the whole ballgame:</p>
+<blockquote class="blockquote">
+<p>Edit the <code>.qmd</code> file → hit <strong>Render</strong> → get a <code>.pdf</code></p>
+</blockquote>
+<p>Alright, so what goes in the <code>.qmd</code> file?</p>
+<ol type="1">
+<li>At the top, in between <code>---</code>, you have the document’s metadata: title, author, date, and so forth. We are not going to get fancy with it, but there are <a href="https://quarto.org/docs/reference/formats/pdf.html">loads</a> of settings you can play with;</li>
+<li>You can write text the same as you would in Google Docs or Microsoft Word. Quarto syntax is based on markdown, and you can learn about the formatting options <a href="https://quarto.org/docs/authoring/markdown-basics.html">here</a>;</li>
+<li>The grey block beginning with <code>```{r}</code> and ending with <code>```</code> is called a <strong>code chunk</strong>. Chunks of code go in there. In the rendered document, the code will be nicely formatted and stylized amidst the text;</li>
+<li>When you render, the code in your code chunks is actually executed, and the output is included in the final document. This is super convenient for producing tables and figures;</li>
+<li>You can also include nicely formatted equations and math notation in your Quarto documents. See <a href="https://sta240-f25.github.io/math/latex.html">here</a> for details.</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -740,6 +776,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../explainers/RStudio.html" class="pagination-link" aria-label="The lay of the land">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The lay of the land</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../explainers/math.html" class="pagination-link" aria-label="Basic math">
+        <span class="nav-page-text">Basic math</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
