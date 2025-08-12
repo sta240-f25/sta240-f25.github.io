@@ -5,12 +5,6 @@ editor:
   mode: source
 ---
 
-::: callout-important
-## This is optional!
-
-You can get a 100% A+ in this class without doing any of the stuff described below, so please skip it if you're not interested. However, if you plan on doing research in the mathematical sciences, you will have to learn this stuff eventually, so here goes nothing...
-:::
-
 LaTeX is a software system for typesetting documents with a bunch of math in them[^1]. It is fully integrated into Quarto, so you can do all of your writing and coding and plotting and math-ing in one place. Pretty neat. We'll just show you a few things to get you going, but if you want to use the entire system for realz, you should make an [Overleaf](https://www.overleaf.com) account and [start playing](https://www.overleaf.com/learn).
 
 [^1]: There is no consensus on how to pronounce "LaTeX." JZ says "*lah*-tech." Some folks say "*lay*-tech." Some even say "*lay*-techs," just like a latex glove. But we all agree that the emphasis is on the first syllable. Perhaps I'll award 2.56 bonus points if you invent a new way to pronounce it. But probably not.
