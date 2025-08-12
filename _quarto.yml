@@ -7,9 +7,6 @@ website:
   description: "Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025."
   site-url: "https://sta240-f25.github.io/"
 
-  #repo-url: https://github.com/sta240-s25/sta240-s25.github.io/
-  #repo-actions: [edit, issue]
-
   open-graph: true
 
   draft-mode: unlinked
@@ -19,37 +16,6 @@ website:
     logo: "img/logo.png"
     pinned: true
     align: center
-#    tools:
-#      - icon: github
-#        href: https://github.com/sta199-s25
-#        text: "GitHub organization"
-#      - icon: code-square
-#        href: https://cmgr.oit.duke.edu/containers
-#        text: "RStudio containers"
-#      - icon: life-preserver
-#        text: Support
-#        menu:
-#          - icon: person-raised-hand
-#            text: Office hours
-#            href: https://docs.google.com/spreadsheets/d/1gXNQ9UMT01bU9qr-YDsA2GIpslldHmfwPg1gcOj2GTA/edit?usp=sharing
-#          - icon: people-fill
-#            text: Help from humans (Ed Discussion)
-#            href: https://edstem.org/us/courses/62468/discussion/
-#          - icon: robot
-#            text: Help from AI (Chatbot)
-#            href: https://canvas.duke.edu/courses/39994/external_tools/5887
-#      - icon: file-check-fill
-#        text: "Canvas"
-#        menu:
-#          - icon: megaphone-fill
-#            text: Announcements
-#            url: https://canvas.duke.edu/courses/39994/announcements
-#          - icon: file-arrow-up-fill
-#            text: Gradescope
-#            url: https://canvas.duke.edu/courses/39994/external_tools/181
-#          - icon: alphabet-uppercase
-#            text: Gradebook
-#            url: https://canvas.duke.edu/courses/39994/gradebook
 
     style: docked
     search: true
@@ -135,5 +101,3 @@ code-overflow: wrap
 
 execute:
   freeze: auto
-
-editor: visual
