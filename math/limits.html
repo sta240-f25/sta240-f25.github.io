@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>limits – STA 240 Fall 2025</title>
+<title>Limits and continuity – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -98,7 +98,7 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="limits – STA 240 Fall 2025">
+<meta property="og:title" content="Limits and continuity – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
 <meta property="og:image" content="https://sta240-f25.github.io/math/images/continuity-types.png">
 <meta property="og:site_name" content="STA 240 Fall 2025">
@@ -235,7 +235,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/series.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sequences and series</span></a>
+ <span class="menu-text">Infinite series</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -329,15 +329,22 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#limit-rules" id="toc-limit-rules" class="nav-link active" data-scroll-target="#limit-rules">Limit rules</a></li>
+  <li><a href="#indeterminate-forms-and-lhôpitals-rule" id="toc-indeterminate-forms-and-lhôpitals-rule" class="nav-link" data-scroll-target="#indeterminate-forms-and-lhôpitals-rule">Indeterminate forms and L’Hôpital’s rule</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Review</a></li><li class="breadcrumb-item"><a href="../math/limits.html">Limits and continuity</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">limits</h1>
+<h1 class="title">Limits and continuity</h1>
 </div>
 
 
@@ -354,33 +361,127 @@ window.Quarto = {
 </header>
 
 
-<p>limits, continuity, left versus right, l’hopital</p>
+<p>The limit of a function <span class="math inline">\(f(x)\)</span> at a point <span class="math inline">\(c\)</span> is the value that the function approaches as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span>. We denote this:</p>
+<p><span class="math display">\[
+\lim_{x\to c}f(x).
+\]</span></p>
+<p>If the limit of the function and the actual <em>value</em> of the function agree, then the function is <strong>continuous</strong>:</p>
 <p><span class="math display">\[
 \lim_{x\to c}f(x)=f(c)
-\]</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/continuity-types.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
+\]</span> If a function is continuous, that makes it especially convenient to evaluate limits because it means you can just plug-in and evaluate the darn function. But as <a href="#fig-continuity" class="quarto-xref">Figure&nbsp;1</a> illustrates, not all functions are continuous. Some functions have breaks and jumps and holes that make them <strong>discontinuous</strong>.</p>
+<div id="fig-continuity" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="60%">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-continuity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/continuity-types.png" id="fig-continuity" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-continuity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
 </figure>
 </div>
+<p>But not all discontinuities are created equal:</p>
+<ul>
+<li>(upper right) the function has a <em>hole</em>. The limit the function approaches (the hole), and the value of the function (the point) are different;</li>
+<li>(lower right) this function is <strong>left continuous</strong>. The value of the function and the limit <em>as you approach from the left</em> are in agreement. But there’s a jump, and the limit <em>as you approach from the right</em> is different;</li>
+<li>(lower left) this function is <strong>right continuous</strong>. The value of the function and the limit <em>as you approach from the right</em> are in agreement. But there’s a jump, and the limit <em>as you approach from the left</em> is different;</li>
+<li>(upper left) this function is just straight-up continuous. The left and the right limits both agree with the function value.</li>
+</ul>
+<section id="limit-rules" class="level2">
+<h2 class="anchored" data-anchor-id="limit-rules">Limit rules</h2>
+<p>Assume <span class="math inline">\(\lim_{x\to c}f(x)\)</span> and <span class="math inline">\(\lim_{x\to c}g(x)\)</span> exist, let <span class="math inline">\(a,\,b\in\mathbb{R}\)</span> be arbitrary constants, and let <span class="math inline">\(r&gt;0\)</span>. Then:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>rule</th>
+<th>formula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>scaling</td>
+<td><span class="math display">\[\lim_{x\to c}[a\cdot f(x)]=a\lim_{x\to c}f(x)\]</span></td>
+</tr>
+<tr class="even">
+<td>sum/difference</td>
+<td><span class="math display">\[\lim_{x\to c}[f(x)\pm g(x)]=\lim_{x\to c}f(x)\pm\lim_{x\to c}g(x)\]</span></td>
+</tr>
+<tr class="odd">
+<td>linearity</td>
+<td><span class="math display">\[\lim_{x\to c}[a\cdot f(x)\pm b\cdot g(x)]=a\lim_{x\to c}f(x)\pm b\lim_{x\to c}g(x)\]</span></td>
+</tr>
+<tr class="even">
+<td>product</td>
+<td><span class="math display">\[\lim_{x\to c}f(x)g(x)=\left[\lim_{x\to c}f(x)\right]\left[\lim_{x\to c}g(x)\right]\]</span></td>
+</tr>
+<tr class="odd">
+<td>quotient</td>
+<td><span class="math display">\[\lim_{x\to c}\frac{f(x)}{g(x)}=\frac{\lim_{x\to c} f(x)}{\lim_{x\to c} g(x)},\quad \text{if }\lim_{x\to c} g(x)\neq0.\]</span></td>
+</tr>
+<tr class="even">
+<td>power</td>
+<td><span class="math display">\[\lim_{x\to c}f(x)^r=\left[\lim_{x\to c}f(x)\right]^r\]</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="indeterminate-forms-and-lhôpitals-rule" class="level2">
+<h2 class="anchored" data-anchor-id="indeterminate-forms-and-lhôpitals-rule">Indeterminate forms and L’Hôpital’s rule</h2>
+<p>Most of the time, we hope that we can appeal to continuity and evaluate limits by simply “plugging-in.” But sometimes plugging in gives loony stuff:</p>
 <p><span class="math display">\[
-\lim_{x\to c}\frac{f(x)}{g(x)}=\lim_{x\to c}\frac{f'(x)}{g'(x)}
+\begin{aligned}
+\lim_{x\to 0}\frac{\sin x}{x}=1, &amp;\text{ but }\frac{\sin(0)}{0}=\frac{0}{0};\\
+\lim_{x\to \infty}\frac{\ln x}{x}=0, &amp;\text{ but }\frac{\ln\infty}{\infty}=\frac{\infty}{\infty}.\\
+\end{aligned}
 \]</span></p>
+<p>Things like <span class="math inline">\(0/0\)</span>, <span class="math inline">\(\infty/\infty\)</span>, and <span class="math inline">\(0\times\infty\)</span> are examples of <strong>indeterminate forms</strong>. If you get one, it doesn’t necessarily mean that <a href="https://youtu.be/oDAKKQuBtDo?si=K_FrQDi0n2cnxDXr">the limit does not exist</a>. It just means that the jury is still out; it’s <em>indeterminate</em>. To continue investigating, you can use a tool called <strong>L’Hôpital’s rule</strong>. Whenever <span class="math inline">\(\lim_{x\to c}f(x)=\lim_{x\to c}g(x)=0\)</span> or <span class="math inline">\(\pm\infty\)</span>, the rule says that</p>
+<p><span class="math display">\[
+\lim_{x\to c}\frac{f(x)}{g(x)}=\lim_{x\to c}\frac{f'(x)}{g'(x)}.
+\]</span> The hope is that the new function <span class="math inline">\(f'(x)/g'(x)\)</span> will be well-behaved at <span class="math inline">\(c\)</span>, meaning you can simplify by just plugging in. However, after applying L’Hôpital’s rule once and <em>trying</em> to plug-in, you may still get an indeterminate form. In that case, you’ll have to take another round of derivatives, and maybe another after that, until the clouds finally part and the <a href="https://youtu.be/SSBWiFGzsyU?si=GKmf7QAhjyvAAK0d">sun shines upon you</a>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Example:
+Example: multiple rounds of L’Hôpital’s
 </div>
 </div>
 <div class="callout-body-container callout-body">
-
+<p>Consider:</p>
+<p><span class="math display">\[
+\lim_{x\to\infty}\frac{(\ln x)^2}{x}.
+\]</span></p>
+<p><span class="math inline">\(\lim_{x\to\infty}(\ln x)^2=\infty\)</span> and <span class="math inline">\(\lim_{x\to\infty}x=\infty\)</span>, so let’s take some derivatives:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\text{d}}{\text{d}x}(\ln x)^2&amp;=\frac{2\ln x}{x}\\
+\frac{\text{d}}{\text{d}x}x&amp;=1.
+\end{aligned}
+\]</span> The ratio of derivatives is thus <span class="math inline">\(2(\ln x)/x\)</span>, but this still gives an indeterminate form because <span class="math inline">\(\lim_{x\to\infty}2\ln x=\infty\)</span> and <span class="math inline">\(\lim_{x\to\infty}x=\infty\)</span>, so we have to go again:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\text{d}}{\text{d}x}2\ln x&amp;=\frac{2}{x}\\
+\frac{\text{d}}{\text{d}x}x&amp;=1.
+\end{aligned}
+\]</span> The ratio of these derivatives is just <span class="math inline">\(2/x\)</span>, and that goes to 0 as <span class="math inline">\(x\to \infty\)</span>. In sum,</p>
+<p><span class="math display">\[
+\lim_{x\to\infty}\frac{(\ln x)^2}{x}
+\overset{\text{L'H}}{=}
+\lim_{x\to\infty}\frac{2\ln x}{x}
+\overset{\text{L'H}}{=}
+\lim_{x\to\infty}\frac{2}{x}
+=
+0.
+\]</span></p>
 </div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -807,8 +908,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../math/series.html" class="pagination-link" aria-label="Sequences and series">
-        <span class="nav-page-text">Sequences and series</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../math/series.html" class="pagination-link" aria-label="Infinite series">
+        <span class="nav-page-text">Infinite series</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

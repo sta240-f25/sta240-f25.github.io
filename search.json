@@ -612,9 +612,31 @@
   {
     "objectID": "math/limits.html",
     "href": "math/limits.html",
-    "title": "limits",
+    "title": "Limits and continuity",
     "section": "",
-    "text": "limits, continuity, left versus right, l’hopital\n\\[\n\\lim_{x\\to c}f(x)=f(c)\n\\]\n\n\n\n\n\n\\[\n\\lim_{x\\to c}\\frac{f(x)}{g(x)}=\\lim_{x\\to c}\\frac{f'(x)}{g'(x)}\n\\]\n\n\n\n\n\n\nExample:",
+    "text": "The limit of a function \\(f(x)\\) at a point \\(c\\) is the value that the function approaches as \\(x\\) approaches \\(c\\). We denote this:\n\\[\n\\lim_{x\\to c}f(x).\n\\]\nIf the limit of the function and the actual value of the function agree, then the function is continuous:\n\\[\n\\lim_{x\\to c}f(x)=f(c)\n\\] If a function is continuous, that makes it especially convenient to evaluate limits because it means you can just plug-in and evaluate the darn function. But as Figure 1 illustrates, not all functions are continuous. Some functions have breaks and jumps and holes that make them discontinuous.\nBut not all discontinuities are created equal:",
+    "crumbs": [
+      "Math Review",
+      "Limits and continuity"
+    ]
+  },
+  {
+    "objectID": "math/limits.html#limit-rules",
+    "href": "math/limits.html#limit-rules",
+    "title": "Limits and continuity",
+    "section": "Limit rules",
+    "text": "Limit rules\nAssume \\(\\lim_{x\\to c}f(x)\\) and \\(\\lim_{x\\to c}g(x)\\) exist, let \\(a,\\,b\\in\\mathbb{R}\\) be arbitrary constants, and let \\(r&gt;0\\). Then:\n\n\n\n\n\n\n\nrule\nformula\n\n\n\n\nscaling\n\\[\\lim_{x\\to c}[a\\cdot f(x)]=a\\lim_{x\\to c}f(x)\\]\n\n\nsum/difference\n\\[\\lim_{x\\to c}[f(x)\\pm g(x)]=\\lim_{x\\to c}f(x)\\pm\\lim_{x\\to c}g(x)\\]\n\n\nlinearity\n\\[\\lim_{x\\to c}[a\\cdot f(x)\\pm b\\cdot g(x)]=a\\lim_{x\\to c}f(x)\\pm b\\lim_{x\\to c}g(x)\\]\n\n\nproduct\n\\[\\lim_{x\\to c}f(x)g(x)=\\left[\\lim_{x\\to c}f(x)\\right]\\left[\\lim_{x\\to c}g(x)\\right]\\]\n\n\nquotient\n\\[\\lim_{x\\to c}\\frac{f(x)}{g(x)}=\\frac{\\lim_{x\\to c} f(x)}{\\lim_{x\\to c} g(x)},\\quad \\text{if }\\lim_{x\\to c} g(x)\\neq0.\\]\n\n\npower\n\\[\\lim_{x\\to c}f(x)^r=\\left[\\lim_{x\\to c}f(x)\\right]^r\\]",
+    "crumbs": [
+      "Math Review",
+      "Limits and continuity"
+    ]
+  },
+  {
+    "objectID": "math/limits.html#indeterminate-forms-and-lhôpitals-rule",
+    "href": "math/limits.html#indeterminate-forms-and-lhôpitals-rule",
+    "title": "Limits and continuity",
+    "section": "Indeterminate forms and L’Hôpital’s rule",
+    "text": "Indeterminate forms and L’Hôpital’s rule\nMost of the time, we hope that we can appeal to continuity and evaluate limits by simply “plugging-in.” But sometimes plugging in gives loony stuff:\n\\[\n\\begin{aligned}\n\\lim_{x\\to 0}\\frac{\\sin x}{x}=1, &\\text{ but }\\frac{\\sin(0)}{0}=\\frac{0}{0};\\\\\n\\lim_{x\\to \\infty}\\frac{\\ln x}{x}=0, &\\text{ but }\\frac{\\ln\\infty}{\\infty}=\\frac{\\infty}{\\infty}.\\\\\n\\end{aligned}\n\\]\nThings like \\(0/0\\), \\(\\infty/\\infty\\), and \\(0\\times\\infty\\) are examples of indeterminate forms. If you get one, it doesn’t necessarily mean that the limit does not exist. It just means that the jury is still out; it’s indeterminate. To continue investigating, you can use a tool called L’Hôpital’s rule. Whenever \\(\\lim_{x\\to c}f(x)=\\lim_{x\\to c}g(x)=0\\) or \\(\\pm\\infty\\), the rule says that\n\\[\n\\lim_{x\\to c}\\frac{f(x)}{g(x)}=\\lim_{x\\to c}\\frac{f'(x)}{g'(x)}.\n\\] The hope is that the new function \\(f'(x)/g'(x)\\) will be well-behaved at \\(c\\), meaning you can simplify by just plugging in. However, after applying L’Hôpital’s rule once and trying to plug-in, you may still get an indeterminate form. In that case, you’ll have to take another round of derivatives, and maybe another after that, until the clouds finally part and the sun shines upon you.\n\n\n\n\n\n\nExample: multiple rounds of L’Hôpital’s\n\n\n\nConsider:\n\\[\n\\lim_{x\\to\\infty}\\frac{(\\ln x)^2}{x}.\n\\]\n\\(\\lim_{x\\to\\infty}(\\ln x)^2=\\infty\\) and \\(\\lim_{x\\to\\infty}x=\\infty\\), so let’s take some derivatives:\n\\[\n\\begin{aligned}\n\\frac{\\text{d}}{\\text{d}x}(\\ln x)^2&=\\frac{2\\ln x}{x}\\\\\n\\frac{\\text{d}}{\\text{d}x}x&=1.\n\\end{aligned}\n\\] The ratio of derivatives is thus \\(2(\\ln x)/x\\), but this still gives an indeterminate form because \\(\\lim_{x\\to\\infty}2\\ln x=\\infty\\) and \\(\\lim_{x\\to\\infty}x=\\infty\\), so we have to go again:\n\\[\n\\begin{aligned}\n\\frac{\\text{d}}{\\text{d}x}2\\ln x&=\\frac{2}{x}\\\\\n\\frac{\\text{d}}{\\text{d}x}x&=1.\n\\end{aligned}\n\\] The ratio of these derivatives is just \\(2/x\\), and that goes to 0 as \\(x\\to \\infty\\). In sum,\n\\[\n\\lim_{x\\to\\infty}\\frac{(\\ln x)^2}{x}\n\\overset{\\text{L'H}}{=}\n\\lim_{x\\to\\infty}\\frac{2\\ln x}{x}\n\\overset{\\text{L'H}}{=}\n\\lim_{x\\to\\infty}\\frac{2}{x}\n=\n0.\n\\]",
     "crumbs": [
       "Math Review",
       "Limits and continuity"
@@ -680,10 +702,43 @@
     "href": "math/series.html",
     "title": "Infinite series",
     "section": "",
-    "text": "\\[\n\\sum\\limits_{n=0}^\\infty a_n=a_0+a_1+a_2+a_3+\\cdots\n\\]\nOy\n\\[\n\\frac{a}{1-r}=\\sum\\limits_{i=0}^\\infty ar^i,\\quad |r|&lt;1.\n\\]\nOy\n\\[\n\\begin{aligned}\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n}&=\\infty &&\\text{(harmonic series)}\\\\\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^2}&=\\frac{\\pi^2}{6}\\\\\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^3}&\\approx 1.202057\\\\\n\\end{aligned}\n\\]\nOy\n\\[\nf(x)\n=\n\\sum\\limits_{n=0}^\\infty \\frac{f^{(n)}(0)}{n!}x^n.\n\\]\nOy\n\\[\n\\begin{aligned}\n\\frac{1}{1-x}&=\\sum\\limits_{n=0}^\\infty x^n,&&-1&lt;x&lt;1\\\\\ne^x&=\\sum\\limits_{n=0}^\\infty\\frac{x^n}{n!},&&-\\infty &lt; x &lt; \\infty\\\\\n\\ln(1-x)&=-\\sum\\limits_{n=0}^\\infty\\frac{x^n}{n},&&-1\\leq x &lt; 1.\n\\end{aligned}\n\\]",
+    "text": "Roughly speaking, an infinite series is the sum of infinitely many numbers:\n\\[\n\\sum\\limits_{n=0}^\\infty a_n=a_0+a_1+a_2+a_3+\\cdots\n\\]\nStrictly speaking, it is the limit of the sequence of partial sums:\n\\[\n\\sum\\limits_{n=0}^\\infty a_n=\\lim_{k\\to\\infty}\\sum\\limits_{n=0}^ka_n.\n\\]\nThis limit may or may not be finite, and there are many famous examples of this.",
     "crumbs": [
       "Math Review",
-      "Sequences and series"
+      "Infinite series"
+    ]
+  },
+  {
+    "objectID": "math/series.html#geometric-series",
+    "href": "math/series.html#geometric-series",
+    "title": "Infinite series",
+    "section": "Geometric series",
+    "text": "Geometric series\nDon’t you love this:\n\\[\n\\frac{a}{1-r}=\\sum\\limits_{n=0}^\\infty ar^n,\\quad |r|&lt;1.\n\\]\nThe partial sums are also well-behaved:\n\\[\n\\sum\\limits_{n=0}^k ar^n\n=\n\\begin{cases}\na(k+1) & r=1\\\\\na\\left(\\frac{1-r^{k+1}}{1-r}\\right) & \\text{else}.\n\\end{cases}\n\\]",
+    "crumbs": [
+      "Math Review",
+      "Infinite series"
+    ]
+  },
+  {
+    "objectID": "math/series.html#p-series",
+    "href": "math/series.html#p-series",
+    "title": "Infinite series",
+    "section": "\\(p\\)-series",
+    "text": "\\(p\\)-series\nIf \\(p&gt;1\\), this converges:\n\\[\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^p}.\n\\]\nHere are concrete examples:\n\\[\n\\begin{aligned}\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n}&=\\infty &&\\text{(harmonic series)}\\\\\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^2}&=\\frac{\\pi^2}{6}\\\\\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^3}&\\approx 1.202057.\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Math Review",
+      "Infinite series"
+    ]
+  },
+  {
+    "objectID": "math/series.html#taylor-series",
+    "href": "math/series.html#taylor-series",
+    "title": "Infinite series",
+    "section": "Taylor series",
+    "text": "Taylor series\nIf a function \\(f\\) is infinitely differentiable at 0, then we can rewrite it using the Taylor expansion:\n\\[\nf(x)\n=\n\\sum\\limits_{n=0}^\\infty \\frac{f^{(n)}(0)}{n!}x^n,\\quad \\text{for some  }x.\n\\]\nThe set of \\(x\\)-values for which the Taylor expansion is valid is called the radius of convergence. Here are examples for specific functions:\n\\[\n\\begin{aligned}\n\\frac{1}{1-x}&=\\sum\\limits_{n=0}^\\infty x^n,&&-1&lt;x&lt;1\\\\\ne^x&=\\sum\\limits_{n=0}^\\infty\\frac{x^n}{n!},&&-\\infty &lt; x &lt; \\infty\\\\\n\\ln(1-x)&=-\\sum\\limits_{n=0}^\\infty\\frac{x^n}{n},&&-1\\leq x &lt; 1.\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Math Review",
+      "Infinite series"
     ]
   },
   {
@@ -880,7 +935,7 @@
     "href": "problems/bank/conceptual/lousy-forecasting.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:\n\nZohran Mamdani wins the New York City mayoral election;\nWicked: For Good makes more money (inflation adjusted) on its opening weekend than Wicked: Part I;\n“The Epstein files” (whatever the hell those even are) are somehow made publicly available;\nDuke University settles with the Trump administration (need to make this more precise)\nSomething to do with Duke Football\nWorld Series (in october)\noutcome of a high profile court case\nsome silly gen z thing (ask TAs)\n\nChoose one of these, state the probability that you assign to the event happening, and explain in a few paragraphs how you formulated your belief. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed."
+    "text": "Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:\n\nZohran Mamdani wins the New York City mayoral election;\nWicked: For Good makes more money (inflation adjusted) on its opening weekend than Wicked: Part I;\n“The Epstein files” (whatever the hell those even are) are somehow made publicly available;\nDuke University settles with the Trump administration (need to make this more precise)\nSomething to do with Duke Football\nWorld Series (in october)\nDiddy sentencing, or some other court thing\nsome silly gen z thing (ask TAs)\n\nChoose one of these, state the probability that you assign to the event happening, and explain in a few paragraphs how you formulated your belief. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed."
   },
   {
     "objectID": "problems/bank/random-variables-discrete/gandalf-test.html",
@@ -1620,7 +1675,7 @@
     "href": "syllabus/syllabus_assignments.html#exams-20-each",
     "title": "Assignments and grading",
     "section": "Exams (20% each)",
-    "text": "Exams (20% each)\nThere will be three exams. The dates, times, and locations are firm, so mark your calendar now:\n\nMidterm 1: Thursday October 9 during your lab;\nMidterm 2: Thursday November 13 during your lab;\nFinal: Friday December 12 from 9 AM - 12 PM in Physics 130.\n\nThese will be old school, pencil-and-paper, in-class exams. The only resources you are allowed are a simple four-function calculator (which you won’t actually need) and a note sheet that you and only you have prepared (both sides of a standard 8.5” x 11” piece of paper).\n\n\n\n\n\n\nGrace\n\n\n\nIf you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.\n\n\n\n\n\n\n\n\nNo make-up exams\n\n\n\nIf you are absent from one of the midterms for whatever reason, there will not be a make-up. Pursuant to the above policy, we will simply replace the missed midterm score with the final exam score. If you miss the final exam, you get a zero unless you have a Dean’s Excuse.",
+    "text": "Exams (20% each)\nThere will be three exams. The dates, times, and locations are firm, so mark your calendar now:\n\nMidterm 1: Thursday October 9 during your lab;\nMidterm 2: Thursday November 13 during your lab;\nFinal: Friday December 12 from 9 AM - 12 PM in Old Chem 116.\n\nThese will be old school, pencil-and-paper, in-class exams. You are allowed only two resources on the exams:\n\na “dumb” calculator (no wi-fi). You will not need it, but if you want it as a security blanket, be my guest;\nboth sides of one 8.5” x 11” sheet of notes, prepared by you and you alone. You can create it however you wish: handwritten, on a computer, etc.\n\nIf you seek testing accommodations, make sure the Student Disability Access Office sends me a letter, and then please make your appointments in the Testing Center as soon as possible.\n\n\n\n\n\n\nGrace\n\n\n\nIf you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.\n\n\n\n\n\n\n\n\nNo make-up exams\n\n\n\nIf you are absent from one of the midterms for whatever reason, there will not be a make-up. Pursuant to the above policy, we will simply replace the missed midterm score with the final exam score. If you miss the final exam, you get a zero unless you have a Dean’s Excuse.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"

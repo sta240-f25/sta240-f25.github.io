@@ -112,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Review</a></li><li class="breadcrumb-item"><a href="../math/series.html">Sequences and series</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Review</a></li><li class="breadcrumb-item"><a href="../math/series.html">Infinite series</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -232,7 +232,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/series.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Sequences and series</span></a>
+ <span class="menu-text">Infinite series</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -326,13 +326,21 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#geometric-series" id="toc-geometric-series" class="nav-link active" data-scroll-target="#geometric-series">Geometric series</a></li>
+  <li><a href="#p-series" id="toc-p-series" class="nav-link" data-scroll-target="#p-series"><span class="math inline">\(p\)</span>-series</a></li>
+  <li><a href="#taylor-series" id="toc-taylor-series" class="nav-link" data-scroll-target="#taylor-series">Taylor series</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Review</a></li><li class="breadcrumb-item"><a href="../math/series.html">Sequences and series</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Review</a></li><li class="breadcrumb-item"><a href="../math/series.html">Infinite series</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Infinite series</h1>
 </div>
@@ -351,28 +359,55 @@ window.Quarto = {
 </header>
 
 
+<p>Roughly speaking, an <strong>infinite series</strong> is the sum of infinitely many numbers:</p>
 <p><span class="math display">\[
 \sum\limits_{n=0}^\infty a_n=a_0+a_1+a_2+a_3+\cdots
 \]</span></p>
-<p>Oy</p>
+<p>Strictly speaking, it is the limit of the sequence of <strong>partial sums</strong>:</p>
 <p><span class="math display">\[
-\frac{a}{1-r}=\sum\limits_{i=0}^\infty ar^i,\quad |r|&lt;1.
+\sum\limits_{n=0}^\infty a_n=\lim_{k\to\infty}\sum\limits_{n=0}^ka_n.
 \]</span></p>
-<p>Oy</p>
+<p>This limit may or may not be finite, and there are many famous examples of this.</p>
+<section id="geometric-series" class="level2">
+<h2 class="anchored" data-anchor-id="geometric-series">Geometric series</h2>
+<p>Don’t you love this:</p>
+<p><span class="math display">\[
+\frac{a}{1-r}=\sum\limits_{n=0}^\infty ar^n,\quad |r|&lt;1.
+\]</span></p>
+<p>The partial sums are also well-behaved:</p>
+<p><span class="math display">\[
+\sum\limits_{n=0}^k ar^n
+=
+\begin{cases}
+a(k+1) &amp; r=1\\
+a\left(\frac{1-r^{k+1}}{1-r}\right) &amp; \text{else}.
+\end{cases}
+\]</span></p>
+</section>
+<section id="p-series" class="level2">
+<h2 class="anchored" data-anchor-id="p-series"><span class="math inline">\(p\)</span>-series</h2>
+<p>If <span class="math inline">\(p&gt;1\)</span>, this converges:</p>
+<p><span class="math display">\[
+\sum\limits_{n=1}^\infty\frac{1}{n^p}.
+\]</span></p>
+<p>Here are concrete examples:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \sum\limits_{n=1}^\infty\frac{1}{n}&amp;=\infty &amp;&amp;\text{(harmonic series)}\\
 \sum\limits_{n=1}^\infty\frac{1}{n^2}&amp;=\frac{\pi^2}{6}\\
-\sum\limits_{n=1}^\infty\frac{1}{n^3}&amp;\approx 1.202057\\
+\sum\limits_{n=1}^\infty\frac{1}{n^3}&amp;\approx 1.202057.
 \end{aligned}
 \]</span></p>
-<p>Oy</p>
+</section>
+<section id="taylor-series" class="level2">
+<h2 class="anchored" data-anchor-id="taylor-series">Taylor series</h2>
+<p>If a function <span class="math inline">\(f\)</span> is infinitely differentiable at 0, then we can rewrite it using the <strong>Taylor expansion</strong>:</p>
 <p><span class="math display">\[
 f(x)
 =
-\sum\limits_{n=0}^\infty \frac{f^{(n)}(0)}{n!}x^n.
+\sum\limits_{n=0}^\infty \frac{f^{(n)}(0)}{n!}x^n,\quad \text{for some  }x.
 \]</span></p>
-<p>Oy</p>
+<p>The set of <span class="math inline">\(x\)</span>-values for which the Taylor expansion is valid is called the <strong>radius of convergence</strong>. Here are examples for specific functions:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{1}{1-x}&amp;=\sum\limits_{n=0}^\infty x^n,&amp;&amp;-1&lt;x&lt;1\\
@@ -382,6 +417,7 @@ e^x&amp;=\sum\limits_{n=0}^\infty\frac{x^n}{n!},&amp;&amp;-\infty &lt; x &lt; \i
 \]</span></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
