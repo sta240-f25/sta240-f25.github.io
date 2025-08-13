@@ -50,7 +50,7 @@ website:
           - href: math/limits.qmd
             text: Limits and continuity
           - href: math/series.qmd
-            text: Sequences and series
+            text: Infinite series
           - href: math/latex.qmd
             text: Typing math
       - section: "`R` Explainers"
