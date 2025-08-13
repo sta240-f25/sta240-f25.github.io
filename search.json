@@ -55,7 +55,7 @@
     "href": "syllabus/syllabus_team.html",
     "title": "Teaching team",
     "section": "",
-    "text": "Mug\nName\nRole\nOffice Hours\n\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\n\nTA\n\n\n\n\nZito, John\nInstructor\nTue 3:00 PM - 5:00 PM\nor by appointment\nOld Chem 207",
+    "text": "Mug\nName\nRole\nOffice Hours\n\n\n\n\n\nHu, Yuang\nTA\nTBD\n\n\n\nLiu, Aurora\nHead TA\nTBD\n\n\n\nMa, Liane\nTA\nTBD\n\n\n\nZito, John\nInstructor\nTue 3:00 PM - 5:00 PM\nor by appointment\nOld Chem 207",
     "crumbs": [
       "Syllabus",
       "Teaching team"
@@ -1200,7 +1200,7 @@
     "href": "slides/slides_2025_08_25.html#teaching-team",
     "title": "Welcome to STA 240!",
     "section": "Teaching Team",
-    "text": "Teaching Team\n\n\n\nMug\nName\nRole\nOffice Hours\n\n\n\n\n\n\nTA\nTBD\n\n\n\n\nTA\nTBD\n\n\n\n\nTA\nTBD\n\n\n\nZito, John\nInstructor\nTue 3pm - 5pm"
+    "text": "Teaching Team\n\n\n\n\n\n\n\n\n\nMug\nName\nRole\nOffice Hours\n\n\n\n\n\nHu, Yuang\nTA\nTBD\n\n\n\nLiu, Aurora\nHead TA\nTBD\n\n\n\nMa, Liane\nTA\nTBD\n\n\n\nZito, John\nInstructor\nTue 3pm - 5pm"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-the-birthday-problem",
@@ -1354,7 +1354,7 @@
     "href": "slides/slides_2025_08_25.html#two-old-hags",
     "title": "Welcome to STA 240!",
     "section": "Two old hags",
-    "text": "Two old hags\n\n\n\n\n\n\n\nBertrand Russell, Mysticism and Logic and Other Essays (1917)\n\n\n\n\n\n\nMathematics, rightly viewed, possesses not only truth, but supreme beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show.\n\n\n\n\n\n\n\n\n\n\n\n\nAlbert Einstein, “The Late Emmy Noether” (1935)\n\n\n\n\n\n\nPure mathematics is, in its way, the poetry of logical ideas."
+    "text": "Two old hags\n\n\n\n\n\n\n\nBertrand Russell, Mysticism and Logic and Other Essays (1917)\n\n\n\n\n\n\n“Mathematics, rightly viewed, possesses not only truth, but supreme beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show.”\n\n\n\n\n\n\n\n\n\n\n\n\nAlbert Einstein, “The Late Emmy Noether” (1935)\n\n\n\n\n\n\n“Pure mathematics is, in its way, the poetry of logical ideas.”"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#this-is-a-theorem-we-will-prove",
@@ -1410,7 +1410,7 @@
     "href": "slides/slides_2025_08_25.html#labs-10",
     "title": "Welcome to STA 240!",
     "section": "Labs (10%)",
-    "text": "Labs (10%)\nLed by XXX in Perkins LINK 087 (Classroom 3):\n\nThursday 1:25 PM - 2:40 PM;\nThursday 3:05 PM - 4:20 PM.\n\nGuided activities introducing you to special topics, extensions, applications, and case studies. We will also introduce some basic R stuff, and we will use Quarto for the lab write-ups.\n\n\n\n\n\n\nPlan to attend regularly\n\n\nDesigned to be complete-able during the lab period, but due by 11:59 PM that same day."
+    "text": "Labs (10%)\nLed by Aurora in Perkins LINK 087 (Classroom 3):\n\nThursday 1:25 PM - 2:40 PM;\nThursday 3:05 PM - 4:20 PM.\n\nGuided activities introducing you to special topics, extensions, applications, and case studies. We will also introduce some basic R stuff, and we will use Quarto for the lab write-ups.\n\n\n\n\n\n\nPlan to attend regularly\n\n\nDesigned to be complete-able during the lab period, but due by 11:59 PM that same day."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#problem-sets-30",
@@ -1565,7 +1565,7 @@
     "href": "syllabus/syllabus_overview.html#meetings",
     "title": "Course overview",
     "section": "Meetings",
-    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nOld Chem 116\nMoWe 3:05 PM - 4:20 PM\nJohn\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nTh 1:25 PM - 2:40 PM\n????\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nTh 3:05 PM - 4:20 PM\n????",
+    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nOld Chem 116\nMoWe 3:05 PM - 4:20 PM\nJohn\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nTh 1:25 PM - 2:40 PM\nAurora\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nTh 3:05 PM - 4:20 PM\nAurora",
     "crumbs": [
       "Syllabus",
       "Overview"
@@ -1675,7 +1675,7 @@
     "href": "syllabus/syllabus_assignments.html#exams-20-each",
     "title": "Assignments and grading",
     "section": "Exams (20% each)",
-    "text": "Exams (20% each)\nThere will be three exams. The dates, times, and locations are firm, so mark your calendar now:\n\nMidterm 1: Thursday October 9 during your lab;\nMidterm 2: Thursday November 13 during your lab;\nFinal: Friday December 12 from 9 AM - 12 PM in Old Chem 116.\n\nThese will be old school, pencil-and-paper, in-class exams. You are allowed only two resources on the exams:\n\na “dumb” calculator (no wi-fi). You will not need it, but if you want it as a security blanket, be my guest;\nboth sides of one 8.5” x 11” sheet of notes, prepared by you and you alone. You can create it however you wish: handwritten, on a computer, etc.\n\nIf you seek testing accommodations, make sure the Student Disability Access Office sends me a letter, and then please make your appointments in the Testing Center as soon as possible.\n\n\n\n\n\n\nGrace\n\n\n\nIf you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.\n\n\n\n\n\n\n\n\nNo make-up exams\n\n\n\nIf you are absent from one of the midterms for whatever reason, there will not be a make-up. Pursuant to the above policy, we will simply replace the missed midterm score with the final exam score. If you miss the final exam, you get a zero unless you have a Dean’s Excuse.",
+    "text": "Exams (20% each)\nThere will be three exams. The dates, times, and locations are firm, so mark your calendar now:\n\nMidterm 1: Thursday October 9 during your lab;\nMidterm 2: Thursday November 13 during your lab;\nFinal: Friday December 12 from 9 AM - 12 PM in Old Chem 116.\n\nThese will be old school, pencil-and-paper, in-class exams. You are allowed only two resources:\n\na “dumb” calculator (no wi-fi). You will not actually need it, but if you want it as a security blanket, be my guest;\nboth sides of one 8.5” x 11” sheet of notes, prepared by you and you alone. You can create it however you wish: handwritten, on a computer, etc.\n\nIf you seek testing accommodations, make sure the Student Disability Access Office sends me a letter, and then please make your appointments in the Testing Center as soon as possible.\n\n\n\n\n\n\nGrace\n\n\n\nIf you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.\n\n\n\n\n\n\n\n\nNo make-up exams\n\n\n\nIf you are absent from one of the midterms for whatever reason, there will not be a make-up. Pursuant to the above policy, we will simply replace the missed midterm score with the final exam score. If you miss the final exam, you get a zero unless you have a Dean’s Excuse.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
