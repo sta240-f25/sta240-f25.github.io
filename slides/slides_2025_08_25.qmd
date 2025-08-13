@@ -20,7 +20,7 @@ While you wait, please complete this brief questionnaire:
 :::
 :::::
 
-## Teaching Team {.medium}
+## Teaching Team {.medium .scrollable}
 
 | Mug                   | Name        | Role       | Office Hours  |
 |-----------------------|-------------|------------|---------------|
