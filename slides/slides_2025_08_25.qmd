@@ -22,12 +22,13 @@ While you wait, please complete this brief questionnaire:
 
 ## Teaching Team {.medium}
 
-| Mug                   | Name       | Role       | Office Hours  |
-|-----------------------|------------|------------|---------------|
-|                       |            | TA         | TBD           |
-|                       |            | TA         | TBD           |
-|                       |            | TA         | TBD           |
-| ![](images/z.jpg){.c} | Zito, John | Instructor | Tue 3pm - 5pm |
+| Mug                   | Name        | Role       | Office Hours  |
+|-----------------------|-------------|------------|---------------|
+| ![](images/yh.jpg){.c} | Hu, Yuang   | TA         | TBD           |
+| ![](images/al.jpg){.c} | Liu, Aurora | Head TA    | TBD           |
+| ![](images/lm.png){.c} | Ma, Liane   | TA         | TBD           |
+| ![](images/z.jpg){.c} | Zito, John  | Instructor | Tue 3pm - 5pm |
+: {tbl-colwidths="[20,25,25,30]"}
 
 # Why should you study the mathematics of probability and statistics?
 
@@ -240,7 +241,7 @@ No area of science or technology can be properly understood without knowing some
 :::
 
 ::: {.column width="85%"}
-Mathematics, rightly viewed, possesses not only truth, but supreme beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show.
+"Mathematics, rightly viewed, possesses not only truth, but supreme beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show."
 :::
 :::::
 
@@ -258,7 +259,7 @@ Mathematics, rightly viewed, possesses not only truth, but supreme beauty cold a
 :::
 
 ::: {.column width="85%"}
-Pure mathematics is, in its way, the poetry of logical ideas.
+"Pure mathematics is, in its way, the poetry of logical ideas."
 :::
 
 :::::
@@ -346,7 +347,7 @@ The final letter grade will be based on the usual thresholds, which will not cha
 
 ## Labs (10%)
 
-Led by XXX in Perkins LINK 087 (Classroom 3):
+Led by Aurora in Perkins LINK 087 (Classroom 3):
 
 -   Thursday 1:25 PM - 2:40 PM;
 -   Thursday 3:05 PM - 4:20 PM.
