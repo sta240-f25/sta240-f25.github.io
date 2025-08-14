@@ -47,3 +47,7 @@ Do not skimp on the cheat sheet! Students in past semesters have neglected their
 # Conditional probability 
 
 # Discrete random variables
+
+## Problem X
+
+{{< include bank/random-variables-discrete/memoryless-geometric.qmd >}}

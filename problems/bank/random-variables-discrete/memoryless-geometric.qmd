@@ -1,0 +1,1 @@
+Let $D \sim \text{Geometric}(p)$, and fix positive integers $n$ and $k$. What is $P(D = n + k \,|\, D > k)$? Does this look familiar?
