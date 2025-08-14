@@ -158,7 +158,23 @@ Only 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them 
 > We can only imagine how much anxiety those innumerate doctors instil in women.
 :::
 
-## Sally Clark and Roy Meadow
+## Sally Clark
+
+::::: {.columns .v-center-container}
+::: {.column width="50%"}
+
+:::
+
+::: {.column width="50%"}
+- Clark was convicted of murder after her two children suddenly died in infancy;
+- Pediatrician Meadow testified that there was a 1 in 73 million chance the two deaths were due to SIDS (Sudden Infant Death Syndrome);
+- His reasoning was farkakte from beginning to end;
+- She got out on appeal and drank herself to death;
+- 
+:::
+:::::
+
+## Sir Roy Meadow
 
 ## Reason 1: It's necessary. {.large-ish}
 
@@ -210,9 +226,26 @@ Every insurance company employs armies of *actuaries*, certified professionals w
 
 Play the Keyes monologue?
 
-## Contested elections?
+## Example: genetics?
 
 ## Example: quantum mechanics
+
+***key words***: Schrödinger's cat, uncertainty principle, etc
+
+::::: {.columns}
+::: {.column width="40%"}
+![](images/wavefunction.gif)
+:::
+
+::: {.column width="60%"}
+::: incremental 
+- Particles at the (sub)atomic level do not have a definite position and momentum until measured;
+- There are only probabilities associated with the possible states;
+- Probability is fundamentally baked into the fabric of reality;
+- These ideas are hard, but some of the math will be accessible to us.
+:::
+:::
+:::::
 
 ## Reason 2: It's useful {.large}
 
