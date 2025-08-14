@@ -28,8 +28,10 @@ saveGIF(
       curve((sqrt(2/L)*sin(n*pi*x/L))^2, 
             from = 0, to = L, 
             n = 1000,
+            yaxs = "i",
             main = "Probability density",
             ylab = "",
+            ylim = c(0, 2.25),
             xlab = "Position",
             col = "blue", lwd = 2, bty = "n",
             cex.main = 1.5)
