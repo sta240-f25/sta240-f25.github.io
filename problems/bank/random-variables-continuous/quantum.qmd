@@ -1,0 +1,43 @@
+Imagine a single particle at the (sub)atomic level. A particle’s **quantum state** contains information about various properties --- such as its position, momentum, spin, and energy --- which can be revealed by measurement. One of the main ideas of quantum mechanics is that measurement outcomes are fundamentally probabilistic. Prior to measurement, a particle does not have a definite position or momentum in general; it only has probabilities associated with the possible outcomes. This information is summarized by something called the **wave function**, and the squared magnitude of the wave function is a probability density function describing, for example, the distribution of the particle's position. Let's explore this in a simple example.
+
+
+Consider a single one-dimensional particle located somewhere in the interval $[0,\,L]$. The wave function associated with the particle's quantum state is
+
+$$
+\psi_n(x)
+=
+\begin{cases}
+A\cdot\sin\left(\frac{n\pi}{L}x\right) & 0\leq x\leq L\\
+0 & \text{else},
+\end{cases}
+$$
+
+where $A$ is the *amplitude*, and $n=1,\,2,\,3,\,...$ indexes the particle's *energy level*:
+
+```{r}
+#| echo: false
+#| fig-asp: .4
+#| fig-align: center
+energy = 1:4
+L = 1
+par(mfrow = c(1, length(energy)),
+    mar = c(4, 2, 4, 1))
+for(n in energy){
+        curve(sqrt(2/L)*sin(n*pi*x/L), 
+            from = 0, to = L, n = 1000, 
+            ylim = c(-2, 2),
+            main = bquote(psi[.(n)]), 
+            ylab = "", xaxt = "n",
+            xlab = "position",
+            col = "red", lwd = 2, bty = "n",
+            cex.main = 1.5)
+      axis(1, pos = 0)
+}
+```
+
+Because the particle does not have a definite position before measurement, we treat the position $X\in[0,\,L]$ of the particle as a continuous random variable whose probability density function is $f_n(x)=|\psi_n(x)|^2$.
+
+a. Compute the value of $A$ that ensures that $f_n$ is a pdf;
+b. Compute the cdf of the random variable $X$;
+c. What is the probability that the particle is located in the interval $[0.2, 0.3]$?
+d. What is the expected location of the particle?

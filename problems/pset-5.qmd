@@ -1,0 +1,75 @@
+---
+title: "Problem Set 5"
+subtitle: Due Friday October 24 at 5PM
+draft: true
+editor: 
+  mode: source
+---
+
+## Problem 0
+
+{{< include bank/_music-rec.qmd >}}
+
+## Problem 1
+
+Something conceptual
+
+## Problem 2
+
+Probability rules
+
+## Problem 3
+
+Counting
+
+## Problem 4
+
+Conditioning
+
+## Problem 5
+
+Discrete
+
+## Problem 6
+
+{{< include bank/random-variables-continuous/quantum.qmd >}}
+
+## Problem 7
+
+Continuous
+
+## Problem 8
+
+Continuous
+
+## Problem 9
+
+Continuous
+
+## Problem 10
+
+Continuous
+
+## Problem 11
+
+Continuous
+
+## Problem 12
+
+Continuous
+
+## Problem 13
+
+Continuous
+
+## Problem 14
+
+Continuous
+
+## Problem 15
+
+Continuous
+
+## Submission
+
+{{< include bank/_submission.qmd >}}
