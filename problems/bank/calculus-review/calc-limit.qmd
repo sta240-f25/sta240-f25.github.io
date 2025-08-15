@@ -1,6 +1,6 @@
 Let $f$ be any function with the following properties:
 
--   $f$ is twice continuously differentiable in a neighborhood of 0. This means that $f'$ and $f''$ exist and are continuous at and around zero;
+-   $f$ is twice continuously differentiable in a neighborhood of zero[^1];
 -   $f(0) = 0$;
 -   $f'(0) = 0$;
 -   $f''(0) = 1$.
@@ -17,3 +17,5 @@ $$
 
 A full credit solution must clearly explain how and why continuity is being used along the way.
 :::
+
+[^1]: This means that $f$ and its first two derivatives are all continuous functions at and around zero.
