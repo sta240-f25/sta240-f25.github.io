@@ -6,17 +6,38 @@ editor:
   mode: source
 ---
 
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+library(googlesheets4)
+library(tidyverse)
+gs4_deauth()
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1qQCQPoooKDXOby9Z4cMgnktUwLLnhodz8R3wR1lThxw/edit?usp=sharing") |>
+  rename(birthday = `What is your birthday?`,
+         bday_prob = `How many people need to attend a party for there to be a 50% chance that at least two share a birthday?`,
+         potato = `There is a sack of potatoes at the front of the classroom. Without touching it, guess how much it weighs in pounds.`,
+         price = `As of this morning, what is the price (USD) of this product at Harris Teeter?`,
+         age = `How old was this person (in years) when the photo was taken?`,
+         monty = `On a game show, you are presented with three doors. Behind one of the doors is the grand prize, and behind each of the other two doors is a goat. If you select the door that has the prize, you win. The game proceeds as follows:\n\n1. You select one of the doors to open;\n2. The host does not open the door you selected. Instead, he opens one of the doors you did not select to reveal a goat;\n3. The host asks you if you would like to change your selection to the remaining door (the one you did not select initially and the host did not open). \n\nWhat should you do?`)
+
+#bday_prob
+#monty
+#potato
+#price
+#age
+```
+
+
 ## Welcome to STA 240! {.large}
 
 ::::: {.columns .v-center-container}
 ::: {.column width="50%"}
 While you wait, please complete this brief questionnaire:
-
-*Update link!*
 :::
 
 ::: {.column width="50%"}
-{{< qrcode https://sta240-f25.github.io/ width=300 height=300 >}}
+{{< qrcode https://docs.google.com/forms/d/e/1FAIpQLSfjaBcAwYmq8Ynxl9CqjI9k-aXIXW9t9_t1wLg8_tS7G8gnWw/viewform?usp=dialog width=300 height=300 >}}
 :::
 :::::
 
@@ -48,7 +69,20 @@ Most people guess that you need, like, a lot.
 
 ## Your guesses
 
-LINK TO GOOGLE SHEET.
+. . .
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+ggplot(d, aes(x = bday_prob)) + 
+  geom_histogram() + 
+  labs(
+    title = "How many people must attend for a 50% chance of a birthday match?",
+    x = "Number of people"
+  ) + 
+  geom_vline(xintercept = 23, col = "red")
+```
 
 ## Example: the birthday problem {.medium}
 
@@ -70,9 +104,18 @@ LINK TO GOOGLE SHEET.
 
 ![](images/birthday_prob.png)
 
-## Any matches today?
+## Any matches today? {.scrollable}
 
+. . .
 
+```{r}
+#| echo: false
+d |>
+  mutate(birthday = format(birthday, "%m-%d")) |>
+  count(birthday, sort = TRUE) |>
+  rename(count = n) |>
+  knitr::kable()
+```
 
 ## Example: the Monty Hall problem
 
@@ -90,7 +133,19 @@ Most people start out thinking that the two doors are equally likely to contain 
 
 ## You people
 
-LINK TO GOOGLE SHEET.
+. . .
+
+```{r}
+#| echo: false
+
+d |>
+  mutate(
+    monty = ifelse(monty == "Switch to the other door that you did not initially pick", "Switch", "Stay")
+  ) |>
+  ggplot(aes(y = monty)) + 
+  geom_bar() + 
+  labs(y = "What should you do?")
+```
 
 ## Example: the wisdom of crowds {.medium}
 
@@ -120,6 +175,70 @@ The aggregation of many imperfect estimates/guesses is often better than a needl
 It took humans a long time to realize this. The first recorded uses of an "average" were during Isaac Newton's lifetime (see Stigler's *Seven Pillars of Statistical Wisdom*).
 :::
 
+## Weight guessing
+
+. . .
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot(d, aes(x = potato)) + 
+  geom_histogram() + 
+  labs(
+    title = "How much does the sack of potatoes weigh?",
+    x = "Weight (lbs)"
+  )
+```
+
+## Price guessing
+
+. . .
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot(d, aes(x = price)) + 
+  geom_histogram() + 
+  labs(
+    title = "How much does the ice cream cost?",
+    x = "Price ($)"
+  ) + 
+  geom_vline(xintercept = 5, col = "red")
+```
+
+## Age guessing
+
+. . .
+
+::::: {.columns .v-center-container}
+::: {.column width="50%"}
+Jascha Heifetz?
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-asp: 1
+
+ggplot(d, aes(x = age)) + 
+  geom_histogram() + 
+  labs(
+    title = "How old was so-and-so?",
+    x = "Age (years)"
+  ) + 
+  geom_vline(xintercept = 50, col = "red")
+```
+
+:::
+:::::
+
 ## Example: the wisdom of crowds
 
 ::: callout-warning
@@ -128,17 +247,6 @@ It took humans a long time to realize this. The first recorded uses of an "avera
 ![](images/prediction_markets.png) (source: [CNN](https://www.cnn.com/2024/11/08/business/polymarket-election-trump-nightcap/index.html))
 :::
 
-## Weight guessing results
-
-LINK TO GOOGLE SHEET.
-
-## Price guessing results
-
-LINK TO GOOGLE SHEET. Reveal actual price.
-
-## Something else guessing results
-
-LINK TO GOOGLE SHEET. Reveal actual price.
 
 ## Example: the folly of doctors {.scrollable}
 
