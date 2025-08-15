@@ -44,11 +44,11 @@ Counting
 
 ## Problem 9
 
-Random variables
+{{< include bank/random-variables-discrete/ross-rv.qmd >}}
 
 ## Problem 10
 
-{{< include bank/random-variables-discrete/ross-rv.qmd >}}
+{{< include bank/random-variables-discrete/random-exam.qmd >}}
 
 ## Submission
 
