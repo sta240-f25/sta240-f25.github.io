@@ -39,8 +39,9 @@ for(n in energy){
 Because the particle does not have a definite position before measurement, we treat the position $X\in[0,\,L]$ of the particle as a continuous random variable whose probability density function is $f_n(x)=|\psi_n(x)|^2$.
 
 a. Compute the value of $A$ that ensures that $f_n$ is a pdf;
-b. Compute the cdf of the random variable $X$;
-c. What is the probability that the particle is located in the interval $[0.2, 0.3]$?
-d. What is the expected location of the particle?
+a. Compute the cdf of the random variable $X$;
+a. What is the probability that the particle is located in the interval $[0.2, 0.3]$?
+a. What is the probability that the particle is located at the midpoint of the interval?
+a. What is the expected location of the particle?
 
 [^1]: If you’re like me, you cannot do this. Oh well.
