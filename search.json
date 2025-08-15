@@ -928,7 +928,14 @@
     "href": "problems/bank/calculus-review/calc-limit.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0. This means that \\(f'\\) and \\(f''\\) exist and are continuous at and around zero;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\nA full credit solution must clearly explain how and why continuity is being used along the way."
+    "text": "Let \\(f\\) be any function with the following properties:\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]"
+  },
+  {
+    "objectID": "problems/bank/calculus-review/calc-limit.html#footnotes",
+    "href": "problems/bank/calculus-review/calc-limit.html#footnotes",
+    "title": "STA 240 Fall 2025",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis means that \\(f\\) and its first two derivatives are all continuous functions at and around zero.↩︎"
   },
   {
     "objectID": "problems/bank/calculus-review/calc-series.html",
@@ -998,7 +1005,14 @@
     "href": "problems/bank/random-variables-continuous/quantum.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Imagine a single particle at the (sub)atomic level. A particle’s quantum state contains information about various properties — such as its position, momentum, spin, and energy — which can be revealed by measurement. One of the main ideas of quantum mechanics is that measurement outcomes are fundamentally probabilistic. Prior to measurement, a particle does not have a definite position or momentum in general; it only has probabilities associated with the possible outcomes. This information is summarized by something called the wave function, and the squared magnitude of the wave function is a probability density function describing, for example, the distribution of the particle’s position. Let’s explore this in a simple example.\nConsider a single one-dimensional particle located somewhere in the interval \\([0,\\,L]\\). The wave function associated with the particle’s quantum state is\n\\[\n\\psi_n(x)\n=\n\\begin{cases}\nA\\cdot\\sin\\left(\\frac{n\\pi}{L}x\\right) & 0\\leq x\\leq L\\\\\n0 & \\text{else},\n\\end{cases}\n\\]\nwhere \\(A\\) is the amplitude, and \\(n=1,\\,2,\\,3,\\,...\\) indexes the particle’s energy level:\n\n\n\n\n\n\n\n\n\nBecause the particle does not have a definite position before measurement, we treat the position \\(X\\in[0,\\,L]\\) of the particle as a continuous random variable whose probability density function is \\(f_n(x)=|\\psi_n(x)|^2\\).\n\nCompute the value of \\(A\\) that ensures that \\(f_n\\) is a pdf;\nCompute the cdf of the random variable \\(X\\);\nWhat is the probability that the particle is located in the interval \\([0.2, 0.3]\\)?\nWhat is the expected location of the particle?"
+    "text": "Imagine a single particle at the (sub)atomic level1. A particle’s quantum state encodes information about all of its measurable properties, such as position, momentum, spin, and energy. In quantum mechanics, measuring these properties is fundamentally probabilistic. Before measurement, the particle doesn’t have a single, definite position or momentum; it has only probabilities for the possible outcomes. The quantum state of a particle is fully characterized by its wave function, and the squared magnitude of the wave function is a probability density that describes the distribution of the particle’s position, or momentum, or whatever else you wish to study. Let’s explore this in a very simple example.\nConsider a single, one-dimensional particle located somewhere in the interval \\([0,\\,L]\\). The wave function associated with the particle’s quantum state is\n\\[\n\\psi_n(x)\n=\n\\begin{cases}\nA\\cdot\\sin\\left(\\frac{n\\pi}{L}x\\right) & 0\\leq x\\leq L\\\\\n0 & \\text{else},\n\\end{cases}\n\\]\nwhere \\(A\\) is the amplitude, and \\(n=1,\\,2,\\,3,\\,...\\) indexes the particle’s energy level. The higher the energy level, the more “excited” the particle is. Behold:\nBecause the particle does not have a definite position before measurement, we treat the position \\(X\\in[0,\\,L]\\) of the particle as a continuous random variable whose probability density function is \\(f_n(x)=|\\psi_n(x)|^2\\)."
+  },
+  {
+    "objectID": "problems/bank/random-variables-continuous/quantum.html#footnotes",
+    "href": "problems/bank/random-variables-continuous/quantum.html#footnotes",
+    "title": "STA 240 Fall 2025",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIf you’re like me, you cannot do this. Oh well.↩︎"
   },
   {
     "objectID": "problems/pset-0.html",
@@ -1082,7 +1096,7 @@
     "href": "problems/pset-0.html#problem-6",
     "title": "Problem Set 0",
     "section": "Problem 6",
-    "text": "Problem 6\nLet \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0. This means that \\(f'\\) and \\(f''\\) exist and are continuous at and around zero;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\nA full credit solution must clearly explain how and why continuity is being used along the way.",
+    "text": "Problem 6\nLet \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of zero1;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\nA full credit solution must clearly explain how and why continuity is being used along the way.",
     "crumbs": [
       "Problem Sets",
       "Problem Set 0"
@@ -1105,6 +1119,17 @@
     "title": "Problem Set 0",
     "section": "Submission",
     "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 0"
+    ]
+  },
+  {
+    "objectID": "problems/pset-0.html#footnotes",
+    "href": "problems/pset-0.html#footnotes",
+    "title": "Problem Set 0",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis means that \\(f\\) and its first two derivatives are all continuous functions at and around zero.↩︎",
     "crumbs": [
       "Problem Sets",
       "Problem Set 0"
