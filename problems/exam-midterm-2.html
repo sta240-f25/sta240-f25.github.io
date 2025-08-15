@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Problem Set 3 – STA 240 Fall 2025</title>
+<title>Midterm 2 Study Guide – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,42 +67,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <meta name="quarto:status" content="draft">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="Problem Set 3 – STA 240 Fall 2025">
-<meta property="og:description" content="Due Friday September 26 at 5PM">
-<meta property="og:image" content="https://sta240-f25.github.io/problems/images/dart-board.png">
+<meta property="og:title" content="Midterm 2 Study Guide – STA 240 Fall 2025">
+<meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
 <meta property="og:site_name" content="STA 240 Fall 2025">
-<meta property="og:image:height" content="471">
-<meta property="og:image:width" content="479">
 </head>
 
 <body class="nav-sidebar docked">
@@ -114,7 +82,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Problem Set 3</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Midterm 2 Study Guide</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -328,33 +296,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#problem-0" id="toc-problem-0" class="nav-link active" data-scroll-target="#problem-0">Problem 0</a></li>
-  <li><a href="#problem-1" id="toc-problem-1" class="nav-link" data-scroll-target="#problem-1">Problem 1</a></li>
-  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
-  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
-  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a></li>
-  <li><a href="#problem-5" id="toc-problem-5" class="nav-link" data-scroll-target="#problem-5">Problem 5</a></li>
-  <li><a href="#problem-6" id="toc-problem-6" class="nav-link" data-scroll-target="#problem-6">Problem 6</a></li>
-  <li><a href="#problem-7" id="toc-problem-7" class="nav-link" data-scroll-target="#problem-7">Problem 7</a></li>
-  <li><a href="#problem-8" id="toc-problem-8" class="nav-link" data-scroll-target="#problem-8">Problem 8</a></li>
-  <li><a href="#problem-9" id="toc-problem-9" class="nav-link" data-scroll-target="#problem-9">Problem 9</a></li>
-  <li><a href="#problem-10" id="toc-problem-10" class="nav-link" data-scroll-target="#problem-10">Problem 10</a></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Problem Set 3</h1>
-<p class="subtitle lead">Due Friday September 26 at 5PM</p>
+<h1 class="title">Midterm 2 Study Guide</h1>
 </div>
 
 
@@ -371,193 +321,35 @@ window.Quarto = {
 </header>
 
 
-<section id="problem-0" class="level2">
-<h2 class="anchored" data-anchor-id="problem-0">Problem 0</h2>
-<p>Recommend some music for us to listen to while we grade this.</p>
-</section>
-<section id="problem-1" class="level2">
-<h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
-<p>Something conceptual</p>
-</section>
-<section id="problem-2" class="level2">
-<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
-<p>Counting</p>
-</section>
-<section id="problem-3" class="level2">
-<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
-<p>Counting</p>
-</section>
-<section id="problem-4" class="level2">
-<h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
-<p>Let <span class="math inline">\(S\)</span> be a sample space with probability measure <span class="math inline">\(P\)</span>, and let <span class="math inline">\(B\subseteq S\)</span> be some event with <span class="math inline">\(P(B)&gt;0\)</span>. Show that the function <span class="math inline">\(G(A)=P(A\,|\, B)\)</span> is a <em>new</em> probability measure on <span class="math inline">\(S\)</span>. That is, show that <span class="math inline">\(G\)</span> satisfies the axioms:</p>
-<ol type="a">
-<li>total measure 1;</li>
-<li>nonnegativity;</li>
-<li>countable additivity.</li>
+<p>Midterm Exam 2 will take place on <strong>Thursday November 13</strong> during your lab section. There will be XX problems, and they will break down as follows:</p>
+<ol start="0" type="1">
+<li>(an undisclosed check on your visual intuition)</li>
+<li>Continuous random variables</li>
+<li>The moment-generating function</li>
+<li>Transformations</li>
+<li>Joint distributions</li>
 </ol>
-</section>
-<section id="problem-5" class="level2">
-<h2 class="anchored" data-anchor-id="problem-5">Problem 5</h2>
-<div id="fig-dart" class="quarto-float quarto-figure quarto-figure-center anchored" width="40%" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-dart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/dart-board.png" id="fig-dart" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:40.0%">
+<p>Below are practice problems for each of these areas, as well as guidance about what course materials to refer to if you want more review on a particular topic.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-dart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption>
-</figure>
+<div class="callout-title-container flex-fill">
+Give your cheat sheet some TLC!
 </div>
-<p>Jerry Lewis is throwing darts at the board pictured in <a href="#fig-dart" class="quarto-xref">Figure&nbsp;1</a>. It has the following properties:</p>
+</div>
+<div class="callout-body-container callout-body">
+<p>You are allowed two resources on the exam:</p>
 <ul>
-<li>The board has radius <span class="math inline">\(r\)</span>;</li>
-<li>The board is partitioned into five rings, each with the same “thickness” <span class="math inline">\(r/5\)</span>;</li>
-<li>The board is mounted on a wall of area <span class="math inline">\(A\)</span>.</li>
+<li>a “dumb” calculator (no wi-fi). You will not need it, but if you want it as a security blanket, be my guest;</li>
+<li>both sides of one 8.5” x 11” sheet of notes, prepared by you and you alone. You can create it however you wish: handwritten, on a computer, etc.</li>
 </ul>
-<p>Jerry is not very skilled. His dart is guaranteed to reach the wall, but beyond that, the probability that it lands in any given region is just proportional to that region’s area.</p>
-<p><strong>Task</strong>: Derive a general formula for the <em>conditional</em> probability that a dart lands in ring <span class="math inline">\(i\)</span> given that it hits the board and not the wall. Your formula should be a function of <span class="math inline">\(i=1,\,2,\,3,\,4,\,5\)</span>. Check that these probabilities are nonnegative and sum to one. Verify that these probabilities sum to one.</p>
-</section>
-<section id="problem-6" class="level2">
-<h2 class="anchored" data-anchor-id="problem-6">Problem 6</h2>
-<p>We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status <span class="math inline">\(D\)</span> and their test result <span class="math inline">\(T\)</span>. In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms <span class="math inline">\(S\)</span>.</p>
-<p><a href="#tbl-disease" class="quarto-xref">Table&nbsp;1</a> enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients’ “true” disease status was determined by a PCR test that we assume is hella accurate.</p>
-<div class="center-table">
-<div id="tbl-disease" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[25, 25, 25, 25]">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-disease-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Some COVID-19 numbers. Source: <a href="https://www.cdc.gov/mmwr/volumes/69/wr/mm695152a3.htm">CDC</a>
-</figcaption>
-<div aria-describedby="tbl-disease-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="math inline">\(D\)</span></th>
-<th><span class="math inline">\(S\)</span></th>
-<th><span class="math inline">\(T\)</span></th>
-<th><span class="math inline">\(P(D\cap S\cap T)\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>0.7650</td>
-</tr>
-<tr class="even">
-<td>-</td>
-<td>-</td>
-<td>+</td>
-<td>0.0128</td>
-</tr>
-<tr class="odd">
-<td>-</td>
-<td>+</td>
-<td>-</td>
-<td>0.1685</td>
-</tr>
-<tr class="even">
-<td>-</td>
-<td>+</td>
-<td>+</td>
-<td>0.0018</td>
-</tr>
-<tr class="odd">
-<td>+</td>
-<td>-</td>
-<td>-</td>
-<td>0.0091</td>
-</tr>
-<tr class="even">
-<td>+</td>
-<td>-</td>
-<td>+</td>
-<td>0.0064</td>
-</tr>
-<tr class="odd">
-<td>+</td>
-<td>+</td>
-<td>-</td>
-<td>0.0073</td>
-</tr>
-<tr class="even">
-<td>+</td>
-<td>+</td>
-<td>+</td>
-<td>0.0291</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
+<p>Do not skimp on the cheat sheet! Students in past semesters have neglected their cheat sheets to their detriment. Get an early start, and give it some elbow grease.</p>
 </div>
 </div>
-<ol type="a">
-<li><p>What is the overall disease prevalence?</p></li>
-<li><p>What is the sensitivity of the test?</p></li>
-<li><p>What is the specificity of the test?</p></li>
-<li><p>Imagine you develop symptoms. So you visit <a href="https://youtu.be/Bg36PU96U0w?si=3rmlqIYRpsXbAH1L">Dr.&nbsp;Vinnie Boombatz</a> to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?</p></li>
-<li><p>What is the overall probability that the test is wrong?</p></li>
-</ol>
-</section>
-<section id="problem-7" class="level2">
-<h2 class="anchored" data-anchor-id="problem-7">Problem 7</h2>
-<p>An encryption algorithm generates a seed value <span class="math inline">\(z\)</span> in the following way:</p>
-<ul>
-<li><p>A binary operator is chosen at random from <span class="math inline">\(\{+,\,\cdot\}\)</span>;</p></li>
-<li><p>Two <em>distinct</em> numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are chosen at random from the set <span class="math inline">\(\{1,\,2,\,...,\,9\}\)</span> and the binary operation chosen above acts on <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> to produce <span class="math inline">\(z\)</span>.</p></li>
-</ul>
-<ol type="a">
-<li>What is the probability that <span class="math inline">\(z\)</span> is an even number?</li>
-<li>You notice that the algorithm generates an even <span class="math inline">\(z\)</span> value. Given this, what is the probability that the <span class="math inline">\(+\)</span> operator was used to generate it?</li>
-</ol>
-</section>
-<section id="problem-8" class="level2">
-<h2 class="anchored" data-anchor-id="problem-8">Problem 8</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/circuit.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
-</div>
-<p>The figure above displays a circuit. Switch <span class="math inline">\(S_i\)</span> closes with probability <span class="math inline">\(p_i\)</span>, and the switches close independently of one another. What is the probability that electricity can flow from <span class="math inline">\(A\)</span> to <span class="math inline">\(G\)</span>?</p>
-</section>
-<section id="problem-9" class="level2">
-<h2 class="anchored" data-anchor-id="problem-9">Problem 9</h2>
-<p>Two balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let <span class="math inline">\(X\)</span> denote our winnings.</p>
-<ol type="a">
-<li><p>Make a table with the possible values of <span class="math inline">\(X\)</span> and the probabilities of each value.</p></li>
-<li><p>Sketch the pmf of <span class="math inline">\(X\)</span>.</p></li>
-<li><p>Sketch the cdf of <span class="math inline">\(X\)</span>.</p></li>
-<li><p>Compute the expected value of <span class="math inline">\(X\)</span>.</p></li>
-</ol>
-</section>
-<section id="problem-10" class="level2">
-<h2 class="anchored" data-anchor-id="problem-10">Problem 10</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/morpheus.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
-</div>
-<p>Alas. You settle in for what you think will be a good night’s beauty sleep, and you end up having one of those awful dreams where you must take a test you haven’t studied for. It’s a multiple choice test, each question has five options with only one correct answer, there are fifty questions in total, and each is worth one point. The god Morpheus has kindly seen fit to leave a fair, five-sided die in your dream pocket, and so your dream self decides to do the only thing you can do: use the die to answer each of the exam questions completely at random.</p>
-<ol type="a">
-<li>Let <span class="math inline">\(X\)</span> be the number of questions you answer correctly. What is the distribution of <span class="math inline">\(X\)</span>?</li>
-<li>Plot the probability mass function of <span class="math inline">\(X\)</span>;</li>
-<li>What is the expected number of questions you will answer correctly?</li>
-<li>What is the probability that you get at least a C- on the exam?</li>
-</ol>
-</section>
-<section id="submission" class="level2">
-<h2 class="anchored" data-anchor-id="submission">Submission</h2>
-<p>You are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

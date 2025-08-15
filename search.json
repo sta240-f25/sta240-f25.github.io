@@ -784,6 +784,13 @@
     "text": "Take \\(\\mathbb{R}\\) to be your reference set, and consider these subsets:\n\\[\n\\begin{align*}\nA&=[1,\\,5]\\\\\nB&=\\{x\\in\\mathbb{R}\\,:\\,|x|&gt;2\\}\\\\\nC&=(-\\infty,\\,0]\\\\\nI_n&=\\left[0,\\,\\frac{1}{n}\\right]\n\\end{align*}\n\\]\nExpress each of the following in as simplified and concise a form as possible:\n\n\\(A^c\\)\n\\(A \\cup B\\)\n\\(A\\cap C\\)\n\\(A\\cap C^c\\)\n\\(B \\cap C^c\\)\n\\(A^c \\cap B^c \\cap C^c\\)\n\\((A \\cup B) \\cap C\\)\n\\(\\bigcap_{n=1}^\\infty I_n\\)\n\\(\\bigcup_{n=1}^\\infty I_n\\)"
   },
   {
+    "objectID": "problems/bank/random-variables-discrete/random-exam.html",
+    "href": "problems/bank/random-variables-discrete/random-exam.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Alas. You settle in for what you think will be a good night’s beauty sleep, and you end up having one of those awful dreams where you must take a test you haven’t studied for. It’s a multiple choice test, each question has five options with only one correct answer, there are fifty questions in total, and each is worth one point. The god Morpheus has kindly seen fit to leave a fair, five-sided die in your dream pocket, and so your dream self decides to do the only thing you can do: use the die to answer each of the exam questions completely at random.\n\nLet \\(X\\) be the number of questions you answer correctly. What is the distribution of \\(X\\)?\nPlot the probability mass function of \\(X\\);\nWhat is the expected number of questions you will answer correctly?\nWhat is the probability that you get at least a C- on the exam?"
+  },
+  {
     "objectID": "problems/bank/random-variables-discrete/bdj-rv.html",
     "href": "problems/bank/random-variables-discrete/bdj-rv.html",
     "title": "STA 240 Fall 2025",
@@ -921,7 +928,7 @@
     "href": "problems/bank/calculus-review/calc-limit.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\n“[T]wice continuously differentiable” means that \\(f\\), \\(f'\\), and \\(f''\\) are all continuous functions at and around zero. A full credit solution must clearly explain how and why continuity is being used along the way."
+    "text": "Let \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0. This means that \\(f'\\) and \\(f''\\) exist and are continuous at and around zero;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\nA full credit solution must clearly explain how and why continuity is being used along the way."
   },
   {
     "objectID": "problems/bank/calculus-review/calc-series.html",
@@ -952,6 +959,13 @@
     "text": "Not all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.\nImagine an election where Angela Lansbury receives \\(a\\) votes, Bernadette Peters receives \\(b\\) votes, and Angela provisionally wins with a margin of victory \\(a-b&gt;0\\). However, of the total \\(a+b\\) votes, we learn that \\(k&gt;a-b\\) were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the \\(k\\) invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.\nTo model this, think of the original \\(a+b\\) ballots as balls in the proverbial urn. \\(a\\) of these balls are red, and \\(b\\) of these balls are blue, and assume that \\(a,\\, b&gt;k\\). Removing the \\(k\\) invalid ballots is like drawing \\(k\\) balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the \\(a+b\\) original ballots is equally likely to have been invalid. Next, imagine we randomly remove \\(k\\) balls from the urn, and let \\(X\\) be a random variable that counts the number of the removed/invalid ballots that belong to Angela. In other words, the number of red balls removed. If \\(X\\) is large enough, it will swing the election in Bernadette’s favor.\n\nWhat are the range and the pmf of the random variable \\(X\\)?\nFor what values of \\(X\\) does removing \\(k\\) ballots reverse the outcome of the election?\nBased on your answers to the previous parts, what is the probability that the election result is reversed when the \\(k\\) bad ballots are removed? Give a general formula for this probability, and then compute the probability for each of the real elections listed in Table 1;\nThe random variable \\(X\\) that you derived in the first part can be approximated by \\(\\text{Binom}(k,\\,1/2)\\). Explain why this approximation might be “good enough,” and verify that it’s not too bad by computing the approximate probability of reversal for the elections in Table 1. Compare the approximate probabilities to the actual ones from the previous part;\nLet’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a figure in R with the following features:\n\nthe margin of victory \\(a-b\\) on the horizontal axis;\nthe number of bad ballots \\(k\\) on the vertical axis;\nscatterplot where each point represents an election in Table 1, with the points colored according to the decision that was made in the case;\ndivide the plane into two regions, one where the approximate probability of reversal is less than 0.05 and one where it is greater.\n\nWrite a few pithy paragraphs commenting on the following:\n\nthe assumptions of our lil’ model. Do you think they are innocuous? What might you change, and how?\nthe match or lack thereof between our model and the decisions that were actually made in the real cases;\nHow do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?\n\n\n\n\n\nTable 1: Close elections\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nelection\nyear\nwin\nloss\ntotal\nmargin\ninvalid\ndecision\n\n\n\n\nIppolito v. Power\n1968\n1,422\n1,405\n2,827\n17\n101\nvoid\n\n\nSantucci v. Power\n1969\n58,076\n57,981\n116,057\n95\n448\nvoid\n\n\nDeMartini v. Power\n1970\n2,656\n2,594\n5,250\n62\n136\nupheld\n\n\nMaine House\n1976\n1,193\n1,060\n2,253\n133\n208\nvoid\n\n\nAnn Arbor mayor\n1977\n10,660\n10,659\n21,319\n1\n20\nvoid\n\n\nBrunswick ME town council\n1980\n2,390\n2,383\n4,773\n7\n16\nupheld\n\n\nWashington governor\n2004\n1,373,357\n1,373,228\n2,746,585\n129\n1,439\nupheld"
   },
   {
+    "objectID": "problems/bank/random-variables-discrete/memoryless-geometric.html",
+    "href": "problems/bank/random-variables-discrete/memoryless-geometric.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Let \\(D \\sim \\text{Geometric}(p)\\), and fix positive integers \\(n\\) and \\(k\\). What is \\(P(D = n + k \\,|\\, D &gt; k)\\)? Does this look familiar?"
+  },
+  {
     "objectID": "problems/bank/set-theory/picture-proofs.html",
     "href": "problems/bank/set-theory/picture-proofs.html",
     "title": "STA 240 Fall 2025",
@@ -978,6 +992,13 @@
     "title": "STA 240 Fall 2025",
     "section": "",
     "text": "Let \\(A\\) and \\(B\\) be independent events. Prove that \\(A^c\\) and \\(B^c\\) are independent events."
+  },
+  {
+    "objectID": "problems/bank/random-variables-continuous/quantum.html",
+    "href": "problems/bank/random-variables-continuous/quantum.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Imagine a single particle at the (sub)atomic level. A particle’s quantum state contains information about various properties — such as its position, momentum, spin, and energy — which can be revealed by measurement. One of the main ideas of quantum mechanics is that measurement outcomes are fundamentally probabilistic. Prior to measurement, a particle does not have a definite position or momentum in general; it only has probabilities associated with the possible outcomes. This information is summarized by something called the wave function, and the squared magnitude of the wave function is a probability density function describing, for example, the distribution of the particle’s position. Let’s explore this in a simple example.\nConsider a single one-dimensional particle located somewhere in the interval \\([0,\\,L]\\). The wave function associated with the particle’s quantum state is\n\\[\n\\psi_n(x)\n=\n\\begin{cases}\nA\\cdot\\sin\\left(\\frac{n\\pi}{L}x\\right) & 0\\leq x\\leq L\\\\\n0 & \\text{else},\n\\end{cases}\n\\]\nwhere \\(A\\) is the amplitude, and \\(n=1,\\,2,\\,3,\\,...\\) indexes the particle’s energy level:\n\n\n\n\n\n\n\n\n\nBecause the particle does not have a definite position before measurement, we treat the position \\(X\\in[0,\\,L]\\) of the particle as a continuous random variable whose probability density function is \\(f_n(x)=|\\psi_n(x)|^2\\).\n\nCompute the value of \\(A\\) that ensures that \\(f_n\\) is a pdf;\nCompute the cdf of the random variable \\(X\\);\nWhat is the probability that the particle is located in the interval \\([0.2, 0.3]\\)?\nWhat is the expected location of the particle?"
   },
   {
     "objectID": "problems/pset-0.html",
@@ -1294,11 +1315,18 @@
     "text": "Example: the folly of doctors\n\nA 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the true positive rate of the test is 90%, and if the false positive rate is 9%, what is the chance that the woman actually has cancer, given that she tested positive?\n\n\nYou will know how to answer this by October. Doctors though…\n\n\n\n\n\n\n\n\nBBC News 2014\n\n\nOnly 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.\n\nWe can only imagine how much anxiety those innumerate doctors instil in women."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#sally-clark-and-roy-meadow",
-    "href": "slides/slides_2025_08_25.html#sally-clark-and-roy-meadow",
+    "objectID": "slides/slides_2025_08_25.html#sally-clark",
+    "href": "slides/slides_2025_08_25.html#sally-clark",
     "title": "Welcome to STA 240!",
-    "section": "Sally Clark and Roy Meadow",
-    "text": "Sally Clark and Roy Meadow"
+    "section": "Sally Clark",
+    "text": "Sally Clark\n\n\n\n\n\nClark was convicted of murder after her two children suddenly died in infancy;\nPediatrician Meadow testified that there was a 1 in 73 million chance the two deaths were due to SIDS (Sudden Infant Death Syndrome);\nHis reasoning was farkakte from beginning to end;\nShe got out on appeal and drank herself to death;"
+  },
+  {
+    "objectID": "slides/slides_2025_08_25.html#sir-roy-meadow",
+    "href": "slides/slides_2025_08_25.html#sir-roy-meadow",
+    "title": "Welcome to STA 240!",
+    "section": "Sir Roy Meadow",
+    "text": "Sir Roy Meadow"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#reason-1-its-necessary.-1",
@@ -1329,18 +1357,18 @@
     "text": "Example: the mathematics of insurance (upgrade!)\nWhen an insurance company sells you a policy, they are making a bet that you won’t need it – that you’ll pay them but they won’t ultimately pay you. They make thousands of such bets, and if everyone makes a claim, the company is ruined. How do they navigate this uncertainty?\n\n\n\n\n\n\n\nActuarial mathematics!\n\n\nEvery insurance company employs armies of actuaries, certified professionals with a deep understanding of probability and statistics, to help them make decisions about profit, loss, and risk of ruin.\n\n\n\nPlay the Keyes monologue?"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#contested-elections",
-    "href": "slides/slides_2025_08_25.html#contested-elections",
+    "objectID": "slides/slides_2025_08_25.html#example-genetics",
+    "href": "slides/slides_2025_08_25.html#example-genetics",
     "title": "Welcome to STA 240!",
-    "section": "Contested elections?",
-    "text": "Contested elections?"
+    "section": "Example: genetics?",
+    "text": "Example: genetics?"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-quantum-mechanics",
     "href": "slides/slides_2025_08_25.html#example-quantum-mechanics",
     "title": "Welcome to STA 240!",
     "section": "Example: quantum mechanics",
-    "text": "Example: quantum mechanics"
+    "text": "Example: quantum mechanics\nkey words: Schrödinger’s cat, uncertainty principle, etc\n\n\n\n\n\n\nParticles at the (sub)atomic level do not have a definite position and momentum until measured;\nThere are only probabilities associated with the possible states;\nProbability is fundamentally baked into the fabric of reality;\nThese ideas are hard, but some of the math will be accessible to us."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#reason-2-its-useful",
