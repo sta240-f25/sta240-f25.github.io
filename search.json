@@ -1082,7 +1082,7 @@
     "href": "problems/pset-0.html#problem-6",
     "title": "Problem Set 0",
     "section": "Problem 6",
-    "text": "Problem 6\nLet \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\n“[T]wice continuously differentiable” means that \\(f\\), \\(f'\\), and \\(f''\\) are all continuous functions at and around zero. A full credit solution must clearly explain how and why continuity is being used along the way.",
+    "text": "Problem 6\nLet \\(f\\) be any function with the following properties:\n\n\\(f\\) is twice continuously differentiable in a neighborhood of 0. This means that \\(f'\\) and \\(f''\\) exist and are continuous at and around zero;\n\\(f(0) = 0\\);\n\\(f'(0) = 0\\);\n\\(f''(0) = 1\\).\n\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]\n\n\n\n\n\n\nContinuity?\n\n\n\nA full credit solution must clearly explain how and why continuity is being used along the way.",
     "crumbs": [
       "Problem Sets",
       "Problem Set 0"
@@ -1214,7 +1214,7 @@
     "href": "slides/slides_2025_08_25.html#welcome-to-sta-240",
     "title": "Welcome to STA 240!",
     "section": "Welcome to STA 240!",
-    "text": "Welcome to STA 240!\n\n\nWhile you wait, please complete this brief questionnaire:\nUpdate link!"
+    "text": "Welcome to STA 240!\n\n\nWhile you wait, please complete this brief questionnaire:"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#teaching-team",
@@ -1235,7 +1235,7 @@
     "href": "slides/slides_2025_08_25.html#your-guesses",
     "title": "Welcome to STA 240!",
     "section": "Your guesses",
-    "text": "Your guesses\nLINK TO GOOGLE SHEET."
+    "text": "Your guesses"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-the-birthday-problem-1",
@@ -1256,7 +1256,7 @@
     "href": "slides/slides_2025_08_25.html#any-matches-today",
     "title": "Welcome to STA 240!",
     "section": "Any matches today?",
-    "text": "Any matches today?"
+    "text": "Any matches today?\n\n\n\n\n\n\nbirthday\ncount\n\n\n\n\n08-05\n1\n\n\n08-12\n1"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-the-monty-hall-problem",
@@ -1270,7 +1270,7 @@
     "href": "slides/slides_2025_08_25.html#you-people",
     "title": "Welcome to STA 240!",
     "section": "You people",
-    "text": "You people\nLINK TO GOOGLE SHEET."
+    "text": "You people"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds",
@@ -1280,32 +1280,32 @@
     "text": "Example: the wisdom of crowds\n\n\n\n\nAt a 1906 country fair in Plymouth, 800 people participated in a contest to estimate the weight of an ox. Francis Galton observed that the median guess, 1207 lbs, was accurate within 1% of the true weight of 1198 lbs.\n\n\n\n\n\n\n\n\nLesson\n\n\nThe aggregation of many imperfect estimates/guesses is often better than a needle-in-haystack search for the “best” individual guess.\n\n\n\n\n\n\n\n\n\n\n\nIsn’t that obvious?\n\n\nIt took humans a long time to realize this. The first recorded uses of an “average” were during Isaac Newton’s lifetime (see Stigler’s Seven Pillars of Statistical Wisdom)."
   },
   {
+    "objectID": "slides/slides_2025_08_25.html#weight-guessing",
+    "href": "slides/slides_2025_08_25.html#weight-guessing",
+    "title": "Welcome to STA 240!",
+    "section": "Weight guessing",
+    "text": "Weight guessing"
+  },
+  {
+    "objectID": "slides/slides_2025_08_25.html#price-guessing",
+    "href": "slides/slides_2025_08_25.html#price-guessing",
+    "title": "Welcome to STA 240!",
+    "section": "Price guessing",
+    "text": "Price guessing"
+  },
+  {
+    "objectID": "slides/slides_2025_08_25.html#age-guessing",
+    "href": "slides/slides_2025_08_25.html#age-guessing",
+    "title": "Welcome to STA 240!",
+    "section": "Age guessing",
+    "text": "Age guessing\n\n\n\nJascha Heifetz?"
+  },
+  {
     "objectID": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds-1",
     "href": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds-1",
     "title": "Welcome to STA 240!",
     "section": "Example: the wisdom of crowds",
     "text": "Example: the wisdom of crowds\n\n\n\n\n\n\nWe frequently forget and relearn this lesson.\n\n\n (source: CNN)"
-  },
-  {
-    "objectID": "slides/slides_2025_08_25.html#weight-guessing-results",
-    "href": "slides/slides_2025_08_25.html#weight-guessing-results",
-    "title": "Welcome to STA 240!",
-    "section": "Weight guessing results",
-    "text": "Weight guessing results\nLINK TO GOOGLE SHEET."
-  },
-  {
-    "objectID": "slides/slides_2025_08_25.html#price-guessing-results",
-    "href": "slides/slides_2025_08_25.html#price-guessing-results",
-    "title": "Welcome to STA 240!",
-    "section": "Price guessing results",
-    "text": "Price guessing results\nLINK TO GOOGLE SHEET. Reveal actual price."
-  },
-  {
-    "objectID": "slides/slides_2025_08_25.html#something-else-guessing-results",
-    "href": "slides/slides_2025_08_25.html#something-else-guessing-results",
-    "title": "Welcome to STA 240!",
-    "section": "Something else guessing results",
-    "text": "Something else guessing results\nLINK TO GOOGLE SHEET. Reveal actual price."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-the-folly-of-doctors",
