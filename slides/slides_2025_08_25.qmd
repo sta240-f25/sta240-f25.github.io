@@ -393,9 +393,9 @@ Play the Keyes monologue?
 
 ::: {.column width="60%"}
 ::: incremental 
-- Particles at the (sub)atomic level do not have a definite position and momentum until measured;
-- There are only probabilities associated with the possible states;
 - Probability is fundamentally baked into the fabric of reality;
+- Particles at the (sub)atomic level do not have a definite position and momentum until measured;
+- There are only probabilities associated with the possible outcomes;
 - These ideas are hard, but some of the math will be accessible to us.
 :::
 :::
@@ -456,10 +456,6 @@ No area of science or technology can be properly understood without knowing some
 ## This is a theorem we will prove:
 
 ![](images/galton.gif){fig-align="center"}
-
-## We're building a cathedral! {.scrollable}
-
-From the simplest building blocks, we will erect an impressive edifice of thought.
 
 
 ## Reason 3: It's beautiful {.large-ish}
