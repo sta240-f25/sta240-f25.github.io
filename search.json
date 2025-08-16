@@ -1281,7 +1281,7 @@
     "href": "slides/slides_2025_08_25.html#any-matches-today",
     "title": "Welcome to STA 240!",
     "section": "Any matches today?",
-    "text": "Any matches today?\n\n\n\n\n\n\nbirthday\ncount\n\n\n\n\n08-05\n1\n\n\n08-12\n1"
+    "text": "Any matches today?\n\n\n\n\n\n\nbirthday\ncount\n\n\n\n\n09-18\n1"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-the-monty-hall-problem",
@@ -1323,7 +1323,7 @@
     "href": "slides/slides_2025_08_25.html#age-guessing",
     "title": "Welcome to STA 240!",
     "section": "Age guessing",
-    "text": "Age guessing\n\n\n\nJascha Heifetz?"
+    "text": "Age guessing\n\n\n\nJascha Heifetz? Bette Midler? Bea Arthur?"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds-1",
@@ -1337,21 +1337,28 @@
     "href": "slides/slides_2025_08_25.html#example-the-folly-of-doctors",
     "title": "Welcome to STA 240!",
     "section": "Example: the folly of doctors",
-    "text": "Example: the folly of doctors\n\nA 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the true positive rate of the test is 90%, and if the false positive rate is 9%, what is the chance that the woman actually has cancer, given that she tested positive?\n\n\nYou will know how to answer this by October. Doctors though…\n\n\n\n\n\n\n\n\nBBC News 2014\n\n\nOnly 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.\n\nWe can only imagine how much anxiety those innumerate doctors instil in women."
+    "text": "Example: the folly of doctors\n\nA 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the true positive rate of the test is 90%, and if the false positive rate is 9%, what is the chance that the woman actually has cancer, given that she tested positive?\n\n\nYou will know how to answer this in four weeks. Doctors though…\n\n\n\n\n\n\n\n\nBBC News 2014\n\n\nOnly 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.\n“We can only imagine how much anxiety those innumerate doctors instil in women.”"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#sally-clark",
-    "href": "slides/slides_2025_08_25.html#sally-clark",
+    "objectID": "slides/slides_2025_08_25.html#sally-clark-1964---2007",
+    "href": "slides/slides_2025_08_25.html#sally-clark-1964---2007",
     "title": "Welcome to STA 240!",
-    "section": "Sally Clark",
-    "text": "Sally Clark\n\n\n\n\n\nClark was convicted of murder after her two children suddenly died in infancy;\nPediatrician Meadow testified that there was a 1 in 73 million chance the two deaths were due to SIDS (Sudden Infant Death Syndrome);\nHis reasoning was farkakte from beginning to end;\nShe got out on appeal and drank herself to death;"
+    "section": "Sally Clark (1964 - 2007)",
+    "text": "Sally Clark (1964 - 2007)\n\n\n\n\n\n\nEnglish solicitor;\n1996: first son died in bed at 11 weeks;\n1998: second son died in bed at 8 weeks;\nClark arrested on suspicion of murder;\nDefense claimed it was SIDS (sudden infant death syndrome)."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#sir-roy-meadow",
-    "href": "slides/slides_2025_08_25.html#sir-roy-meadow",
+    "objectID": "slides/slides_2025_08_25.html#sir-roy-meadow-1933--",
+    "href": "slides/slides_2025_08_25.html#sir-roy-meadow-1933--",
     "title": "Welcome to STA 240!",
-    "section": "Sir Roy Meadow",
-    "text": "Sir Roy Meadow"
+    "section": "Sir Roy Meadow (1933 - )",
+    "text": "Sir Roy Meadow (1933 - )\n\n\n\n\nPediatrician specializing in “Munchausen syndrome by proxy;”\nGave erroneous “expert” testimony that there is a “1 in 73,000,000” chance of two SIDS deaths in the same family;\n\nfirst, that’s not true;\nsecond, so what?\n\n1999: Clark convicted."
+  },
+  {
+    "objectID": "slides/slides_2025_08_25.html#a-sad-story",
+    "href": "slides/slides_2025_08_25.html#a-sad-story",
+    "title": "Welcome to STA 240!",
+    "section": "A sad story",
+    "text": "A sad story\n\n\n\n\n\n\nStats community loudly panned Meadow’s testimony;\n2003: conviction overturned on appeal after revelation that exculpatory evidence was suppressed;\n2007: Clark drinks herself to death."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#reason-1-its-necessary.-1",
@@ -1393,7 +1400,7 @@
     "href": "slides/slides_2025_08_25.html#example-quantum-mechanics",
     "title": "Welcome to STA 240!",
     "section": "Example: quantum mechanics",
-    "text": "Example: quantum mechanics\nkey words: Schrödinger’s cat, uncertainty principle, etc\n\n\n\n\n\n\nParticles at the (sub)atomic level do not have a definite position and momentum until measured;\nThere are only probabilities associated with the possible states;\nProbability is fundamentally baked into the fabric of reality;\nThese ideas are hard, but some of the math will be accessible to us."
+    "text": "Example: quantum mechanics\nkey words: Schrödinger’s cat, uncertainty principle, etc\n\n\n\n\n\n\nProbability is fundamentally braided into the fabric of reality;\nParticles at the (sub)atomic level do not have a definite position and momentum until measured;\nThere are only probabilities associated with the possible outcomes;\nThese ideas are hard, but some of the math will be accessible to us."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#reason-2-its-useful",
@@ -1415,13 +1422,6 @@
     "title": "Welcome to STA 240!",
     "section": "This is a theorem we will prove:",
     "text": "This is a theorem we will prove:"
-  },
-  {
-    "objectID": "slides/slides_2025_08_25.html#were-building-a-cathedral",
-    "href": "slides/slides_2025_08_25.html#were-building-a-cathedral",
-    "title": "Welcome to STA 240!",
-    "section": "We’re building a cathedral!",
-    "text": "We’re building a cathedral!\nFrom the simplest building blocks, we will erect an impressive edifice of thought."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#reason-3-its-beautiful",
@@ -1477,7 +1477,7 @@
     "href": "slides/slides_2025_08_25.html#exams-20-each",
     "title": "Welcome to STA 240!",
     "section": "Exams (20% each)",
-    "text": "Exams (20% each)\nTraditional, in-class, written exams:\n\nMidterm 1: Thursday October 9 in your lab;\nMidterm 2: Thursday November 13 in your lab;\nFinal Exam: Friday December 12.\n\n\n\n\n\n\n\nWhat can I use during the exam?\n\n\nNo resources except an 8.5” x 11” note sheet created by you and only you.\n\n\n\n\n\n\n\n\n\nIf you need testing accommodations…\n\n\nMake sure I get a letter, and make your appointments in the Testing Center now."
+    "text": "Exams (20% each)\nTraditional, in-class, written exams:\n\nMidterm 1: Thursday October 9 in your lab;\nMidterm 2: Thursday November 13 in your lab;\nFinal Exam: Friday December 12.\n\n\nYou are allowed only two resources:\n\nA “dumb” calculator (no wi-fi), which you won’t need;\nBoth sides of one 8.5” x 11” note sheet created by you.\n\n\n\n\n\n\n\n\n\nIf you need testing accommodations…\n\n\nMake sure I get an SDAO letter, and make your appointments in the Testing Center now."
   },
   {
     "objectID": "slides/slides_2025_08_25.html#attendance",
@@ -1575,7 +1575,7 @@
     "href": "slides/slides_2025_08_25.html#forward-problem-versus-inverse-problem-1",
     "title": "Welcome to STA 240!",
     "section": "Forward problem versus inverse problem",
-    "text": "Forward problem versus inverse problem\n\n\nDifferentiation is a forward problem. You grab the function \\(F\\), and you take the darn derivative;\nIntegration is an inverse problem. Given the derivative, you have to figure out what the original function was:\n\n\n\n\\[\n\\text{FTOC:}\\quad\\int_a^bF'(x)\\,\\text{d} x=F(b)-F(a).\n\\]"
+    "text": "Forward problem versus inverse problem\n\n\nDifferentiation is a forward problem. You know the function \\(F\\), and you take its darn derivative;\nIntegration is an inverse problem. Given the derivative, you have to work backward to figure out what the original function was:\n\n\n\n\\[\n\\text{FTOC:}\\quad\\int_a^bF'(x)\\,\\text{d} x=F(b)-F(a).\n\\]"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#inverse-problems-are-tricky",
