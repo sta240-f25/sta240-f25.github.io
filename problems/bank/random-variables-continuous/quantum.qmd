@@ -40,8 +40,9 @@ Because the particle does not have a definite position before measurement, we tr
 
 a. Compute the value of $A$ that ensures that $f_n$ is a pdf;
 a. Compute the cdf of the random variable $X$;
-a. What is the probability that the particle is located in the interval $[0.2, 0.3]$?
-a. What is the probability that the particle is located at the midpoint of the interval?
 a. What is the expected location of the particle?
+a. What is the probability that the particle is located at the midpoint of the interval?
+a. Let $n=4$ and $L=1$. What is the probability that the particle is located in the interval $[0.2, 0.3]$?
+
 
 [^1]: If you’re like me, you cannot do this. Oh well.
