@@ -279,10 +279,10 @@ Only 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them 
 
 ::: incremental
 - English solicitor;
-- 1996: first son dies in bed at 11 weeks;
-- 1998: second son dies in bed at 8 weeks;
+- 1996: first son died in bed at 11 weeks;
+- 1998: second son died in bed at 8 weeks;
 - Clark arrested on suspicion of murder;
-- Defense claims it was SIDS (sudden infant death syndrome).
+- Defense claimed it was SIDS (sudden infant death syndrome).
 :::
 
 :::
@@ -295,10 +295,10 @@ Only 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them 
 
 ::: incremental
 - Pediatrician specializing in "Munchausen syndrome by proxy;"
-- Gave erroneous "expert" testimony that there was a "1 in 73,000,000" chance of two SIDS deaths in the same family;
+- Gave erroneous "expert" testimony that there is a "1 in 73,000,000" chance of two SIDS deaths in the same family;
     - first, that's not true;
     - second, so what?
-- 1999: Clark is convicted. 
+- 1999: Clark convicted. 
 
 :::
 
@@ -320,7 +320,7 @@ Only 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them 
 ::: {.column width="60%"}
 
 ::: incremental
-- Stats community loudly pans Meadow's testimony;
+- Stats community loudly panned Meadow's testimony;
 - 2003: conviction overturned on appeal after revelation that exculpatory evidence was suppressed; 
 - 2007: Clark drinks herself to death.
 :::
