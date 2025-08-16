@@ -256,7 +256,7 @@ ggplot(d, aes(x = age)) +
 
 . . .
 
-You will know how to answer this by October. Doctors though...
+You will know how to answer this in four weeks. Doctors though...
 
 . . .
 
@@ -265,7 +265,7 @@ You will know how to answer this by October. Doctors though...
 
 Only 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.
 
-> We can only imagine how much anxiety those innumerate doctors instil in women.
+"*We can only imagine how much anxiety those innumerate doctors instil in women*."
 :::
 
 ## Sally Clark (1964 - 2007) {.scrollable}
@@ -393,7 +393,7 @@ Play the Keyes monologue?
 
 ::: {.column width="60%"}
 ::: incremental 
-- Probability is fundamentally baked into the fabric of reality;
+- Probability is fundamentally braided into the fabric of reality;
 - Particles at the (sub)atomic level do not have a definite position and momentum until measured;
 - There are only probabilities associated with the possible outcomes;
 - These ideas are hard, but some of the math will be accessible to us.
