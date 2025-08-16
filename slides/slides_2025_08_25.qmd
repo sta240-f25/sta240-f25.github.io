@@ -284,6 +284,8 @@ Only 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them 
 
 ## Sir Roy Meadow
 
+## A sad story
+
 ## Reason 1: It's necessary. {.large-ish}
 
 ::::: {.columns .v-center-container}
@@ -694,9 +696,9 @@ Start with the realizations of a random phenomenon with *unknown* distribution, 
 ## Forward problem versus inverse problem
 
 ::: incremental
-- *Differentiation* is a forward problem. You grab the function $F$, and you take the darn derivative;
+- *Differentiation* is a forward problem. You know the function $F$, and you take its darn derivative;
 
-- *Integration* is an inverse problem. Given the derivative, you have to figure out what the original function was:
+- *Integration* is an inverse problem. Given the derivative, you have to work backward to figure out what the original function was:
 :::
 
 . . .
