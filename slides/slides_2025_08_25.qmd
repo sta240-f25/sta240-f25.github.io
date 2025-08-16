@@ -217,6 +217,8 @@ ggplot(d, aes(x = price)) +
 ::::: {.columns .v-center-container}
 ::: {.column width="50%"}
 Jascha Heifetz?
+Bette Midler?
+Bea Arthur?
 :::
 
 ::: {.column width="50%"}
@@ -266,25 +268,67 @@ Only 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them 
 > We can only imagine how much anxiety those innumerate doctors instil in women.
 :::
 
-## Sally Clark
+## Sally Clark (1964 - 2007) {.scrollable}
 
 ::::: {.columns .v-center-container}
-::: {.column width="50%"}
-
+::: {.column width="30%"}
+![](images/sally-clark.png)
 :::
 
-::: {.column width="50%"}
-- Clark was convicted of murder after her two children suddenly died in infancy;
-- Pediatrician Meadow testified that there was a 1 in 73 million chance the two deaths were due to SIDS (Sudden Infant Death Syndrome);
-- His reasoning was farkakte from beginning to end;
-- She got out on appeal and drank herself to death;
-- 
+::: {.column width="70%"}
+
+::: incremental
+- English solicitor;
+- 1996: first son dies in bed at 11 weeks;
+- 1998: second son dies in bed at 8 weeks;
+- Clark arrested on suspicion of murder;
+- Defense claims it was SIDS (sudden infant death syndrome).
+:::
+
 :::
 :::::
 
-## Sir Roy Meadow
+## Sir Roy Meadow (1933 - )
+
+::::: {.columns .v-center-container}
+::: {.column width="60%"}
+
+::: incremental
+- Pediatrician specializing in "Munchausen syndrome by proxy;"
+- Gave erroneous "expert" testimony that there was a "1 in 73,000,000" chance of two SIDS deaths in the same family;
+    - first, that's not true;
+    - second, so what?
+- 1999: Clark is convicted. 
+
+:::
+
+:::
+
+::: {.column width="40%"}
+![](images/meadow.png)
+:::
+:::::
+
 
 ## A sad story
+
+::::: {.columns .v-center-container}
+::: {.column width="40%"}
+![](images/rss.png)
+:::
+
+::: {.column width="60%"}
+
+::: incremental
+- Stats community loudly pans Meadow's testimony;
+- 2003: conviction overturned on appeal after revelation that exculpatory evidence was suppressed; 
+- 2007: Clark drinks herself to death.
+:::
+
+
+:::
+:::::
+
 
 ## Reason 1: It's necessary. {.large-ish}
 
@@ -515,7 +559,7 @@ Designed to be complete-able during the lab period, but due by 11:59 PM that sam
 No late work will be accepted unless you request an extension in advance by e-mailing JZ. All reasonable requests will be entertained, but extensions will not be long.
 :::
 
-## Exams (20% each)
+## Exams (20% each) {.scrollable}
 
 Traditional, in-class, written exams:
 
@@ -523,16 +567,19 @@ Traditional, in-class, written exams:
 -   **Midterm 2**: Thursday November 13 *in your lab*;
 -   **Final Exam**: Friday December 12.
 
-::: callout-note
-## What can I use during the exam?
+. . .
 
-No resources except an 8.5" x 11" note sheet created by you and only you.
-:::
+You are allowed only two resources:
+
+- A "dumb" calculator (no wi-fi), which you won't need;
+- Both sides of one 8.5" x 11" note sheet created by you.
+
+. . .
 
 ::: callout-note
 ## If you need testing accommodations...
 
-Make sure I get a letter, and make your appointments in the [Testing Center](https://testingcenter.duke.edu/) now.
+Make sure I get an SDAO letter, and make your appointments in the [Testing Center](https://testingcenter.duke.edu/) now.
 :::
 
 ## Attendance
