@@ -194,351 +194,351 @@
     ]
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#about-me",
-    "href": "slides/useR_2025_08_09.html#about-me",
+    "objectID": "slides/user_2025_08_09.html#about-me",
+    "href": "slides/user_2025_08_09.html#about-me",
     "title": "Rhapsody in R",
     "section": "About me",
     "text": "About me\n\n\n\n\n\n\n\n\nIt’s my sixth go-around teaching intro probability;\nI’m a tad weary of coins, dice, playing cards, etc."
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#trying-to-mix-it-up",
-    "href": "slides/useR_2025_08_09.html#trying-to-mix-it-up",
+    "objectID": "slides/user_2025_08_09.html#trying-to-mix-it-up",
+    "href": "slides/user_2025_08_09.html#trying-to-mix-it-up",
     "title": "Rhapsody in R",
     "section": "Trying to mix it up",
     "text": "Trying to mix it up\n\nPlenty of applications from the natural and social sciences:\n\n\n\n\n\nActuarial mathematics;\nContested elections;\nDating apps;\nDNA sequencing;\nExpert witness testimony;\nExtreme weather;\n\n\n\nI Ching divination;\nInvestment risk and return;\nLanguage models;\nPapal conclaves;\nPrediction markets;\nQuantum mechanics.\n\n\n\n\nBut what about the arts?"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#stochastic-music",
-    "href": "slides/useR_2025_08_09.html#stochastic-music",
+    "objectID": "slides/user_2025_08_09.html#stochastic-music",
+    "href": "slides/user_2025_08_09.html#stochastic-music",
     "title": "Rhapsody in R",
     "section": "Stochastic music",
     "text": "Stochastic music\n\n\nAKA: chance or aleatoric music.\n\nleaving some aspect of the composition up in the air until the moment of performance;\n⭐ simulating a random process to determine what notes to write down."
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#iannis-xenakis-1922---2001",
-    "href": "slides/useR_2025_08_09.html#iannis-xenakis-1922---2001",
+    "objectID": "slides/user_2025_08_09.html#iannis-xenakis-1922---2001",
+    "href": "slides/user_2025_08_09.html#iannis-xenakis-1922---2001",
     "title": "Rhapsody in R",
     "section": "Iannis Xenakis (1922 - 2001)",
     "text": "Iannis Xenakis (1922 - 2001)\n\n\n\n\n\nStudied both traditional western music and CS, statistical mechanics, stochastic processes, etc;\nIncorporated these ideas into his compositional process."
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#pithoprakta-1956",
-    "href": "slides/useR_2025_08_09.html#pithoprakta-1956",
+    "objectID": "slides/user_2025_08_09.html#pithoprakta-1956",
+    "href": "slides/user_2025_08_09.html#pithoprakta-1956",
     "title": "Rhapsody in R",
     "section": "Pithoprakta (1956)",
     "text": "Pithoprakta (1956)\n\nThink of each member of a 46-piece string orchestra as a Brownian particle drifting up and down the staff:\n\n\n\n\n\n\n\n\n\n“[E]very member of the orchestra is on the honor system.” Leonard Bernstein"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#pithoprakta-1956-1",
-    "href": "slides/useR_2025_08_09.html#pithoprakta-1956-1",
+    "objectID": "slides/user_2025_08_09.html#pithoprakta-1956-1",
+    "href": "slides/user_2025_08_09.html#pithoprakta-1956-1",
     "title": "Rhapsody in R",
     "section": "Pithoprakta (1956)",
     "text": "Pithoprakta (1956)\n\n\n\nWell …it’s the thought that counts."
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#main-idea",
-    "href": "slides/useR_2025_08_09.html#main-idea",
+    "objectID": "slides/user_2025_08_09.html#main-idea",
+    "href": "slides/user_2025_08_09.html#main-idea",
     "title": "Rhapsody in R",
     "section": "Main idea",
     "text": "Main idea\n\n\nThought: Can I prompt students to use what they know about probability distributions and simulation to write their own pieces of stochastic music?\nWorry: Depends. Can you work with music in R?"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#renfei-maos-gm-package",
-    "href": "slides/useR_2025_08_09.html#renfei-maos-gm-package",
+    "objectID": "slides/user_2025_08_09.html#renfei-maos-gm-package",
+    "href": "slides/user_2025_08_09.html#renfei-maos-gm-package",
     "title": "Rhapsody in R",
     "section": "Renfei Mao’s gm package",
     "text": "Renfei Mao’s gm package\n\n\n\n\n“grammar of music”\n\nRepresent music in R with a ggplot2-style interface;\n\n“generate music”\n\nintegration with MuseScore generates sheet music and MIDI playback."
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#ravel-prélude-in-a-minor-m.-65",
-    "href": "slides/useR_2025_08_09.html#ravel-prélude-in-a-minor-m.-65",
+    "objectID": "slides/user_2025_08_09.html#ravel-prélude-in-a-minor-m.-65",
+    "href": "slides/user_2025_08_09.html#ravel-prélude-in-a-minor-m.-65",
     "title": "Rhapsody in R",
     "section": "Ravel: Prélude in A Minor, M. 65",
     "text": "Ravel: Prélude in A Minor, M. 65\n\n\nLet’s transcribe it!"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#the-starting-point-is-always-the-same",
-    "href": "slides/useR_2025_08_09.html#the-starting-point-is-always-the-same",
+    "objectID": "slides/user_2025_08_09.html#the-starting-point-is-always-the-same",
+    "href": "slides/user_2025_08_09.html#the-starting-point-is-always-the-same",
     "title": "Rhapsody in R",
     "section": "The starting point is always the same",
     "text": "The starting point is always the same\nWe will add layers to this:\n\nlibrary(gm)\n\nprelude &lt;- Music()\n\n\nAnalogous to this:\n\nlibrary(ggplot2)\n\nmyplot &lt;- ggplot()"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#add-meter-and-tempo",
-    "href": "slides/useR_2025_08_09.html#add-meter-and-tempo",
+    "objectID": "slides/user_2025_08_09.html#add-meter-and-tempo",
+    "href": "slides/user_2025_08_09.html#add-meter-and-tempo",
     "title": "Rhapsody in R",
     "section": "Add meter and tempo",
     "text": "Add meter and tempo"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#add-meter-and-tempo-1",
-    "href": "slides/useR_2025_08_09.html#add-meter-and-tempo-1",
+    "objectID": "slides/user_2025_08_09.html#add-meter-and-tempo-1",
+    "href": "slides/user_2025_08_09.html#add-meter-and-tempo-1",
     "title": "Rhapsody in R",
     "section": "Add meter and tempo",
     "text": "Add meter and tempo\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60)"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#add-the-right-hand-part",
-    "href": "slides/useR_2025_08_09.html#add-the-right-hand-part",
+    "objectID": "slides/user_2025_08_09.html#add-the-right-hand-part",
+    "href": "slides/user_2025_08_09.html#add-the-right-hand-part",
     "title": "Rhapsody in R",
     "section": "Add the right hand part",
     "text": "Add the right hand part"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#brief-aside-scientific-pitch-notation",
-    "href": "slides/useR_2025_08_09.html#brief-aside-scientific-pitch-notation",
+    "objectID": "slides/user_2025_08_09.html#brief-aside-scientific-pitch-notation",
+    "href": "slides/user_2025_08_09.html#brief-aside-scientific-pitch-notation",
     "title": "Rhapsody in R",
     "section": "Brief aside: scientific pitch notation",
     "text": "Brief aside: scientific pitch notation\n \"F#5\" means the F♯ in the fifth octave on the piano, etc."
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#add-the-right-hand-part-1",
-    "href": "slides/useR_2025_08_09.html#add-the-right-hand-part-1",
+    "objectID": "slides/user_2025_08_09.html#add-the-right-hand-part-1",
+    "href": "slides/user_2025_08_09.html#add-the-right-hand-part-1",
     "title": "Rhapsody in R",
     "section": "Add the right hand part",
     "text": "Add the right hand part\n\nright_hand &lt;- Line(\n  pitches = list(NA, \"E5\", \"F#5\", \"D5\", \"E5\", \"F#5\",\n                 \"B5\", \"G5\", \"D5\", \n                 \"E5\", \"G4\",\n                 c(\"D4\", \"F#4\", \"B4\"), c(\"C#4\", \"F4\", \"C5\"),\n                 c(\"G3\", \"C4\", \"E4\"), c(\"D#4\", \"G4\"), c(\"C4\", \"E4\"))\n)\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#add-the-right-hand-part-2",
-    "href": "slides/useR_2025_08_09.html#add-the-right-hand-part-2",
+    "objectID": "slides/user_2025_08_09.html#add-the-right-hand-part-2",
+    "href": "slides/user_2025_08_09.html#add-the-right-hand-part-2",
     "title": "Rhapsody in R",
     "section": "Add the right hand part",
     "text": "Add the right hand part\n\ngm::show(prelude)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(BTW: this plays nice with Quarto off-the-shelf.)"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#adjust-the-note-values",
-    "href": "slides/useR_2025_08_09.html#adjust-the-note-values",
+    "objectID": "slides/user_2025_08_09.html#adjust-the-note-values",
+    "href": "slides/user_2025_08_09.html#adjust-the-note-values",
     "title": "Rhapsody in R",
     "section": "Adjust the note values",
     "text": "Adjust the note values\n\nright_hand &lt;- Line(\n  pitches = list(NA, \"E5\", \"F#5\", \"D5\", \"E5\", \"F#5\",\n                 \"B5\", \"G5\", \"D5\", \n                 \"E5\", \"G4\",\n                 c(\"D4\", \"F#4\", \"B4\"), c(\"C#4\", \"F4\", \"C5\"),\n                 c(\"G3\", \"C4\", \"E4\"), c(\"D#4\", \"G4\"), c(\"C4\", \"E4\")),\n  durations = c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, \n                1, 1, 2, \n                1, 1, \n                2, 1, \n                1.5, 0.5, 1)\n)\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#adjust-the-note-values-1",
-    "href": "slides/useR_2025_08_09.html#adjust-the-note-values-1",
+    "objectID": "slides/user_2025_08_09.html#adjust-the-note-values-1",
+    "href": "slides/user_2025_08_09.html#adjust-the-note-values-1",
     "title": "Rhapsody in R",
     "section": "Adjust the note values",
     "text": "Adjust the note values\n\ngm::show(prelude)"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#add-the-left-hand-part",
-    "href": "slides/useR_2025_08_09.html#add-the-left-hand-part",
+    "objectID": "slides/user_2025_08_09.html#add-the-left-hand-part",
+    "href": "slides/user_2025_08_09.html#add-the-left-hand-part",
     "title": "Rhapsody in R",
     "section": "Add the left hand part",
     "text": "Add the left hand part"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#add-the-left-hand-part-1",
-    "href": "slides/useR_2025_08_09.html#add-the-left-hand-part-1",
+    "objectID": "slides/user_2025_08_09.html#add-the-left-hand-part-1",
+    "href": "slides/user_2025_08_09.html#add-the-left-hand-part-1",
     "title": "Rhapsody in R",
     "section": "Add the left hand part",
     "text": "Add the left hand part\n\nleft_hand &lt;- Line(\n  pitches = c(\"A2\", \"E3\", \"G3\", \"C4\", \"E4\", \n              \"G4\", \"C5\", NA, \n              NA, \"E2\", \"E3\", \"F#3\", \"G#3\",\n              NA, \"A2\", \"E3\", \"B3\", \"G3\"),\n  durations = c(rep(0.5, 7), 2, \n                rep(0.5, 4), 1, \n                rep(0.5, 4), 1),\n  bar = 2, offset = 0.5\n)\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand + \n  left_hand + \n  Clef(\"F\")\n\nNote: rests correspond to missing values (NA) in the line."
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#add-the-left-hand-part-2",
-    "href": "slides/useR_2025_08_09.html#add-the-left-hand-part-2",
+    "objectID": "slides/user_2025_08_09.html#add-the-left-hand-part-2",
+    "href": "slides/user_2025_08_09.html#add-the-left-hand-part-2",
     "title": "Rhapsody in R",
     "section": "Add the left hand part",
     "text": "Add the left hand part\n\ngm::show(prelude)"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#add-dynamics",
-    "href": "slides/useR_2025_08_09.html#add-dynamics",
+    "objectID": "slides/user_2025_08_09.html#add-dynamics",
+    "href": "slides/user_2025_08_09.html#add-dynamics",
     "title": "Rhapsody in R",
     "section": "Add dynamics",
     "text": "Add dynamics"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#add-dynamics-1",
-    "href": "slides/useR_2025_08_09.html#add-dynamics-1",
+    "objectID": "slides/user_2025_08_09.html#add-dynamics-1",
+    "href": "slides/user_2025_08_09.html#add-dynamics-1",
     "title": "Rhapsody in R",
     "section": "Add dynamics",
     "text": "Add dynamics\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand + \n  Dynamic(\"p\", 1) + \n  left_hand + \n  Clef(\"F\") +\n  Dynamic(\"p\", 1)"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#add-expressive-indications",
-    "href": "slides/useR_2025_08_09.html#add-expressive-indications",
+    "objectID": "slides/user_2025_08_09.html#add-expressive-indications",
+    "href": "slides/user_2025_08_09.html#add-expressive-indications",
     "title": "Rhapsody in R",
     "section": "Add expressive indications",
     "text": "Add expressive indications"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#add-expressive-indications-1",
-    "href": "slides/useR_2025_08_09.html#add-expressive-indications-1",
+    "objectID": "slides/user_2025_08_09.html#add-expressive-indications-1",
+    "href": "slides/user_2025_08_09.html#add-expressive-indications-1",
     "title": "Rhapsody in R",
     "section": "Add expressive indications",
     "text": "Add expressive indications\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand + \n  Dynamic(\"p\", 1) + \n  Slur(2, 11) + \n  Slur(12, 16) + \n  left_hand + \n  Clef(\"F\") +\n  Dynamic(\"p\", 1) + \n  Slur(1, 7) + \n  Slur(10, 13) + \n  Slur(15, 18) + \n  Pedal(1, 7)"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#pretty-close",
-    "href": "slides/useR_2025_08_09.html#pretty-close",
+    "objectID": "slides/user_2025_08_09.html#pretty-close",
+    "href": "slides/user_2025_08_09.html#pretty-close",
     "title": "Rhapsody in R",
     "section": "Pretty close!",
     "text": "Pretty close!\n\ngm::show(prelude)"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#change-the-instrumentation-optional",
-    "href": "slides/useR_2025_08_09.html#change-the-instrumentation-optional",
+    "objectID": "slides/user_2025_08_09.html#change-the-instrumentation-optional",
+    "href": "slides/user_2025_08_09.html#change-the-instrumentation-optional",
     "title": "Rhapsody in R",
     "section": "Change the instrumentation (optional)",
     "text": "Change the instrumentation (optional)\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(65) + \n  right_hand + \n  Dynamic(\"p\", 1) + \n  Slur(2, 11) + \n  Slur(12, 16) + \n  Instrument(47) + # Harp!\n  left_hand + \n  Clef(\"F\") +\n  Dynamic(\"p\", 1) + \n  Slur(1, 7) + \n  Slur(10, 13) + \n  Slur(15, 18) + \n  Instrument(43) # Cello!"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#change-the-instrumentation-optional-1",
-    "href": "slides/useR_2025_08_09.html#change-the-instrumentation-optional-1",
+    "objectID": "slides/user_2025_08_09.html#change-the-instrumentation-optional-1",
+    "href": "slides/user_2025_08_09.html#change-the-instrumentation-optional-1",
     "title": "Rhapsody in R",
     "section": "Change the instrumentation (optional)",
     "text": "Change the instrumentation (optional)\n\n?Instrument\n\n\n\n\nAcoustic Grand Piano\nBright Acoustic Piano\nElectric Grand Piano\nHonky-Tonk Piano\nElectric Piano 1\nElectric Piano 2\nHarpsichord\nClavinet\n\n\n\nCelesta\nGlockenspiel\nMusic Box\nVibraphone\nMarimba\nXylophone\nTubular Bells\n\n… and so on"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#change-the-instrumentation-optional-2",
-    "href": "slides/useR_2025_08_09.html#change-the-instrumentation-optional-2",
+    "objectID": "slides/user_2025_08_09.html#change-the-instrumentation-optional-2",
+    "href": "slides/user_2025_08_09.html#change-the-instrumentation-optional-2",
     "title": "Rhapsody in R",
     "section": "Change the instrumentation (optional)",
     "text": "Change the instrumentation (optional)\n\ngm::show(prelude)"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#summary-the-gm-package",
-    "href": "slides/useR_2025_08_09.html#summary-the-gm-package",
+    "objectID": "slides/user_2025_08_09.html#summary-the-gm-package",
+    "href": "slides/user_2025_08_09.html#summary-the-gm-package",
     "title": "Rhapsody in R",
     "section": "Summary: the gm package",
     "text": "Summary: the gm package\nA ggplot2-style interface for music:\n\n\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(65) + \n  right_hand + \n  Dynamic(\"p\", 1) + \n  Slur(2, 11) + \n  Slur(12, 16) + \n  Instrument(47) +\n  left_hand + \n  Clef(\"F\") +\n  Dynamic(\"p\", 1) + \n  Slur(1, 7) + \n  Slur(10, 13) + \n  Slur(15, 18) + \n  Instrument(43) \n\n\n\ngm::show(prelude)\n\n\n\n\n\n\n\n\n\n\n\n\n\nThanks Renfei!\n\n\nNow, let’s write some crazy music!"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#every-pitch-on-the-piano",
-    "href": "slides/useR_2025_08_09.html#every-pitch-on-the-piano",
+    "objectID": "slides/user_2025_08_09.html#every-pitch-on-the-piano",
+    "href": "slides/user_2025_08_09.html#every-pitch-on-the-piano",
     "title": "Rhapsody in R",
     "section": "Every pitch on the piano",
     "text": "Every pitch on the piano\n\npitches &lt;- c(\"C\", \"C#\", \"D\", \"D#\", \"E\", \"F\", \"F#\", \"G\", \"G#\", \"A\", \"A#\", \"B\")\noctaves &lt;- 1:7\nall_pitches &lt;- c(\"A0\", \"A#0\", \"B0\", \n                 paste(rep(pitches, length(octaves)), \n                       sort(rep(octaves, length(pitches))), \n                       sep = \"\"), \n                 \"C8\")\nall_pitches\n\n [1] \"A0\"  \"A#0\" \"B0\"  \"C1\"  \"C#1\" \"D1\"  \"D#1\" \"E1\"  \"F1\"  \"F#1\" \"G1\"  \"G#1\"\n[13] \"A1\"  \"A#1\" \"B1\"  \"C2\"  \"C#2\" \"D2\"  \"D#2\" \"E2\"  \"F2\"  \"F#2\" \"G2\"  \"G#2\"\n[25] \"A2\"  \"A#2\" \"B2\"  \"C3\"  \"C#3\" \"D3\"  \"D#3\" \"E3\"  \"F3\"  \"F#3\" \"G3\"  \"G#3\"\n[37] \"A3\"  \"A#3\" \"B3\"  \"C4\"  \"C#4\" \"D4\"  \"D#4\" \"E4\"  \"F4\"  \"F#4\" \"G4\"  \"G#4\"\n[49] \"A4\"  \"A#4\" \"B4\"  \"C5\"  \"C#5\" \"D5\"  \"D#5\" \"E5\"  \"F5\"  \"F#5\" \"G5\"  \"G#5\"\n[61] \"A5\"  \"A#5\" \"B5\"  \"C6\"  \"C#6\" \"D6\"  \"D#6\" \"E6\"  \"F6\"  \"F#6\" \"G6\"  \"G#6\"\n[73] \"A6\"  \"A#6\" \"B6\"  \"C7\"  \"C#7\" \"D7\"  \"D#7\" \"E7\"  \"F7\"  \"F#7\" \"G7\"  \"G#7\"\n[85] \"A7\"  \"A#7\" \"B7\"  \"C8\""
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#the-simplest-piece-of-stochastic-music",
-    "href": "slides/useR_2025_08_09.html#the-simplest-piece-of-stochastic-music",
+    "objectID": "slides/user_2025_08_09.html#the-simplest-piece-of-stochastic-music",
+    "href": "slides/user_2025_08_09.html#the-simplest-piece-of-stochastic-music",
     "title": "Rhapsody in R",
     "section": "The simplest piece of stochastic music",
     "text": "The simplest piece of stochastic music\nSample the pitches with replacement:\n\nset.seed(8675309)\n\nline1 &lt;- Line(\n  pitches = sample(all_pitches, 64, replace = TRUE),\n  durations = .25\n)\n\nline2 &lt;- Line(\n  pitches = sample(all_pitches, 64, replace = TRUE),\n  durations = .25\n)\n\nkitten &lt;- Music() + \n  Meter(4, 4) + \n  Tempo(120) + \n  line1 + \n  line2 + \n  Dynamic(\"p\", 1) +\n  Dynamic(\"ffff\", 64) +\n  Hairpin(\"&lt;\", 2, 63)"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#angry-kitten-on-the-keys",
-    "href": "slides/useR_2025_08_09.html#angry-kitten-on-the-keys",
+    "objectID": "slides/user_2025_08_09.html#angry-kitten-on-the-keys",
+    "href": "slides/user_2025_08_09.html#angry-kitten-on-the-keys",
     "title": "Rhapsody in R",
     "section": "(Angry) Kitten on the keys",
     "text": "(Angry) Kitten on the keys"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#what-is-a-melody-wrong-answers-only",
-    "href": "slides/useR_2025_08_09.html#what-is-a-melody-wrong-answers-only",
+    "objectID": "slides/user_2025_08_09.html#what-is-a-melody-wrong-answers-only",
+    "href": "slides/user_2025_08_09.html#what-is-a-melody-wrong-answers-only",
     "title": "Rhapsody in R",
     "section": "What is a melody? (wrong answers only)",
     "text": "What is a melody? (wrong answers only)\n\nIt’s a time series!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGame:\n\nFix a key (C minor) and a stable accompaniment (waltz);\nSimulate a melody from a Markov chain."
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#unmarkovchained-melodies",
-    "href": "slides/useR_2025_08_09.html#unmarkovchained-melodies",
+    "objectID": "slides/user_2025_08_09.html#unmarkovchained-melodies",
+    "href": "slides/user_2025_08_09.html#unmarkovchained-melodies",
     "title": "Rhapsody in R",
     "section": "Un(Markov)chained melodies",
     "text": "Un(Markov)chained melodies\nFrom Nierhaus’ Algorithmic Composition (2009 Springer):"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#unmarkovchained-melodies-1",
-    "href": "slides/useR_2025_08_09.html#unmarkovchained-melodies-1",
+    "objectID": "slides/user_2025_08_09.html#unmarkovchained-melodies-1",
+    "href": "slides/user_2025_08_09.html#unmarkovchained-melodies-1",
     "title": "Rhapsody in R",
     "section": "Un(Markov)chained melodies",
     "text": "Un(Markov)chained melodies\nA first-order Markov chain on the C minor scale is described by its transition probabilities: given the note we’re on right now, what are the probabilities for the next note to come?\n\nLoads of options to explore:\n\n\n\nuniform (sampling with replacement, again);\nupweight leaps into “chord tones;”\nupweight leaps between chord tones (arpeggio-like);\nupweight leaps into the tonic (“resolutions”);\nrandom walk (flip a coin every beat and move \\(\\pm1\\))."
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#iid-melody",
-    "href": "slides/useR_2025_08_09.html#iid-melody",
+    "objectID": "slides/user_2025_08_09.html#iid-melody",
+    "href": "slides/user_2025_08_09.html#iid-melody",
     "title": "Rhapsody in R",
     "section": "IID Melody",
     "text": "IID Melody"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#random-walk-melody",
-    "href": "slides/useR_2025_08_09.html#random-walk-melody",
+    "objectID": "slides/user_2025_08_09.html#random-walk-melody",
+    "href": "slides/user_2025_08_09.html#random-walk-melody",
     "title": "Rhapsody in R",
     "section": "Random walk melody",
     "text": "Random walk melody"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#favors-leaps-between-chord-tones",
-    "href": "slides/useR_2025_08_09.html#favors-leaps-between-chord-tones",
+    "objectID": "slides/user_2025_08_09.html#favors-leaps-between-chord-tones",
+    "href": "slides/user_2025_08_09.html#favors-leaps-between-chord-tones",
     "title": "Rhapsody in R",
     "section": "Favors leaps between chord tones",
     "text": "Favors leaps between chord tones"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#the-jacobson-method",
-    "href": "slides/useR_2025_08_09.html#the-jacobson-method",
+    "objectID": "slides/user_2025_08_09.html#the-jacobson-method",
+    "href": "slides/user_2025_08_09.html#the-jacobson-method",
     "title": "Rhapsody in R",
     "section": "The Jacobson method",
     "text": "The Jacobson method\n\n\n\n\nTake an existing piece of music and “add noise.”\nSo this:\n\\[\n\\mathbf{y}=f(\\mathbf{x})+\\boldsymbol{\\varepsilon},\n\\]\nonly…it’s music?"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#name-that-tune",
-    "href": "slides/useR_2025_08_09.html#name-that-tune",
+    "objectID": "slides/user_2025_08_09.html#name-that-tune",
+    "href": "slides/user_2025_08_09.html#name-that-tune",
     "title": "Rhapsody in R",
     "section": "Name that tune",
     "text": "Name that tune"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#the-students-mission",
-    "href": "slides/useR_2025_08_09.html#the-students-mission",
+    "objectID": "slides/user_2025_08_09.html#the-students-mission",
+    "href": "slides/user_2025_08_09.html#the-students-mission",
     "title": "Rhapsody in R",
     "section": "The students’ mission",
     "text": "The students’ mission\n\n\nWrite your own piece of stochastic music;\nExplore the relationship between the probability rules governing the system and the sound of the resulting music;\nKey words:\n\nPlay;\nSurprise yourself."
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#randomizing-the-rhythm",
-    "href": "slides/useR_2025_08_09.html#randomizing-the-rhythm",
+    "objectID": "slides/user_2025_08_09.html#randomizing-the-rhythm",
+    "href": "slides/user_2025_08_09.html#randomizing-the-rhythm",
     "title": "Rhapsody in R",
     "section": "Randomizing the rhythm",
     "text": "Randomizing the rhythm"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#i-just-like-how-this-looks",
-    "href": "slides/useR_2025_08_09.html#i-just-like-how-this-looks",
+    "objectID": "slides/user_2025_08_09.html#i-just-like-how-this-looks",
+    "href": "slides/user_2025_08_09.html#i-just-like-how-this-looks",
     "title": "Rhapsody in R",
     "section": "I just like how this looks",
     "text": "I just like how this looks"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#playing-with-texture",
-    "href": "slides/useR_2025_08_09.html#playing-with-texture",
+    "objectID": "slides/user_2025_08_09.html#playing-with-texture",
+    "href": "slides/user_2025_08_09.html#playing-with-texture",
     "title": "Rhapsody in R",
     "section": "Playing with texture",
     "text": "Playing with texture\n(John, please don’t forget to lower the volume on this.)"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#they-called-it-nightmare-ballet",
-    "href": "slides/useR_2025_08_09.html#they-called-it-nightmare-ballet",
+    "objectID": "slides/user_2025_08_09.html#they-called-it-nightmare-ballet",
+    "href": "slides/user_2025_08_09.html#they-called-it-nightmare-ballet",
     "title": "Rhapsody in R",
     "section": "They called it “Nightmare Ballet”",
     "text": "They called it “Nightmare Ballet”"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#just-trolling-me",
-    "href": "slides/useR_2025_08_09.html#just-trolling-me",
+    "objectID": "slides/user_2025_08_09.html#just-trolling-me",
+    "href": "slides/user_2025_08_09.html#just-trolling-me",
     "title": "Rhapsody in R",
     "section": "Just trolling me",
     "text": "Just trolling me"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#not-quite-random-and-yet",
-    "href": "slides/useR_2025_08_09.html#not-quite-random-and-yet",
+    "objectID": "slides/user_2025_08_09.html#not-quite-random-and-yet",
+    "href": "slides/user_2025_08_09.html#not-quite-random-and-yet",
     "title": "Rhapsody in R",
     "section": "Not quite random, and yet…",
     "text": "Not quite random, and yet…"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#future-improvements",
-    "href": "slides/useR_2025_08_09.html#future-improvements",
+    "objectID": "slides/user_2025_08_09.html#future-improvements",
+    "href": "slides/user_2025_08_09.html#future-improvements",
     "title": "Rhapsody in R",
     "section": "Future improvements",
     "text": "Future improvements\n\nCan gm handle any Hz, and not just the discrete pitches of the Western system?\nHow closely can I replicate Xenakis’ methods?\nPlay with Markov melodies based on estimated transition probabilities from famous composers;\nRandomize other features: harmony, rhythm, articulation, orchestration, dynamics, etc;\nStudents need more time and better coaching/inspiration;\nHow can I make it sillier?"
   },
   {
-    "objectID": "slides/useR_2025_08_09.html#quick-takeaways",
-    "href": "slides/useR_2025_08_09.html#quick-takeaways",
+    "objectID": "slides/user_2025_08_09.html#quick-takeaways",
+    "href": "slides/user_2025_08_09.html#quick-takeaways",
     "title": "Rhapsody in R",
     "section": "Quick takeaways",
     "text": "Quick takeaways\n\nIntro probability is a mixed audience. I aim for maximum variety in the examples and applications;\nIf you as an instructor have any creative or artistic interests, mix them in. You will have a tremendous amount of fun;\nActivities like this totally tilt the material on its ear;\nThe gm package is so much fun to play with!"
@@ -2007,14 +2007,10 @@
     ]
   },
   {
-    "objectID": "explainers/RStudio.html",
-    "href": "explainers/RStudio.html",
+    "objectID": "explainers/rstudio.html",
+    "href": "explainers/rstudio.html",
     "title": "The Lay of the Land",
     "section": "",
-    "text": "R is a programming language, like Python, C++, Java, Julia, etc. RStudio is an IDE (integrated development environment) that allows you to interacts with R in a convenient way. So if R is the engine, RStudio is the dashboard.\nWhen you launch RStudio, you see something like this:\n\n\n\n\n\nfour panes\n\n(bottom left)\n(top left)\n(top right)\n(bottom right)",
-    "crumbs": [
-      "`R` Explainers",
-      "The lay of the land"
-    ]
+    "text": "R is a programming language, like Python, C++, Java, Julia, etc. RStudio is an IDE (integrated development environment) that allows you to interacts with R in a convenient way. So if R is the engine, RStudio is the dashboard.\nWhen you launch RStudio, you see something like this:\n\n\n\n\n\nfour panes\n\n(bottom left)\n(top left)\n(top right)\n(bottom right)"
   }
 ]
