@@ -1,0 +1,1 @@
+Let $A$ and $B$ be independent events. Prove that $A^c$ and $B^c$ are independent events.

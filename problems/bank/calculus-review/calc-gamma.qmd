@@ -1,0 +1,13 @@
+Here is another inordinately silly function:
+
+$$
+\Gamma(x)=\int_0^\infty y^{x-1}e^{-y}\,\textrm{d} y,\quad x>0.
+$$
+
+Prove that $\Gamma(x+1)=x\Gamma(x)$.
+
+::: {.callout-tip collapse="true"}
+## Hint
+
+Start on the left-hand side by writing out $\Gamma(x+1)$ and evaluating the integral *by parts*.
+:::

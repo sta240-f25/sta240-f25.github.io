@@ -1,0 +1,5 @@
+Let $S$ be a sample space with probability measure $P$, and let $B\subseteq S$ be some event with $P(B)>0$. Show that the function $G(A)=P(A\,|\, B)$ is a *new* probability measure on $S$. That is, show that $G$ satisfies the axioms: 
+
+a. total measure 1;
+b. nonnegativity;
+c. countable additivity.

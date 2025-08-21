@@ -1,0 +1,19 @@
+---
+title: "The Lay of the Land"
+format: html
+editor: 
+  mode: source
+---
+
+`R` is a programming language, like `Python`, `C++`, `Java`, `Julia`, etc. `RStudio` is an IDE (integrated development environment) that allows you to interacts with `R` in a convenient way. So if `R` is the engine, `RStudio` is the dashboard.
+
+When you launch `RStudio`, you see something like this:
+
+![](images/tour-r-rstudio.png){fig-align="center"}
+
+four panes
+
+-   (bottom left)
+-   (top left)
+-   (top right)
+-   (bottom right)

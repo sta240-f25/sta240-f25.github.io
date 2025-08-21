@@ -1,0 +1,46 @@
+---
+title: "Problem Set 0"
+subtitle: Due Friday September 5 at 5PM
+editor: 
+  mode: source
+---
+
+> [Nature laughs at the difficulties of integration.](https://en.wikiquote.org/wiki/Pierre-Simon_Laplace)
+
+This is ostensibly calculus review, but each problem is a piece of probability in disguise. We will illuminate these connections throughout the semester, and I will refer to Problem Set 0 often. Stay tuned!
+
+## Problem 0
+
+{{< include bank/_music-rec.qmd >}}
+
+## Problem 1
+
+{{< include bank/calculus-review/calc-bad-notation.qmd >}}
+
+## Problem 2
+
+{{< include bank/calculus-review/calc-logexp.qmd >}}
+
+## Problem 3
+
+{{< include bank/calculus-review/calc-series.qmd >}}
+
+## Problem 4
+
+{{< include bank/calculus-review/calc-inflection.qmd >}}
+
+## Problem 5
+
+{{< include bank/calculus-review/calc-gamma.qmd >}}
+
+## Problem 6
+
+{{< include bank/calculus-review/calc-limit.qmd >}}
+
+## Problem 7
+
+{{< include bank/calculus-review/calc-pareto-ish.qmd >}}
+
+## Submission
+
+{{< include bank/_submission.qmd >}}

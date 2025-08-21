@@ -1,0 +1,6 @@
+Assume $\lambda>0$ is a constant and compute
+
+$$
+    \sum\limits_{n=0}^\infty n \frac{\lambda^n}{n!}e^{-\lambda}
+    .
+$$

@@ -1,0 +1,49 @@
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GqBJiOM5tm8?si=3w-vs1KJ9x36_RTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Imagine a single particle at the (sub)atomic level[^1]. A particle’s **quantum state** encodes information about all of its measurable properties, such as position, momentum, spin, and energy. In quantum mechanics, measuring these properties is fundamentally probabilistic. Before measurement, the particle doesn’t have a single, definite position or momentum; it has only probabilities for the possible outcomes. The quantum state of a particle is fully characterized by its **wave function**, and the squared magnitude of the wave function is a probability density that describes the distribution of the particle’s position, or momentum, or whatever else you wish to study. Let's explore this in a very simple example.
+
+Consider a single, one-dimensional particle located somewhere in the interval $[0,\,L]$. The wave function associated with the particle's quantum state is
+
+$$
+\psi_n(x)
+=
+\begin{cases}
+A\cdot\sin\left(\frac{n\pi}{L}x\right) & 0\leq x\leq L\\
+0 & \text{else},
+\end{cases}
+$$
+
+where $A\geq 0$ is the *amplitude*, and $n=1,\,2,\,3,\,...$ indexes the particle's *energy level*. The higher the energy level, the more "excited" the particle is. Behold:
+
+```{r}
+#| echo: false
+#| fig-asp: .4
+#| fig-align: center
+energy = 1:4
+L = 1
+par(mfrow = c(1, length(energy)),
+    mar = c(4, 2, 4, 1))
+for(n in energy){
+        curve(sqrt(2/L)*sin(n*pi*x/L), 
+            from = 0, to = L, n = 1000, 
+            ylim = c(-2, 2),
+            main = bquote(psi[.(n)]), 
+            ylab = "", xaxt = "n",
+            xlab = "position",
+            col = "red", lwd = 2, bty = "n",
+            cex.main = 1.5)
+      axis(1, pos = 0)
+}
+```
+
+Because the particle does not have a definite position before measurement, we treat the position $X_n\in[0,\,L]$ of the particle as a continuous random variable whose probability density function is $f_n(x)=|\psi_n(x)|^2$.
+
+a. Compute the value of $A$ that ensures that $f_n$ is a valid pdf;
+a. Compute the cdf of the random variable $X_n$ and plot it for various values of $n$;
+a. What is the expected location of the particle?
+a. What is the probability that the particle is located at the midpoint of the interval?
+a. Let $n=4$ and $L=1$. What is the probability that the particle is located in the interval $[0.2, 0.3]$?
+a. The parameter $n=1,\,2,\,3,\,...$ indexes the energy level of the particle. The larger the value of $n$, the more excited the particle is. If $n\to\infty$, then the particle is, like, super stoked. What happens to the distribution of $X_n$ as $n\to\infty$? You will get full credit if you state a conjecture and justify it with words and pictures, but if you can write a formal proof, go for it!
+
+
+[^1]: If you’re like me, you cannot do this. Oh well.

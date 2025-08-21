@@ -1,0 +1,49 @@
+---
+title: "Vectors"
+format: html
+editor: 
+  mode: source
+---
+
+A **vector** in R is just an ordered set of values that have the same type. The easiest way to create one is to manually list out the values, separated by commas, inside `c()`:
+
+```{r}
+myvec <- c(pi, 5, 3.6, 2, 9, 6000) 
+myvec
+```
+
+If you want to list out all of the integers between some min and max, you can use this shortcut:
+
+```{r}
+5:15
+```
+
+More generally, if you want a vector of evenly spaced numbers between a min and a max, do this:
+
+```{r}
+a <- seq(0, 1, length.out = 11) 
+a
+```
+
+If you want to create a "blank" vector that just has zeros in it, here you go:
+
+```{r}
+z <- numeric(10)
+z
+```
+
+In all of those cases, our vector contained numbers, but there is nothing special about numbers. Here is a vector where each value is a **string** (a piece of text):
+
+```{r}
+poetry <- c("Mary", "had", "a", "little", "chainsaw")
+poetry
+```
+
+If you have two vectors and you want to combine them into one, you can just use the `c()` command again. The "c" stands for "concatenate." You're concatenating, or joining, the vectors end-to-end:
+
+```{r}
+more <- c("whose", "chain", "was", "red", "as")
+
+masterpiece <- c(poetry, more)
+masterpiece
+```

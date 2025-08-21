@@ -1,0 +1,5 @@
+Prove that
+
+$$
+P(A)+P(B)-1\leq P(A\cap B).
+$$

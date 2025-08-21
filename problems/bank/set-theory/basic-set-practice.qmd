@@ -1,0 +1,22 @@
+Take $\mathbb{R}$ to be your reference set, and consider these subsets:
+
+$$
+\begin{align*}
+A&=[1,\,5]\\
+B&=\{x\in\mathbb{R}\,:\,|x|>2\}\\
+C&=(-\infty,\,0]\\
+I_n&=\left[0,\,\frac{1}{n}\right]
+\end{align*}
+$$
+
+Express each of the following in as simplified and concise a form as possible:
+
+a.  $A^c$
+a.  $A \cup B$
+a.  $A\cap C$
+a.  $A\cap C^c$
+a.  $B \cap C^c$
+a.  $A^c \cap B^c \cap C^c$
+a.  $(A \cup B) \cap C$
+a.  $\bigcap_{n=1}^\infty I_n$
+a.  $\bigcup_{n=1}^\infty I_n$

@@ -1,0 +1,54 @@
+We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status $D$ and their test result $T$. In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms $S$.
+
+@tbl-disease enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients' "true" disease status was determined by a PCR test that we assume is hella accurate.
+
+```{r}
+#| echo: false
+#| eval: false
+DnSnTn = 840 # D- S- T-
+DnSnTy = 014 # D- S- T+
+DnSyTn = 185 # D- S+ T-
+DnSyTy = 002 # D- S+ T+
+DySnTn = 010 # D+ S- T-
+DySnTy = 007 # D+ S- T+
+DySyTn = 008 # D+ S+ T-
+DySyTy = 032 # D+ S+ T+
+
+n = DnSnTn + DnSnTy + DnSyTn + DnSyTy + DySnTn + DySnTy + DySyTn + DySyTy
+
+pDnSnTn = round(DnSnTn / n, digits = 4) # D- S- T-
+pDnSnTy = round(DnSnTy / n, digits = 4) # D- S- T+
+pDnSyTn = round(DnSyTn / n, digits = 4) # D- S+ T-
+pDnSyTy = round(DnSyTy / n, digits = 4) # D- S+ T+
+pDySnTn = round(DySnTn / n, digits = 4) # D+ S- T-
+pDySnTy = round(DySnTy / n, digits = 4) # D+ S- T+
+pDySyTn = round(DySyTn / n, digits = 4) # D+ S+ T-
+pDySyTy = round(DySyTy / n, digits = 4) # D+ S+ T+
+
+pDnSnTn + pDnSnTy + pDnSyTn + pDnSyTy + pDySnTn + pDySnTy + pDySyTn + pDySyTy
+```
+
+::: {.center-table}
+| $D$ | $S$ | $T$ | $P(D\cap S\cap T)$ |
+|-----|-----|-----|--------------------|
+| \-  | \-  | \-  | 0.7650             |
+| \-  | \-  | \+  | 0.0128             |
+| \-  | \+  | \-  | 0.1685             |
+| \-  | \+  | \+  | 0.0018             |
+| \+  | \-  | \-  | 0.0091             |
+| \+  | \-  | \+  | 0.0064             |
+| \+  | \+  | \-  | 0.0073             |
+| \+  | \+  | \+  | 0.0291             |
+
+: Some COVID-19 numbers. Source: [CDC](https://www.cdc.gov/mmwr/volumes/69/wr/mm695152a3.htm) {#tbl-disease tbl-colwidths="\[25, 25, 25, 25\]"}
+:::
+
+a.  What is the overall disease prevalence?
+
+b.  What is the sensitivity of the test?
+
+c.  What is the specificity of the test?
+
+d.  Imagine you develop symptoms. So you visit [Dr. Vinnie Boombatz](https://youtu.be/Bg36PU96U0w?si=3rmlqIYRpsXbAH1L) to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?
+
+e.  What is the overall probability that the test is wrong?

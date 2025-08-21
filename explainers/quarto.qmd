@@ -1,0 +1,30 @@
+---
+title: "Quarto"
+format: html
+editor: 
+  mode: source
+---
+
+Quarto is a technical publishing system that allows you to write documents where text, math, code, and the output of that code are seamlessly integrated in a reproducible way. Quarto is baller. I had never used it before coming to Duke, and now I am low-key obsessed. You will mainly use Quarto for the lab write-ups in this class, but if you wish to use it for your problem set solutions as well, be my guest!
+
+Below is a very brief primer to get you started. If you took STA 101 or STA 199, you have already used Quarto extensively and can probably skip this. If you wish to go deeper and become a Quarto power user, [what are you waiting for](https://quarto.org/docs/get-started/hello/rstudio.html)? 
+
+## Quick start
+
+Here is a screenshot of my RStudio container: 
+
+![](images/quarto.png){fig-align="center"}
+
+In the upper left, I have the editor open, and I'm working on a `.qmd` file. This is just a text file with a special format. When I'm done editing, I hit the **Render** button (circled in red), and if there are no errors, a nice `.pdf` file is produced in the Viewer tab in the bottom right. 
+
+That's pretty much the whole ballgame:
+
+> Edit the `.qmd` file → hit **Render** → get a `.pdf`
+
+Alright, so what goes in the `.qmd` file?
+
+1. At the top, in between `---`, you have the document's metadata: title, author, date, and so forth. We are not going to get fancy with it, but there are [loads](https://quarto.org/docs/reference/formats/pdf.html) of settings you can play with;
+2. You can write text the same as you would in Google Docs or Microsoft Word. Quarto syntax is based on markdown, and you can learn about the formatting options [here](https://quarto.org/docs/authoring/markdown-basics.html);
+3. The grey block beginning with ` ```{r} ` and ending with ` ``` ` is called a **code chunk**. Chunks of code go in there. In the rendered document, the code will be nicely formatted and stylized amidst the text;
+4. When you render, the code in your code chunks is actually executed, and the output is included in the final document. This is super convenient for producing tables and figures;
+5. You can also include nicely formatted equations and math notation in your Quarto documents. See [here](https://sta240-f25.github.io/math/latex.html) for details. 

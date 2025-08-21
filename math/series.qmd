@@ -1,0 +1,75 @@
+---
+title: "Infinite series"
+format: html
+---
+
+Roughly speaking, an **infinite series** is the sum of infinitely many numbers:
+
+$$
+\sum\limits_{n=0}^\infty a_n=a_0+a_1+a_2+a_3+\cdots
+$$
+
+Strictly speaking, it is the limit of the sequence of **partial sums**:
+
+$$
+\sum\limits_{n=0}^\infty a_n=\lim_{k\to\infty}\sum\limits_{n=0}^ka_n.
+$$
+
+This limit may or may not be finite, and there are many famous examples of this. 
+
+## Geometric series
+
+Don't you love this:
+
+$$
+\frac{a}{1-r}=\sum\limits_{n=0}^\infty ar^n,\quad |r|<1.
+$$
+
+The partial sums are also well-behaved:
+
+$$
+\sum\limits_{n=0}^k ar^n
+=
+\begin{cases}
+a(k+1) & r=1\\
+a\left(\frac{1-r^{k+1}}{1-r}\right) & \text{else}.
+\end{cases}
+$$
+
+## $p$-series
+
+If $p>1$, this converges:
+
+$$
+\sum\limits_{n=1}^\infty\frac{1}{n^p}.
+$$
+
+Here are concrete examples:
+
+$$
+\begin{aligned}
+\sum\limits_{n=1}^\infty\frac{1}{n}&=\infty &&\text{(harmonic series)}\\
+\sum\limits_{n=1}^\infty\frac{1}{n^2}&=\frac{\pi^2}{6}\\
+\sum\limits_{n=1}^\infty\frac{1}{n^3}&\approx 1.202057.
+\end{aligned}
+$$
+
+## Taylor series
+
+If a function $f$ is infinitely differentiable at 0, then we can rewrite it using the **Taylor expansion**:
+
+$$
+f(x)
+=
+\sum\limits_{n=0}^\infty \frac{f^{(n)}(0)}{n!}x^n,\quad \text{for some  }x.
+$$
+
+The set of $x$-values for which the Taylor expansion is valid is called the **radius of convergence**. Here are examples for specific functions:
+
+$$
+\begin{aligned}
+\frac{1}{1-x}&=\sum\limits_{n=0}^\infty x^n,&&-1<x<1\\
+e^x&=\sum\limits_{n=0}^\infty\frac{x^n}{n!},&&-\infty < x < \infty\\
+\ln(1-x)&=-\sum\limits_{n=0}^\infty\frac{x^n}{n},&&-1\leq x < 1.
+\end{aligned}
+$$

@@ -1,0 +1,9 @@
+Let $S$ be a sample space, let $A,\, B\subseteq S$ be events, and define a new set
+
+$$
+A-B = \{x\in S:x\in A\text{ and }x\notin B\}.
+$$
+
+a.  Draw a well-labeled picture of $A$, $B$, $S$, and the set $A-B$;
+b.  Write down an equivalent expression for $A-B$ that only makes use of our three basic operations: union, intersection, and complement;
+c.  Prove that $P(A-B)=P(A)-P(A\cap B)$.

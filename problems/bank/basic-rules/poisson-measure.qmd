@@ -1,0 +1,15 @@
+Suppose we have the sample space $S=\mathbb{N}=\{0,\,1,\,2,\,...\}$ and a probability measure $P$ that assigns the following individual probabilities to the singleton sets:
+
+$$
+P(\{i\})=c\frac{4^i}{i!},\quad i\in\mathbb{N}.
+$$
+
+a.  In order for $P$ to satisfy the axiom of total measure one, what *must* be the value of the constant $c>0$.
+b.  Which outcome(s) in the sample space are most likely (ie have the largest individual probability of occurring)? Furthermore, how do you know for a fact that you've identified all of them? The sample space is infinite, so presumably you cannot literally check every outcome.
+c.  What is the probability of the even numbers?
+
+::: callout-note
+## Be careful!
+
+I could not care less about the answers to these questions. It's all about the reasoning, and showing that you understand how the ideas fit together. To earn full credit, make sure you carefully justify everything by making appropriate reference to the rules and axioms.
+:::

@@ -1,0 +1,50 @@
+---
+title: "Vectorization"
+format: html
+editor: 
+  mode: source
+---
+
+Functions in `R` are often **vectorized**. For example:
+
+```{r}
+exp(2)
+```
+
+I give it one number, and it returns one number. If instead, I supply a vector, I get this:
+
+```{r}
+exp(c(-3, 0.001, 2, 5, 600, 1, 0))
+```
+
+So when I supply a regular ol' number as an argument, the `exp` function returns a number. When I supply a vector, it returns a vector; the `exp` function knows to act entry-wise and give me back a vector with the output of each entry-wise computation. In other words, I didn't have to write a loop to manually do this. The function is vectorized, so it effectively runs the loop for me.
+
+So consider for instance the set of numbers $A = \{-100, -6, 0.001, \pi, 30\}$, and this stupid function:
+
+$$
+f(x) = \ln^2\left|\frac{2x}{1-\sin(x)}\right|.
+$$
+
+If I wanted to compute the value of $f$ for each of the arguments in $A$, I could write a loop that goes entry-by-entry through $A$ and applies the function $f$ to it. But in `R`, because arithmetic operations are vectorized, I can do this:
+
+```{r}
+A = c(-100, -6, 0.001, pi, 30)
+
+log( abs( (2 * A) / ( 1 - sin(A) ) ) ) ^ 2 
+```
+
+Dumb!
+
+All of the basic [arithmetic operations](https://sta240-f25.github.io/explainers/math.html) are vectorized like this:
+
+```{r}
+c(1, 2, 3) + 2
+```
+
+```{r}
+c(1, 2, 3) + c(1, 2, 3)
+```
+
+```{r}
+floor(c(4, 5.1, 6.9))
+```

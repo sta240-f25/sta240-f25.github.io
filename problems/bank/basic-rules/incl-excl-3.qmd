@@ -1,0 +1,11 @@
+Let $S$ be a sample space, and consider events $A,\, B,\, C\subseteq S$. Recall that the law of inclusion/exclusion says that
+
+$$
+P(A\cup B)=P(A)+P(B)-P(A\cap B).
+$$
+
+a.  How should this be extended to unions of three events? $$
+    P(A\cup B\cup C)=P(A)+P(B)+P(C) +\,...{???}
+    $$ Explain your conjecture with words and pictures.
+
+b.  Use set theory and the probabiity axioms to prove your conjecture in the previous part.

@@ -1,0 +1,6 @@
+Seven balls are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green balls. Find the probability that
+
+a.  3 red, 2 blue, and 2 green balls are withdrawn;
+b.  at least 2 red balls are withdrawn;
+c.  all withdrawn balls are the same color;
+d.  either exactly 3 red balls or exactly 3 blue balls are withdrawn.

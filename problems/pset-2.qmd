@@ -1,0 +1,55 @@
+---
+title: "Problem Set 2"
+subtitle: Due Friday September 19 at 5PM
+draft: true
+editor: 
+  mode: source
+---
+
+## Problem 0
+
+{{< include bank/_music-rec.qmd >}}
+
+## Problem 1
+
+{{< include bank/conceptual/lousy-forecasting.qmd >}}
+
+## Problem 2
+
+{{< include bank/basic-rules/union-bound.qmd >}}
+
+## Problem 3
+
+Another proof
+
+## Problem 4
+
+Counting
+
+## Problem 5
+
+Counting
+
+## Problem 6
+
+Counting
+
+## Problem 7
+
+Counting
+
+## Problem 8
+
+{{< include bank/counting/spotify-shuffle.qmd >}}
+
+## Problem 9
+
+{{< include bank/conditional-probability/independent-complements.qmd >}}
+
+## Problem 10
+
+Conditional probability (Roy Meadow?)
+
+## Submission
+
+{{< include bank/_submission.qmd >}}

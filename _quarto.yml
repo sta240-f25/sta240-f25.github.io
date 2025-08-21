@@ -1,0 +1,103 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "STA 240 Fall 2025"
+  description: "Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025."
+  site-url: "https://sta240-f25.github.io/"
+
+  open-graph: true
+
+  #draft-mode: unlinked
+
+  sidebar:
+    background: "#FFFB71"
+    logo: "img/logo.png"
+    pinned: true
+    align: center
+
+    style: docked
+    search: true
+    collapse-level: 1
+    contents:
+      - section: "Syllabus"
+        contents:
+          - href: syllabus/syllabus_overview.qmd
+            text: Overview
+          - href: syllabus/syllabus_team.qmd
+            text: Teaching team
+          - href: syllabus/syllabus_materials.qmd
+            text: Materials
+          - href: syllabus/syllabus_assignments.qmd
+            text: Assignments and grading
+          - href: syllabus/syllabus_policies.qmd
+            text: Policies
+          - href: syllabus/syllabus_resources.qmd
+            text: University resources
+          - href: index.qmd
+            text: Schedule
+      - section: "Math Review"
+        contents:
+          - href: math/greeks.qmd
+            text: Greek alphabet
+          - href: math/logexp.qmd
+            text: Exponents and logarithms
+          - href: math/differentiation.qmd
+            text: Differentiation
+          - href: math/integration.qmd
+            text: Integration
+          - href: math/limits.qmd
+            text: Limits and continuity
+          - href: math/series.qmd
+            text: Infinite series
+          - href: math/latex.qmd
+            text: Typing math
+      - section: "`R` Explainers"
+        contents:
+          - href: explainers/setup.qmd
+            text: Getting started
+          - href: explainers/RStudio.qmd
+            text: The lay of the land
+          - href: explainers/quarto.qmd
+            text: Quarto
+          - href: explainers/math.qmd
+            text: Basic math
+          - href: explainers/vectors.qmd
+            text: Vectors
+          - href: explainers/vectorization.qmd
+            text: Vectorization
+          - href: explainers/lineplot.qmd
+            text: Plotting lines
+          #- href: explainers/sample.qmd
+          #  text: "`sample`"
+      - section: "Problem Sets"
+        contents:
+          - href: problems/pset-0.qmd
+            text: Problem Set 0
+          - href: problems/pset-1.qmd
+            text: Problem Set 1
+      - section: "Labs"
+      - section: "Exam Review"
+            
+  page-footer:
+    right: 'This page is built with [Quarto](https://quarto.org/).'
+    left: "&copy; Copyright 2025 John Zito"
+    background: "#FFFB71"
+
+format: 
+  html:
+    mainfont: Atkinson Hyperlegible
+    highlight-style: a11y-light
+
+theme:
+  light: [cosmo, style/sta199.scss]
+#  dark: [cosmo, style/sta199.scss, style/dark.scss]
+linkcolor: "#798b93"
+toc: true
+code-copy: hover
+code-link: true
+code-overflow: wrap
+
+execute:
+  freeze: auto

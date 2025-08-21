@@ -1,0 +1,7 @@
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AYnJv68T3MM?si=_U71PKZBswt8j5qv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+Persi Diaconis is a famous researcher in probability and statistics. He has a cute line of research where he probes the randomness that we take for granted in simple things like coin tossing, dice, and playing cards. In the interview above he discusses coin tossing, and says both "coin tossing is as close to a random phenomenon as I know" and "coin tossing is a deterministic process. What's random about it?" Wut?
+
+Watch the interview, and report back with a brief summary of Diaconis' explanation of what makes a coin toss random. Do you agree or disagree?

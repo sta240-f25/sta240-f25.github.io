@@ -1,0 +1,15 @@
+Let $A_1,\,A_2,\,A_3,\,...\subseteq S$ be an infinite sequence of possibly overlapping events in some probability space.
+
+a.  Define a new sequence of events $B_i=A_i\cap \left(\bigcup_{j=1}^{i-1}A_j\right)^c$, and show that these are pairwise disjoint.
+
+b.  Show that
+
+$$
+\bigcup_{i=1}^\infty A_i=\bigcup_{i=1}^\infty B_i.
+$$
+
+c.  Use the previous parts to show that
+
+$$
+P\left(\bigcup_{i=1}^\infty A_i\right)\leq\sum\limits_{i=1}^\infty P(A_i).
+$$

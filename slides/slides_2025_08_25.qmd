@@ -1,0 +1,942 @@
+---
+title: "Welcome to STA 240!"
+format: revealjs
+auto-stretch: false
+editor: 
+  mode: source
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+library(googlesheets4)
+library(tidyverse)
+gs4_deauth()
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1DLF886x5_-r4eYhZdRAqcDKhR4mi1T2JxaaM7nfIUgk/edit?usp=sharing") |>
+  rename(birthday = `What is your birthday?`,
+         bday_prob = `How many people need to attend a party for there to be a 50% chance that at least two share a birthday?`,
+         potato = `There is a sack of potatoes at the front of the classroom. Without touching it, guess how much it weighs in pounds.`,
+         price = `As of this morning, what is the price (USD) of this product at Harris Teeter?`,
+         age = `How old was this person (in years) when the photo was taken?`,
+         monty = `On a game show, you are presented with three doors. Behind one of the doors is the grand prize, and behind each of the other two doors is a goat. If you select the door that has the prize, you win. The game proceeds as follows:\n\n1. You select one of the doors to open;\n2. The host does not open the door you selected. Instead, he opens one of the doors you did not select to reveal a goat;\n3. The host asks you if you would like to change your selection to the remaining door (the one you did not select initially and the host did not open). \n\nWhat should you do?`,
+         pinker = `Consider the two scatterplots. One is pure random noise, and the other has been manipulated. Which is which?`)
+
+#bday_prob
+#monty
+#potato
+#price
+#age
+```
+
+
+## Welcome to STA 240! {.large}
+
+::::: {.columns .v-center-container}
+::: {.column width="50%"}
+While you wait, please complete this brief questionnaire:
+:::
+
+::: {.column width="50%"}
+{{< qrcode https://docs.google.com/forms/d/e/1FAIpQLSfjaBcAwYmq8Ynxl9CqjI9k-aXIXW9t9_t1wLg8_tS7G8gnWw/viewform?usp=dialog width=300 height=300 >}}
+:::
+:::::
+
+## Teaching Team {.medium .scrollable}
+
+| Mug                   | Name        | Role       | Office Hours  |
+|-----------------------|-------------|------------|---------------|
+| ![](images/yh.jpg){.c} | Hu, Yuang   | TA         | TBD           |
+| ![](images/al.jpg){.c} | Liu, Aurora | Head TA    | TBD           |
+| ![](images/lm.png){.c} | Ma, Liane   | TA         | TBD           |
+| ![](images/z.jpg){.c} | Zito, John  | Instructor | Tue 3pm - 5pm |
+: {tbl-colwidths="[20,25,25,30]"}
+
+## Statistical Science Majors Union
+
+# Why should you study the mathematics of probability and statistics?
+
+# Reason 1: It's necessary.
+
+## Example: the birthday problem
+
+$k$ people convene for a birthday party:
+
+-   What is the probability that *at least two* of the attendees share a birthday?
+
+-   How many people need to show up to the party for there to be a 50% chance of at least one match?
+
+. . .
+
+Most people guess that you need, like, a lot.
+
+## Your guesses
+
+. . .
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+ggplot(d, aes(x = bday_prob)) + 
+  geom_histogram() + 
+  labs(
+    title = "How many people must attend for a 50% chance of a birthday match?",
+    x = "Number of people"
+  ) + 
+  geom_vline(xintercept = 23, col = "red")
+```
+
+## Example: the birthday problem {.medium}
+
+| no. of attendees (k) | Prob(at least one bday match) |
+|----------------------|-------------------------------|
+| 1                    | 0%                            |
+| 4                    | 1.6%                          |
+| 16                   | 28%                           |
+| 23                   | 50.7%                         |
+| 40                   | 89%                           |
+| 56                   | 98%                           |
+| 60                   | 99.4                          |
+| $\vdots$             | $\vdots$                      |
+| 366                  | 100.0%                        |
+
+**Key words**: binomial coefficient, pigeonhole principle
+
+## Example: the birthday problem
+
+![](images/birthday_prob.png)
+
+## Any matches today? {.scrollable}
+
+. . .
+
+```{r}
+#| echo: false
+d |>
+  mutate(birthday = format(birthday, "%m-%d")) |>
+  count(birthday, sort = TRUE) |>
+  rename(count = n) |>
+  knitr::kable()
+```
+
+## Example: the Monty Hall problem
+
+Let's play: <https://montyhall.io/>
+
+![](images/monty_hall.png){fig-align="center" width="50%"}
+
+. . .
+
+::: callout-note
+## Very counterintuitive
+
+Most people start out thinking that the two doors are equally likely to contain the prize, so switching doesn't matter. In fact, you have a 2/3 chance of winning if you switch.
+:::
+
+## You people
+
+. . .
+
+```{r}
+#| echo: false
+
+d |>
+  mutate(
+    monty = ifelse(monty == "Switch to the other door that you did not initially pick", "Switch", "Stay")
+  ) |>
+  ggplot(aes(y = monty)) + 
+  geom_bar() + 
+  labs(y = "What should you do?")
+```
+
+## Example: which is "truly" random?
+
+```{r}
+#| echo: false
+#| fig-asp: 0.5
+#| fig-align: center
+
+repulsive_points <- function(n, min_dist, max_iter = 1e6) {
+  pts <- matrix(NA, nrow = n, ncol = 2)
+  i <- 1
+  iter <- 0
+  
+  while (i <= n && iter < max_iter) {
+    iter <- iter + 1
+    candidate <- runif(2)  # random (x,y) in [0,1]^2
+    
+    if (i == 1) {
+      pts[i, ] <- candidate
+      i <- i + 1
+    } else {
+      d2 <- colSums((t(pts[1:(i-1), , drop = FALSE]) - candidate)^2)
+      if (min(d2) >= min_dist^2) {
+        pts[i, ] <- candidate
+        i <- i + 1
+      }
+    }
+  }
+  
+  if (i <= n) warning("Stopped early: could not place all points.")
+  pts
+}
+
+set.seed(8675309)
+n = 500
+pt_cex = 0.5
+x = runif(n)
+y = runif(n)
+pts <- repulsive_points(n, min_dist = 0.02)
+
+par(mfrow = c(1, 2), mar = c(2, 2, 2, 2))
+plot(x, y, pch = 19, cex = pt_cex, xlab = "", ylab = "", ylim = c(0, 1), xlim = c(0, 1))
+plot(pts, pch = 19, cex = pt_cex, xlab = "", ylab = "", ylim = c(0, 1), xlim = c(0, 1))
+
+left_is_random <- d |> 
+  count(pinker) |>
+  filter(pinker == "Left is pure random; Right is messed with.") |>
+  pull(n)
+
+right_is_random <- d |> 
+  count(pinker) |>
+  filter(pinker == "Left is messed with; Right is pure random.") |>
+  pull(n)
+```
+
+- `{r} left_is_random` of you said **Left** is pure random;
+- `{r} right_is_random` of you said **Right** is pure random.
+
+## Example: which is "truly" random?
+
+```{r}
+#| echo: false
+#| fig-asp: 0.5
+#| fig-align: center
+
+par(mfrow = c(1, 2), mar = c(2, 2, 2, 2))
+plot(x, y, pch = 19, cex = pt_cex, xlab = "", ylab = "", ylim = c(0, 1), xlim = c(0, 1))
+box(col = "red", lwd = 10)
+plot(pts, pch = 19, cex = pt_cex, xlab = "", ylab = "", ylim = c(0, 1), xlim = c(0, 1))
+
+```
+
+- Left: uniform random scatter;
+- Right: points manipulated to "repel" each other (no clumps).
+
+## This is why Spotify shuffle stinks
+
+::::: {.columns .v-center-container}
+
+::: {.column width="60%"}
+
+::: incremental
+- It used to be a pure random shuffle;
+- Then people complained that it didn't *feel* random to them: 
+    - streaks of the same artist in a row;
+    - clumps of the same genre, etc;
+- Now they do lord-only-knows-what.
+:::
+
+:::
+
+::: {.column width="40%"}
+![](images/spotify.png){width="90%"}
+:::
+:::::
+
+
+## Example: the wisdom of crowds {.medium}
+
+::::: columns
+::: {.column width="30%"}
+![](images/weight.jpg)
+:::
+
+::: {.column width="70%"}
+At a 1906 country fair in Plymouth, 800 people participated in a contest to estimate the weight of an ox. Francis Galton observed that the median guess, 1207 lbs, was accurate within 1% of the true weight of 1198 lbs.
+:::
+:::::
+
+. . .
+
+::: callout-note
+## Lesson
+
+The aggregation of many imperfect estimates/guesses is often better than a needle-in-haystack search for the "best" individual guess.
+:::
+
+. . .
+
+::: callout-warning
+## Isn't that obvious?
+
+It took humans a long time to realize this. The first recorded uses of an "average" were during Isaac Newton's lifetime (see Stigler's *Seven Pillars of Statistical Wisdom*).
+:::
+
+## Weight guessing
+
+. . .
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot(d, aes(x = potato)) + 
+  geom_histogram() + 
+  labs(
+    title = "How much does the sack of potatoes weigh?",
+    x = "Weight (lbs)"
+  )
+```
+
+## Price guessing
+
+. . .
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot(d, aes(x = price)) + 
+  geom_histogram() + 
+  labs(
+    title = "How much does the ice cream cost?",
+    x = "Price ($)"
+  ) + 
+  geom_vline(xintercept = 5, col = "red")
+```
+
+## Age guessing
+
+. . .
+
+::::: {.columns .v-center-container}
+::: {.column width="50%"}
+Jascha Heifetz?
+Bette Midler?
+Bea Arthur?
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-asp: 1
+
+ggplot(d, aes(x = age)) + 
+  geom_histogram() + 
+  labs(
+    title = "How old was so-and-so?",
+    x = "Age (years)"
+  ) + 
+  geom_vline(xintercept = 50, col = "red")
+```
+
+:::
+:::::
+
+## The modern-day wisdom of crowds?
+
+::: callout-warning
+## [We frequently forget and relearn this lesson.](https://polymarket.com)
+
+![](images/prediction_markets.png) 
+
+(source: [CNN](https://www.cnn.com/2024/11/08/business/polymarket-election-trump-nightcap/index.html))
+:::
+
+
+## Example: the folly of doctors {.scrollable}
+
+> A 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the true positive rate of the test is 90%, and if the false positive rate is 9%, what is the chance that the woman *actually* has cancer, given that she tested positive?
+
+. . .
+
+You will know how to answer this in four weeks. Doctors though...
+
+. . .
+
+::: callout-warning
+## [BBC News 2014](https://www.bbc.com/news/magazine-28166019)
+
+Only 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.
+
+"*We can only imagine how much anxiety those innumerate doctors instil in women*."
+:::
+
+## Sally Clark (1964 - 2007)
+
+::::: {.columns .v-center-container}
+::: {.column width="30%"}
+![](images/sally-clark.png)
+:::
+
+::: {.column width="70%"}
+
+::: incremental
+- English solicitor;
+- 1996: first son died in bed at 11 weeks;
+- 1998: second son died in bed at 8 weeks;
+- Clark arrested on suspicion of murder;
+- Defense claimed it was SIDS (sudden infant death syndrome).
+:::
+
+:::
+:::::
+
+## Sir Roy Meadow (1933 - )
+
+::::: {.columns .v-center-container}
+::: {.column width="60%"}
+
+::: incremental
+- Pediatrician specializing in "Munchausen syndrome by proxy;"
+- Gave erroneous "expert" testimony that there is a "1 in 73,000,000" chance of two SIDS deaths in the same family;
+    - first, that's not true;
+    - second, so what?
+- 1999: Clark convicted. 
+
+:::
+
+:::
+
+::: {.column width="40%"}
+![](images/meadow.png)
+:::
+:::::
+
+
+## A sad story
+
+::::: {.columns .v-center-container}
+::: {.column width="40%"}
+![](images/rss.png)
+:::
+
+::: {.column width="60%"}
+
+::: incremental
+- Stats community loudly panned Meadow's testimony;
+- 2003: conviction overturned on appeal after revelation that exculpatory evidence was suppressed; 
+- 2007: Clark drinks herself to death.
+:::
+
+
+:::
+:::::
+
+
+## Reason 1: It's necessary. {.large-ish}
+
+::::: {.columns .v-center-container}
+::: {.column width="45%"}
+![](images/tom-jerry-rake.gif)
+:::
+
+::: {.column width="55%"}
+Human intuition and “common sense” about probability and statistics are often just flat out wrong, in silly and dangerous ways. Mere mortals require the scaffolding of mathematics to discipline our thinking.
+:::
+:::::
+
+# Reason 2: It's useful.
+
+## New title: The Unreasonable Effectiveness of Probability in...Everything?
+
+::: callout-note
+## [Read it!](https://doi.org/10.1002/cpa.3160130102)
+
+![](images/wigner.png){fig-align="center" width="70%"}
+:::
+
+## Example: LLMs
+
+. . .
+
+::: callout-note
+## Question
+
+What method does ChatGPT use to generate the next word in one of its responses?
+:::
+
+. . .
+
+[Let's ask!](https://chatgpt.com)
+
+## Example: the mathematics of insurance
+
+::::: {.columns .v-center-container}
+::: {.column width="40%"}
+![](images/double-indemnity.jpg)
+:::
+
+::: {.column width="60%"}
+
+::: incremental 
+- When an insurance company sells you a policy, they are making a bet that you won't need it;
+- If all policyholders make a claim, they're ruined;
+- Who should they sell to, and at what price, to ensure they don't go broke?
+- Ask an *actuary*! Licensed professionals with expertise in probability, statistics, and risk management.
+:::
+
+:::
+:::::
+
+## Example: the mathematics of insurance {.medium}
+
+::::: {.columns }
+::: {.column width="50%"}
+1. Nurse practitioner
+2. IT Manager
+3. Physician Assistant
+4. Financial Manager
+5. Software Developer
+6. Information Security Analyst
+7. Health Services Manager
+8. [***Data Scientist***]{style="color:red;"}
+9. Speech-Language Pathologist
+10. [***Actuary***]{style="color:red;"}
+:::
+
+::: {.column width="50%"}
+
+![](images/badge-jobs-year.svg){fig-align="center" width="50%"}
+
+- Future prospects (30%)
+- Wage potential (25%) 
+- Employment (20%) 
+- Job safety/stability (15%) 
+- Work-life balance (10%) 
+
+:::
+:::::
+
+## Probably isn't boring these days
+
+::: callout-important
+## Plenty of complex, challenging, high-impact issues:
+
+[![](images/nyt-insurance.png){fig-align="center" width="80%"}](https://www.nytimes.com/interactive/2024/12/18/climate/insurance-non-renewal-climate-crisis.html)
+:::
+
+## Example: genetics?
+
+## Example: quantum mechanics
+
+***key words***: Schrödinger's cat, uncertainty principle, etc
+
+::::: {.columns}
+::: {.column width="40%"}
+![](images/wavefunction.gif)
+:::
+
+::: {.column width="60%"}
+::: incremental 
+- Probability is fundamentally braided into the fabric of reality;
+- Particles at the (sub)atomic level do not have a definite position and momentum until measured;
+- There are only probabilities associated with the possible outcomes;
+- These ideas are hard, but some of the math will be accessible to us.
+:::
+:::
+:::::
+
+## Reason 2: It's useful. {.large}
+
+::::: {.columns .v-center-container}
+::: {.column width="45%"}
+![](images/popeye.gif)
+:::
+
+::: {.column width="55%"}
+No area of science or technology can be properly understood without knowing something about probability. Period.
+:::
+:::::
+
+# Reason 3: It's beautiful.
+
+## Two old hags
+
+. . .
+
+::: callout-tip
+## Bertrand Russell, [*Mysticism and Logic and Other Essays*](https://en.wikisource.org/wiki/Mysticism_and_Logic_and_Other_Essays/Chapter_04) (1917)
+
+::::: {.columns .v-center-container}
+::: {.column width="15%"}
+![](images/russell.webp)
+:::
+
+::: {.column width="85%"}
+"Mathematics, rightly viewed, possesses not only truth, but supreme beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show."
+:::
+:::::
+
+:::
+
+. . .
+
+::: callout-tip
+## Albert Einstein, ["The Late Emmy Noether"](https://www.nytimes.com/1935/05/04/archives/the-late-emmy-noether-professor-einstein-writes-in-appreciation-of.html?smid=url-share) (1935)
+
+::::: {.columns .v-center-container}
+
+::: {.column width="15%"}
+![](images/einstein.jpg)
+:::
+
+::: {.column width="85%"}
+"Pure mathematics is, in its way, the poetry of logical ideas."
+:::
+
+:::::
+
+:::
+
+## This is a theorem we will prove:
+
+![](images/galton.gif){fig-align="center"}
+
+
+## Reason 3: It's beautiful. {.large-ish}
+
+::::: {.columns .v-center-container}
+::: {.column width="45%"}
+![](images/whats-opera-doc.gif)
+:::
+
+::: {.column width="55%"}
+Ostensibly random behavior can nevertheless be quite patternful, in ways that we can actually penetrate with elegant mathematics. 
+:::
+:::::
+
+## Why study mathematical probstat?
+
+::: incremental
+1.  It's necessary.
+
+    -   Humans suck at thinking about this stuff.
+
+2.  It's useful.
+
+    -   It makes studying other things so much easier.
+
+3.  It's beautiful.
+
+    -   This is the main reason, honestly.
+:::
+
+. . .
+
+Sound good?
+
+# Syllabus highlights
+
+## Bookmark the course page! {.large}
+
+::::: {.columns .v-center-container}
+::: {.column width="30%"}
+{{< qrcode https://sta240-f25.github.io/ width=300 height=300 >}}
+:::
+
+::: {.column width="70%"}
+<https://sta240-f25.github.io/>
+:::
+:::::
+
+## Final grade breakdown
+
+Your final course grade will be calculated as follows:
+
+| Category       | Percentage |
+|----------------|------------|
+| Labs           | 10%        |
+| Problem Sets   | 30%        |
+| Midterm Exam 1 | 20%        |
+| Midterm Exam 2 | 20%        |
+| Final exam     | 20%        |
+
+::: callout-warning
+The final letter grade will be based on the usual thresholds, which will not change and will be applied exactly. So no curve and no rounding.
+:::
+
+## So...where's the wiggle room?
+
+-   We drop the two lowest labs;
+-   We drop the lowest problem set;
+-   We will replace your lowest midterm score with your final exam score (if it's better).
+
+## Labs (10%)
+
+Led by Aurora in Perkins LINK 087 (Classroom 3):
+
+-   Thursday 1:25 PM - 2:40 PM;
+-   Thursday 3:05 PM - 4:20 PM.
+
+Guided activities introducing you to special topics, extensions, applications, and case studies. We will also introduce some basic `R` stuff, and we will use Quarto for the lab write-ups.
+
+::: callout-note
+## Plan to attend regularly
+
+Designed to be complete-able during the lab period, but due by 11:59 PM that same day.
+:::
+
+## Problem Sets (30%)
+
+-   Mostly pencil-and-paper math problems, with some coding thrown in occasionally;
+-   Compose solutions however you want: scan or photograph written work, handwriting capture, LaTeX, Quarto, whatever;
+-   Submit a single PDF in Gradescope (and mark your pages!)
+
+::: callout-warning
+## Late policy
+
+No late work will be accepted unless you request an extension in advance by e-mailing JZ. All reasonable requests will be entertained, but extensions will not be long.
+:::
+
+## Exams (20% each) {.scrollable}
+
+Traditional, in-class, written exams:
+
+-   **Midterm 1**: Thursday October 9 *in your lab*;
+-   **Midterm 2**: Thursday November 13 *in your lab*;
+-   **Final Exam**: Friday December 12.
+
+. . .
+
+You are allowed only two resources:
+
+- A "dumb" calculator (no wi-fi), which you won't need;
+- Both sides of one 8.5" x 11" note sheet created by you.
+
+. . .
+
+::: callout-note
+## If you need testing accommodations...
+
+Make sure I get an SDAO letter, and make your appointments in the [Testing Center](https://testingcenter.duke.edu/) now.
+:::
+
+## Attendance
+
+Not required. Live your life.
+
+## Communication
+
+If you wish to ask questions in writing...
+
+-   **Post on Ed**: about general course policies and content;
+
+-   **Email JZ directly**: personal matters.
+
+You should not really be emailing the TAs directly for any reason.
+
+## Collaboration
+
+You are *enthusiastically encouraged* to work together on labs and problem sets. You will learn a lot from each other! Two policies:
+
+- ✅ Acknowledge your collaborators: "Aloysius, Cybill, and I worked together on this problem;"
+- ❌ Do not outright share or copy solutions. All submitted work must be your own.
+
+Violation of the second policy is plagiarism. Sharers and recipients alike are referred to the conduct office and receive zeros.
+
+## Use of outside resources, including AI
+
+> [Using ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.](https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
+
+- If you find a problem solution online (or prompt an LLM to generate one) and submit it as your own work, that will obviously be considered plagiarism;
+- Otherwise, all outside resources are fair game for you to study and get extra practice;
+- If you outsource all of your *thinking* to a language model, you will probably tank every exam. Good luck!
+
+## What's the level of math here? {.scrollable}
+
+This is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:
+
+::: incremental
+-   differentiation (power rule, chain rule, all that)
+-   integration (FTOC, improper integrals, substitution, by parts...)
+-   limits and continuity (L'Hôpital's rule, etc)
+-   infinite series (Taylor series for $e^x$, anyone?)
+:::
+
+. . .
+
+**REVIEW**: [Problem Set 0](https://sta240-f25.github.io/problems/pset-0.html) is due 5PM Friday September 5.
+
+. . .
+
+::: callout-note
+## This is not sink-or-swim.
+
+- Lab on Thursday August 28 is a review session and work period for this assignment;
+- The course page has a [math review section](https://sta240-f25.github.io/math/differentiation.html) you can refer to.
+:::
+
+# So, what are we studying, anyway?
+
+## Probability
+
+::: {.v-center-container}
+
+::: callout-tip
+## What do we do?
+State the *distribution* (rules) of some random phenomenon, and then study how the realizations of that phenomenon "typically" behave.
+:::
+
+
+:::
+
+
+## An archetypal probability problem
+
+> Given a **fair** coin, how many flips will it take *on average* until you observe the first head?
+
+. . .
+
+![](images/prob-example.svg)
+
+
+## An archetypal probability problem
+
+> Given a **fair** coin, how many flips will it take *on average* until you observe the first head?
+
+Why is this a probability problem?
+
+::: incremental
+1.  select a phenomenon to study (the outcome of a coin flip);
+2.  fully specify its distribution (it's a fair, 50-50 coin);
+3.  study typical behavior of realizations (how many flips *on average* until the first head?).
+:::
+
+## Statistics is "probability in reverse" 
+
+::: {.v-center-container}
+
+::: callout-tip
+## What do we do?
+Start with the realizations of a random phenomenon with *unknown* distribution, and try to use those realizations to figure out what the distribution is.
+:::
+
+:::
+
+## An archetypal statistics problem
+
+> Given 28 flips from a mysterious coin, can you tell if it is fair?
+
+. . .
+
+![](images/stat-example.svg)
+
+## An archetypal statistics problem
+
+> Given 28 flips from a mysterious coin, can you tell if it is fair?
+
+
+::: incremental 
+- In probability, we *assumed* that the coin was fair, and then reasoned deductively from that;
+- In statistics, we do not do this;
+- We start with *some* coin, which may or may not be fair, and then we try to "infer" its properties based on the data.
+:::
+
+
+## Probability and statistics {.scrollable}
+
+![](images/probstat.png){fig-align="center" width="55%"}
+
+. . .
+
++-----------------+---------------------------------------------+
+| **Probability** | Forward problem\                            |
+|                 | Deductive\                                  |
+|                 | Reasons from rules to consequences          |
++-----------------+---------------------------------------------+
+| **Statistics**  | Inverse problem\                            |
+|                 | Inductive\                                  |
+|                 | Observe consequences, and *infer* rules     |
++-----------------+---------------------------------------------+
+
+## Forward problem versus inverse problem
+
+::::: {.columns .v-center-container}
+::: {.column width="50%"}
+![](images/chess.jpg)
+:::
+
+::: {.column width="50%"}
+
+::: incremental
+- **Forward**: read the rulebook, and then play a game of chess;
+
+- **Inverse**: watch a chess match, and based on the players' behavior, try to guess the rules.
+:::
+
+:::
+:::::
+
+
+
+## Forward problem versus inverse problem
+
+::: incremental
+- *Differentiation* is a forward problem. You know the function $F$, and you take its darn derivative;
+
+- *Integration* is an inverse problem. Given the derivative, you have to work backward to figure out what the original function was:
+:::
+
+. . .
+
+$$
+\text{FTOC:}\quad\int_a^bF'(x)\,\text{d} x=F(b)-F(a).
+$$
+
+## Inverse problems are tricky!
+
+::::: {.columns}
+::: {.column width="45%"}
+**Forward**
+
+> "Here's the question. What's the answer?"
+:::
+
+::: {.column width="50%"}
+**Inverse**
+
+> "If this is the answer, then what was the question?"
+:::
+:::::
+
+. . .
+
+::: callout-warning
+## Gird your loins
+Like all inverse problems, you will find that statistics is subtler, less well-defined, less straightforward, and more open-ended than probability.
+:::
+
+## The philosophy of probability {.scrollable}
+
+. . .
+
+Two common interpretive perspectives:
+
+::: incremental
+-   **Frequentist**: probability describes the long run frequency of repeatable events;
+-   **Subjective**: probability describes an observer's subjective experience of uncertainty. AKA: their "degrees of belief."
+:::
+
+. . .
+
+::: callout-note
+## You need both perspectives.
+
+Like the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.
+:::
+
+. . .
+
+::: callout-important
+## The math doesn't care which you prefer.
+
+Regardless your interpretation, the mathematics of probability is the same.
+:::

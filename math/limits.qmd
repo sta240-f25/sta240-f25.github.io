@@ -1,0 +1,101 @@
+---
+title: "Limits and continuity"
+format: html
+editor: 
+  mode: source
+---
+
+The limit of a function $f(x)$ at a point $c$ is the value that the function approaches as $x$ approaches $c$. We denote this:
+
+$$
+\lim_{x\to c}f(x).
+$$
+
+If the limit of the function and the actual *value* of the function agree, then the function is **continuous**:
+
+$$
+\lim_{x\to c}f(x)=f(c)
+$$
+If a function is continuous, that makes it especially convenient to evaluate limits because it means you can just plug-in and evaluate the darn function. But as @fig-continuity illustrates, not all functions are continuous. Some functions have breaks and jumps and holes that make them **discontinuous**.
+
+![](images/continuity-types.png){#fig-continuity fig-align="center" width="60%"}
+
+But not all discontinuities are created equal:
+
+- (upper right) the function has a *hole*. The limit the function approaches (the hole), and the value of the function (the point) are different;
+- (lower right) this function is **left continuous**. The value of the function and the limit *as you approach from the left* are in agreement. But there's a jump, and the limit *as you approach from the right* is different;
+- (lower left) this function is **right continuous**. The value of the function and the limit *as you approach from the right* are in agreement. But there's a jump, and the limit *as you approach from the left* is different;
+- (upper left) this function is just straight-up continuous. The left and the right limits both agree with the function value.
+
+
+
+
+## Limit rules
+
+Assume $\lim_{x\to c}f(x)$ and $\lim_{x\to c}g(x)$ exist, let $a,\,b\in\mathbb{R}$ be arbitrary constants, and let $r>0$. Then:
+
+| rule | formula |
+|------|------|
+| scaling | $$\lim_{x\to c}[a\cdot f(x)]=a\lim_{x\to c}f(x)$$ |
+| sum/difference | $$\lim_{x\to c}[f(x)\pm g(x)]=\lim_{x\to c}f(x)\pm\lim_{x\to c}g(x)$$ |
+| linearity | $$\lim_{x\to c}[a\cdot f(x)\pm b\cdot g(x)]=a\lim_{x\to c}f(x)\pm b\lim_{x\to c}g(x)$$ |
+| product | $$\lim_{x\to c}f(x)g(x)=\left[\lim_{x\to c}f(x)\right]\left[\lim_{x\to c}g(x)\right]$$ |
+| quotient | $$\lim_{x\to c}\frac{f(x)}{g(x)}=\frac{\lim_{x\to c} f(x)}{\lim_{x\to c} g(x)},\quad \text{if }\lim_{x\to c} g(x)\neq0.$$ |
+| power | $$\lim_{x\to c}f(x)^r=\left[\lim_{x\to c}f(x)\right]^r$$ |
+
+## Indeterminate forms and L'Hôpital's rule
+
+Most of the time, we hope that we can appeal to continuity and evaluate limits by simply "plugging-in." But sometimes plugging in gives loony stuff:
+
+$$
+\begin{aligned}
+\lim_{x\to 0}\frac{\sin x}{x}=1, &\text{ but }\frac{\sin(0)}{0}=\frac{0}{0};\\
+\lim_{x\to \infty}\frac{\ln x}{x}=0, &\text{ but }\frac{\ln\infty}{\infty}=\frac{\infty}{\infty}.\\
+\end{aligned}
+$$
+
+Things like $0/0$, $\infty/\infty$, and $0\times\infty$ are examples of **indeterminate forms**. If you get one, it doesn't necessarily mean that [the limit does not exist](https://youtu.be/oDAKKQuBtDo?si=K_FrQDi0n2cnxDXr). It just means that the jury is still out; it's *indeterminate*. To continue investigating, you can use a tool called **L'Hôpital's rule**. Whenever $\lim_{x\to c}f(x)=\lim_{x\to c}g(x)=0$ or $\pm\infty$, the rule says that
+
+$$
+\lim_{x\to c}\frac{f(x)}{g(x)}=\lim_{x\to c}\frac{f'(x)}{g'(x)}.
+$$
+The hope is that the new function $f'(x)/g'(x)$ will be well-behaved at $c$, meaning you can simplify by just plugging in. However, after applying L'Hôpital's rule once and *trying* to plug-in, you may still get an indeterminate form. In that case, you'll have to take another round of derivatives, and maybe another after that, until the clouds finally part and the [sun shines upon you](https://youtu.be/SSBWiFGzsyU?si=GKmf7QAhjyvAAK0d).
+
+::: callout-tip 
+## Example: multiple rounds of L'Hôpital's
+
+Consider:
+
+$$
+\lim_{x\to\infty}\frac{(\ln x)^2}{x}.
+$$
+
+$\lim_{x\to\infty}(\ln x)^2=\infty$ and $\lim_{x\to\infty}x=\infty$, so let's take some derivatives:
+
+$$
+\begin{aligned}
+\frac{\text{d}}{\text{d}x}(\ln x)^2&=\frac{2\ln x}{x}\\
+\frac{\text{d}}{\text{d}x}x&=1.
+\end{aligned}
+$$
+The ratio of derivatives is thus $2(\ln x)/x$, but this still gives an indeterminate form because $\lim_{x\to\infty}2\ln x=\infty$ and $\lim_{x\to\infty}x=\infty$, so we have to go again:
+
+$$
+\begin{aligned}
+\frac{\text{d}}{\text{d}x}2\ln x&=\frac{2}{x}\\
+\frac{\text{d}}{\text{d}x}x&=1.
+\end{aligned}
+$$
+The ratio of these derivatives is just $2/x$, and that goes to 0 as $x\to \infty$. In sum,
+
+$$
+\lim_{x\to\infty}\frac{(\ln x)^2}{x}
+\overset{\text{L'H}}{=}
+\lim_{x\to\infty}\frac{2\ln x}{x}
+\overset{\text{L'H}}{=}
+\lim_{x\to\infty}\frac{2}{x}
+=
+0.
+$$
+
+:::

@@ -1,0 +1,55 @@
+---
+title: "Problem Set 3"
+subtitle: Due Friday September 26 at 5PM
+draft: true
+editor: 
+  mode: source
+---
+
+## Problem 0
+
+{{< include bank/_music-rec.qmd >}}
+
+## Problem 1
+
+Something conceptual
+
+## Problem 2
+
+Counting
+
+## Problem 3
+
+Counting
+
+## Problem 4
+
+{{< include bank/conditional-probability/axioms-conditional.qmd >}}
+
+## Problem 5
+
+{{< include bank/conditional-probability/darts.qmd >}}
+
+## Problem 6
+
+{{< include bank/conditional-probability/testing-symptoms.qmd >}}
+
+## Problem 7
+
+{{< include bank/conditional-probability/bdj-encryption.qmd >}}
+
+## Problem 8
+
+{{< include bank/conditional-probability/bdj-circuit.qmd >}}
+
+## Problem 9
+
+{{< include bank/random-variables-discrete/ross-rv.qmd >}}
+
+## Problem 10
+
+{{< include bank/random-variables-discrete/random-exam.qmd >}}
+
+## Submission
+
+{{< include bank/_submission.qmd >}}

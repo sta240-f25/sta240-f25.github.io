@@ -1,0 +1,4 @@
+"Prove" each set identity with a picture:
+
+a.  Distributive property: $A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$;
+b.  De Morgan: $(A\cap B)^{c}=A^{c}\cup B^{c}$;

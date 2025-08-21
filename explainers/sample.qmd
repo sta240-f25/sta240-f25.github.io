@@ -1,0 +1,7 @@
+---
+title: "The `sample` command"
+format: html
+editor: 
+  mode: source
+---
+

@@ -1,0 +1,5 @@
+Assume that $P(A)>0$ and prove that
+
+$$
+P(A\cap B\,|\, A)\geq P(A\cap B\,|\, A\cup B).
+$$

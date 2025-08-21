@@ -1,0 +1,5 @@
+A simplified model of the human blood-type system has four types: A, B, AB, and O. Suppose that, for a randomly chosen person, the probability of type O blood is 0.5, of type A blood is 0.36, and of type B blood is 0.11. There are two antigens, anti-A and anti-B, that react with a person's blood in different ways depending on the type. Anti-A reacts with blood types A and AB but not with B and O. Anti-B reacts with blood types B and AB, but not with A and O.
+
+a. Let $\mathcal{A}$ be the event that a person's blood reacts with anti-A, and let $\mathcal{B}$ be the event that their blood reacts with anti-B. Classify the person's blood type using the events $\mathcal{A}$ and $\mathcal{B}$ and their complements;
+a. What is the probability that *both* antigens will react with a random person's blood?
+a. What is the probability that each antigen will react with a random person's blood?

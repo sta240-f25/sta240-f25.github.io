@@ -1,0 +1,81 @@
+---
+title: "Typesetting math with LaTeX and Quarto"
+format: html
+editor: 
+  mode: source
+---
+
+LaTeX is a software system for typesetting documents with a bunch of math in them[^1]. It is fully integrated into Quarto, so you can do all of your writing and coding and plotting and math-ing in one place. Pretty neat. We'll just show you a few things to get you going, but if you want to use the entire system for realz, you should make an [Overleaf](https://www.overleaf.com) account and [start playing](https://www.overleaf.com/learn).
+
+[^1]: There is no consensus on how to pronounce "LaTeX." JZ says "*lah*-tech." Some folks say "*lay*-tech." Some even say "*lay*-techs," just like a latex glove. But we all agree that the emphasis is on the first syllable. Perhaps I'll award 2.56 bonus points if you invent a new way to pronounce it. But probably not.
+
+## Inline math goes between single dollar signs
+
+|  |  |
+|----------------------------------------------------------|--------------|
+| **Goal** | include an equation in the middle of a sentence |
+| **What you type in the `.qmd` file** | `The function $h(x)=\ln x^2$ is my favorite` |
+| **How it will look when you render** | The function $h(x)=\ln x^2$ is my favorite. |
+
+: {tbl-colwidths="\[40,60\]"}
+
+## A math block goes between double dollar signs
+
+Say you want a whole bunch of math set off on a new line, in between your paragraphs, like this:
+
+$$
+f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right).
+$$
+
+In that case, you put this into your source `.qmd` file:
+
+```{r}
+#| eval: false
+$$
+f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right).
+$$
+```
+
+When you render, you'll get the pretty math. Notice some of the commands we used:
+
+-   `\exp` for $\exp$;
+-   `\sqrt{2}` for the square root $\sqrt{2}$;
+-   `\frac{1}{2}` to get a fraction $\frac{1}{2}$;
+-   `(x-\mu)^2` to get an exponent $(x-\mu)^2$;
+-   `\mu`, `\sigma`, `\pi` for the Greek letters $\mu$, $\sigma$, and $\pi$;
+-   and so on.
+
+::: callout-tip
+## Math commands in LaTeX
+
+[Here](https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf) is a bank of common LaTeX commands. You won't use most of them. Alternatively, [Detexify](https://detexify.kirelabs.org/classify.html) is a very useful site where you can draw a symbol and it will tell you what the LaTeX command is for it.
+:::
+
+## Lining equations up
+
+If you are typesetting a sequence of equalities, you should do it inside an `aligned` environment so that the equal signs are all lined up nice.
+
+If you type this:
+
+```{r}
+#| eval: false
+$$
+\begin{aligned}
+x(x+1)(x-1) &= (x^2+x)(x-1)\\
+&=x^3-x^2+x^2-x\\
+&=x^3-x.
+\end{aligned}
+$$
+```
+
+You will get this:
+
+$$
+\begin{aligned}
+x(x+1)(x-1) &= (x^2+x)(x-1)\\
+&=x^3-x^2+x^2-x\\
+&=x^3-x.
+\end{aligned}
+$$
+
+The `\\` introduces a line break, and the `&` in each equation tells it where to line things up.

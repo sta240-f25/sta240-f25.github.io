@@ -1,0 +1,56 @@
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OdLyKETk5o0?si=lhObAYK_8fRjltLi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+As you may have noticed, Spotify shuffle is not a [perfectly random shuffle](https://en.wikipedia.org/wiki/Fisher–Yates_shuffle). If you have a playlist with $n$ songs, Spotify's shuffle algorithm definitely does not make all $n!$ permutations equally likely. Why not? Because people don't actually want that. Spotify used to implement a pure random shuffle, but users complained that it was too *patternful.* For better or worse, the human brain is wired to detect meaningless patterns in random noise. For instance, the picture on the left is a "truly" random scatter of points; the one on the right is manipulated so the points don't "clump":
+
+```{r}
+#| echo: false
+#| fig-asp: 0.5
+#| fig-align: center
+
+repulsive_points <- function(n, min_dist, max_iter = 1e6) {
+  pts <- matrix(NA, nrow = n, ncol = 2)
+  i <- 1
+  iter <- 0
+  
+  while (i <= n && iter < max_iter) {
+    iter <- iter + 1
+    candidate <- runif(2)  # random (x,y) in [0,1]^2
+    
+    if (i == 1) {
+      pts[i, ] <- candidate
+      i <- i + 1
+    } else {
+      d2 <- colSums((t(pts[1:(i-1), , drop = FALSE]) - candidate)^2)
+      if (min(d2) >= min_dist^2) {
+        pts[i, ] <- candidate
+        i <- i + 1
+      }
+    }
+  }
+  
+  if (i <= n) warning("Stopped early: could not place all points.")
+  pts
+}
+
+set.seed(8675309)
+n = 300
+x = runif(n)
+y = runif(n)
+pts <- repulsive_points(n, min_dist = 0.03)
+
+par(mfrow = c(1, 2), mar = c(2, 2, 2, 2))
+plot(x, y, pch = 19, cex = 0.5, xlab = "", ylab = "", ylim = c(0, 1), xlim = c(0, 1))
+plot(pts, pch = 19, cex = 0.5, xlab = "", ylab = "", ylim = c(0, 1), xlim = c(0, 1))
+
+```
+
+When you survey people that don't know any better, they often *feel* like the second picture is "more random" than the first because it lacks clumps, but this is a misunderstanding. A truly random playlist shuffle will often have clumps: clumps of artists, clumps of genres, etc. So when people *say* that they want "random," what they really mean is just "variety" in some vague sense, and this is what Spotify shuffle tries to deliver. I could not find a good source for what Spotify shuffle currently does, but whatever it is, I personally dislike it.
+
+
+
+a. Something easy;
+a. Something harder;
+a. Imagine your playlist of $n$ unique tracks contains $k$ songs by the same artist. What is the probability that a random permutation of the tracks will contain a...STREAK?
+a. [This](https://open.spotify.com/playlist/7ohKbwFo2VB92oSn3JTrPZ?si=eaaf988ec3d24b73) is the playlist I use when I grade exams (something I enjoy doing, btw). It contains $n = 14$ songs. There are 11 artists with one song apiece[^1], and then Chaka Khan has 3 songs, because, why wouldn't she? Shuffle this playlist at least ten times and compute the proportion of the time the shuffle contained a "Chaka streak" (more than one of her songs in a row). Using the previous part, compare this empirical proportion to the theoretical probability that would prevail if the shuffle was truly random.
+
+[^1]: Martha Wash is technically heard twice, once in a solo capacity and once as a member of The Weather Girls, but let's please not quibble.

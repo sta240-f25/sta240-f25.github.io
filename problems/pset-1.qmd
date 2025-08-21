@@ -1,0 +1,59 @@
+---
+title: "Problem Set 1"
+subtitle: Due Friday September 12 at 5PM
+editor: 
+  mode: source
+draft: false
+---
+
+## Before you start
+
+Some of these problems ask you to prove new probability rules using a small set of raw materials: set theory, the axioms, and the basic rules we saw in lecture. The purpose of these problems is to demonstrate that you understand every step in the reasoning, even if it seems trivial and obvious. So, don't leave anything out! Every step of the argument should be explicit, and you should clearly indicate which axioms/results you are invoking when you move from point A to point B. [After you've paid your dues](https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/), we'll give you some latitude to hand wave and yada-yada your way through certain basic arguments. But not yet. 
+
+## Problem 0
+
+{{< include bank/_music-rec.qmd >}}
+
+## Problem 1
+
+{{< include bank/conceptual/diaconis.qmd >}}
+
+## Problem 2
+
+{{< include bank/set-theory/basic-set-practice.qmd >}}
+
+## Problem 3
+
+{{< include bank/set-theory/picture-proofs.qmd >}}
+
+## Problem 4
+
+{{< include bank/basic-rules/blood-type.qmd >}}
+
+## Problem 5
+
+{{< include bank/basic-rules/weather-app.qmd >}}
+
+## Problem 6
+
+{{< include bank/basic-rules/xor.qmd >}}
+
+## Problem 7
+
+{{< include bank/basic-rules/incl-excl-3.qmd >}}
+
+## Problem 8
+
+{{< include bank/basic-rules/poisson-measure.qmd >}}
+
+## Problem 9
+
+{{< include bank/counting/ht-receipt.qmd >}}
+
+## Problem 10
+
+{{< include bank/counting/ross-balls.qmd >}}
+
+## Submission
+
+{{< include bank/_submission.qmd >}}
