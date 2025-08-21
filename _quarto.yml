@@ -57,7 +57,7 @@ website:
         contents:
           - href: explainers/setup.qmd
             text: Getting started
-          - href: explainers/rstudio.qmd
+          - href: explainers/hello-rstudio.qmd
             text: The lay of the land
           - href: explainers/quarto.qmd
             text: Quarto
