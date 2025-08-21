@@ -1402,6 +1402,8 @@ gm::show(nightmare_ballet, to = "score")
 
 ```{r}
 #| echo: false
+#| message: false
+#| warning: false
 
 # ===============================================
 # random walk on the elements of a vector
