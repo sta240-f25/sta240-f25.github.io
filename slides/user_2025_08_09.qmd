@@ -86,7 +86,7 @@ AKA: chance or aleatoric music.
 :::
 
 ::: {.column width="50%"}
-- Studied both traditional western music and CS, statistical mechanics, stochastic processes, etc;
+- Studied both traditional Western music and CS, statistical mechanics, stochastic processes, etc;
 - Incorporated these ideas into his compositional process.
 :::
 :::::
@@ -168,6 +168,7 @@ Let's transcribe it!
 We will add layers to this:
 
 ```{r}
+#| message: false
 library(gm)
 
 prelude <- Music()
