@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Integration – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
@@ -21,7 +18,6 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -39,8 +35,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-1fa1d8026083a9bddc52b4aafc7f818e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-de752134ec4b235ca5231ef73f7d15b6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-de752134ec4b235ca5231ef73f7d15b6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -66,12 +61,7 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -97,7 +87,6 @@ window.Quarto = {
   typesetMath
 };
 </script>
-
 <meta property="og:title" content="Integration – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
 <meta property="og:image" content="https://sta240-f25.github.io/math/images/integral.png">
@@ -105,13 +94,10 @@ window.Quarto = {
 <meta property="og:image:height" content="1393">
 <meta property="og:image:width" content="1423">
 </head>
-
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -122,16 +108,11 @@ window.Quarto = {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -140,7 +121,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -148,8 +129,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -192,7 +173,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
@@ -201,8 +182,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
@@ -245,7 +226,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -254,8 +235,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
@@ -263,7 +244,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/RStudio.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/RStudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The lay of the land</span></a>
   </div>
 </li>
@@ -298,7 +279,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -307,8 +288,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
@@ -321,7 +302,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">Labs</span></span>
@@ -331,28 +312,22 @@ window.Quarto = {
  <span class="menu-text">Exam Review</span></span>
   </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#integral-rules" id="toc-integral-rules" class="nav-link active" data-scroll-target="#integral-rules">Integral rules</a></li>
+<li><a href="#integral-rules" id="toc-integral-rules" class="nav-link active" data-scroll-target="#integral-rules">Integral rules</a></li>
   <li><a href="#the-fundamental-theorem-of-calculus" id="toc-the-fundamental-theorem-of-calculus" class="nav-link" data-scroll-target="#the-fundamental-theorem-of-calculus">The fundamental theorem of calculus</a></li>
   <li><a href="#integration-by-substitution" id="toc-integration-by-substitution" class="nav-link" data-scroll-target="#integration-by-substitution">Integration by substitution</a></li>
   <li><a href="#integration-by-parts" id="toc-integration-by-parts" class="nav-link" data-scroll-target="#integration-by-parts">Integration by parts</a></li>
   <li><a href="#improper-integration-we-will-do-this-a-lot" id="toc-improper-integration-we-will-do-this-a-lot" class="nav-link" data-scroll-target="#improper-integration-we-will-do-this-a-lot">Improper integration (we will do this a lot!)</a></li>
-  </ul>
-</nav>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Review</a></li><li class="breadcrumb-item"><a href="../math/integration.html">Integration</a></li></ol></nav>
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Review</a></li><li class="breadcrumb-item"><a href="../math/integration.html">Integration</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">Integration</h1>
 </div>
 
@@ -367,13 +342,9 @@ window.Quarto = {
   
 
 
-</header>
-
-
-<p>Crudely, the <strong>definite integral</strong> of a function gives you the (signed) area between the graph of the function and the <span class="math inline">\(x\)</span>-axis.</p>
+</header><p>Crudely, the <strong>definite integral</strong> of a function gives you the (signed) area between the graph of the function and the <span class="math inline">\(x\)</span>-axis.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/integral.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<figure class="figure"><p><img src="images/integral.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>When it exists, which it doesn’t always, the definite integral can be defined as the limit of Riemann sums:</p>
@@ -382,23 +353,19 @@ window.Quarto = {
 \]</span></p>
 <p>Just as the <a href="https://sta240-f25.github.io/math/differentiation.html">derivative</a> is the continuous analog to a discrete difference, the integral is the continuous analog to a discrete sum.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/riemann.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure"><p><img src="images/riemann.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<section id="integral-rules" class="level2">
-<h2 class="anchored" data-anchor-id="integral-rules">Integral rules</h2>
+<section id="integral-rules" class="level2"><h2 class="anchored" data-anchor-id="integral-rules">Integral rules</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>rule</th>
 <th>formula</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>dummy variable</td>
@@ -425,10 +392,7 @@ window.Quarto = {
 <td><span class="math inline">\(\int_a^bf(x)\,\text{d}x=\int_a^cf(x)\,\text{d}x+\int_c^bf(x)\,\text{d}x\)</span></td>
 </tr>
 </tbody>
-</table>
-</section>
-<section id="the-fundamental-theorem-of-calculus" class="level2">
-<h2 class="anchored" data-anchor-id="the-fundamental-theorem-of-calculus">The fundamental theorem of calculus</h2>
+</table></section><section id="the-fundamental-theorem-of-calculus" class="level2"><h2 class="anchored" data-anchor-id="the-fundamental-theorem-of-calculus">The fundamental theorem of calculus</h2>
 <p>The <strong>fundamental theorem of calculus</strong> is a bridge between the seemingly unrelated worlds of derivatives and integrals:</p>
 <p><span class="math display">\[
 \int_a^bf(x)\,\text{d}x=F(b)-F(a),\quad f(x)=F'(x).
@@ -454,9 +418,7 @@ Example: antidifferentiation
 \]</span></p>
 </div>
 </div>
-</section>
-<section id="integration-by-substitution" class="level2">
-<h2 class="anchored" data-anchor-id="integration-by-substitution">Integration by substitution</h2>
+</section><section id="integration-by-substitution" class="level2"><h2 class="anchored" data-anchor-id="integration-by-substitution">Integration by substitution</h2>
 <p>When you perform a <strong><span class="math inline">\(u\)</span>-substitution</strong>, you’re basically trying to undo the chain rule:</p>
 <p><span class="math display">\[
 \int_a^bf(g(x))g'(x)\,\text{d}x=\int_{g(a)}^{g(b)}f(u)\,\text{d}u.
@@ -499,9 +461,7 @@ Example: <span class="math inline">\(u\)</span>-sub
 <p>Please please please do not forget to <strong>change the bounds</strong> of the integral when you do a substitution. We had <span class="math inline">\(u=g(x)=x^2+1\)</span>, so after the change of variables, the lower bound becomes <span class="math inline">\(g(0)=1\)</span> and the upper bound becomes <span class="math inline">\(g(2)=5\)</span>.</p>
 </div>
 </div>
-</section>
-<section id="integration-by-parts" class="level2">
-<h2 class="anchored" data-anchor-id="integration-by-parts">Integration by parts</h2>
+</section><section id="integration-by-parts" class="level2"><h2 class="anchored" data-anchor-id="integration-by-parts">Integration by parts</h2>
 <p>Let’s face it; this sucks. But sometimes you have to integrate a funky product, and there’s no way around it, so you do this:</p>
 <p><span class="math display">\[
 \int_a^b u(x) v'(x) \, \text{d}x
@@ -555,9 +515,7 @@ v&amp;=-x^{-1}\\
 \]</span></p>
 </div>
 </div>
-</section>
-<section id="improper-integration-we-will-do-this-a-lot" class="level2">
-<h2 class="anchored" data-anchor-id="improper-integration-we-will-do-this-a-lot">Improper integration (we will do this a lot!)</h2>
+</section><section id="improper-integration-we-will-do-this-a-lot" class="level2"><h2 class="anchored" data-anchor-id="improper-integration-we-will-do-this-a-lot">Improper integration (we will do this a lot!)</h2>
 <p>An improper integral is the limit of a definite integral as one or more of the bounds tend toward some extreme value, typically <span class="math inline">\(\pm\infty\)</span>. So a one-sided improper integral is defined like this:</p>
 <p><span class="math display">\[
 \int_a^\infty f(x)\,\text{d}x=\lim_{b\to\infty}\int_a^bf(x)\,\text{d}x.
@@ -627,8 +585,7 @@ Example: improper integral with finite bound
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="integration_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+<figure class="figure"><p><img src="integration_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
 </figure>
 </div>
 </div>
@@ -657,10 +614,7 @@ Example: improper integral with finite bound
 </div>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1076,9 +1030,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../math/differentiation.html" class="pagination-link" aria-label="Differentiation">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Differentiation</span>
       </a>          
@@ -1090,8 +1042,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -1103,8 +1054,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

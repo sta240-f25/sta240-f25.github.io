@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Typesetting math with LaTeX and Quarto – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
@@ -56,7 +53,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -73,8 +69,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-1fa1d8026083a9bddc52b4aafc7f818e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-de752134ec4b235ca5231ef73f7d15b6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-de752134ec4b235ca5231ef73f7d15b6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -100,12 +95,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -131,18 +121,14 @@ window.Quarto = {
   typesetMath
 };
 </script>
-
 <meta property="og:title" content="Typesetting math with LaTeX and Quarto – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
-
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -153,16 +139,11 @@ window.Quarto = {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -171,7 +152,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -179,8 +160,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -223,7 +204,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
@@ -232,8 +213,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
@@ -276,7 +257,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -285,8 +266,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
@@ -294,7 +275,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/RStudio.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/RStudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The lay of the land</span></a>
   </div>
 </li>
@@ -329,7 +310,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -338,8 +319,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
@@ -352,7 +333,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">Labs</span></span>
@@ -362,26 +343,20 @@ window.Quarto = {
  <span class="menu-text">Exam Review</span></span>
   </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#inline-math-goes-between-single-dollar-signs" id="toc-inline-math-goes-between-single-dollar-signs" class="nav-link active" data-scroll-target="#inline-math-goes-between-single-dollar-signs">Inline math goes between single dollar signs</a></li>
+<li><a href="#inline-math-goes-between-single-dollar-signs" id="toc-inline-math-goes-between-single-dollar-signs" class="nav-link active" data-scroll-target="#inline-math-goes-between-single-dollar-signs">Inline math goes between single dollar signs</a></li>
   <li><a href="#a-math-block-goes-between-double-dollar-signs" id="toc-a-math-block-goes-between-double-dollar-signs" class="nav-link" data-scroll-target="#a-math-block-goes-between-double-dollar-signs">A math block goes between double dollar signs</a></li>
   <li><a href="#lining-equations-up" id="toc-lining-equations-up" class="nav-link" data-scroll-target="#lining-equations-up">Lining equations up</a></li>
-  </ul>
-</nav>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Review</a></li><li class="breadcrumb-item"><a href="../math/latex.html">Typing math</a></li></ol></nav>
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Review</a></li><li class="breadcrumb-item"><a href="../math/latex.html">Typing math</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">Typesetting math with LaTeX and Quarto</h1>
 </div>
 
@@ -396,12 +371,8 @@ window.Quarto = {
   
 
 
-</header>
-
-
-<p>LaTeX is a software system for typesetting documents with a bunch of math in them<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. It is fully integrated into Quarto, so you can do all of your writing and coding and plotting and math-ing in one place. Pretty neat. We’ll just show you a few things to get you going, but if you want to use the entire system for realz, you should make an <a href="https://www.overleaf.com">Overleaf</a> account and <a href="https://www.overleaf.com/learn">start playing</a>.</p>
-<section id="inline-math-goes-between-single-dollar-signs" class="level2">
-<h2 class="anchored" data-anchor-id="inline-math-goes-between-single-dollar-signs">Inline math goes between single dollar signs</h2>
+</header><p>LaTeX is a software system for typesetting documents with a bunch of math in them<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. It is fully integrated into Quarto, so you can do all of your writing and coding and plotting and math-ing in one place. Pretty neat. We’ll just show you a few things to get you going, but if you want to use the entire system for realz, you should make an <a href="https://www.overleaf.com">Overleaf</a> account and <a href="https://www.overleaf.com/learn">start playing</a>.</p>
+<section id="inline-math-goes-between-single-dollar-signs" class="level2"><h2 class="anchored" data-anchor-id="inline-math-goes-between-single-dollar-signs">Inline math goes between single dollar signs</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
@@ -421,10 +392,7 @@ window.Quarto = {
 <td>The function <span class="math inline">\(h(x)=\ln x^2\)</span> is my favorite.</td>
 </tr>
 </tbody>
-</table>
-</section>
-<section id="a-math-block-goes-between-double-dollar-signs" class="level2">
-<h2 class="anchored" data-anchor-id="a-math-block-goes-between-double-dollar-signs">A math block goes between double dollar signs</h2>
+</table></section><section id="a-math-block-goes-between-double-dollar-signs" class="level2"><h2 class="anchored" data-anchor-id="a-math-block-goes-between-double-dollar-signs">A math block goes between double dollar signs</h2>
 <p>Say you want a whole bunch of math set off on a new line, in between your paragraphs, like this:</p>
 <p><span class="math display">\[
 f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right).
@@ -437,11 +405,16 @@ f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^
 </div>
 <p>When you render, you’ll get the pretty math. Notice some of the commands we used:</p>
 <ul>
-<li><code>\exp</code> for <span class="math inline">\(\exp\)</span>;</li>
-<li><code>\sqrt{2}</code> for the square root <span class="math inline">\(\sqrt{2}\)</span>;</li>
-<li><code>\frac{1}{2}</code> to get a fraction <span class="math inline">\(\frac{1}{2}\)</span>;</li>
-<li><code>(x-\mu)^2</code> to get an exponent <span class="math inline">\((x-\mu)^2\)</span>;</li>
-<li><code>\mu</code>, <code>\sigma</code>, <code>\pi</code> for the Greek letters <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma\)</span>, and <span class="math inline">\(\pi\)</span>;</li>
+<li>
+<code>\exp</code> for <span class="math inline">\(\exp\)</span>;</li>
+<li>
+<code>\sqrt{2}</code> for the square root <span class="math inline">\(\sqrt{2}\)</span>;</li>
+<li>
+<code>\frac{1}{2}</code> to get a fraction <span class="math inline">\(\frac{1}{2}\)</span>;</li>
+<li>
+<code>(x-\mu)^2</code> to get an exponent <span class="math inline">\((x-\mu)^2\)</span>;</li>
+<li>
+<code>\mu</code>, <code>\sigma</code>, <code>\pi</code> for the Greek letters <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma\)</span>, and <span class="math inline">\(\pi\)</span>;</li>
 <li>and so on.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -457,9 +430,7 @@ Math commands in LaTeX
 <p><a href="https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf">Here</a> is a bank of common LaTeX commands. You won’t use most of them. Alternatively, <a href="https://detexify.kirelabs.org/classify.html">Detexify</a> is a very useful site where you can draw a symbol and it will tell you what the LaTeX command is for it.</p>
 </div>
 </div>
-</section>
-<section id="lining-equations-up" class="level2">
-<h2 class="anchored" data-anchor-id="lining-equations-up">Lining equations up</h2>
+</section><section id="lining-equations-up" class="level2"><h2 class="anchored" data-anchor-id="lining-equations-up">Lining equations up</h2>
 <p>If you are typesetting a sequence of equalities, you should do it inside an <code>aligned</code> environment so that the equal signs are all lined up nice.</p>
 <p>If you type this:</p>
 <div class="cell">
@@ -482,16 +453,10 @@ x(x+1)(x-1) &amp;= (x^2+x)(x-1)\\
 <p>The <code>\\</code> introduces a line break, and the <code>&amp;</code> in each equation tells it where to line things up.</p>
 
 
-</section>
-
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
+</section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 <ol>
 <li id="fn1"><p>There is no consensus on how to pronounce “LaTeX.” JZ says “<em>lah</em>-tech.” Some folks say “<em>lay</em>-tech.” Some even say “<em>lay</em>-techs,” just like a latex glove. But we all agree that the emphasis is on the first syllable. Perhaps I’ll award 2.56 bonus points if you invent a new way to pronounce it. But probably not.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -907,9 +872,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../math/series.html" class="pagination-link" aria-label="Infinite series">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Infinite series</span>
       </a>          
@@ -921,8 +884,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -934,8 +896,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
