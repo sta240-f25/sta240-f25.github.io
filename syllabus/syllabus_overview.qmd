@@ -15,5 +15,5 @@ In **probability**, we describe the distribution of a random phenomenon and then
 | Meeting  | Location                       | Time                   | Staff  |
 |----------|--------------------------------|------------------------|--------|
 | Lectures | Old Chem 116                   | MoWe 3:05 PM - 4:20 PM | John   |
-| Lab 01   | Perkins LINK 087 (Classroom 3) | Th 1:25 PM - 2:40 PM   | Aurora |
+| Lab 01   | Perkins LINK 087 (Classroom 3) | Th 1:25 PM - 2:40 PM   | Yuang  |
 | Lab 02   | Perkins LINK 087 (Classroom 3) | Th 3:05 PM - 4:20 PM   | Aurora |
