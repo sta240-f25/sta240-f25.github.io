@@ -7,47 +7,58 @@
     "text": "\\[\nP(X = k)\n= \\frac{\\binom{K}{k} \\binom{N - K}{n-k}}{\\binom{N}{n}}.\n\\]\n\ndhyper(x, m, n, k)\nphyper(q, m, n, k)\nqhyper(p, m, n, k)\nrhyper(ndraw, m, n, k)"
   },
   {
-    "objectID": "explainers/setup.html",
-    "href": "explainers/setup.html",
-    "title": "Getting started",
+    "objectID": "explainers/vectorization.html",
+    "href": "explainers/vectorization.html",
+    "title": "Vectorization",
     "section": "",
-    "text": "The path of least resistance to using R in this class is to reserve a container from the Duke Container Manager. It’s hosted in the cloud, and it has all of the software you will ever need for this class.\n\nGo here: https://cmgr.oit.duke.edu/containers. You may have to log in with your NetID at some point;\n(The first time you do this, you look for STA240 under “Reservations available” on the righthand side, and click “reserve STA240”. After you do that once, STA240 will appear under “My reservations” on the lefthand side forever more)\nClick STA240 under “My reservations”;\nLogin;\nStart. It may take a while, but then RStudio should launch in your browser.",
+    "text": "Functions in R are often vectorized. For example:\n\nexp(2)\n\n[1] 7.389056\n\n\nI give it one number, and it returns one number. If instead, I supply a vector, I get this:\n\nexp(c(-3, 0.001, 2, 5, 600, 1, 0))\n\n[1]  4.978707e-02  1.001001e+00  7.389056e+00  1.484132e+02 3.773020e+260\n[6]  2.718282e+00  1.000000e+00\n\n\nSo when I supply a regular ol’ number as an argument, the exp function returns a number. When I supply a vector, it returns a vector; the exp function knows to act entry-wise and give me back a vector with the output of each entry-wise computation. In other words, I didn’t have to write a loop to manually do this. The function is vectorized, so it effectively runs the loop for me.\nSo consider for instance the set of numbers \\(A = \\{-100, -6, 0.001, \\pi, 30\\}\\), and this stupid function:\n\\[\nf(x) = \\ln^2\\left|\\frac{2x}{1-\\sin(x)}\\right|.\n\\]\nIf I wanted to compute the value of \\(f\\) for each of the arguments in \\(A\\), I could write a loop that goes entry-by-entry through \\(A\\) and applies the function \\(f\\) to it. But in R, because arithmetic operations are vectorized, I can do this:\n\nA = c(-100, -6, 0.001, pi, 30)\n\nlog( abs( (2 * A) / ( 1 - sin(A) ) ) ) ^ 2 \n\n[1] 36.051349  7.910714 38.608919  3.377792 11.609009\n\n\nDumb!\nAll of the basic arithmetic operations are vectorized like this:\n\nc(1, 2, 3) + 2\n\n[1] 3 4 5\n\n\n\nc(1, 2, 3) + c(1, 2, 3)\n\n[1] 2 4 6\n\n\n\nfloor(c(4, 5.1, 6.9))\n\n[1] 4 5 6",
     "crumbs": [
       "`R` Explainers",
-      "Getting started"
+      "Vectorization"
     ]
   },
   {
-    "objectID": "explainers/setup.html#option-1-reserve-a-container",
-    "href": "explainers/setup.html#option-1-reserve-a-container",
-    "title": "Getting started",
+    "objectID": "explainers/math.html",
+    "href": "explainers/math.html",
+    "title": "Basic math in R\n",
     "section": "",
-    "text": "The path of least resistance to using R in this class is to reserve a container from the Duke Container Manager. It’s hosted in the cloud, and it has all of the software you will ever need for this class.\n\nGo here: https://cmgr.oit.duke.edu/containers. You may have to log in with your NetID at some point;\n(The first time you do this, you look for STA240 under “Reservations available” on the righthand side, and click “reserve STA240”. After you do that once, STA240 will appear under “My reservations” on the lefthand side forever more)\nClick STA240 under “My reservations”;\nLogin;\nStart. It may take a while, but then RStudio should launch in your browser.",
+    "text": "Using R for the calculator is like buying a plane ticket to get free peanuts. But I have done my taxes in R, so…\n\n2 + 2 # addition\n\n[1] 4\n\n5 - 2 # subtraction\n\n[1] 3\n\n0.5 * 6 # multiplication\n\n[1] 3\n\n3 / 4 # division\n\n[1] 0.75\n\nsqrt(2) # square root\n\n[1] 1.414214\n\n4 ^ 2 # exponent\n\n[1] 16\n\nexp(4.9) # base-e exponent\n\n[1] 134.2898\n\nlog(7) # natural log\n\n[1] 1.94591\n\nabs(-6) # absolute value\n\n[1] 6\n\nceiling(4.6) # round up\n\n[1] 5\n\nfloor(4.6) # round down\n\n[1] 4\n\nfactorial(4) # n! = n x (n-1) x ... x 2 x 1\n\n[1] 24\n\nchoose(8, 3) # binomial coefficient (we'll get there)\n\n[1] 56",
     "crumbs": [
       "`R` Explainers",
-      "Getting started"
+      "Basic math"
     ]
   },
   {
-    "objectID": "explainers/setup.html#option-2-download-it-yourself",
-    "href": "explainers/setup.html#option-2-download-it-yourself",
-    "title": "Getting started",
-    "section": "Option 2: download it yourself",
-    "text": "Option 2: download it yourself\nOf course, you won’t have containers after you graduate, so maybe it’s a good idea to hike up your big girl pants and actually install something. It’s pretty easy:\n\nDownload R: https://cran.r-project.org\nDownload RStudio: https://posit.co/download/rstudio-desktop/\n(optional) Install tinytex: https://yihui.org/tinytex/",
+    "objectID": "explainers/vectors.html",
+    "href": "explainers/vectors.html",
+    "title": "Vectors",
+    "section": "",
+    "text": "A vector in R is just an ordered set of values that have the same type. The easiest way to create one is to manually list out the values, separated by commas, inside c():\n\nmyvec &lt;- c(pi, 5, 3.6, 2, 9, 6000) \nmyvec\n\n[1]    3.141593    5.000000    3.600000    2.000000    9.000000 6000.000000\n\n\nIf you want to list out all of the integers between some min and max, you can use this shortcut:\n\n5:15\n\n [1]  5  6  7  8  9 10 11 12 13 14 15\n\n\nMore generally, if you want a vector of evenly spaced numbers between a min and a max, do this:\n\na &lt;- seq(0, 1, length.out = 11) \na\n\n [1] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0\n\n\nIf you want to create a “blank” vector that just has zeros in it, here you go:\n\nz &lt;- numeric(10)\nz\n\n [1] 0 0 0 0 0 0 0 0 0 0\n\n\nIn all of those cases, our vector contained numbers, but there is nothing special about numbers. Here is a vector where each value is a string (a piece of text):\n\npoetry &lt;- c(\"Mary\", \"had\", \"a\", \"little\", \"chainsaw\")\npoetry\n\n[1] \"Mary\"     \"had\"      \"a\"        \"little\"   \"chainsaw\"\n\n\nIf you have two vectors and you want to combine them into one, you can just use the c() command again. The “c” stands for “concatenate.” You’re concatenating, or joining, the vectors end-to-end:\n\nmore &lt;- c(\"whose\", \"chain\", \"was\", \"red\", \"as\")\n\nmasterpiece &lt;- c(poetry, more)\nmasterpiece\n\n [1] \"Mary\"     \"had\"      \"a\"        \"little\"   \"chainsaw\" \"whose\"   \n [7] \"chain\"    \"was\"      \"red\"      \"as\"",
     "crumbs": [
       "`R` Explainers",
-      "Getting started"
+      "Vectors"
     ]
   },
   {
-    "objectID": "explainers/lineplot.html",
-    "href": "explainers/lineplot.html",
-    "title": "Plotting lines",
+    "objectID": "explainers/quarto.html",
+    "href": "explainers/quarto.html",
+    "title": "Quarto",
     "section": "",
-    "text": "You can use the curve function to plot a line graph of a function. If that function were \\(f(x) = x^2\\) for example, you would type this:\n\ncurve(x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"f(x)\")\n\n\n\n\n\n\n\nThis function takes many arguments.\n\nthe first argument is a formula for the function you want to graph. The curve command implicitly assumes that x is the argument, and everything else is constant;\n\nfrom and to give the bounds of the \\(x\\)-axis;\nThis command is basically evaluating the function at many points and connecting the dots. n specifies how many dots. Too few, and the picture would look all cattywampus:\n\n\ncurve(x^2, from = -5, to = 5, n = 5)\n\n\n\n\n\n\n\nIf you want multiple lines on one graph, you can call curve multiple times, and include the add argument in all but the first call:\n\ncurve(1*x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"\")\ncurve(2*x^2, from = -5, to = 5, n = 500, col = \"blue\", ylab = \"\", add = TRUE)\ncurve(3*x^2, from = -5, to = 5, n = 500, col = \"darkgreen\", ylab = \"\", add = TRUE)\nlegend(\"bottomleft\", c(\"a = 1\", \"a = 2\", \"a = 3\"), \n       col = c(\"red\", \"blue\", \"darkgreen\"), lty = 1, bty = \"n\")",
+    "text": "Quarto is a technical publishing system that allows you to write documents where text, math, code, and the output of that code are seamlessly integrated in a reproducible way. Quarto is baller. I had never used it before coming to Duke, and now I am low-key obsessed. You will mainly use Quarto for the lab write-ups in this class, but if you wish to use it for your problem set solutions as well, be my guest!\nBelow is a very brief primer to get you started. If you took STA 101 or STA 199, you have already used Quarto extensively and can probably skip this. If you wish to go deeper and become a Quarto power user, what are you waiting for?",
     "crumbs": [
       "`R` Explainers",
-      "Plotting lines"
+      "Quarto"
+    ]
+  },
+  {
+    "objectID": "explainers/quarto.html#quick-start",
+    "href": "explainers/quarto.html#quick-start",
+    "title": "Quarto",
+    "section": "Quick start",
+    "text": "Quick start\nHere is a screenshot of my RStudio container:\n\n\n\n\n\nIn the upper left, I have the editor open, and I’m working on a .qmd file. This is just a text file with a special format. When I’m done editing, I hit the Render button (circled in red), and if there are no errors, a nice .pdf file is produced in the Viewer tab in the bottom right.\nThat’s pretty much the whole ballgame:\n\nEdit the .qmd file → hit Render → get a .pdf\n\nAlright, so what goes in the .qmd file?\n\nAt the top, in between ---, you have the document’s metadata: title, author, date, and so forth. We are not going to get fancy with it, but there are loads of settings you can play with;\nYou can write text the same as you would in Google Docs or Microsoft Word. Quarto syntax is based on markdown, and you can learn about the formatting options here;\nThe grey block beginning with ```{r} and ending with ``` is called a code chunk. Chunks of code go in there. In the rendered document, the code will be nicely formatted and stylized amidst the text;\nWhen you render, the code in your code chunks is actually executed, and the output is included in the final document. This is super convenient for producing tables and figures;\nYou can also include nicely formatted equations and math notation in your Quarto documents. See here for details.",
+    "crumbs": [
+      "`R` Explainers",
+      "Quarto"
     ]
   },
   {
@@ -261,7 +272,7 @@
     "href": "slides/user_2025_08_09.html#the-starting-point-is-always-the-same",
     "title": "Rhapsody in R\n",
     "section": "The starting point is always the same",
-    "text": "The starting point is always the same\nWe will add layers to this:\n\nlibrary(gm)\n\nprelude &lt;- Music()\n\n\nAnalogous to this:\n\nlibrary(ggplot2)\n\nmyplot &lt;- ggplot()"
+    "text": "The starting point is always the same\nWe will add layers to this:\n\nlibrary(gm)\n\n\nAttaching package: 'gm'\n\n\nThe following object is masked from 'package:methods':\n\n    show\n\nprelude &lt;- Music()\n\n\nAnalogous to this:\n\nlibrary(ggplot2)\n\nmyplot &lt;- ggplot()"
   },
   {
     "objectID": "slides/user_2025_08_09.html#add-meter-and-tempo",
@@ -520,7 +531,7 @@
     "href": "slides/user_2025_08_09.html#just-trolling-me",
     "title": "Rhapsody in R\n",
     "section": "Just trolling me",
-    "text": "Just trolling me"
+    "text": "Just trolling me\n\n\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length\nWarning in positions[i] &lt;- new_pos: number of items to replace is not a\nmultiple of replacement length"
   },
   {
     "objectID": "slides/user_2025_08_09.html#not-quite-random-and-yet",
@@ -1463,7 +1474,7 @@
     "href": "slides/slides_2025_08_25.html#any-matches-today",
     "title": "Welcome to STA 240!",
     "section": "Any matches today?",
-    "text": "Any matches today?\n\n\n\n\n\nbirthday\ncount\n\n\n09-18\n1"
+    "text": "Any matches today?\n\n\n\nWarning in attr(x, \"align\"): 'xfun::attr()' is deprecated.\nUse 'xfun::attr2()' instead.\nSee help(\"Deprecated\")\n\n\nWarning in attr(x, \"format\"): 'xfun::attr()' is deprecated.\nUse 'xfun::attr2()' instead.\nSee help(\"Deprecated\")\n\n\n\n\nbirthday\ncount\n\n\n09-18\n1"
   },
   {
     "objectID": "slides/slides_2025_08_25.html#example-the-monty-hall-problem",
@@ -1835,7 +1846,7 @@
     "href": "syllabus/syllabus_overview.html#meetings",
     "title": "Course overview",
     "section": "Meetings",
-    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nOld Chem 116\nMoWe 3:05 PM - 4:20 PM\nJohn\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nTh 1:25 PM - 2:40 PM\nAurora\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nTh 3:05 PM - 4:20 PM\nAurora",
+    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nOld Chem 116\nMoWe 3:05 PM - 4:20 PM\nJohn\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nTh 1:25 PM - 2:40 PM\nYuang\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nTh 3:05 PM - 4:20 PM\nAurora",
     "crumbs": [
       "Syllabus",
       "Overview"
@@ -1952,65 +1963,58 @@
     ]
   },
   {
-    "objectID": "explainers/quarto.html",
-    "href": "explainers/quarto.html",
-    "title": "Quarto",
-    "section": "",
-    "text": "Quarto is a technical publishing system that allows you to write documents where text, math, code, and the output of that code are seamlessly integrated in a reproducible way. Quarto is baller. I had never used it before coming to Duke, and now I am low-key obsessed. You will mainly use Quarto for the lab write-ups in this class, but if you wish to use it for your problem set solutions as well, be my guest!\nBelow is a very brief primer to get you started. If you took STA 101 or STA 199, you have already used Quarto extensively and can probably skip this. If you wish to go deeper and become a Quarto power user, what are you waiting for?",
-    "crumbs": [
-      "`R` Explainers",
-      "Quarto"
-    ]
-  },
-  {
-    "objectID": "explainers/quarto.html#quick-start",
-    "href": "explainers/quarto.html#quick-start",
-    "title": "Quarto",
-    "section": "Quick start",
-    "text": "Quick start\nHere is a screenshot of my RStudio container:\n\n\n\n\n\nIn the upper left, I have the editor open, and I’m working on a .qmd file. This is just a text file with a special format. When I’m done editing, I hit the Render button (circled in red), and if there are no errors, a nice .pdf file is produced in the Viewer tab in the bottom right.\nThat’s pretty much the whole ballgame:\n\nEdit the .qmd file → hit Render → get a .pdf\n\nAlright, so what goes in the .qmd file?\n\nAt the top, in between ---, you have the document’s metadata: title, author, date, and so forth. We are not going to get fancy with it, but there are loads of settings you can play with;\nYou can write text the same as you would in Google Docs or Microsoft Word. Quarto syntax is based on markdown, and you can learn about the formatting options here;\nThe grey block beginning with ```{r} and ending with ``` is called a code chunk. Chunks of code go in there. In the rendered document, the code will be nicely formatted and stylized amidst the text;\nWhen you render, the code in your code chunks is actually executed, and the output is included in the final document. This is super convenient for producing tables and figures;\nYou can also include nicely formatted equations and math notation in your Quarto documents. See here for details.",
-    "crumbs": [
-      "`R` Explainers",
-      "Quarto"
-    ]
-  },
-  {
-    "objectID": "explainers/vectors.html",
-    "href": "explainers/vectors.html",
-    "title": "Vectors",
-    "section": "",
-    "text": "A vector in R is just an ordered set of values that have the same type. The easiest way to create one is to manually list out the values, separated by commas, inside c():\n\nmyvec &lt;- c(pi, 5, 3.6, 2, 9, 6000) \nmyvec\n\n[1]    3.141593    5.000000    3.600000    2.000000    9.000000 6000.000000\n\n\nIf you want to list out all of the integers between some min and max, you can use this shortcut:\n\n5:15\n\n [1]  5  6  7  8  9 10 11 12 13 14 15\n\n\nMore generally, if you want a vector of evenly spaced numbers between a min and a max, do this:\n\na &lt;- seq(0, 1, length.out = 11) \na\n\n [1] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0\n\n\nIf you want to create a “blank” vector that just has zeros in it, here you go:\n\nz &lt;- numeric(10)\nz\n\n [1] 0 0 0 0 0 0 0 0 0 0\n\n\nIn all of those cases, our vector contained numbers, but there is nothing special about numbers. Here is a vector where each value is a string (a piece of text):\n\npoetry &lt;- c(\"Mary\", \"had\", \"a\", \"little\", \"chainsaw\")\npoetry\n\n[1] \"Mary\"     \"had\"      \"a\"        \"little\"   \"chainsaw\"\n\n\nIf you have two vectors and you want to combine them into one, you can just use the c() command again. The “c” stands for “concatenate.” You’re concatenating, or joining, the vectors end-to-end:\n\nmore &lt;- c(\"whose\", \"chain\", \"was\", \"red\", \"as\")\n\nmasterpiece &lt;- c(poetry, more)\nmasterpiece\n\n [1] \"Mary\"     \"had\"      \"a\"        \"little\"   \"chainsaw\" \"whose\"   \n [7] \"chain\"    \"was\"      \"red\"      \"as\"",
-    "crumbs": [
-      "`R` Explainers",
-      "Vectors"
-    ]
-  },
-  {
-    "objectID": "explainers/math.html",
-    "href": "explainers/math.html",
-    "title": "Basic math in R\n",
-    "section": "",
-    "text": "Using R for the calculator is like buying a plane ticket to get free peanuts. But I have done my taxes in R, so…\n\n2 + 2 # addition\n\n[1] 4\n\n5 - 2 # subtraction\n\n[1] 3\n\n0.5 * 6 # multiplication\n\n[1] 3\n\n3 / 4 # division\n\n[1] 0.75\n\nsqrt(2) # square root\n\n[1] 1.414214\n\n4 ^ 2 # exponent\n\n[1] 16\n\nexp(4.9) # base-e exponent\n\n[1] 134.2898\n\nlog(7) # natural log\n\n[1] 1.94591\n\nabs(-6) # absolute value\n\n[1] 6\n\nceiling(4.6) # round up\n\n[1] 5\n\nfloor(4.6) # round down\n\n[1] 4\n\nfactorial(4) # n! = n x (n-1) x ... x 2 x 1\n\n[1] 24\n\nchoose(8, 3) # binomial coefficient (we'll get there)\n\n[1] 56",
-    "crumbs": [
-      "`R` Explainers",
-      "Basic math"
-    ]
-  },
-  {
-    "objectID": "explainers/vectorization.html",
-    "href": "explainers/vectorization.html",
-    "title": "Vectorization",
-    "section": "",
-    "text": "Functions in R are often vectorized. For example:\n\nexp(2)\n\n[1] 7.389056\n\n\nI give it one number, and it returns one number. If instead, I supply a vector, I get this:\n\nexp(c(-3, 0.001, 2, 5, 600, 1, 0))\n\n[1]  4.978707e-02  1.001001e+00  7.389056e+00  1.484132e+02 3.773020e+260\n[6]  2.718282e+00  1.000000e+00\n\n\nSo when I supply a regular ol’ number as an argument, the exp function returns a number. When I supply a vector, it returns a vector; the exp function knows to act entry-wise and give me back a vector with the output of each entry-wise computation. In other words, I didn’t have to write a loop to manually do this. The function is vectorized, so it effectively runs the loop for me.\nSo consider for instance the set of numbers \\(A = \\{-100, -6, 0.001, \\pi, 30\\}\\), and this stupid function:\n\\[\nf(x) = \\ln^2\\left|\\frac{2x}{1-\\sin(x)}\\right|.\n\\]\nIf I wanted to compute the value of \\(f\\) for each of the arguments in \\(A\\), I could write a loop that goes entry-by-entry through \\(A\\) and applies the function \\(f\\) to it. But in R, because arithmetic operations are vectorized, I can do this:\n\nA = c(-100, -6, 0.001, pi, 30)\n\nlog( abs( (2 * A) / ( 1 - sin(A) ) ) ) ^ 2 \n\n[1] 36.051349  7.910714 38.608919  3.377792 11.609009\n\n\nDumb!\nAll of the basic arithmetic operations are vectorized like this:\n\nc(1, 2, 3) + 2\n\n[1] 3 4 5\n\n\n\nc(1, 2, 3) + c(1, 2, 3)\n\n[1] 2 4 6\n\n\n\nfloor(c(4, 5.1, 6.9))\n\n[1] 4 5 6",
-    "crumbs": [
-      "`R` Explainers",
-      "Vectorization"
-    ]
-  },
-  {
-    "objectID": "explainers/rstudio.html",
-    "href": "explainers/rstudio.html",
+    "objectID": "explainers/hello-rstudio.html",
+    "href": "explainers/hello-rstudio.html",
     "title": "The Lay of the Land",
     "section": "",
-    "text": "R is a programming language, like Python, C++, Java, Julia, etc. RStudio is an IDE (integrated development environment) that allows you to interacts with R in a convenient way. So if R is the engine, RStudio is the dashboard.\nWhen you launch RStudio, you see something like this:\n\n\n\n\n\nfour panes\n\n(bottom left)\n(top left)\n(top right)\n(bottom right)"
+    "text": "R is a programming language, like Python, C++, Java, Julia, etc. RStudio is an IDE (integrated development environment) that allows you to interacts with R in a convenient way. So if R is the engine, RStudio is the dashboard.\nWhen you launch RStudio, you see something like this:\n\n\n\n\n\nfour panes\n\n(bottom left)\n(top left)\n(top right)\n(bottom right)",
+    "crumbs": [
+      "`R` Explainers",
+      "The lay of the land"
+    ]
+  },
+  {
+    "objectID": "explainers/lineplot.html",
+    "href": "explainers/lineplot.html",
+    "title": "Plotting lines",
+    "section": "",
+    "text": "You can use the curve function to plot a line graph of a function. If that function were \\(f(x) = x^2\\) for example, you would type this:\n\ncurve(x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"f(x)\")\n\n\n\n\n\n\n\nThis function takes many arguments.\n\nthe first argument is a formula for the function you want to graph. The curve command implicitly assumes that x is the argument, and everything else is constant;\n\nfrom and to give the bounds of the \\(x\\)-axis;\nThis command is basically evaluating the function at many points and connecting the dots. n specifies how many dots. Too few, and the picture would look all cattywampus:\n\n\ncurve(x^2, from = -5, to = 5, n = 5)\n\n\n\n\n\n\n\nIf you want multiple lines on one graph, you can call curve multiple times, and include the add argument in all but the first call:\n\ncurve(1*x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"\")\ncurve(2*x^2, from = -5, to = 5, n = 500, col = \"blue\", ylab = \"\", add = TRUE)\ncurve(3*x^2, from = -5, to = 5, n = 500, col = \"darkgreen\", ylab = \"\", add = TRUE)\nlegend(\"bottomleft\", c(\"a = 1\", \"a = 2\", \"a = 3\"), \n       col = c(\"red\", \"blue\", \"darkgreen\"), lty = 1, bty = \"n\")",
+    "crumbs": [
+      "`R` Explainers",
+      "Plotting lines"
+    ]
+  },
+  {
+    "objectID": "explainers/setup.html",
+    "href": "explainers/setup.html",
+    "title": "Getting started",
+    "section": "",
+    "text": "The path of least resistance to using R in this class is to reserve a container from the Duke Container Manager. It’s hosted in the cloud, and it has all of the software you will ever need for this class.\n\nGo here: https://cmgr.oit.duke.edu/containers. You may have to log in with your NetID at some point;\n(The first time you do this, you look for STA240 under “Reservations available” on the righthand side, and click “reserve STA240”. After you do that once, STA240 will appear under “My reservations” on the lefthand side forever more)\nClick STA240 under “My reservations”;\nLogin;\nStart. It may take a while, but then RStudio should launch in your browser.",
+    "crumbs": [
+      "`R` Explainers",
+      "Getting started"
+    ]
+  },
+  {
+    "objectID": "explainers/setup.html#option-1-reserve-a-container",
+    "href": "explainers/setup.html#option-1-reserve-a-container",
+    "title": "Getting started",
+    "section": "",
+    "text": "The path of least resistance to using R in this class is to reserve a container from the Duke Container Manager. It’s hosted in the cloud, and it has all of the software you will ever need for this class.\n\nGo here: https://cmgr.oit.duke.edu/containers. You may have to log in with your NetID at some point;\n(The first time you do this, you look for STA240 under “Reservations available” on the righthand side, and click “reserve STA240”. After you do that once, STA240 will appear under “My reservations” on the lefthand side forever more)\nClick STA240 under “My reservations”;\nLogin;\nStart. It may take a while, but then RStudio should launch in your browser.",
+    "crumbs": [
+      "`R` Explainers",
+      "Getting started"
+    ]
+  },
+  {
+    "objectID": "explainers/setup.html#option-2-download-it-yourself",
+    "href": "explainers/setup.html#option-2-download-it-yourself",
+    "title": "Getting started",
+    "section": "Option 2: download it yourself",
+    "text": "Option 2: download it yourself\nOf course, you won’t have containers after you graduate, so maybe it’s a good idea to hike up your big girl pants and actually install something. It’s pretty easy:\n\nDownload R: https://cran.r-project.org\nDownload RStudio: https://posit.co/download/rstudio-desktop/\n(optional) Install tinytex: https://yihui.org/tinytex/",
+    "crumbs": [
+      "`R` Explainers",
+      "Getting started"
+    ]
   }
 ]
