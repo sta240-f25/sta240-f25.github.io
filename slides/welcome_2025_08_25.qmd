@@ -1,5 +1,6 @@
 ---
 title: "Welcome to STA 240!"
+subtitle: "Probability for Statistical Inference"
 format: revealjs
 auto-stretch: false
 editor: 
