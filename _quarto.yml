@@ -16,6 +16,19 @@ website:
     logo: "img/logo.png"
     pinned: true
     align: center
+    tools:
+      - icon: code-square
+        href: https://cmgr.oit.duke.edu/containers
+        text: "RStudio Containers"
+      - icon: megaphone
+        href: https://go.canvas.duke.edu/
+        text: "Canvas"
+      - icon: people
+        href: https://edstem.org/us/courses/80868/discussion
+        text: "Ed Discussion"
+      - icon: file-arrow-up
+        href: https://www.gradescope.com/courses/1071176
+        text: "Gradescope"
 
     style: docked
     search: true
