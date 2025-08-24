@@ -205,354 +205,403 @@
     ]
   },
   {
-    "objectID": "slides/user_2025_08_09.html#about-me",
-    "href": "slides/user_2025_08_09.html#about-me",
-    "title": "Rhapsody in R\n",
-    "section": "About me",
-    "text": "About me\n\n\n\n\n\n\n\nIt’s my sixth go-around teaching intro probability;\nI’m a tad weary of coins, dice, playing cards, etc."
+    "objectID": "slides/welcome_2025_08_25.html#welcome-to-sta-240",
+    "href": "slides/welcome_2025_08_25.html#welcome-to-sta-240",
+    "title": "Welcome to STA 240!",
+    "section": "Welcome to STA 240!",
+    "text": "Welcome to STA 240!\n\n\nWhile you wait, please complete this brief questionnaire:"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#trying-to-mix-it-up",
-    "href": "slides/user_2025_08_09.html#trying-to-mix-it-up",
-    "title": "Rhapsody in R\n",
-    "section": "Trying to mix it up",
-    "text": "Trying to mix it up\n\nPlenty of applications from the natural and social sciences:\n\n\n\n\n\nActuarial mathematics;\nContested elections;\nDating apps;\nDNA sequencing;\nExpert witness testimony;\nExtreme weather;\n\n\n\n\nI Ching divination;\nInvestment risk and return;\nLanguage models;\nPapal conclaves;\nPrediction markets;\nQuantum mechanics.\n\n\n\n\nBut what about the arts?"
+    "objectID": "slides/welcome_2025_08_25.html#teaching-team",
+    "href": "slides/welcome_2025_08_25.html#teaching-team",
+    "title": "Welcome to STA 240!",
+    "section": "Teaching Team",
+    "text": "Teaching Team\n\n\n\n\n\n\n\n\nMug\nName\nRole\nOffice Hours\n\n\n\n\nHu, Yuang\nTA\nTBD\n\n\n\nLiu, Aurora\nHead TA\nTBD\n\n\n\nMa, Liane\nTA\nTBD\n\n\n\nZito, John\nInstructor\nTue 3pm - 5pm"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#stochastic-music",
-    "href": "slides/user_2025_08_09.html#stochastic-music",
-    "title": "Rhapsody in R\n",
-    "section": "Stochastic music",
-    "text": "Stochastic music\n\n\nAKA: chance or aleatoric music.\n\nleaving some aspect of the composition up in the air until the moment of performance;\n⭐ simulating a random process to determine what notes to write down."
+    "objectID": "slides/welcome_2025_08_25.html#statistical-science-majors-union",
+    "href": "slides/welcome_2025_08_25.html#statistical-science-majors-union",
+    "title": "Welcome to STA 240!",
+    "section": "Statistical Science Majors Union",
+    "text": "Statistical Science Majors Union\n\n\n\n\nWelcome First-Years Event!\n\n9/4 at 7 PM\nEast Duke 108\n\nGBM #1 & Research Panel\n\n9/18 7 PM\nOld Chem 116\n\n\n\n\n\n\n\n\n\n\n    listserv\n\n\n\n\n\n    DukeGroups"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#iannis-xenakis-1922---2001",
-    "href": "slides/user_2025_08_09.html#iannis-xenakis-1922---2001",
-    "title": "Rhapsody in R\n",
-    "section": "Iannis Xenakis (1922 - 2001)",
-    "text": "Iannis Xenakis (1922 - 2001)\n\n\n\n\n\nStudied both traditional Western music and CS, statistical mechanics, stochastic processes, etc;\nIncorporated these ideas into his compositional process."
+    "objectID": "slides/welcome_2025_08_25.html#example-the-birthday-problem",
+    "href": "slides/welcome_2025_08_25.html#example-the-birthday-problem",
+    "title": "Welcome to STA 240!",
+    "section": "Example: the birthday problem",
+    "text": "Example: the birthday problem\n\\(k\\) people convene for a birthday party:\n\nWhat is the probability that at least two of the attendees share a birthday?\nHow many people need to show up to the party for there to be a 50% chance of at least one match?\n\n\nMost people guess that you need, like, a lot."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#pithoprakta-1956",
-    "href": "slides/user_2025_08_09.html#pithoprakta-1956",
-    "title": "Rhapsody in R\n",
-    "section": "\nPithoprakta (1956)",
-    "text": "Pithoprakta (1956)\n\nThink of each member of a 46-piece string orchestra as a Brownian particle drifting up and down the staff:\n\n\n\n\n\n\n\n\n“[E]very member of the orchestra is on the honor system.” Leonard Bernstein"
+    "objectID": "slides/welcome_2025_08_25.html#your-guesses",
+    "href": "slides/welcome_2025_08_25.html#your-guesses",
+    "title": "Welcome to STA 240!",
+    "section": "Your guesses",
+    "text": "Your guesses"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#pithoprakta-1956-1",
-    "href": "slides/user_2025_08_09.html#pithoprakta-1956-1",
-    "title": "Rhapsody in R\n",
-    "section": "\nPithoprakta (1956)",
-    "text": "Pithoprakta (1956)\n\n\n\nWell …it’s the thought that counts."
+    "objectID": "slides/welcome_2025_08_25.html#example-the-birthday-problem-1",
+    "href": "slides/welcome_2025_08_25.html#example-the-birthday-problem-1",
+    "title": "Welcome to STA 240!",
+    "section": "Example: the birthday problem",
+    "text": "Example: the birthday problem\n\n\nno. of attendees (k)\nProb(at least one bday match)\n\n\n\n1\n0%\n\n\n4\n1.6%\n\n\n16\n28%\n\n\n23\n50.7%\n\n\n40\n89%\n\n\n56\n98%\n\n\n60\n99.4\n\n\n\\(\\vdots\\)\n\\(\\vdots\\)\n\n\n366\n100.0%\n\n\n\nKey words: binomial coefficient, pigeonhole principle"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#main-idea",
-    "href": "slides/user_2025_08_09.html#main-idea",
-    "title": "Rhapsody in R\n",
-    "section": "Main idea",
-    "text": "Main idea\n\n\nThought: Can I prompt students to use what they know about probability distributions and simulation to write their own pieces of stochastic music?\nWorry: Depends. Can you work with music in R?"
+    "objectID": "slides/welcome_2025_08_25.html#example-the-birthday-problem-2",
+    "href": "slides/welcome_2025_08_25.html#example-the-birthday-problem-2",
+    "title": "Welcome to STA 240!",
+    "section": "Example: the birthday problem",
+    "text": "Example: the birthday problem"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#renfei-maos-gm-package",
-    "href": "slides/user_2025_08_09.html#renfei-maos-gm-package",
-    "title": "Rhapsody in R\n",
-    "section": "Renfei Mao’s gm package",
-    "text": "Renfei Mao’s gm package\n\n\n\n\n“grammar of music”\n\nRepresent music in R with a ggplot2-style interface;\n\n“generate music”\n\nintegration with MuseScore generates sheet music and MIDI playback."
+    "objectID": "slides/welcome_2025_08_25.html#any-matches-today",
+    "href": "slides/welcome_2025_08_25.html#any-matches-today",
+    "title": "Welcome to STA 240!",
+    "section": "Any matches today?",
+    "text": "Any matches today?\n\n\n\n\n\nbirthday\ncount\n\n\n\n03-22\n1\n\n\n09-06\n1\n\n\n09-18\n1"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#ravel-prélude-in-a-minor-m.-65",
-    "href": "slides/user_2025_08_09.html#ravel-prélude-in-a-minor-m.-65",
-    "title": "Rhapsody in R\n",
-    "section": "Ravel: Prélude in A Minor, M. 65",
-    "text": "Ravel: Prélude in A Minor, M. 65\n\n\nLet’s transcribe it!"
+    "objectID": "slides/welcome_2025_08_25.html#example-the-monty-hall-problem",
+    "href": "slides/welcome_2025_08_25.html#example-the-monty-hall-problem",
+    "title": "Welcome to STA 240!",
+    "section": "Example: the Monty Hall problem",
+    "text": "Example: the Monty Hall problem\nLet’s play: https://montyhall.io/\n\n\n\n\n\n\n\n\n\n\n\nVery counterintuitive\n\n\nMost people start out thinking that the two doors are equally likely to contain the prize, so switching doesn’t matter. In fact, you have a 2/3 chance of winning if you switch."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#the-starting-point-is-always-the-same",
-    "href": "slides/user_2025_08_09.html#the-starting-point-is-always-the-same",
-    "title": "Rhapsody in R\n",
-    "section": "The starting point is always the same",
-    "text": "The starting point is always the same\nWe will add layers to this:\n\nlibrary(gm)\n\nprelude &lt;- Music()\n\n\nAnalogous to this:\n\nlibrary(ggplot2)\n\nmyplot &lt;- ggplot()"
+    "objectID": "slides/welcome_2025_08_25.html#you-people",
+    "href": "slides/welcome_2025_08_25.html#you-people",
+    "title": "Welcome to STA 240!",
+    "section": "You people",
+    "text": "You people"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#add-meter-and-tempo",
-    "href": "slides/user_2025_08_09.html#add-meter-and-tempo",
-    "title": "Rhapsody in R\n",
-    "section": "Add meter and tempo",
-    "text": "Add meter and tempo"
+    "objectID": "slides/welcome_2025_08_25.html#example-which-is-truly-random",
+    "href": "slides/welcome_2025_08_25.html#example-which-is-truly-random",
+    "title": "Welcome to STA 240!",
+    "section": "Example: which is “truly” random?",
+    "text": "Example: which is “truly” random?\n\n\n\n\n\n\n\n\n\n2 of you said Left is pure random;\n1 of you said Right is pure random."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#add-meter-and-tempo-1",
-    "href": "slides/user_2025_08_09.html#add-meter-and-tempo-1",
-    "title": "Rhapsody in R\n",
-    "section": "Add meter and tempo",
-    "text": "Add meter and tempo\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60)"
+    "objectID": "slides/welcome_2025_08_25.html#example-which-is-truly-random-1",
+    "href": "slides/welcome_2025_08_25.html#example-which-is-truly-random-1",
+    "title": "Welcome to STA 240!",
+    "section": "Example: which is “truly” random?",
+    "text": "Example: which is “truly” random?\n\n\n\n\n\n\n\n\n\nLeft: uniform random scatter;\nRight: points manipulated to “repel” each other (no clumps)."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#add-the-right-hand-part",
-    "href": "slides/user_2025_08_09.html#add-the-right-hand-part",
-    "title": "Rhapsody in R\n",
-    "section": "Add the right hand part",
-    "text": "Add the right hand part"
+    "objectID": "slides/welcome_2025_08_25.html#this-is-why-spotify-shuffle-stinks",
+    "href": "slides/welcome_2025_08_25.html#this-is-why-spotify-shuffle-stinks",
+    "title": "Welcome to STA 240!",
+    "section": "This is why Spotify shuffle stinks",
+    "text": "This is why Spotify shuffle stinks\n\n\n\n\nIt used to be a pure random shuffle;\nThen people complained that it didn’t feel random to them:\n\nstreaks of the same artist in a row;\nclumps of the same genre, etc;\n\n\nNow they do lord-only-knows-what."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#brief-aside-scientific-pitch-notation",
-    "href": "slides/user_2025_08_09.html#brief-aside-scientific-pitch-notation",
-    "title": "Rhapsody in R\n",
-    "section": "Brief aside: scientific pitch notation",
-    "text": "Brief aside: scientific pitch notation\n\"F#5\" means the F♯ in the fifth octave on the piano, etc."
+    "objectID": "slides/welcome_2025_08_25.html#example-the-wisdom-of-crowds",
+    "href": "slides/welcome_2025_08_25.html#example-the-wisdom-of-crowds",
+    "title": "Welcome to STA 240!",
+    "section": "Example: the wisdom of crowds",
+    "text": "Example: the wisdom of crowds\n\n\n\n\nAt a 1906 country fair in Plymouth, 800 people participated in a contest to estimate the weight of an ox. Francis Galton observed that the median guess, 1207 lbs, was accurate within 1% of the true weight of 1198 lbs.\n\n\n\n\n\n\n\n\nLesson\n\n\nThe aggregation of many imperfect estimates/guesses is often better than a needle-in-haystack search for the “best” individual guess.\n\n\n\n\n\n\n\n\n\n\n\nIsn’t that obvious?\n\n\nIt took humans a long time to realize this. The first recorded uses of an “average” were during Isaac Newton’s lifetime (see Stigler’s Seven Pillars of Statistical Wisdom)."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#add-the-right-hand-part-1",
-    "href": "slides/user_2025_08_09.html#add-the-right-hand-part-1",
-    "title": "Rhapsody in R\n",
-    "section": "Add the right hand part",
-    "text": "Add the right hand part\n\nright_hand &lt;- Line(\n  pitches = list(NA, \"E5\", \"F#5\", \"D5\", \"E5\", \"F#5\",\n                 \"B5\", \"G5\", \"D5\", \n                 \"E5\", \"G4\",\n                 c(\"D4\", \"F#4\", \"B4\"), c(\"C#4\", \"F4\", \"C5\"),\n                 c(\"G3\", \"C4\", \"E4\"), c(\"D#4\", \"G4\"), c(\"C4\", \"E4\"))\n)\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand"
+    "objectID": "slides/welcome_2025_08_25.html#guess-the-weight",
+    "href": "slides/welcome_2025_08_25.html#guess-the-weight",
+    "title": "Welcome to STA 240!",
+    "section": "Guess the weight",
+    "text": "Guess the weight"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#add-the-right-hand-part-2",
-    "href": "slides/user_2025_08_09.html#add-the-right-hand-part-2",
-    "title": "Rhapsody in R\n",
-    "section": "Add the right hand part",
-    "text": "Add the right hand part\n\ngm::show(prelude)\n\n\n\n\n\n\n\n\n\n\n(BTW: this plays nice with Quarto off-the-shelf.)"
+    "objectID": "slides/welcome_2025_08_25.html#guess-the-price",
+    "href": "slides/welcome_2025_08_25.html#guess-the-price",
+    "title": "Welcome to STA 240!",
+    "section": "Guess the price",
+    "text": "Guess the price"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#adjust-the-note-values",
-    "href": "slides/user_2025_08_09.html#adjust-the-note-values",
-    "title": "Rhapsody in R\n",
-    "section": "Adjust the note values",
-    "text": "Adjust the note values\n\nright_hand &lt;- Line(\n  pitches = list(NA, \"E5\", \"F#5\", \"D5\", \"E5\", \"F#5\",\n                 \"B5\", \"G5\", \"D5\", \n                 \"E5\", \"G4\",\n                 c(\"D4\", \"F#4\", \"B4\"), c(\"C#4\", \"F4\", \"C5\"),\n                 c(\"G3\", \"C4\", \"E4\"), c(\"D#4\", \"G4\"), c(\"C4\", \"E4\")),\n  durations = c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, \n                1, 1, 2, \n                1, 1, \n                2, 1, \n                1.5, 0.5, 1)\n)\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand"
+    "objectID": "slides/welcome_2025_08_25.html#guess-the-age",
+    "href": "slides/welcome_2025_08_25.html#guess-the-age",
+    "title": "Welcome to STA 240!",
+    "section": "Guess the age",
+    "text": "Guess the age"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#adjust-the-note-values-1",
-    "href": "slides/user_2025_08_09.html#adjust-the-note-values-1",
-    "title": "Rhapsody in R\n",
-    "section": "Adjust the note values",
-    "text": "Adjust the note values\n\ngm::show(prelude)"
+    "objectID": "slides/welcome_2025_08_25.html#the-modern-day-wisdom-of-crowds",
+    "href": "slides/welcome_2025_08_25.html#the-modern-day-wisdom-of-crowds",
+    "title": "Welcome to STA 240!",
+    "section": "The modern-day wisdom of crowds?",
+    "text": "The modern-day wisdom of crowds?\n\n\n\n\n\n\nPolymarket is having a moment.\n\n\n\n(source: CNN)"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#add-the-left-hand-part",
-    "href": "slides/user_2025_08_09.html#add-the-left-hand-part",
-    "title": "Rhapsody in R\n",
-    "section": "Add the left hand part",
-    "text": "Add the left hand part"
+    "objectID": "slides/welcome_2025_08_25.html#example-the-folly-of-doctors",
+    "href": "slides/welcome_2025_08_25.html#example-the-folly-of-doctors",
+    "title": "Welcome to STA 240!",
+    "section": "Example: the folly of doctors",
+    "text": "Example: the folly of doctors\n\nA 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the true positive rate of the test is 90%, and if the false positive rate is 9%, what is the chance that the woman actually has cancer, given that she tested positive?\n\n\nYou will know how to answer this in four weeks. Doctors though…\n\n\n\n\n\n\n\n\nBBC News 2014\n\n\nOnly 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.\n“We can only imagine how much anxiety those innumerate doctors instil in women.”"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#add-the-left-hand-part-1",
-    "href": "slides/user_2025_08_09.html#add-the-left-hand-part-1",
-    "title": "Rhapsody in R\n",
-    "section": "Add the left hand part",
-    "text": "Add the left hand part\n\nleft_hand &lt;- Line(\n  pitches = c(\"A2\", \"E3\", \"G3\", \"C4\", \"E4\", \n              \"G4\", \"C5\", NA, \n              NA, \"E2\", \"E3\", \"F#3\", \"G#3\",\n              NA, \"A2\", \"E3\", \"B3\", \"G3\"),\n  durations = c(rep(0.5, 7), 2, \n                rep(0.5, 4), 1, \n                rep(0.5, 4), 1),\n  bar = 2, offset = 0.5\n)\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand + \n  left_hand + \n  Clef(\"F\")\n\nNote: rests correspond to missing values (NA) in the line."
+    "objectID": "slides/welcome_2025_08_25.html#sally-clark-1964---2007",
+    "href": "slides/welcome_2025_08_25.html#sally-clark-1964---2007",
+    "title": "Welcome to STA 240!",
+    "section": "Sally Clark (1964 - 2007)",
+    "text": "Sally Clark (1964 - 2007)\n\n\n\n\n\n\nEnglish solicitor;\n1996: first son died in bed at 11 weeks;\n1998: second son died in bed at 8 weeks;\nClark arrested on suspicion of murder;\nDefense claimed it was SIDS (sudden infant death syndrome)."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#add-the-left-hand-part-2",
-    "href": "slides/user_2025_08_09.html#add-the-left-hand-part-2",
-    "title": "Rhapsody in R\n",
-    "section": "Add the left hand part",
-    "text": "Add the left hand part\n\ngm::show(prelude)"
+    "objectID": "slides/welcome_2025_08_25.html#sir-roy-meadow-1933--",
+    "href": "slides/welcome_2025_08_25.html#sir-roy-meadow-1933--",
+    "title": "Welcome to STA 240!",
+    "section": "Sir Roy Meadow (1933 - )",
+    "text": "Sir Roy Meadow (1933 - )\n\n\n\n\nPediatrician specializing in “Munchausen syndrome by proxy;”\nGave erroneous “expert” testimony that there is a “1 in 73,000,000” chance of two SIDS deaths in the same family;\n\nfirst, that’s not true;\nsecond, so what?\n\n\n1999: Clark convicted."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#add-dynamics",
-    "href": "slides/user_2025_08_09.html#add-dynamics",
-    "title": "Rhapsody in R\n",
-    "section": "Add dynamics",
-    "text": "Add dynamics"
+    "objectID": "slides/welcome_2025_08_25.html#a-sad-story",
+    "href": "slides/welcome_2025_08_25.html#a-sad-story",
+    "title": "Welcome to STA 240!",
+    "section": "A sad story",
+    "text": "A sad story\n\n\n\n\n\n\nStats community loudly panned Meadow’s testimony;\n2003: conviction overturned on appeal after revelation that exculpatory evidence was suppressed;\n2007: Clark drinks herself to death."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#add-dynamics-1",
-    "href": "slides/user_2025_08_09.html#add-dynamics-1",
-    "title": "Rhapsody in R\n",
-    "section": "Add dynamics",
-    "text": "Add dynamics\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand + \n  Dynamic(\"p\", 1) + \n  left_hand + \n  Clef(\"F\") +\n  Dynamic(\"p\", 1)"
+    "objectID": "slides/welcome_2025_08_25.html#reason-1-its-necessary.-1",
+    "href": "slides/welcome_2025_08_25.html#reason-1-its-necessary.-1",
+    "title": "Welcome to STA 240!",
+    "section": "Reason 1: It’s necessary.",
+    "text": "Reason 1: It’s necessary.\n\n\n\n\nHuman intuition and “common sense” about probability and statistics are often just flat out wrong, in silly and dangerous ways. Mere mortals require the scaffolding of mathematics to discipline our thinking."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#add-expressive-indications",
-    "href": "slides/user_2025_08_09.html#add-expressive-indications",
-    "title": "Rhapsody in R\n",
-    "section": "Add expressive indications",
-    "text": "Add expressive indications"
+    "objectID": "slides/welcome_2025_08_25.html#new-title-the-unreasonable-effectiveness-of-probability-ineverything",
+    "href": "slides/welcome_2025_08_25.html#new-title-the-unreasonable-effectiveness-of-probability-ineverything",
+    "title": "Welcome to STA 240!",
+    "section": "New title: The Unreasonable Effectiveness of Probability in…Everything?",
+    "text": "New title: The Unreasonable Effectiveness of Probability in…Everything?\n\n\n\n\n\n\nRead it!"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#add-expressive-indications-1",
-    "href": "slides/user_2025_08_09.html#add-expressive-indications-1",
-    "title": "Rhapsody in R\n",
-    "section": "Add expressive indications",
-    "text": "Add expressive indications\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand + \n  Dynamic(\"p\", 1) + \n  Slur(2, 11) + \n  Slur(12, 16) + \n  left_hand + \n  Clef(\"F\") +\n  Dynamic(\"p\", 1) + \n  Slur(1, 7) + \n  Slur(10, 13) + \n  Slur(15, 18) + \n  Pedal(1, 7)"
+    "objectID": "slides/welcome_2025_08_25.html#example-llms",
+    "href": "slides/welcome_2025_08_25.html#example-llms",
+    "title": "Welcome to STA 240!",
+    "section": "Example: LLMs",
+    "text": "Example: LLMs\n\n\n\n\n\n\n\nQuestion\n\n\nWhat method does ChatGPT use to generate the next word in one of its responses?\n\n\n\n\n\nLet’s ask!"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#pretty-close",
-    "href": "slides/user_2025_08_09.html#pretty-close",
-    "title": "Rhapsody in R\n",
-    "section": "Pretty close!",
-    "text": "Pretty close!\n\ngm::show(prelude)"
+    "objectID": "slides/welcome_2025_08_25.html#example-the-mathematics-of-insurance",
+    "href": "slides/welcome_2025_08_25.html#example-the-mathematics-of-insurance",
+    "title": "Welcome to STA 240!",
+    "section": "Example: the mathematics of insurance",
+    "text": "Example: the mathematics of insurance\n\n\n\n\n\n\nWhen an insurance company sells you a policy, they are making a bet that you won’t need it;\nIf all policyholders make a claim, they’re ruined;\nGiven so much uncertainty, who should they sell to, and at what price, to ensure they don’t go broke?\nAsk an actuary! Licensed professionals with expertise in probability, statistics, and risk management."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#change-the-instrumentation-optional",
-    "href": "slides/user_2025_08_09.html#change-the-instrumentation-optional",
-    "title": "Rhapsody in R\n",
-    "section": "Change the instrumentation (optional)",
-    "text": "Change the instrumentation (optional)\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(65) + \n  right_hand + \n  Dynamic(\"p\", 1) + \n  Slur(2, 11) + \n  Slur(12, 16) + \n  Instrument(47) + # Harp!\n  left_hand + \n  Clef(\"F\") +\n  Dynamic(\"p\", 1) + \n  Slur(1, 7) + \n  Slur(10, 13) + \n  Slur(15, 18) + \n  Instrument(43) # Cello!"
+    "objectID": "slides/welcome_2025_08_25.html#example-the-mathematics-of-insurance-1",
+    "href": "slides/welcome_2025_08_25.html#example-the-mathematics-of-insurance-1",
+    "title": "Welcome to STA 240!",
+    "section": "Example: the mathematics of insurance",
+    "text": "Example: the mathematics of insurance\n\n\n\nNurse practitioner\nIT Manager\nPhysician Assistant\nFinancial Manager\nSoftware Developer\nInformation Security Analyst\nHealth Services Manager\nData Scientist\nSpeech-Language Pathologist\nActuary\n\n\n\n\n\n\n\nFuture prospects (30%)\nWage potential (25%)\nEmployment (20%)\nJob safety/stability (15%)\nWork-life balance (10%)"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#change-the-instrumentation-optional-1",
-    "href": "slides/user_2025_08_09.html#change-the-instrumentation-optional-1",
-    "title": "Rhapsody in R\n",
-    "section": "Change the instrumentation (optional)",
-    "text": "Change the instrumentation (optional)\n\n?Instrument\n\n\n\n\nAcoustic Grand Piano\nBright Acoustic Piano\nElectric Grand Piano\nHonky-Tonk Piano\nElectric Piano 1\nElectric Piano 2\nHarpsichord\nClavinet\n\n\n\nCelesta\nGlockenspiel\nMusic Box\nVibraphone\nMarimba\nXylophone\nTubular Bells\n\n… and so on"
+    "objectID": "slides/welcome_2025_08_25.html#probably-isnt-boring-these-days",
+    "href": "slides/welcome_2025_08_25.html#probably-isnt-boring-these-days",
+    "title": "Welcome to STA 240!",
+    "section": "Probably isn’t boring these days",
+    "text": "Probably isn’t boring these days\n\n\n\n\n\n\nPlenty of complex, challenging, high-impact issues:"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#change-the-instrumentation-optional-2",
-    "href": "slides/user_2025_08_09.html#change-the-instrumentation-optional-2",
-    "title": "Rhapsody in R\n",
-    "section": "Change the instrumentation (optional)",
-    "text": "Change the instrumentation (optional)\n\ngm::show(prelude)"
+    "objectID": "slides/welcome_2025_08_25.html#example-whence-evolution",
+    "href": "slides/welcome_2025_08_25.html#example-whence-evolution",
+    "title": "Welcome to STA 240!",
+    "section": "Example: whence evolution?",
+    "text": "Example: whence evolution?\n\n\nHella simplified:\n\n\n\nMutation: random errors during DNA replication and repair;\n\nGenetic drift: chance events shift allele frequencies in the population;\n\nNatural selection: randomness generates options; selection chooses among them, producing evolution."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#summary-the-gm-package",
-    "href": "slides/user_2025_08_09.html#summary-the-gm-package",
-    "title": "Rhapsody in R\n",
-    "section": "Summary: the gm package",
-    "text": "Summary: the gm package\nA ggplot2-style interface for music:\n\n\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(65) + \n  right_hand + \n  Dynamic(\"p\", 1) + \n  Slur(2, 11) + \n  Slur(12, 16) + \n  Instrument(47) +\n  left_hand + \n  Clef(\"F\") +\n  Dynamic(\"p\", 1) + \n  Slur(1, 7) + \n  Slur(10, 13) + \n  Slur(15, 18) + \n  Instrument(43) \n\n\n\ngm::show(prelude)\n\n\n\n\n\n\n\n\n\nThanks Renfei!\n\n\nNow, let’s write some crazy music!"
+    "objectID": "slides/welcome_2025_08_25.html#example-quantum-mechanics",
+    "href": "slides/welcome_2025_08_25.html#example-quantum-mechanics",
+    "title": "Welcome to STA 240!",
+    "section": "Example: quantum mechanics",
+    "text": "Example: quantum mechanics\nkey words: Schrödinger’s cat, uncertainty principle, etc\n\n\n\n\n\n\nProbability is fundamentally braided into the fabric of reality;\nParticles at the (sub)atomic level do not have a definite position and momentum until measured;\nThere are only probabilities associated with the possible outcomes;\nThese ideas are hard, but some of the math will be accessible to us."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#every-pitch-on-the-piano",
-    "href": "slides/user_2025_08_09.html#every-pitch-on-the-piano",
-    "title": "Rhapsody in R\n",
-    "section": "Every pitch on the piano",
-    "text": "Every pitch on the piano\n\npitches &lt;- c(\"C\", \"C#\", \"D\", \"D#\", \"E\", \"F\", \"F#\", \"G\", \"G#\", \"A\", \"A#\", \"B\")\noctaves &lt;- 1:7\nall_pitches &lt;- c(\"A0\", \"A#0\", \"B0\", \n                 paste(rep(pitches, length(octaves)), \n                       sort(rep(octaves, length(pitches))), \n                       sep = \"\"), \n                 \"C8\")\nall_pitches\n\n [1] \"A0\"  \"A#0\" \"B0\"  \"C1\"  \"C#1\" \"D1\"  \"D#1\" \"E1\"  \"F1\"  \"F#1\" \"G1\"  \"G#1\"\n[13] \"A1\"  \"A#1\" \"B1\"  \"C2\"  \"C#2\" \"D2\"  \"D#2\" \"E2\"  \"F2\"  \"F#2\" \"G2\"  \"G#2\"\n[25] \"A2\"  \"A#2\" \"B2\"  \"C3\"  \"C#3\" \"D3\"  \"D#3\" \"E3\"  \"F3\"  \"F#3\" \"G3\"  \"G#3\"\n[37] \"A3\"  \"A#3\" \"B3\"  \"C4\"  \"C#4\" \"D4\"  \"D#4\" \"E4\"  \"F4\"  \"F#4\" \"G4\"  \"G#4\"\n[49] \"A4\"  \"A#4\" \"B4\"  \"C5\"  \"C#5\" \"D5\"  \"D#5\" \"E5\"  \"F5\"  \"F#5\" \"G5\"  \"G#5\"\n[61] \"A5\"  \"A#5\" \"B5\"  \"C6\"  \"C#6\" \"D6\"  \"D#6\" \"E6\"  \"F6\"  \"F#6\" \"G6\"  \"G#6\"\n[73] \"A6\"  \"A#6\" \"B6\"  \"C7\"  \"C#7\" \"D7\"  \"D#7\" \"E7\"  \"F7\"  \"F#7\" \"G7\"  \"G#7\"\n[85] \"A7\"  \"A#7\" \"B7\"  \"C8\""
+    "objectID": "slides/welcome_2025_08_25.html#reason-2-its-useful.-1",
+    "href": "slides/welcome_2025_08_25.html#reason-2-its-useful.-1",
+    "title": "Welcome to STA 240!",
+    "section": "Reason 2: It’s useful.",
+    "text": "Reason 2: It’s useful.\n\n\n\n\nNo area of science or technology can be properly understood without knowing something about probability. Period."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#the-simplest-piece-of-stochastic-music",
-    "href": "slides/user_2025_08_09.html#the-simplest-piece-of-stochastic-music",
-    "title": "Rhapsody in R\n",
-    "section": "The simplest piece of stochastic music",
-    "text": "The simplest piece of stochastic music\nSample the pitches with replacement:\n\nset.seed(8675309)\n\nline1 &lt;- Line(\n  pitches = sample(all_pitches, 64, replace = TRUE),\n  durations = .25\n)\n\nline2 &lt;- Line(\n  pitches = sample(all_pitches, 64, replace = TRUE),\n  durations = .25\n)\n\nkitten &lt;- Music() + \n  Meter(4, 4) + \n  Tempo(120) + \n  line1 + \n  line2 + \n  Dynamic(\"p\", 1) +\n  Dynamic(\"ffff\", 64) +\n  Hairpin(\"&lt;\", 2, 63)"
+    "objectID": "slides/welcome_2025_08_25.html#two-old-hags",
+    "href": "slides/welcome_2025_08_25.html#two-old-hags",
+    "title": "Welcome to STA 240!",
+    "section": "Two old hags",
+    "text": "Two old hags\n\n\n\n\n\n\n\nBertrand Russell, Mysticism and Logic and Other Essays (1917)\n\n\n\n\n\n\n“Mathematics, rightly viewed, possesses not only truth, but supreme beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show.”\n\n\n\n\n\n\n\n\n\n\n\n\nAlbert Einstein, “The Late Emmy Noether” (1935)\n\n\n\n\n\n\n“Pure mathematics is, in its way, the poetry of logical ideas.”"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#angry-kitten-on-the-keys",
-    "href": "slides/user_2025_08_09.html#angry-kitten-on-the-keys",
-    "title": "Rhapsody in R\n",
-    "section": "(Angry) Kitten on the keys",
-    "text": "(Angry) Kitten on the keys"
+    "objectID": "slides/welcome_2025_08_25.html#this-is-a-theorem-we-will-prove",
+    "href": "slides/welcome_2025_08_25.html#this-is-a-theorem-we-will-prove",
+    "title": "Welcome to STA 240!",
+    "section": "This is a theorem we will prove:",
+    "text": "This is a theorem we will prove:"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#what-is-a-melody-wrong-answers-only",
-    "href": "slides/user_2025_08_09.html#what-is-a-melody-wrong-answers-only",
-    "title": "Rhapsody in R\n",
-    "section": "What is a melody? (wrong answers only)",
-    "text": "What is a melody? (wrong answers only)\n\nIt’s a time series!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGame:\n\nFix a key (C minor) and a stable accompaniment (waltz);\nSimulate a melody from a Markov chain."
+    "objectID": "slides/welcome_2025_08_25.html#reason-3-its-beautiful.-1",
+    "href": "slides/welcome_2025_08_25.html#reason-3-its-beautiful.-1",
+    "title": "Welcome to STA 240!",
+    "section": "Reason 3: It’s beautiful.",
+    "text": "Reason 3: It’s beautiful.\n\n\n\n\nOstensibly random behavior can nevertheless be quite patternful, in ways that we can actually penetrate with elegant mathematics."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#unmarkovchained-melodies",
-    "href": "slides/user_2025_08_09.html#unmarkovchained-melodies",
-    "title": "Rhapsody in R\n",
-    "section": "Un(Markov)chained melodies",
-    "text": "Un(Markov)chained melodies\nFrom Nierhaus’ Algorithmic Composition (2009 Springer):"
+    "objectID": "slides/welcome_2025_08_25.html#why-study-mathematical-probstat",
+    "href": "slides/welcome_2025_08_25.html#why-study-mathematical-probstat",
+    "title": "Welcome to STA 240!",
+    "section": "Why study mathematical probstat?",
+    "text": "Why study mathematical probstat?\n\n\n\nIt’s necessary.\n\nHumans suck at thinking about this stuff.\n\n\n\nIt’s useful.\n\nIt makes studying other things so much easier.\n\n\n\nIt’s beautiful.\n\nThis is the main reason, honestly.\n\n\n\n\n\nSound good?"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#unmarkovchained-melodies-1",
-    "href": "slides/user_2025_08_09.html#unmarkovchained-melodies-1",
-    "title": "Rhapsody in R\n",
-    "section": "Un(Markov)chained melodies",
-    "text": "Un(Markov)chained melodies\nA first-order Markov chain on the C minor scale is described by its transition probabilities: given the note we’re on right now, what are the probabilities for the next note to come?\n\nLoads of options to explore:\n\n\n\nuniform (sampling with replacement, again);\nupweight leaps into “chord tones;”\nupweight leaps between chord tones (arpeggio-like);\nupweight leaps into the tonic (“resolutions”);\nrandom walk (flip a coin every beat and move \\(\\pm1\\))."
+    "objectID": "slides/welcome_2025_08_25.html#bookmark-the-course-page",
+    "href": "slides/welcome_2025_08_25.html#bookmark-the-course-page",
+    "title": "Welcome to STA 240!",
+    "section": "Bookmark the course page!",
+    "text": "Bookmark the course page!\n\n\n\n\n\nhttps://sta240-f25.github.io/"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#iid-melody",
-    "href": "slides/user_2025_08_09.html#iid-melody",
-    "title": "Rhapsody in R\n",
-    "section": "IID Melody",
-    "text": "IID Melody"
+    "objectID": "slides/welcome_2025_08_25.html#final-grade-breakdown",
+    "href": "slides/welcome_2025_08_25.html#final-grade-breakdown",
+    "title": "Welcome to STA 240!",
+    "section": "Final grade breakdown",
+    "text": "Final grade breakdown\nYour final course grade will be calculated as follows:\n\n\nCategory\nPercentage\n\n\n\nLabs\n10%\n\n\nProblem Sets\n30%\n\n\nMidterm Exam 1\n20%\n\n\nMidterm Exam 2\n20%\n\n\nFinal exam\n20%\n\n\n\n\n\n\n\n\n\nWarning\n\n\nThe final letter grade will be based on the usual thresholds, which will not change and will be applied exactly. So no curve and no rounding."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#random-walk-melody",
-    "href": "slides/user_2025_08_09.html#random-walk-melody",
-    "title": "Rhapsody in R\n",
-    "section": "Random walk melody",
-    "text": "Random walk melody"
+    "objectID": "slides/welcome_2025_08_25.html#sowheres-the-wiggle-room",
+    "href": "slides/welcome_2025_08_25.html#sowheres-the-wiggle-room",
+    "title": "Welcome to STA 240!",
+    "section": "So…where’s the wiggle room?",
+    "text": "So…where’s the wiggle room?\n\nWe drop the two lowest labs;\nWe drop the lowest problem set;\nWe will replace your lowest midterm score with your final exam score (if it’s better)."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#favors-leaps-between-chord-tones",
-    "href": "slides/user_2025_08_09.html#favors-leaps-between-chord-tones",
-    "title": "Rhapsody in R\n",
-    "section": "Favors leaps between chord tones",
-    "text": "Favors leaps between chord tones"
+    "objectID": "slides/welcome_2025_08_25.html#labs-10",
+    "href": "slides/welcome_2025_08_25.html#labs-10",
+    "title": "Welcome to STA 240!",
+    "section": "Labs (10%)",
+    "text": "Labs (10%)\nIn Perkins LINK 087 (Classroom 3):\n\nThursday 1:25 PM - 2:40 PM with Yuang;\nThursday 3:05 PM - 4:20 PM with Aurora.\n\nGuided activities introducing you to special topics, extensions, applications, and case studies. We will also introduce some basic R stuff, and we will use Quarto for the lab write-ups.\n\n\n\n\n\n\nPlan to attend regularly\n\n\nDesigned to be complete-able during the lab period, but due by 11:59 PM that same day."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#the-jacobson-method",
-    "href": "slides/user_2025_08_09.html#the-jacobson-method",
-    "title": "Rhapsody in R\n",
-    "section": "The Jacobson method",
-    "text": "The Jacobson method\n\n\n\n\nTake an existing piece of music and “add noise.”\nSo this:\n\\[\n\\mathbf{y}=f(\\mathbf{x})+\\boldsymbol{\\varepsilon},\n\\]\nonly…it’s music?"
+    "objectID": "slides/welcome_2025_08_25.html#problem-sets-30",
+    "href": "slides/welcome_2025_08_25.html#problem-sets-30",
+    "title": "Welcome to STA 240!",
+    "section": "Problem Sets (30%)",
+    "text": "Problem Sets (30%)\n\nMostly pencil-and-paper math problems, with some coding thrown in occasionally;\nCompose solutions however you want: scan or photograph written work, handwriting capture, LaTeX, Quarto, whatever;\nSubmit a single PDF in Gradescope (and mark your pages!)\n\n\n\n\n\n\n\nLate policy\n\n\nNo late work will be accepted unless you request an extension in advance by e-mailing JZ. All reasonable requests will be entertained, but extensions will not be long."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#name-that-tune",
-    "href": "slides/user_2025_08_09.html#name-that-tune",
-    "title": "Rhapsody in R\n",
-    "section": "Name that tune",
-    "text": "Name that tune"
+    "objectID": "slides/welcome_2025_08_25.html#exams-20-each",
+    "href": "slides/welcome_2025_08_25.html#exams-20-each",
+    "title": "Welcome to STA 240!",
+    "section": "Exams (20% each)",
+    "text": "Exams (20% each)\nTraditional, in-class, written exams:\n\n\nMidterm 1: Thursday October 9 in your lab;\n\nMidterm 2: Thursday November 13 in your lab;\n\nFinal Exam: Friday December 12.\n\n\nYou are allowed only two resources:\n\nA “dumb” calculator (no wi-fi), which you won’t need;\nBoth sides of one 8.5” x 11” note sheet created by you.\n\n\n\n\n\n\n\n\n\nIf you need testing accommodations…\n\n\nMake sure I get an SDAO letter, and make your appointments in the Testing Center now."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#the-students-mission",
-    "href": "slides/user_2025_08_09.html#the-students-mission",
-    "title": "Rhapsody in R\n",
-    "section": "The students’ mission",
-    "text": "The students’ mission\n\n\nWrite your own piece of stochastic music;\nExplore the relationship between the probability rules governing the system and the sound of the resulting music;\nKey words:\n\nPlay;\nSurprise yourself."
+    "objectID": "slides/welcome_2025_08_25.html#attendance",
+    "href": "slides/welcome_2025_08_25.html#attendance",
+    "title": "Welcome to STA 240!",
+    "section": "Attendance",
+    "text": "Attendance\nNot required. Live your life."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#randomizing-the-rhythm",
-    "href": "slides/user_2025_08_09.html#randomizing-the-rhythm",
-    "title": "Rhapsody in R\n",
-    "section": "Randomizing the rhythm",
-    "text": "Randomizing the rhythm"
+    "objectID": "slides/welcome_2025_08_25.html#communication",
+    "href": "slides/welcome_2025_08_25.html#communication",
+    "title": "Welcome to STA 240!",
+    "section": "Communication",
+    "text": "Communication\nIf you wish to ask questions in writing…\n\nPost on Ed: about general course policies and content;\nEmail JZ directly: personal matters.\n\nYou should not really be emailing the TAs directly for any reason."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#i-just-like-how-this-looks",
-    "href": "slides/user_2025_08_09.html#i-just-like-how-this-looks",
-    "title": "Rhapsody in R\n",
-    "section": "I just like how this looks",
-    "text": "I just like how this looks"
+    "objectID": "slides/welcome_2025_08_25.html#collaboration",
+    "href": "slides/welcome_2025_08_25.html#collaboration",
+    "title": "Welcome to STA 240!",
+    "section": "Collaboration",
+    "text": "Collaboration\nYou are enthusiastically encouraged to work together on labs and problem sets. You will learn a lot from each other! Two policies:\n\n✅ Acknowledge your collaborators: “Aloysius, Cybill, and I worked together on this problem;”\n❌ Do not outright share or copy solutions. All submitted work must be your own.\n\nViolation of the second policy is plagiarism. Sharers and recipients alike are referred to the conduct office and receive zeros."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#playing-with-texture",
-    "href": "slides/user_2025_08_09.html#playing-with-texture",
-    "title": "Rhapsody in R\n",
-    "section": "Playing with texture",
-    "text": "Playing with texture\n(John, please don’t forget to lower the volume on this.)"
+    "objectID": "slides/welcome_2025_08_25.html#use-of-outside-resources-including-ai",
+    "href": "slides/welcome_2025_08_25.html#use-of-outside-resources-including-ai",
+    "title": "Welcome to STA 240!",
+    "section": "Use of outside resources, including AI",
+    "text": "Use of outside resources, including AI\n\nUsing ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.\n\n\nIf you find a problem solution online (or prompt an LLM to generate one) and submit it as your own work, that will obviously be considered plagiarism;\nOtherwise, all outside resources are fair game for you to study and get extra practice;\nIf you outsource all of your thinking to a language model, you will probably tank every exam. Good luck!"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#they-called-it-nightmare-ballet",
-    "href": "slides/user_2025_08_09.html#they-called-it-nightmare-ballet",
-    "title": "Rhapsody in R\n",
-    "section": "They called it “Nightmare Ballet”",
-    "text": "They called it “Nightmare Ballet”"
+    "objectID": "slides/welcome_2025_08_25.html#whats-the-level-of-math-here",
+    "href": "slides/welcome_2025_08_25.html#whats-the-level-of-math-here",
+    "title": "Welcome to STA 240!",
+    "section": "What’s the level of math here?",
+    "text": "What’s the level of math here?\nThis is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:\n\n\ndifferentiation (power rule, chain rule, all that)\nintegration (FTOC, improper integrals, substitution, by parts…)\nlimits and continuity (L’Hôpital’s rule, etc)\ninfinite series (Taylor series for \\(e^x\\), anyone?)\n\n\n\nREVIEW: Problem Set 0 is due 5PM Friday September 5.\n\n\n\n\n\n\n\n\nThis is not sink-or-swim.\n\n\n\nLab on Thursday August 28 is a review session and work period for this assignment;\nThe course page has a math review section you can refer to."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#just-trolling-me",
-    "href": "slides/user_2025_08_09.html#just-trolling-me",
-    "title": "Rhapsody in R\n",
-    "section": "Just trolling me",
-    "text": "Just trolling me"
+    "objectID": "slides/welcome_2025_08_25.html#probability",
+    "href": "slides/welcome_2025_08_25.html#probability",
+    "title": "Welcome to STA 240!",
+    "section": "Probability",
+    "text": "Probability\n\n\n\n\n\n\n\nWhat do we do?\n\n\nState the distribution (rules) of some random phenomenon, and then study how the realizations of that phenomenon “typically” behave."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#not-quite-random-and-yet",
-    "href": "slides/user_2025_08_09.html#not-quite-random-and-yet",
-    "title": "Rhapsody in R\n",
-    "section": "Not quite random, and yet…",
-    "text": "Not quite random, and yet…"
+    "objectID": "slides/welcome_2025_08_25.html#an-archetypal-probability-problem",
+    "href": "slides/welcome_2025_08_25.html#an-archetypal-probability-problem",
+    "title": "Welcome to STA 240!",
+    "section": "An archetypal probability problem",
+    "text": "An archetypal probability problem\n\nGiven a fair coin, how many flips will it take on average until you observe the first head?"
   },
   {
-    "objectID": "slides/user_2025_08_09.html#future-improvements",
-    "href": "slides/user_2025_08_09.html#future-improvements",
-    "title": "Rhapsody in R\n",
-    "section": "Future improvements",
-    "text": "Future improvements\n\nCan gm handle any Hz, and not just the discrete pitches of the Western system?\nHow closely can I replicate Xenakis’ methods?\nPlay with Markov melodies based on estimated transition probabilities from famous composers;\nRandomize other features: harmony, rhythm, articulation, orchestration, dynamics, etc;\nStudents need more time and better coaching/inspiration;\nHow can I make it sillier?"
+    "objectID": "slides/welcome_2025_08_25.html#an-archetypal-probability-problem-1",
+    "href": "slides/welcome_2025_08_25.html#an-archetypal-probability-problem-1",
+    "title": "Welcome to STA 240!",
+    "section": "An archetypal probability problem",
+    "text": "An archetypal probability problem\n\nGiven a fair coin, how many flips will it take on average until you observe the first head?\n\nWhy is this a probability problem?\n\n\nselect a phenomenon to study (the outcome of a coin flip);\nfully specify its distribution (it’s a fair, 50-50 coin);\nstudy typical behavior of realizations (how many flips on average until the first head?)."
   },
   {
-    "objectID": "slides/user_2025_08_09.html#quick-takeaways",
-    "href": "slides/user_2025_08_09.html#quick-takeaways",
-    "title": "Rhapsody in R\n",
-    "section": "Quick takeaways",
-    "text": "Quick takeaways\n\nIntro probability is a mixed audience. I aim for maximum variety in the examples and applications;\nIf you as an instructor have any creative or artistic interests, mix them in. You will have a tremendous amount of fun;\nActivities like this totally tilt the material on its ear;\nThe gm package is so much fun to play with!"
+    "objectID": "slides/welcome_2025_08_25.html#statistics-is-probability-in-reverse",
+    "href": "slides/welcome_2025_08_25.html#statistics-is-probability-in-reverse",
+    "title": "Welcome to STA 240!",
+    "section": "Statistics is “probability in reverse”",
+    "text": "Statistics is “probability in reverse”\n\n\n\n\n\n\n\nWhat do we do?\n\n\nStart with the realizations of a random phenomenon with unknown distribution, and try to use those realizations to figure out what the distribution is."
+  },
+  {
+    "objectID": "slides/welcome_2025_08_25.html#an-archetypal-statistics-problem",
+    "href": "slides/welcome_2025_08_25.html#an-archetypal-statistics-problem",
+    "title": "Welcome to STA 240!",
+    "section": "An archetypal statistics problem",
+    "text": "An archetypal statistics problem\n\nGiven 28 flips from a mysterious coin, can you tell if it is fair?"
+  },
+  {
+    "objectID": "slides/welcome_2025_08_25.html#an-archetypal-statistics-problem-1",
+    "href": "slides/welcome_2025_08_25.html#an-archetypal-statistics-problem-1",
+    "title": "Welcome to STA 240!",
+    "section": "An archetypal statistics problem",
+    "text": "An archetypal statistics problem\n\nGiven 28 flips from a mysterious coin, can you tell if it is fair?\n\n\n\nIn probability, we assumed that the coin was fair, and then reasoned deductively from that;\nIn statistics, we do not do this;\nWe start with some coin, which may or may not be fair, and then we try to “infer” its properties based on the data."
+  },
+  {
+    "objectID": "slides/welcome_2025_08_25.html#probability-and-statistics",
+    "href": "slides/welcome_2025_08_25.html#probability-and-statistics",
+    "title": "Welcome to STA 240!",
+    "section": "Probability and statistics",
+    "text": "Probability and statistics\n\n\n\n\n\n\n\n\n\n\n\n\nProbability\nForward problem\nDeductive\nReasons from rules to consequences\n\n\nStatistics\nInverse problem\nInductive\nObserve consequences, and infer rules"
+  },
+  {
+    "objectID": "slides/welcome_2025_08_25.html#forward-problem-versus-inverse-problem",
+    "href": "slides/welcome_2025_08_25.html#forward-problem-versus-inverse-problem",
+    "title": "Welcome to STA 240!",
+    "section": "Forward problem versus inverse problem",
+    "text": "Forward problem versus inverse problem\n\n\n\n\n\n\nForward: read the rulebook, and then play a game of chess;\nInverse: watch a chess match, and based on the players’ behavior, try to guess the rules."
+  },
+  {
+    "objectID": "slides/welcome_2025_08_25.html#forward-problem-versus-inverse-problem-1",
+    "href": "slides/welcome_2025_08_25.html#forward-problem-versus-inverse-problem-1",
+    "title": "Welcome to STA 240!",
+    "section": "Forward problem versus inverse problem",
+    "text": "Forward problem versus inverse problem\n\n\nDifferentiation is a forward problem. You know the function \\(F\\), and you take its darn derivative;\nIntegration is an inverse problem. Given the derivative, you have to work backward to figure out what the original function was:\n\n\n\n\\[\n\\text{FTOC:}\\quad\\int_a^bF'(x)\\,\\text{d} x=F(b)-F(a).\n\\]"
+  },
+  {
+    "objectID": "slides/welcome_2025_08_25.html#inverse-problems-are-tricky",
+    "href": "slides/welcome_2025_08_25.html#inverse-problems-are-tricky",
+    "title": "Welcome to STA 240!",
+    "section": "Inverse problems are tricky!",
+    "text": "Inverse problems are tricky!\n\n\nForward\n\n“Here’s the question. What’s the answer?”\n\n\nInverse\n\n“If this is the answer, then what was the question?”\n\n\n\n\n\n\n\n\n\nGird your loins\n\n\nLike all inverse problems, you will find that statistics is subtler, less well-defined, less straightforward, and more open-ended than probability."
+  },
+  {
+    "objectID": "slides/welcome_2025_08_25.html#the-philosophy-of-probability",
+    "href": "slides/welcome_2025_08_25.html#the-philosophy-of-probability",
+    "title": "Welcome to STA 240!",
+    "section": "The philosophy of probability",
+    "text": "The philosophy of probability\n\nTwo common interpretive perspectives:\n\n\n\nFrequentist: probability describes the long run frequency of repeatable events;\n\nSubjective: probability describes an observer’s subjective experience of uncertainty. AKA: their “degrees of belief.”\n\n\n\n\n\n\n\n\n\n\nYou need both perspectives.\n\n\nLike the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.\n\n\n\n\n\n\n\n\n\n\n\nThe math doesn’t care which you prefer.\n\n\nRegardless your interpretation, the mathematics of probability is the same."
   },
   {
     "objectID": "math/integration.html",
@@ -1421,403 +1470,354 @@
     ]
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#welcome-to-sta-240",
-    "href": "slides/slides_2025_08_25.html#welcome-to-sta-240",
-    "title": "Welcome to STA 240!",
-    "section": "Welcome to STA 240!",
-    "text": "Welcome to STA 240!\n\n\nWhile you wait, please complete this brief questionnaire:"
+    "objectID": "slides/user_2025_08_09.html#about-me",
+    "href": "slides/user_2025_08_09.html#about-me",
+    "title": "Rhapsody in R\n",
+    "section": "About me",
+    "text": "About me\n\n\n\n\n\n\n\nIt’s my sixth go-around teaching intro probability;\nI’m a tad weary of coins, dice, playing cards, etc."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#teaching-team",
-    "href": "slides/slides_2025_08_25.html#teaching-team",
-    "title": "Welcome to STA 240!",
-    "section": "Teaching Team",
-    "text": "Teaching Team\n\n\n\n\n\n\n\n\nMug\nName\nRole\nOffice Hours\n\n\n\n\nHu, Yuang\nTA\nTBD\n\n\n\nLiu, Aurora\nHead TA\nTBD\n\n\n\nMa, Liane\nTA\nTBD\n\n\n\nZito, John\nInstructor\nTue 3pm - 5pm"
+    "objectID": "slides/user_2025_08_09.html#trying-to-mix-it-up",
+    "href": "slides/user_2025_08_09.html#trying-to-mix-it-up",
+    "title": "Rhapsody in R\n",
+    "section": "Trying to mix it up",
+    "text": "Trying to mix it up\n\nPlenty of applications from the natural and social sciences:\n\n\n\n\n\nActuarial mathematics;\nContested elections;\nDating apps;\nDNA sequencing;\nExpert witness testimony;\nExtreme weather;\n\n\n\n\nI Ching divination;\nInvestment risk and return;\nLanguage models;\nPapal conclaves;\nPrediction markets;\nQuantum mechanics.\n\n\n\n\nBut what about the arts?"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#statistical-science-majors-union",
-    "href": "slides/slides_2025_08_25.html#statistical-science-majors-union",
-    "title": "Welcome to STA 240!",
-    "section": "Statistical Science Majors Union",
-    "text": "Statistical Science Majors Union"
+    "objectID": "slides/user_2025_08_09.html#stochastic-music",
+    "href": "slides/user_2025_08_09.html#stochastic-music",
+    "title": "Rhapsody in R\n",
+    "section": "Stochastic music",
+    "text": "Stochastic music\n\n\nAKA: chance or aleatoric music.\n\nleaving some aspect of the composition up in the air until the moment of performance;\n⭐ simulating a random process to determine what notes to write down."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#example-the-birthday-problem",
-    "href": "slides/slides_2025_08_25.html#example-the-birthday-problem",
-    "title": "Welcome to STA 240!",
-    "section": "Example: the birthday problem",
-    "text": "Example: the birthday problem\n\\(k\\) people convene for a birthday party:\n\nWhat is the probability that at least two of the attendees share a birthday?\nHow many people need to show up to the party for there to be a 50% chance of at least one match?\n\n\nMost people guess that you need, like, a lot."
+    "objectID": "slides/user_2025_08_09.html#iannis-xenakis-1922---2001",
+    "href": "slides/user_2025_08_09.html#iannis-xenakis-1922---2001",
+    "title": "Rhapsody in R\n",
+    "section": "Iannis Xenakis (1922 - 2001)",
+    "text": "Iannis Xenakis (1922 - 2001)\n\n\n\n\n\nStudied both traditional Western music and CS, statistical mechanics, stochastic processes, etc;\nIncorporated these ideas into his compositional process."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#your-guesses",
-    "href": "slides/slides_2025_08_25.html#your-guesses",
-    "title": "Welcome to STA 240!",
-    "section": "Your guesses",
-    "text": "Your guesses"
+    "objectID": "slides/user_2025_08_09.html#pithoprakta-1956",
+    "href": "slides/user_2025_08_09.html#pithoprakta-1956",
+    "title": "Rhapsody in R\n",
+    "section": "\nPithoprakta (1956)",
+    "text": "Pithoprakta (1956)\n\nThink of each member of a 46-piece string orchestra as a Brownian particle drifting up and down the staff:\n\n\n\n\n\n\n\n\n“[E]very member of the orchestra is on the honor system.” Leonard Bernstein"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#example-the-birthday-problem-1",
-    "href": "slides/slides_2025_08_25.html#example-the-birthday-problem-1",
-    "title": "Welcome to STA 240!",
-    "section": "Example: the birthday problem",
-    "text": "Example: the birthday problem\n\n\nno. of attendees (k)\nProb(at least one bday match)\n\n\n\n1\n0%\n\n\n4\n1.6%\n\n\n16\n28%\n\n\n23\n50.7%\n\n\n40\n89%\n\n\n56\n98%\n\n\n60\n99.4\n\n\n\\(\\vdots\\)\n\\(\\vdots\\)\n\n\n366\n100.0%\n\n\n\nKey words: binomial coefficient, pigeonhole principle"
+    "objectID": "slides/user_2025_08_09.html#pithoprakta-1956-1",
+    "href": "slides/user_2025_08_09.html#pithoprakta-1956-1",
+    "title": "Rhapsody in R\n",
+    "section": "\nPithoprakta (1956)",
+    "text": "Pithoprakta (1956)\n\n\n\nWell …it’s the thought that counts."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#example-the-birthday-problem-2",
-    "href": "slides/slides_2025_08_25.html#example-the-birthday-problem-2",
-    "title": "Welcome to STA 240!",
-    "section": "Example: the birthday problem",
-    "text": "Example: the birthday problem"
+    "objectID": "slides/user_2025_08_09.html#main-idea",
+    "href": "slides/user_2025_08_09.html#main-idea",
+    "title": "Rhapsody in R\n",
+    "section": "Main idea",
+    "text": "Main idea\n\n\nThought: Can I prompt students to use what they know about probability distributions and simulation to write their own pieces of stochastic music?\nWorry: Depends. Can you work with music in R?"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#any-matches-today",
-    "href": "slides/slides_2025_08_25.html#any-matches-today",
-    "title": "Welcome to STA 240!",
-    "section": "Any matches today?",
-    "text": "Any matches today?\n\n\n\nWarning in attr(x, \"align\"): 'xfun::attr()' is deprecated.\nUse 'xfun::attr2()' instead.\nSee help(\"Deprecated\")\n\n\nWarning in attr(x, \"format\"): 'xfun::attr()' is deprecated.\nUse 'xfun::attr2()' instead.\nSee help(\"Deprecated\")\n\n\n\n\nbirthday\ncount\n\n\n09-18\n1"
+    "objectID": "slides/user_2025_08_09.html#renfei-maos-gm-package",
+    "href": "slides/user_2025_08_09.html#renfei-maos-gm-package",
+    "title": "Rhapsody in R\n",
+    "section": "Renfei Mao’s gm package",
+    "text": "Renfei Mao’s gm package\n\n\n\n\n“grammar of music”\n\nRepresent music in R with a ggplot2-style interface;\n\n“generate music”\n\nintegration with MuseScore generates sheet music and MIDI playback."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#example-the-monty-hall-problem",
-    "href": "slides/slides_2025_08_25.html#example-the-monty-hall-problem",
-    "title": "Welcome to STA 240!",
-    "section": "Example: the Monty Hall problem",
-    "text": "Example: the Monty Hall problem\nLet’s play: https://montyhall.io/\n\n\n\n\n\n\n\n\n\n\n\nVery counterintuitive\n\n\nMost people start out thinking that the two doors are equally likely to contain the prize, so switching doesn’t matter. In fact, you have a 2/3 chance of winning if you switch."
+    "objectID": "slides/user_2025_08_09.html#ravel-prélude-in-a-minor-m.-65",
+    "href": "slides/user_2025_08_09.html#ravel-prélude-in-a-minor-m.-65",
+    "title": "Rhapsody in R\n",
+    "section": "Ravel: Prélude in A Minor, M. 65",
+    "text": "Ravel: Prélude in A Minor, M. 65\n\n\nLet’s transcribe it!"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#you-people",
-    "href": "slides/slides_2025_08_25.html#you-people",
-    "title": "Welcome to STA 240!",
-    "section": "You people",
-    "text": "You people"
+    "objectID": "slides/user_2025_08_09.html#the-starting-point-is-always-the-same",
+    "href": "slides/user_2025_08_09.html#the-starting-point-is-always-the-same",
+    "title": "Rhapsody in R\n",
+    "section": "The starting point is always the same",
+    "text": "The starting point is always the same\nWe will add layers to this:\n\nlibrary(gm)\n\nprelude &lt;- Music()\n\n\nAnalogous to this:\n\nlibrary(ggplot2)\n\nmyplot &lt;- ggplot()"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#example-which-is-truly-random",
-    "href": "slides/slides_2025_08_25.html#example-which-is-truly-random",
-    "title": "Welcome to STA 240!",
-    "section": "Example: which is “truly” random?",
-    "text": "Example: which is “truly” random?\n\n\n\n\n\n\n\n\n\n1 of you said Left is pure random;\nof you said Right is pure random."
+    "objectID": "slides/user_2025_08_09.html#add-meter-and-tempo",
+    "href": "slides/user_2025_08_09.html#add-meter-and-tempo",
+    "title": "Rhapsody in R\n",
+    "section": "Add meter and tempo",
+    "text": "Add meter and tempo"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#example-which-is-truly-random-1",
-    "href": "slides/slides_2025_08_25.html#example-which-is-truly-random-1",
-    "title": "Welcome to STA 240!",
-    "section": "Example: which is “truly” random?",
-    "text": "Example: which is “truly” random?\n\n\n\n\n\n\n\n\n\nLeft: uniform random scatter;\nRight: points manipulated to “repel” each other (no clumps)."
+    "objectID": "slides/user_2025_08_09.html#add-meter-and-tempo-1",
+    "href": "slides/user_2025_08_09.html#add-meter-and-tempo-1",
+    "title": "Rhapsody in R\n",
+    "section": "Add meter and tempo",
+    "text": "Add meter and tempo\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60)"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#this-is-why-spotify-shuffle-stinks",
-    "href": "slides/slides_2025_08_25.html#this-is-why-spotify-shuffle-stinks",
-    "title": "Welcome to STA 240!",
-    "section": "This is why Spotify shuffle stinks",
-    "text": "This is why Spotify shuffle stinks\n\n\n\n\nIt used to be a pure random shuffle;\nThen people complained that it didn’t feel random to them:\n\nstreaks of the same artist in a row;\nclumps of the same genre, etc;\n\n\nNow they do lord-only-knows-what."
+    "objectID": "slides/user_2025_08_09.html#add-the-right-hand-part",
+    "href": "slides/user_2025_08_09.html#add-the-right-hand-part",
+    "title": "Rhapsody in R\n",
+    "section": "Add the right hand part",
+    "text": "Add the right hand part"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds",
-    "href": "slides/slides_2025_08_25.html#example-the-wisdom-of-crowds",
-    "title": "Welcome to STA 240!",
-    "section": "Example: the wisdom of crowds",
-    "text": "Example: the wisdom of crowds\n\n\n\n\nAt a 1906 country fair in Plymouth, 800 people participated in a contest to estimate the weight of an ox. Francis Galton observed that the median guess, 1207 lbs, was accurate within 1% of the true weight of 1198 lbs.\n\n\n\n\n\n\n\n\nLesson\n\n\nThe aggregation of many imperfect estimates/guesses is often better than a needle-in-haystack search for the “best” individual guess.\n\n\n\n\n\n\n\n\n\n\n\nIsn’t that obvious?\n\n\nIt took humans a long time to realize this. The first recorded uses of an “average” were during Isaac Newton’s lifetime (see Stigler’s Seven Pillars of Statistical Wisdom)."
+    "objectID": "slides/user_2025_08_09.html#brief-aside-scientific-pitch-notation",
+    "href": "slides/user_2025_08_09.html#brief-aside-scientific-pitch-notation",
+    "title": "Rhapsody in R\n",
+    "section": "Brief aside: scientific pitch notation",
+    "text": "Brief aside: scientific pitch notation\n\"F#5\" means the F♯ in the fifth octave on the piano, etc."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#weight-guessing",
-    "href": "slides/slides_2025_08_25.html#weight-guessing",
-    "title": "Welcome to STA 240!",
-    "section": "Weight guessing",
-    "text": "Weight guessing"
+    "objectID": "slides/user_2025_08_09.html#add-the-right-hand-part-1",
+    "href": "slides/user_2025_08_09.html#add-the-right-hand-part-1",
+    "title": "Rhapsody in R\n",
+    "section": "Add the right hand part",
+    "text": "Add the right hand part\n\nright_hand &lt;- Line(\n  pitches = list(NA, \"E5\", \"F#5\", \"D5\", \"E5\", \"F#5\",\n                 \"B5\", \"G5\", \"D5\", \n                 \"E5\", \"G4\",\n                 c(\"D4\", \"F#4\", \"B4\"), c(\"C#4\", \"F4\", \"C5\"),\n                 c(\"G3\", \"C4\", \"E4\"), c(\"D#4\", \"G4\"), c(\"C4\", \"E4\"))\n)\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#price-guessing",
-    "href": "slides/slides_2025_08_25.html#price-guessing",
-    "title": "Welcome to STA 240!",
-    "section": "Price guessing",
-    "text": "Price guessing"
+    "objectID": "slides/user_2025_08_09.html#add-the-right-hand-part-2",
+    "href": "slides/user_2025_08_09.html#add-the-right-hand-part-2",
+    "title": "Rhapsody in R\n",
+    "section": "Add the right hand part",
+    "text": "Add the right hand part\n\ngm::show(prelude)\n\n\n\n\n\n\n\n\n\n\n(BTW: this plays nice with Quarto off-the-shelf.)"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#age-guessing",
-    "href": "slides/slides_2025_08_25.html#age-guessing",
-    "title": "Welcome to STA 240!",
-    "section": "Age guessing",
-    "text": "Age guessing\n\n\n\nJascha Heifetz? Bette Midler? Bea Arthur?"
+    "objectID": "slides/user_2025_08_09.html#adjust-the-note-values",
+    "href": "slides/user_2025_08_09.html#adjust-the-note-values",
+    "title": "Rhapsody in R\n",
+    "section": "Adjust the note values",
+    "text": "Adjust the note values\n\nright_hand &lt;- Line(\n  pitches = list(NA, \"E5\", \"F#5\", \"D5\", \"E5\", \"F#5\",\n                 \"B5\", \"G5\", \"D5\", \n                 \"E5\", \"G4\",\n                 c(\"D4\", \"F#4\", \"B4\"), c(\"C#4\", \"F4\", \"C5\"),\n                 c(\"G3\", \"C4\", \"E4\"), c(\"D#4\", \"G4\"), c(\"C4\", \"E4\")),\n  durations = c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, \n                1, 1, 2, \n                1, 1, \n                2, 1, \n                1.5, 0.5, 1)\n)\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#the-modern-day-wisdom-of-crowds",
-    "href": "slides/slides_2025_08_25.html#the-modern-day-wisdom-of-crowds",
-    "title": "Welcome to STA 240!",
-    "section": "The modern-day wisdom of crowds?",
-    "text": "The modern-day wisdom of crowds?\n\n\n\n\n\n\nWe frequently forget and relearn this lesson.\n\n\n\n(source: CNN)"
+    "objectID": "slides/user_2025_08_09.html#adjust-the-note-values-1",
+    "href": "slides/user_2025_08_09.html#adjust-the-note-values-1",
+    "title": "Rhapsody in R\n",
+    "section": "Adjust the note values",
+    "text": "Adjust the note values\n\ngm::show(prelude)"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#example-the-folly-of-doctors",
-    "href": "slides/slides_2025_08_25.html#example-the-folly-of-doctors",
-    "title": "Welcome to STA 240!",
-    "section": "Example: the folly of doctors",
-    "text": "Example: the folly of doctors\n\nA 50-year-old, asymptomatic woman tests positive for breast cancer. Alarming, but no diagnostic test is perfect. If the prevalence of breast cancer in the population is 1%, if the true positive rate of the test is 90%, and if the false positive rate is 9%, what is the chance that the woman actually has cancer, given that she tested positive?\n\n\nYou will know how to answer this in four weeks. Doctors though…\n\n\n\n\n\n\n\n\nBBC News 2014\n\n\nOnly 34 out of 160 surveyed gynecologist got it right (9%). Almost half of them said 90%.\n“We can only imagine how much anxiety those innumerate doctors instil in women.”"
+    "objectID": "slides/user_2025_08_09.html#add-the-left-hand-part",
+    "href": "slides/user_2025_08_09.html#add-the-left-hand-part",
+    "title": "Rhapsody in R\n",
+    "section": "Add the left hand part",
+    "text": "Add the left hand part"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#sally-clark-1964---2007",
-    "href": "slides/slides_2025_08_25.html#sally-clark-1964---2007",
-    "title": "Welcome to STA 240!",
-    "section": "Sally Clark (1964 - 2007)",
-    "text": "Sally Clark (1964 - 2007)\n\n\n\n\n\n\nEnglish solicitor;\n1996: first son died in bed at 11 weeks;\n1998: second son died in bed at 8 weeks;\nClark arrested on suspicion of murder;\nDefense claimed it was SIDS (sudden infant death syndrome)."
+    "objectID": "slides/user_2025_08_09.html#add-the-left-hand-part-1",
+    "href": "slides/user_2025_08_09.html#add-the-left-hand-part-1",
+    "title": "Rhapsody in R\n",
+    "section": "Add the left hand part",
+    "text": "Add the left hand part\n\nleft_hand &lt;- Line(\n  pitches = c(\"A2\", \"E3\", \"G3\", \"C4\", \"E4\", \n              \"G4\", \"C5\", NA, \n              NA, \"E2\", \"E3\", \"F#3\", \"G#3\",\n              NA, \"A2\", \"E3\", \"B3\", \"G3\"),\n  durations = c(rep(0.5, 7), 2, \n                rep(0.5, 4), 1, \n                rep(0.5, 4), 1),\n  bar = 2, offset = 0.5\n)\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand + \n  left_hand + \n  Clef(\"F\")\n\nNote: rests correspond to missing values (NA) in the line."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#sir-roy-meadow-1933--",
-    "href": "slides/slides_2025_08_25.html#sir-roy-meadow-1933--",
-    "title": "Welcome to STA 240!",
-    "section": "Sir Roy Meadow (1933 - )",
-    "text": "Sir Roy Meadow (1933 - )\n\n\n\n\nPediatrician specializing in “Munchausen syndrome by proxy;”\nGave erroneous “expert” testimony that there is a “1 in 73,000,000” chance of two SIDS deaths in the same family;\n\nfirst, that’s not true;\nsecond, so what?\n\n\n1999: Clark convicted."
+    "objectID": "slides/user_2025_08_09.html#add-the-left-hand-part-2",
+    "href": "slides/user_2025_08_09.html#add-the-left-hand-part-2",
+    "title": "Rhapsody in R\n",
+    "section": "Add the left hand part",
+    "text": "Add the left hand part\n\ngm::show(prelude)"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#a-sad-story",
-    "href": "slides/slides_2025_08_25.html#a-sad-story",
-    "title": "Welcome to STA 240!",
-    "section": "A sad story",
-    "text": "A sad story\n\n\n\n\n\n\nStats community loudly panned Meadow’s testimony;\n2003: conviction overturned on appeal after revelation that exculpatory evidence was suppressed;\n2007: Clark drinks herself to death."
+    "objectID": "slides/user_2025_08_09.html#add-dynamics",
+    "href": "slides/user_2025_08_09.html#add-dynamics",
+    "title": "Rhapsody in R\n",
+    "section": "Add dynamics",
+    "text": "Add dynamics"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#reason-1-its-necessary.-1",
-    "href": "slides/slides_2025_08_25.html#reason-1-its-necessary.-1",
-    "title": "Welcome to STA 240!",
-    "section": "Reason 1: It’s necessary.",
-    "text": "Reason 1: It’s necessary.\n\n\n\n\nHuman intuition and “common sense” about probability and statistics are often just flat out wrong, in silly and dangerous ways. Mere mortals require the scaffolding of mathematics to discipline our thinking."
+    "objectID": "slides/user_2025_08_09.html#add-dynamics-1",
+    "href": "slides/user_2025_08_09.html#add-dynamics-1",
+    "title": "Rhapsody in R\n",
+    "section": "Add dynamics",
+    "text": "Add dynamics\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand + \n  Dynamic(\"p\", 1) + \n  left_hand + \n  Clef(\"F\") +\n  Dynamic(\"p\", 1)"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#new-title-the-unreasonable-effectiveness-of-probability-ineverything",
-    "href": "slides/slides_2025_08_25.html#new-title-the-unreasonable-effectiveness-of-probability-ineverything",
-    "title": "Welcome to STA 240!",
-    "section": "New title: The Unreasonable Effectiveness of Probability in…Everything?",
-    "text": "New title: The Unreasonable Effectiveness of Probability in…Everything?\n\n\n\n\n\n\nRead it!"
+    "objectID": "slides/user_2025_08_09.html#add-expressive-indications",
+    "href": "slides/user_2025_08_09.html#add-expressive-indications",
+    "title": "Rhapsody in R\n",
+    "section": "Add expressive indications",
+    "text": "Add expressive indications"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#example-llms",
-    "href": "slides/slides_2025_08_25.html#example-llms",
-    "title": "Welcome to STA 240!",
-    "section": "Example: LLMs",
-    "text": "Example: LLMs\n\n\n\n\n\n\n\nQuestion\n\n\nWhat method does ChatGPT use to generate the next word in one of its responses?\n\n\n\n\n\nLet’s ask!"
+    "objectID": "slides/user_2025_08_09.html#add-expressive-indications-1",
+    "href": "slides/user_2025_08_09.html#add-expressive-indications-1",
+    "title": "Rhapsody in R\n",
+    "section": "Add expressive indications",
+    "text": "Add expressive indications\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(60) +\n  right_hand + \n  Dynamic(\"p\", 1) + \n  Slur(2, 11) + \n  Slur(12, 16) + \n  left_hand + \n  Clef(\"F\") +\n  Dynamic(\"p\", 1) + \n  Slur(1, 7) + \n  Slur(10, 13) + \n  Slur(15, 18) + \n  Pedal(1, 7)"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#example-the-mathematics-of-insurance",
-    "href": "slides/slides_2025_08_25.html#example-the-mathematics-of-insurance",
-    "title": "Welcome to STA 240!",
-    "section": "Example: the mathematics of insurance",
-    "text": "Example: the mathematics of insurance\n\n\n\n\n\n\nWhen an insurance company sells you a policy, they are making a bet that you won’t need it;\nIf all policyholders make a claim, they’re ruined;\nWho should they sell to, and at what price, to ensure they don’t go broke?\nAsk an actuary! Licensed professionals with expertise in probability, statistics, and risk management."
+    "objectID": "slides/user_2025_08_09.html#pretty-close",
+    "href": "slides/user_2025_08_09.html#pretty-close",
+    "title": "Rhapsody in R\n",
+    "section": "Pretty close!",
+    "text": "Pretty close!\n\ngm::show(prelude)"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#example-the-mathematics-of-insurance-1",
-    "href": "slides/slides_2025_08_25.html#example-the-mathematics-of-insurance-1",
-    "title": "Welcome to STA 240!",
-    "section": "Example: the mathematics of insurance",
-    "text": "Example: the mathematics of insurance\n\n\n\nNurse practitioner\nIT Manager\nPhysician Assistant\nFinancial Manager\nSoftware Developer\nInformation Security Analyst\nHealth Services Manager\nData Scientist\nSpeech-Language Pathologist\nActuary\n\n\n\n\n\n\n\nFuture prospects (30%)\nWage potential (25%)\nEmployment (20%)\nJob safety/stability (15%)\nWork-life balance (10%)"
+    "objectID": "slides/user_2025_08_09.html#change-the-instrumentation-optional",
+    "href": "slides/user_2025_08_09.html#change-the-instrumentation-optional",
+    "title": "Rhapsody in R\n",
+    "section": "Change the instrumentation (optional)",
+    "text": "Change the instrumentation (optional)\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(65) + \n  right_hand + \n  Dynamic(\"p\", 1) + \n  Slur(2, 11) + \n  Slur(12, 16) + \n  Instrument(47) + # Harp!\n  left_hand + \n  Clef(\"F\") +\n  Dynamic(\"p\", 1) + \n  Slur(1, 7) + \n  Slur(10, 13) + \n  Slur(15, 18) + \n  Instrument(43) # Cello!"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#probably-isnt-boring-these-days",
-    "href": "slides/slides_2025_08_25.html#probably-isnt-boring-these-days",
-    "title": "Welcome to STA 240!",
-    "section": "Probably isn’t boring these days",
-    "text": "Probably isn’t boring these days\n\n\n\n\n\n\nPlenty of complex, challenging, high-impact issues:"
+    "objectID": "slides/user_2025_08_09.html#change-the-instrumentation-optional-1",
+    "href": "slides/user_2025_08_09.html#change-the-instrumentation-optional-1",
+    "title": "Rhapsody in R\n",
+    "section": "Change the instrumentation (optional)",
+    "text": "Change the instrumentation (optional)\n\n?Instrument\n\n\n\n\nAcoustic Grand Piano\nBright Acoustic Piano\nElectric Grand Piano\nHonky-Tonk Piano\nElectric Piano 1\nElectric Piano 2\nHarpsichord\nClavinet\n\n\n\nCelesta\nGlockenspiel\nMusic Box\nVibraphone\nMarimba\nXylophone\nTubular Bells\n\n… and so on"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#example-genetics",
-    "href": "slides/slides_2025_08_25.html#example-genetics",
-    "title": "Welcome to STA 240!",
-    "section": "Example: genetics?",
-    "text": "Example: genetics?"
+    "objectID": "slides/user_2025_08_09.html#change-the-instrumentation-optional-2",
+    "href": "slides/user_2025_08_09.html#change-the-instrumentation-optional-2",
+    "title": "Rhapsody in R\n",
+    "section": "Change the instrumentation (optional)",
+    "text": "Change the instrumentation (optional)\n\ngm::show(prelude)"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#example-quantum-mechanics",
-    "href": "slides/slides_2025_08_25.html#example-quantum-mechanics",
-    "title": "Welcome to STA 240!",
-    "section": "Example: quantum mechanics",
-    "text": "Example: quantum mechanics\nkey words: Schrödinger’s cat, uncertainty principle, etc\n\n\n\n\n\n\nProbability is fundamentally braided into the fabric of reality;\nParticles at the (sub)atomic level do not have a definite position and momentum until measured;\nThere are only probabilities associated with the possible outcomes;\nThese ideas are hard, but some of the math will be accessible to us."
+    "objectID": "slides/user_2025_08_09.html#summary-the-gm-package",
+    "href": "slides/user_2025_08_09.html#summary-the-gm-package",
+    "title": "Rhapsody in R\n",
+    "section": "Summary: the gm package",
+    "text": "Summary: the gm package\nA ggplot2-style interface for music:\n\n\n\nprelude &lt;- Music() + \n  Meter(3, 4) + \n  Tempo(65) + \n  right_hand + \n  Dynamic(\"p\", 1) + \n  Slur(2, 11) + \n  Slur(12, 16) + \n  Instrument(47) +\n  left_hand + \n  Clef(\"F\") +\n  Dynamic(\"p\", 1) + \n  Slur(1, 7) + \n  Slur(10, 13) + \n  Slur(15, 18) + \n  Instrument(43) \n\n\n\ngm::show(prelude)\n\n\n\n\n\n\n\n\n\nThanks Renfei!\n\n\nNow, let’s write some crazy music!"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#reason-2-its-useful.-1",
-    "href": "slides/slides_2025_08_25.html#reason-2-its-useful.-1",
-    "title": "Welcome to STA 240!",
-    "section": "Reason 2: It’s useful.",
-    "text": "Reason 2: It’s useful.\n\n\n\n\nNo area of science or technology can be properly understood without knowing something about probability. Period."
+    "objectID": "slides/user_2025_08_09.html#every-pitch-on-the-piano",
+    "href": "slides/user_2025_08_09.html#every-pitch-on-the-piano",
+    "title": "Rhapsody in R\n",
+    "section": "Every pitch on the piano",
+    "text": "Every pitch on the piano\n\npitches &lt;- c(\"C\", \"C#\", \"D\", \"D#\", \"E\", \"F\", \"F#\", \"G\", \"G#\", \"A\", \"A#\", \"B\")\noctaves &lt;- 1:7\nall_pitches &lt;- c(\"A0\", \"A#0\", \"B0\", \n                 paste(rep(pitches, length(octaves)), \n                       sort(rep(octaves, length(pitches))), \n                       sep = \"\"), \n                 \"C8\")\nall_pitches\n\n [1] \"A0\"  \"A#0\" \"B0\"  \"C1\"  \"C#1\" \"D1\"  \"D#1\" \"E1\"  \"F1\"  \"F#1\" \"G1\"  \"G#1\"\n[13] \"A1\"  \"A#1\" \"B1\"  \"C2\"  \"C#2\" \"D2\"  \"D#2\" \"E2\"  \"F2\"  \"F#2\" \"G2\"  \"G#2\"\n[25] \"A2\"  \"A#2\" \"B2\"  \"C3\"  \"C#3\" \"D3\"  \"D#3\" \"E3\"  \"F3\"  \"F#3\" \"G3\"  \"G#3\"\n[37] \"A3\"  \"A#3\" \"B3\"  \"C4\"  \"C#4\" \"D4\"  \"D#4\" \"E4\"  \"F4\"  \"F#4\" \"G4\"  \"G#4\"\n[49] \"A4\"  \"A#4\" \"B4\"  \"C5\"  \"C#5\" \"D5\"  \"D#5\" \"E5\"  \"F5\"  \"F#5\" \"G5\"  \"G#5\"\n[61] \"A5\"  \"A#5\" \"B5\"  \"C6\"  \"C#6\" \"D6\"  \"D#6\" \"E6\"  \"F6\"  \"F#6\" \"G6\"  \"G#6\"\n[73] \"A6\"  \"A#6\" \"B6\"  \"C7\"  \"C#7\" \"D7\"  \"D#7\" \"E7\"  \"F7\"  \"F#7\" \"G7\"  \"G#7\"\n[85] \"A7\"  \"A#7\" \"B7\"  \"C8\""
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#two-old-hags",
-    "href": "slides/slides_2025_08_25.html#two-old-hags",
-    "title": "Welcome to STA 240!",
-    "section": "Two old hags",
-    "text": "Two old hags\n\n\n\n\n\n\n\nBertrand Russell, Mysticism and Logic and Other Essays (1917)\n\n\n\n\n\n\n“Mathematics, rightly viewed, possesses not only truth, but supreme beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show.”\n\n\n\n\n\n\n\n\n\n\n\n\nAlbert Einstein, “The Late Emmy Noether” (1935)\n\n\n\n\n\n\n“Pure mathematics is, in its way, the poetry of logical ideas.”"
+    "objectID": "slides/user_2025_08_09.html#the-simplest-piece-of-stochastic-music",
+    "href": "slides/user_2025_08_09.html#the-simplest-piece-of-stochastic-music",
+    "title": "Rhapsody in R\n",
+    "section": "The simplest piece of stochastic music",
+    "text": "The simplest piece of stochastic music\nSample the pitches with replacement:\n\nset.seed(8675309)\n\nline1 &lt;- Line(\n  pitches = sample(all_pitches, 64, replace = TRUE),\n  durations = .25\n)\n\nline2 &lt;- Line(\n  pitches = sample(all_pitches, 64, replace = TRUE),\n  durations = .25\n)\n\nkitten &lt;- Music() + \n  Meter(4, 4) + \n  Tempo(120) + \n  line1 + \n  line2 + \n  Dynamic(\"p\", 1) +\n  Dynamic(\"ffff\", 64) +\n  Hairpin(\"&lt;\", 2, 63)"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#this-is-a-theorem-we-will-prove",
-    "href": "slides/slides_2025_08_25.html#this-is-a-theorem-we-will-prove",
-    "title": "Welcome to STA 240!",
-    "section": "This is a theorem we will prove:",
-    "text": "This is a theorem we will prove:"
+    "objectID": "slides/user_2025_08_09.html#angry-kitten-on-the-keys",
+    "href": "slides/user_2025_08_09.html#angry-kitten-on-the-keys",
+    "title": "Rhapsody in R\n",
+    "section": "(Angry) Kitten on the keys",
+    "text": "(Angry) Kitten on the keys"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#reason-3-its-beautiful.-1",
-    "href": "slides/slides_2025_08_25.html#reason-3-its-beautiful.-1",
-    "title": "Welcome to STA 240!",
-    "section": "Reason 3: It’s beautiful.",
-    "text": "Reason 3: It’s beautiful.\n\n\n\n\nOstensibly random behavior can nevertheless be quite patternful, in ways that we can actually penetrate with elegant mathematics."
+    "objectID": "slides/user_2025_08_09.html#what-is-a-melody-wrong-answers-only",
+    "href": "slides/user_2025_08_09.html#what-is-a-melody-wrong-answers-only",
+    "title": "Rhapsody in R\n",
+    "section": "What is a melody? (wrong answers only)",
+    "text": "What is a melody? (wrong answers only)\n\nIt’s a time series!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGame:\n\nFix a key (C minor) and a stable accompaniment (waltz);\nSimulate a melody from a Markov chain."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#why-study-mathematical-probstat",
-    "href": "slides/slides_2025_08_25.html#why-study-mathematical-probstat",
-    "title": "Welcome to STA 240!",
-    "section": "Why study mathematical probstat?",
-    "text": "Why study mathematical probstat?\n\n\n\nIt’s necessary.\n\nHumans suck at thinking about this stuff.\n\n\n\nIt’s useful.\n\nIt makes studying other things so much easier.\n\n\n\nIt’s beautiful.\n\nThis is the main reason, honestly.\n\n\n\n\n\nSound good?"
+    "objectID": "slides/user_2025_08_09.html#unmarkovchained-melodies",
+    "href": "slides/user_2025_08_09.html#unmarkovchained-melodies",
+    "title": "Rhapsody in R\n",
+    "section": "Un(Markov)chained melodies",
+    "text": "Un(Markov)chained melodies\nFrom Nierhaus’ Algorithmic Composition (2009 Springer):"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#bookmark-the-course-page",
-    "href": "slides/slides_2025_08_25.html#bookmark-the-course-page",
-    "title": "Welcome to STA 240!",
-    "section": "Bookmark the course page!",
-    "text": "Bookmark the course page!\n\n\n\n\n\nhttps://sta240-f25.github.io/"
+    "objectID": "slides/user_2025_08_09.html#unmarkovchained-melodies-1",
+    "href": "slides/user_2025_08_09.html#unmarkovchained-melodies-1",
+    "title": "Rhapsody in R\n",
+    "section": "Un(Markov)chained melodies",
+    "text": "Un(Markov)chained melodies\nA first-order Markov chain on the C minor scale is described by its transition probabilities: given the note we’re on right now, what are the probabilities for the next note to come?\n\nLoads of options to explore:\n\n\n\nuniform (sampling with replacement, again);\nupweight leaps into “chord tones;”\nupweight leaps between chord tones (arpeggio-like);\nupweight leaps into the tonic (“resolutions”);\nrandom walk (flip a coin every beat and move \\(\\pm1\\))."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#final-grade-breakdown",
-    "href": "slides/slides_2025_08_25.html#final-grade-breakdown",
-    "title": "Welcome to STA 240!",
-    "section": "Final grade breakdown",
-    "text": "Final grade breakdown\nYour final course grade will be calculated as follows:\n\n\nCategory\nPercentage\n\n\n\nLabs\n10%\n\n\nProblem Sets\n30%\n\n\nMidterm Exam 1\n20%\n\n\nMidterm Exam 2\n20%\n\n\nFinal exam\n20%\n\n\n\n\n\n\n\n\n\nWarning\n\n\nThe final letter grade will be based on the usual thresholds, which will not change and will be applied exactly. So no curve and no rounding."
+    "objectID": "slides/user_2025_08_09.html#iid-melody",
+    "href": "slides/user_2025_08_09.html#iid-melody",
+    "title": "Rhapsody in R\n",
+    "section": "IID Melody",
+    "text": "IID Melody"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#sowheres-the-wiggle-room",
-    "href": "slides/slides_2025_08_25.html#sowheres-the-wiggle-room",
-    "title": "Welcome to STA 240!",
-    "section": "So…where’s the wiggle room?",
-    "text": "So…where’s the wiggle room?\n\nWe drop the two lowest labs;\nWe drop the lowest problem set;\nWe will replace your lowest midterm score with your final exam score (if it’s better)."
+    "objectID": "slides/user_2025_08_09.html#random-walk-melody",
+    "href": "slides/user_2025_08_09.html#random-walk-melody",
+    "title": "Rhapsody in R\n",
+    "section": "Random walk melody",
+    "text": "Random walk melody"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#labs-10",
-    "href": "slides/slides_2025_08_25.html#labs-10",
-    "title": "Welcome to STA 240!",
-    "section": "Labs (10%)",
-    "text": "Labs (10%)\nLed by Aurora in Perkins LINK 087 (Classroom 3):\n\nThursday 1:25 PM - 2:40 PM;\nThursday 3:05 PM - 4:20 PM.\n\nGuided activities introducing you to special topics, extensions, applications, and case studies. We will also introduce some basic R stuff, and we will use Quarto for the lab write-ups.\n\n\n\n\n\n\nPlan to attend regularly\n\n\nDesigned to be complete-able during the lab period, but due by 11:59 PM that same day."
+    "objectID": "slides/user_2025_08_09.html#favors-leaps-between-chord-tones",
+    "href": "slides/user_2025_08_09.html#favors-leaps-between-chord-tones",
+    "title": "Rhapsody in R\n",
+    "section": "Favors leaps between chord tones",
+    "text": "Favors leaps between chord tones"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#problem-sets-30",
-    "href": "slides/slides_2025_08_25.html#problem-sets-30",
-    "title": "Welcome to STA 240!",
-    "section": "Problem Sets (30%)",
-    "text": "Problem Sets (30%)\n\nMostly pencil-and-paper math problems, with some coding thrown in occasionally;\nCompose solutions however you want: scan or photograph written work, handwriting capture, LaTeX, Quarto, whatever;\nSubmit a single PDF in Gradescope (and mark your pages!)\n\n\n\n\n\n\n\nLate policy\n\n\nNo late work will be accepted unless you request an extension in advance by e-mailing JZ. All reasonable requests will be entertained, but extensions will not be long."
+    "objectID": "slides/user_2025_08_09.html#the-jacobson-method",
+    "href": "slides/user_2025_08_09.html#the-jacobson-method",
+    "title": "Rhapsody in R\n",
+    "section": "The Jacobson method",
+    "text": "The Jacobson method\n\n\n\n\nTake an existing piece of music and “add noise.”\nSo this:\n\\[\n\\mathbf{y}=f(\\mathbf{x})+\\boldsymbol{\\varepsilon},\n\\]\nonly…it’s music?"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#exams-20-each",
-    "href": "slides/slides_2025_08_25.html#exams-20-each",
-    "title": "Welcome to STA 240!",
-    "section": "Exams (20% each)",
-    "text": "Exams (20% each)\nTraditional, in-class, written exams:\n\n\nMidterm 1: Thursday October 9 in your lab;\n\nMidterm 2: Thursday November 13 in your lab;\n\nFinal Exam: Friday December 12.\n\n\nYou are allowed only two resources:\n\nA “dumb” calculator (no wi-fi), which you won’t need;\nBoth sides of one 8.5” x 11” note sheet created by you.\n\n\n\n\n\n\n\n\n\nIf you need testing accommodations…\n\n\nMake sure I get an SDAO letter, and make your appointments in the Testing Center now."
+    "objectID": "slides/user_2025_08_09.html#name-that-tune",
+    "href": "slides/user_2025_08_09.html#name-that-tune",
+    "title": "Rhapsody in R\n",
+    "section": "Name that tune",
+    "text": "Name that tune"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#attendance",
-    "href": "slides/slides_2025_08_25.html#attendance",
-    "title": "Welcome to STA 240!",
-    "section": "Attendance",
-    "text": "Attendance\nNot required. Live your life."
+    "objectID": "slides/user_2025_08_09.html#the-students-mission",
+    "href": "slides/user_2025_08_09.html#the-students-mission",
+    "title": "Rhapsody in R\n",
+    "section": "The students’ mission",
+    "text": "The students’ mission\n\n\nWrite your own piece of stochastic music;\nExplore the relationship between the probability rules governing the system and the sound of the resulting music;\nKey words:\n\nPlay;\nSurprise yourself."
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#communication",
-    "href": "slides/slides_2025_08_25.html#communication",
-    "title": "Welcome to STA 240!",
-    "section": "Communication",
-    "text": "Communication\nIf you wish to ask questions in writing…\n\nPost on Ed: about general course policies and content;\nEmail JZ directly: personal matters.\n\nYou should not really be emailing the TAs directly for any reason."
+    "objectID": "slides/user_2025_08_09.html#randomizing-the-rhythm",
+    "href": "slides/user_2025_08_09.html#randomizing-the-rhythm",
+    "title": "Rhapsody in R\n",
+    "section": "Randomizing the rhythm",
+    "text": "Randomizing the rhythm"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#collaboration",
-    "href": "slides/slides_2025_08_25.html#collaboration",
-    "title": "Welcome to STA 240!",
-    "section": "Collaboration",
-    "text": "Collaboration\nYou are enthusiastically encouraged to work together on labs and problem sets. You will learn a lot from each other! Two policies:\n\n✅ Acknowledge your collaborators: “Aloysius, Cybill, and I worked together on this problem;”\n❌ Do not outright share or copy solutions. All submitted work must be your own.\n\nViolation of the second policy is plagiarism. Sharers and recipients alike are referred to the conduct office and receive zeros."
+    "objectID": "slides/user_2025_08_09.html#i-just-like-how-this-looks",
+    "href": "slides/user_2025_08_09.html#i-just-like-how-this-looks",
+    "title": "Rhapsody in R\n",
+    "section": "I just like how this looks",
+    "text": "I just like how this looks"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#use-of-outside-resources-including-ai",
-    "href": "slides/slides_2025_08_25.html#use-of-outside-resources-including-ai",
-    "title": "Welcome to STA 240!",
-    "section": "Use of outside resources, including AI",
-    "text": "Use of outside resources, including AI\n\nUsing ChatGPT to complete assignments is like bringing a forklift into the weight room; you will never improve your cognitive fitness that way.\n\n\nIf you find a problem solution online (or prompt an LLM to generate one) and submit it as your own work, that will obviously be considered plagiarism;\nOtherwise, all outside resources are fair game for you to study and get extra practice;\nIf you outsource all of your thinking to a language model, you will probably tank every exam. Good luck!"
+    "objectID": "slides/user_2025_08_09.html#playing-with-texture",
+    "href": "slides/user_2025_08_09.html#playing-with-texture",
+    "title": "Rhapsody in R\n",
+    "section": "Playing with texture",
+    "text": "Playing with texture\n(John, please don’t forget to lower the volume on this.)"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#whats-the-level-of-math-here",
-    "href": "slides/slides_2025_08_25.html#whats-the-level-of-math-here",
-    "title": "Welcome to STA 240!",
-    "section": "What’s the level of math here?",
-    "text": "What’s the level of math here?\nThis is essentially a pencil-and-paper math class. We will use all of the basic skills taught in Calc I and II:\n\n\ndifferentiation (power rule, chain rule, all that)\nintegration (FTOC, improper integrals, substitution, by parts…)\nlimits and continuity (L’Hôpital’s rule, etc)\ninfinite series (Taylor series for \\(e^x\\), anyone?)\n\n\n\nREVIEW: Problem Set 0 is due 5PM Friday September 5.\n\n\n\n\n\n\n\n\nThis is not sink-or-swim.\n\n\n\nLab on Thursday August 28 is a review session and work period for this assignment;\nThe course page has a math review section you can refer to."
+    "objectID": "slides/user_2025_08_09.html#they-called-it-nightmare-ballet",
+    "href": "slides/user_2025_08_09.html#they-called-it-nightmare-ballet",
+    "title": "Rhapsody in R\n",
+    "section": "They called it “Nightmare Ballet”",
+    "text": "They called it “Nightmare Ballet”"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#probability",
-    "href": "slides/slides_2025_08_25.html#probability",
-    "title": "Welcome to STA 240!",
-    "section": "Probability",
-    "text": "Probability\n\n\n\n\n\n\n\nWhat do we do?\n\n\nState the distribution (rules) of some random phenomenon, and then study how the realizations of that phenomenon “typically” behave."
+    "objectID": "slides/user_2025_08_09.html#just-trolling-me",
+    "href": "slides/user_2025_08_09.html#just-trolling-me",
+    "title": "Rhapsody in R\n",
+    "section": "Just trolling me",
+    "text": "Just trolling me"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#an-archetypal-probability-problem",
-    "href": "slides/slides_2025_08_25.html#an-archetypal-probability-problem",
-    "title": "Welcome to STA 240!",
-    "section": "An archetypal probability problem",
-    "text": "An archetypal probability problem\n\nGiven a fair coin, how many flips will it take on average until you observe the first head?"
+    "objectID": "slides/user_2025_08_09.html#not-quite-random-and-yet",
+    "href": "slides/user_2025_08_09.html#not-quite-random-and-yet",
+    "title": "Rhapsody in R\n",
+    "section": "Not quite random, and yet…",
+    "text": "Not quite random, and yet…"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#an-archetypal-probability-problem-1",
-    "href": "slides/slides_2025_08_25.html#an-archetypal-probability-problem-1",
-    "title": "Welcome to STA 240!",
-    "section": "An archetypal probability problem",
-    "text": "An archetypal probability problem\n\nGiven a fair coin, how many flips will it take on average until you observe the first head?\n\nWhy is this a probability problem?\n\n\nselect a phenomenon to study (the outcome of a coin flip);\nfully specify its distribution (it’s a fair, 50-50 coin);\nstudy typical behavior of realizations (how many flips on average until the first head?)."
+    "objectID": "slides/user_2025_08_09.html#future-improvements",
+    "href": "slides/user_2025_08_09.html#future-improvements",
+    "title": "Rhapsody in R\n",
+    "section": "Future improvements",
+    "text": "Future improvements\n\nCan gm handle any Hz, and not just the discrete pitches of the Western system?\nHow closely can I replicate Xenakis’ methods?\nPlay with Markov melodies based on estimated transition probabilities from famous composers;\nRandomize other features: harmony, rhythm, articulation, orchestration, dynamics, etc;\nStudents need more time and better coaching/inspiration;\nHow can I make it sillier?"
   },
   {
-    "objectID": "slides/slides_2025_08_25.html#statistics-is-probability-in-reverse",
-    "href": "slides/slides_2025_08_25.html#statistics-is-probability-in-reverse",
-    "title": "Welcome to STA 240!",
-    "section": "Statistics is “probability in reverse”",
-    "text": "Statistics is “probability in reverse”\n\n\n\n\n\n\n\nWhat do we do?\n\n\nStart with the realizations of a random phenomenon with unknown distribution, and try to use those realizations to figure out what the distribution is."
-  },
-  {
-    "objectID": "slides/slides_2025_08_25.html#an-archetypal-statistics-problem",
-    "href": "slides/slides_2025_08_25.html#an-archetypal-statistics-problem",
-    "title": "Welcome to STA 240!",
-    "section": "An archetypal statistics problem",
-    "text": "An archetypal statistics problem\n\nGiven 28 flips from a mysterious coin, can you tell if it is fair?"
-  },
-  {
-    "objectID": "slides/slides_2025_08_25.html#an-archetypal-statistics-problem-1",
-    "href": "slides/slides_2025_08_25.html#an-archetypal-statistics-problem-1",
-    "title": "Welcome to STA 240!",
-    "section": "An archetypal statistics problem",
-    "text": "An archetypal statistics problem\n\nGiven 28 flips from a mysterious coin, can you tell if it is fair?\n\n\n\nIn probability, we assumed that the coin was fair, and then reasoned deductively from that;\nIn statistics, we do not do this;\nWe start with some coin, which may or may not be fair, and then we try to “infer” its properties based on the data."
-  },
-  {
-    "objectID": "slides/slides_2025_08_25.html#probability-and-statistics",
-    "href": "slides/slides_2025_08_25.html#probability-and-statistics",
-    "title": "Welcome to STA 240!",
-    "section": "Probability and statistics",
-    "text": "Probability and statistics\n\n\n\n\n\n\n\n\n\n\n\n\nProbability\nForward problem\nDeductive\nReasons from rules to consequences\n\n\nStatistics\nInverse problem\nInductive\nObserve consequences, and infer rules"
-  },
-  {
-    "objectID": "slides/slides_2025_08_25.html#forward-problem-versus-inverse-problem",
-    "href": "slides/slides_2025_08_25.html#forward-problem-versus-inverse-problem",
-    "title": "Welcome to STA 240!",
-    "section": "Forward problem versus inverse problem",
-    "text": "Forward problem versus inverse problem\n\n\n\n\n\n\nForward: read the rulebook, and then play a game of chess;\nInverse: watch a chess match, and based on the players’ behavior, try to guess the rules."
-  },
-  {
-    "objectID": "slides/slides_2025_08_25.html#forward-problem-versus-inverse-problem-1",
-    "href": "slides/slides_2025_08_25.html#forward-problem-versus-inverse-problem-1",
-    "title": "Welcome to STA 240!",
-    "section": "Forward problem versus inverse problem",
-    "text": "Forward problem versus inverse problem\n\n\nDifferentiation is a forward problem. You know the function \\(F\\), and you take its darn derivative;\nIntegration is an inverse problem. Given the derivative, you have to work backward to figure out what the original function was:\n\n\n\n\\[\n\\text{FTOC:}\\quad\\int_a^bF'(x)\\,\\text{d} x=F(b)-F(a).\n\\]"
-  },
-  {
-    "objectID": "slides/slides_2025_08_25.html#inverse-problems-are-tricky",
-    "href": "slides/slides_2025_08_25.html#inverse-problems-are-tricky",
-    "title": "Welcome to STA 240!",
-    "section": "Inverse problems are tricky!",
-    "text": "Inverse problems are tricky!\n\n\nForward\n\n“Here’s the question. What’s the answer?”\n\n\nInverse\n\n“If this is the answer, then what was the question?”\n\n\n\n\n\n\n\n\n\nGird your loins\n\n\nLike all inverse problems, you will find that statistics is subtler, less well-defined, less straightforward, and more open-ended than probability."
-  },
-  {
-    "objectID": "slides/slides_2025_08_25.html#the-philosophy-of-probability",
-    "href": "slides/slides_2025_08_25.html#the-philosophy-of-probability",
-    "title": "Welcome to STA 240!",
-    "section": "The philosophy of probability",
-    "text": "The philosophy of probability\n\nTwo common interpretive perspectives:\n\n\n\nFrequentist: probability describes the long run frequency of repeatable events;\n\nSubjective: probability describes an observer’s subjective experience of uncertainty. AKA: their “degrees of belief.”\n\n\n\n\n\n\n\n\n\n\nYou need both perspectives.\n\n\nLike the wave-particle duality of light, both are true and useful, but their coexistence can be tense and uneasy. We just have to learn to live with that.\n\n\n\n\n\n\n\n\n\n\n\nThe math doesn’t care which you prefer.\n\n\nRegardless your interpretation, the mathematics of probability is the same."
+    "objectID": "slides/user_2025_08_09.html#quick-takeaways",
+    "href": "slides/user_2025_08_09.html#quick-takeaways",
+    "title": "Rhapsody in R\n",
+    "section": "Quick takeaways",
+    "text": "Quick takeaways\n\nIntro probability is a mixed audience. I aim for maximum variety in the examples and applications;\nIf you as an instructor have any creative or artistic interests, mix them in. You will have a tremendous amount of fun;\nActivities like this totally tilt the material on its ear;\nThe gm package is so much fun to play with!"
   },
   {
     "objectID": "syllabus/syllabus_overview.html",
@@ -1967,7 +1967,7 @@
     "href": "explainers/hello-rstudio.html",
     "title": "The Lay of the Land",
     "section": "",
-    "text": "R is a programming language, like Python, C++, Java, Julia, etc. RStudio is an IDE (integrated development environment) that allows you to interacts with R in a convenient way. So if R is the engine, RStudio is the dashboard.\nWhen you launch RStudio, you see something like this:\n\n\n\n\n\nfour panes\n\n(bottom left)\n(top left)\n(top right)\n(bottom right)",
+    "text": "R is a programming language, like Python, C++, Java, Julia, etc. RStudio is an IDE (integrated development environment) that allows you to interacts with R in a convenient way. So if R is the engine, RStudio is the dashboard.\nWhen you launch RStudio, you see something like this:\n\n\n\n\n\nThere are four panes:\n\n(bottom left) this is the console. It’s a command line where you can type input and get output. At the very least, you can use R as an overgrown calculator;\n(top left) this is the editor. If you are writing a bunch of code you want to save for later (like on your labs), you can edit the text file here;\n(top right) this is the environment. It’s a list of all the data and variables you have loaded;\n(bottom right) this panel is multipurpose. Depending on the tab you select, it can display the file directory, the plot you created, the documentation, or your rendered pdf.",
     "crumbs": [
       "`R` Explainers",
       "The lay of the land"
