@@ -14,11 +14,11 @@ editor:
 library(googlesheets4)
 library(tidyverse)
 gs4_deauth()
-d <- read_sheet("https://docs.google.com/spreadsheets/d/1DLF886x5_-r4eYhZdRAqcDKhR4mi1T2JxaaM7nfIUgk/edit?usp=sharing") |>
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1JLiRSsFDVJgTK1NJRUr6xU092NeVZvL5H4jsUdCBa8w/edit?usp=sharing") |>
   rename(birthday = `What is your birthday?`,
          bday_prob = `How many people need to attend a party for there to be a 50% chance that at least two share a birthday?`,
          potato = `There is a sack of potatoes at the front of the classroom. Without touching it, guess how much it weighs in pounds.`,
-         price = `As of this morning, what is the price (USD) of this product at Harris Teeter?`,
+         price = `As of this morning, what is the price (USD) of this product from the vendor?`,
          age = `How old was this person (in years) when the photo was taken?`,
          monty = `On a game show, you are presented with three doors. Behind one of the doors is the grand prize, and behind each of the other two doors is a goat. If you select the door that has the prize, you win. The game proceeds as follows:\n\n1. You select one of the doors to open;\n2. The host does not open the door you selected. Instead, he opens one of the doors you did not select to reveal a goat;\n3. The host asks you if you would like to change your selection to the remaining door (the one you did not select initially and the host did not open). \n\nWhat should you do?`,
          pinker = `Consider the two scatterplots. One is pure random noise, and the other has been manipulated. Which is which?`)
@@ -53,7 +53,37 @@ While you wait, please complete this brief questionnaire:
 | ![](images/z.jpg){.c} | Zito, John  | Instructor | Tue 3pm - 5pm |
 : {tbl-colwidths="[20,25,25,30]"}
 
-## Statistical Science Majors Union
+## Statistical Science Majors Union {.medium}
+
+::::: {.columns }
+
+::: {.column width="50%"}
+
+![](images/ssmu.png)
+
+:::
+
+::: {.column width="50%"}
+
+[**Welcome First-Years Event!**]{style="color:blue;"}
+
+- 9/4 at 7 PM
+- East Duke 108
+
+[**GBM #1 & Research Panel**]{style="color:blue;"}
+
+- 9/18 7 PM
+- Old Chem 116
+
+::: {layout-ncol=2}
+
+{{< qrcode https://lists.duke.edu/sympa/subscribe/stat-majors-union? listserv width=150 height=150 >}}listserv
+
+{{< qrcode https://duke.campusgroups.com/SSMU/club_signup DukeGroups width=150 height=150 >}}DukeGroups
+:::
+
+:::
+:::::
 
 # Why should you study the mathematics of probability and statistics?
 
@@ -85,7 +115,8 @@ ggplot(d, aes(x = bday_prob)) +
     title = "How many people must attend for a 50% chance of a birthday match?",
     x = "Number of people"
   ) + 
-  geom_vline(xintercept = 23, col = "red")
+  geom_vline(xintercept = 23, col = "red", size = 2) + 
+  theme_minimal(base_size = 16)
 ```
 
 ## Example: the birthday problem {.medium}
@@ -148,14 +179,16 @@ d |>
   ) |>
   ggplot(aes(y = monty)) + 
   geom_bar() + 
-  labs(y = "What should you do?")
+  labs(y = "What should you do?") + 
+  theme_minimal(base_size = 16)
 ```
 
-## Example: which is "truly" random?
+## Example: which is "truly" random? {.medium}
 
 ```{r}
 #| echo: false
 #| fig-asp: 0.5
+#| fig-width: 9
 #| fig-align: center
 
 repulsive_points <- function(n, min_dist, max_iter = 1e6) {
@@ -183,9 +216,9 @@ repulsive_points <- function(n, min_dist, max_iter = 1e6) {
   pts
 }
 
-set.seed(8675309)
+set.seed(8675309) #8675309
 n = 500
-pt_cex = 0.5
+pt_cex = 0.55
 x = runif(n)
 y = runif(n)
 pts <- repulsive_points(n, min_dist = 0.02)
@@ -208,11 +241,12 @@ right_is_random <- d |>
 - `{r} left_is_random` of you said **Left** is pure random;
 - `{r} right_is_random` of you said **Right** is pure random.
 
-## Example: which is "truly" random?
+## Example: which is "truly" random? {.medium}
 
 ```{r}
 #| echo: false
 #| fig-asp: 0.5
+#| fig-width: 9
 #| fig-align: center
 
 par(mfrow = c(1, 2), mar = c(2, 2, 2, 2))
@@ -275,53 +309,82 @@ The aggregation of many imperfect estimates/guesses is often better than a needl
 It took humans a long time to realize this. The first recorded uses of an "average" were during Isaac Newton's lifetime (see Stigler's *Seven Pillars of Statistical Wisdom*).
 :::
 
-## Weight guessing
+## Guess the weight
 
-. . .
+::::: {.columns .v-center-container}
+::: {.column width="30%"}
+![](images/potato-head.webp)
+:::
+
+::: {.column width="70%"}
+
+:::  {.fragment}
 
 ```{r}
 #| echo: false
 #| warning: false
 #| message: false
+#| fig-asp: 0.8
 
 ggplot(d, aes(x = potato)) + 
   geom_histogram() + 
   labs(
     title = "How much does the sack of potatoes weigh?",
     x = "Weight (lbs)"
-  )
+  ) + 
+  theme_minimal(base_size = 24)
 ```
 
-## Price guessing
+:::
 
-. . .
+:::
+:::::
+
+
+## Guess the price
+
+::::: {.columns .v-center-container}
+::: {.column width="30%"}
+![](images/chocolate.png)
+:::
+
+::: {.column width="70%"}
+
+:::  {.fragment}
 
 ```{r}
 #| echo: false
 #| warning: false
 #| message: false
+#| fig-asp: 0.8
 
 ggplot(d, aes(x = price)) + 
   geom_histogram() + 
   labs(
-    title = "How much does the ice cream cost?",
+    title = "How much does the stupid chocolate cost?",
     x = "Price ($)"
   ) + 
-  geom_vline(xintercept = 5, col = "red")
+  geom_vline(xintercept = 14.99, col = "red", size = 2) + 
+  theme_minimal(base_size = 24)
 ```
 
-## Age guessing
-
-. . .
-
-::::: {.columns .v-center-container}
-::: {.column width="50%"}
-Jascha Heifetz?
-Bette Midler?
-Bea Arthur?
 :::
 
-::: {.column width="50%"}
+:::
+:::::
+
+
+
+## Guess the age
+
+::::: {.columns .v-center-container}
+::: {.column width="40%"}
+![](images/bea-arthur.jpg)
+:::
+
+::: {.column width="60%"}
+
+:::  {.fragment}
 
 ```{r}
 #| echo: false
@@ -332,11 +395,14 @@ Bea Arthur?
 ggplot(d, aes(x = age)) + 
   geom_histogram() + 
   labs(
-    title = "How old was so-and-so?",
+    title = "How old was Sergeant Bernice \"Bea Arthur\" Frankel?",
     x = "Age (years)"
   ) + 
-  geom_vline(xintercept = 50, col = "red")
+  geom_vline(xintercept = 20, col = "red", size = 2) + 
+  theme_minimal(base_size = 20)
 ```
+
+:::
 
 :::
 :::::
@@ -344,7 +410,7 @@ ggplot(d, aes(x = age)) +
 ## The modern-day wisdom of crowds?
 
 ::: callout-warning
-## [We frequently forget and relearn this lesson.](https://polymarket.com)
+## [Polymarket is having a moment.](https://polymarket.com)
 
 ![](images/prediction_markets.png) 
 
@@ -480,7 +546,7 @@ What method does ChatGPT use to generate the next word in one of its responses?
 ::: incremental 
 - When an insurance company sells you a policy, they are making a bet that you won't need it;
 - If all policyholders make a claim, they're ruined;
-- Who should they sell to, and at what price, to ensure they don't go broke?
+- Given so much uncertainty, who should they sell to, and at what price, to ensure they don't go broke?
 - Ask an *actuary*! Licensed professionals with expertise in probability, statistics, and risk management.
 :::
 
@@ -516,7 +582,7 @@ What method does ChatGPT use to generate the next word in one of its responses?
 :::
 :::::
 
-## Probably isn't boring these days
+## Probably isn't boring these days {.scrollable}
 
 ::: callout-important
 ## Plenty of complex, challenging, high-impact issues:
@@ -524,7 +590,27 @@ What method does ChatGPT use to generate the next word in one of its responses?
 [![](images/nyt-insurance.png){fig-align="center" width="80%"}](https://www.nytimes.com/interactive/2024/12/18/climate/insurance-non-renewal-climate-crisis.html)
 :::
 
-## Example: genetics?
+## Example: whence evolution?
+
+::::: {.columns}
+::: {.column width="60%"}
+
+Hella simplified:
+
+::: incremental
+- [**Mutation**]{style="color:blue;"}: random errors during DNA replication and repair;
+- [**Genetic drift**]{style="color:blue;"}: chance events shift allele frequencies in the population;
+- [**Natural selection**]{style="color:blue;"}: randomness generates options; selection chooses among them, producing evolution.
+:::
+
+:::
+
+::: {.column width="40%"}
+
+![](images/darwin.gif)
+
+:::
+:::::
 
 ## Example: quantum mechanics
 
@@ -672,10 +758,10 @@ The final letter grade will be based on the usual thresholds, which will not cha
 
 ## Labs (10%)
 
-Led by Aurora in Perkins LINK 087 (Classroom 3):
+In Perkins LINK 087 (Classroom 3):
 
--   Thursday 1:25 PM - 2:40 PM;
--   Thursday 3:05 PM - 4:20 PM.
+-   Thursday 1:25 PM - 2:40 PM with Yuang;
+-   Thursday 3:05 PM - 4:20 PM with Aurora.
 
 Guided activities introducing you to special topics, extensions, applications, and case studies. We will also introduce some basic `R` stuff, and we will use Quarto for the lab write-ups.
 
