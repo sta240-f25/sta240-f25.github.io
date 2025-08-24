@@ -379,7 +379,7 @@ ggplot(d, aes(x = price)) +
 
 ::::: {.columns .v-center-container}
 ::: {.column width="40%"}
-![](images/bea-arthur.jpg)
+[![](images/bea-arthur.jpg)](https://youtu.be/Rsiffrahqzo?si=Y6rbZ6-nxJy72Ul2&t=39)
 :::
 
 ::: {.column width="60%"}
