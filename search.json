@@ -1353,7 +1353,7 @@
     "href": "problems/pset-0.html#submission",
     "title": "Problem Set 0",
     "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.\nDo not forget to include the following:\n\nFor each problem, please acknowledge your collaborators;\nIf a problem required you to code something, please include both the code and the output. “Including the code” can be as crude as a screenshot, but you might also use Quarto to get a nice lil’ pdf.",
     "crumbs": [
       "Problem Sets",
       "Problem Set 0"
