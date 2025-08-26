@@ -50,7 +50,7 @@ While you wait, please complete this brief questionnaire:
 | ![](images/yh.jpg){.c} | Hu, Yuang   | TA         | TBD           |
 | ![](images/al.jpg){.c} | Liu, Aurora | Head TA    | TBD           |
 | ![](images/lm.png){.c} | Ma, Liane   | TA         | TBD           |
-| ![](images/z.jpg){.c} | Zito, John  | Instructor | Tue 3pm - 5pm |
+| ![](images/z.jpg){.c} | Zito, John  | Instructor | Tue 3pm - 6pm |
 : {tbl-colwidths="[20,25,25,30]"}
 
 ## Statistical Science Majors Union {.medium}
@@ -332,7 +332,8 @@ ggplot(d, aes(x = potato)) +
     title = "How much does the sack of potatoes weigh?",
     x = "Weight (lbs)"
   ) + 
-  theme_minimal(base_size = 24)
+  theme_minimal(base_size = 24) + 
+  geom_vline(xintercept = 12.1, col = "red", size = 2)
 ```
 
 :::
@@ -532,7 +533,9 @@ What method does ChatGPT use to generate the next word in one of its responses?
 
 . . .
 
-[Let's ask!](https://chatgpt.com)
+Let's ask!
+
+<https://chatgpt.com/share/677ef289-9564-8008-a662-9f8c2cfb04fc>
 
 ## Example: the mathematics of insurance
 
