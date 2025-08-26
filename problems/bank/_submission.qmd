@@ -1,1 +1,6 @@
 You are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.
+
+Do not forget to include the following:
+
+- For each problem, please [acknowledge your collaborators](https://sta240-f25.github.io/syllabus/syllabus_policies.html#collaboration);
+- If a problem required you to code something, please include both the code and the output. "Including the code" can be as crude as a screenshot, but you might also use [Quarto](https://sta240-f25.github.io/explainers/quarto.html) to get a nice lil' pdf.
