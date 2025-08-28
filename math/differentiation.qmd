@@ -177,7 +177,7 @@ mtext("max f(x)", side = 2, at = 5, las = 1, line = 1, col = "blue")
 mtext("argmax f(x)", side = 1, at = 3, col = "blue")
 ```
 
-Inspecting this picture, we notice that the maximum corresponds to a point where the derivative (slope of the tangent line) is zero. So to optimize $f$, perhaps we can compute its first derivative, set it equal to 0, and solve.
+Inspecting this picture, we notice that the maximum corresponds to a point where the derivative (slope of the tangent line) is zero. In order for the function to "top out," it must at some point have switched from being increasing (positive derivative) to decreasing (negative derivative). When we ask where the maximum occurs, that's the same as asking where the first derivative switched sign (ie crossed the $x$-axis). So to optimize $f$, perhaps we can compute its first derivative, set it equal to 0, and solve.
 
 $$
 \begin{aligned}
