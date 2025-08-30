@@ -761,10 +761,10 @@ The final letter grade will be based on the usual thresholds, which will not cha
 
 ## Labs (10%)
 
-In Perkins LINK 087 (Classroom 3):
+Lead by Aurora in Perkins LINK 087 (Classroom 3):
 
--   Thursday 1:25 PM - 2:40 PM with Yuang;
--   Thursday 3:05 PM - 4:20 PM with Aurora.
+-   Thursday 1:25 PM - 2:40 PM;
+-   Thursday 3:05 PM - 4:20 PM.
 
 Guided activities introducing you to special topics, extensions, applications, and case studies. We will also introduce some basic `R` stuff, and we will use Quarto for the lab write-ups.
 
