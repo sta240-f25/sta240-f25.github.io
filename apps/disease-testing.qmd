@@ -1,0 +1,65 @@
+---
+title: "You tested positive. Now what?"
+format: html
+filters:
+  - shinylive
+---
+
+WRITE SOME NOTES ABOUT THIS
+
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 500
+
+library(shiny)
+
+# Define UI for application that draws a histogram
+ui <- fluidPage(
+
+    # Application title
+    titlePanel("What can a diagnostic test teach you?"),
+
+    # Sidebar with a slider input for number of bins 
+    sidebarLayout(
+        sidebarPanel(
+            sliderInput("TPR",
+                        "Sensitivity (TPR):",
+                        min = 0,
+                        max = 1,
+                        value = 0.5),
+            sliderInput("TNR",
+                        "Specificity (TNR):",
+                        min = 0,
+                        max = 1,
+                        value = 0.5)
+        ),
+
+        # Show a plot of the generated distribution
+        mainPanel(
+           plotOutput("distPlot")
+        )
+    )
+)
+
+# Define server logic required to draw a histogram
+server <- function(input, output) {
+
+    output$distPlot <- renderPlot({
+      TPR <- input$TPR
+      TNR <- input$TNR
+      P <- seq(0, 1, length.out = 1000)
+      B <- TPR * P / (TPR * P + (1 - TNR) * (1 - P))
+
+      # draw the histogram with the specified number of bins
+      par(mar = c(5, 5, 5, 0.5))
+      plot(P, B, type = "l", xlim = c(0, 1), ylim = c(0, 1),
+           xlab = "P(D = +)", ylab = "P(D = + | T = +)",
+           lwd = 2, cex.lab = 2,
+           panel.first = abline(a = 0, b = 1, lty = 2, lwd = 2, col = "grey"))
+    })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+```
