@@ -1,0 +1,13 @@
+---
+title: "Lab 1"
+subtitle: Due Thursday September 4 at 11:59 PM
+format: html
+---
+
+This is a course about "doing the math," but in the modern era, this has a symbiotic relationship with computer simulation. As you near the research frontier, there are plenty of phenomena where the math is simply intractable, but simulation is possible. This enables us to generate preliminary results about the behavior of the random system. For more tractable problems, "doing the math" and computer simulation are mutually reinforcing. Often I will check a calculation against a simulation to verify that I didn't make any mistakes. Conversely, I will do a calculation to verify if a simulation result is legit. 
+
+In this course, we will introduce the basics of the `R` programming language, but *not* primarily for data analysis. Instead, we will show you how to use `R` to construct a lil' computational laboratory in which you can probe the behavior of a random system. Being able to write computer simulations is one of the main skills that will empower you to be independent of your instructors and continue studying probability and statistics on your own after you leave this class.
+
+# Setup
+
+# Practice
