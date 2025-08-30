@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - lecture-notes/sta240-notes-00-set-theory.pdf
 
 website:
   page-navigation: true
