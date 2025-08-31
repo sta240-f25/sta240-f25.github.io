@@ -5,8 +5,22 @@ filters:
   - shinylive
 ---
 
-WRITE SOME NOTES ABOUT THIS
+Testing positive for a disease is not exactly good news, but how alarmed you should be ultimately depends on a few factors: the accuracy of the test and the overall rarity of the disease (the so-called *base rate*). Before you walk into the doctor's office, the probability that you are sick is $P(D=+)$, the **prevalence**. This is the unconditional (or *marginal*) probability that a random member of the population (ie you in that moment) is sick. After you test positive, the *revised* or *conditional* probability that you have the disease is given by Bayes' theorem:
 
+$$
+\begin{aligned}
+P(D = +\,|\,T=+)
+&=
+\frac{{\color{blue}{P(T=+\,|\,D=+)}}{\color{red}{P(D=+)}}}{P(T=+)}
+\\
+&=
+\frac{{\color{blue}{P(T=+\,|\,D=+)}}{\color{red}{P(D=+)}}}{{\color{blue}{P(T=+\,|\,D=+)}}{\color{red}{P(D=+)}}+[1-{\color{green}{P(T=-\,|\,D=-)}}][1-{\color{red}{P(D=+)}}]}.
+\end{aligned}
+$$
+
+$P(T=+\,|\,D=+)$ is the true positive rate or *sensitivity*: the probability that a sick person is correctly diagnosed. $P(T=-\,|\,D=-)$ is the true negative rate or *specificity*: the probability that a well person is correctly diagnosed. It is the *nonlinear* interaction of three numbers (prevalence, TPR, and TNR) that determines how likely you are to have the disease, and it is this nonlinearity that makes it difficult for humans to natively reason about test results.
+
+The application below displays how testing positive shifts the probability of disease from $P(D=+)$ to $P(D = +\,|\,T=+)$. The severity of the jump ultimately depends on how big $P(D=+)$ was to begin with, and how good the test is (TPR and TNR). Play around with different values and see what happens:
 
 ```{shinylive-r}
 #| standalone: true
