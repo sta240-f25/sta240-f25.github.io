@@ -1,0 +1,63 @@
+---
+title: "Welcome to STA 240!"
+subtitle: "Probability for Statistical Inference"
+format: revealjs
+auto-stretch: false
+editor: 
+  mode: source
+---
+
+# Last time
+
+## Set operations
+
+| Set | Picture | Logic |
+|---------------|-----------------|---------------|
+| $A\cup B$             | ![](images/union.png){width="60%"} | OR |
+| $A\cap B$             | ![](images/intersection.png){width="70%"} | AND |
+| $A^c$                 | ![](images/complement.png){width="60%"} | NOT |
+
+## Algebraic properties {.medium}
+
+$$
+\begin{matrix}
+    \text{Commutative} & A\cup B=B\cup A\\
+    & A\cap B=B\cap A\\
+    &\\
+    \text{Associative} & (A\cup B)\cup C = A\cup (B\cup C)\\
+    & (A\cap B)\cap C = A\cap (B\cap C)\\
+    &\\
+    \text{Distributive} & (A\cup B)\cap C = (A\cap C)\cup (B\cap C)\\
+    &(A\cap B)\cup C = (A\cup C)\cap (B\cup C)\\
+    &\\
+    \text{De Morgan's Laws} & (A\cup B)^c=A^c\cap B^c\\ 
+    & (A\cap B)^c=A^c\cup B^c.
+\end{matrix}
+$$
+
+# Translating set theory to probability
+
+## Sample spaces
+
+## Events
+
+## "OR" events
+
+## "AND" events
+
+## "NOT" events
+
+## Implication
+
+## Mutually exclusive events
+
+
+## Summary
+
+| **Probability**                | **Set theory**        |
+|--------------------------------|-----------------------|
+| $A$ or $B$ occur               | $A\cup B$             |
+| $A$ and $B$ occur              | $A\cap B$             |
+| $A$ does not occur             | $A^c$                 |
+| $A$ implies $B$                | $A\subseteq B$        |
+| $A$ and $B$ mutually exclusive | $A\cap B=\varnothing$ |
