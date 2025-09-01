@@ -48,10 +48,10 @@ While you wait, please complete this brief questionnaire:
 | Mug                   | Name        | Role       | Office Hours  |
 |-----------------------|-------------|------------|---------------|
 | ![](images/yh.jpg){.c} | Hu, Yuang   | TA         | TBD           |
-| ![](images/al.jpg){.c} | Liu, Aurora | Head TA    | TBD           |
-| ![](images/lm.png){.c} | Ma, Liane   | TA         | TBD           |
-| ![](images/z.jpg){.c} | Zito, John  | Instructor | Tue 3pm - 6pm |
-: {tbl-colwidths="[20,25,25,30]"}
+| ![](images/al.jpg){.c} | Liu, Aurora | Head TA    | WeTh 4:30 pm - 5:30 pm |
+| ![](images/lm.png){.c} | Ma, Liane   | TA         | Sun 1:00 pm - 3:00 pm |
+| ![](images/z.jpg){.c} | Zito, John  | Instructor | Tue 3:00 pm - 6:00 pm |
+: {tbl-colwidths="[20,20,20,40]"}
 
 ## Statistical Science Majors Union {.medium}
 
