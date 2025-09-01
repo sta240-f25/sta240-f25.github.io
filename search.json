@@ -216,7 +216,7 @@
     "href": "slides/2025-08-25-welcome.html#teaching-team",
     "title": "Welcome to STA 240!",
     "section": "Teaching Team",
-    "text": "Teaching Team\n\n\n\n\n\n\n\n\nMug\nName\nRole\nOffice Hours\n\n\n\n\nHu, Yuang\nTA\nTBD\n\n\n\nLiu, Aurora\nHead TA\nTBD\n\n\n\nMa, Liane\nTA\nTBD\n\n\n\nZito, John\nInstructor\nTue 3pm - 6pm"
+    "text": "Teaching Team\n\n\n\n\n\n\n\n\nMug\nName\nRole\nOffice Hours\n\n\n\n\nHu, Yuang\nTA\nTBD\n\n\n\nLiu, Aurora\nHead TA\nWeTh 4:30 pm - 5:30 pm\n\n\n\nMa, Liane\nTA\nSun 1:00 pm - 3:00 pm\n\n\n\nZito, John\nInstructor\nTue 3:00 pm - 6:00 pm"
   },
   {
     "objectID": "slides/2025-08-25-welcome.html#statistical-science-majors-union",
@@ -258,7 +258,7 @@
     "href": "slides/2025-08-25-welcome.html#any-matches-today",
     "title": "Welcome to STA 240!",
     "section": "Any matches today?",
-    "text": "Any matches today?\n\n\n\nWarning in attr(x, \"align\"): 'xfun::attr()' is deprecated.\nUse 'xfun::attr2()' instead.\nSee help(\"Deprecated\")\n\n\nWarning in attr(x, \"format\"): 'xfun::attr()' is deprecated.\nUse 'xfun::attr2()' instead.\nSee help(\"Deprecated\")\n\n\n\n\nbirthday\ncount\n\n\n\n05-25\n2\n\n\n01-02\n1\n\n\n01-03\n1\n\n\n01-05\n1\n\n\n01-06\n1\n\n\n01-11\n1\n\n\n01-25\n1\n\n\n02-02\n1\n\n\n02-11\n1\n\n\n03-01\n1\n\n\n03-02\n1\n\n\n03-31\n1\n\n\n04-03\n1\n\n\n04-11\n1\n\n\n04-21\n1\n\n\n05-09\n1\n\n\n05-15\n1\n\n\n05-30\n1\n\n\n06-08\n1\n\n\n06-20\n1\n\n\n06-25\n1\n\n\n07-06\n1\n\n\n07-08\n1\n\n\n08-30\n1\n\n\n09-06\n1\n\n\n09-22\n1\n\n\n09-30\n1\n\n\n11-01\n1\n\n\n11-07\n1\n\n\n11-10\n1\n\n\n11-21\n1\n\n\n11-23\n1\n\n\n12-01\n1\n\n\n12-11\n1"
+    "text": "Any matches today?\n\n\n\n\n\nbirthday\ncount\n\n\n\n05-25\n2\n\n\n01-02\n1\n\n\n01-03\n1\n\n\n01-05\n1\n\n\n01-06\n1\n\n\n01-11\n1\n\n\n01-25\n1\n\n\n02-02\n1\n\n\n02-11\n1\n\n\n03-01\n1\n\n\n03-02\n1\n\n\n03-31\n1\n\n\n04-03\n1\n\n\n04-11\n1\n\n\n04-21\n1\n\n\n05-09\n1\n\n\n05-15\n1\n\n\n05-30\n1\n\n\n06-08\n1\n\n\n06-20\n1\n\n\n06-25\n1\n\n\n07-06\n1\n\n\n07-08\n1\n\n\n08-30\n1\n\n\n09-06\n1\n\n\n09-22\n1\n\n\n09-30\n1\n\n\n11-01\n1\n\n\n11-07\n1\n\n\n11-10\n1\n\n\n11-21\n1\n\n\n11-23\n1\n\n\n12-01\n1\n\n\n12-11\n1"
   },
   {
     "objectID": "slides/2025-08-25-welcome.html#example-the-monty-hall-problem",
@@ -2033,7 +2033,7 @@
     "href": "syllabus/syllabus_team.html",
     "title": "Teaching team",
     "section": "",
-    "text": "Mug\nName\nRole\nOffice Hours\n\n\n\n\n\nHu, Yuang\nTA\nTBD\n\n\n\nLiu, Aurora\nHead TA\nTBD\n\n\n\nMa, Liane\nTA\nTBD\n\n\n\nZito, John\nInstructor\nTue 3:00 PM - 6:00 PM\nor by appointment\nOld Chem 207",
+    "text": "Mug\nName\nRole\nOffice Hours\n\n\n\n\n\nHu, Yuang\nTA\nTBD\n\n\n\nLiu, Aurora\nHead TA\nWed 4:30 PM - 5:30 PM\nOld Chem 203B\nThu 4:30 PM - 5:30 PM\nPerkins Link 3 (087)\n\n\n\n\nMa, Liane\nTA\nSun 1:00 PM - 3:00 PM\nZoom link on Canvas\n\n\n\nZito, John\nInstructor\nTue 3:00 PM - 6:00 PM\nor by appointment\nOld Chem 207",
     "crumbs": [
       "Syllabus",
       "Teaching team"
