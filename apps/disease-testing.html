@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="You tested positive. Now what? – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
@@ -337,7 +366,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>WRITE SOME NOTES ABOUT THIS</p>
+<p>Testing positive for a disease is not exactly good news, but how alarmed you should be ultimately depends on a few factors: the accuracy of the test and the overall rarity of the disease (the so-called <em>base rate</em>). Before you walk into the doctor’s office, the probability that you are sick is <span class="math inline">\(P(D=+)\)</span>, the <strong>prevalence</strong>. This is the unconditional (or <em>marginal</em>) probability that a random member of the population (ie you in that moment) is sick. After you test positive, the <em>revised</em> or <em>conditional</em> probability that you have the disease is given by Bayes’ theorem:</p>
+<p><span class="math display">\[
+\begin{aligned}
+P(D = +\,|\,T=+)
+&amp;=
+\frac{{\color{blue}{P(T=+\,|\,D=+)}}{\color{red}{P(D=+)}}}{P(T=+)}
+\\
+&amp;=
+\frac{{\color{blue}{P(T=+\,|\,D=+)}}{\color{red}{P(D=+)}}}{{\color{blue}{P(T=+\,|\,D=+)}}{\color{red}{P(D=+)}}+[1-{\color{green}{P(T=-\,|\,D=-)}}][1-{\color{red}{P(D=+)}}]}.
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(P(T=+\,|\,D=+)\)</span> is the true positive rate or <em>sensitivity</em>: the probability that a sick person is correctly diagnosed. <span class="math inline">\(P(T=-\,|\,D=-)\)</span> is the true negative rate or <em>specificity</em>: the probability that a well person is correctly diagnosed. It is the <em>nonlinear</em> interaction of three numbers (prevalence, TPR, and TNR) that determines how likely you are to have the disease, and it is this nonlinearity that makes it difficult for humans to natively reason about test results.</p>
+<p>The application below displays how testing positive shifts the probability of disease from <span class="math inline">\(P(D=+)\)</span> to <span class="math inline">\(P(D = +\,|\,T=+)\)</span>. The severity of the jump ultimately depends on how big <span class="math inline">\(P(D=+)\)</span> was to begin with, and how good the test is (TPR and TNR). Play around with different values and see what happens:</p>
 <pre class="shinylive-r" data-engine="r"><code>#| '!! shinylive warning !!': |
 #|   shinylive does not work in self-contained HTML documents.
 #|   Please set `embed-resources: false` in your metadata.
