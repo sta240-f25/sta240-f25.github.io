@@ -49,7 +49,7 @@ While you wait, please complete this brief questionnaire:
 |-----------------------|-------------|------------|---------------|
 | ![](images/yh.jpg){.c} | Hu, Yuang   | TA         | TBD           |
 | ![](images/al.jpg){.c} | Liu, Aurora | Head TA    | WeTh 4:30 pm - 5:30 pm |
-| ![](images/lm.png){.c} | Ma, Liane   | TA         | Sun 1:00 pm - 3:00 pm |
+| ![](images/lm.png){.c} | Ma, Liane   | TA         | Sun 10:00 am - 12:00 pm |
 | ![](images/z.jpg){.c} | Zito, John  | Instructor | Tue 3:00 pm - 6:00 pm |
 : {tbl-colwidths="[20,20,20,40]"}
 

@@ -14,7 +14,7 @@ editor:
 |                           |               |               | **Thu 4:30 PM - 5:30 PM**\     |
 |                           |               |               | Perkins LINK 087 (Classroom 3) |
 +---------------------------+---------------+---------------+--------------------------------+
-| ![](images/lm.png){.circ} | Ma, Liane     | TA            | **Sun 1:00 PM - 3:00 PM**\     |
+| ![](images/lm.png){.circ} | Ma, Liane     | TA            | **Sun 10:00 AM - 12:00 PM**\   |
 |                           |               |               | Zoom link on Canvas            |
 +---------------------------+---------------+---------------+--------------------------------+
 | ![](images/jz.jpg){.circ} | Zito, John    | Instructor    | **Tue 3:00 PM - 6:00 PM**\     |
