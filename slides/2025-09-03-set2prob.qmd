@@ -7,13 +7,75 @@ editor:
   mode: source
 ---
 
+# Course admin
+
+## Office hours {.medium .scrollable}
+
+| Mug                   | Name        | Role       | Office Hours  |
+|-----------------------|-------------|------------|---------------|
+| ![](images/yh.jpg){.c} | Hu, Yuang   | TA         | TBD           |
+| ![](images/al.jpg){.c} | Liu, Aurora | Head TA    | WeTh 4:30 pm - 5:30 pm |
+| ![](images/lm.png){.c} | Ma, Liane   | TA         | Sun 10:00 am - 12:00 pm |
+| ![](images/z.jpg){.c} | Zito, John  | Instructor | Tue 3:00 pm - 6:00 pm |
+: {tbl-colwidths="[20,20,20,40]"}
+
+## Problem Set 0...wtf?
+
+::: incremental
+- Low stakes: worth fewer points than other problem sets;
+
+    - (but it will be graded quite rigorously);
+
+- It's about an 8/10 on the math difficulty scale in this class;
+- You will not see much calculus in Weeks 1 - 6 and Midterm 1;
+
+    - (mainly infinite series);
+
+- Serious calculus begins Week 7 and looms large until the end;
+
+    - (be prepared to do some math on Midterm 2 and the Final).
+:::
+
+. . . 
+
+::: callout-tip
+## Bottom line
+
+You have until Week 7 to work the kinks out. If, by that time, you are confident that you understand what's happening on Problem Set 0, then you are ready.
+:::
+
+## [Problem Set 1](https://sta240-f25.github.io/problems/pset-1.html)
+
+::: incremental
+- Problems 1 - 3 currently accessible to you;
+- Problems 4 - 8 accessible after today's class;
+- Problems 9 - 10 accessible after next week's classes.
+:::
+
+## Problem Sets 1 - 4
+
+Each has 10 problems following a "1 + 2 + 5 + 2" structure:
+
+. . .
+
+::: incremental
+- 1 problem is chatty and conceptual (no math);
+- 2 problems practice stuff from 2 weeks ago;
+- 5 problems practice stuff from last week;
+- 2 problems practice stuff from this week.
+:::
+
+. . .
+
+So, I lecture on new stuff MoWe, and you have to do two practice problems by that same Friday.
+
 # Last time
 
 ## Set operations
 
 | Set | Picture | Logic |
 |---------------|-----------------|---------------|
-| $A\cup B$             | ![](images/union.png){width="60%"} | OR |
+| $A\cup B$             | ![](images/union.png){width="60%"} | (inclusive) OR |
 | $A\cap B$             | ![](images/intersection.png){width="70%"} | AND |
 | $A^c$                 | ![](images/complement.png){width="60%"} | NOT |
 
@@ -40,6 +102,14 @@ $$
 ## Sample spaces
 
 ## Events
+
+## Running example: where will the meteor land? {.small .scrollable}
+
+The sample space is the set of all (long, lat) coordinates in this spatial region:
+
+. . .
+
+![](images/map.jpg){fig-align="center" width="80%"}
 
 ## "OR" events
 
