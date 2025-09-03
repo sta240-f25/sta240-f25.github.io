@@ -2,6 +2,7 @@ project:
   type: website
   resources:
     - lecture-notes/sta240-notes-00-set-theory.pdf
+    - lecture-notes/sta240-notes-01-probability-spaces.pdf
 
 website:
   page-navigation: true
