@@ -61,6 +61,7 @@ In the condition of `if`, you can use logical comparisons. Here are the most com
 | `&`      | AND (both conditions true) | `x > 0 & x < 5` |
 | `|`      | OR (at least one true) | `x < 0 | x > 10` |
 | `!`      | NOT (negates a condition) | `!(x == 3)` |
+| `%in%`   | element of a vector | `x %in% c(1,2,3)` is TRUE if x is 1, 2, or 3 |
 
 Here they are in action:
 
