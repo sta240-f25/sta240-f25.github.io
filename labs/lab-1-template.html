@@ -377,21 +377,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 </header><section id="task-1" class="level1"><h1>Task 1</h1>
-<p>You can write text here.</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flips</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"H"</span>, <span class="st">"T"</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">30</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">flips</span> <span class="op">==</span> <span class="st">"H"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.6333333</code></pre>
 </div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">flips</span> <span class="op">==</span> <span class="st">"H"</span><span class="op">)</span> <span class="op">/</span> <span class="fl">30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.6333333</code></pre>
+</div>
+</div>
+<p>Discussion points:</p>
+<ul>
+<li>Why do we set <code>replace = TRUE</code>?</li>
+<li>What does <code>==</code> mean? Notice also that this is <em>vectorized</em>;</li>
+<li>
+<code>mean</code> function is computing the average, which is sum divided by total.</li>
+</ul>
 <div style="page-break-after: always;"></div>
 </section><section id="task-2" class="level1"><h1>Task 2</h1>
 <p>You can write text here.</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div style="page-break-after: always;"></div>
 </section><section id="task-3" class="level1"><h1>Task 3</h1>
 <p>You can write text here.</p>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">deck_of_cards</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"AH"</span>, <span class="st">"2H"</span>, <span class="st">"3H"</span>, <span class="st">"4H"</span>, <span class="st">"5H"</span>, <span class="st">"6H"</span>, <span class="st">"7H"</span>, <span class="st">"8H"</span>, <span class="st">"9H"</span>, <span class="st">"10H"</span>, <span class="st">"JH"</span>, <span class="st">"QH"</span>, <span class="st">"KH"</span>,</span>
+<span>                   <span class="st">"AD"</span>, <span class="st">"2D"</span>, <span class="st">"3D"</span>, <span class="st">"4D"</span>, <span class="st">"5D"</span>, <span class="st">"6D"</span>, <span class="st">"7D"</span>, <span class="st">"8D"</span>, <span class="st">"9D"</span>, <span class="st">"10D"</span>, <span class="st">"JD"</span>, <span class="st">"QD"</span>, <span class="st">"KD"</span>,</span>
+<span>                   <span class="st">"AC"</span>, <span class="st">"2C"</span>, <span class="st">"3C"</span>, <span class="st">"4C"</span>, <span class="st">"5C"</span>, <span class="st">"6C"</span>, <span class="st">"7C"</span>, <span class="st">"8C"</span>, <span class="st">"9C"</span>, <span class="st">"10C"</span>, <span class="st">"JC"</span>, <span class="st">"QC"</span>, <span class="st">"KC"</span>,</span>
+<span>                   <span class="st">"AS"</span>, <span class="st">"2S"</span>, <span class="st">"3S"</span>, <span class="st">"4S"</span>, <span class="st">"5S"</span>, <span class="st">"6S"</span>, <span class="st">"7S"</span>, <span class="st">"8S"</span>, <span class="st">"9S"</span>, <span class="st">"10S"</span>, <span class="st">"JS"</span>, <span class="st">"QS"</span>, <span class="st">"KS"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">outcomes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5000</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">hand</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">deck_of_cards</span>, size <span class="op">=</span> <span class="fl">5</span>, replace <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span><span class="op">(</span><span class="va">hand</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"AH"</span>,<span class="st">"AD"</span>,<span class="st">"AC"</span>,<span class="st">"AS"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="va">outcomes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">outcomes</span>, <span class="fl">1</span><span class="op">)</span></span>
+<span>  <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>    <span class="va">outcomes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">outcomes</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">outcomes</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.336</code></pre>
+</div>
 </div>
 
 

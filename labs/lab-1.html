@@ -395,6 +395,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Please dip into those as needed.</p>
 <p>In today’s lab, you will use <code>R</code> to simulate some basic random experiments and approximate probabilities. Along the way, you will get a light workout with if-else statements and for loops.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Download the submission template
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Click <a href="downloads/lab-1-template.qmd">here</a>{download} to download the blank Quarto file you will use to create your write-up. Once you have this file, upload it to your container and get crackin’!</p>
+</div>
+</div>
 <section id="task-1-i-do-it" class="level1"><h1>Task 1 (I do it)</h1>
 <p>We want to approximate the probability that a fair coin lands on Heads. We already know it’s 0.5. Does the computer agree?</p>
 <p>This code flips the coin 30 times:</p>
@@ -446,7 +459,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The first character is the <em>rank</em> of the card: Ace (<code>A</code>), 2, 3, 4, …, Jack (<code>J</code>), Queen (<code>Q</code>), King (<code>K</code>). The second character is the <em>suit</em> of the card: hearts (<code>H</code>), diamonds (<code>D</code>), clubs (<code>C</code>), spades (<code>S</code>).</p>
 <p>Now, imagine that a five-card hand is randomly dealt to you from a well-shuffled deck. What is the probability that the hand contains <em>at least</em> one ace? Very soon in our course you’ll learn how to do the math and compute the number exactly, but until then, you can approximate it with simulation. <strong>Write a for loop that simulates 5,000 five-card hands, and use the results to approximate the probability that your hand contains at least one ace.</strong></p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -455,7 +468,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>There are many correct ways to do this, but you might find the <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/any.html"><code>any</code></a> function helpful.</p>
 </div>

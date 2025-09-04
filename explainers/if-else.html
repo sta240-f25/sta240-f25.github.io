@@ -406,6 +406,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="logical-conditions" class="level1"><h1>Logical conditions</h1>
 <p>In the condition of <code>if</code>, you can use logical comparisons. Here are the most common ones:</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 32%">
+<col style="width: 32%">
+</colgroup>
 <thead><tr class="header">
 <th>Operator</th>
 <th>Meaning</th>
@@ -459,6 +464,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><code>!</code></td>
 <td>NOT (negates a condition)</td>
 <td><code>!(x == 3)</code></td>
+</tr>
+<tr class="even">
+<td><code>%in%</code></td>
+<td>element of a vector</td>
+<td>
+<code>x %in% c(1,2,3)</code> is TRUE if x is 1, 2, or 3</td>
 </tr>
 </tbody>
 </table>
