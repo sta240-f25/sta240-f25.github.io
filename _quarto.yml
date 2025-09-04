@@ -85,8 +85,12 @@ website:
             text: Vectorization
           - href: explainers/lineplot.qmd
             text: Plotting lines
-          #- href: explainers/sample.qmd
-          #  text: "`sample`"
+          - href: explainers/sample.qmd
+            text: "`sample`"
+          - href: explainers/if-else.qmd
+            text: is-else and logic
+          - href: explainers/loops.qmd
+            text: for loops
       - section: "Problem Sets"
         contents:
           - href: problems/pset-0.qmd
