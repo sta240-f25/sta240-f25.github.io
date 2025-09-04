@@ -5,28 +5,24 @@
     <lastmod>2025-08-21T08:26:17.110Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/sample.html</loc>
-    <lastmod>2025-09-04T08:27:27.986Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/explainers/setup.html</loc>
+    <loc>https://sta240-f25.github.io/explainers/vectorization.html</loc>
     <lastmod>2025-08-21T08:26:17.117Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/rng-seed.html</loc>
+    <loc>https://sta240-f25.github.io/explainers/math.html</loc>
+    <lastmod>2025-08-21T08:26:17.116Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/explainers/vectors.html</loc>
     <lastmod>2025-08-21T08:26:17.117Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/if-else.html</loc>
-    <lastmod>2025-09-04T09:12:08.774Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/lineplot.html</loc>
+    <lastmod>2025-08-21T08:26:17.116Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/quarto.html</loc>
-    <lastmod>2025-08-21T08:26:17.117Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/explainers/loops.html</loc>
-    <lastmod>2025-09-04T08:59:45.154Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/hello-rstudio.html</loc>
+    <lastmod>2025-08-24T11:23:48.027Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/syllabus/syllabus_team.html</loc>
@@ -269,24 +265,28 @@
     <lastmod>2025-08-21T08:26:17.326Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/hello-rstudio.html</loc>
-    <lastmod>2025-08-24T11:23:48.027Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/loops.html</loc>
+    <lastmod>2025-09-04T08:59:45.154Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/lineplot.html</loc>
-    <lastmod>2025-08-21T08:26:17.116Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/explainers/vectors.html</loc>
+    <loc>https://sta240-f25.github.io/explainers/quarto.html</loc>
     <lastmod>2025-08-21T08:26:17.117Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/math.html</loc>
-    <lastmod>2025-08-21T08:26:17.116Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/if-else.html</loc>
+    <lastmod>2025-09-04T09:12:08.774Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/vectorization.html</loc>
+    <loc>https://sta240-f25.github.io/explainers/rng-seed.html</loc>
     <lastmod>2025-08-21T08:26:17.117Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/explainers/setup.html</loc>
+    <lastmod>2025-08-21T08:26:17.117Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/explainers/sample.html</loc>
+    <lastmod>2025-09-04T08:27:27.986Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/apps/disease-testing.html</loc>

@@ -7,146 +7,58 @@
     "text": "\\[\nP(X = k)\n= \\frac{\\binom{K}{k} \\binom{N - K}{n-k}}{\\binom{N}{n}}.\n\\]\n\ndhyper(x, m, n, k)\nphyper(q, m, n, k)\nqhyper(p, m, n, k)\nrhyper(ndraw, m, n, k)"
   },
   {
-    "objectID": "explainers/sample.html",
-    "href": "explainers/sample.html",
-    "title": "The sample command",
+    "objectID": "explainers/vectorization.html",
+    "href": "explainers/vectorization.html",
+    "title": "Vectorization",
     "section": "",
-    "text": "The function sample() lets us pick random values. This is very useful in probability, because it allows us to simulate experiments like coin flips, die rolls, or drawing cards.\nThe pattern is:\nsample(x, size = n, replace = FALSE)",
+    "text": "Functions in R are often vectorized. For example:\n\nexp(2)\n\n[1] 7.389056\n\n\nI give it one number, and it returns one number. If instead, I supply a vector, I get this:\n\nexp(c(-3, 0.001, 2, 5, 600, 1, 0))\n\n[1]  4.978707e-02  1.001001e+00  7.389056e+00  1.484132e+02 3.773020e+260\n[6]  2.718282e+00  1.000000e+00\n\n\nSo when I supply a regular ol’ number as an argument, the exp function returns a number. When I supply a vector, it returns a vector; the exp function knows to act entry-wise and give me back a vector with the output of each entry-wise computation. In other words, I didn’t have to write a loop to manually do this. The function is vectorized, so it effectively runs the loop for me.\nSo consider for instance the set of numbers \\(A = \\{-100, -6, 0.001, \\pi, 30\\}\\), and this stupid function:\n\\[\nf(x) = \\ln^2\\left|\\frac{2x}{1-\\sin(x)}\\right|.\n\\]\nIf I wanted to compute the value of \\(f\\) for each of the arguments in \\(A\\), I could write a loop that goes entry-by-entry through \\(A\\) and applies the function \\(f\\) to it. But in R, because arithmetic operations are vectorized, I can do this:\n\nA = c(-100, -6, 0.001, pi, 30)\n\nlog( abs( (2 * A) / ( 1 - sin(A) ) ) ) ^ 2 \n\n[1] 36.051349  7.910714 38.608919  3.377792 11.609009\n\n\nDumb!\nAll of the basic arithmetic operations are vectorized like this:\n\nc(1, 2, 3) + 2\n\n[1] 3 4 5\n\n\n\nc(1, 2, 3) + c(1, 2, 3)\n\n[1] 2 4 6\n\n\n\nfloor(c(4, 5.1, 6.9))\n\n[1] 4 5 6",
     "crumbs": [
       "`R` Explainers",
-      "`sample`"
+      "Vectorization"
     ]
   },
   {
-    "objectID": "explainers/sample.html#example-coin-flip",
-    "href": "explainers/sample.html#example-coin-flip",
-    "title": "The sample command",
-    "section": "Example: coin flip",
-    "text": "Example: coin flip\nThis chooses either heads (H) or tails (T) at random:\n\nsample(c(\"H\", \"T\"), size = 1)\n\n[1] \"H\"",
-    "crumbs": [
-      "`R` Explainers",
-      "`sample`"
-    ]
-  },
-  {
-    "objectID": "explainers/sample.html#example-die-roll",
-    "href": "explainers/sample.html#example-die-roll",
-    "title": "The sample command",
-    "section": "Example: die roll",
-    "text": "Example: die roll\nThis rolls a fair die twenty times:\n\nsample(1:6, size = 20, replace = TRUE)\n\n [1] 6 3 2 4 3 3 2 1 4 1 2 6 5 1 1 4 5 4 4 5\n\n\nWe need replace = TRUE here, because after rolling a die, the next roll can be the same number again.",
-    "crumbs": [
-      "`R` Explainers",
-      "`sample`"
-    ]
-  },
-  {
-    "objectID": "explainers/sample.html#example-spotify-shuffle",
-    "href": "explainers/sample.html#example-spotify-shuffle",
-    "title": "The sample command",
-    "section": "Example: Spotify shuffle",
-    "text": "Example: Spotify shuffle\nHere’s my playlist:\n\nplaylist &lt;- c(\"Ramble On\",\n              \"It's Raining Men\",\n              \"Tears\",\n              \"Tiptoe Through the Tulips\",\n              \"Gangsta's Paradise\",\n              \"Days of Wine and Roses\")\n\nThere are 6 songs, so if I generate a sample of size 6 without replacement, I’m just randomly shuffling the contents of that vector:\n\nsample(playlist, size = length(playlist), replace = FALSE)\n\n[1] \"Tears\"                     \"Tiptoe Through the Tulips\"\n[3] \"Gangsta's Paradise\"        \"Ramble On\"                \n[5] \"Days of Wine and Roses\"    \"It's Raining Men\"",
-    "crumbs": [
-      "`R` Explainers",
-      "`sample`"
-    ]
-  },
-  {
-    "objectID": "explainers/setup.html",
-    "href": "explainers/setup.html",
-    "title": "Getting started",
+    "objectID": "explainers/math.html",
+    "href": "explainers/math.html",
+    "title": "Basic math in R\n",
     "section": "",
-    "text": "The path of least resistance to using R in this class is to reserve a container from the Duke Container Manager. It’s hosted in the cloud, and it has all of the software you will ever need for this class.\n\nGo here: https://cmgr.oit.duke.edu/containers. You may have to log in with your NetID at some point;\n(The first time you do this, you look for STA240 under “Reservations available” on the righthand side, and click “reserve STA240”. After you do that once, STA240 will appear under “My reservations” on the lefthand side forever more)\nClick STA240 under “My reservations”;\nLogin;\nStart. It may take a while, but then RStudio should launch in your browser.",
+    "text": "Using R for the calculator is like buying a plane ticket to get free peanuts. But I have done my taxes in R, so…\n\n2 + 2 # addition\n\n[1] 4\n\n5 - 2 # subtraction\n\n[1] 3\n\n0.5 * 6 # multiplication\n\n[1] 3\n\n3 / 4 # division\n\n[1] 0.75\n\nsqrt(2) # square root\n\n[1] 1.414214\n\n4 ^ 2 # exponent\n\n[1] 16\n\nexp(4.9) # base-e exponent\n\n[1] 134.2898\n\nlog(7) # natural log\n\n[1] 1.94591\n\nabs(-6) # absolute value\n\n[1] 6\n\nceiling(4.6) # round up\n\n[1] 5\n\nfloor(4.6) # round down\n\n[1] 4\n\nfactorial(4) # n! = n x (n-1) x ... x 2 x 1\n\n[1] 24\n\nchoose(8, 3) # binomial coefficient (we'll get there)\n\n[1] 56",
     "crumbs": [
       "`R` Explainers",
-      "Getting started"
+      "Basic math"
     ]
   },
   {
-    "objectID": "explainers/setup.html#option-1-reserve-a-container",
-    "href": "explainers/setup.html#option-1-reserve-a-container",
-    "title": "Getting started",
+    "objectID": "explainers/vectors.html",
+    "href": "explainers/vectors.html",
+    "title": "Vectors",
     "section": "",
-    "text": "The path of least resistance to using R in this class is to reserve a container from the Duke Container Manager. It’s hosted in the cloud, and it has all of the software you will ever need for this class.\n\nGo here: https://cmgr.oit.duke.edu/containers. You may have to log in with your NetID at some point;\n(The first time you do this, you look for STA240 under “Reservations available” on the righthand side, and click “reserve STA240”. After you do that once, STA240 will appear under “My reservations” on the lefthand side forever more)\nClick STA240 under “My reservations”;\nLogin;\nStart. It may take a while, but then RStudio should launch in your browser.",
+    "text": "A vector in R is just an ordered set of values that have the same type. The easiest way to create one is to manually list out the values, separated by commas, inside c():\n\nmyvec &lt;- c(pi, 5, 3.6, 2, 9, 6000) \nmyvec\n\n[1]    3.141593    5.000000    3.600000    2.000000    9.000000 6000.000000\n\n\nIf you want to list out all of the integers between some min and max, you can use this shortcut:\n\n5:15\n\n [1]  5  6  7  8  9 10 11 12 13 14 15\n\n\nMore generally, if you want a vector of evenly spaced numbers between a min and a max, do this:\n\na &lt;- seq(0, 1, length.out = 11) \na\n\n [1] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0\n\n\nIf you want to create a “blank” vector that just has zeros in it, here you go:\n\nz &lt;- numeric(10)\nz\n\n [1] 0 0 0 0 0 0 0 0 0 0\n\n\nIn all of those cases, our vector contained numbers, but there is nothing special about numbers. Here is a vector where each value is a string (a piece of text):\n\npoetry &lt;- c(\"Mary\", \"had\", \"a\", \"little\", \"chainsaw\")\npoetry\n\n[1] \"Mary\"     \"had\"      \"a\"        \"little\"   \"chainsaw\"\n\n\nIf you have two vectors and you want to combine them into one, you can just use the c() command again. The “c” stands for “concatenate.” You’re concatenating, or joining, the vectors end-to-end:\n\nmore &lt;- c(\"whose\", \"chain\", \"was\", \"red\", \"as\")\n\nmasterpiece &lt;- c(poetry, more)\nmasterpiece\n\n [1] \"Mary\"     \"had\"      \"a\"        \"little\"   \"chainsaw\" \"whose\"   \n [7] \"chain\"    \"was\"      \"red\"      \"as\"",
     "crumbs": [
       "`R` Explainers",
-      "Getting started"
+      "Vectors"
     ]
   },
   {
-    "objectID": "explainers/setup.html#option-2-download-it-yourself",
-    "href": "explainers/setup.html#option-2-download-it-yourself",
-    "title": "Getting started",
-    "section": "Option 2: download it yourself",
-    "text": "Option 2: download it yourself\nOf course, you won’t have containers after you graduate, so maybe it’s a good idea to hike up your big girl pants and actually install something. It’s pretty easy:\n\nDownload R: https://cran.r-project.org\nDownload RStudio: https://posit.co/download/rstudio-desktop/\n(optional) Install tinytex: https://yihui.org/tinytex/",
-    "crumbs": [
-      "`R` Explainers",
-      "Getting started"
-    ]
-  },
-  {
-    "objectID": "explainers/if-else.html",
-    "href": "explainers/if-else.html",
-    "title": "if-else statements and logical conditions",
+    "objectID": "explainers/lineplot.html",
+    "href": "explainers/lineplot.html",
+    "title": "Plotting lines",
     "section": "",
-    "text": "Sometimes we want our code to make a decision: do one thing if a condition is true, and something else if it’s false. In R, the tool for this is if ... else. The pattern looks like this:\n\nif (condition) {\n  do_something\n} else {\n  do_something_else\n}\n\nSuppose we roll a six-sided die:\n\nroll &lt;- sample(1:6, size = 1)\nroll\n\n[1] 2\n\n\nWe might want to check whether the outcome is “big” (4, 5, or 6) or “small” (1, 2, or 3). Here’s how we can use if else to do that:\n\nif (roll &gt;= 4) {\n  result &lt;- \"Big\"\n} else {\n  result &lt;- \"Small\"\n}\n\nresult\n\n[1] \"Small\"\n\n\nLet’s unpack:\n\nFirst, sample(1:6, size = 1) chooses a random number from 1 to 6;\nThen the if else checks: if the roll is 4 or higher, we call it “Big.” Otherwise, we call it “Small.”\n\nThis is how you can make simple decisions in R code.\nLogical conditions\nIn the condition of if, you can use logical comparisons. Here are the most common ones:\n\n\n\n\n\n\n\nOperator\nMeaning\nExample\n\n\n\n==\nequal to\n\nx == 3 is TRUE if x is 3\n\n\n!=\nnot equal to\n\nx != 3 is TRUE if x is not 3\n\n\n&lt;\nless than\n\nx &lt; 5 is TRUE if x is less than 5\n\n\n&lt;=\nless than or equal\nx &lt;= 5\n\n\n&gt;\ngreater than\nx &gt; 10\n\n\n&gt;=\ngreater than or equal\nx &gt;= 10\n\n\n&\nAND (both conditions true)\nx &gt; 0 & x &lt; 5\n\n\n|\nOR (at least one true)\nx &lt; 0 | x &gt; 10\n\n\n!\nNOT (negates a condition)\n!(x == 3)\n\n\n%in%\nelement of a vector\n\nx %in% c(1,2,3) is TRUE if x is 1, 2, or 3\n\n\n\nHere they are in action:\n\nx &lt;- 4\nx &gt; 3       \n\n[1] TRUE\n\nx &lt; 3       \n\n[1] FALSE\n\nx &gt;= 3 & x &lt;= 5   \n\n[1] TRUE\n\nx &lt; 3 | x &gt; 5     \n\n[1] FALSE\n\n!(x == 4)   \n\n[1] FALSE\n\n\nHere is how these might be deployed in the context of if-else:\n\nif (x &gt; 0 & x %% 2 == 0) {\n  result &lt;- \"Positive even\"\n} else {\n  result &lt;- \"Other\"\n}\nresult\n\n[1] \"Positive even\"",
+    "text": "You can use the curve function to plot a line graph of a function. If that function were \\(f(x) = x^2\\) for example, you would type this:\n\ncurve(x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"f(x)\")\n\n\n\n\n\n\n\nThis function takes many arguments.\n\nthe first argument is a formula for the function you want to graph. The curve command implicitly assumes that x is the argument, and everything else is constant;\n\nfrom and to give the bounds of the \\(x\\)-axis;\nThis command is basically evaluating the function at many points and connecting the dots. n specifies how many dots. Too few, and the picture would look all cattywampus:\n\n\ncurve(x^2, from = -5, to = 5, n = 5)\n\n\n\n\n\n\n\nIf you want multiple lines on one graph, you can call curve multiple times, and include the add argument in all but the first call:\n\ncurve(1*x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"\")\ncurve(2*x^2, from = -5, to = 5, n = 500, col = \"blue\", ylab = \"\", add = TRUE)\ncurve(3*x^2, from = -5, to = 5, n = 500, col = \"darkgreen\", ylab = \"\", add = TRUE)\nlegend(\"bottomleft\", c(\"a = 1\", \"a = 2\", \"a = 3\"), \n       col = c(\"red\", \"blue\", \"darkgreen\"), lty = 1, bty = \"n\")",
     "crumbs": [
       "`R` Explainers",
-      "is-else and logic"
+      "Plotting lines"
     ]
   },
   {
-    "objectID": "explainers/quarto.html",
-    "href": "explainers/quarto.html",
-    "title": "Quarto",
+    "objectID": "explainers/hello-rstudio.html",
+    "href": "explainers/hello-rstudio.html",
+    "title": "The Lay of the Land",
     "section": "",
-    "text": "Quarto is a technical publishing system that allows you to write documents where text, math, code, and the output of that code are seamlessly integrated in a reproducible way. Quarto is baller. I had never used it before coming to Duke, and now I am low-key obsessed. You will mainly use Quarto for the lab write-ups in this class, but if you wish to use it for your problem set solutions as well, be my guest!\nBelow is a very brief primer to get you started. If you took STA 101 or STA 199, you have already used Quarto extensively and can probably skip this. If you wish to go deeper and become a Quarto power user, what are you waiting for?",
+    "text": "R is a programming language, like Python, C++, Java, Julia, etc. RStudio is an IDE (integrated development environment) that allows you to interacts with R in a convenient way. So if R is the engine, RStudio is the dashboard.\nWhen you launch RStudio, you see something like this:\n\n\n\n\n\nThere are four panes:\n\n(bottom left) this is the console. It’s a command line where you can type input and get output. At the very least, you can use R as an overgrown calculator;\n(top left) this is the editor. If you are writing a bunch of code you want to save for later (like on your labs), you can edit the text file here;\n(top right) this is the environment. It’s a list of all the data and variables you have loaded;\n(bottom right) this panel is multipurpose. Depending on the tab you select, it can display the file directory, the plot you created, the documentation, or your rendered pdf.",
     "crumbs": [
       "`R` Explainers",
-      "Quarto"
-    ]
-  },
-  {
-    "objectID": "explainers/quarto.html#quick-start",
-    "href": "explainers/quarto.html#quick-start",
-    "title": "Quarto",
-    "section": "Quick start",
-    "text": "Quick start\nHere is a screenshot of my RStudio container:\n\n\n\n\n\nIn the upper left, I have the editor open, and I’m working on a .qmd file. This is just a text file with a special format. When I’m done editing, I hit the Render button (circled in red), and if there are no errors, a nice .pdf file is produced in the Viewer tab in the bottom right.\nThat’s pretty much the whole ballgame:\n\nEdit the .qmd file → hit Render → get a .pdf\n\nAlright, so what goes in the .qmd file?\n\nAt the top, in between ---, you have the document’s metadata: title, author, date, and so forth. We are not going to get fancy with it, but there are loads of settings you can play with;\nYou can write text the same as you would in Google Docs or Microsoft Word. Quarto syntax is based on markdown, and you can learn about the formatting options here;\nThe grey block beginning with ```{r} and ending with ``` is called a code chunk. Chunks of code go in there. In the rendered document, the code will be nicely formatted and stylized amidst the text;\nWhen you render, the code in your code chunks is actually executed, and the output is included in the final document. This is super convenient for producing tables and figures;\nYou can also include nicely formatted equations and math notation in your Quarto documents. See here for details.",
-    "crumbs": [
-      "`R` Explainers",
-      "Quarto"
-    ]
-  },
-  {
-    "objectID": "explainers/loops.html",
-    "href": "explainers/loops.html",
-    "title": "for loops",
-    "section": "",
-    "text": "A for loop is a way to repeat the same steps several times. It’s useful when we want to do something over and over again, like simulate a random experiment.\nThe pattern looks like this:\nfor (i in 1:N) {\n  do_something\n}",
-    "crumbs": [
-      "`R` Explainers",
-      "for loops"
-    ]
-  },
-  {
-    "objectID": "explainers/loops.html#example-counting-sixes-in-100-dice-rolls",
-    "href": "explainers/loops.html#example-counting-sixes-in-100-dice-rolls",
-    "title": "for loops",
-    "section": "Example: Counting sixes in 100 dice rolls",
-    "text": "Example: Counting sixes in 100 dice rolls\n\nsix_count &lt;- 0  # start a counter\n\nfor (i in 1:100) {\n  roll &lt;- sample(1:6, size = 1)\n  if (roll == 6) {\n    six_count &lt;- six_count + 1\n  }\n}\n\nsix_count\n\n[1] 16\n\n\n\nThe loop goes through i = 1, 2, ..., 100.\n\nEach time, it rolls a die and checks if it’s a six.\n\nIf it is, it increments six_count by 1.\n\nAt the end, six_count is the total number of sixes rolled in 100 trials.",
-    "crumbs": [
-      "`R` Explainers",
-      "for loops"
-    ]
-  },
-  {
-    "objectID": "explainers/loops.html#example-plotting-many-lines",
-    "href": "explainers/loops.html#example-plotting-many-lines",
-    "title": "for loops",
-    "section": "Example: plotting many lines",
-    "text": "Example: plotting many lines\nIn this explainer, we saw how to use the curve function to plot lines. If you want a plot with many lines, you can just call the curve function many times with the add = TRUE argument to layer things. In that explainer, we just hard-coded the multiple calls to curve. A for loop can clean that up:\n\ncurve(1*x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"\")\n\nfor(a in 2:25){\n  curve(a*x^2, from = -5, to = 5, n = 500, ylab = \"\", add = TRUE)\n}\n\n\n\n\n\n\n\nThat code plots the function \\(ax^2\\) every value of \\(a=1,\\,2,\\,3,\\,...,\\,25\\). Instead of writing 25 calls to the curve function, I consolidate with a loop.",
-    "crumbs": [
-      "`R` Explainers",
-      "for loops"
+      "The lay of the land"
     ]
   },
   {
@@ -1126,14 +1038,22 @@
     "href": "labs/lab-1.html",
     "title": "Lab 1",
     "section": "",
-    "text": "This class will introduce you to the basics of the R programming language, but in contrast to courses like STA 101 or 1991, we will not primarily be using R for data analysis. Instead, we will be using it to run simulations. That is, we will use R to build little computational “laboratories” where we can poke and prod a random system and explore its properties. This skill complements a lot of the math we will be doing. In the modern era, mathematical reasoning and computer simulation have become mutually reinforcing; you can check whether you did a calculation correctly by comparing with a simulation, and you can verify that a simulation result is legit by doing a proper calculation. Furthermore, in complex systems where the math is intractable, you can use simulation to explore what’s going on.\nDuring the semester, I will summarize the basic R skills we need in a series of concise “explainers” posted to the course webpage. Here’s what we have so far:\nPlease dip into those as needed.\nIn today’s lab, you will use R to simulate some basic random experiments and approximate probabilities. Along the way, you will get a light workout with if-else statements and for loops."
+    "text": "This class will introduce you to the basics of the R programming language, but in contrast to courses like STA 101 or 1991, we will not primarily be using R for data analysis. Instead, we will be using it to run simulations. That is, we will use R to build little computational “laboratories” where we can poke and prod a random system and explore its properties. This skill complements a lot of the math we will be doing. In the modern era, mathematical reasoning and computer simulation have become mutually reinforcing; you can check whether you did a calculation correctly by comparing with a simulation, and you can verify that a simulation result is legit by doing a proper calculation. Furthermore, in complex systems where the math is intractable, you can use simulation to explore what’s going on.\nDuring the semester, I will summarize the basic R skills we need in a series of concise “explainers” posted to the course webpage. Here’s what we have so far:\nPlease dip into those as needed.\nIn today’s lab, you will use R to simulate some basic random experiments and approximate probabilities. Along the way, you will get a light workout with if-else statements and for loops.",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
   },
   {
     "objectID": "labs/lab-1.html#footnotes",
     "href": "labs/lab-1.html#footnotes",
     "title": "Lab 1",
     "section": "Footnotes",
-    "text": "Footnotes\n\nThe wise among us know that these are pronounced STAAAWANOWA and STAAAWANANA, respectively.↩︎"
+    "text": "Footnotes\n\nThe wise among us know that these are pronounced STAAAWANOWA and STAAAWANANA, respectively.↩︎",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
   },
   {
     "objectID": "problems/bank/counting/poker-dice.html",
@@ -2177,58 +2097,146 @@
     ]
   },
   {
-    "objectID": "explainers/hello-rstudio.html",
-    "href": "explainers/hello-rstudio.html",
-    "title": "The Lay of the Land",
+    "objectID": "explainers/loops.html",
+    "href": "explainers/loops.html",
+    "title": "for loops",
     "section": "",
-    "text": "R is a programming language, like Python, C++, Java, Julia, etc. RStudio is an IDE (integrated development environment) that allows you to interacts with R in a convenient way. So if R is the engine, RStudio is the dashboard.\nWhen you launch RStudio, you see something like this:\n\n\n\n\n\nThere are four panes:\n\n(bottom left) this is the console. It’s a command line where you can type input and get output. At the very least, you can use R as an overgrown calculator;\n(top left) this is the editor. If you are writing a bunch of code you want to save for later (like on your labs), you can edit the text file here;\n(top right) this is the environment. It’s a list of all the data and variables you have loaded;\n(bottom right) this panel is multipurpose. Depending on the tab you select, it can display the file directory, the plot you created, the documentation, or your rendered pdf.",
+    "text": "A for loop is a way to repeat the same steps several times. It’s useful when we want to do something over and over again, like simulate a random experiment.\nThe pattern looks like this:\nfor (i in 1:N) {\n  do_something\n}",
     "crumbs": [
       "`R` Explainers",
-      "The lay of the land"
+      "for loops"
     ]
   },
   {
-    "objectID": "explainers/lineplot.html",
-    "href": "explainers/lineplot.html",
-    "title": "Plotting lines",
-    "section": "",
-    "text": "You can use the curve function to plot a line graph of a function. If that function were \\(f(x) = x^2\\) for example, you would type this:\n\ncurve(x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"f(x)\")\n\n\n\n\n\n\n\nThis function takes many arguments.\n\nthe first argument is a formula for the function you want to graph. The curve command implicitly assumes that x is the argument, and everything else is constant;\n\nfrom and to give the bounds of the \\(x\\)-axis;\nThis command is basically evaluating the function at many points and connecting the dots. n specifies how many dots. Too few, and the picture would look all cattywampus:\n\n\ncurve(x^2, from = -5, to = 5, n = 5)\n\n\n\n\n\n\n\nIf you want multiple lines on one graph, you can call curve multiple times, and include the add argument in all but the first call:\n\ncurve(1*x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"\")\ncurve(2*x^2, from = -5, to = 5, n = 500, col = \"blue\", ylab = \"\", add = TRUE)\ncurve(3*x^2, from = -5, to = 5, n = 500, col = \"darkgreen\", ylab = \"\", add = TRUE)\nlegend(\"bottomleft\", c(\"a = 1\", \"a = 2\", \"a = 3\"), \n       col = c(\"red\", \"blue\", \"darkgreen\"), lty = 1, bty = \"n\")",
+    "objectID": "explainers/loops.html#example-counting-sixes-in-100-dice-rolls",
+    "href": "explainers/loops.html#example-counting-sixes-in-100-dice-rolls",
+    "title": "for loops",
+    "section": "Example: Counting sixes in 100 dice rolls",
+    "text": "Example: Counting sixes in 100 dice rolls\n\nsix_count &lt;- 0  # start a counter\n\nfor (i in 1:100) {\n  roll &lt;- sample(1:6, size = 1)\n  if (roll == 6) {\n    six_count &lt;- six_count + 1\n  }\n}\n\nsix_count\n\n[1] 16\n\n\n\nThe loop goes through i = 1, 2, ..., 100.\n\nEach time, it rolls a die and checks if it’s a six.\n\nIf it is, it increments six_count by 1.\n\nAt the end, six_count is the total number of sixes rolled in 100 trials.",
     "crumbs": [
       "`R` Explainers",
-      "Plotting lines"
+      "for loops"
     ]
   },
   {
-    "objectID": "explainers/vectors.html",
-    "href": "explainers/vectors.html",
-    "title": "Vectors",
-    "section": "",
-    "text": "A vector in R is just an ordered set of values that have the same type. The easiest way to create one is to manually list out the values, separated by commas, inside c():\n\nmyvec &lt;- c(pi, 5, 3.6, 2, 9, 6000) \nmyvec\n\n[1]    3.141593    5.000000    3.600000    2.000000    9.000000 6000.000000\n\n\nIf you want to list out all of the integers between some min and max, you can use this shortcut:\n\n5:15\n\n [1]  5  6  7  8  9 10 11 12 13 14 15\n\n\nMore generally, if you want a vector of evenly spaced numbers between a min and a max, do this:\n\na &lt;- seq(0, 1, length.out = 11) \na\n\n [1] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0\n\n\nIf you want to create a “blank” vector that just has zeros in it, here you go:\n\nz &lt;- numeric(10)\nz\n\n [1] 0 0 0 0 0 0 0 0 0 0\n\n\nIn all of those cases, our vector contained numbers, but there is nothing special about numbers. Here is a vector where each value is a string (a piece of text):\n\npoetry &lt;- c(\"Mary\", \"had\", \"a\", \"little\", \"chainsaw\")\npoetry\n\n[1] \"Mary\"     \"had\"      \"a\"        \"little\"   \"chainsaw\"\n\n\nIf you have two vectors and you want to combine them into one, you can just use the c() command again. The “c” stands for “concatenate.” You’re concatenating, or joining, the vectors end-to-end:\n\nmore &lt;- c(\"whose\", \"chain\", \"was\", \"red\", \"as\")\n\nmasterpiece &lt;- c(poetry, more)\nmasterpiece\n\n [1] \"Mary\"     \"had\"      \"a\"        \"little\"   \"chainsaw\" \"whose\"   \n [7] \"chain\"    \"was\"      \"red\"      \"as\"",
+    "objectID": "explainers/loops.html#example-plotting-many-lines",
+    "href": "explainers/loops.html#example-plotting-many-lines",
+    "title": "for loops",
+    "section": "Example: plotting many lines",
+    "text": "Example: plotting many lines\nIn this explainer, we saw how to use the curve function to plot lines. If you want a plot with many lines, you can just call the curve function many times with the add = TRUE argument to layer things. In that explainer, we just hard-coded the multiple calls to curve. A for loop can clean that up:\n\ncurve(1*x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"\")\n\nfor(a in 2:25){\n  curve(a*x^2, from = -5, to = 5, n = 500, ylab = \"\", add = TRUE)\n}\n\n\n\n\n\n\n\nThat code plots the function \\(ax^2\\) every value of \\(a=1,\\,2,\\,3,\\,...,\\,25\\). Instead of writing 25 calls to the curve function, I consolidate with a loop.",
     "crumbs": [
       "`R` Explainers",
-      "Vectors"
+      "for loops"
     ]
   },
   {
-    "objectID": "explainers/math.html",
-    "href": "explainers/math.html",
-    "title": "Basic math in R\n",
+    "objectID": "explainers/quarto.html",
+    "href": "explainers/quarto.html",
+    "title": "Quarto",
     "section": "",
-    "text": "Using R for the calculator is like buying a plane ticket to get free peanuts. But I have done my taxes in R, so…\n\n2 + 2 # addition\n\n[1] 4\n\n5 - 2 # subtraction\n\n[1] 3\n\n0.5 * 6 # multiplication\n\n[1] 3\n\n3 / 4 # division\n\n[1] 0.75\n\nsqrt(2) # square root\n\n[1] 1.414214\n\n4 ^ 2 # exponent\n\n[1] 16\n\nexp(4.9) # base-e exponent\n\n[1] 134.2898\n\nlog(7) # natural log\n\n[1] 1.94591\n\nabs(-6) # absolute value\n\n[1] 6\n\nceiling(4.6) # round up\n\n[1] 5\n\nfloor(4.6) # round down\n\n[1] 4\n\nfactorial(4) # n! = n x (n-1) x ... x 2 x 1\n\n[1] 24\n\nchoose(8, 3) # binomial coefficient (we'll get there)\n\n[1] 56",
+    "text": "Quarto is a technical publishing system that allows you to write documents where text, math, code, and the output of that code are seamlessly integrated in a reproducible way. Quarto is baller. I had never used it before coming to Duke, and now I am low-key obsessed. You will mainly use Quarto for the lab write-ups in this class, but if you wish to use it for your problem set solutions as well, be my guest!\nBelow is a very brief primer to get you started. If you took STA 101 or STA 199, you have already used Quarto extensively and can probably skip this. If you wish to go deeper and become a Quarto power user, what are you waiting for?",
     "crumbs": [
       "`R` Explainers",
-      "Basic math"
+      "Quarto"
     ]
   },
   {
-    "objectID": "explainers/vectorization.html",
-    "href": "explainers/vectorization.html",
-    "title": "Vectorization",
-    "section": "",
-    "text": "Functions in R are often vectorized. For example:\n\nexp(2)\n\n[1] 7.389056\n\n\nI give it one number, and it returns one number. If instead, I supply a vector, I get this:\n\nexp(c(-3, 0.001, 2, 5, 600, 1, 0))\n\n[1]  4.978707e-02  1.001001e+00  7.389056e+00  1.484132e+02 3.773020e+260\n[6]  2.718282e+00  1.000000e+00\n\n\nSo when I supply a regular ol’ number as an argument, the exp function returns a number. When I supply a vector, it returns a vector; the exp function knows to act entry-wise and give me back a vector with the output of each entry-wise computation. In other words, I didn’t have to write a loop to manually do this. The function is vectorized, so it effectively runs the loop for me.\nSo consider for instance the set of numbers \\(A = \\{-100, -6, 0.001, \\pi, 30\\}\\), and this stupid function:\n\\[\nf(x) = \\ln^2\\left|\\frac{2x}{1-\\sin(x)}\\right|.\n\\]\nIf I wanted to compute the value of \\(f\\) for each of the arguments in \\(A\\), I could write a loop that goes entry-by-entry through \\(A\\) and applies the function \\(f\\) to it. But in R, because arithmetic operations are vectorized, I can do this:\n\nA = c(-100, -6, 0.001, pi, 30)\n\nlog( abs( (2 * A) / ( 1 - sin(A) ) ) ) ^ 2 \n\n[1] 36.051349  7.910714 38.608919  3.377792 11.609009\n\n\nDumb!\nAll of the basic arithmetic operations are vectorized like this:\n\nc(1, 2, 3) + 2\n\n[1] 3 4 5\n\n\n\nc(1, 2, 3) + c(1, 2, 3)\n\n[1] 2 4 6\n\n\n\nfloor(c(4, 5.1, 6.9))\n\n[1] 4 5 6",
+    "objectID": "explainers/quarto.html#quick-start",
+    "href": "explainers/quarto.html#quick-start",
+    "title": "Quarto",
+    "section": "Quick start",
+    "text": "Quick start\nHere is a screenshot of my RStudio container:\n\n\n\n\n\nIn the upper left, I have the editor open, and I’m working on a .qmd file. This is just a text file with a special format. When I’m done editing, I hit the Render button (circled in red), and if there are no errors, a nice .pdf file is produced in the Viewer tab in the bottom right.\nThat’s pretty much the whole ballgame:\n\nEdit the .qmd file → hit Render → get a .pdf\n\nAlright, so what goes in the .qmd file?\n\nAt the top, in between ---, you have the document’s metadata: title, author, date, and so forth. We are not going to get fancy with it, but there are loads of settings you can play with;\nYou can write text the same as you would in Google Docs or Microsoft Word. Quarto syntax is based on markdown, and you can learn about the formatting options here;\nThe grey block beginning with ```{r} and ending with ``` is called a code chunk. Chunks of code go in there. In the rendered document, the code will be nicely formatted and stylized amidst the text;\nWhen you render, the code in your code chunks is actually executed, and the output is included in the final document. This is super convenient for producing tables and figures;\nYou can also include nicely formatted equations and math notation in your Quarto documents. See here for details.",
     "crumbs": [
       "`R` Explainers",
-      "Vectorization"
+      "Quarto"
+    ]
+  },
+  {
+    "objectID": "explainers/if-else.html",
+    "href": "explainers/if-else.html",
+    "title": "if-else statements and logical conditions",
+    "section": "",
+    "text": "Sometimes we want our code to make a decision: do one thing if a condition is true, and something else if it’s false. In R, the tool for this is if ... else. The pattern looks like this:\n\nif (condition) {\n  do_something\n} else {\n  do_something_else\n}\n\nSuppose we roll a six-sided die:\n\nroll &lt;- sample(1:6, size = 1)\nroll\n\n[1] 2\n\n\nWe might want to check whether the outcome is “big” (4, 5, or 6) or “small” (1, 2, or 3). Here’s how we can use if else to do that:\n\nif (roll &gt;= 4) {\n  result &lt;- \"Big\"\n} else {\n  result &lt;- \"Small\"\n}\n\nresult\n\n[1] \"Small\"\n\n\nLet’s unpack:\n\nFirst, sample(1:6, size = 1) chooses a random number from 1 to 6;\nThen the if else checks: if the roll is 4 or higher, we call it “Big.” Otherwise, we call it “Small.”\n\nThis is how you can make simple decisions in R code.\nLogical conditions\nIn the condition of if, you can use logical comparisons. Here are the most common ones:\n\n\n\n\n\n\n\nOperator\nMeaning\nExample\n\n\n\n==\nequal to\n\nx == 3 is TRUE if x is 3\n\n\n!=\nnot equal to\n\nx != 3 is TRUE if x is not 3\n\n\n&lt;\nless than\n\nx &lt; 5 is TRUE if x is less than 5\n\n\n&lt;=\nless than or equal\nx &lt;= 5\n\n\n&gt;\ngreater than\nx &gt; 10\n\n\n&gt;=\ngreater than or equal\nx &gt;= 10\n\n\n&\nAND (both conditions true)\nx &gt; 0 & x &lt; 5\n\n\n|\nOR (at least one true)\nx &lt; 0 | x &gt; 10\n\n\n!\nNOT (negates a condition)\n!(x == 3)\n\n\n%in%\nelement of a vector\n\nx %in% c(1,2,3) is TRUE if x is 1, 2, or 3\n\n\n\nHere they are in action:\n\nx &lt;- 4\nx &gt; 3       \n\n[1] TRUE\n\nx &lt; 3       \n\n[1] FALSE\n\nx &gt;= 3 & x &lt;= 5   \n\n[1] TRUE\n\nx &lt; 3 | x &gt; 5     \n\n[1] FALSE\n\n!(x == 4)   \n\n[1] FALSE\n\n\nHere is how these might be deployed in the context of if-else:\n\nif (x &gt; 0 & x %% 2 == 0) {\n  result &lt;- \"Positive even\"\n} else {\n  result &lt;- \"Other\"\n}\nresult\n\n[1] \"Positive even\"",
+    "crumbs": [
+      "`R` Explainers",
+      "is-else and logic"
+    ]
+  },
+  {
+    "objectID": "explainers/setup.html",
+    "href": "explainers/setup.html",
+    "title": "Getting started",
+    "section": "",
+    "text": "The path of least resistance to using R in this class is to reserve a container from the Duke Container Manager. It’s hosted in the cloud, and it has all of the software you will ever need for this class.\n\nGo here: https://cmgr.oit.duke.edu/containers. You may have to log in with your NetID at some point;\n(The first time you do this, you look for STA240 under “Reservations available” on the righthand side, and click “reserve STA240”. After you do that once, STA240 will appear under “My reservations” on the lefthand side forever more)\nClick STA240 under “My reservations”;\nLogin;\nStart. It may take a while, but then RStudio should launch in your browser.",
+    "crumbs": [
+      "`R` Explainers",
+      "Getting started"
+    ]
+  },
+  {
+    "objectID": "explainers/setup.html#option-1-reserve-a-container",
+    "href": "explainers/setup.html#option-1-reserve-a-container",
+    "title": "Getting started",
+    "section": "",
+    "text": "The path of least resistance to using R in this class is to reserve a container from the Duke Container Manager. It’s hosted in the cloud, and it has all of the software you will ever need for this class.\n\nGo here: https://cmgr.oit.duke.edu/containers. You may have to log in with your NetID at some point;\n(The first time you do this, you look for STA240 under “Reservations available” on the righthand side, and click “reserve STA240”. After you do that once, STA240 will appear under “My reservations” on the lefthand side forever more)\nClick STA240 under “My reservations”;\nLogin;\nStart. It may take a while, but then RStudio should launch in your browser.",
+    "crumbs": [
+      "`R` Explainers",
+      "Getting started"
+    ]
+  },
+  {
+    "objectID": "explainers/setup.html#option-2-download-it-yourself",
+    "href": "explainers/setup.html#option-2-download-it-yourself",
+    "title": "Getting started",
+    "section": "Option 2: download it yourself",
+    "text": "Option 2: download it yourself\nOf course, you won’t have containers after you graduate, so maybe it’s a good idea to hike up your big girl pants and actually install something. It’s pretty easy:\n\nDownload R: https://cran.r-project.org\nDownload RStudio: https://posit.co/download/rstudio-desktop/\n(optional) Install tinytex: https://yihui.org/tinytex/",
+    "crumbs": [
+      "`R` Explainers",
+      "Getting started"
+    ]
+  },
+  {
+    "objectID": "explainers/sample.html",
+    "href": "explainers/sample.html",
+    "title": "The sample command",
+    "section": "",
+    "text": "The function sample() lets us pick random values. This is very useful in probability, because it allows us to simulate experiments like coin flips, die rolls, or drawing cards.\nThe pattern is:\nsample(x, size = n, replace = FALSE)",
+    "crumbs": [
+      "`R` Explainers",
+      "`sample`"
+    ]
+  },
+  {
+    "objectID": "explainers/sample.html#example-coin-flip",
+    "href": "explainers/sample.html#example-coin-flip",
+    "title": "The sample command",
+    "section": "Example: coin flip",
+    "text": "Example: coin flip\nThis chooses either heads (H) or tails (T) at random:\n\nsample(c(\"H\", \"T\"), size = 1)\n\n[1] \"H\"",
+    "crumbs": [
+      "`R` Explainers",
+      "`sample`"
+    ]
+  },
+  {
+    "objectID": "explainers/sample.html#example-die-roll",
+    "href": "explainers/sample.html#example-die-roll",
+    "title": "The sample command",
+    "section": "Example: die roll",
+    "text": "Example: die roll\nThis rolls a fair die twenty times:\n\nsample(1:6, size = 20, replace = TRUE)\n\n [1] 6 3 2 4 3 3 2 1 4 1 2 6 5 1 1 4 5 4 4 5\n\n\nWe need replace = TRUE here, because after rolling a die, the next roll can be the same number again.",
+    "crumbs": [
+      "`R` Explainers",
+      "`sample`"
+    ]
+  },
+  {
+    "objectID": "explainers/sample.html#example-spotify-shuffle",
+    "href": "explainers/sample.html#example-spotify-shuffle",
+    "title": "The sample command",
+    "section": "Example: Spotify shuffle",
+    "text": "Example: Spotify shuffle\nHere’s my playlist:\n\nplaylist &lt;- c(\"Ramble On\",\n              \"It's Raining Men\",\n              \"Tears\",\n              \"Tiptoe Through the Tulips\",\n              \"Gangsta's Paradise\",\n              \"Days of Wine and Roses\")\n\nThere are 6 songs, so if I generate a sample of size 6 without replacement, I’m just randomly shuffling the contents of that vector:\n\nsample(playlist, size = length(playlist), replace = FALSE)\n\n[1] \"Tears\"                     \"Tiptoe Through the Tulips\"\n[3] \"Gangsta's Paradise\"        \"Ramble On\"                \n[5] \"Days of Wine and Roses\"    \"It's Raining Men\"",
+    "crumbs": [
+      "`R` Explainers",
+      "`sample`"
     ]
   },
   {
