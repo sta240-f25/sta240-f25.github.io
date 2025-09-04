@@ -54,3 +54,5 @@ for(a in 2:25){
   curve(a*x^2, from = -5, to = 5, n = 500, ylab = "", add = TRUE)
 }
 ```
+
+That code plots the function $ax^2$ every value of $a=1,\,2,\,3,\,...,\,25$. Instead of writing 25 calls to the curve function, I consolidate with a loop.
