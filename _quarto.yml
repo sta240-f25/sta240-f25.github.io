@@ -98,6 +98,9 @@ website:
           - href: problems/pset-1.qmd
             text: Problem Set 1
       - section: "Labs"
+        contents:
+          - href: labs/lab-1.qmd
+            text: Lab 1
       - section: "Exam Review"
             
   page-footer:
