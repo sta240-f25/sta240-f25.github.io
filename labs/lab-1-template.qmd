@@ -1,0 +1,43 @@
+---
+title: "Lab 1"
+subtitle: Duke STA 240 Fall 2025
+author: replace this text with your name
+format: 
+  pdf:
+    toc: false
+editor: 
+  mode: source
+---
+
+# Task 1
+
+```{r}
+#| label: task-1-coin-flip
+
+# add code here
+```
+
+
+{{< pagebreak >}}
+
+# Task 2
+
+You can write text here.
+
+```{r}
+#| label: task-2-dice
+
+# add code here
+```
+
+{{< pagebreak >}}
+
+# Task 3
+
+You can write text here.
+
+```{r}
+#| label: task-3-cards
+
+# add code here
+```
