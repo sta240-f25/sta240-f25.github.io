@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Lab 1 – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
@@ -20,8 +17,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -37,8 +67,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-1fa1d8026083a9bddc52b4aafc7f818e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-804d687d65edbe60c616608cd7bd2e91.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-804d687d65edbe60c616608cd7bd2e91.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -65,19 +94,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-
-
 <meta property="og:title" content="Lab 1 – STA 240 Fall 2025">
 <meta property="og:description" content="Due Thursday September 4 at 11:59 PM">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
-
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -88,16 +112,11 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
@@ -112,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -120,8 +139,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -164,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -173,8 +192,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
@@ -217,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -226,8 +245,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
@@ -269,8 +288,26 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Plotting lines</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/sample.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><code>sample</code></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/if-else.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">is-else and logic</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">for loops</span></a>
+  </div>
+</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -279,8 +316,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
@@ -293,7 +330,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">Labs</span></span>
@@ -303,25 +340,20 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Exam Review</span></span>
   </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
-  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">Practice</a></li>
-  </ul>
-</nav>
+<li><a href="#task-1-i-do-it" id="toc-task-1-i-do-it" class="nav-link active" data-scroll-target="#task-1-i-do-it">Task 1 (I do it)</a></li>
+  <li><a href="#task-2-we-do-it" id="toc-task-2-we-do-it" class="nav-link" data-scroll-target="#task-2-we-do-it">Task 2 (we do it)</a></li>
+  <li><a href="#task-3-you-do-it" id="toc-task-3-you-do-it" class="nav-link" data-scroll-target="#task-3-you-do-it">Task 3 (you do it)</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">Lab 1</h1>
 <p class="subtitle lead">Due Thursday September 4 at 11:59 PM</p>
 </div>
@@ -337,22 +369,104 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
+</header><p>This class will introduce you to the basics of the <code>R</code> programming language, but in contrast to courses like STA 101 or 199<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, we will <em>not</em> primarily be using <code>R</code> for data analysis. Instead, we will be using it to run simulations. That is, we will use <code>R</code> to build little computational “laboratories” where we can poke and prod a random system and explore its properties. This skill complements a lot of the math we will be doing. In the modern era, mathematical reasoning and computer simulation have become mutually reinforcing; you can check whether you did a calculation correctly by comparing with a simulation, and you can verify that a simulation result is legit by doing a proper calculation. Furthermore, in complex systems where the math is intractable, you can use simulation to explore what’s going on.</p>
+<p>During the semester, I will summarize the basic <code>R</code> skills we need in a series of concise “explainers” posted to the course webpage. Here’s what we have so far:</p>
+<ol type="1">
+<li>
+<a href="https://sta240-f25.github.io/explainers/setup.html">Getting into RStudio</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/explainers/hello-rstudio.html">Understanding the RStudio layout</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/explainers/quarto.html">Creating your lab write-ups with Quarto</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/explainers/math.html">Using <code>R</code> as a big calculator</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/explainers/vectors.html">Introduction to vectors</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/explainers/vectorization.html">Vectorization</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/explainers/lineplot.html">Plotting line graphs with the <code>curve</code> function</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/explainers/sample.html">Simulating random experiments with the <code>sample</code> function</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/explainers/if-else.html">if-else and logical operations</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/explainers/loops.html">for loops</a>.</li>
+</ol>
+<p>Please dip into those as needed.</p>
+<p>In today’s lab, you will use <code>R</code> to simulate some basic random experiments and approximate probabilities. Along the way, you will get a light workout with if-else statements and for loops.</p>
+<section id="task-1-i-do-it" class="level1"><h1>Task 1 (I do it)</h1>
+<p>We want to approximate the probability that a fair coin lands on Heads. We already know it’s 0.5. Does the computer agree?</p>
+<p>This code flips the coin 30 times:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flips</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"H"</span>, <span class="st">"T"</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">30</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="va">flips</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "T" "H" "T" "H" "T" "H" "H" "H" "T" "H" "H" "H" "T" "H" "H" "H" "T" "H" "T"
+[20] "H" "T" "T" "T" "T" "T" "H" "T" "H" "T" "H"</code></pre>
+</div>
+</div>
+<p>This code computes the proportion of flips that came up heads:</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">flips</span> <span class="op">==</span> <span class="st">"H"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5333333</code></pre>
+</div>
+</div>
+<p>It is equivalent to counting the number of heads and dividing by the total number of flips:</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">flips</span> <span class="op">==</span> <span class="st">"H"</span><span class="op">)</span> <span class="op">/</span> <span class="fl">30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5333333</code></pre>
+</div>
+</div>
+<p>Do you see why?</p>
+</section><section id="task-2-we-do-it" class="level1"><h1>Task 2 (we do it)</h1>
+<p>Imagine you roll two <em>fair</em> dice. What is the probability that the sum of the two numbers you roll is even? To approximate this, work together with Aurora to complete the following steps:</p>
+<ul>
+<li>Use a <code>for</code> loop to repeat the experiment 1,000 times:
+<ul>
+<li>Roll two dice using <code><a href="https://rdrr.io/r/base/sample.html">sample()</a></code>;<br>
+</li>
+<li>Add them together;<br>
+</li>
+<li>Use <code>if else</code> to record a <code>1</code> if the sum is even, and a <code>0</code> if the sum is odd.<br>
+</li>
+</ul>
+</li>
+<li>At the end, compute the proportion of <code>1</code> you simulated to estimate the probability.</li>
+</ul></section><section id="task-3-you-do-it" class="level1"><h1>Task 3 (you do it)</h1>
+<p>Here is a vector containing all of the cards in a standard 52-card deck:</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">deck_of_cards</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"AH"</span>, <span class="st">"2H"</span>, <span class="st">"3H"</span>, <span class="st">"4H"</span>, <span class="st">"5H"</span>, <span class="st">"6H"</span>, <span class="st">"7H"</span>, <span class="st">"8H"</span>, <span class="st">"9H"</span>, <span class="st">"10H"</span>, <span class="st">"JH"</span>, <span class="st">"QH"</span>, <span class="st">"KH"</span>,</span>
+<span>                   <span class="st">"AD"</span>, <span class="st">"2D"</span>, <span class="st">"3D"</span>, <span class="st">"4D"</span>, <span class="st">"5D"</span>, <span class="st">"6D"</span>, <span class="st">"7D"</span>, <span class="st">"8D"</span>, <span class="st">"9D"</span>, <span class="st">"10D"</span>, <span class="st">"JD"</span>, <span class="st">"QD"</span>, <span class="st">"KD"</span>,</span>
+<span>                   <span class="st">"AC"</span>, <span class="st">"2C"</span>, <span class="st">"3C"</span>, <span class="st">"4C"</span>, <span class="st">"5C"</span>, <span class="st">"6C"</span>, <span class="st">"7C"</span>, <span class="st">"8C"</span>, <span class="st">"9C"</span>, <span class="st">"10C"</span>, <span class="st">"JC"</span>, <span class="st">"QC"</span>, <span class="st">"KC"</span>,</span>
+<span>                   <span class="st">"AS"</span>, <span class="st">"2S"</span>, <span class="st">"3S"</span>, <span class="st">"4S"</span>, <span class="st">"5S"</span>, <span class="st">"6S"</span>, <span class="st">"7S"</span>, <span class="st">"8S"</span>, <span class="st">"9S"</span>, <span class="st">"10S"</span>, <span class="st">"JS"</span>, <span class="st">"QS"</span>, <span class="st">"KS"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The first character is the <em>rank</em> of the card: Ace (<code>A</code>), 2, 3, 4, …, Jack (<code>J</code>), Queen (<code>Q</code>), King (<code>K</code>). The second character is the <em>suit</em> of the card: hearts (<code>H</code>), diamonds (<code>D</code>), clubs (<code>C</code>), spades (<code>S</code>).</p>
+<p>Now, imagine that a five-card hand is randomly dealt to you from a well-shuffled deck. What is the probability that the hand contains <em>at least</em> one ace? Very soon in our course you’ll learn how to do the math and compute the number exactly, but until then, you can approximate it with simulation. <strong>Write a for loop that simulates 5,000 five-card hands, and use the results to approximate the probability that your hand contains at least one ace.</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>There are many correct ways to do this, but you might find the <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/any.html"><code>any</code></a> function helpful.</p>
+</div>
+</div>
+</div>
 
 
-<p>This is a course about “doing the math,” but in the modern era, this has a symbiotic relationship with computer simulation. As you near the research frontier, there are plenty of phenomena where the math is simply intractable, but simulation is possible. This enables us to generate preliminary results about the behavior of the random system. For more tractable problems, “doing the math” and computer simulation are mutually reinforcing. Often I will check a calculation against a simulation to verify that I didn’t make any mistakes. Conversely, I will do a calculation to verify if a simulation result is legit.</p>
-<p>In this course, we will introduce the basics of the <code>R</code> programming language, but <em>not</em> primarily for data analysis. Instead, we will show you how to use <code>R</code> to construct a lil’ computational laboratory in which you can probe the behavior of a random system. Being able to write computer simulations is one of the main skills that will empower you to be independent of your instructors and continue studying probability and statistics on your own after you leave this class.</p>
-<section id="setup" class="level1">
-<h1>Setup</h1>
-</section>
-<section id="practice" class="level1">
-<h1>Practice</h1>
-
-
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1"><p>The wise among us know that these are pronounced STAAAWANOWA and STAAAWANANA, respectively.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -770,8 +884,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -783,8 +896,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
