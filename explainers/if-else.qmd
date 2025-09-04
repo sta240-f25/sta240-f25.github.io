@@ -1,0 +1,86 @@
+---
+title: "if-else statements and logical conditions"
+format: html
+---
+
+```{r}
+#| echo: false
+set.seed(356)
+```
+
+Sometimes we want our code to make a decision: do one thing if a condition is true, and something else if it’s false. In R, the tool for this is `if ... else`. The pattern looks like this:
+
+```{r}
+#| eval: false
+if (condition) {
+  do_something
+} else {
+  do_something_else
+}
+```
+
+Suppose we roll a six-sided die:
+
+```{r}
+roll <- sample(1:6, size = 1)
+roll
+```
+
+We might want to check whether the outcome is "big" (4, 5, or 6) or "small" (1, 2, or 3). Here’s how we can use if else to do that:
+
+```{r}
+if (roll >= 4) {
+  result <- "Big"
+} else {
+  result <- "Small"
+}
+
+result
+```
+
+Let's unpack:
+
+- First, `sample(1:6, size = 1)` chooses a random number from 1 to 6;
+- Then the if else checks: if the roll is 4 or higher, we call it "Big." Otherwise, we call it "Small."
+
+This is how you can make simple decisions in R code.
+
+
+# Logical conditions
+
+In the condition of `if`, you can use logical comparisons. Here are the most common ones:
+
+| Operator | Meaning | Example |
+|----------|---------|---------|
+| `==`     | equal to | `x == 3` is TRUE if x is 3 |
+| `!=`     | not equal to | `x != 3` is TRUE if x is not 3 |
+| `<`      | less than | `x < 5` is TRUE if x is less than 5 |
+| `<=`     | less than or equal | `x <= 5` |
+| `>`      | greater than | `x > 10` |
+| `>=`     | greater than or equal | `x >= 10` |
+| `&`      | AND (both conditions true) | `x > 0 & x < 5` |
+| `|`      | OR (at least one true) | `x < 0 | x > 10` |
+| `!`      | NOT (negates a condition) | `!(x == 3)` |
+
+Here they are in action:
+
+```{r}
+x <- 4
+x > 3       
+x < 3       
+x >= 3 & x <= 5   
+x < 3 | x > 5     
+!(x == 4)   
+```
+
+Here is how these might be deployed in the context of if-else:
+
+```{r}
+if (x > 0 & x %% 2 == 0) {
+  result <- "Positive even"
+} else {
+  result <- "Other"
+}
+result
+```
+

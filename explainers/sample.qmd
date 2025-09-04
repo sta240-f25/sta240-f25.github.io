@@ -5,3 +5,58 @@ editor:
   mode: source
 ---
 
+```{r}
+#| echo: false
+set.seed(2345)
+```
+
+The function `sample()` lets us pick random values. This is very useful in probability, because it allows us to simulate experiments like coin flips, die rolls, or drawing cards.
+
+The pattern is:
+
+```{r}
+#| eval: false
+sample(x, size = n, replace = FALSE)
+```
+
+- The vector `x` contains the set of values we are sampling from;
+- `size` is how many values we want;
+- `replace = FALSE` means we don’t reuse values once they’re chosen. Set `replace = TRUE` if you do want to reuse them.
+
+## Example: coin flip
+
+This chooses either heads (`H`) or tails (`T`) at random:
+
+```{r}
+sample(c("H", "T"), size = 1)
+```
+
+## Example: die roll
+
+This rolls a fair die twenty times:
+
+```{r}
+sample(1:6, size = 20, replace = TRUE)
+```
+
+
+We need `replace = TRUE` here, because after rolling a die, the next roll can be the same number again.
+
+## Example: Spotify shuffle
+
+Here's my playlist:
+
+```{r}
+playlist <- c("Ramble On",
+              "It's Raining Men",
+              "Tears",
+              "Tiptoe Through the Tulips",
+              "Gangsta's Paradise",
+              "Days of Wine and Roses")
+```
+
+There are `{r} length(playlist)` songs, so if I generate a sample of size `{r} length(playlist)` *without replacement*, I'm just randomly shuffling the contents of that vector:
+
+```{r}
+sample(playlist, size = length(playlist), replace = FALSE)
+```
