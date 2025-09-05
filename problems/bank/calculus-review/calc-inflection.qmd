@@ -26,7 +26,9 @@ s = 2
 par(mar = c(4, 4, 0.1, 4))
 curve(exp(-0.5 * ((x - m) / s)^2), 
       from = -6, to = 8, n = 500,
-      xlab = "x", ylab = "h(x)")
+      xlab = "x", ylab = "h(x)",
+      xaxt = "n")
+axis(1, at = -6:8)
 ```
 
 Before you start doing any math, can you use the picture to guess what the answer will be?
