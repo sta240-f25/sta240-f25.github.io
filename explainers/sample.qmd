@@ -55,7 +55,7 @@ playlist <- c("Ramble On",
               "Days of Wine and Roses")
 ```
 
-There are `{r} length(playlist)` songs, so if I generate a sample of size `{r} length(playlist)` *without replacement*, I'm just randomly shuffling the contents of that vector:
+There are `{r} length(playlist)` songs, so if I generate a sample of size `{r} length(playlist)` *without replacement*, I will ultimately draw each song exactly once, but in a random order:
 
 ```{r}
 sample(playlist, size = length(playlist), replace = FALSE)
