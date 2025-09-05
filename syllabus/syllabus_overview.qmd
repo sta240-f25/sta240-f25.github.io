@@ -10,7 +10,7 @@ This is a course on the mathematics of probability and statistics. In **probabil
 
 Aside from the concrete topics, the course emphasizes four generic intellectual themes:
 
-- Students in this class will improve their mathematical maturity. They will deepen their experience with all of the main ideas and techniques of calculus, they will encounter topics like set theory and combinatorics, which may be new to them, and they will get a taste of rigorous mathematical proof;
+- Students in this class will improve their mathematical maturity. They will deepen their experience with all of the main ideas and techniques of univariate calculus, they will encounter topics like set theory and combinatorics, which may be new to them, and they will get a taste of rigorous mathematical proof;
 - Probability and statistics weasel their way into pretty much everything these days, and students will study a wide variety of famous and obscure applications coming from the natural and social sciences, technology and industry, and even arts and culture;
 - Probability and statistics are often counterintuitive, and humans frequently make silly and harmful mistakes in reasoning. Students will use their mathematical knowledge to identify and critique these errors...and hopefully avoid them themselves;
 - This is a course about doing the math, but in the modern era, this has a symbiotic relationship with computer simulation. Simulation is used both to verify and probe mathematical results, as well as to substitute for them when a proof remains beyond the frontier. Students will learn the basics of the `R` programming language and use it to simulate probabilistic environments and reinforce their mathematical reasoning.
