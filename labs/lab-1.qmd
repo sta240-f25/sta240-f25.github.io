@@ -19,11 +19,11 @@ During the semester, I will summarize the basic `R` skills we need in a series o
 1. [Creating your lab write-ups with Quarto](https://sta240-f25.github.io/explainers/quarto.html);
 1. [Using `R` as a big calculator](https://sta240-f25.github.io/explainers/math.html);
 1. [Introduction to vectors](https://sta240-f25.github.io/explainers/vectors.html);
-1. [Vectorization](https://sta240-f25.github.io/explainers/vectorization.html);
 1. [Plotting line graphs with the `curve` function](https://sta240-f25.github.io/explainers/lineplot.html);
 1. [Simulating random experiments with the `sample` function](https://sta240-f25.github.io/explainers/sample.html);
 1. [if-else and logical operations](https://sta240-f25.github.io/explainers/if-else.html);
-1. [for loops](https://sta240-f25.github.io/explainers/loops.html).
+1. [for loops](https://sta240-f25.github.io/explainers/loops.html);
+1. [Vectorization](https://sta240-f25.github.io/explainers/vectorization.html).
 
 Please dip into those as needed.
 

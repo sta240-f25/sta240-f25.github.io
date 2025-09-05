@@ -81,8 +81,6 @@ website:
             text: Basic math
           - href: explainers/vectors.qmd
             text: Vectors
-          - href: explainers/vectorization.qmd
-            text: Vectorization
           - href: explainers/lineplot.qmd
             text: Plotting lines
           - href: explainers/sample.qmd
@@ -91,6 +89,8 @@ website:
             text: is-else and logic
           - href: explainers/loops.qmd
             text: for loops
+          - href: explainers/vectorization.qmd
+            text: Vectorization
       - section: "Problem Sets"
         contents:
           - href: problems/pset-0.qmd
