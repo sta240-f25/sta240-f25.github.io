@@ -27,4 +27,4 @@ Alright, so what goes in the `.qmd` file?
 2. You can write text the same as you would in Google Docs or Microsoft Word. Quarto syntax is based on markdown, and you can learn about the formatting options [here](https://quarto.org/docs/authoring/markdown-basics.html);
 3. The grey block beginning with ` ```{r} ` and ending with ` ``` ` is called a **code chunk**. Chunks of code go in there. In the rendered document, the code will be nicely formatted and stylized amidst the text;
 4. When you render, the code in your code chunks is actually executed, and the output is included in the final document. This is super convenient for producing tables and figures;
-5. You can also include nicely formatted equations and math notation in your Quarto documents. See [here](https://sta240-f25.github.io/math/latex.html) for details. 
+5. You can also include nicely formatted equations and math notation in your Quarto documents. See [here](https://sta240-f25.github.io/explainers/latex.html) for details. 

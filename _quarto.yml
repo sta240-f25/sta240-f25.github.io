@@ -67,8 +67,6 @@ website:
             text: Limits and continuity
           - href: math/series.qmd
             text: Infinite series
-          - href: math/latex.qmd
-            text: Typing math
       - section: "`R` Explainers"
         contents:
           - href: explainers/setup.qmd
@@ -77,6 +75,8 @@ website:
             text: The lay of the land
           - href: explainers/quarto.qmd
             text: Quarto
+          - href: explainers/latex.qmd
+            text: Typing math
           - href: explainers/math.qmd
             text: Basic math
           - href: explainers/vectors.qmd

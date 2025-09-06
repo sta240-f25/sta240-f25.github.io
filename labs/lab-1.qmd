@@ -17,6 +17,7 @@ During the semester, I will summarize the basic `R` skills we need in a series o
 1. [Getting into RStudio](https://sta240-f25.github.io/explainers/setup.html);
 1. [Understanding the RStudio layout](https://sta240-f25.github.io/explainers/hello-rstudio.html);
 1. [Creating your lab write-ups with Quarto](https://sta240-f25.github.io/explainers/quarto.html);
+1. [Typing up pretty equations with Quarto](https://sta240-f25.github.io/explainers/latex.html);
 1. [Using `R` as a big calculator](https://sta240-f25.github.io/explainers/math.html);
 1. [Introduction to vectors](https://sta240-f25.github.io/explainers/vectors.html);
 1. [Plotting line graphs with the `curve` function](https://sta240-f25.github.io/explainers/lineplot.html);
