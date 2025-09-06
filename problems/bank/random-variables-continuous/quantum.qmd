@@ -49,3 +49,4 @@ a. The parameter $n=1,\,2,\,3,\,...$ indexes the energy level of the particle. T
 
 
 [^1]: If you’re like me, you cannot do this. Oh well.
+

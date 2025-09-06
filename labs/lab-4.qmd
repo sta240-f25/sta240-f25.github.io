@@ -223,3 +223,4 @@ If you're interested in this stuff...
 -   People seemed to like [this video](https://youtu.be/zjkBMFhNj_g?feature=shared) when it made the rounds a few years back;
 - "[An overview of large language models for statisticians](https://arxiv.org/abs/2502.17814)," by several heavy-hitting ML researchers;
 -   [This](https://cran.r-project.org/web/packages/kgrams/vignettes/kgrams.html) is the `R` package that we used for this lab. The LLMs of today are light years ahead of the simple $k$-grams model, but some concepts are timeless: tokenization, temperature sampling, etc. Whether your language model is large or small, these things are in play. So if you play around with the $k$-grams model, it could serve as a nice sandbox for getting familiar with those foundational concepts.
+

@@ -34,3 +34,6 @@ curve(3*x^2, from = -5, to = 5, n = 500, col = "darkgreen", ylab = "", add = TRU
 legend("bottomleft", c("a = 1", "a = 2", "a = 3"), 
        col = c("red", "blue", "darkgreen"), lty = 1, bty = "n")
 ```
+
+
+

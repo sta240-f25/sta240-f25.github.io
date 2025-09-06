@@ -60,3 +60,6 @@ There are `{r} length(playlist)` songs, so if I generate a sample of size `{r} l
 ```{r}
 sample(playlist, size = length(playlist), replace = FALSE)
 ```
+
+
+
