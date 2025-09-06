@@ -1,0 +1,22 @@
+---
+title: "Lab 2"
+subtitle: Due Thursday September 11 at 11:59 PM
+editor: 
+  mode: source
+---
+
+
+You will compute the probability of an event by counting. Then, you will code a lil' simulation of the phenomenon and confirm that in a large number of trials, the proportion of the time the event occurs is close to the number you calculated.
+
+
+
+latex
+
+## Task 0 
+
+## Task 1 (I do it)
+
+## Task 2 (we do it)
+
+## Task 3 (you do it)
+
