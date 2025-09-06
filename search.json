@@ -825,7 +825,7 @@
     "href": "problems/pset-0.html#problem-4",
     "title": "Problem Set 0",
     "section": "Problem 4",
-    "text": "Problem 4\nHere is a very silly function:\n\\[\nh(x)\n=\n\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\n,\\quad\n-\\infty&lt;x&lt;\\infty\n.\n\\]\nTreat \\(-\\infty&lt;\\mu&lt;\\infty\\) and \\(\\sigma&gt;0\\) as constants and compute the value(s) of \\(x\\) at which \\(h\\) has inflection points.\n\n\n\n\n\n\nHint\n\n\n\n\n\nHere is an example of what \\(h\\) might look like in the special case where \\(\\mu = 1\\) and \\(\\sigma=2\\):\n\nCodem = 1\ns = 2\npar(mar = c(4, 4, 0.1, 4))\ncurve(exp(-0.5 * ((x - m) / s)^2), \n      from = -6, to = 8, n = 500,\n      xlab = \"x\", ylab = \"h(x)\")\n\n\n\n\n\n\n\nBefore you start doing any math, can you use the picture to guess what the answer will be?",
+    "text": "Problem 4\nHere is a very silly function:\n\\[\nh(x)\n=\n\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\n,\\quad\n-\\infty&lt;x&lt;\\infty\n.\n\\]\nTreat \\(-\\infty&lt;\\mu&lt;\\infty\\) and \\(\\sigma&gt;0\\) as constants and compute the value(s) of \\(x\\) at which \\(h\\) has inflection points.\n\n\n\n\n\n\nHint\n\n\n\n\n\nHere is an example of what \\(h\\) might look like in the special case where \\(\\mu = 1\\) and \\(\\sigma=2\\):\n\nCodem = 1\ns = 2\npar(mar = c(4, 4, 0.1, 4))\ncurve(exp(-0.5 * ((x - m) / s)^2), \n      from = -6, to = 8, n = 500,\n      xlab = \"x\", ylab = \"h(x)\",\n      xaxt = \"n\")\naxis(1, at = -6:8)\n\n\n\n\n\n\n\nBefore you start doing any math, can you use the picture to guess what the answer will be?",
     "crumbs": [
       "Problem Sets",
       "Problem Set 0"
@@ -1074,7 +1074,7 @@
     "href": "problems/bank/counting/spotify-shuffle.html#footnotes",
     "title": "STA 240 Fall 2025",
     "section": "Footnotes",
-    "text": "Footnotes\n\nMartha Wash is technically heard twice, once in a solo capacity and once as a member of The Weather Girls, but let’s please not quibble.↩︎"
+    "text": "Footnotes\n\nMartha Wash is technically heard twice, once in a solo capacity and once as a member of The Weather Girls, but let’s please not quibble;↩︎\nIf you don’t have a Spotify account, collaborate with a classmate who does and please acknowledge them.↩︎"
   },
   {
     "objectID": "problems/bank/counting/basic-counting.html",
@@ -1158,7 +1158,7 @@
     "href": "problems/bank/random-variables-discrete/random-exam.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Alas. You settle in for what you think will be a good night’s beauty sleep, and you end up having one of those awful dreams where you must take a test you haven’t studied for. It’s a multiple choice test, each question has five options with only one correct answer, there are fifty questions in total, and each is worth one point. The god Morpheus has kindly seen fit to leave a fair, five-sided die in your dream pocket, and so your dream self decides to do the only thing you can do: use the die to answer each of the exam questions completely at random.\n\nLet \\(X\\) be the number of questions you answer correctly. What is the distribution of \\(X\\)?\nPlot the probability mass function of \\(X\\);\nWhat is the expected number of questions you will answer correctly?\nWhat is the probability that you get at least a C- on the exam?"
+    "text": "I dreamed last night I got on the boat to heavenAnd by some chance I had brought my dice along\nGuys and Dolls\n\nAlas. You settle in for what you think will be a good night’s beauty sleep, and you end up having one of those awful dreams where you must take a test you haven’t studied for. It’s a multiple choice test, each question has five options with only one correct answer, there are fifty questions in total, and each is worth one point. The god Morpheus has kindly seen fit to leave a fair, five-sided die in your dream pocket, and so your dream self decides to do the only thing you can do: use the die to answer each of the exam questions completely at random.\n\nLet \\(X\\) be the number of questions you answer correctly. What is the distribution of \\(X\\)?\nPlot the probability mass function of \\(X\\);\nWhat is the expected number of questions you will answer correctly?\nWhat is the probability that you get at least a C- on the exam?"
   },
   {
     "objectID": "problems/bank/set-theory/basic-set-practice.html",
@@ -1200,7 +1200,7 @@
     "href": "problems/bank/conditional-probability/darts.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Figure 1\n\n\n\nJerry Lewis is throwing darts at the board pictured in Figure 1. It has the following properties:\n\nThe board has radius \\(r\\);\nThe board is partitioned into five rings, each with the same “thickness” \\(r/5\\);\nThe board is mounted on a wall of area \\(A\\).\n\nJerry is not very skilled. His dart is guaranteed to reach the wall, but beyond that, the probability that it lands in any given region is just proportional to that region’s area.\nTask: Derive a general formula for the conditional probability that a dart lands in ring \\(i\\) given that it hits the board and not the wall. Your formula should be a function of \\(i=1,\\,2,\\,3,\\,4,\\,5\\). Check that these probabilities are nonnegative and sum to one."
+    "text": "Figure 1\n\n\n\nJerry Lewis is throwing darts at the board pictured in Figure 1. It has the following properties:\n\nThe board has radius \\(r\\);\nThe board is partitioned into five rings, each with the same “thickness” \\(r/5\\);\nThe board is mounted on a wall of area \\(A\\).\n\nJerry is not very skilled. His dart is guaranteed to reach the wall and stick someplace, but beyond that, the probability that it lands in any given region is just proportional to that region’s area.\nTask: Derive a general formula for the conditional probability that a dart lands in ring \\(i\\) given that it hits the board and not the wall. Your formula should be a function of \\(i=1,\\,2,\\,3,\\,4,\\,5\\). Check that these probabilities are nonnegative and sum to one."
   },
   {
     "objectID": "problems/pset-1.html",

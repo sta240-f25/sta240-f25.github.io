@@ -464,10 +464,46 @@ Download the submission template
 </ul>
 </li>
 <li>At the end, compute the proportion of <code>1</code> you simulated to estimate the probability.</li>
-</ul></section><section id="task-3-you-do-it" class="level1"><h1>Task 3 (you do it)</h1>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">outcomes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">1000</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">rolls</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">6</span>, size <span class="op">=</span> <span class="fl">2</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">rolls</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html">%%</a></span> <span class="fl">2</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="va">outcomes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">outcomes</span>, <span class="fl">1</span><span class="op">)</span></span>
+<span>  <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>    <span class="va">outcomes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">outcomes</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">outcomes</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.511</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="task-3-you-do-it" class="level1"><h1>Task 3 (you do it)</h1>
 <p>Here is a vector containing all of the cards in a standard 52-card deck:</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">deck_of_cards</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"AH"</span>, <span class="st">"2H"</span>, <span class="st">"3H"</span>, <span class="st">"4H"</span>, <span class="st">"5H"</span>, <span class="st">"6H"</span>, <span class="st">"7H"</span>, <span class="st">"8H"</span>, <span class="st">"9H"</span>, <span class="st">"10H"</span>, <span class="st">"JH"</span>, <span class="st">"QH"</span>, <span class="st">"KH"</span>,</span>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">deck_of_cards</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"AH"</span>, <span class="st">"2H"</span>, <span class="st">"3H"</span>, <span class="st">"4H"</span>, <span class="st">"5H"</span>, <span class="st">"6H"</span>, <span class="st">"7H"</span>, <span class="st">"8H"</span>, <span class="st">"9H"</span>, <span class="st">"10H"</span>, <span class="st">"JH"</span>, <span class="st">"QH"</span>, <span class="st">"KH"</span>,</span>
 <span>                   <span class="st">"AD"</span>, <span class="st">"2D"</span>, <span class="st">"3D"</span>, <span class="st">"4D"</span>, <span class="st">"5D"</span>, <span class="st">"6D"</span>, <span class="st">"7D"</span>, <span class="st">"8D"</span>, <span class="st">"9D"</span>, <span class="st">"10D"</span>, <span class="st">"JD"</span>, <span class="st">"QD"</span>, <span class="st">"KD"</span>,</span>
 <span>                   <span class="st">"AC"</span>, <span class="st">"2C"</span>, <span class="st">"3C"</span>, <span class="st">"4C"</span>, <span class="st">"5C"</span>, <span class="st">"6C"</span>, <span class="st">"7C"</span>, <span class="st">"8C"</span>, <span class="st">"9C"</span>, <span class="st">"10C"</span>, <span class="st">"JC"</span>, <span class="st">"QC"</span>, <span class="st">"KC"</span>,</span>
 <span>                   <span class="st">"AS"</span>, <span class="st">"2S"</span>, <span class="st">"3S"</span>, <span class="st">"4S"</span>, <span class="st">"5S"</span>, <span class="st">"6S"</span>, <span class="st">"7S"</span>, <span class="st">"8S"</span>, <span class="st">"9S"</span>, <span class="st">"10S"</span>, <span class="st">"JS"</span>, <span class="st">"QS"</span>, <span class="st">"KS"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -475,7 +511,7 @@ Download the submission template
 <p>The first character is the <em>rank</em> of the card: Ace (<code>A</code>), 2, 3, 4, …, Jack (<code>J</code>), Queen (<code>Q</code>), King (<code>K</code>). The second character is the <em>suit</em> of the card: hearts (<code>H</code>), diamonds (<code>D</code>), clubs (<code>C</code>), spades (<code>S</code>).</p>
 <p>Now, imagine that a five-card hand is randomly dealt to you from a well-shuffled deck. What is the probability that the hand contains <em>at least</em> one ace? Very soon in our course you’ll learn how to do the math and compute the number exactly, but until then, you can approximate it with simulation. <strong>Write a for loop that simulates 5,000 five-card hands, and use the results to approximate the probability that your hand contains at least one ace.</strong></p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -484,9 +520,43 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>There are many correct ways to do this, but you might find the <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/any.html"><code>any</code></a> function helpful.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">outcomes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5000</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">hand</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">deck_of_cards</span>, size <span class="op">=</span> <span class="fl">5</span>, replace <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span><span class="op">(</span><span class="va">hand</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"AH"</span>,<span class="st">"AD"</span>,<span class="st">"AC"</span>,<span class="st">"AS"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="va">outcomes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">outcomes</span>, <span class="fl">1</span><span class="op">)</span></span>
+<span>  <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>    <span class="va">outcomes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">outcomes</span>, <span class="fl">0</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">outcomes</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3328</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
