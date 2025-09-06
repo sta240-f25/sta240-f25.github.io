@@ -69,6 +69,31 @@ Imagine you roll two *fair* dice. What is the probability that the sum of the tw
    - Use `if else` to record a `1` if the sum is even, and a `0` if the sum is odd.  
 - At the end, compute the proportion of `1` you simulated to estimate the probability. 
 
+::: {.callout-warning collapse="true"}
+## Solution
+
+```{r}
+#| label: task-2-dice
+
+set.seed(123)
+
+outcomes <- c()
+
+for (i in 1:1000) {
+  rolls <- sample(1:6, size = 2, replace = TRUE)
+  
+  if (sum(rolls) %% 2 == 0) {
+    outcomes <- c(outcomes, 1)
+  } else {
+    outcomes <- c(outcomes, 0)
+  }
+}
+
+mean(outcomes)
+```
+
+:::
+
 # Task 3 (you do it)
 
 Here is a vector containing all of the cards in a standard 52-card deck:
@@ -89,6 +114,30 @@ Now, imagine that a five-card hand is randomly dealt to you from a well-shuffled
 ## Hint
 
 There are many correct ways to do this, but you might find the [`any`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/any.html) function helpful.
+:::
+
+::: {.callout-warning collapse="true"}
+## Solution
+
+```{r}
+#| label: task-3-cards
+
+set.seed(8675309)
+
+outcomes <- c()
+
+for (i in 1:5000) {
+  hand <- sample(deck_of_cards, size = 5, replace = FALSE)
+  if (any(hand %in% c("AH","AD","AC","AS"))) {
+    outcomes <- c(outcomes, 1)
+  } else {
+    outcomes <- c(outcomes, 0)
+  }
+}
+
+mean(outcomes)
+```
+
 :::
 
 
