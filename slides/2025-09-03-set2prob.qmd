@@ -13,7 +13,7 @@ editor:
 
 | Mug                   | Name        | Role       | Office Hours  |
 |-----------------------|-------------|------------|---------------|
-| ![](images/yh.jpg){.c} | Hu, Yuang   | TA         | TBD           |
+| ![](images/yh.jpg){.c} | Hu, Yuang   | TA         | Mon 7:30 PM - 9:30 PM           |
 | ![](images/al.jpg){.c} | Liu, Aurora | Head TA    | WeTh 4:30 pm - 5:30 pm |
 | ![](images/lm.png){.c} | Ma, Liane   | TA         | Sun 10:00 am - 12:00 pm |
 | ![](images/z.jpg){.c} | Zito, John  | Instructor | Tue 3:00 pm - 6:00 pm |

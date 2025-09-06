@@ -7,7 +7,8 @@ editor:
 +---------------------------+---------------+---------------+--------------------------------+
 | Mug                       | Name          | Role          | Office Hours                   |
 +===========================+===============+===============+================================+
-| ![](images/yh.jpg){.circ} | Hu, Yuang     | TA            | TBD                            |
+| ![](images/yh.jpg){.circ} | Hu, Yuang     | TA            | **Mon 7:30 PM - 9:30 PM**\     |
+|                           |               |               | remote (Zoom link on Canvas)   |
 +---------------------------+---------------+---------------+--------------------------------+
 | ![](images/al.jpg){.circ} | Liu, Aurora   | Head TA       | **Wed 4:30 PM - 5:30 PM**\     |
 |                           |               |               | Old Chem 203B\                 |
@@ -15,7 +16,7 @@ editor:
 |                           |               |               | Perkins LINK 087 (Classroom 3) |
 +---------------------------+---------------+---------------+--------------------------------+
 | ![](images/lm.png){.circ} | Ma, Liane     | TA            | **Sun 10:00 AM - 12:00 PM**\   |
-|                           |               |               | Zoom link on Canvas            |
+|                           |               |               | remote (Zoom link on Canvas)   |
 +---------------------------+---------------+---------------+--------------------------------+
 | ![](images/jz.jpg){.circ} | Zito, John    | Instructor    | **Tue 3:00 PM - 6:00 PM**\     |
 |                           |               |               | *or by appointment*\           |
