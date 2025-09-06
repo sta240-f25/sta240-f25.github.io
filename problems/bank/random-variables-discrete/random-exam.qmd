@@ -1,5 +1,9 @@
 ![](images/morpheus.jpg){fig-align="center" width="50%"}
 
+> I dreamed last night I got on the boat to heaven<br>And by some chance I had brought my dice along
+>
+> [*Guys and Dolls*](https://youtu.be/6-ICTHg4Pw8?si=tNaFiMrkv4I5txKl)
+
 Alas. You settle in for what you think will be a good night's beauty sleep, and you end up having one of those awful dreams where you must take a test you haven't studied for. It's a multiple choice test, each question has five options with only one correct answer, there are fifty questions in total, and each is worth one point. The god Morpheus has kindly seen fit to leave a fair, five-sided die in your dream pocket, and so your dream self decides to do the only thing you can do: use the die to answer each of the exam questions completely at random.
 
 a. Let $X$ be the number of questions you answer correctly. What is the distribution of $X$?
