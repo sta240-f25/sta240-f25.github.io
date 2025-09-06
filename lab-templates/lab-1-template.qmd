@@ -11,6 +11,8 @@ editor:
 
 # Task 1
 
+You can write text here.
+
 ```{r}
 #| label: task-1-coin-flip
 
@@ -21,8 +23,6 @@ editor:
 {{< pagebreak >}}
 
 # Task 2
-
-You can write text here.
 
 ```{r}
 #| label: task-2-dice
