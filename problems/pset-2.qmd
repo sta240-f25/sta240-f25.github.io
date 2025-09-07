@@ -44,11 +44,11 @@ Counting
 
 ## Problem 9
 
-{{< include bank/conditional-probability/independent-complements.qmd >}}
+Conditional probability
 
 ## Problem 10
 
-Conditional probability (Roy Meadow?)
+{{< include bank/conditional-probability/independent-complements.qmd >}}
 
 ## Submission
 
