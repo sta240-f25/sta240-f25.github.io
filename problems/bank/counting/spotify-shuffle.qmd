@@ -51,7 +51,7 @@ When you survey people that don't know any better, they often *feel* like the se
 a. Something easy;
 a. Something harder;
 a. Imagine your playlist of $n$ unique tracks contains $k$ songs by the same artist. What is the probability that a random permutation of the tracks will contain a...STREAK?
-a. [This](https://open.spotify.com/playlist/7ohKbwFo2VB92oSn3JTrPZ?si=eaaf988ec3d24b73) is the playlist I use when I grade exams (something I enjoy doing, btw). It contains $n = 14$ songs. There are 11 artists with one song apiece[^1], and then Chaka Khan has 3 songs, because, why wouldn't she? Shuffle this playlist at least ten times[^2] and compute the proportion of the time the shuffle contained a "Chaka streak" (more than one of her songs in a row). Using the previous part, compare this empirical proportion to the theoretical probability that would prevail if the shuffle was truly random.
+a. [This](https://open.spotify.com/playlist/7ohKbwFo2VB92oSn3JTrPZ?si=eaaf988ec3d24b73) is the playlist I use when I grade exams (something I enjoy doing, btw). It contains $n = 14$ songs. There are 11 artists with one song apiece[^1], and then Chaka Khan has 3 songs, because, why wouldn't she? Shuffle this playlist at least twenty times[^2] and compute the proportion of the time the shuffle contained a "Chaka streak" (more than one of her songs in a row). Using the previous part, compare this empirical proportion to the theoretical probability that would prevail if the shuffle was truly random.
 
 [^1]: Martha Wash is technically heard twice, once in a solo capacity and once as a member of The Weather Girls, but let's please not quibble;
 [^2]: If you don't have a Spotify account, collaborate with a classmate who does and please acknowledge them.
