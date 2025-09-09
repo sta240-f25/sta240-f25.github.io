@@ -3,6 +3,7 @@ project:
   resources:
     - lecture-notes/sta240-notes-00-set-theory.pdf
     - lecture-notes/sta240-notes-01-probability-spaces.pdf
+    - lecture-notes/sta240-notes-02-counting-theory.pdf
 
 website:
   page-navigation: true
