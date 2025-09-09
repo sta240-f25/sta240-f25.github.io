@@ -119,6 +119,10 @@ $$
 - the bid-ask spread of Google stock at 2:37 pm ET next Wednesday.
 :::
 
+. . .
+
+Why are these things random?
+
 ## Sample spaces
 
 The set of possible outcomes of a random phenomenon:
