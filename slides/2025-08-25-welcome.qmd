@@ -139,6 +139,14 @@ ggplot(d, aes(x = bday_prob)) +
 
 ![](images/birthday_prob.png)
 
+## Are all birthday's in fact equally likely? {.small .scrollable}
+
+We will assume this when we do the calculation. But actually...
+
+. . .
+
+![](images/common-brithday.png)
+
 ## Any matches today? {.scrollable}
 
 . . .
