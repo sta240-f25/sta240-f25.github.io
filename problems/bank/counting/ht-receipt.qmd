@@ -5,7 +5,7 @@ A few months ago I went to Harris Teeter to get some junk food, and when I looke
 I thought, "Strange. What are the odds the total would be a whole number?" Well, let's find out!
 
 a. Imagine you randomly purchase two items that each cost less than $10, and assume all prices are equally likely. The prices of the two items are quoted to two decimal places. What is the probability that the two prices add up to a whole number total?
-b. Now let's add a wrinkle. Imagine sales tax is 5%. This is calculated, *rounded up* to the nearest cent, and then added to your bill. What is the probability that the cost of the two items plus the rounded sales tax adds up to a whole number?
+b. Now let's add a wrinkle. Imagine sales tax is 5%. This is calculated, rounded to the nearest cent, and then added to your bill. What is the probability that the cost of the two items plus the rounded sales tax adds up to a whole number?
 
 ::: {.callout-tip collapse="true"}
 ## Hint
