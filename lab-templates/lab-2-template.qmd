@@ -1,0 +1,101 @@
+---
+title: "Lab 2"
+subtitle: Duke STA 240 Fall 2025
+author: replace this text with your name
+format: 
+  pdf:
+    toc: false
+editor: 
+  mode: source
+---
+
+
+# Task 1
+
+- **Scenario**: roll three *fair* dice;
+- **Event**: all three dice show different numbers.
+
+This code simulates 7,500 trials and computes the proportion of the time the event occurs:
+
+```{r}
+set.seed(37367)
+nreps <- 7500
+counter <- 0
+
+for(i in 1:nreps){
+  rolls <- sample(1:6, 3, replace = TRUE)
+  
+  if( length(unique(rolls)) == 3 ){
+    counter <- counter + 1
+  }
+  
+}
+
+counter / nreps # proportion
+```
+
+In order to do the math, we apply $P(A) = \#(A) / \#(S)$ directly. The sample space $S$ is the set of all three-dice rolls. Thought of as three experiments in the sense of the counting principle, the number of ways we could mix-and-match the rolls is $\#(S) = 6 \times 6 \times 6 = 6^3 = 216$. The target event $A$ is the set of all three-dice rolls where all numbers are different (ie sampling without replacement), and so $\#(A) = 6 \times 5 \times 4 = 120$. Putting it into `R` gives:
+
+```{r}
+120 / 216
+```
+
+We conclude then that
+
+$$
+P(A) = \frac{6 \times 5 \times 4}{6^3} = \frac{120}{216} \approx 0.555,
+$$
+
+which agrees with our simulation.
+
+{{< pagebreak >}}
+
+# Task 2
+
+You can write text here.
+
+```{r}
+#| label: task-2-sim
+
+# You can add code here
+```
+
+
+
+```{r}
+#| label: task-2-calc
+
+# You can add code here
+```
+
+You can type math here:
+
+$$
+P(A) = 1 - P(A^c) = 1 - \frac{ \binom{48}{5} }{ \binom{52}{5} } \approx 0.34.
+$$
+
+{{< pagebreak >}}
+
+# Task 3
+
+You can write text here.
+
+```{r}
+#| label: task-3-sim
+
+# You can add code here
+```
+
+
+
+```{r}
+#| label: task-3-calc
+
+# You can add code here
+```
+
+You can type math here:
+
+$$
+P(A) = 1 - P(A^c) = 1 - \frac{ \binom{48}{5} }{ \binom{52}{5} } \approx 0.34.
+$$
