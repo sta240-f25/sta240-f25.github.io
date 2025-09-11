@@ -10,5 +10,5 @@ b. Now let's add a wrinkle. Imagine sales tax is 5%. This is calculated, *rounde
 ::: {.callout-tip collapse="true"}
 ## Hint
 
-The correct answer to part b is 0.010096, but getting there is pretty tricky. Give it a shot!
+The answer to part b is also roughly 0.01, but getting there is tricky. Give it a shot!
 :::
