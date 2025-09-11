@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="replace this text with your name">
 <title>Lab 2 – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
@@ -122,11 +123,8 @@ window.Quarto = {
 };
 </script>
 <meta property="og:title" content="Lab 2 – STA 240 Fall 2025">
-<meta property="og:description" content="Due Thursday September 11 at 11:59 PM">
-<meta property="og:image" content="https://sta240-f25.github.io/labs/images/rooks.png">
+<meta property="og:description" content="Duke STA 240 Fall 2025">
 <meta property="og:site_name" content="STA 240 Fall 2025">
-<meta property="og:image:height" content="1448">
-<meta property="og:image:width" content="1441">
 </head>
 <body class="nav-sidebar docked quarto-light">
 
@@ -390,22 +388,27 @@ window.Quarto = {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#task-0-review" id="toc-task-0-review" class="nav-link active" data-scroll-target="#task-0-review">Task 0 (review)</a></li>
-  <li><a href="#task-1-i-do-it" id="toc-task-1-i-do-it" class="nav-link" data-scroll-target="#task-1-i-do-it">Task 1 (I do it)</a></li>
-  <li><a href="#task-2-we-do-it" id="toc-task-2-we-do-it" class="nav-link" data-scroll-target="#task-2-we-do-it">Task 2 (we do it)</a></li>
-  <li><a href="#task-3-you-do-it" id="toc-task-3-you-do-it" class="nav-link" data-scroll-target="#task-3-you-do-it">Task 3 (you do it)</a></li>
-  </ul></nav>
+<li><a href="#task-1" id="toc-task-1" class="nav-link active" data-scroll-target="#task-1">Task 1</a></li>
+  <li><a href="#task-2" id="toc-task-2" class="nav-link" data-scroll-target="#task-2">Task 2</a></li>
+  <li><a href="#task-3" id="toc-task-3" class="nav-link" data-scroll-target="#task-3">Task 3</a></li>
+  </ul><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lab-2-template.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">Lab 2</h1>
-<p class="subtitle lead">Due Thursday September 11 at 11:59 PM</p>
+<p class="subtitle lead">Duke STA 240 Fall 2025</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>replace this text with your name </p>
+          </div>
+  </div>
     
   
     
@@ -413,74 +416,7 @@ window.Quarto = {
   
 
 
-</header><p>Last week, you used the <code>sample</code> function to simulate random phenomena that had a finite sample space with equally-likely outcomes: coin flips, die rolls, playing cards. Using a loop, you repeated an experiment many many times, calculated the proportion of the time some event happened, and used that proportion as an approximation of the probability<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. In class this week, we learned counting techniques for actually doing the math to compute these probabilities exactly.</p>
-<p>In this lab, you will do both of these things, the math and the simulation, and verify that they agree. The examples today are small potatoes, but these generic skills are important. Being able to whip up computer simulations of random systems is one of the main skills that will empower you to continue self-studying probability and statistics after you leave the classroom. Hardly a day goes by when myself and my colleagues don’t run a simulation of some kind.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Write-up instructions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The template for this assignment is in the Canvas files. You will submit solutions for Tasks 1 - 3 below (Task 0 is just an extra example for you to refer to). A complete solution has three pieces:</p>
-<ul>
-<li>the <code>R</code> code that runs the simulation and approximates the probability;</li>
-<li>the one line of code that uses <code>R</code> as a calculator to compute the exact decimal probability based on your mathematical solution;</li>
-<li>A little <a href="https://sta240-f25.github.io/explainers/latex.html">math formula</a> (between double dollar signs in your .<code>qmd</code>) that summarizes the final answer.</li>
-</ul>
-<p>Tasks 0 and 1 below provide a model for how this looks: simulation, calculation, formula for <span class="math inline">\(P(A)\)</span>.</p>
-</div>
-</div>
-<section id="task-0-review" class="level2"><h2 class="anchored" data-anchor-id="task-0-review">Task 0 (review)</h2>
-<p>Consider this question from <a href="https://sta240-f25.github.io/labs/lab-1.html#task-3-you-do-it">Lab 1</a>:</p>
-<blockquote class="blockquote">
-<p>a five-card hand is randomly dealt to you from a well-shuffled deck. What is the probability that the hand contains <em>at least</em> one ace?</p>
-</blockquote>
-<p>Last week, we didn’t have the tools to do the math, but we could program a computer to approximate:</p>
-<div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">deck_of_cards</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"AH"</span>, <span class="st">"2H"</span>, <span class="st">"3H"</span>, <span class="st">"4H"</span>, <span class="st">"5H"</span>, <span class="st">"6H"</span>, <span class="st">"7H"</span>, <span class="st">"8H"</span>, <span class="st">"9H"</span>, <span class="st">"10H"</span>, <span class="st">"JH"</span>, <span class="st">"QH"</span>, <span class="st">"KH"</span>,</span>
-<span>                   <span class="st">"AD"</span>, <span class="st">"2D"</span>, <span class="st">"3D"</span>, <span class="st">"4D"</span>, <span class="st">"5D"</span>, <span class="st">"6D"</span>, <span class="st">"7D"</span>, <span class="st">"8D"</span>, <span class="st">"9D"</span>, <span class="st">"10D"</span>, <span class="st">"JD"</span>, <span class="st">"QD"</span>, <span class="st">"KD"</span>,</span>
-<span>                   <span class="st">"AC"</span>, <span class="st">"2C"</span>, <span class="st">"3C"</span>, <span class="st">"4C"</span>, <span class="st">"5C"</span>, <span class="st">"6C"</span>, <span class="st">"7C"</span>, <span class="st">"8C"</span>, <span class="st">"9C"</span>, <span class="st">"10C"</span>, <span class="st">"JC"</span>, <span class="st">"QC"</span>, <span class="st">"KC"</span>,</span>
-<span>                   <span class="st">"AS"</span>, <span class="st">"2S"</span>, <span class="st">"3S"</span>, <span class="st">"4S"</span>, <span class="st">"5S"</span>, <span class="st">"6S"</span>, <span class="st">"7S"</span>, <span class="st">"8S"</span>, <span class="st">"9S"</span>, <span class="st">"10S"</span>, <span class="st">"JS"</span>, <span class="st">"QS"</span>, <span class="st">"KS"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">outcomes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10000</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">hand</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">deck_of_cards</span>, size <span class="op">=</span> <span class="fl">5</span>, replace <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span>  <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span><span class="op">(</span><span class="va">hand</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"AH"</span>,<span class="st">"AD"</span>,<span class="st">"AC"</span>,<span class="st">"AS"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="va">outcomes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">outcomes</span>, <span class="fl">1</span><span class="op">)</span></span>
-<span>  <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
-<span>    <span class="va">outcomes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">outcomes</span>, <span class="fl">0</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">outcomes</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.3473</code></pre>
-</div>
-</div>
-<p>Now let’s see how the math goes. The complement of the target event “at least one ace” is “no aces at all.” This is simpler and may be easier to count, so we will apply:</p>
-<p><span class="math display">\[
-P(A)=1-P(A^c)=1-\frac{\#(A^c)}{\#(S)}.
-\]</span></p>
-<p>The sample space <span class="math inline">\(S\)</span> is the set of all five-card hands you could be dealt. We are selecting <span class="math inline">\(k=5\)</span> from <span class="math inline">\(n=52\)</span> without replacement and ignoring order, so <span class="math inline">\(\#(S)=\binom{52}{5}\)</span>. The event <span class="math inline">\(A^c\)</span> is the set of all five-card hands that do not include an ace. There are 48 non-ace cards, and so <span class="math inline">\(\#(A^c)=\binom{48}{5}\)</span>. As such</p>
-<p><span class="math display">\[
-P(A)=1-\frac{\binom{48}{5}}{\binom{52}{5}}\approx 0.34.
-\]</span></p>
-<p>To get the actual number, we can use the <code>choose</code> function in <code>R</code>. Try typing this into the console:</p>
-<div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Special.html">choose</a></span><span class="op">(</span><span class="fl">48</span>, <span class="fl">5</span><span class="op">)</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/Special.html">choose</a></span><span class="op">(</span><span class="fl">52</span>, <span class="fl">5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.341158</code></pre>
-</div>
-</div>
-<p>This is close to the number we approximated via simulation. Phew!</p>
-</section><section id="task-1-i-do-it" class="level2"><h2 class="anchored" data-anchor-id="task-1-i-do-it">Task 1 (I do it)</h2>
+</header><section id="task-1" class="level1"><h1>Task 1</h1>
 <ul>
 <li>
 <strong>Scenario</strong>: roll three <em>fair</em> dice;</li>
@@ -489,19 +425,15 @@ P(A)=1-\frac{\binom{48}{5}}{\binom{52}{5}}\approx 0.34.
 </ul>
 <p>This code simulates 7,500 trials and computes the proportion of the time the event occurs:</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">37367</span><span class="op">)</span></span>
-<span></span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">37367</span><span class="op">)</span></span>
 <span><span class="va">nreps</span> <span class="op">&lt;-</span> <span class="fl">7500</span></span>
 <span><span class="va">counter</span> <span class="op">&lt;-</span> <span class="fl">0</span></span>
 <span></span>
 <span><span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="va">nreps</span><span class="op">)</span><span class="op">{</span></span>
-<span>  </span>
 <span>  <span class="va">rolls</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">6</span>, <span class="fl">3</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span>  </span>
 <span>  <span class="kw">if</span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">rolls</span><span class="op">)</span><span class="op">)</span> <span class="op">==</span> <span class="fl">3</span> <span class="op">)</span><span class="op">{</span></span>
-<span>    </span>
 <span>    <span class="va">counter</span> <span class="op">&lt;-</span> <span class="va">counter</span> <span class="op">+</span> <span class="fl">1</span></span>
-<span>    </span>
 <span>  <span class="op">}</span></span>
 <span>  </span>
 <span><span class="op">}</span></span>
@@ -511,89 +443,47 @@ P(A)=1-\frac{\binom{48}{5}}{\binom{52}{5}}\approx 0.34.
 <pre><code>[1] 0.558</code></pre>
 </div>
 </div>
-<p>In order to do the math, we apply <span class="math inline">\(P(A)=\#(A)/\#(S)\)</span> directly. The sample space <span class="math inline">\(S\)</span> is the set of all three-dice rolls. Thought of as three experiments in the sense of the counting principle, the number of ways we could mix and match the rolls is <span class="math inline">\(\#(S)=6\times6\times6=6^3=216\)</span>. The target event <span class="math inline">\(A\)</span> is the set of all three-dice rolls where all numbers are different (ie sampling without replacement), and so <span class="math inline">\(\#(A)=6\times 5\times 4=120\)</span>. Putting it into <code>R</code> gives:</p>
+<p>In order to do the math, we apply <span class="math inline">\(P(A) = \#(A) / \#(S)\)</span> directly. The sample space <span class="math inline">\(S\)</span> is the set of all three-dice rolls. Thought of as three experiments in the sense of the counting principle, the number of ways we could mix-and-match the rolls is <span class="math inline">\(\#(S) = 6 \times 6 \times 6 = 6^3 = 216\)</span>. The target event <span class="math inline">\(A\)</span> is the set of all three-dice rolls where all numbers are different (ie sampling without replacement), and so <span class="math inline">\(\#(A) = 6 \times 5 \times 4 = 120\)</span>. Putting it into <code>R</code> gives:</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">120</span> <span class="op">/</span> <span class="fl">216</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">120</span> <span class="op">/</span> <span class="fl">216</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.5555556</code></pre>
 </div>
 </div>
 <p>We conclude then that</p>
 <p><span class="math display">\[
-P(A) = \frac{6\times 5\times 4}{6^3} = \frac{120}{216} \approx 0.555,
+P(A) = \frac{6 \times 5 \times 4}{6^3} = \frac{120}{216} \approx 0.555,
 \]</span></p>
 <p>which agrees with our simulation.</p>
-</section><section id="task-2-we-do-it" class="level2"><h2 class="anchored" data-anchor-id="task-2-we-do-it">Task 2 (we do it)</h2>
-<ul>
-<li>
-<strong>Scenario</strong>: 6 balls are randomly drawn from a jar containing 5 red, 4 blue, 3 green;</li>
-<li>
-<strong>Event</strong>: you draw exactly 3 red or exactly 2 green.</li>
-</ul>
-<p>Here is a representation of the contents of the jar that you can sample from:</p>
+<div style="page-break-after: always;"></div>
+</section><section id="task-2" class="level1"><h1>Task 2</h1>
+<p>You can write text here.</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">jar</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"R"</span>, <span class="fl">5</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"B"</span>, <span class="fl">4</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"G"</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">jar</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "R" "R" "R" "R" "R" "B" "B" "B" "B" "G" "G" "G"</code></pre>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># You can add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</section><section id="task-3-you-do-it" class="level2"><h2 class="anchored" data-anchor-id="task-3-you-do-it">Task 3 (you do it)</h2>
-<div id="fig-rooks" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rooks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/rooks.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rooks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: 8 safe rooks
-</figcaption></figure>
-</div>
-<ul>
-<li>
-<strong>Scenario</strong>: you randomly place 8 rooks on <em>distinct</em> squares of a chess board;</li>
-<li>
-<strong>Event</strong>: all 8 rooks are safe from one another.</li>
-</ul>
-<p><a href="#fig-rooks" class="quarto-xref">Figure&nbsp;1</a> displays an example of a safe position. In chess, <a href="https://www.chess.com/terms/chess-rook">rooks</a> are permitted to move up-and-down or side-to-side as far as they want, but not diagonally or anything else.</p>
-<p>This code creates a <em>matrix</em> representing the chess board, from which you can sample the random positions:</p>
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">board</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/outer.html">outer</a></span><span class="op">(</span><span class="va">letters</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span><span class="op">]</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">8</span>, <span class="va">paste0</span><span class="op">)</span></span>
-<span><span class="va">board</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
-[1,] "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8"
-[2,] "b1" "b2" "b3" "b4" "b5" "b6" "b7" "b8"
-[3,] "c1" "c2" "c3" "c4" "c5" "c6" "c7" "c8"
-[4,] "d1" "d2" "d3" "d4" "d5" "d6" "d7" "d8"
-[5,] "e1" "e2" "e3" "e4" "e5" "e6" "e7" "e8"
-[6,] "f1" "f2" "f3" "f4" "f5" "f6" "f7" "f8"
-[7,] "g1" "g2" "g3" "g4" "g5" "g6" "g7" "g8"
-[8,] "h1" "h2" "h3" "h4" "h5" "h6" "h7" "h8"</code></pre>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># You can add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>Here’s an example of 8 random squares chosen for the rooks:</p>
+<p>You can type math here:</p>
+<p><span class="math display">\[
+P(A) = 1 - P(A^c) = 1 - \frac{ \binom{48}{5} }{ \binom{52}{5} } \approx 0.34.
+\]</span></p>
+<div style="page-break-after: always;"></div>
+</section><section id="task-3" class="level1"><h1>Task 3</h1>
+<p>You can write text here.</p>
 <div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">random_position</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "g6" "h4" "h6" "f4" "d1" "c6" "d7" "d6"</code></pre>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># You can add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>So that’s where your 8 rooks live. In order to check whether or not they are safe from one another, you might find it helpful to separate out the row information and the column information of the placement using the <code>substring</code> command:</p>
 <div class="cell">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/substr.html">substring</a></span><span class="op">(</span><span class="va">random_position</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "g" "h" "h" "f" "d" "c" "d" "d"</code></pre>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># You can add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/substr.html">substring</a></span><span class="op">(</span><span class="va">random_position</span>, <span class="fl">2</span>, <span class="fl">2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "6" "4" "6" "4" "1" "6" "7" "6"</code></pre>
-</div>
-</div>
+<p>You can type math here:</p>
+<p><span class="math display">\[
+P(A) = 1 - P(A^c) = 1 - \frac{ \binom{48}{5} }{ \binom{52}{5} } \approx 0.34.
+\]</span></p>
 
 
-</section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-<ol>
-<li id="fn1"><p>The proportion will converge to the true probability by the <em>law of large numbers</em>, which we will study later in the course.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
