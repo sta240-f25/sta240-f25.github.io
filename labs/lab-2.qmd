@@ -5,18 +5,165 @@ editor:
   mode: source
 ---
 
+Last week, you used the `sample` function to simulate random phenomena that had a finite sample space with equally-likely outcomes: coin flips, die rolls, playing cards. Using a loop, you repeated an experiment many many times, calculated the proportion of the time some event happened, and used that proportion as an approximation of the probability[^1]. In class this week, we learned counting techniques for actually doing the math to compute these probabilities exactly.
 
-You will compute the probability of an event by counting. Then, you will code a lil' simulation of the phenomenon and confirm that in a large number of trials, the proportion of the time the event occurs is close to the number you calculated.
+In this lab, you will do both of these things, the math and the simulation, and verify that they agree. The examples today are small potatoes, but these generic skills are important. Being able to whip up computer simulations of random systems is one of the main skills that will empower you to continue self-studying probability and statistics after you leave the classroom. Hardly a day goes by when myself and my colleagues don't run a simulation of some kind.
+
+::: callout-tip
+## Write-up instructions
+
+You will submit solutions for Tasks 1 - 3 below (Task 0 is just an extra example for you to refer to). A complete solution has three pieces:
+
+- the `R` code that runs the simulation and approximates the probability;
+- the one line of code that uses `R` as a calculator to compute the exact decimal probability based on your mathematical solution;
+- A little [math formula](https://sta240-f25.github.io/explainers/latex.html) (between double dollar signs in your .`qmd`) that summarizes the final answer.
+
+Tasks 0 and 1 below provide a model for how this looks: simulation, calculation, formula for $P(A)$.
+:::
+
+## Task 0 (review)
+
+Consider this question from [Lab 1](https://sta240-f25.github.io/labs/lab-1.html#task-3-you-do-it):
+
+> a five-card hand is randomly dealt to you from a well-shuffled deck. What is the probability that the hand contains *at least* one ace?
+
+Last week, we didn't have the tools to do the math, but we could program a computer to approximate:
+
+```{r}
+
+deck_of_cards <- c("AH", "2H", "3H", "4H", "5H", "6H", "7H", "8H", "9H", "10H", "JH", "QH", "KH",
+                   "AD", "2D", "3D", "4D", "5D", "6D", "7D", "8D", "9D", "10D", "JD", "QD", "KD",
+                   "AC", "2C", "3C", "4C", "5C", "6C", "7C", "8C", "9C", "10C", "JC", "QC", "KC",
+                   "AS", "2S", "3S", "4S", "5S", "6S", "7S", "8S", "9S", "10S", "JS", "QS", "KS")
+
+set.seed(123)
+
+outcomes <- c()
+
+for (i in 1:10000) {
+  hand <- sample(deck_of_cards, size = 5, replace = FALSE)
+  if (any(hand %in% c("AH","AD","AC","AS"))) {
+    outcomes <- c(outcomes, 1)
+  } else {
+    outcomes <- c(outcomes, 0)
+  }
+}
+
+mean(outcomes)
+```
 
 
+Now let's see how the math goes. The complement of the target event "at least one ace" is "no aces at all." This is simpler and may be easier to count, so we will apply:
 
-latex
+$$
+P(A)=1-P(A^c)=1-\frac{\#(A^c)}{\#(S)}.
+$$
 
-## Task 0 
+The sample space $S$ is the set of all five-card hands you could be dealt. We are selecting $k=5$ from $n=52$ without replacement and ignoring order, so $\#(S)=\binom{52}{5}$. The event $A^c$ is the set of all five-card hands that do not include an ace. There are 48 non-ace cards, and so $\#(A^c)=\binom{48}{5}$. As such
+
+$$
+P(A)=1-\frac{\binom{48}{5}}{\binom{52}{5}}\approx 0.34.
+$$
+
+To get the actual number, we can use the `choose` function in `R`. Try typing this into the console:
+
+```{r}
+1 - choose(48, 5) / choose(52, 5)
+```
+
+This is close to the number we approximated via simulation. Phew!
 
 ## Task 1 (I do it)
 
+- **Scenario**: roll three *fair* dice;
+- **Event**: all three dice show different numbers.
+
+This code simulates 7,500 trials and computes the proportion of the time the event occurs:
+
+```{r}
+set.seed(37367)
+
+nreps <- 7500
+counter <- 0
+
+for(i in 1:nreps){
+  
+  rolls <- sample(1:6, 3, replace = TRUE)
+  
+  if( length(unique(rolls)) == 3 ){
+    
+    counter <- counter + 1
+    
+  }
+  
+}
+
+counter / nreps # proportion
+```
+
+In order to do the math, we apply $P(A)=\#(A)/\#(S)$ directly. The sample space $S$ is the set of all three-dice rolls. Thought of as three experiments in the sense of the counting principle, the number of ways we could mix and match the rolls is $\#(S)=6\times6\times6=6^3=216$. The target event $A$ is the set of all three-dice rolls where all numbers are different (ie sampling without replacement), and so $\#(A)=6\times 5\times 4=120$. Putting it into `R` gives:
+
+```{r}
+120 / 216
+```
+
+
+We conclude then that
+
+$$
+P(A) = \frac{6\times 5\times 4}{6^3} = \frac{120}{216} \approx 0.555,
+$$
+
+which agrees with our simulation.
+
+
 ## Task 2 (we do it)
+
+- **Scenario**: 6 balls are randomly drawn from a jar containing 5 red, 4 blue, 3 green;
+- **Event**: you draw exactly 3 red or exactly 2 green.
+
+Here is a representation of the contents of the jar that you can sample from:
+
+```{r}
+jar <- c(rep("R", 5), rep("B", 4), rep("G", 3))
+jar
+```
 
 ## Task 3 (you do it)
 
+![8 safe rooks](images/rooks.png){#fig-rooks fig-align="center" width="50%"}
+
+- **Scenario**: you randomly place 8 rooks on *distinct* squares of a chess board;
+- **Event**: all 8 rooks are safe from one another.
+
+
+@fig-rooks displays an example of a safe position. In chess, [rooks](https://www.chess.com/terms/chess-rook) are permitted to move up-and-down or side-to-side as far as they want, but not diagonally or anything else.
+
+This code creates a *matrix* representing the chess board, from which you can sample the random positions:
+
+```{r}
+board <- outer(letters[1:8], 1:8, paste0)
+board
+```
+
+```{r}
+#| echo: false
+set.seed(56789)
+random_position <- sample(board, 8, replace = FALSE)
+```
+
+Here’s an example of 8 random squares chosen for the rooks:
+
+```{r}
+random_position
+```
+
+So that's where your 8 rooks live. In order to check whether or not they are safe from one another, you might find it helpful to separate out the row information and the column information of the placement using the `substring` command:
+
+```{r}
+substring(random_position, 1, 1)
+substring(random_position, 2, 2)
+```
+
+
+[^1]: The proportion will converge to the true probability by the *law of large numbers*, which we will study later in the course.
