@@ -12,7 +12,7 @@ In this lab, you will do both of these things, the math and the simulation, and 
 ::: callout-tip
 ## Write-up instructions
 
-You will submit solutions for Tasks 1 - 3 below (Task 0 is just an extra example for you to refer to). A complete solution has three pieces:
+The template for this assignment is in the Canvas files. You will submit solutions for Tasks 1 - 3 below (Task 0 is just an extra example for you to refer to). A complete solution has three pieces:
 
 - the `R` code that runs the simulation and approximates the probability;
 - the one line of code that uses `R` as a calculator to compute the exact decimal probability based on your mathematical solution;
