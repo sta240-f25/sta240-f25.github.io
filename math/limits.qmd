@@ -40,8 +40,8 @@ Assume $\lim_{x\to c}f(x)$ and $\lim_{x\to c}g(x)$ exist, let $a,\,b\in\mathbb{R
 | sum/difference | $$\lim_{x\to c}[f(x)\pm g(x)]=\lim_{x\to c}f(x)\pm\lim_{x\to c}g(x)$$ |
 | linearity | $$\lim_{x\to c}[a\cdot f(x)\pm b\cdot g(x)]=a\lim_{x\to c}f(x)\pm b\lim_{x\to c}g(x)$$ |
 | product | $$\lim_{x\to c}f(x)g(x)=\left[\lim_{x\to c}f(x)\right]\left[\lim_{x\to c}g(x)\right]$$ |
-| quotient | $$\lim_{x\to c}\frac{f(x)}{g(x)}=\frac{\lim_{x\to c} f(x)}{\lim_{x\to c} g(x)},\quad \text{if }\lim_{x\to c} g(x)\neq0.$$ |
-| power | $$\lim_{x\to c}f(x)^r=\left[\lim_{x\to c}f(x)\right]^r$$ |
+| quotient | $$\lim_{x\to c}\frac{f(x)}{g(x)}=\frac{\lim_{x\to c} f(x)}{\lim_{x\to c} g(x)},\quad \text{if }\lim_{x\to c} g(x)\neq0$$ |
+| power | $$\lim_{x\to c}f(x)^r=\left[\lim_{x\to c}f(x)\right]^r,\quad \text{if }c>0,\, \lim_{x\to c} f(x)\geq0$$ |
 
 ## Indeterminate forms and L'Hôpital's rule
 
