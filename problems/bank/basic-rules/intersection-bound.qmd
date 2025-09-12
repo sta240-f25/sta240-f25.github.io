@@ -1,0 +1,5 @@
+Let $A,\,B\subseteq S$ be any pair of events in a sample space $S$, and show that 
+
+$$
+\max\{0,\,P(A)+P(B)-1\}\leq P(A\cap B)\leq\min\{P(A),\,P(B)\}.
+$$
