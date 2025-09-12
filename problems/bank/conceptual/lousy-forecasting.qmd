@@ -1,13 +1,18 @@
 Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:
 
 -   Zohran Mamdani wins the New York City mayoral election;
--   *Wicked: For Good* makes more money (inflation adjusted) on its opening weekend than *Wicked: Part I*;
+-   *Wicked: For Good* makes more money at the box office (inflation adjusted) on its opening weekend than *Wicked: Part I*;
 -   The Philadelphia Phillies make it to the 2025 World Series;
 -   Sean Combs is sentenced to prison for more than 3 years;
--   More Duke undergraduates participate in this year's [Marriage Pact](https://dukechronicle.com/article/duke-university-duke-fluke-marriage-pacts-match-students-surveys-romantic-platonic-matches-student-experiences-behind-the-scenes-questions-personalities-campus-tradition-20250124) than last year's;
--   (something about Duke settling with the Trump admin?)
--   (something about Epstein?)
--   (something about Duke football?)
--   (something silly and youth-y, ask Liane)
+-   A greater percentage of Duke undergraduates participate in this year's Duke Marriage Pact than last year's. [About 43% participated last year](https://dukechronicle.com/article/duke-university-duke-fluke-marriage-pacts-match-students-surveys-romantic-platonic-matches-student-experiences-behind-the-scenes-questions-personalities-campus-tradition-20250124);
+-   The total number of points scored at the Countdown to Craziness exhibition game is greater than 50;
+-   Before the end of the year, the Federal Reserve announces that Lisa Cook is no longer a member of the Board of Governors;
+-   The United States federal government is shut down due to a lapse in appropriations by October 1, 2025.
 
-Choose one of these, state the probability that you assign to the event happening, and explain in a few paragraphs how you formulated your belief. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed.
+Choose **three** of these, state the probabilities that you assign to the events happening, and explain in a few paragraphs how you formulated your beliefs. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed.
+
+::: callout-tip
+## Avoid wishful thinking
+
+For some of these, you may have strong preferences about the outcome. Try to set them aside and report your honest assessment of the likelihood of the event, whether it pleases you or not.
+:::
