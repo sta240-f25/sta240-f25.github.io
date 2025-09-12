@@ -1,0 +1,4 @@
+Suppose NC license plates are issued at random, each having three letters followed by 4 digits. The current distribution of plates includes all those on which the first letter is either H or J.
+
+a. What is the probability that you will get JET-5375? What about HAT-8007?
+b. What is the probability that you get a plate where the three letters are the same and the four digits are the same?

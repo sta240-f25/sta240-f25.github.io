@@ -1,0 +1,9 @@
+A box contains 20 balls, 5 each of colors cyan, magenta, yellow and black. Answer the following for an experiment where 10 balls are selected at random without replacement from the box. What is the probability that:
+
+a. More than two colors are missing from the selection?
+a. Magenta and yellow are missing from the selection?
+a. Exactly two colors are missing from the selection?
+a. Only the color cyan is missing from the selection?
+a. Exactly one color is missing from the selection?
+a. At least one color will be missing from the selection?
+a. No colors are missing from the selection?
