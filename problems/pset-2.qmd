@@ -24,7 +24,7 @@ editor:
 
 ## Problem 4
 
-Counting: unordered
+{{< include bank/counting/exactly-two-suits.qmd >}}
 
 ## Problem 5
 

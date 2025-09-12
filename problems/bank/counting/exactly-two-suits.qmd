@@ -1,0 +1,2 @@
+A five-card hand is randomly dealt to you from a well-shuffled deck of 52 standard playing cards. What is the probability that your hand contains exactly two suits?
+
