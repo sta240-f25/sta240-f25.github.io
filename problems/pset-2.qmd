@@ -16,19 +16,19 @@ editor:
 
 ## Problem 2
 
-{{< include bank/basic-rules/union-bound.qmd >}}
+{{< include bank/basic-rules/intersection-bound.qmd >}}
 
 ## Problem 3
 
-Another proof
+{{< include bank/basic-rules/union-bound.qmd >}}
 
 ## Problem 4
 
-Counting
+Counting: unordered
 
 ## Problem 5
 
-Counting
+Counting: ordered
 
 ## Problem 6
 
@@ -36,7 +36,7 @@ Counting
 
 ## Problem 7
 
-Counting
+Counting: something with a simulation
 
 ## Problem 8
 
@@ -44,7 +44,7 @@ Counting
 
 ## Problem 9
 
-Conditional probability
+Conditional probability: simple and numerical.
 
 ## Problem 10
 
