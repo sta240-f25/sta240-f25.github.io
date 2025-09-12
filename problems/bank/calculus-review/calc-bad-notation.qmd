@@ -3,3 +3,5 @@ Explain why this is horrific notation:
 $$
     \int_0^x f(x)\,\textrm{d} x.
 $$
+
+How should it be fixed?
