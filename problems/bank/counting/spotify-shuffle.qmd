@@ -46,12 +46,8 @@ plot(pts, pch = 19, cex = 0.5, xlab = "", ylab = "", ylim = c(0, 1), xlim = c(0,
 
 When you survey people that don't know any better, they often *feel* like the second picture is "more random" than the first because it lacks clumps, but this is a misunderstanding. A truly random playlist shuffle will often have clumps: clumps of artists, clumps of genres, etc. So when people *say* that they want "random," what they really mean is just "variety" in some vague sense, and this is what Spotify shuffle tries to deliver. I could not find a good source for what Spotify shuffle currently does, but whatever it is, I personally dislike it.
 
-
-
-a. Something easy;
-a. Something harder;
-a. Imagine your playlist of $n$ unique tracks contains $k$ songs by the same artist. What is the probability that a random permutation of the tracks will contain a...STREAK?
-a. [This](https://open.spotify.com/playlist/7ohKbwFo2VB92oSn3JTrPZ?si=eaaf988ec3d24b73) is the playlist I use when I grade exams (something I enjoy doing, btw). It contains $n = 14$ songs. There are 11 artists with one song apiece[^1], and then Chaka Khan has 3 songs, because, why wouldn't she? Shuffle this playlist at least twenty times[^2] and compute the proportion of the time the shuffle contained a "Chaka streak" (more than one of her songs in a row). Using the previous part, compare this empirical proportion to the theoretical probability that would prevail if the shuffle was truly random.
+a. Imagine your playlist of $n$ unique tracks contains $k$ songs by the same artist. What is the probability that a random permutation of the tracks will contain a streak of songs by that artist? A streak is two or more of their songs in a row;
+a. [This](https://open.spotify.com/playlist/7ohKbwFo2VB92oSn3JTrPZ?si=eaaf988ec3d24b73) is the playlist I use when I grade exams (something I enjoy doing, btw). It contains $n = 14$ songs. There are 11 artists with one song apiece[^1], and then Chaka Khan has 3 songs, because, why wouldn't she? Shuffle this playlist at least twenty times[^2] and compute the proportion of the time the shuffle contained a "Chaka streak." Using the previous part, compare this empirical proportion to the theoretical probability that would prevail if the shuffle was truly random.
 
 [^1]: Martha Wash is technically heard twice, once in a solo capacity and once as a member of The Weather Girls, but let's please not quibble;
 [^2]: If you don't have a Spotify account, collaborate with a classmate who does and please acknowledge them.
