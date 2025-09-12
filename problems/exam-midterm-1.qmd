@@ -34,11 +34,9 @@ Do not skimp on the cheat sheet! Students in past semesters have neglected their
 
 ## Problem X
 
-{{< include bank/basic-rules/basic-inequality.qmd >}}
+{{< include bank/basic-rules/set-minus.qmd >}}
 
 ## Problem X
-
-{{< include bank/basic-rules/set-minus.qmd >}}
 
 # Counting
 
