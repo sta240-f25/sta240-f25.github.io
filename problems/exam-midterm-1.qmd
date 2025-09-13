@@ -46,17 +46,13 @@ Something where it's like, check that the axioms are satisfied.
 
 ## Problem X
 
-The long list of stuff card stuff from Simon that I put on PSET 2 last semester
+The long list of card stuff from Simon that I put on PSET 2 last semester
 
 ## Problem X
 
 {{< include bank/counting/poker-dice.qmd >}}
 
 # Conditional probability 
-
-## Problem X
-
-{{< include bank/conditional-probability/target-practice.qmd >}}
 
 # Discrete random variables
 
