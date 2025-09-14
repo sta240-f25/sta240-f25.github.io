@@ -1,0 +1,113 @@
+---
+title: "Lab 3"
+subtitle: Duke STA 240 Fall 2025
+author: replace this text with your name
+format: 
+  pdf:
+    toc: false
+editor: 
+  mode: source
+---
+
+In what follows, you may find some notation useful. Let $D$ denote your true disease status, and $T$ denote the result of your test. Then
+
+$$
+\begin{aligned}
+    p       &= P(D=+)        \\
+    f_-     &= P(T=-| D=+)   \\
+    f_+     &= P(T=+| D=-)   \\
+    1 - f_- &= P(T=+| D = +) \\
+    1 - f_+ &= P(T=-| D = -).
+\end{aligned}
+$$
+
+
+{{< pagebreak >}}
+
+# Task 1
+
+You can write text here.
+
+```{r}
+#| label: task-1
+
+# You can add code here
+```
+
+You can type math here:
+
+$$
+P(A|B)=\frac{P(B|A)P(A)}{P(B)}.
+$$
+
+{{< pagebreak >}}
+
+# Task 2
+
+You can write text here.
+
+```{r}
+#| label: task-2
+
+# You can add code here
+```
+
+You can type math here:
+
+$$
+P(A|B)=\frac{P(B|A)P(A)}{P(B)}.
+$$
+
+{{< pagebreak >}}
+
+# Task 3
+
+You can write text here.
+
+```{r}
+#| label: task-3
+
+# You can add code here
+```
+
+You can type math here:
+
+$$
+P(A|B)=\frac{P(B|A)P(A)}{P(B)}.
+$$
+
+{{< pagebreak >}}
+
+# Task 4
+
+You can write text here.
+
+```{r}
+#| label: task-4
+
+# You can add code here
+```
+
+You can type math here:
+
+$$
+P(A|B)=\frac{P(B|A)P(A)}{P(B)}.
+$$
+
+{{< pagebreak >}}
+
+# Task 5
+
+You can write text here.
+
+```{r}
+#| label: task-5
+
+# You can add code here
+```
+
+You can type math here:
+
+$$
+P(A|B)=\frac{P(B|A)P(A)}{P(B)}.
+$$
