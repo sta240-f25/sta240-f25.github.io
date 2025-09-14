@@ -1,7 +1,7 @@
 ---
 title: "Lab 3"
 subtitle: Due Thursday September 18 at 11:59 PM
-draft: true
+draft: false
 editor: 
   mode: source
 ---
@@ -26,53 +26,36 @@ $$
 \end{align*}
 $$
 
-## Problem 1
+## Task 1
 
-Before you read anything else, try to solve the puzzler yourself. What do you come up with?
+Before you read anything else below, try to solve the puzzler yourself. What do you come up with?
 
-## Problem 2
+## Task 2
 
 Explain the correct way to solve this problem. Exactly what probability are we asked to compute, and what formula should we apply to do it? Does the prompt actually provide enough information to ultimately get the job done?
 
-## Problem 3
+## Task 3
 
-This is the solution that the hosts ultimately revealed (original audio at around 20:30 [here](https://www.npr.org/2015/07/11/422108689/-1528-forget-the-car-find-a-convent)):
+Beneath the fold is the solution that the hosts ultimately revealed.
+
+::: {.callout-warning collapse="true"}
+## The show's solution
+
+Original audio at around 20:30 [here](https://www.npr.org/2015/07/11/422108689/-1528-forget-the-car-find-a-convent):
 
 > Let's say 1000 people take the test. Fifty people will test positive and yet they will not have it. One will test positive and have it. So your chances of actually having it, even though you tested positive, are one in 51, or a little less than 2%.
 
+:::
+
 So, what do you think? Did they get it right? Explain how the show interpreted the information given in the Puzzler, and explain what arithmetic formula they implicitly applied in order to compute their answer.
 
-## Problem 4
+## Task 4
 
 Explain two things:
 
-a.  Under what conditions is the formula that the show used actually an upper bound on the correct answer?
-b.  Why might an upper bound on the true probability still be a useful thing to calculate?
+a.  Under what conditions is the formula that the show used actually an *upper bound* on the correct answer?
+b.  Even though their number is not exactly correct, why might an upper bound on the true probability still be a useful thing to calculate?
 
-## Problem 5
+## Task 5
 
-So, the show's answer, while wrong, could still be potentially useful upper bound on the true probability. Neat! But how wrong is it, even? To get a sense of this, [use `R`](https://sta240-f25.github.io/explainers/lineplot.html) to create some line plots of the prevalence $p\in[0,\, 1]$ against the true and approximate probabilities for different values of $f_-$ and $f_+$. Mix-and-match $f_-,\, f_+\in\{0.1,\, 0.2\}$.
-
-## Problem 6
-
-Now let's try to be more precise about the "wrongness" of the show's answer. Let $B$ denote the true probability, and $\overline{B}$ denote the show's approximation. In part (c) you showed that $B\leq \overline{B}$ under certain conditions. Now define
-
-$$
-\delta = \frac{\overline{B}-B}{B}.
-$$
-
-This is the relative error of the show's answer. Prove that
-
-$$
-|\delta|
-\leq 
-\max 
-\left\{
-\frac{f_-}{1-f_-} 
-,\, 
-\frac{f_+}{1+f_+}
-\right\}
-,\quad \forall p\in[0,\, 1].
-$$
-
-Interpret this result.
+So, the show's answer, while wrong, could still be potentially useful upper bound on the true probability. Neat! But how wrong is it, even? To get a sense of this, [use `R`](https://sta240-f25.github.io/explainers/lineplot.html) to create some line plots with the prevalence $p\in[0,\, 1]$ on the horizontal axis and the true and approximate probabilities for different values of $f_-$ and $f_+$ on the vertical axis. Mix-and-match $f_-,\, f_+\in\{0.1,\, 0.2\}$, and observe how near or far these curves are from one another.
