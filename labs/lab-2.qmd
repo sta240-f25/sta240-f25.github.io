@@ -155,7 +155,7 @@ count_event / nsim
 ```
 
 - $A$ = exactly 3 red, $B$ = exactly 2 green
-- Both could happen so $A\cup B$ is non-empty;
+- Both could happen so $A\cap B$ is non-empty;
 - $\#(S)=\binom{12}{6}$;
 - $\#(A) = \binom{5}{3}\binom{7}{3}$;
 - $\#(B) = \binom{3}{2}\binom{9}{4}$;
