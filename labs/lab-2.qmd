@@ -129,6 +129,56 @@ jar <- c(rep("R", 5), rep("B", 4), rep("G", 3))
 jar
 ```
 
+::: {.callout-warning collapse="true"}
+## Solution
+
+```{r}
+#| label: task-2
+
+set.seed(2025)
+nsim <- 20000
+count_event <- 0
+
+jar <- c(rep("R", 5), rep("B", 4), rep("G", 3))
+
+for (i in 1:nsim) {
+  hand <- sample(jar, 6, replace = FALSE)
+  n_red <- sum(hand == "R")
+  n_green <- sum(hand == "G")
+  
+  if (n_red == 3 | n_green == 2) {
+    count_event <- count_event + 1
+  }
+}
+
+count_event / nsim
+```
+
+- $A$ = exactly 3 red, $B$ = exactly 2 green
+- Both could happen so $A\cup B$ is non-empty;
+- $\#(S)=\binom{12}{6}$;
+- $\#(A) = \binom{5}{3}\binom{7}{3}$;
+- $\#(B) = \binom{3}{2}\binom{9}{4}$;
+- $\#(A\cap B)=\binom{5}{3}\binom{3}{2}4$;
+- So
+
+$$
+P(A\cup B)=P(A)+P(B)-P(A\cap B)=\frac{\binom{5}{3}\binom{7}{3}}{\binom{12}{6}}+\frac{\binom{3}{2}\binom{9}{4}}{\binom{12}{6}}-\frac{\binom{5}{3}\binom{3}{2}4}{\binom{12}{6}}.
+$$
+
+Calculate:
+
+```{r}
+PA <- choose(5, 3) * choose(7, 3) / choose(12, 6)
+PB <- choose(3, 2) * choose(9, 4) / choose(12, 6)
+PAB <- choose(5, 3) * choose(3, 2) * 4 / choose(12, 6)
+
+PA + PB - PAB
+```
+
+:::
+
+
 ## Task 3 (you do it)
 
 ![8 safe rooks](images/rooks.png){#fig-rooks fig-align="center" width="50%"}
@@ -164,6 +214,55 @@ So that's where your 8 rooks live. In order to check whether or not they are saf
 substring(random_position, 1, 1)
 substring(random_position, 2, 2)
 ```
+
+
+::: {.callout-warning collapse="true"}
+## Solution
+
+```{r}
+#| label: task-3-rooks
+
+board <- outer(letters[1:8], 1:8, paste0)
+
+set.seed(2025)
+nsim <- 100000
+count_safe <- 0
+
+for (i in 1:nsim) {
+  rooks <- sample(board, 8)
+  
+  # split into rows (numbers) and cols (letters)
+  r <- substring(rooks, 2, 2) # row = the number part
+  c <- substring(rooks, 1, 1) # col = the letter part
+  
+  # safe if all 8 rows are different AND all 8 cols are different
+  if (length(unique(r)) == 8 & length(unique(c)) == 8) {
+    count_safe <- count_safe + 1
+  }
+}
+
+count_safe / nsim
+
+```
+
+
+- Recall that rooks can move up and down or side-to-side, but not diagonally. In order to be safe from one another, two rooks therefore need to occupy different rows *and* columns of the board. For the eight rooks to be mutually safe, they all must be in different columns and different rows from one another;
+- There are $n=8\cdot 8=64$ squares on the board, and we are selecting $k=8$ of them at which to place the rooks. The rooks are identical, so **order doesn't matter**, and it's **without replacement** since the squares need to be distinct, and so the total number of possible outcomes is $\#(S)=\binom{64}{8}$;
+- The event $A$ we care about is "the rooks are safe from one another," and this can happen $\#(A)=8!$ ways.
+- We know that a safe placement will have every row and column occupied by exactly one rook, so let us imagine building up a safe placement row-wise, starting from the bottom and working upward. There are 8 ways to place a single rook on the bottom row. No other rooks can go there, so we move to the next row. There are only 7 ways to place the next rook in the next row, because we must avoid the column occupied by the first rook. Similarly, there are only 6 ways to place the next rook in the next row, because we must avoid the two columns occupied by the first two rooks. And so on. As a consequence of the counting principle, where we regard each row as an experiment, we see that $\#(A)=8\times7\times6\times\cdots\times2\times1=8!$. 
+- So 
+
+$$
+P(A)=\frac{\#(A)}{\#(S)}=\frac{8!}{\binom{64}{8}}\approx0.0000091095.
+$$.
+
+
+```{r}
+factorial(8) / choose(64, 8)
+```
+
+:::
+
 
 
 [^1]: The proportion will converge to the true probability by the *law of large numbers*, which we will study later in the course.
