@@ -106,7 +106,9 @@ website:
             text: Lab 1
           - href: labs/lab-2.qmd
             text: Lab 2
-      - section: "Exam Review"
+          - href: labs/lab-3.qmd
+            text: Lab 3
+      - section: "Exam Study Guides"
             
   page-footer:
     right: 'This page is built with [Quarto](https://quarto.org/).'
