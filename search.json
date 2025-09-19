@@ -1706,6 +1706,149 @@
     ]
   },
   {
+    "objectID": "problems/pset-3.html",
+    "href": "problems/pset-3.html",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "Recommend some music for us to listen to while we grade this.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 3"
+    ]
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-0",
+    "href": "problems/pset-3.html#problem-0",
+    "title": "Problem Set 3",
+    "section": "",
+    "text": "Recommend some music for us to listen to while we grade this.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 3"
+    ]
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-1",
+    "href": "problems/pset-3.html#problem-1",
+    "title": "Problem Set 3",
+    "section": "Problem 1",
+    "text": "Problem 1\nHere are some short readings about the case of Sally Clark and Roy Meadow, as well as something called the prosecutor’s fallacy:\n\nGrimes (2023): “Bad Science and Bad Statistics in the Courtroom Convict Innocent People,” Scientific American;\nCarriquiry (2018): “Misuse of statistics in the courtroom: the Sally Clark case,” CSAFE;\nWestreich & Iliinsky (2014): “Epidemiology visualized: the prosecutor’s fallacy,” American Journal of Epidemiology;\n\nAP Dawid’s statement during the Clark appeal.\n\nPlease do the following:\n\nRead the articles;\nUsing the ideas of conditional probability and independence that we have studied, write a paragraph or two describing what the prosecutor’s fallacy is and how it applies to the Clark case;\nIf you were an attorney for the defense and had the chance to cross-examine Roy Meadow, what would you ask him about his statistical testimony? What are the most incisive questions you could ask? How would you ensure that the cross-examination would “land” with the members of the jury, who most likely know absolutely nothing about probability and statistics?\n\n\n\n\n\n\n\nPlease don’t break my heart\n\n\n\nI’m not asking you to read Moby-Dick here.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 3"
+    ]
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-2",
+    "href": "problems/pset-3.html#problem-2",
+    "title": "Problem Set 3",
+    "section": "Problem 2",
+    "text": "Problem 2\nPoker dice is played by simultaneously rolling five dice. The dice are fair, six-sided, and distinct (imagine that each one is a different color). Find the probabilities of the following dice rolls:\n\nfive different numbers;\nthree of a kind (three dice show the same number, while the other two dice are singles);\nfull house (three dice show the same number, while the other two show a separate pair).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 3"
+    ]
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-3",
+    "href": "problems/pset-3.html#problem-3",
+    "title": "Problem Set 3",
+    "section": "Problem 3",
+    "text": "Problem 3\nConsider selecting \\(k\\) from \\(n\\) with replacement but ignoring order.\n\nLet’s take the specific case of \\(k=2\\) and \\(n=4\\). List out all possible ways you can select \\(k=2\\) items from \\(\\{1, 2, 3, 4\\}\\) in such a scenario.\nLet \\(x_i\\) be the number of times that element \\(\\{i\\}\\) is selected, for each \\(i = 1,\\,2,\\,3,\\, 4\\). For each combination identified in (a), show that it satisfies the following equation:\n\n\\[x_1 + x_2 + x_3 + x_4 = 2, \\quad x_1, x_2, x_3, x_4 \\in \\{0, 1, 2\\}.\\]\n\nState an analogous equation to part b for general \\(n\\) and \\(k\\). Use this to show that the number of ways you can select \\(k\\) from \\(n\\) without replacement and ignoring order is\n\n\\[\n\\binom{n+k-1}{k}=\\frac{(n+k-1)!}{k!(n-1)!}.\n\\]",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 3"
+    ]
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-4",
+    "href": "problems/pset-3.html#problem-4",
+    "title": "Problem Set 3",
+    "section": "Problem 4",
+    "text": "Problem 4\nLet \\(S\\) be a sample space with probability measure \\(P\\), and let \\(B\\subseteq S\\) be some event with \\(P(B)&gt;0\\). Show that the function \\(G(A)=P(A\\,|\\, B)\\) is a new probability measure on \\(S\\). That is, show that \\(G\\) satisfies the axioms:\n\ntotal measure 1;\nnonnegativity;\ncountable additivity.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 3"
+    ]
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-5",
+    "href": "problems/pset-3.html#problem-5",
+    "title": "Problem Set 3",
+    "section": "Problem 5",
+    "text": "Problem 5\nWe studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\).\nTable 1 enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients’ “true” disease status was determined by a PCR test that we assume is hella accurate.\n\n\n\nTable 1: Some COVID-19 numbers. Source: CDC\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n-\n-\n-\n0.7650\n\n\n-\n-\n+\n0.0128\n\n\n-\n+\n-\n0.1685\n\n\n-\n+\n+\n0.0018\n\n\n+\n-\n-\n0.0091\n\n\n+\n-\n+\n0.0064\n\n\n+\n+\n-\n0.0073\n\n\n+\n+\n+\n0.0291\n\n\n\n\n\n\n\n\nWhat is the overall disease prevalence?\nWhat is the sensitivity of the test?\nWhat is the specificity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?\nWhat is the overall probability that the test is wrong?",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 3"
+    ]
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-6",
+    "href": "problems/pset-3.html#problem-6",
+    "title": "Problem Set 3",
+    "section": "Problem 6",
+    "text": "Problem 6\n\n\n\n\n\nFigure 1\n\n\nJerry Lewis is throwing darts at the board pictured in Figure 1. It has the following properties:\n\nThe board has radius \\(r\\);\nThe board is partitioned into five rings, each with the same “thickness” \\(r/5\\);\nThe board is mounted on a wall of area \\(A\\).\n\nJerry is not very skilled. His dart is guaranteed to reach the wall and stick someplace, but beyond that, the probability that it lands in any given region is just proportional to that region’s area.\nTask: Derive a general formula for the conditional probability that a dart lands in ring \\(i\\) given that it hits the board and not the wall. Your formula should be a function of \\(i=1,\\,2,\\,3,\\,4,\\,5\\). Check that these probabilities are nonnegative and sum to one.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 3"
+    ]
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-7",
+    "href": "problems/pset-3.html#problem-7",
+    "title": "Problem Set 3",
+    "section": "Problem 7",
+    "text": "Problem 7\nAn encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 3"
+    ]
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-8",
+    "href": "problems/pset-3.html#problem-8",
+    "title": "Problem Set 3",
+    "section": "Problem 8",
+    "text": "Problem 8\n\n\n\n\nThe figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 3"
+    ]
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-9",
+    "href": "problems/pset-3.html#problem-9",
+    "title": "Problem Set 3",
+    "section": "Problem 9",
+    "text": "Problem 9\nTwo balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 3"
+    ]
+  },
+  {
+    "objectID": "problems/pset-3.html#problem-10",
+    "href": "problems/pset-3.html#problem-10",
+    "title": "Problem Set 3",
+    "section": "Problem 10",
+    "text": "Problem 10\n\n\n\n\n\nI dreamed last night I got on the boat to heavenAnd by some chance I had brought my dice along\nGuys and Dolls\n\nAlas. You settle in for what you think will be a good night’s beauty sleep, and you end up having one of those awful dreams where you must take a test you haven’t studied for. It’s a multiple choice test, each question has five options with only one correct answer, there are fifty questions in total, and each is worth one point. The god Morpheus has kindly seen fit to leave a fair, five-sided die in your dream pocket, and so your dream self decides to do the only thing you can do: use the die to answer each of the exam questions completely at random.\n\nLet \\(X\\) be the number of questions you answer correctly. What is the distribution of \\(X\\)?\nPlot the probability mass function of \\(X\\);\nWhat is the expected number of questions you will answer correctly?\nWhat is the probability that you get at least a C- on the exam?",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 3"
+    ]
+  },
+  {
+    "objectID": "problems/pset-3.html#submission",
+    "href": "problems/pset-3.html#submission",
+    "title": "Problem Set 3",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.\nDo not forget to include the following:\n\nFor each problem, please acknowledge your collaborators;\nIf a problem required you to code something, please include both the code and the output. “Including the code” can be as crude as a screenshot, but you might also use Quarto to get a nice lil’ pdf that you can merge with the rest of your submission.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 3"
+    ]
+  },
+  {
     "objectID": "math/series.html",
     "href": "math/series.html",
     "title": "Infinite series",
