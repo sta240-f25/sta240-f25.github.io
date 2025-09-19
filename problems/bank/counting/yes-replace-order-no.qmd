@@ -1,0 +1,12 @@
+Consider selecting $k$ from $n$ with replacement but ignoring order.
+
+a. Let's take the specific case of $k=2$ and $n=4$. List out all possible ways you can select $k=2$ items from $\{1, 2, 3, 4\}$ in such a scenario.
+b. Let $x_i$ be the number of times that element $\{i\}$ is selected, for each $i = 1,\,2,\,3,\, 4$. For each combination identified in (a), show that it satisfies the following equation:
+
+$$x_1 + x_2 + x_3 + x_4 = 2, \quad x_1, x_2, x_3, x_4 \in \{0, 1, 2\}.$$
+
+c. State an analogous equation to part b for general $n$ and $k$. Use this to show that the number of ways you can select $k$ from $n$ without replacement and ignoring order is
+
+$$
+\binom{n+k-1}{k}=\frac{(n+k-1)!}{k!(n-1)!}.
+$$

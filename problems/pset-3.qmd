@@ -12,15 +12,15 @@ editor:
 
 ## Problem 1
 
-Something conceptual
+{{< include bank/conceptual/sally-clark.qmd >}}
 
 ## Problem 2
 
-Counting
+{{< include bank/counting/poker-dice.qmd >}}
 
 ## Problem 3
 
-Counting
+{{< include bank/counting/yes-replace-order-no.qmd >}}
 
 ## Problem 4
 
@@ -28,11 +28,11 @@ Counting
 
 ## Problem 5
 
-{{< include bank/conditional-probability/darts.qmd >}}
+{{< include bank/conditional-probability/testing-symptoms.qmd >}}
 
 ## Problem 6
 
-{{< include bank/conditional-probability/testing-symptoms.qmd >}}
+{{< include bank/conditional-probability/darts.qmd >}}
 
 ## Problem 7
 

@@ -1,6 +1,8 @@
 project:
   type: website
   resources:
+    - readings/dawid-clark-statement.pdf
+    - readings/westreich-iliinsky-2014-aje.pdf
     - lecture-notes/sta240-notes-00-set-theory.pdf
     - lecture-notes/sta240-notes-01-probability-spaces.pdf
     - lecture-notes/sta240-notes-02-counting-theory.pdf
@@ -100,6 +102,8 @@ website:
             text: Problem Set 1
           - href: problems/pset-2.qmd
             text: Problem Set 2
+          - href: problems/pset-3.qmd
+            text: Problem Set 3
       - section: "Labs"
         contents:
           - href: labs/lab-1.qmd

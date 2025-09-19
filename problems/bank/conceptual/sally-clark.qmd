@@ -1,0 +1,18 @@
+Here are some short readings about [the case of Sally Clark and Roy Meadow](https://sta240-f25.github.io/slides/2025-08-25-welcome.html#/sally-clark-1964---2007), as well as something called the *prosecutor's fallacy*:
+
+- Grimes (2023): "[Bad Science and Bad Statistics in the Courtroom Convict Innocent People](https://www.scientificamerican.com/article/bad-science-and-bad-statistics-in-the-courtroom-convict-innocent-people/?utm_source=chatgpt.com)," *Scientific American*;
+- Carriquiry (2018): "[Misuse of statistics in the courtroom: the Sally Clark case](https://forensicstats.org/blog/2018/02/16/misuse-statistics-courtroom-sally-clark-case/?utm_source=chatgpt.com)," CSAFE;
+- Westreich & Iliinsky (2014): "[Epidemiology visualized: the prosecutor's fallacy](https://sta240-f25.github.io/readings/westreich-iliinsky-2014-aje.pdf)," *American Journal of Epidemiology*;
+- [AP Dawid](https://en.wikipedia.org/wiki/Philip_Dawid)'s [statement](https://sta240-f25.github.io/readings/dawid-clark-statement.pdf) during the Clark appeal.
+
+Please do the following:
+
+a. Read the articles;
+b. Using the ideas of conditional probability and independence that we have studied, write a paragraph or two describing what the prosecutor's fallacy is and how it applies to the Clark case;
+c. If you were an attorney for the defense and had the chance to cross-examine Roy Meadow, what would you ask him about his statistical testimony? What are the most incisive questions you could ask? How would you ensure that the cross-examination would "land" with the members of the jury, who most likely know absolutely nothing about probability and statistics?
+
+::: callout-warning
+## Please don't break my heart
+
+I'm not asking you to read *Moby-Dick* here.
+:::
