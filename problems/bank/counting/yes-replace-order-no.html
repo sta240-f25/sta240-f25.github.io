@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Differentiation – STA 240 Fall 2025</title>
+
+
+<title>yes-replace-order-no – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,24 +22,24 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../math/integration.html" rel="next">
-<link href="../math/logexp.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -62,7 +65,12 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -88,30 +96,38 @@ window.Quarto = {
   typesetMath
 };
 </script>
-<meta property="og:title" content="Differentiation – STA 240 Fall 2025">
+
+<meta property="og:title" content="STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
-<meta property="og:image" content="https://sta240-f25.github.io/math/images/tangent.gif">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
+
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Review</a></li><li class="breadcrumb-item"><a href="../math/differentiation.html">Differentiation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../../../index.html" class="sidebar-logo-link">
+      <img src="../../../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
@@ -126,7 +142,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item sidebar-item-section">
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -134,98 +150,98 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching team</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Materials</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignments and grading</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Policies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">University resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Math Review</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/logexp.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/logexp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exponents and logarithms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/differentiation.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../math/differentiation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Differentiation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/integration.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/integration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Integration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/limits.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/limits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limits and continuity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/series.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/series.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Infinite series</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -234,75 +250,75 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/hello-rstudio.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/hello-rstudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The lay of the land</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/latex.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/latex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Typing math</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/math.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/math.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic math</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/vectors.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/vectors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectors</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/sample.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/sample.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><code>sample</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/if-else.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/if-else.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">is-else and logic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">for loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectorization</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -311,27 +327,27 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/pset-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/pset-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/pset-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/pset-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 2</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
@@ -340,215 +356,62 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 3</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">Exam Study Guides</span></span>
   </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
-   
-  <ul>
-<li><a href="#derivative-rules" id="toc-derivative-rules" class="nav-link active" data-scroll-target="#derivative-rules">Derivative rules</a></li>
-  <li><a href="#curvature" id="toc-curvature" class="nav-link" data-scroll-target="#curvature">Curvature</a></li>
-  <li><a href="#optimization" id="toc-optimization" class="nav-link" data-scroll-target="#optimization">Optimization</a></li>
-  </ul></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Review</a></li><li class="breadcrumb-item"><a href="../math/differentiation.html">Differentiation</a></li></ol></nav><div class="quarto-title">
-<h1 class="title">Differentiation</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header><p>The <strong>derivative</strong> of a function <span class="math inline">\(f(x)\)</span> is its instantaneous rate of change. On a graph, this corresponds to the slope of the tangent line. We will denote derivatives by <span class="math inline">\(f'(x)\)</span> or <span class="math inline">\(\text{d}f/\text{d}x\)</span> or something like that.</p>
-<p>When it exists, <strong>which it doesn’t always</strong>, the derivative is defined as the limit of difference quotients:</p>
+<p>Consider selecting <span class="math inline">\(k\)</span> from <span class="math inline">\(n\)</span> with replacement but ignoring order.</p>
+<ol type="a">
+<li>Let’s take the specific case of <span class="math inline">\(k=2\)</span> and <span class="math inline">\(n=4\)</span>. List out all possible ways you can select <span class="math inline">\(k=2\)</span> items from <span class="math inline">\(\{1, 2, 3, 4\}\)</span> in such a scenario.</li>
+<li>Let <span class="math inline">\(x_i\)</span> be the number of times that element <span class="math inline">\(\{i\}\)</span> is selected, for each <span class="math inline">\(i = 1,\,2,\,3,\, 4\)</span>. For each combination identified in (a), show that it satisfies the following equation:</li>
+</ol>
+<p><span class="math display">\[x_1 + x_2 + x_3 + x_4 = 2, \quad x_1, x_2, x_3, x_4 \in \{0, 1, 2\}.\]</span></p>
+<ol start="3" type="a">
+<li>State an analogous equation to part b for general <span class="math inline">\(n\)</span> and <span class="math inline">\(k\)</span>. Use this to show that the number of ways you can select <span class="math inline">\(k\)</span> from <span class="math inline">\(n\)</span> without replacement and ignoring order is</li>
+</ol>
 <p><span class="math display">\[
-f'(x)=\lim_{\Delta x\to0}\frac{f(x+\Delta x)-f(x)}{\Delta x}.
+\binom{n+k-1}{k}=\frac{(n+k-1)!}{k!(n-1)!}.
 \]</span></p>
-<p>So, “rise over run” as the “run” bit gets arbitrarily small.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/tangent.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<p>As such, the derivative is the continuous analog to a discrete difference.</p>
-<section id="derivative-rules" class="level2"><h2 class="anchored" data-anchor-id="derivative-rules">Derivative rules</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 50%">
-<col style="width: 35%">
-</colgroup>
-<thead><tr class="header">
-<th>rule</th>
-<th>function</th>
-<th>derivative</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>constant</td>
-<td><span class="math inline">\(h(x)=c\)</span></td>
-<td><span class="math inline">\(h'(x)=0\)</span></td>
-</tr>
-<tr class="even">
-<td>scaling</td>
-<td><span class="math inline">\(h(x)=c\cdot f(x)\)</span></td>
-<td><span class="math inline">\(h'(x)=c\cdot f'(x)\)</span></td>
-</tr>
-<tr class="odd">
-<td>sum/difference</td>
-<td><span class="math inline">\(h(x)=f(x)\pm g(x)\)</span></td>
-<td><span class="math inline">\(h'(x)=f'(x)\pm g'(x)\)</span></td>
-</tr>
-<tr class="even">
-<td>linearity</td>
-<td><span class="math inline">\(h(x)=a\cdot f(x)\pm b\cdot g(x)\)</span></td>
-<td><span class="math inline">\(h'(x)=a\cdot f'(x)\pm b\cdot g'(x)\)</span></td>
-</tr>
-<tr class="odd">
-<td>power</td>
-<td><span class="math inline">\(h(x)=x^n\)</span></td>
-<td><span class="math inline">\(h'(x)=nx^{n-1}\)</span></td>
-</tr>
-<tr class="even">
-<td>product</td>
-<td><span class="math inline">\(h(x)=f(x)g(x)\)</span></td>
-<td><span class="math inline">\(h'(x)=f'(x)g(x)+f(x)g'(x)\)</span></td>
-</tr>
-<tr class="odd">
-<td>quotient</td>
-<td><span class="math inline">\(h(x)=f(x)/g(x)\)</span></td>
-<td><span class="math inline">\(h'(x)=\frac{f'(x)g(x)+f(x)g'(x)}{g(x)^2}\)</span></td>
-</tr>
-<tr class="even">
-<td>chain</td>
-<td><span class="math inline">\(h(x)=f(g(x))\)</span></td>
-<td><span class="math inline">\(h'(x)=f'(g(x))g'(x)\)</span></td>
-</tr>
-<tr class="odd">
-<td>exponential</td>
-<td><span class="math inline">\(h(x)=e^x\)</span></td>
-<td><span class="math inline">\(h'(x)=e^x\)</span></td>
-</tr>
-<tr class="even">
-<td>natural log</td>
-<td><span class="math inline">\(h(x)=\ln(x)\)</span></td>
-<td><span class="math inline">\(h'(x)=1/x\)</span></td>
-</tr>
-</tbody>
-</table></section><section id="curvature" class="level2"><h2 class="anchored" data-anchor-id="curvature">Curvature</h2>
-<p>If you take the derivative of <span class="math inline">\(f\)</span>, you get the <strong>first derivative</strong> <span class="math inline">\(f'\)</span>. If you take the derivative of the derivative, you get the <strong>second derivative</strong> <span class="math inline">\(f''\)</span>. The derivative of the derivative of the derivative is the <strong>third derivative</strong> <span class="math inline">\(f'''\)</span>, and <a href="https://youtu.be/TW28iWV7nxE?si=EZrdZrENMdE6JvT1">on and on</a>. But let’s focus on the first two. The derivatives contain information about the shape of the original function:</p>
-<ul>
-<li>the first derivative tells you if the function is increasing or decreasing;
-<ul>
-<li>if <span class="math inline">\(f'(x)&gt;0\)</span>, then <span class="math inline">\(f\)</span> is increasing at <span class="math inline">\(x\)</span>;</li>
-<li>if <span class="math inline">\(f'(x)&lt;0\)</span>, then <span class="math inline">\(f\)</span> is decreasing at <span class="math inline">\(x\)</span>;</li>
-<li>if <span class="math inline">\(f'(x)=0\)</span>, then <span class="math inline">\(f\)</span> is not changing at <span class="math inline">\(x\)</span>;</li>
-</ul>
-</li>
-<li>if the second derivative tells you about the <strong>curvature</strong> (aka <strong>concavity</strong>) of the function:
-<ul>
-<li>if <span class="math inline">\(f''(x)&gt;0\)</span>, then <span class="math inline">\(f\)</span> is <strong>concave up</strong> (<span class="math inline">\(\cup\)</span>, smiling) at <span class="math inline">\(x\)</span>;</li>
-<li>if <span class="math inline">\(f''(x)&lt;0\)</span>, then <span class="math inline">\(f\)</span> is <strong>concave down</strong> (<span class="math inline">\(\cap\)</span>, frowning) at <span class="math inline">\(x\)</span>.</li>
-</ul>
-</li>
-</ul>
-<p>Here is an illustration with the function <span class="math inline">\(f(x)=x^3-x\)</span> and its derivatives <span class="math inline">\(f'(x)=3x^2-1\)</span> and <span class="math inline">\(f''(x)=6x\)</span> (power rule!):</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-derivatives" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-derivatives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="differentiation_files/figure-html/fig-derivatives-1.png" id="fig-derivatives" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-derivatives-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption></figure>
-</div>
-</div>
-</div>
-<p>When the first derivative changes sign (at <span class="math inline">\(x^\star=\pm1/\sqrt{3}\)</span>), that corresponds to the original function switching from increasing to decreasing, or vice versa. When the second derivative changes sign (at <span class="math inline">\(x_0=0\)</span>), that corresponds to the original function switching from concave down (frowning) to concave up (smiling). A point like <span class="math inline">\(x=0\)</span> in this example where the concavity changes is called an <strong>inflection point</strong>. If <span class="math inline">\(x_0\)</span> is an inflection point, then that means it’s also a root of the second derivative: <span class="math inline">\(f''(x_0)=0\)</span>. In order for the second derivative to change sign, it has to cross the <span class="math inline">\(x\)</span>-axis.</p>
-<p>However, just because the second derivative is zero doesn’t mean there was inflection. Consider <span class="math inline">\(f(x)=x^4\)</span> and its derivatives <span class="math inline">\(f'(x)=4x^3\)</span> and <span class="math inline">\(f''(x)=12x^2\)</span>:</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-derivatives-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-derivatives-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="differentiation_files/figure-html/fig-derivatives-2-1.png" id="fig-derivatives-2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-derivatives-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2
-</figcaption></figure>
-</div>
-</div>
-</div>
-<p>In this case, we see that while the second derivative has a root at zero, it doesn’t actually cross the <span class="math inline">\(x\)</span>-axis. It’s just swooping down and giving it a gentle lil’ smooch from above. Correspondingly, we see that the original function never changes concavity. Therefore, we say that <span class="math inline">\(f''=0\)</span> is a <strong>necessary but not sufficient</strong> condition for the original <span class="math inline">\(f\)</span> to change concavity. To verify, you must actually check that the second derivative has different sign before and after the root. Bummer!</p>
-</section><section id="optimization" class="level2"><h2 class="anchored" data-anchor-id="optimization">Optimization</h2>
-<p>Differentiation is useful when we seek to <em>optimize</em> a function. That is, find where it has local maxima or minima. For purposes of illustration, I’ll focus on maxima. Formally, given an <strong>objective function</strong> <span class="math inline">\(f\)</span>, we seek to find the <span class="math inline">\(x\)</span>-values at which <span class="math inline">\(f\)</span> has a maximum:</p>
-<p><span class="math display">\[
-\underset{x\in\mathbb{R}}{\arg\max}\,f(x).
-\]</span></p>
-<p>Notice that I did not write <span class="math inline">\(\max f(x)\)</span>. In this class, it turns out that we will seldom care about the actual largest value that the function obtains. Instead, we care only for <em>where</em> that value occurs. So we are interested in the maxi<em>mizer</em>; the <em>location</em> of the maximum; the <span class="math inline">\(x\)</span>-value <em>that does</em> the maximizing. Hence, argmax and not max. Here’s an illustration:</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="differentiation_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Inspecting this picture, we notice that the maximum corresponds to a point where the derivative (slope of the tangent line) is zero. In order for the function to “top out,” it must at some point have switched from being increasing (positive derivative) to decreasing (negative derivative). When we ask where the maximum occurs, that’s the same as asking where the first derivative switched sign (ie crossed the <span class="math inline">\(x\)</span>-axis). So to optimize <span class="math inline">\(f\)</span>, perhaps we can compute its first derivative, set it equal to 0, and solve.</p>
-<p><span class="math display">\[
-\begin{aligned}
-f'(x)
-=
--2x+6&amp;=0
-\quad
-\implies
-\quad
-x^\star=3.
-\end{aligned}
-\]</span></p>
-<p>A point like <span class="math inline">\(x^\star\)</span> in this example is called a <strong>critical point</strong>. A critical point <em>may</em> be the location of a maximum, but you have to check. If you recall the example in <a href="#fig-derivatives" class="quarto-xref">Figure&nbsp;1</a>, there are two critical points <span class="math inline">\(x^\star = \pm 1/\sqrt{3}\)</span>, but they correspond to different things: one is a minimum and one is a maximum. In order to classify the critical points as maximizers or minimizers, you perform the <strong>second derivative test</strong>:</p>
-<ul>
-<li>if <span class="math inline">\(f'(x^\star)=0\)</span> and <span class="math inline">\(f''(x^\star)&lt;0\)</span>, then <span class="math inline">\(x^\star\)</span> is a maximizer;</li>
-<li>if <span class="math inline">\(f'(x^\star)=0\)</span> and <span class="math inline">\(f''(x^\star)&gt;0\)</span>, then <span class="math inline">\(x^\star\)</span> is a minimizer;</li>
-<li>if <span class="math inline">\(f'(x^\star)=0\)</span> and <span class="math inline">\(f''(x^\star)=0\)</span>, then the test is inconclusive.</li>
-</ul>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -946,19 +809,10 @@ x^\star=3.
       }
     }
   });
-  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../math/logexp.html" class="pagination-link" aria-label="Exponents and logarithms">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exponents and logarithms</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../math/integration.html" class="pagination-link" aria-label="Integration">
-        <span class="nav-page-text">Integration</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
+  </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -970,6 +824,8 @@ x^\star=3.
 </div>
   </div>
 </footer>
+
+
 
 
 </body></html>

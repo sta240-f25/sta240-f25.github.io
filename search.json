@@ -769,7 +769,7 @@
     "href": "index.html",
     "title": "STA 240 Probability for Statistical Inference",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\nslides\n\n\n\n\nWed, Aug 27\n\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\nnotes\n\n\n\n\nThu, Aug 28\n\n💻 Lab 0 (calculus review)\n\n\n\n\n2\nMon, Sep 1\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\nWed, Sep 3\n\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\nslides notes\n\n\nIntro Survey @ 3 PM\n\n\n\nThu, Sep 4\n\n💻 Lab 1 (hello R)\n\n\nLab 1 @ 11:59 PM\n\n\n\nFri, Sep 5\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nWed, Sep 10\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nThu, Sep 11\n\n💻 Lab 2 (counting)\n\n\nLab 2 @ 11:59 PM\n\n\n\nFri, Sep 12\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\n\nDS: 2\n🧑‍🏫 Conditional Probability\nnotes Play around!\n\n\n\n\n\nWed, Sep 17\n\nDS: 2\n🧑‍🏫 Conditional Probability\nnotes Play around!\n\n\n\n\n\nThu, Sep 18\n\n💻 Lab 3 (disease testing)\n\n\nLab 3 @ 11:59 PM\n\n\n\nFri, Sep 19\n\n\n\nPSET 0 corrections PSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\n🧑‍🏫 Discrete\n\n\n\n\n\nWed, Sep 24\n\n🧑‍🏫 Discrete\n\n\n\n\n\nThu, Sep 25\n\n💻 Lab 4 (ChatGPT)\n\nLab 4 @ 11:59 PM\n\n\n\nFri, Sep 26\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\n🧑‍🏫 Discrete\n\n\n\n\n\nWed, Oct 1\n\n🧑‍🏫 Discrete\n\n\n\n\n\nThu, Oct 2\n\n💻 Lab 5\n\nLab 5 @ 11:59 PM\n\n\n\nFri, Oct 3\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n🧑‍🏫 Continuous\n\n\n\n\n\nWed, Oct 8\n\n🧑‍🏫 Continuous\n\n\n\n\n\nThu, Oct 9\n\n📝 Midterm 1\n\n\n\n\n\n8\nMon, Oct 13\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\nWed, Oct 15\n\n🧑‍🏫 Continuous\n\n\n\n\n\nThu, Oct 16\n\n💻 Lab 6\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n🧑‍🏫 Continuous\n\n\n\n\n\nWed, Oct 22\n\n🧑‍🏫 Jointly Discrete\n\n\n\n\n\nThu, Oct 23\n\n💻 Lab 7\n\nLab 7 @ 11:59 PM\n\n\n\nFri, Oct 24\n\n\n\nPSET 5 @ 5PM\n\n\n10\nMon, Oct 27\n\n🧑‍🏫 Jointly Continuous\n\n\n\n\n\nWed, Oct 29\n\n🧑‍🏫 Hierarchies\n\n\n\n\n\nThu, Oct 30\n\n💻 Lab 8\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\nWed, Nov 5\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\nThu, Nov 6\n\n💻 Lab 9\n\nLab 9 @ 11:59 PM\n\n\n\nFri, Nov 7\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\nWed, Nov 12\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\nThu, Nov 13\n\n📝 Midterm 2\n\n\n\n\n\n13\nMon, Nov 17\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nWed, Nov 19\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nThu, Nov 20\n\n💻 Lab 10\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\nWed, Nov 26\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\nThu, Nov 27\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n15\nMon, Dec 1\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nWed, Dec 3\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nThu, Dec 4\n\n💻 Lab 11\n\nLab 11 @ 11:59 PM\n\n\n\nFri, Dec 5\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n📝 Final (9AM - 12PM)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\nslides\n\n\n\n\nWed, Aug 27\n\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\nnotes\n\n\n\n\nThu, Aug 28\n\n💻 Lab 0 (calculus review)\n\n\n\n\n2\nMon, Sep 1\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\nWed, Sep 3\n\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\nslides notes\n\n\nIntro Survey @ 3 PM\n\n\n\nThu, Sep 4\n\n💻 Lab 1 (hello R)\n\n\nLab 1 @ 11:59 PM\n\n\n\nFri, Sep 5\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nWed, Sep 10\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nThu, Sep 11\n\n💻 Lab 2 (counting)\n\n\nLab 2 @ 11:59 PM\n\n\n\nFri, Sep 12\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\n\nDS: 2\n🧑‍🏫 Conditional Probability\nnotes Play around!\n\n\n\n\n\nWed, Sep 17\n\nDS: 2\n🧑‍🏫 Conditional Probability\nnotes Play around!\n\n\n\n\n\nThu, Sep 18\n\n💻 Lab 3 (disease testing)\n\n\nLab 3 @ 11:59 PM\n\n\n\nFri, Sep 19\n\n\n\nPSET 0 corrections PSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\n🧑‍🏫 Discrete\n\n\n\n\n\nWed, Sep 24\n\n🧑‍🏫 Discrete\n\n\n\n\n\nThu, Sep 25\n\n💻 Lab 4 (ChatGPT)\n\nLab 4 @ 11:59 PM\n\n\n\nFri, Sep 26\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\n🧑‍🏫 Discrete\n\n\n\n\n\nWed, Oct 1\n\n🧑‍🏫 Discrete\n\n\n\n\n\nThu, Oct 2\n\n💻 Lab 5\n\nLab 5 @ 11:59 PM\n\n\n\nFri, Oct 3\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n🧑‍🏫 Continuous\n\n\n\n\n\nWed, Oct 8\n\n🧑‍🏫 Continuous\n\n\n\n\n\nThu, Oct 9\n\n📝 Midterm 1\n\n\n\n\n\n8\nMon, Oct 13\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\nWed, Oct 15\n\n🧑‍🏫 Continuous\n\n\n\n\n\nThu, Oct 16\n\n💻 Lab 6\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n🧑‍🏫 Continuous\n\n\n\n\n\nWed, Oct 22\n\n🧑‍🏫 Jointly Discrete\n\n\n\n\n\nThu, Oct 23\n\n💻 Lab 7\n\nLab 7 @ 11:59 PM\n\n\n\nFri, Oct 24\n\n\n\nPSET 5 @ 5PM\n\n\n10\nMon, Oct 27\n\n🧑‍🏫 Jointly Continuous\n\n\n\n\n\nWed, Oct 29\n\n🧑‍🏫 Hierarchies\n\n\n\n\n\nThu, Oct 30\n\n💻 Lab 8\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\nWed, Nov 5\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\nThu, Nov 6\n\n💻 Lab 9\n\nLab 9 @ 11:59 PM\n\n\n\nFri, Nov 7\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\nWed, Nov 12\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\nThu, Nov 13\n\n📝 Midterm 2\n\n\n\n\n\n13\nMon, Nov 17\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nWed, Nov 19\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nThu, Nov 20\n\n💻 Lab 10\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\nWed, Nov 26\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\nThu, Nov 27\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n15\nMon, Dec 1\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nWed, Dec 3\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nThu, Dec 4\n\n💻 Lab 11\n\nLab 11 @ 11:59 PM\n\n\n\nFri, Dec 5\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n📝 Final (9AM - 12PM)",
     "crumbs": [
       "Syllabus",
       "Schedule"
@@ -1069,60 +1069,60 @@
     "text": "Figure 1\n\n\n\nJerry Lewis is throwing darts at the board pictured in Figure 1. It has the following properties:\n\nThe board has radius \\(r\\);\nThe board is partitioned into five rings, each with the same “thickness” \\(r/5\\);\nThe board is mounted on a wall of area \\(A\\).\n\nJerry is not very skilled. His dart is guaranteed to reach the wall and stick someplace, but beyond that, the probability that it lands in any given region is just proportional to that region’s area.\nTask: Derive a general formula for the conditional probability that a dart lands in ring \\(i\\) given that it hits the board and not the wall. Your formula should be a function of \\(i=1,\\,2,\\,3,\\,4,\\,5\\). Check that these probabilities are nonnegative and sum to one."
   },
   {
-    "objectID": "problems/bank/conditional-probability/target-practice.html",
-    "href": "problems/bank/conditional-probability/target-practice.html",
+    "objectID": "problems/bank/conditional-probability/independent-complements.html",
+    "href": "problems/bank/conditional-probability/independent-complements.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Pearl Bailey and Elaine Stritch go target shooting. Suppose that each of Pearl’s shots hits a wooden duck target with probability \\(p_1\\), while each shot of Elaine’s hits it with probability \\(p_2\\), independent of Pearl. Suppose that they shoot simultaneously at the same target. If the wooden duck is knocked over (indicating that it was hit), what is the probability that both shots hit the duck?"
+    "text": "If we know that \\(A\\) and \\(B\\) are independent events, show that their complements \\(A^c\\) and \\(B^c\\) are also independent events."
   },
   {
-    "objectID": "problems/bank/conditional-probability/conditional-inequality.html",
-    "href": "problems/bank/conditional-probability/conditional-inequality.html",
+    "objectID": "problems/bank/conditional-probability/bdj-encryption.html",
+    "href": "problems/bank/conditional-probability/bdj-encryption.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Assume that \\(P(A)&gt;0\\) and prove that\n\\[\nP(A\\cap B\\,|\\, A)\\geq P(A\\cap B\\,|\\, A\\cup B).\n\\]"
+    "text": "An encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/axioms-conditional.html",
-    "href": "problems/bank/conditional-probability/axioms-conditional.html",
+    "objectID": "problems/bank/conditional-probability/bdj-circuit.html",
+    "href": "problems/bank/conditional-probability/bdj-circuit.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(S\\) be a sample space with probability measure \\(P\\), and let \\(B\\subseteq S\\) be some event with \\(P(B)&gt;0\\). Show that the function \\(G(A)=P(A\\,|\\, B)\\) is a new probability measure on \\(S\\). That is, show that \\(G\\) satisfies the axioms:\n\ntotal measure 1;\nnonnegativity;\ncountable additivity."
+    "text": "The figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/testing-symptoms.html",
-    "href": "problems/bank/conditional-probability/testing-symptoms.html",
+    "objectID": "problems/bank/set-theory/picture-proofs.html",
+    "href": "problems/bank/set-theory/picture-proofs.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\).\nTable 1 enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients’ “true” disease status was determined by a PCR test that we assume is hella accurate.\n\n\n\nTable 1: Some COVID-19 numbers. Source: CDC\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n-\n-\n-\n0.7650\n\n\n-\n-\n+\n0.0128\n\n\n-\n+\n-\n0.1685\n\n\n-\n+\n+\n0.0018\n\n\n+\n-\n-\n0.0091\n\n\n+\n-\n+\n0.0064\n\n\n+\n+\n-\n0.0073\n\n\n+\n+\n+\n0.0291\n\n\n\n\n\n\n\n\nWhat is the overall disease prevalence?\nWhat is the sensitivity of the test?\nWhat is the specificity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?\nWhat is the overall probability that the test is wrong?"
+    "text": "“Prove” each set identity with a picture:\n\nDistributive property: \\(A\\cup(B\\cap C)=(A\\cup B)\\cap(A\\cup C)\\);\nDe Morgan: \\((A\\cap B)^{c}=A^{c}\\cup B^{c}\\);"
   },
   {
-    "objectID": "problems/bank/set-theory/basic-set-practice.html",
-    "href": "problems/bank/set-theory/basic-set-practice.html",
+    "objectID": "problems/bank/random-variables-discrete/memoryless-geometric.html",
+    "href": "problems/bank/random-variables-discrete/memoryless-geometric.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Take \\(\\mathbb{R}\\) to be your reference set, and consider these subsets:\n\\[\n\\begin{align*}\nA&=[1,\\,5]\\\\\nB&=\\{x\\in\\mathbb{R}\\,:\\,|x|&gt;2\\}\\\\\nC&=(-\\infty,\\,0]\\\\\nI_n&=\\left[0,\\,\\frac{1}{n}\\right]\n\\end{align*}\n\\]\nExpress each of the following in as simplified and concise a form as possible:\n\n\\(A^c\\)\n\\(A \\cup B\\)\n\\(A\\cap C\\)\n\\(A\\cap C^c\\)\n\\(B \\cap C^c\\)\n\\(A^c \\cap B^c \\cap C^c\\)\n\\((A \\cup B) \\cap C\\)\n\\(\\bigcap_{n=1}^\\infty I_n\\)\n\\(\\bigcup_{n=1}^\\infty I_n\\)"
+    "text": "Let \\(D \\sim \\text{Geometric}(p)\\), and fix positive integers \\(n\\) and \\(k\\). What is \\(P(D = n + k \\,|\\, D &gt; k)\\)? Does this look familiar?"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/random-exam.html",
-    "href": "problems/bank/random-variables-discrete/random-exam.html",
+    "objectID": "problems/bank/random-variables-discrete/contested-election.html",
+    "href": "problems/bank/random-variables-discrete/contested-election.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "I dreamed last night I got on the boat to heavenAnd by some chance I had brought my dice along\nGuys and Dolls\n\nAlas. You settle in for what you think will be a good night’s beauty sleep, and you end up having one of those awful dreams where you must take a test you haven’t studied for. It’s a multiple choice test, each question has five options with only one correct answer, there are fifty questions in total, and each is worth one point. The god Morpheus has kindly seen fit to leave a fair, five-sided die in your dream pocket, and so your dream self decides to do the only thing you can do: use the die to answer each of the exam questions completely at random.\n\nLet \\(X\\) be the number of questions you answer correctly. What is the distribution of \\(X\\)?\nPlot the probability mass function of \\(X\\);\nWhat is the expected number of questions you will answer correctly?\nWhat is the probability that you get at least a C- on the exam?"
+    "text": "Not all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.\nImagine an election where Angela Lansbury receives \\(a\\) votes, Bernadette Peters receives \\(b\\) votes, and Angela provisionally wins with a margin of victory \\(a-b&gt;0\\). However, of the total \\(a+b\\) votes, we learn that \\(k&gt;a-b\\) were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the \\(k\\) invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.\nTo model this, think of the original \\(a+b\\) ballots as balls in the proverbial urn. \\(a\\) of these balls are red, and \\(b\\) of these balls are blue, and assume that \\(a,\\, b&gt;k\\). Removing the \\(k\\) invalid ballots is like drawing \\(k\\) balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the \\(a+b\\) original ballots is equally likely to have been invalid. Next, imagine we randomly remove \\(k\\) balls from the urn, and let \\(X\\) be a random variable that counts the number of the removed/invalid ballots that belong to Angela. In other words, the number of red balls removed. If \\(X\\) is large enough, it will swing the election in Bernadette’s favor.\n\nWhat are the range and the pmf of the random variable \\(X\\)?\nFor what values of \\(X\\) does removing \\(k\\) ballots reverse the outcome of the election?\nBased on your answers to the previous parts, what is the probability that the election result is reversed when the \\(k\\) bad ballots are removed? Give a general formula for this probability, and then compute the probability for each of the real elections listed in Table 1;\nThe random variable \\(X\\) that you derived in the first part can be approximated by \\(\\text{Binom}(k,\\,1/2)\\). Explain why this approximation might be “good enough,” and verify that it’s not too bad by computing the approximate probability of reversal for the elections in Table 1. Compare the approximate probabilities to the actual ones from the previous part;\nLet’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a figure in R with the following features:\n\nthe margin of victory \\(a-b\\) on the horizontal axis;\nthe number of bad ballots \\(k\\) on the vertical axis;\nscatterplot where each point represents an election in Table 1, with the points colored according to the decision that was made in the case;\ndivide the plane into two regions, one where the approximate probability of reversal is less than 0.05 and one where it is greater.\n\nWrite a few pithy paragraphs commenting on the following:\n\nthe assumptions of our lil’ model. Do you think they are innocuous? What might you change, and how?\nthe match or lack thereof between our model and the decisions that were actually made in the real cases;\nHow do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?\n\n\n\n\n\nTable 1: Close elections\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nelection\nyear\nwin\nloss\ntotal\nmargin\ninvalid\ndecision\n\n\n\n\nIppolito v. Power\n1968\n1,422\n1,405\n2,827\n17\n101\nvoid\n\n\nSantucci v. Power\n1969\n58,076\n57,981\n116,057\n95\n448\nvoid\n\n\nDeMartini v. Power\n1970\n2,656\n2,594\n5,250\n62\n136\nupheld\n\n\nMaine House\n1976\n1,193\n1,060\n2,253\n133\n208\nvoid\n\n\nAnn Arbor mayor\n1977\n10,660\n10,659\n21,319\n1\n20\nvoid\n\n\nBrunswick ME town council\n1980\n2,390\n2,383\n4,773\n7\n16\nupheld\n\n\nWashington governor\n2004\n1,373,357\n1,373,228\n2,746,585\n129\n1,439\nupheld"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/bdj-rv.html",
-    "href": "problems/bank/random-variables-discrete/bdj-rv.html",
+    "objectID": "problems/bank/random-variables-discrete/gandalf-test.html",
+    "href": "problems/bank/random-variables-discrete/gandalf-test.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "An urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
+    "text": "King Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 soldiers;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten soldiers. We can then identify which soldiers are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/ross-rv.html",
-    "href": "problems/bank/random-variables-discrete/ross-rv.html",
+    "objectID": "problems/bank/conceptual/lousy-forecasting.html",
+    "href": "problems/bank/conceptual/lousy-forecasting.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Two balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
+    "text": "Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:\n\nZohran Mamdani wins the New York City mayoral election;\nWicked: For Good makes more money at the box office (inflation adjusted) on its opening weekend than Wicked: Part I;\nThe Philadelphia Phillies make it to the 2025 World Series;\nSean Combs is sentenced to prison for more than 3 years;\nA greater percentage of Duke undergraduates participate in this year’s Duke Marriage Pact than last year’s. About 43% participated last year;\nThe total number of points scored at the Countdown to Craziness exhibition game is greater than 50;\nBefore the end of the year, the Federal Reserve announces that Lisa Cook is no longer a member of the Board of Governors;\nThe United States federal government is shut down due to a lapse in appropriations by October 1, 2025.\n\nChoose three of these, state the probabilities that you assign to the events happening, and explain in a few paragraphs how you formulated your beliefs. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed.\n\n\n\n\n\n\nAvoid wishful thinking\n\n\n\nFor some of these, you may have strong preferences about the outcome. Try to set them aside and report your honest assessment of the likelihood of the event, whether it pleases you or not."
   },
   {
     "objectID": "problems/bank/conceptual/diaconis.html",
@@ -1209,39 +1209,83 @@
     "text": "Footnotes\n\nMartha Wash is technically heard twice, once in a solo capacity and once as a member of The Weather Girls, but let’s please not quibble;↩︎\nIf you don’t have a Spotify account, collaborate with a classmate who does and please acknowledge them.↩︎"
   },
   {
-    "objectID": "problems/bank/counting/poker-dice.html",
-    "href": "problems/bank/counting/poker-dice.html",
+    "objectID": "problems/bank/counting/yes-replace-order-no.html",
+    "href": "problems/bank/counting/yes-replace-order-no.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Poker dice is played by simultaneously rolling five dice. The dice are fair, six-sided, and distinct (imagine that each one is a different color). Find the probabilities of the following dice rolls:\n\nfive different numbers;\nthree of a kind (three dice show the same number, while the other two dice are singles);\nfull house (three dice show the same number, while the other two show a separate pair)."
+    "text": "Consider selecting \\(k\\) from \\(n\\) with replacement but ignoring order.\n\nLet’s take the specific case of \\(k=2\\) and \\(n=4\\). List out all possible ways you can select \\(k=2\\) items from \\(\\{1, 2, 3, 4\\}\\) in such a scenario.\nLet \\(x_i\\) be the number of times that element \\(\\{i\\}\\) is selected, for each \\(i = 1,\\,2,\\,3,\\, 4\\). For each combination identified in (a), show that it satisfies the following equation:\n\n\\[x_1 + x_2 + x_3 + x_4 = 2, \\quad x_1, x_2, x_3, x_4 \\in \\{0, 1, 2\\}.\\]\n\nState an analogous equation to part b for general \\(n\\) and \\(k\\). Use this to show that the number of ways you can select \\(k\\) from \\(n\\) without replacement and ignoring order is\n\n\\[\n\\binom{n+k-1}{k}=\\frac{(n+k-1)!}{k!(n-1)!}.\n\\]"
   },
   {
-    "objectID": "problems/bank/counting/license-plates.html",
-    "href": "problems/bank/counting/license-plates.html",
+    "objectID": "problems/bank/counting/exactly-two-suits.html",
+    "href": "problems/bank/counting/exactly-two-suits.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Suppose NC license plates are issued at random, each having three letters followed by 4 digits. The current distribution of plates includes all those on which the first letter is either H or J.\n\nWhat is the probability that you will get JET-5375? What about HAT-8007?\nWhat is the probability that you get a plate where the three letters are the same and the four digits are the same?"
+    "text": "A five-card hand is randomly dealt to you from a well-shuffled deck of 52 standard playing cards. What is the probability that your hand contains exactly two suits?"
   },
   {
-    "objectID": "labs/lab-1.html",
-    "href": "labs/lab-1.html",
-    "title": "Lab 1",
+    "objectID": "labs/lab-3.html",
+    "href": "labs/lab-3.html",
+    "title": "Lab 3",
     "section": "",
-    "text": "This class will introduce you to the basics of the R programming language, but in contrast to courses like STA 101 or 1991, we will not primarily be using R for data analysis. Instead, we will be using it to run simulations. That is, we will use R to build little computational “laboratories” where we can poke and prod a random system and explore its properties. This skill complements a lot of the math we will be doing. In the modern era, mathematical reasoning and computer simulation are mutually reinforcing; you can check whether you did a calculation correctly by comparing with a simulation, and you can verify that a simulation result is legit by doing a proper calculation. Furthermore, in complex systems where the math is intractable, you can use simulation to explore what’s going on.\nDuring the semester, I will summarize the basic R skills we need in a series of concise “explainers” posted to the course webpage. Here’s what we have so far:\nPlease dip into those as needed.\nIn today’s lab, you will use R to simulate some basic random experiments and approximate probabilities. Along the way, you will get a light workout with if-else statements and for loops.",
+    "text": "Car Talk (1977 - 2012) was a popular show on NPR. It featured a segment called the “Puzzler,” where the hosts would read a brain teaser and invite listeners to send in solutions for the chance to win a prize. Here is the text of one such Puzzler (original audio at around 19:19 here):\nIn what follows, you may find some notation useful. Let \\(D\\) denote your true disease status, and \\(T\\) denote the result of your test. Then\n\\[\n\\begin{align*}\n    p &= P(D=+) && \\text{(prevalence)}\n    \\\\\n    f_{-}&=P(T=-\\,|\\, D=+) && \\text{(false negative rate)}\n    \\\\\n    f_{+}&=P(T=+\\,|\\, D=-) && \\text{(false positive rate)}\n    \\\\\n    1-f_{-}&=P(T=+\\,|\\, D = +) && \\text{(sensitivity)}\n    \\\\\n    1-f_{+}&=P(T=-\\,|\\, D = -) && \\text{(specificity)}.\n\\end{align*}\n\\]",
     "crumbs": [
       "Labs",
-      "Lab 1"
+      "Lab 3"
     ]
   },
   {
-    "objectID": "labs/lab-1.html#footnotes",
-    "href": "labs/lab-1.html#footnotes",
-    "title": "Lab 1",
-    "section": "Footnotes",
-    "text": "Footnotes\n\nThe wise among us know that these are pronounced STAAAWANOWA and STAAAWANANA, respectively.↩︎",
+    "objectID": "labs/lab-3.html#task-1",
+    "href": "labs/lab-3.html#task-1",
+    "title": "Lab 3",
+    "section": "Task 1",
+    "text": "Task 1\nBefore you read anything else below, try to solve the puzzler yourself. What do you come up with?",
     "crumbs": [
       "Labs",
-      "Lab 1"
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#task-2",
+    "href": "labs/lab-3.html#task-2",
+    "title": "Lab 3",
+    "section": "Task 2",
+    "text": "Task 2\nExplain the correct way to solve this problem. Exactly what probability are we asked to compute, and what formula should we apply to do it? Does the prompt actually provide enough information to ultimately get the job done?",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#task-3",
+    "href": "labs/lab-3.html#task-3",
+    "title": "Lab 3",
+    "section": "Task 3",
+    "text": "Task 3\nBeneath the fold is the solution that the hosts ultimately revealed.\n\n\n\n\n\n\nThe show’s solution\n\n\n\n\n\nOriginal audio at around 20:30 here:\n\nLet’s say 1000 people take the test. Fifty people will test positive and yet they will not have it. One will test positive and have it. So your chances of actually having it, even though you tested positive, are one in 51, or a little less than 2%.\n\n\n\n\nSo, what do you think? Did they get it right? Explain how the show interpreted the information given in the Puzzler, and explain what arithmetic formula they implicitly applied in order to compute their answer.",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#task-4",
+    "href": "labs/lab-3.html#task-4",
+    "title": "Lab 3",
+    "section": "Task 4",
+    "text": "Task 4\nExplain two things:\n\nUnder what conditions is the formula that the show used actually an upper bound on the correct answer?\nEven though their number is not exactly correct, why might an upper bound on the true probability still be a useful thing to calculate?",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#task-5",
+    "href": "labs/lab-3.html#task-5",
+    "title": "Lab 3",
+    "section": "Task 5",
+    "text": "Task 5\nSo, the show’s answer, while wrong, could still be potentially useful upper bound on the true probability. Neat! But how wrong is it, even? To get a sense of this, use R to create some line plots with the prevalence \\(p\\in[0,\\, 1]\\) on the horizontal axis and the true and approximate probabilities for different values of \\(f_-\\) and \\(f_+\\) on the vertical axis. Mix-and-match \\(f_-,\\, f_+\\in\\{0.1,\\, 0.2\\}\\), and comment on the difference between the two curves.",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
     ]
   },
   {
@@ -1311,77 +1355,40 @@
     ]
   },
   {
-    "objectID": "labs/lab-3.html",
-    "href": "labs/lab-3.html",
-    "title": "Lab 3",
+    "objectID": "labs/lab-1.html",
+    "href": "labs/lab-1.html",
+    "title": "Lab 1",
     "section": "",
-    "text": "Car Talk (1977 - 2012) was a popular show on NPR. It featured a segment called the “Puzzler,” where the hosts would read a brain teaser and invite listeners to send in solutions for the chance to win a prize. Here is the text of one such Puzzler (original audio at around 19:19 here):\nIn what follows, you may find some notation useful. Let \\(D\\) denote your true disease status, and \\(T\\) denote the result of your test. Then\n\\[\n\\begin{align*}\n    p &= P(D=+) && \\text{(prevalence)}\n    \\\\\n    f_{-}&=P(T=-\\,|\\, D=+) && \\text{(false negative rate)}\n    \\\\\n    f_{+}&=P(T=+\\,|\\, D=-) && \\text{(false positive rate)}\n    \\\\\n    1-f_{-}&=P(T=+\\,|\\, D = +) && \\text{(sensitivity)}\n    \\\\\n    1-f_{+}&=P(T=-\\,|\\, D = -) && \\text{(specificity)}.\n\\end{align*}\n\\]",
+    "text": "This class will introduce you to the basics of the R programming language, but in contrast to courses like STA 101 or 1991, we will not primarily be using R for data analysis. Instead, we will be using it to run simulations. That is, we will use R to build little computational “laboratories” where we can poke and prod a random system and explore its properties. This skill complements a lot of the math we will be doing. In the modern era, mathematical reasoning and computer simulation are mutually reinforcing; you can check whether you did a calculation correctly by comparing with a simulation, and you can verify that a simulation result is legit by doing a proper calculation. Furthermore, in complex systems where the math is intractable, you can use simulation to explore what’s going on.\nDuring the semester, I will summarize the basic R skills we need in a series of concise “explainers” posted to the course webpage. Here’s what we have so far:\nPlease dip into those as needed.\nIn today’s lab, you will use R to simulate some basic random experiments and approximate probabilities. Along the way, you will get a light workout with if-else statements and for loops.",
     "crumbs": [
       "Labs",
-      "Lab 3"
+      "Lab 1"
     ]
   },
   {
-    "objectID": "labs/lab-3.html#task-1",
-    "href": "labs/lab-3.html#task-1",
-    "title": "Lab 3",
-    "section": "Task 1",
-    "text": "Task 1\nBefore you read anything else below, try to solve the puzzler yourself. What do you come up with?",
+    "objectID": "labs/lab-1.html#footnotes",
+    "href": "labs/lab-1.html#footnotes",
+    "title": "Lab 1",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nThe wise among us know that these are pronounced STAAAWANOWA and STAAAWANANA, respectively.↩︎",
     "crumbs": [
       "Labs",
-      "Lab 3"
+      "Lab 1"
     ]
   },
   {
-    "objectID": "labs/lab-3.html#task-2",
-    "href": "labs/lab-3.html#task-2",
-    "title": "Lab 3",
-    "section": "Task 2",
-    "text": "Task 2\nExplain the correct way to solve this problem. Exactly what probability are we asked to compute, and what formula should we apply to do it? Does the prompt actually provide enough information to ultimately get the job done?",
-    "crumbs": [
-      "Labs",
-      "Lab 3"
-    ]
-  },
-  {
-    "objectID": "labs/lab-3.html#task-3",
-    "href": "labs/lab-3.html#task-3",
-    "title": "Lab 3",
-    "section": "Task 3",
-    "text": "Task 3\nBeneath the fold is the solution that the hosts ultimately revealed.\n\n\n\n\n\n\nThe show’s solution\n\n\n\n\n\nOriginal audio at around 20:30 here:\n\nLet’s say 1000 people take the test. Fifty people will test positive and yet they will not have it. One will test positive and have it. So your chances of actually having it, even though you tested positive, are one in 51, or a little less than 2%.\n\n\n\n\nSo, what do you think? Did they get it right? Explain how the show interpreted the information given in the Puzzler, and explain what arithmetic formula they implicitly applied in order to compute their answer.",
-    "crumbs": [
-      "Labs",
-      "Lab 3"
-    ]
-  },
-  {
-    "objectID": "labs/lab-3.html#task-4",
-    "href": "labs/lab-3.html#task-4",
-    "title": "Lab 3",
-    "section": "Task 4",
-    "text": "Task 4\nExplain two things:\n\nUnder what conditions is the formula that the show used actually an upper bound on the correct answer?\nEven though their number is not exactly correct, why might an upper bound on the true probability still be a useful thing to calculate?",
-    "crumbs": [
-      "Labs",
-      "Lab 3"
-    ]
-  },
-  {
-    "objectID": "labs/lab-3.html#task-5",
-    "href": "labs/lab-3.html#task-5",
-    "title": "Lab 3",
-    "section": "Task 5",
-    "text": "Task 5\nSo, the show’s answer, while wrong, could still be potentially useful upper bound on the true probability. Neat! But how wrong is it, even? To get a sense of this, use R to create some line plots with the prevalence \\(p\\in[0,\\, 1]\\) on the horizontal axis and the true and approximate probabilities for different values of \\(f_-\\) and \\(f_+\\) on the vertical axis. Mix-and-match \\(f_-,\\, f_+\\in\\{0.1,\\, 0.2\\}\\), and comment on the difference between the two curves.",
-    "crumbs": [
-      "Labs",
-      "Lab 3"
-    ]
-  },
-  {
-    "objectID": "problems/bank/counting/exactly-two-suits.html",
-    "href": "problems/bank/counting/exactly-two-suits.html",
+    "objectID": "problems/bank/counting/license-plates.html",
+    "href": "problems/bank/counting/license-plates.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "A five-card hand is randomly dealt to you from a well-shuffled deck of 52 standard playing cards. What is the probability that your hand contains exactly two suits?"
+    "text": "Suppose NC license plates are issued at random, each having three letters followed by 4 digits. The current distribution of plates includes all those on which the first letter is either H or J.\n\nWhat is the probability that you will get JET-5375? What about HAT-8007?\nWhat is the probability that you get a plate where the three letters are the same and the four digits are the same?"
+  },
+  {
+    "objectID": "problems/bank/counting/poker-dice.html",
+    "href": "problems/bank/counting/poker-dice.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Poker dice is played by simultaneously rolling five dice. The dice are fair, six-sided, and distinct (imagine that each one is a different color). Find the probabilities of the following dice rolls:\n\nfive different numbers;\nthree of a kind (three dice show the same number, while the other two dice are singles);\nfull house (three dice show the same number, while the other two show a separate pair)."
   },
   {
     "objectID": "problems/bank/counting/ross-balls.html",
@@ -1468,60 +1475,67 @@
     "text": "Assume \\(\\lambda&gt;0\\) is a constant and compute\n\\[\n    \\sum\\limits_{n=0}^\\infty n \\frac{\\lambda^n}{n!}e^{-\\lambda}\n    .\n\\]"
   },
   {
-    "objectID": "problems/bank/conceptual/lousy-forecasting.html",
-    "href": "problems/bank/conceptual/lousy-forecasting.html",
+    "objectID": "problems/bank/conceptual/sally-clark.html",
+    "href": "problems/bank/conceptual/sally-clark.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:\n\nZohran Mamdani wins the New York City mayoral election;\nWicked: For Good makes more money at the box office (inflation adjusted) on its opening weekend than Wicked: Part I;\nThe Philadelphia Phillies make it to the 2025 World Series;\nSean Combs is sentenced to prison for more than 3 years;\nA greater percentage of Duke undergraduates participate in this year’s Duke Marriage Pact than last year’s. About 43% participated last year;\nThe total number of points scored at the Countdown to Craziness exhibition game is greater than 50;\nBefore the end of the year, the Federal Reserve announces that Lisa Cook is no longer a member of the Board of Governors;\nThe United States federal government is shut down due to a lapse in appropriations by October 1, 2025.\n\nChoose three of these, state the probabilities that you assign to the events happening, and explain in a few paragraphs how you formulated your beliefs. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed.\n\n\n\n\n\n\nAvoid wishful thinking\n\n\n\nFor some of these, you may have strong preferences about the outcome. Try to set them aside and report your honest assessment of the likelihood of the event, whether it pleases you or not."
+    "text": "Here are some short readings about the case of Sally Clark and Roy Meadow, as well as something called the prosecutor’s fallacy:\n\nGrimes (2023): “Bad Science and Bad Statistics in the Courtroom Convict Innocent People,” Scientific American;\nCarriquiry (2018): “Misuse of statistics in the courtroom: the Sally Clark case,” CSAFE;\nWestreich & Iliinsky (2014): “Epidemiology visualized: the prosecutor’s fallacy,” American Journal of Epidemiology;\nAP Dawid’s statement during the Clark appeal.\n\nPlease do the following:\n\nRead the articles;\nUsing the ideas of conditional probability and independence that we have studied, write a paragraph or two describing what the prosecutor’s fallacy is and how it applies to the Clark case;\nIf you were an attorney for the defense and had the chance to cross-examine Roy Meadow, what would you ask him about his statistical testimony? What are the most incisive questions you could ask? How would you ensure that the cross-examination would “land” with the members of the jury, who most likely know absolutely nothing about probability and statistics?\n\n\n\n\n\n\n\nPlease don’t break my heart\n\n\n\nI’m not asking you to read Moby-Dick here."
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/gandalf-test.html",
-    "href": "problems/bank/random-variables-discrete/gandalf-test.html",
+    "objectID": "problems/bank/random-variables-discrete/ross-rv.html",
+    "href": "problems/bank/random-variables-discrete/ross-rv.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "King Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 soldiers;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten soldiers. We can then identify which soldiers are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
+    "text": "Two balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/contested-election.html",
-    "href": "problems/bank/random-variables-discrete/contested-election.html",
+    "objectID": "problems/bank/random-variables-discrete/bdj-rv.html",
+    "href": "problems/bank/random-variables-discrete/bdj-rv.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Not all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.\nImagine an election where Angela Lansbury receives \\(a\\) votes, Bernadette Peters receives \\(b\\) votes, and Angela provisionally wins with a margin of victory \\(a-b&gt;0\\). However, of the total \\(a+b\\) votes, we learn that \\(k&gt;a-b\\) were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the \\(k\\) invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.\nTo model this, think of the original \\(a+b\\) ballots as balls in the proverbial urn. \\(a\\) of these balls are red, and \\(b\\) of these balls are blue, and assume that \\(a,\\, b&gt;k\\). Removing the \\(k\\) invalid ballots is like drawing \\(k\\) balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the \\(a+b\\) original ballots is equally likely to have been invalid. Next, imagine we randomly remove \\(k\\) balls from the urn, and let \\(X\\) be a random variable that counts the number of the removed/invalid ballots that belong to Angela. In other words, the number of red balls removed. If \\(X\\) is large enough, it will swing the election in Bernadette’s favor.\n\nWhat are the range and the pmf of the random variable \\(X\\)?\nFor what values of \\(X\\) does removing \\(k\\) ballots reverse the outcome of the election?\nBased on your answers to the previous parts, what is the probability that the election result is reversed when the \\(k\\) bad ballots are removed? Give a general formula for this probability, and then compute the probability for each of the real elections listed in Table 1;\nThe random variable \\(X\\) that you derived in the first part can be approximated by \\(\\text{Binom}(k,\\,1/2)\\). Explain why this approximation might be “good enough,” and verify that it’s not too bad by computing the approximate probability of reversal for the elections in Table 1. Compare the approximate probabilities to the actual ones from the previous part;\nLet’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a figure in R with the following features:\n\nthe margin of victory \\(a-b\\) on the horizontal axis;\nthe number of bad ballots \\(k\\) on the vertical axis;\nscatterplot where each point represents an election in Table 1, with the points colored according to the decision that was made in the case;\ndivide the plane into two regions, one where the approximate probability of reversal is less than 0.05 and one where it is greater.\n\nWrite a few pithy paragraphs commenting on the following:\n\nthe assumptions of our lil’ model. Do you think they are innocuous? What might you change, and how?\nthe match or lack thereof between our model and the decisions that were actually made in the real cases;\nHow do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?\n\n\n\n\n\nTable 1: Close elections\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nelection\nyear\nwin\nloss\ntotal\nmargin\ninvalid\ndecision\n\n\n\n\nIppolito v. Power\n1968\n1,422\n1,405\n2,827\n17\n101\nvoid\n\n\nSantucci v. Power\n1969\n58,076\n57,981\n116,057\n95\n448\nvoid\n\n\nDeMartini v. Power\n1970\n2,656\n2,594\n5,250\n62\n136\nupheld\n\n\nMaine House\n1976\n1,193\n1,060\n2,253\n133\n208\nvoid\n\n\nAnn Arbor mayor\n1977\n10,660\n10,659\n21,319\n1\n20\nvoid\n\n\nBrunswick ME town council\n1980\n2,390\n2,383\n4,773\n7\n16\nupheld\n\n\nWashington governor\n2004\n1,373,357\n1,373,228\n2,746,585\n129\n1,439\nupheld"
+    "text": "An urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/memoryless-geometric.html",
-    "href": "problems/bank/random-variables-discrete/memoryless-geometric.html",
+    "objectID": "problems/bank/random-variables-discrete/random-exam.html",
+    "href": "problems/bank/random-variables-discrete/random-exam.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(D \\sim \\text{Geometric}(p)\\), and fix positive integers \\(n\\) and \\(k\\). What is \\(P(D = n + k \\,|\\, D &gt; k)\\)? Does this look familiar?"
+    "text": "I dreamed last night I got on the boat to heavenAnd by some chance I had brought my dice along\nGuys and Dolls\n\nAlas. You settle in for what you think will be a good night’s beauty sleep, and you end up having one of those awful dreams where you must take a test you haven’t studied for. It’s a multiple choice test, each question has five options with only one correct answer, there are fifty questions in total, and each is worth one point. The god Morpheus has kindly seen fit to leave a fair, five-sided die in your dream pocket, and so your dream self decides to do the only thing you can do: use the die to answer each of the exam questions completely at random.\n\nLet \\(X\\) be the number of questions you answer correctly. What is the distribution of \\(X\\)?\nPlot the probability mass function of \\(X\\);\nWhat is the expected number of questions you will answer correctly?\nWhat is the probability that you get at least a C- on the exam?"
   },
   {
-    "objectID": "problems/bank/set-theory/picture-proofs.html",
-    "href": "problems/bank/set-theory/picture-proofs.html",
+    "objectID": "problems/bank/set-theory/basic-set-practice.html",
+    "href": "problems/bank/set-theory/basic-set-practice.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "“Prove” each set identity with a picture:\n\nDistributive property: \\(A\\cup(B\\cap C)=(A\\cup B)\\cap(A\\cup C)\\);\nDe Morgan: \\((A\\cap B)^{c}=A^{c}\\cup B^{c}\\);"
+    "text": "Take \\(\\mathbb{R}\\) to be your reference set, and consider these subsets:\n\\[\n\\begin{align*}\nA&=[1,\\,5]\\\\\nB&=\\{x\\in\\mathbb{R}\\,:\\,|x|&gt;2\\}\\\\\nC&=(-\\infty,\\,0]\\\\\nI_n&=\\left[0,\\,\\frac{1}{n}\\right]\n\\end{align*}\n\\]\nExpress each of the following in as simplified and concise a form as possible:\n\n\\(A^c\\)\n\\(A \\cup B\\)\n\\(A\\cap C\\)\n\\(A\\cap C^c\\)\n\\(B \\cap C^c\\)\n\\(A^c \\cap B^c \\cap C^c\\)\n\\((A \\cup B) \\cap C\\)\n\\(\\bigcap_{n=1}^\\infty I_n\\)\n\\(\\bigcup_{n=1}^\\infty I_n\\)"
   },
   {
-    "objectID": "problems/bank/conditional-probability/bdj-circuit.html",
-    "href": "problems/bank/conditional-probability/bdj-circuit.html",
+    "objectID": "problems/bank/conditional-probability/testing-symptoms.html",
+    "href": "problems/bank/conditional-probability/testing-symptoms.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "The figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
+    "text": "We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\).\nTable 1 enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients’ “true” disease status was determined by a PCR test that we assume is hella accurate.\n\n\n\nTable 1: Some COVID-19 numbers. Source: CDC\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n-\n-\n-\n0.7650\n\n\n-\n-\n+\n0.0128\n\n\n-\n+\n-\n0.1685\n\n\n-\n+\n+\n0.0018\n\n\n+\n-\n-\n0.0091\n\n\n+\n-\n+\n0.0064\n\n\n+\n+\n-\n0.0073\n\n\n+\n+\n+\n0.0291\n\n\n\n\n\n\n\n\nWhat is the overall disease prevalence?\nWhat is the sensitivity of the test?\nWhat is the specificity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?\nWhat is the overall probability that the test is wrong?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/bdj-encryption.html",
-    "href": "problems/bank/conditional-probability/bdj-encryption.html",
+    "objectID": "problems/bank/conditional-probability/axioms-conditional.html",
+    "href": "problems/bank/conditional-probability/axioms-conditional.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "An encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
+    "text": "Let \\(S\\) be a sample space with probability measure \\(P\\), and let \\(B\\subseteq S\\) be some event with \\(P(B)&gt;0\\). Show that the function \\(G(A)=P(A\\,|\\, B)\\) is a new probability measure on \\(S\\). That is, show that \\(G\\) satisfies the axioms:\n\ntotal measure 1;\nnonnegativity;\ncountable additivity."
   },
   {
-    "objectID": "problems/bank/conditional-probability/independent-complements.html",
-    "href": "problems/bank/conditional-probability/independent-complements.html",
+    "objectID": "problems/bank/conditional-probability/conditional-inequality.html",
+    "href": "problems/bank/conditional-probability/conditional-inequality.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "If we know that \\(A\\) and \\(B\\) are independent events, show that their complements \\(A^c\\) and \\(B^c\\) are also independent events."
+    "text": "Assume that \\(P(A)&gt;0\\) and prove that\n\\[\nP(A\\cap B\\,|\\, A)\\geq P(A\\cap B\\,|\\, A\\cup B).\n\\]"
+  },
+  {
+    "objectID": "problems/bank/conditional-probability/target-practice.html",
+    "href": "problems/bank/conditional-probability/target-practice.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Pearl Bailey and Elaine Stritch go target shooting. Suppose that each of Pearl’s shots hits a wooden duck target with probability \\(p_1\\), while each shot of Elaine’s hits it with probability \\(p_2\\), independent of Pearl. Suppose that they shoot simultaneously at the same target. If the wooden duck is knocked over (indicating that it was hit), what is the probability that both shots hit the duck?"
   },
   {
     "objectID": "problems/bank/random-variables-continuous/quantum.html",
