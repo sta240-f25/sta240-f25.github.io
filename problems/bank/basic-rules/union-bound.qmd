@@ -1,6 +1,6 @@
-Let $A_1,\,A_2,\,A_3,\,...\subseteq S$ be an infinite sequence of possibly overlapping events in some probability space.
+Let $A_1,\,A_2,\,A_3,\,...\subseteq S$ be an infinite sequence of possibly overlapping events in some probability space. Based on this arbitrary sequence, define a new sequence of events that starts with $B_1 = A_1$ and then has $B_i=A_i\cap \left(\bigcup_{j=1}^{i-1}A_j\right)^c$ for all $i>1$.
 
-a.  Define a new sequence of events $B_i=A_i\cap \left(\bigcup_{j=1}^{i-1}A_j\right)^c$, and show that these are pairwise disjoint.
+a.  Show that the $B_i$ are pairwise disjoint.
 
 b.  Show that
 
