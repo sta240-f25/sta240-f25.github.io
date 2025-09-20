@@ -3,6 +3,7 @@ project:
   resources:
     - readings/dawid-clark-statement.pdf
     - readings/westreich-iliinsky-2014-aje.pdf
+    - readings/diaconis-holmes-montgomery-2007-siamreview.pdf
     - lecture-notes/sta240-notes-00-set-theory.pdf
     - lecture-notes/sta240-notes-01-probability-spaces.pdf
     - lecture-notes/sta240-notes-02-counting-theory.pdf
