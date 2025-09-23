@@ -6,6 +6,13 @@ editor:
   mode: source
 ---
 
+::: callout-note
+This assignment was adapted from: 
+
+- Meng, Xiao-Li (2023): "[Double your variance, dirtify your Bayes, devour your pufferfish, and draw your kidstrogram](https://doi.org/10.51387/22-NEJSDS6)," *The New England Journal of Statistics in Data Science*, vol 1 no 1.
+:::
+
+
 *Car Talk* (1977 - 2012) was a popular show on NPR. It featured a segment called the "Puzzler," where the hosts would read a brain teaser and invite listeners to send in solutions for the chance to win a prize. Here is the text of one such Puzzler (original audio at around 19:19 [here](https://www.npr.org/2015/07/11/422108689/-1528-forget-the-car-find-a-convent)):
 
 > There's a rare disease that's sweeping through your town. Of all the people who are exposed to it, 0.1% of the people actually contract the disease. There are no symptoms until the disease actually occurs. However, there's a diagnostic test that can detect the presence of the disease up to a year before it strikes. You go to your doctor, and he administers the test. It comes out positive. You say, "I'm done for!" Then you get a little bit encouraged. You say, "Wait a minute, doc, is this test 100% accurate?" Your doctor responds, "Well, not really. It's 95% accurate." In other words, 5% of the people who take the test will test positive but they don't really have the disease. **What are the chances that you actually have the disease?**
@@ -30,15 +37,46 @@ $$
 
 Before you read anything else below, try to solve the puzzler yourself. What do you come up with?
 
+::: {.callout-warning collapse="true"}
+## Solution
+
+Obviously you will struggle to come up with anything, and a lot depends on how you interpret "It's 95% accurate....5% of the people who take the test will test positive but they don't really have the disease." My solution below interprets this as the false positive rate. The puzzler says nothing about the false negative rate, and so you can't actually answer the question because you do not have enough information.
+
+:::
+
 ## Task 2
 
 Explain the correct way to solve this problem. Exactly what probability are we asked to compute, and what formula should we apply to do it? Does the prompt actually provide enough information to ultimately get the job done?
+
+::: {.callout-warning collapse="true"}
+## Solution
+
+The Puzzler asks us to compute $P(D=+\,|\, T=+)$, which in principle we can do with Bayes' theorem:
+
+$$
+\begin{aligned}
+    P(D=+\,|\, T=+)
+    &=
+    \frac{P(T=+\,|\, D=+)P(D=+)}{P(T=+)}
+    \\
+    &=
+    \frac{P(T=+\,|\, D=+)P(D=+)}{P(T=+\,|\, D=+)P(D=+)+P(T=+\,|\, D=-)P(D=-)}
+    \\
+    &=
+    \frac{(1-f_-)p}{(1-f_-)p+f_+(1-p)}
+    .
+\end{aligned}
+$$
+
+Unfortunately, the show doesn't tell us $f_-$, so you cannot actually compute the answer.
+
+:::
 
 ## Task 3
 
 Beneath the fold is the solution that the hosts ultimately revealed.
 
-::: {.callout-warning collapse="true"}
+::: {.callout-tip collapse="true"}
 ## The show's solution
 
 Original audio at around 20:30 [here](https://www.npr.org/2015/07/11/422108689/-1528-forget-the-car-find-a-convent):
@@ -49,6 +87,17 @@ Original audio at around 20:30 [here](https://www.npr.org/2015/07/11/422108689/-
 
 So, what do you think? Did they get it right? Explain how the show interpreted the information given in the Puzzler, and explain what arithmetic formula they implicitly applied in order to compute their answer.
 
+::: {.callout-warning collapse="true"}
+## Solution
+
+When they say "0.1% of the people actually contract the disease," this refers to the prevalence, and when they say "5% of the people who take the test will test positive but they don't really have the disease," this refers to the false positive rate. So $p=0.001$, and $f_+=0.05$. Based only on these, they somehow came up with:
+
+$$
+\frac{p}{p+f_+}=\frac{0.001}{.001 + 0.05} = \frac{1}{51}\approx 0.0196.
+$$
+
+:::
+
 ## Task 4
 
 Explain two things:
@@ -56,6 +105,77 @@ Explain two things:
 a.  Under what conditions is the formula that the show used actually an *upper bound* on the correct answer?
 b.  Even though their number is not exactly correct, why might an upper bound on the true probability still be a useful thing to calculate?
 
+::: {.callout-warning collapse="true"}
+## Solution
+
+
+By factoring $1-f_-$ out of the numerator and denominator, we can rewrite the correct formula as 
+    
+$$
+P(D=+\,|\, T = +)=\frac{(1-f_-)p}{(1-f_-)p+f_+(1-p)}=\frac{p}{p+f_+\left(\frac{1-p}{1-f_-}\right)}.
+$$
+    
+If $p\leq f_-$, then $1-f_-\leq 1-p$, which implies
+
+$$
+p+f_+\leq p+f_+\left(\frac{1-p}{1-f_-}\right).
+$$
+    
+As a consequence, we see that 
+    
+$$
+P(D=+\,|\, T = +)
+=
+\frac{p}{p+f_+\left(\frac{1-p}{1-f_-}\right)}
+\leq \frac{p}{p+f_+},
+\quad \text{when }p\leq f_-
+.
+$$
+
+So the formula that the show applied is an upper bound for the true probability.
+
+Two types of errors are possible in a situation like this: treating a disease that is not there, or failing to treat a disease that is there. On balance, the second error is probably the worse of the two, so I would rather overestimate the probability that I have the disease than underestimate it.
+
+:::
+
 ## Task 5
 
 So, the show's answer, while wrong, could still be potentially useful upper bound on the true probability. Neat! But how wrong is it, even? To get a sense of this, [use `R`](https://sta240-f25.github.io/explainers/lineplot.html) to create some line plots with the prevalence $p\in[0,\, 1]$ on the horizontal axis and the true and approximate probabilities for different values of $f_-$ and $f_+$ on the vertical axis. Mix-and-match $f_-,\, f_+\in\{0.1,\, 0.2\}$, and comment on the difference between the two curves.
+
+
+::: {.callout-warning collapse="true"}
+## Solution
+
+```{r}
+#| code-fold: true
+#| fig-width: 6
+#| fig-asp: 1
+FPR = c(0.1, 0.2)
+FNR = c(0.1, 0.2)
+par(mfrow = c(2, 2))
+for (i in 1:2){
+  for (j in 1:2){
+    f_plus = FPR[i]
+    f_minus = FNR[j]
+    curve(x / (x + f_plus),
+          col = "blue",
+          xlab = "p", 
+          ylab = "", 
+          xlim = c(0, 1),
+          ylim = c(0, 1),
+          main = paste("FNR = ", f_minus, "; FPR = ", f_plus))
+    curve(x / (x + f_plus * ((1 - x) / (1 - f_minus))),
+          col = "red", add = TRUE)
+    legend("bottomright",
+           c("True Probability", "Car Talk Answer"),
+           col = c("red", "blue"),
+           bty = "n",
+           lty = c(1, 1)
+           )
+  }
+}
+```
+
+When the prevalence is low (ie rare disease) the Car Talk curve is a very close upper bound on the true probability. For higher prevalence, the Car Talk curve is no longer an upper bound, and the curves get farther apart.
+
+:::
