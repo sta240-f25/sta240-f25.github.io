@@ -1,11 +1,10 @@
-
 library(shiny)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
   
   # Application title
-  titlePanel("What can a diagnostic test teach you?"),
+  titlePanel("The sample space of a simple diagnostic test"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
@@ -51,7 +50,7 @@ server <- function(input, output) {
     TnDp <- FNR * p
     TnDn <- TNR * (1 - p)
     
-    par(mar = c(6, 6, 6, 6))
+    par(mar = c(8, 8, 1, 8))
     
     plot(0, col = "white", xlim = c(0, 1), ylim = c(0, 1), xaxt = "n", yaxt = "n", bty = "n", xlab = "", ylab = "")
     polygon(c(0, p, p, 0), c(FNR, FNR, 1.0, 1.0), col = rgb(1, 0, 0, alpha = 0.25), border = NA)
@@ -62,20 +61,17 @@ server <- function(input, output) {
     mtext("TNR", side = 4, at = TNR / 2, las = 1)
     mtext("FPR", side = 4, at = (1 + TNR) / 2, las = 1)
     
-    mtext("TPR", side = 2, at = (1 + FNR) / 2, las = 1)
-    mtext("FNR", side = 2, at = FNR / 2, las = 1)
+    mtext("TPR", side = 2, at = (1 + FNR) / 2, las = 1, line = 2)
+    mtext("FNR", side = 2, at = FNR / 2, las = 1, line = 2)
     
-    mtext("p(D = +)", side = 1, at = p / 2, las = 1)
-    mtext("P(D = -)", side = 1, at = (1 + p) / 2, las = 1)
+    mtext("p(D = +)", side = 1, at = p / 2, las = 1, line = 2)
+    mtext("P(D = -)", side = 1, at = (1 + p) / 2, las = 1, line = 2)
+    
+    mtext(c("0", "1"), side = 1, at = c(0, 1), las = 1)
+    mtext(c("0", "1"), side = 2, at = c(0, 1), las = 1)
     
   })
 }
 
 # Run the application 
 shinyApp(ui = ui, server = server)
-
-
-
-
-
-
