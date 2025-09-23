@@ -422,7 +422,7 @@ window.Quarto = {
 </header>
 
 
-<p>Testing positive for a disease is not exactly good news, but how alarmed you should be ultimately depends on a few factors: the accuracy of the test and the overall rarity of the disease (the so-called <em>base rate</em>). Before you walk into the doctor’s office, the probability that you are sick is <span class="math inline">\(p = P(D=+)\)</span>, the <strong>prevalence</strong>. This is the unconditional (or <em>marginal</em>) probability that a random member of the population (ie you in that moment) is sick. After you test positive, the <em>revised</em> or <em>conditional</em> probability that you have the disease is given by Bayes’ theorem:</p>
+<p>Testing positive for a disease is not exactly good news, but how alarmed you should be ultimately depends on a few factors: the accuracy of the test and the overall rarity of the disease (the so-called <em>base rate</em>). Before you walk into the doctor’s office, the probability that you are sick is <span class="math inline">\(P(D=+)\)</span>, the <strong>prevalence</strong>. This is the unconditional (or <em>marginal</em>) probability that a random member of the population (ie you in that moment) is sick. After you test positive, the <em>revised</em> or <em>conditional</em> probability that you have the disease is given by Bayes’ theorem:</p>
 <p><span class="math display">\[
 \begin{aligned}
 P(D = +\,|\,T=+)
@@ -433,7 +433,7 @@ P(D = +\,|\,T=+)
 \frac{{\color{blue}{P(T=+\,|\,D=+)}}{\color{red}{P(D=+)}}}{{\color{blue}{P(T=+\,|\,D=+)}}{\color{red}{P(D=+)}}+[1-{\color{green}{P(T=-\,|\,D=-)}}][1-{\color{red}{P(D=+)}}]}
 \\
 &amp;=
-\frac{{\color{blue}{\text{TPR}}}\times{\color{red}{P(D=+)}}}{{\color{blue}{\text{TPR}}}\times{\color{red}{P(D=+)}}+[1-{\color{green}{\text{TNR}}}][1-{\color{red}{P(D=+)}}]}.
+\frac{{\color{blue}{\text{TPR}}}\times{\color{red}{\text{PREV}}}}{{\color{blue}{\text{TPR}}}\times{\color{red}{\text{PREV}}}+(1-{\color{green}{\text{TNR}}})(1-{\color{red}{\text{PREV}}})}.
 \end{aligned}
 \]</span></p>
 <p><span class="math inline">\(P(T=+\,|\,D=+)\)</span> is the true positive rate or <em>sensitivity</em>: the probability that a sick person is correctly diagnosed. <span class="math inline">\(P(T=-\,|\,D=-)\)</span> is the true negative rate or <em>specificity</em>: the probability that a well person is correctly diagnosed. It is the <em>nonlinear</em> interaction of three numbers (prevalence, TPR, and TNR) that determines the revised likelihood that you have the disease. Two numbers interacting linearly is about all a regular human can handle off the dome, hence people are generally bad at reasoning about this stuff.</p>
@@ -449,18 +449,15 @@ P(D = +\,|\,T=+)
 #|   shinylive does not work in self-contained HTML documents.
 #|   Please set `embed-resources: false` in your metadata.
 #| standalone: true
-#| viewerHeight: 500
-
+#| viewerHeight: 650
 
 library(shiny)
 
-# Define UI for application that draws a histogram
 ui &lt;- fluidPage(
   
   # Application title
   titlePanel("The sample space of a simple diagnostic test"),
   
-  # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
       sliderInput("TPR",
@@ -480,14 +477,34 @@ ui &lt;- fluidPage(
                   value = 0.5)
     ),
     
-    # Show a plot of the generated distribution
     mainPanel(
-      plotOutput("distPlot")
+      plotOutput("distPlot"),
+      
+      # ---- Legend goes here ----
+      tags$div(
+        style = "margin-top:20px;",
+        tags$h4("Legend"),
+        tags$div(style="display:flex; align-items:center; margin-bottom:5px;",
+                 tags$div(style="width:20px; height:20px; background-color:rgba(255,0,0,0.25); margin-right:10px;"),
+                 "True Positive (T=+, D=+)"
+        ),
+        tags$div(style="display:flex; align-items:center; margin-bottom:5px;",
+                 tags$div(style="width:20px; height:20px; background-color:rgba(0,255,0,0.25); margin-right:10px;"),
+                 "False Negative (T=-, D=+)"
+        ),
+        tags$div(style="display:flex; align-items:center; margin-bottom:5px;",
+                 tags$div(style="width:20px; height:20px; background-color:rgba(0,0,255,0.25); margin-right:10px;"),
+                 "True Negative (T=-, D=-)"
+        ),
+        tags$div(style="display:flex; align-items:center; margin-bottom:5px;",
+                 tags$div(style="width:20px; height:20px; background-color:rgba(255,165,0,0.25); margin-right:10px;"),
+                 "False Positive (T=+, D=-)"
+        )
+      )
     )
   )
 )
 
-# Define server logic required to draw a histogram
 server &lt;- function(input, output) {
   
   output$distPlot &lt;- renderPlot({
@@ -499,14 +516,11 @@ server &lt;- function(input, output) {
     FNR &lt;- 1 - TPR
     FPR &lt;- 1 - TNR
     
-    TpDp &lt;- TPR * p
-    TpDn &lt;- FPR * (1 - p)
-    TnDp &lt;- FNR * p
-    TnDn &lt;- TNR * (1 - p)
-    
     par(mar = c(8, 8, 1, 8))
     
-    plot(0, col = "white", xlim = c(0, 1), ylim = c(0, 1), xaxt = "n", yaxt = "n", bty = "n", xlab = "", ylab = "")
+    plot(0, col = "white", xlim = c(0, 1), ylim = c(0, 1),
+         xaxt = "n", yaxt = "n", bty = "n", xlab = "", ylab = "")
+    
     polygon(c(0, p, p, 0), c(FNR, FNR, 1.0, 1.0), col = rgb(1, 0, 0, alpha = 0.25), border = NA)
     polygon(c(0, p, p, 0), c(0, 0, FNR, FNR), col = rgb(0, 1, 0, alpha = 0.25), border = NA)
     polygon(c(p, 1, 1, p), c(0, 0, TNR, TNR), col = rgb(0, 0, 1, alpha = 0.25), border = NA)
@@ -519,16 +533,15 @@ server &lt;- function(input, output) {
     mtext("FNR", side = 2, at = FNR / 2, las = 1, line = 2)
     
     mtext("p(D = +)", side = 1, at = p / 2, las = 1, line = 2)
-    mtext("P(D = -)", side = 1, at = (1 + p) / 2, las = 1, line = 2)
+    mtext("p(D = -)", side = 1, at = (1 + p) / 2, las = 1, line = 2)
     
     mtext(c("0", "1"), side = 1, at = c(0, 1), las = 1)
     mtext(c("0", "1"), side = 2, at = c(0, 1), las = 1)
-    
   })
 }
 
-# Run the application 
 shinyApp(ui = ui, server = server)
+
 </code></pre>
 <p>The application below displays how testing positive shifts the probability of disease from <span class="math inline">\(P(D=+)\)</span> to <span class="math inline">\(P(D = +\,|\,T=+)\)</span>. The size of the revision ultimately depends on how big <span class="math inline">\(P(D=+)\)</span> was to begin with, and how good the test is (TPR and TNR). Play around with different values and see what happens:</p>
 <pre class="shinylive-r" data-engine="r"><code>#| '!! shinylive warning !!': |
