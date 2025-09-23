@@ -41,11 +41,7 @@ If you receive a graded assignment back, and you believe that some part of it wa
 -   You should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;
 -   Requests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;
 -   Requests to dispute the number of points deducted for an incorrect response will not be considered;
--   **No grades will be changed after the final exam has been administered on Friday December 12**;
-
-::: callout-warning
-A regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.
-:::
+-   **No grades will be changed after the final exam has been administered on Friday December 12**.
 
 ## Attendance
 
