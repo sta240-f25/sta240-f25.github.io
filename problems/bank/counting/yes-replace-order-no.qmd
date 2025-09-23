@@ -5,7 +5,7 @@ b. Let $x_i$ be the number of times that element $\{i\}$ is selected, for each $
 
 $$x_1 + x_2 + x_3 + x_4 = 2, \quad x_1, x_2, x_3, x_4 \in \{0, 1, 2\}.$$
 
-c. State an analogous equation to part b for general $n$ and $k$. Use this to show that the number of ways you can select $k$ from $n$ without replacement and ignoring order is
+c. State an analogous equation to part b for general $n$ and $k$. Use this to show that the number of ways you can select $k$ from $n$ with replacement and ignoring order is
 
 $$
 \binom{n+k-1}{k}=\frac{(n+k-1)!}{k!(n-1)!}.
