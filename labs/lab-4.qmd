@@ -2,7 +2,7 @@
 title: "Lab 4 - How does ChatGPT generate the next word?"
 subtitle: Due Thursday September 25 at 11:59 PM
 format: html
-draft: true
+draft: false
 editor: 
   mode: source
 ---
