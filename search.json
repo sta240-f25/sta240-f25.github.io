@@ -1223,6 +1223,62 @@
     "text": "A five-card hand is randomly dealt to you from a well-shuffled deck of 52 standard playing cards. What is the probability that your hand contains exactly two suits?"
   },
   {
+    "objectID": "labs/lab-4.html",
+    "href": "labs/lab-4.html",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "",
+    "text": "If you’ve ever asked ChatGPT a question, you may have noticed something; it generates its response one word at a time right before your eyes:\nWhat exactly is it doing? Well, ask it! If you do, the explanation will go something like this…\nChatGPT is an example of a large language model (LLM). Under the hood, there’s this fancy pants deep neural network machine learning mumbo jumbo that has been trained on a massive corpus of documents (books, newspaper articles, academic publications, reddit, all of Wikipedia, etc). When you ask it a question like “What color is the apple?”, the model asks itself “conditional on the text you just gave me, what is the likely next word?” Based on the text it was trained on and the underlying ML model, ChatGPT constructs a conditional probability distribution over the set of “next words” and simulates from it, like with the sample function. The new word that it simulates gets added to the end of the text you provided, and it repeats the process over again: given where we are now, what is the next word likely to be? And on and on…\nSo say you ask it “What color is the apple?” Based on that, the model constructs a probability distribution for \\(P(\\text{next word}\\,|\\,\\texttt{\"What color is the apple?\"})\\). The sample space \\(S\\) here is (basically) the set of all words that the model has seen. That set could be pretty big, but nevertheless it is finite, so we just need to list out all of the possible words together with their individual probabilities:\nOnce this is constructed, the model simulates from the distribution. You could imagine that the code might look something like sample(words, size = 1, prob = conditional_probs). So say that happens and the next word we simulate is “the.” That gets added to the end, and now we want to know \\(P(\\text{next word}\\,|\\,\\texttt{\"What color is the apple? the\"})\\). So we query the underlying model, and it constructs a new distribution on words, conditional on this revised context:\nNotice that the information we are conditioning on has changed, so the probabilities change. Based on the new probabilities, we simulate the next word. Let’s say it ends up being “apple.” So we add that to the end, and ask the model to construct a new distribution for \\(P(\\text{next word}\\,|\\,\\texttt{\"What color is the apple? the apple\"})\\):\nNow we simulate “is,” add that to the end, and query the model for \\(P(\\text{next word}\\,|\\,\\texttt{\"What color is the apple? the apple is\"})\\):\nWe see at this point that “red” is the most likely next word, but we are not searching the table for the most likely next word and slavishly returning it. We are simulating. So there’s a 35% chance we’ll come up with “red,” but also a non-trivial possibility that we’ll come up with “green.” You will notice that if you ask ChatGPT the exact same question multiple times (literally the identical text prompt), it returns different answers. That is because of this element of randomness.\nObviously, the elephant in the room in the above discussion is “where did the probabilities come from?” This is the magic, such as it is, of LLMs. In order to implement this scheme, we need to be able to construct a conditional probability distribution on words given any context. So no matter if you give it “What color is the apple” or “Explain string theory like I’m a genius” or “Why did my wife leave me” or “que se passe t’il,” it needs to come up with a meaningful and useful distribution for the next word, and it has to repeat this thousands if not millions of times. There are so many possibilities that it’s kind of bonkers to expect to be able to do this, but with enough data and computing power and a big enough model, apparently we can pull it off, at least some of the time.\nSo, the question of “where did the probabilities come from?” is sadly beyond the scope of our course. However, the question of “what do you do with the probabilities once you have them?” is perfectly accessible to us, even at this early stage, so let’s have some fun."
+  },
+  {
+    "objectID": "labs/lab-4.html#task-1",
+    "href": "labs/lab-4.html#task-1",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 1",
+    "text": "Task 1\nWe have provided you with a pre-trained language model kn, a vector midsummer_words containing the 3,063 unique words in the play, and a function next_word_probs:\n\ncond_dist &lt;- next_word_probs(context, midsummer_words, kn)\ntail(cond_dist)\n\n         words         prob\n3058  unearned 3.375323e-05\n3059    'scape 3.375323e-05\n3060 serpent's 3.375323e-05\n3061    amends 6.751470e-05\n3062      liar 3.375323e-05\n3063   restore 3.375323e-05\n\n\nSo, given the context, the set of possible words, and the model, it returns a table (a data frame) listing out all the words together with their conditional probabilities given the context.\nRun this function and use the output together with the sample function to simulate a new word."
+  },
+  {
+    "objectID": "labs/lab-4.html#task-2",
+    "href": "labs/lab-4.html#task-2",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 2",
+    "text": "Task 2\nUse the paste function to append the word you simulated in Task 1 to the end of context. Then, starting from this updated context, go back to the beginning, generate a new conditional distribution, and use it to simulate a new word."
+  },
+  {
+    "objectID": "labs/lab-4.html#task-3",
+    "href": "labs/lab-4.html#task-3",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 3",
+    "text": "Task 3\nWrite a for loop that iterates the process in Tasks 1 and 2 in order to add six new words to the context.\n\n\n\n\n\n\nThis might be a tad slow.\n\n\n\nThe function next_word_probs is doing a lot of work under the hood, so in the upcoming tasks, do not be alarmed if it takes a few seconds to run."
+  },
+  {
+    "objectID": "labs/lab-4.html#task-4",
+    "href": "labs/lab-4.html#task-4",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 4",
+    "text": "Task 4\nRerun your code ten times to generate ten different responses. How many of them would you consider approximately coherent?"
+  },
+  {
+    "objectID": "labs/lab-4.html#task-5",
+    "href": "labs/lab-4.html#task-5",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 5",
+    "text": "Task 5\nNow that you have the basic code, play around with different starting contexts besides “now fair hippolyta.” Bear in mind that our world is small here. We’ve trained the model on a single, old text, so if you want coherent responses, you should probably give it something in the ballpark of what it has seen before. I doubt “which banger slaps hardest my dude” will yield anything meaningful (though feel free to try!). For inspiration, here is the full text of the original play."
+  },
+  {
+    "objectID": "labs/lab-4.html#task-6",
+    "href": "labs/lab-4.html#task-6",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 6",
+    "text": "Task 6\nUp to now we’ve been worrying a lot about individual words, but individual words don’t create meaning. It’s how those words interact across phrases and sentences and paragraphs. Unfortunately, we do not have methods for inducing a probability distribution over the set of all possible sentences, or the set of all possible thoughts. But in a sense, language models are attempting to approximate such a thing. And on the evidence to date, maybe they succeed sometimes. Anyway, how do we go from a method that gets things right on the word level to a method that gets things right on the sentence level? Well, therein lies the art of the engineers that work on these things, and one method they have found helpful is called temperature sampling.\nSo far, given the current context, the model returns a (conditional) probability \\(p(i)\\) for each word \\(i\\in \\text{corpus}\\). So far we’ve used these probabilities unmodified. With temperature sampling, before we draw the next word, we would first adjust the probabilities based on a user-defined tuning parameter \\(t&gt;0\\) called the temperature:\n\\[\np_t(i) = \\frac{p(i)^{1/t}}{\\sum\\limits_{j\\in\\text{corpus}}p(j)^{1/t}},\\quad i\\in\\text{corpus}.\n\\]\nIf \\(t=1\\), we’re back to the original probabilities: \\(p_1(i)=p(i)\\). Otherwise, to quote the \\(k\\)-grams people, “higher and lower temperatures make the original probability distribution smoother and rougher, respectively. By making a physical analogy, we can think of less probable words as states with higher energies, and the effect of higher (lower) temperatures is to make more (less) likely to excite these high energy states.” Why do people do this? To the best of my knowledge, it is no deeper than “it seems to work well.” In practice, adjusting the temperature seems to have a macro effect on the overall character of the sentences.\nThe function next_word_probs that we gave you has a fourth argument temp where you can give it a number and it will give you the tempered probabilities. Play around with big and small values, and report any effect that it has on the overall quality of the sentences."
+  },
+  {
+    "objectID": "labs/lab-4.html#task-7",
+    "href": "labs/lab-4.html#task-7",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 7",
+    "text": "Task 7\nCode temperature sampling yourself. Take the probabilities that probs &lt;- next_word_probs(...) gives you when temp = 1.0, and then use basic R commands to apply the formula above and compute a vector temp_probs with the revised numbers for temp = 0.5. Check that your numbers agree with the ones that our function next_word_probs gives when you supply 0.5 as the fourth argument."
+  },
+  {
     "objectID": "labs/lab-3.html",
     "href": "labs/lab-3.html",
     "title": "Lab 3",
