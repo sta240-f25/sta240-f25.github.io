@@ -694,7 +694,7 @@ This might be a tad slow.
 </div>
 </div>
 </section><section id="task-4" class="level2"><h2 class="anchored" data-anchor-id="task-4">Task 4</h2>
-<p>Rerun your code ten times to generate ten different responses. How many of them would you consider <em>approximately</em> coherent?</p>
+<p>Rerun your code five times to generate five different responses. How many of them would you consider <em>approximately</em> coherent?</p>
 </section><section id="task-5" class="level2"><h2 class="anchored" data-anchor-id="task-5">Task 5</h2>
 <p>Now that you have the basic code, play around with different starting contexts besides “now fair hippolyta.” Bear in mind that our world is small here. We’ve trained the model on a single, old text, so if you want coherent responses, you should probably give it something in the ballpark of what it has seen before. I doubt “which banger slaps hardest my dude” will yield anything meaningful (though feel free to try!). For inspiration, <a href="https://shakespeare.mit.edu/midsummer/full.html">here</a> is the full text of the original play.</p>
 </section><section id="task-6" class="level2"><h2 class="anchored" data-anchor-id="task-6">Task 6</h2>
@@ -705,6 +705,19 @@ p_t(i) = \frac{p(i)^{1/t}}{\sum\limits_{j\in\text{corpus}}p(j)^{1/t}},\quad i\in
 \]</span></p>
 <p>If <span class="math inline">\(t=1\)</span>, we’re back to the original probabilities: <span class="math inline">\(p_1(i)=p(i)\)</span>. Otherwise, to quote the <span class="math inline">\(k\)</span>-grams people, “higher and lower temperatures make the original probability distribution smoother and rougher, respectively. By making a physical analogy, we can think of less probable words as states with higher energies, and the effect of higher (lower) temperatures is to make more (less) likely to excite these high energy states.” Why do people do this? To the best of my knowledge, it is no deeper than “it seems to work well.” In practice, adjusting the temperature seems to have a macro effect on the overall character of the <em>sentences</em>.</p>
 <p>The function <code>next_word_probs</code> that we gave you has a fourth argument <code>temp</code> where you can give it a number and it will give you the <em>tempered</em> probabilities. Play around with big and small values, and report any effect that it has on the overall quality of the sentences.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Think about it
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As you increase the temperature and <span class="math inline">\(t\to\infty\)</span>, what does that do to the probabilities?</p>
+</div>
+</div>
 </section><section id="task-7-optional" class="level2"><h2 class="anchored" data-anchor-id="task-7-optional">Task 7 (optional)</h2>
 <p>Code temperature sampling yourself. Take the probabilities that <code>probs &lt;- next_word_probs(...)</code> gives you when <code>temp = 1.0</code>, and then use basic <code>R</code> commands to apply the formula above and compute a vector <code>temp_probs</code> with the revised numbers for <code>temp = 0.5</code>. Check that your numbers agree with the ones that our function <code>next_word_probs</code> gives when you supply <code>0.5</code> as the fourth argument.</p>
 </section></section><section id="further-reading" class="level1"><h1>Further reading</h1>
