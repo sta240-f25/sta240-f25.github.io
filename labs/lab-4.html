@@ -335,6 +335,12 @@ window.Quarto = {
  <span class="menu-text">Vectorization</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/rng-seed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setting a seed</span></a>
+  </div>
+</li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -633,6 +639,19 @@ window.Quarto = {
 <p>We see at this point that “red” is the most likely next word, but we are not searching the table for the most likely next word and slavishly returning it. We are simulating. So there’s a 35% chance we’ll come up with “red,” but also a non-trivial possibility that we’ll come up with “green.” You will notice that if you ask ChatGPT the exact same question multiple times (literally the identical text prompt), it returns different answers. That is because of this element of randomness.</p>
 <p>Obviously, the elephant in the room in the above discussion is “where did the probabilities come from?” This is the magic, such as it is, of LLMs. In order to implement this scheme, we need to be able to construct a conditional probability distribution on words given <em>any</em> context. So no matter if you give it “What color is the apple” or “Explain string theory like I’m a genius” or “Why did my wife leave me” or “que se passe t’il,” it needs to come up with a meaningful and useful distribution for the next word, and it has to repeat this thousands if not millions of times. There are so many possibilities that it’s kind of bonkers to expect to be able to do this, but with enough data and computing power and a big enough model, apparently we can pull it off, at least some of the time.</p>
 <p>So, the question of “where did the probabilities come from?” is sadly beyond the scope of our course. However, the question of “what do you do with the probabilities once you have them?” is perfectly accessible to us, even at this early stage, so let’s have some fun.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Before you start
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Read the explainer on <a href="https://sta240-f25.github.io/explainers/rng-seed.html">random number seeds</a>, and use them in your lab write-up today.</p>
+</div>
+</div>
 <section id="babys-first-language-model" class="level1"><h1>Baby’s first language model</h1>
 <p>The <a href="https://en.wikipedia.org/wiki/Word_n-gram_language_model"><span class="math inline">\(k\)</span>-gram language model</a> is I guess what you’d call a “small language model.” Next to ChatGPT, it looks prehistoric. But it is simple and can be comfortably run on a laptop. We have trained this SLM on a single document: the text of Shakespeare’s <em>A Midsummer Night’s Dream</em>. Given the pre-trained model we are handing you, we ask that you implement the recursive scheme above in order to generate a text response, the same way ChatGPT does.</p>
 <p>In all cases, the starting <code>context</code> is</p>
@@ -694,7 +713,7 @@ p_t(i) = \frac{p(i)^{1/t}}{\sum\limits_{j\in\text{corpus}}p(j)^{1/t}},\quad i\in
 <li>The guy who created WolframAlpha has a nice <a href="https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/">primer</a>;</li>
 <li>People seemed to like <a href="https://youtu.be/zjkBMFhNj_g?feature=shared">this video</a> when it made the rounds a few years back;</li>
 <li>“<a href="https://arxiv.org/abs/2502.17814">An overview of large language models for statisticians</a>,” by several heavy-hitting ML researchers;</li>
-<li>“<a href="https://arxiv.org/abs/2505.19145">Do large language models (really) need statistical foundations?</a>,” by Weijie Su</li>
+<li>“<a href="https://arxiv.org/abs/2505.19145">Do large language models (really) need statistical foundations?</a>,” by Weijie Su;</li>
 <li>
 <a href="https://cran.r-project.org/web/packages/kgrams/vignettes/kgrams.html">This</a> is the <code>R</code> package that we used for this lab. The LLMs of today are light years ahead of the simple <span class="math inline">\(k\)</span>-grams model, but some concepts are timeless: tokenization, temperature sampling, etc. Whether your language model is large or small, these things are in play. So if you play around with the <span class="math inline">\(k\)</span>-grams model, it could serve as a nice sandbox for getting familiar with those foundational concepts.</li>
 </ul>

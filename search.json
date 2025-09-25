@@ -77,6 +77,17 @@
     ]
   },
   {
+    "objectID": "explainers/rng-seed.html",
+    "href": "explainers/rng-seed.html",
+    "title": "Setting a random number seed",
+    "section": "",
+    "text": "Statistical computing software like R can generate (pseudo)random numbers, like this:\n\nsample(c(1, 2, 3, 4, 5, 6), 5, replace = TRUE)\n\n[1] 1 4 1 2 5\n\n\nOr this:\n\nrbinom(5, 50, 0.3)\n\n[1] 20 16 16 10 12\n\n\nOr this:\n\nrnorm(5)\n\n[1] -0.928567035 -0.294720447 -0.005767173  2.404653389  0.763593461\n\n\nLook pretty random to me. This allows us to perform simulations, which is an important part of the modern statistician’s toolkit. Having said that, when you’re working with computer-generated random numbers, you want your work to be reproducible so that other people can check it. This means that you want to set a random number seed before you do a simulation. This ensures that the stream of random numbers in your simulation is the same every time, and someone else could run your code and get the exact same results that you did.\nSetting a seed looks like this:\n\nset.seed(8675309)\n\nrnorm(5)\n\n[1] -0.9965824  0.7218241 -0.6172088  2.0293916  1.0654161\n\n\nEvery time you run that code, you will get the same numbers:\n\nset.seed(8675309)\n\nrnorm(5)\n\n[1] -0.9965824  0.7218241 -0.6172088  2.0293916  1.0654161\n\n\nSo, if you ever write a code chunk that generates random numbers (eg. using the sample function or one of the r- functions), you should begin the code chunk by setting a random number seed so that you get the same results every time you run your stuff. The syntax as you saw above is set.seed(INTEGER). Sometimes we will tell you what number to use. Other times (and once you exit the course), you can put whatever you want. It doesn’t really matter. If you require inspiration, try these:\n\n1\n20\n988\n24601\n362436\n525600\n8675309\n8005882300",
+    "crumbs": [
+      "`R` Explainers",
+      "Setting a seed"
+    ]
+  },
+  {
     "objectID": "explainers/latex.html",
     "href": "explainers/latex.html",
     "title": "Typesetting math with LaTeX and Quarto",
