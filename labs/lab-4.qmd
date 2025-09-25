@@ -207,7 +207,7 @@ Now that you have the basic code, play around with different starting contexts b
 
 Up to now we've been worrying a lot about individual words, but individual words don't create meaning. It's how those words interact across phrases and sentences and paragraphs. Unfortunately, we do not have methods for inducing a probability distribution over the set of all possible sentences, or the set of all possible thoughts. But in a sense, language models are attempting to *approximate* such a thing. And on the evidence to date, maybe they succeed sometimes. Anyway, how do we go from a method that gets things right on the word level to a method that gets things right on the sentence level? Well, therein lies the art of the engineers that work on these things, and one method they have found helpful is called *temperature sampling*.
 
-So far, given the current context, the model returns a (conditional) probability $p(i)$ for each word $i\in \text{corpus}$. So far we've used these probabilities unmodified. With temperature sampling, before we draw the next word, we would first adjust the probabilities based on a user-defined tuning parameter $t>0$ called the *temperature*:
+So far, given the current context, the model returns a (conditional) probability $p(i)$ for each word $i\in \text{corpus}$. So far we've used these probabilities unmodified. With temperature sampling, before we draw the next word, we first adjust the probabilities based on a user-defined tuning parameter $t>0$ called the *temperature*:
 
 $$
 p_t(i) = \frac{p(i)^{1/t}}{\sum\limits_{j\in\text{corpus}}p(j)^{1/t}},\quad i\in\text{corpus}.
