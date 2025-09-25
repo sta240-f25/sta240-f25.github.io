@@ -197,7 +197,7 @@ The function `next_word_probs` is doing a lot of work under the hood, so in the 
 
 ## Task 4
 
-Rerun your code ten times to generate ten different responses. How many of them would you consider *approximately* coherent?
+Rerun your code five times to generate five different responses. How many of them would you consider *approximately* coherent?
 
 ## Task 5
 
@@ -216,6 +216,11 @@ $$
 If $t=1$, we're back to the original probabilities: $p_1(i)=p(i)$. Otherwise, to quote the $k$-grams people, "higher and lower temperatures make the original probability distribution smoother and rougher, respectively. By making a physical analogy, we can think of less probable words as states with higher energies, and the effect of higher (lower) temperatures is to make more (less) likely to excite these high energy states." Why do people do this? To the best of my knowledge, it is no deeper than "it seems to work well." In practice, adjusting the temperature seems to have a macro effect on the overall character of the *sentences*.
 
 The function `next_word_probs` that we gave you has a fourth argument `temp` where you can give it a number and it will give you the *tempered* probabilities. Play around with big and small values, and report any effect that it has on the overall quality of the sentences.
+
+::: callout-tip
+## Think about it
+As you increase the temperature and $t\to\infty$, what does that do to the probabilities?
+:::
 
 ## Task 7 (optional)
 
