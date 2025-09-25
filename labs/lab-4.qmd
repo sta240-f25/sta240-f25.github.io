@@ -211,7 +211,7 @@ If $t=1$, we're back to the original probabilities: $p_1(i)=p(i)$. Otherwise, to
 
 The function `next_word_probs` that we gave you has a fourth argument `temp` where you can give it a number and it will give you the *tempered* probabilities. Play around with big and small values, and report any effect that it has on the overall quality of the sentences.
 
-## Task 7
+## Task 7 (optional)
 
 Code temperature sampling yourself. Take the probabilities that `probs <- next_word_probs(...)` gives you when `temp = 1.0`, and then use basic `R` commands to apply the formula above and compute a vector `temp_probs` with the revised numbers for `temp = 0.5`. Check that your numbers agree with the ones that our function `next_word_probs` gives when you supply `0.5` as the fourth argument.
 
@@ -222,5 +222,6 @@ If you're interested in this stuff...
 -   The guy who created WolframAlpha has a nice [primer](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/);
 -   People seemed to like [this video](https://youtu.be/zjkBMFhNj_g?feature=shared) when it made the rounds a few years back;
 - "[An overview of large language models for statisticians](https://arxiv.org/abs/2502.17814)," by several heavy-hitting ML researchers;
+- "[Do large language models (really) need statistical foundations?](https://arxiv.org/abs/2505.19145)," by Weijie Su
 -   [This](https://cran.r-project.org/web/packages/kgrams/vignettes/kgrams.html) is the `R` package that we used for this lab. The LLMs of today are light years ahead of the simple $k$-grams model, but some concepts are timeless: tokenization, temperature sampling, etc. Whether your language model is large or small, these things are in play. So if you play around with the $k$-grams model, it could serve as a nice sandbox for getting familiar with those foundational concepts.
 
