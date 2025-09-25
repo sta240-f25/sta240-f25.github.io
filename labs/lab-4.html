@@ -60,6 +60,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../labs/lab-3.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -133,7 +134,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lab 4 - How does ChatGPT generate the next word?</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-1.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-4.html">Lab 4</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -373,13 +374,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Labs</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
@@ -396,6 +397,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lab 4</span></a>
   </div>
 </li>
       </ul>
@@ -421,14 +428,14 @@ window.Quarto = {
   <li><a href="#task-4" id="toc-task-4" class="nav-link" data-scroll-target="#task-4">Task 4</a></li>
   <li><a href="#task-5" id="toc-task-5" class="nav-link" data-scroll-target="#task-5">Task 5</a></li>
   <li><a href="#task-6" id="toc-task-6" class="nav-link" data-scroll-target="#task-6">Task 6</a></li>
-  <li><a href="#task-7" id="toc-task-7" class="nav-link" data-scroll-target="#task-7">Task 7</a></li>
+  <li><a href="#task-7-optional" id="toc-task-7-optional" class="nav-link" data-scroll-target="#task-7-optional">Task 7 (optional)</a></li>
   </ul>
 </li>
   <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-1.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-4.html">Lab 4</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">Lab 4 - How does ChatGPT generate the next word?</h1>
 <p class="subtitle lead">Due Thursday September 25 at 11:59 PM</p>
 </div>
@@ -679,7 +686,7 @@ p_t(i) = \frac{p(i)^{1/t}}{\sum\limits_{j\in\text{corpus}}p(j)^{1/t}},\quad i\in
 \]</span></p>
 <p>If <span class="math inline">\(t=1\)</span>, we’re back to the original probabilities: <span class="math inline">\(p_1(i)=p(i)\)</span>. Otherwise, to quote the <span class="math inline">\(k\)</span>-grams people, “higher and lower temperatures make the original probability distribution smoother and rougher, respectively. By making a physical analogy, we can think of less probable words as states with higher energies, and the effect of higher (lower) temperatures is to make more (less) likely to excite these high energy states.” Why do people do this? To the best of my knowledge, it is no deeper than “it seems to work well.” In practice, adjusting the temperature seems to have a macro effect on the overall character of the <em>sentences</em>.</p>
 <p>The function <code>next_word_probs</code> that we gave you has a fourth argument <code>temp</code> where you can give it a number and it will give you the <em>tempered</em> probabilities. Play around with big and small values, and report any effect that it has on the overall quality of the sentences.</p>
-</section><section id="task-7" class="level2"><h2 class="anchored" data-anchor-id="task-7">Task 7</h2>
+</section><section id="task-7-optional" class="level2"><h2 class="anchored" data-anchor-id="task-7-optional">Task 7 (optional)</h2>
 <p>Code temperature sampling yourself. Take the probabilities that <code>probs &lt;- next_word_probs(...)</code> gives you when <code>temp = 1.0</code>, and then use basic <code>R</code> commands to apply the formula above and compute a vector <code>temp_probs</code> with the revised numbers for <code>temp = 0.5</code>. Check that your numbers agree with the ones that our function <code>next_word_probs</code> gives when you supply <code>0.5</code> as the fourth argument.</p>
 </section></section><section id="further-reading" class="level1"><h1>Further reading</h1>
 <p>If you’re interested in this stuff…</p>
@@ -687,6 +694,7 @@ p_t(i) = \frac{p(i)^{1/t}}{\sum\limits_{j\in\text{corpus}}p(j)^{1/t}},\quad i\in
 <li>The guy who created WolframAlpha has a nice <a href="https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/">primer</a>;</li>
 <li>People seemed to like <a href="https://youtu.be/zjkBMFhNj_g?feature=shared">this video</a> when it made the rounds a few years back;</li>
 <li>“<a href="https://arxiv.org/abs/2502.17814">An overview of large language models for statisticians</a>,” by several heavy-hitting ML researchers;</li>
+<li>“<a href="https://arxiv.org/abs/2505.19145">Do large language models (really) need statistical foundations?</a>,” by Weijie Su</li>
 <li>
 <a href="https://cran.r-project.org/web/packages/kgrams/vignettes/kgrams.html">This</a> is the <code>R</code> package that we used for this lab. The LLMs of today are light years ahead of the simple <span class="math inline">\(k\)</span>-grams model, but some concepts are timeless: tokenization, temperature sampling, etc. Whether your language model is large or small, these things are in play. So if you play around with the <span class="math inline">\(k\)</span>-grams model, it could serve as a nice sandbox for getting familiar with those foundational concepts.</li>
 </ul>
@@ -1090,7 +1098,14 @@ p_t(i) = \frac{p(i)^{1/t}}{\sum\limits_{j\in\text{corpus}}p(j)^{1/t}},\quad i\in
       }
     }
   });
-  </script>
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../labs/lab-3.html" class="pagination-link" aria-label="Lab 3">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lab 3</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
