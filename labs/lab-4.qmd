@@ -222,6 +222,6 @@ If you're interested in this stuff...
 -   The guy who created WolframAlpha has a nice [primer](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/);
 -   People seemed to like [this video](https://youtu.be/zjkBMFhNj_g?feature=shared) when it made the rounds a few years back;
 - "[An overview of large language models for statisticians](https://arxiv.org/abs/2502.17814)," by several heavy-hitting ML researchers;
-- "[Do large language models (really) need statistical foundations?](https://arxiv.org/abs/2505.19145)," by Weijie Su
+- "[Do large language models (really) need statistical foundations?](https://arxiv.org/abs/2505.19145)," by Weijie Su;
 -   [This](https://cran.r-project.org/web/packages/kgrams/vignettes/kgrams.html) is the `R` package that we used for this lab. The LLMs of today are light years ahead of the simple $k$-grams model, but some concepts are timeless: tokenization, temperature sampling, etc. Whether your language model is large or small, these things are in play. So if you play around with the $k$-grams model, it could serve as a nice sandbox for getting familiar with those foundational concepts.
 
