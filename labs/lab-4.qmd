@@ -81,6 +81,12 @@ Obviously, the elephant in the room in the above discussion is "where did the pr
 
 So, the question of "where did the probabilities come from?" is sadly beyond the scope of our course. However, the question of "what do you do with the probabilities once you have them?" is perfectly accessible to us, even at this early stage, so let's have some fun.
 
+::: callout-tip
+## Before you start
+
+Read the explainer on [random number seeds](https://sta240-f25.github.io/explainers/rng-seed.html), and use them in your lab write-up today.
+:::
+
 # Baby's first language model
 
 The [$k$-gram language model](https://en.wikipedia.org/wiki/Word_n-gram_language_model) is I guess what you'd call a "small language model." Next to ChatGPT, it looks prehistoric. But it is simple and can be comfortably run on a laptop. We have trained this SLM on a single document: the text of Shakespeare's *A Midsummer Night's Dream*. Given the pre-trained model we are handing you, we ask that you implement the recursive scheme above in order to generate a text response, the same way ChatGPT does.
