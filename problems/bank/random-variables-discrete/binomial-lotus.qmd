@@ -1,0 +1,5 @@
+If $X\sim\text{Binomial}(n,\,p)$, show that
+
+$$
+E\left[\frac{1}{X+1}\right]=\frac{1-(1-p)^{n+1}}{(n+1)p}.
+$$

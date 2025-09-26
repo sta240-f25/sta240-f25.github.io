@@ -1,0 +1,18 @@
+Let $X$ be a random variable with the following pmf:
+
+::: {.center-table}
+| $x$ | $P(X=x)$ |
+|-----|----------|
+| -1  | 0.500    |
+| 0   | 0.250    |
+| 1   | 0.125    |
+| 2   | 0.125    |
+:::
+
+a.  What is the mean of $X$?
+b.  What is the pmf of $Y = 2X-3$?
+c.  What is the mean of $Y$?
+d.  What is the pmf of $W = X^2$?
+e.  What is the mean of $W$?
+f.  What is the conditional pmf of $X$ given $X \neq 0$?
+g.  What is the conditional mean of $X$ given $X \neq 0$?

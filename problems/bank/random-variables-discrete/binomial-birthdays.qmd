@@ -1,0 +1,5 @@
+Forty-nine members of the Cleveland Orchestra string section wish to compare their birthdays. Assume that no one has February 29th and that all birthdays are independent.
+
+a.  What is the expected number of pairs of people with the same birthday?
+b.  What is the expected number of days on which at least two players were born?
+

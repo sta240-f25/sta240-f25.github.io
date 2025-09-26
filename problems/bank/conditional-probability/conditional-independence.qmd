@@ -1,0 +1,7 @@
+Let $A$, $B$, and $C$ be events with $P(C) > 0$. $A$ and $B$ are **conditionally independent** given $C$ if and only if
+
+$$
+P(A \cap B \mid C) = P(A \mid C)P(B \mid C).
+$$
+
+Show that the above implies $P(A \mid B\cap C) = P(A \mid C)$.
