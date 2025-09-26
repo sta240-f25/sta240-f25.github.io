@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "distributions/discrete-hypergeometric.html",
+    "href": "distributions/discrete-hypergeometric.html",
+    "title": "Hypergeometric distribution",
+    "section": "",
+    "text": "\\[\nP(X = k)\n= \\frac{\\binom{K}{k} \\binom{N - K}{n-k}}{\\binom{N}{n}}.\n\\]\n\ndhyper(x, m, n, k)\nphyper(q, m, n, k)\nqhyper(p, m, n, k)\nrhyper(ndraw, m, n, k)"
+  },
+  {
     "objectID": "explainers/sample.html",
     "href": "explainers/sample.html",
     "title": "The sample command",
@@ -1188,6 +1195,97 @@
     ]
   },
   {
+    "objectID": "problems/pset-4.html",
+    "href": "problems/pset-4.html",
+    "title": "Problem Set 4",
+    "section": "",
+    "text": "Recommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-0",
+    "href": "problems/pset-4.html#problem-0",
+    "title": "Problem Set 4",
+    "section": "",
+    "text": "Recommend some music for us to listen to while we grade this."
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-1",
+    "href": "problems/pset-4.html#problem-1",
+    "title": "Problem Set 4",
+    "section": "Problem 1",
+    "text": "Problem 1\nSadly, we have a midterm exam coming up on Thursday October 9. Everything you have seen on Problem Sets 1 through 4 is fair game for the exam: set theory, probability spaces and axioms, probability rules and proofs, counting, conditional probability and independence, and discrete random variables.\nLook back through the course materials thus far and select the topic that you think you understand the least. Study this topic carefully and then do two things:\n\nWrite a few paragraphs where you explain this topic to a five-year-old using only words, pictures, and toy examples;\nAfter you’re done reviewing, and after your response to part a, include one thing you’re still unsure about or a question you’d like to ask about your chosen topic.\n\nAfter you submit this problem set, I will answer all of the class’s questions and post an anonymized “Q&A” as part of the exam review materials."
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-2",
+    "href": "problems/pset-4.html#problem-2",
+    "title": "Problem Set 4",
+    "section": "Problem 2",
+    "text": "Problem 2\nAssume that \\(P(A)&gt;0\\) and prove that\n\\[\nP(A\\cap B\\,|\\, A)\\geq P(A\\cap B\\,|\\, A\\cup B).\n\\]"
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-3",
+    "href": "problems/pset-4.html#problem-3",
+    "title": "Problem Set 4",
+    "section": "Problem 3",
+    "text": "Problem 3\nLet \\(A\\), \\(B\\), and \\(C\\) be events with \\(P(C) &gt; 0\\). \\(A\\) and \\(B\\) are conditionally independent given \\(C\\) if and only if\n\\[\nP(A \\cap B \\mid C) = P(A \\mid C)P(B \\mid C).\n\\]\nShow that the above implies \\(P(A \\mid B\\cap C) = P(A \\mid C)\\)."
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-4",
+    "href": "problems/pset-4.html#problem-4",
+    "title": "Problem Set 4",
+    "section": "Problem 4",
+    "text": "Problem 4\nAn urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-5",
+    "href": "problems/pset-4.html#problem-5",
+    "title": "Problem Set 4",
+    "section": "Problem 5",
+    "text": "Problem 5\nKing Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 soldiers;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten soldiers. We can then identify which soldiers are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-6",
+    "href": "problems/pset-4.html#problem-6",
+    "title": "Problem Set 4",
+    "section": "Problem 6",
+    "text": "Problem 6\nNot all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.\nImagine an election where Angela Lansbury receives \\(a\\) votes, Bernadette Peters receives \\(b\\) votes, and Angela provisionally wins with a margin of victory \\(a-b&gt;0\\). However, of the total \\(a+b\\) votes, we learn that \\(k&gt;a-b\\) were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the \\(k\\) invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.\nTo model this, think of the original \\(a+b\\) ballots as balls in the proverbial urn. \\(a\\) of these balls are red, and \\(b\\) of these balls are blue, and assume that \\(a,\\, b&gt;k\\). Removing the \\(k\\) invalid ballots is like drawing \\(k\\) balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the \\(a+b\\) original ballots is equally likely to have been invalid. Next, imagine we randomly remove \\(k\\) balls from the urn, and let \\(X\\) be a random variable that counts the number of the removed/invalid ballots that belong to Angela. In other words, the number of red balls removed. If \\(X\\) is large enough, it will swing the election in Bernadette’s favor.\n\nWhat are the range and the pmf of the random variable \\(X\\)?\nFor what values of \\(X\\) does removing \\(k\\) ballots reverse the outcome of the election?\nBased on your answers to the previous parts, what is the probability that the election result is reversed when the \\(k\\) bad ballots are removed? Give a general formula for this probability, and then compute the probability for each of the real elections listed in Table 1;\nThe random variable \\(X\\) that you derived in the first part can be approximated by \\(\\text{Binom}(k,\\,1/2)\\). Explain why this approximation might be “good enough,” and verify that it’s not too bad by computing the approximate probability of reversal for the elections in Table 1. Compare the approximate probabilities to the actual ones from the previous part;\nLet’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a figure in R with the following features:\n\nthe margin of victory \\(a-b\\) on the horizontal axis;\nthe number of bad ballots \\(k\\) on the vertical axis;\nscatterplot where each point represents an election in Table 1, with the points colored according to the decision that was made in the case;\ndivide the plane into two regions, one where the approximate probability of reversal is less than 0.05 and one where it is greater.\n\nWrite a few pithy paragraphs commenting on the following:\n\nthe assumptions of our lil’ model. Do you think they are innocuous? What might you change, and how?\nthe match or lack thereof between our model and the decisions that were actually made in the real cases;\nHow do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?\n\n\n\n\n\nTable 1: Close elections\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nelection\nyear\nwin\nloss\ntotal\nmargin\ninvalid\ndecision\n\n\n\n\nIppolito v. Power\n1968\n1,422\n1,405\n2,827\n17\n101\nvoid\n\n\nSantucci v. Power\n1969\n58,076\n57,981\n116,057\n95\n448\nvoid\n\n\nDeMartini v. Power\n1970\n2,656\n2,594\n5,250\n62\n136\nupheld\n\n\nMaine House\n1976\n1,193\n1,060\n2,253\n133\n208\nvoid\n\n\nAnn Arbor mayor\n1977\n10,660\n10,659\n21,319\n1\n20\nvoid\n\n\nBrunswick ME town council\n1980\n2,390\n2,383\n4,773\n7\n16\nupheld\n\n\nWashington governor\n2004\n1,373,357\n1,373,228\n2,746,585\n129\n1,439\nupheld"
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-7",
+    "href": "problems/pset-4.html#problem-7",
+    "title": "Problem Set 4",
+    "section": "Problem 7",
+    "text": "Problem 7\nForty-nine members of the Cleveland Orchestra string section wish to compare their birthdays. Assume that no one has February 29th and that all birthdays are independent.\n\nWhat is the expected number of pairs of people with the same birthday?\nWhat is the expected number of days on which at least two players were born?"
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-8",
+    "href": "problems/pset-4.html#problem-8",
+    "title": "Problem Set 4",
+    "section": "Problem 8",
+    "text": "Problem 8\nA pair of fair dice is rolled until a sum of either a 5 or a 7 appears. What is the probability that a 5 occurs first?"
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-9",
+    "href": "problems/pset-4.html#problem-9",
+    "title": "Problem Set 4",
+    "section": "Problem 9",
+    "text": "Problem 9\nLet \\(X\\) be a random variable with the following pmf:\n\n\n\n\n\\(x\\)\n\\(P(X=x)\\)\n\n\n\n\n-1\n0.500\n\n\n0\n0.250\n\n\n1\n0.125\n\n\n2\n0.125\n\n\n\n\n\nWhat is the mean of \\(X\\)?\nWhat is the pmf of \\(Y = 2X-3\\)?\nWhat is the mean of \\(Y\\)?\nWhat is the pmf of \\(W = X^2\\)?\nWhat is the mean of \\(W\\)?\nWhat is the conditional pmf of \\(X\\) given \\(X \\neq 0\\)?\nWhat is the conditional mean of \\(X\\) given \\(X \\neq 0\\)?"
+  },
+  {
+    "objectID": "problems/pset-4.html#problem-10",
+    "href": "problems/pset-4.html#problem-10",
+    "title": "Problem Set 4",
+    "section": "Problem 10",
+    "text": "Problem 10\nIf \\(X\\sim\\text{Binomial}(n,\\,p)\\), show that\n\\[\nE\\left[\\frac{1}{X+1}\\right]=\\frac{1-(1-p)^{n+1}}{(n+1)p}.\n\\]"
+  },
+  {
+    "objectID": "problems/pset-4.html#submission",
+    "href": "problems/pset-4.html#submission",
+    "title": "Problem Set 4",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.\nDo not forget to include the following:\n\nFor each problem, please acknowledge your collaborators;\nIf a problem required you to code something, please include both the code and the output. “Including the code” can be as crude as a screenshot, but you might also use Quarto to get a nice lil’ pdf that you can merge with the rest of your submission."
+  },
+  {
     "objectID": "problems/bank/random-variables-continuous/quantum.html",
     "href": "problems/bank/random-variables-continuous/quantum.html",
     "title": "STA 240 Fall 2025",
@@ -1202,39 +1300,53 @@
     "text": "Footnotes\n\nIf you’re like me, you cannot do this. Oh well.↩︎"
   },
   {
-    "objectID": "problems/bank/conditional-probability/target-practice.html",
-    "href": "problems/bank/conditional-probability/target-practice.html",
+    "objectID": "problems/bank/conditional-probability/conditional-independence.html",
+    "href": "problems/bank/conditional-probability/conditional-independence.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Pearl Bailey and Elaine Stritch go target shooting. Suppose that each of Pearl’s shots hits a wooden duck target with probability \\(p_1\\), while each shot of Elaine’s hits it with probability \\(p_2\\), independent of Pearl. Suppose that they shoot simultaneously at the same target. If the wooden duck is knocked over (indicating that it was hit), what is the probability that both shots hit the duck?"
+    "text": "Let \\(A\\), \\(B\\), and \\(C\\) be events with \\(P(C) &gt; 0\\). \\(A\\) and \\(B\\) are conditionally independent given \\(C\\) if and only if\n\\[\nP(A \\cap B \\mid C) = P(A \\mid C)P(B \\mid C).\n\\]\nShow that the above implies \\(P(A \\mid B\\cap C) = P(A \\mid C)\\)."
   },
   {
-    "objectID": "problems/bank/conditional-probability/conditional-inequality.html",
-    "href": "problems/bank/conditional-probability/conditional-inequality.html",
+    "objectID": "problems/bank/conditional-probability/independent-complements.html",
+    "href": "problems/bank/conditional-probability/independent-complements.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Assume that \\(P(A)&gt;0\\) and prove that\n\\[\nP(A\\cap B\\,|\\, A)\\geq P(A\\cap B\\,|\\, A\\cup B).\n\\]"
+    "text": "If we know that \\(A\\) and \\(B\\) are independent events, show that their complements \\(A^c\\) and \\(B^c\\) are also independent events."
   },
   {
-    "objectID": "problems/bank/conditional-probability/axioms-conditional.html",
-    "href": "problems/bank/conditional-probability/axioms-conditional.html",
+    "objectID": "problems/bank/conditional-probability/bdj-encryption.html",
+    "href": "problems/bank/conditional-probability/bdj-encryption.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(S\\) be a sample space with probability measure \\(P\\), and let \\(B\\subseteq S\\) be some event with \\(P(B)&gt;0\\). Show that the function \\(G(A)=P(A\\,|\\, B)\\) is a new probability measure on \\(S\\). That is, show that \\(G\\) satisfies the axioms:\n\ntotal measure 1;\nnonnegativity;\ncountable additivity."
+    "text": "An encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/testing-symptoms.html",
-    "href": "problems/bank/conditional-probability/testing-symptoms.html",
+    "objectID": "problems/bank/conditional-probability/bdj-circuit.html",
+    "href": "problems/bank/conditional-probability/bdj-circuit.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\).\nTable 1 enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients’ “true” disease status was determined by a PCR test that we assume is hella accurate.\n\n\n\nTable 1: Some COVID-19 numbers. Source: CDC\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n-\n-\n-\n0.7650\n\n\n-\n-\n+\n0.0128\n\n\n-\n+\n-\n0.1685\n\n\n-\n+\n+\n0.0018\n\n\n+\n-\n-\n0.0091\n\n\n+\n-\n+\n0.0064\n\n\n+\n+\n-\n0.0073\n\n\n+\n+\n+\n0.0291\n\n\n\n\n\n\n\n\nWhat is the overall disease prevalence?\nWhat is the sensitivity of the test?\nWhat is the specificity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?\nWhat is the overall probability that the test is wrong?"
+    "text": "The figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
   },
   {
-    "objectID": "problems/bank/set-theory/basic-set-practice.html",
-    "href": "problems/bank/set-theory/basic-set-practice.html",
+    "objectID": "problems/bank/set-theory/picture-proofs.html",
+    "href": "problems/bank/set-theory/picture-proofs.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Take \\(\\mathbb{R}\\) to be your reference set, and consider these subsets:\n\\[\n\\begin{align*}\nA&=[1,\\,5]\\\\\nB&=\\{x\\in\\mathbb{R}\\,:\\,|x|&gt;2\\}\\\\\nC&=(-\\infty,\\,0]\\\\\nI_n&=\\left[0,\\,\\frac{1}{n}\\right]\n\\end{align*}\n\\]\nExpress each of the following in as simplified and concise a form as possible:\n\n\\(A^c\\)\n\\(A \\cup B\\)\n\\(A\\cap C\\)\n\\(A\\cap C^c\\)\n\\(B \\cap C^c\\)\n\\(A^c \\cap B^c \\cap C^c\\)\n\\((A \\cup B) \\cap C\\)\n\\(\\bigcap_{n=1}^\\infty I_n\\)\n\\(\\bigcup_{n=1}^\\infty I_n\\)"
+    "text": "“Prove” each set identity with a picture:\n\nDistributive property: \\(A\\cup(B\\cap C)=(A\\cup B)\\cap(A\\cup C)\\);\nDe Morgan: \\((A\\cap B)^{c}=A^{c}\\cup B^{c}\\);"
+  },
+  {
+    "objectID": "problems/bank/random-variables-discrete/memoryless-geometric.html",
+    "href": "problems/bank/random-variables-discrete/memoryless-geometric.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Let \\(D \\sim \\text{Geometric}(p)\\), and fix positive integers \\(n\\) and \\(k\\). What is \\(P(D = n + k \\,|\\, D &gt; k)\\)? Does this look familiar?"
+  },
+  {
+    "objectID": "problems/bank/random-variables-discrete/mak-rv.html",
+    "href": "problems/bank/random-variables-discrete/mak-rv.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Let \\(X\\) be a random variable with the following pmf:\n\n\n\n\n\\(x\\)\n\\(P(X=x)\\)\n\n\n\n\n-1\n0.500\n\n\n0\n0.250\n\n\n1\n0.125\n\n\n2\n0.125\n\n\n\n\n\nWhat is the mean of \\(X\\)?\nWhat is the pmf of \\(Y = 2X-3\\)?\nWhat is the mean of \\(Y\\)?\nWhat is the pmf of \\(W = X^2\\)?\nWhat is the mean of \\(W\\)?\nWhat is the conditional pmf of \\(X\\) given \\(X \\neq 0\\)?\nWhat is the conditional mean of \\(X\\) given \\(X \\neq 0\\)?"
   },
   {
     "objectID": "problems/bank/random-variables-discrete/random-exam.html",
@@ -1251,18 +1363,25 @@
     "text": "An urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/ross-rv.html",
-    "href": "problems/bank/random-variables-discrete/ross-rv.html",
+    "objectID": "problems/bank/random-variables-discrete/waiting-for-five-or-seven.html",
+    "href": "problems/bank/random-variables-discrete/waiting-for-five-or-seven.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Two balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
+    "text": "A pair of fair dice is rolled until a sum of either a 5 or a 7 appears. What is the probability that a 5 occurs first?"
   },
   {
-    "objectID": "problems/bank/conceptual/sally-clark.html",
-    "href": "problems/bank/conceptual/sally-clark.html",
+    "objectID": "problems/bank/conceptual/lousy-forecasting.html",
+    "href": "problems/bank/conceptual/lousy-forecasting.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here are some short readings about the case of Sally Clark and Roy Meadow, as well as something called the prosecutor’s fallacy:\n\nGrimes (2023): “Bad Science and Bad Statistics in the Courtroom Convict Innocent People,” Scientific American;\nCarriquiry (2018): “Misuse of statistics in the courtroom: the Sally Clark case,” CSAFE;\nWestreich & Iliinsky (2014): “Epidemiology visualized: the prosecutor’s fallacy,” American Journal of Epidemiology;\nAP Dawid’s statement during the Clark appeal.\n\nPlease do the following:\n\nRead the articles;\nUsing the ideas of conditional probability and independence that we have studied, write a paragraph or two describing what the prosecutor’s fallacy is and how it applies to the Clark case;\nIf you were an attorney for the defense and had the chance to cross-examine Roy Meadow, what would you ask him about his statistical testimony? What are the most incisive questions you could ask? How would you ensure that the cross-examination would “land” with the members of the jury, who most likely know absolutely nothing about probability and statistics?\n\n\n\n\n\n\n\nPlease don’t break my heart\n\n\n\nI’m not asking you to read Moby-Dick here."
+    "text": "Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:\n\nZohran Mamdani wins the New York City mayoral election;\nWicked: For Good makes more money at the box office (inflation adjusted) on its opening weekend than Wicked: Part I;\nThe Philadelphia Phillies make it to the 2025 World Series;\nSean Combs is sentenced to prison for more than 3 years;\nA greater percentage of Duke undergraduates participate in this year’s Duke Marriage Pact than last year’s. About 43% participated last year;\nThe total number of points scored at the Countdown to Craziness exhibition game is greater than 50;\nBefore the end of the year, the Federal Reserve announces that Lisa Cook is no longer a member of the Board of Governors;\nThe United States federal government is shut down due to a lapse in appropriations by October 1, 2025.\n\nChoose three of these, state the probabilities that you assign to the events happening, and explain in a few paragraphs how you formulated your beliefs. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed.\n\n\n\n\n\n\nAvoid wishful thinking\n\n\n\nFor some of these, you may have strong preferences about the outcome. Try to set them aside and report your honest assessment of the likelihood of the event, whether it pleases you or not."
+  },
+  {
+    "objectID": "problems/bank/conceptual/diaconis.html",
+    "href": "problems/bank/conceptual/diaconis.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Persi Diaconis is a famous researcher in probability and statistics. He has a cute line of research where he probes the randomness that we take for granted in simple things like coin tossing, dice, and playing cards. In the interview above he discusses coin tossing, and says both “coin tossing is as close to a random phenomenon as I know” and “coin tossing is a deterministic process. What’s random about it?” Wut?\nWatch the interview, and report back with a brief summary of Diaconis’ explanation of what makes a coin toss random. Do you agree or disagree?"
   },
   {
     "objectID": "problems/bank/calculus-review/calc-series.html",
@@ -1587,7 +1706,7 @@
     "href": "labs/lab-4.html#task-6",
     "title": "Lab 4 - How does ChatGPT generate the next word?",
     "section": "Task 6",
-    "text": "Task 6\nUp to now we’ve been worrying a lot about individual words, but individual words don’t create meaning. It’s how those words interact across phrases and sentences and paragraphs. Unfortunately, we do not have methods for inducing a probability distribution over the set of all possible sentences, or the set of all possible thoughts. But in a sense, language models are attempting to approximate such a thing. And on the evidence to date, maybe they succeed sometimes. Anyway, how do we go from a method that gets things right on the word level to a method that gets things right on the sentence level? Well, therein lies the art of the engineers that work on these things, and one method they have found helpful is called temperature sampling.\nSo far, given the current context, the model returns a (conditional) probability \\(p(i)\\) for each word \\(i\\in \\text{corpus}\\). So far we’ve used these probabilities unmodified. With temperature sampling, before we draw the next word, we would first adjust the probabilities based on a user-defined tuning parameter \\(t&gt;0\\) called the temperature:\n\\[\np_t(i) = \\frac{p(i)^{1/t}}{\\sum\\limits_{j\\in\\text{corpus}}p(j)^{1/t}},\\quad i\\in\\text{corpus}.\n\\]\nIf \\(t=1\\), we’re back to the original probabilities: \\(p_1(i)=p(i)\\). Otherwise, to quote the \\(k\\)-grams people, “higher and lower temperatures make the original probability distribution smoother and rougher, respectively. By making a physical analogy, we can think of less probable words as states with higher energies, and the effect of higher (lower) temperatures is to make more (less) likely to excite these high energy states.” Why do people do this? To the best of my knowledge, it is no deeper than “it seems to work well.” In practice, adjusting the temperature seems to have a macro effect on the overall character of the sentences.\nThe function next_word_probs that we gave you has a fourth argument temp where you can give it a number and it will give you the tempered probabilities. Play around with big and small values, and report any effect that it has on the overall quality of the sentences.\n\n\n\n\n\n\nThink about it\n\n\n\nAs you increase the temperature and \\(t\\to\\infty\\), what does that do to the probabilities?",
+    "text": "Task 6\nUp to now we’ve been worrying a lot about individual words, but individual words don’t create meaning. It’s how those words interact across phrases and sentences and paragraphs. Unfortunately, we do not have methods for inducing a probability distribution over the set of all possible sentences, or the set of all possible thoughts. But in a sense, language models are attempting to approximate such a thing. And on the evidence to date, maybe they succeed sometimes. Anyway, how do we go from a method that gets things right on the word level to a method that gets things right on the sentence level? Well, therein lies the art of the engineers that work on these things, and one method they have found helpful is called temperature sampling.\nSo far, given the current context, the model returns a (conditional) probability \\(p(i)\\) for each word \\(i\\in \\text{corpus}\\). So far we’ve used these probabilities unmodified. With temperature sampling, before we draw the next word, we first adjust the probabilities based on a user-defined tuning parameter \\(t&gt;0\\) called the temperature:\n\\[\np_t(i) = \\frac{p(i)^{1/t}}{\\sum\\limits_{j\\in\\text{corpus}}p(j)^{1/t}},\\quad i\\in\\text{corpus}.\n\\]\nIf \\(t=1\\), we’re back to the original probabilities: \\(p_1(i)=p(i)\\). Otherwise, to quote the \\(k\\)-grams people, “higher and lower temperatures make the original probability distribution smoother and rougher, respectively. By making a physical analogy, we can think of less probable words as states with higher energies, and the effect of higher (lower) temperatures is to make more (less) likely to excite these high energy states.” Why do people do this? To the best of my knowledge, it is no deeper than “it seems to work well.” In practice, adjusting the temperature seems to have a macro effect on the overall character of the sentences.\nThe function next_word_probs that we gave you has a fourth argument temp where you can give it a number and it will give you the tempered probabilities. Play around with big and small values, and report any effect that it has on the overall quality of the sentences.\n\n\n\n\n\n\nThink about it\n\n\n\nAs you increase the temperature and \\(t\\to\\infty\\), what does that do to the probabilities?",
     "crumbs": [
       "Labs",
       "Lab 4"
@@ -1696,18 +1815,25 @@
     "text": "Explain why this is horrific notation:\n\\[\n    \\int_0^x f(x)\\,\\textrm{d} x.\n\\]\nHow should it be fixed?"
   },
   {
-    "objectID": "problems/bank/conceptual/diaconis.html",
-    "href": "problems/bank/conceptual/diaconis.html",
+    "objectID": "problems/bank/conceptual/exam-review.html",
+    "href": "problems/bank/conceptual/exam-review.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Persi Diaconis is a famous researcher in probability and statistics. He has a cute line of research where he probes the randomness that we take for granted in simple things like coin tossing, dice, and playing cards. In the interview above he discusses coin tossing, and says both “coin tossing is as close to a random phenomenon as I know” and “coin tossing is a deterministic process. What’s random about it?” Wut?\nWatch the interview, and report back with a brief summary of Diaconis’ explanation of what makes a coin toss random. Do you agree or disagree?"
+    "text": "Sadly, we have a midterm exam coming up on Thursday October 9. Everything you have seen on Problem Sets 1 through 4 is fair game for the exam: set theory, probability spaces and axioms, probability rules and proofs, counting, conditional probability and independence, and discrete random variables.\nLook back through the course materials thus far and select the topic that you think you understand the least. Study this topic carefully and then do two things:\n\nWrite a few paragraphs where you explain this topic to a five-year-old using only words, pictures, and toy examples;\nAfter you’re done reviewing, and after your response to part a, include one thing you’re still unsure about or a question you’d like to ask about your chosen topic.\n\nAfter you submit this problem set, I will answer all of the class’s questions and post an anonymized “Q&A” as part of the exam review materials."
   },
   {
-    "objectID": "problems/bank/conceptual/lousy-forecasting.html",
-    "href": "problems/bank/conceptual/lousy-forecasting.html",
+    "objectID": "problems/bank/conceptual/sally-clark.html",
+    "href": "problems/bank/conceptual/sally-clark.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:\n\nZohran Mamdani wins the New York City mayoral election;\nWicked: For Good makes more money at the box office (inflation adjusted) on its opening weekend than Wicked: Part I;\nThe Philadelphia Phillies make it to the 2025 World Series;\nSean Combs is sentenced to prison for more than 3 years;\nA greater percentage of Duke undergraduates participate in this year’s Duke Marriage Pact than last year’s. About 43% participated last year;\nThe total number of points scored at the Countdown to Craziness exhibition game is greater than 50;\nBefore the end of the year, the Federal Reserve announces that Lisa Cook is no longer a member of the Board of Governors;\nThe United States federal government is shut down due to a lapse in appropriations by October 1, 2025.\n\nChoose three of these, state the probabilities that you assign to the events happening, and explain in a few paragraphs how you formulated your beliefs. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed.\n\n\n\n\n\n\nAvoid wishful thinking\n\n\n\nFor some of these, you may have strong preferences about the outcome. Try to set them aside and report your honest assessment of the likelihood of the event, whether it pleases you or not."
+    "text": "Here are some short readings about the case of Sally Clark and Roy Meadow, as well as something called the prosecutor’s fallacy:\n\nGrimes (2023): “Bad Science and Bad Statistics in the Courtroom Convict Innocent People,” Scientific American;\nCarriquiry (2018): “Misuse of statistics in the courtroom: the Sally Clark case,” CSAFE;\nWestreich & Iliinsky (2014): “Epidemiology visualized: the prosecutor’s fallacy,” American Journal of Epidemiology;\nAP Dawid’s statement during the Clark appeal.\n\nPlease do the following:\n\nRead the articles;\nUsing the ideas of conditional probability and independence that we have studied, write a paragraph or two describing what the prosecutor’s fallacy is and how it applies to the Clark case;\nIf you were an attorney for the defense and had the chance to cross-examine Roy Meadow, what would you ask him about his statistical testimony? What are the most incisive questions you could ask? How would you ensure that the cross-examination would “land” with the members of the jury, who most likely know absolutely nothing about probability and statistics?\n\n\n\n\n\n\n\nPlease don’t break my heart\n\n\n\nI’m not asking you to read Moby-Dick here."
+  },
+  {
+    "objectID": "problems/bank/random-variables-discrete/ross-rv.html",
+    "href": "problems/bank/random-variables-discrete/ross-rv.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Two balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
   },
   {
     "objectID": "problems/bank/random-variables-discrete/gandalf-test.html",
@@ -1724,39 +1850,53 @@
     "text": "Not all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.\nImagine an election where Angela Lansbury receives \\(a\\) votes, Bernadette Peters receives \\(b\\) votes, and Angela provisionally wins with a margin of victory \\(a-b&gt;0\\). However, of the total \\(a+b\\) votes, we learn that \\(k&gt;a-b\\) were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the \\(k\\) invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.\nTo model this, think of the original \\(a+b\\) ballots as balls in the proverbial urn. \\(a\\) of these balls are red, and \\(b\\) of these balls are blue, and assume that \\(a,\\, b&gt;k\\). Removing the \\(k\\) invalid ballots is like drawing \\(k\\) balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the \\(a+b\\) original ballots is equally likely to have been invalid. Next, imagine we randomly remove \\(k\\) balls from the urn, and let \\(X\\) be a random variable that counts the number of the removed/invalid ballots that belong to Angela. In other words, the number of red balls removed. If \\(X\\) is large enough, it will swing the election in Bernadette’s favor.\n\nWhat are the range and the pmf of the random variable \\(X\\)?\nFor what values of \\(X\\) does removing \\(k\\) ballots reverse the outcome of the election?\nBased on your answers to the previous parts, what is the probability that the election result is reversed when the \\(k\\) bad ballots are removed? Give a general formula for this probability, and then compute the probability for each of the real elections listed in Table 1;\nThe random variable \\(X\\) that you derived in the first part can be approximated by \\(\\text{Binom}(k,\\,1/2)\\). Explain why this approximation might be “good enough,” and verify that it’s not too bad by computing the approximate probability of reversal for the elections in Table 1. Compare the approximate probabilities to the actual ones from the previous part;\nLet’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a figure in R with the following features:\n\nthe margin of victory \\(a-b\\) on the horizontal axis;\nthe number of bad ballots \\(k\\) on the vertical axis;\nscatterplot where each point represents an election in Table 1, with the points colored according to the decision that was made in the case;\ndivide the plane into two regions, one where the approximate probability of reversal is less than 0.05 and one where it is greater.\n\nWrite a few pithy paragraphs commenting on the following:\n\nthe assumptions of our lil’ model. Do you think they are innocuous? What might you change, and how?\nthe match or lack thereof between our model and the decisions that were actually made in the real cases;\nHow do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?\n\n\n\n\n\nTable 1: Close elections\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nelection\nyear\nwin\nloss\ntotal\nmargin\ninvalid\ndecision\n\n\n\n\nIppolito v. Power\n1968\n1,422\n1,405\n2,827\n17\n101\nvoid\n\n\nSantucci v. Power\n1969\n58,076\n57,981\n116,057\n95\n448\nvoid\n\n\nDeMartini v. Power\n1970\n2,656\n2,594\n5,250\n62\n136\nupheld\n\n\nMaine House\n1976\n1,193\n1,060\n2,253\n133\n208\nvoid\n\n\nAnn Arbor mayor\n1977\n10,660\n10,659\n21,319\n1\n20\nvoid\n\n\nBrunswick ME town council\n1980\n2,390\n2,383\n4,773\n7\n16\nupheld\n\n\nWashington governor\n2004\n1,373,357\n1,373,228\n2,746,585\n129\n1,439\nupheld"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/memoryless-geometric.html",
-    "href": "problems/bank/random-variables-discrete/memoryless-geometric.html",
+    "objectID": "problems/bank/random-variables-discrete/binomial-lotus.html",
+    "href": "problems/bank/random-variables-discrete/binomial-lotus.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(D \\sim \\text{Geometric}(p)\\), and fix positive integers \\(n\\) and \\(k\\). What is \\(P(D = n + k \\,|\\, D &gt; k)\\)? Does this look familiar?"
+    "text": "If \\(X\\sim\\text{Binomial}(n,\\,p)\\), show that\n\\[\nE\\left[\\frac{1}{X+1}\\right]=\\frac{1-(1-p)^{n+1}}{(n+1)p}.\n\\]"
   },
   {
-    "objectID": "problems/bank/set-theory/picture-proofs.html",
-    "href": "problems/bank/set-theory/picture-proofs.html",
+    "objectID": "problems/bank/random-variables-discrete/binomial-birthdays.html",
+    "href": "problems/bank/random-variables-discrete/binomial-birthdays.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "“Prove” each set identity with a picture:\n\nDistributive property: \\(A\\cup(B\\cap C)=(A\\cup B)\\cap(A\\cup C)\\);\nDe Morgan: \\((A\\cap B)^{c}=A^{c}\\cup B^{c}\\);"
+    "text": "Forty-nine members of the Cleveland Orchestra string section wish to compare their birthdays. Assume that no one has February 29th and that all birthdays are independent.\n\nWhat is the expected number of pairs of people with the same birthday?\nWhat is the expected number of days on which at least two players were born?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/bdj-circuit.html",
-    "href": "problems/bank/conditional-probability/bdj-circuit.html",
+    "objectID": "problems/bank/set-theory/basic-set-practice.html",
+    "href": "problems/bank/set-theory/basic-set-practice.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "The figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
+    "text": "Take \\(\\mathbb{R}\\) to be your reference set, and consider these subsets:\n\\[\n\\begin{align*}\nA&=[1,\\,5]\\\\\nB&=\\{x\\in\\mathbb{R}\\,:\\,|x|&gt;2\\}\\\\\nC&=(-\\infty,\\,0]\\\\\nI_n&=\\left[0,\\,\\frac{1}{n}\\right]\n\\end{align*}\n\\]\nExpress each of the following in as simplified and concise a form as possible:\n\n\\(A^c\\)\n\\(A \\cup B\\)\n\\(A\\cap C\\)\n\\(A\\cap C^c\\)\n\\(B \\cap C^c\\)\n\\(A^c \\cap B^c \\cap C^c\\)\n\\((A \\cup B) \\cap C\\)\n\\(\\bigcap_{n=1}^\\infty I_n\\)\n\\(\\bigcup_{n=1}^\\infty I_n\\)"
   },
   {
-    "objectID": "problems/bank/conditional-probability/bdj-encryption.html",
-    "href": "problems/bank/conditional-probability/bdj-encryption.html",
+    "objectID": "problems/bank/conditional-probability/testing-symptoms.html",
+    "href": "problems/bank/conditional-probability/testing-symptoms.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "An encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
+    "text": "We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\).\nTable 1 enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients’ “true” disease status was determined by a PCR test that we assume is hella accurate.\n\n\n\nTable 1: Some COVID-19 numbers. Source: CDC\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n-\n-\n-\n0.7650\n\n\n-\n-\n+\n0.0128\n\n\n-\n+\n-\n0.1685\n\n\n-\n+\n+\n0.0018\n\n\n+\n-\n-\n0.0091\n\n\n+\n-\n+\n0.0064\n\n\n+\n+\n-\n0.0073\n\n\n+\n+\n+\n0.0291\n\n\n\n\n\n\n\n\nWhat is the overall disease prevalence?\nWhat is the sensitivity of the test?\nWhat is the specificity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?\nWhat is the overall probability that the test is wrong?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/independent-complements.html",
-    "href": "problems/bank/conditional-probability/independent-complements.html",
+    "objectID": "problems/bank/conditional-probability/axioms-conditional.html",
+    "href": "problems/bank/conditional-probability/axioms-conditional.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "If we know that \\(A\\) and \\(B\\) are independent events, show that their complements \\(A^c\\) and \\(B^c\\) are also independent events."
+    "text": "Let \\(S\\) be a sample space with probability measure \\(P\\), and let \\(B\\subseteq S\\) be some event with \\(P(B)&gt;0\\). Show that the function \\(G(A)=P(A\\,|\\, B)\\) is a new probability measure on \\(S\\). That is, show that \\(G\\) satisfies the axioms:\n\ntotal measure 1;\nnonnegativity;\ncountable additivity."
+  },
+  {
+    "objectID": "problems/bank/conditional-probability/conditional-inequality.html",
+    "href": "problems/bank/conditional-probability/conditional-inequality.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Assume that \\(P(A)&gt;0\\) and prove that\n\\[\nP(A\\cap B\\,|\\, A)\\geq P(A\\cap B\\,|\\, A\\cup B).\n\\]"
+  },
+  {
+    "objectID": "problems/bank/conditional-probability/target-practice.html",
+    "href": "problems/bank/conditional-probability/target-practice.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Pearl Bailey and Elaine Stritch go target shooting. Suppose that each of Pearl’s shots hits a wooden duck target with probability \\(p_1\\), while each shot of Elaine’s hits it with probability \\(p_2\\), independent of Pearl. Suppose that they shoot simultaneously at the same target. If the wooden duck is knocked over (indicating that it was hit), what is the probability that both shots hit the duck?"
   },
   {
     "objectID": "problems/bank/conditional-probability/darts.html",
@@ -2056,7 +2196,7 @@
     "href": "index.html",
     "title": "STA 240 Probability for Statistical Inference",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\nslides\n\n\n\n\nWed, Aug 27\n\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\nnotes\n\n\n\n\nThu, Aug 28\n\n💻 Lab 0 (calculus review)\n\n\n\n\n2\nMon, Sep 1\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\nWed, Sep 3\n\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\nslides notes\n\n\nIntro Survey @ 3 PM\n\n\n\nThu, Sep 4\n\n💻 Lab 1 (hello R)\n\n\nLab 1 @ 11:59 PM\n\n\n\nFri, Sep 5\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nWed, Sep 10\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nThu, Sep 11\n\n💻 Lab 2 (counting)\n\n\nLab 2 @ 11:59 PM\n\n\n\nFri, Sep 12\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nnotes Play around!\n\n\n\n\n\nWed, Sep 17\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nRead! Play around!\n\n\n\n\n\nThu, Sep 18\n\n💻 Lab 3 (disease testing)\nRead!\n\nLab 3 @ 11:59 PM\n\n\n\nFri, Sep 19\n\n\n\nPSET 0 corrections PSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\n🧑‍🏫 Discrete\nnotes\n\n\n\n\nWed, Sep 24\n\n🧑‍🏫 Discrete\n\n\n\n\n\nThu, Sep 25\n\n💻 Lab 4 (ChatGPT)\n\n\nLab 4 @ 11:59 PM\n\n\n\nFri, Sep 26\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\n🧑‍🏫 Discrete\n\n\n\n\n\nWed, Oct 1\n\n🧑‍🏫 Discrete\n\n\n\n\n\nThu, Oct 2\n\n💻 Lab 5\n\nLab 5 @ 11:59 PM\n\n\n\nFri, Oct 3\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n🧑‍🏫 Continuous\n\n\n\n\n\nWed, Oct 8\n\n🧑‍🏫 Continuous\n\n\n\n\n\nThu, Oct 9\n\n📝 Midterm 1\n\n\n\n\n\n8\nMon, Oct 13\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\nWed, Oct 15\n\n🧑‍🏫 Continuous\n\n\n\n\n\nThu, Oct 16\n\n💻 Lab 6\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n🧑‍🏫 Continuous\n\n\n\n\n\nWed, Oct 22\n\n🧑‍🏫 Jointly Discrete\n\n\n\n\n\nThu, Oct 23\n\n💻 Lab 7\n\nLab 7 @ 11:59 PM\n\n\n\nFri, Oct 24\n\n\n\nPSET 5 @ 5PM\n\n\n10\nMon, Oct 27\n\n🧑‍🏫 Jointly Continuous\n\n\n\n\n\nWed, Oct 29\n\n🧑‍🏫 Hierarchies\n\n\n\n\n\nThu, Oct 30\n\n💻 Lab 8\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\nWed, Nov 5\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\nThu, Nov 6\n\n💻 Lab 9\n\nLab 9 @ 11:59 PM\n\n\n\nFri, Nov 7\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\nWed, Nov 12\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\nThu, Nov 13\n\n📝 Midterm 2\n\n\n\n\n\n13\nMon, Nov 17\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nWed, Nov 19\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nThu, Nov 20\n\n💻 Lab 10\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\nWed, Nov 26\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\nThu, Nov 27\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n15\nMon, Dec 1\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nWed, Dec 3\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nThu, Dec 4\n\n💻 Lab 11\n\nLab 11 @ 11:59 PM\n\n\n\nFri, Dec 5\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n📝 Final (9AM - 12PM)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\nslides\n\n\n\n\nWed, Aug 27\n\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\nnotes\n\n\n\n\nThu, Aug 28\n\n💻 Lab 0 (calculus review)\n\n\n\n\n2\nMon, Sep 1\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\nWed, Sep 3\n\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\nslides notes\n\n\nIntro Survey @ 3 PM\n\n\n\nThu, Sep 4\n\n💻 Lab 1 (hello R)\n\n\nLab 1 @ 11:59 PM\n\n\n\nFri, Sep 5\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nWed, Sep 10\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nThu, Sep 11\n\n💻 Lab 2 (counting)\n\n\nLab 2 @ 11:59 PM\n\n\n\nFri, Sep 12\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nnotes Play around!\n\n\n\n\n\nWed, Sep 17\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nRead! Play around!\n\n\n\n\n\nThu, Sep 18\n\n💻 Lab 3 (disease testing)\nRead!\n\nLab 3 @ 11:59 PM\n\n\n\nFri, Sep 19\n\n\n\nPSET 0 corrections PSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\n🧑‍🏫 Discrete\nnotes\n\n\n\n\nWed, Sep 24\n\n🧑‍🏫 Discrete\n\n\n\n\n\nThu, Sep 25\n\n💻 Lab 4 (ChatGPT)\n\n\nLab 4 @ 11:59 PM\n\n\n\nFri, Sep 26\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\n🧑‍🏫 Discrete\n\n\n\n\n\nWed, Oct 1\n\n🧑‍🏫 Discrete\n\n\n\n\n\nThu, Oct 2\n\n💻 Lab 5\n\nLab 5 @ 11:59 PM\n\n\n\nFri, Oct 3\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n🧑‍🏫 Continuous\n\n\n\n\n\nWed, Oct 8\n\n🧑‍🏫 Continuous\n\n\n\n\n\nThu, Oct 9\n\n📝 Midterm 1\n\n\n\n\n\n8\nMon, Oct 13\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\nWed, Oct 15\n\n🧑‍🏫 Continuous\n\n\n\n\n\nThu, Oct 16\n\n💻 Lab 6\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n🧑‍🏫 Continuous\n\n\n\n\n\nWed, Oct 22\n\n🧑‍🏫 Jointly Discrete\n\n\n\n\n\nThu, Oct 23\n\n💻 Lab 7\n\nLab 7 @ 11:59 PM\n\n\n\nFri, Oct 24\n\n\n\nPSET 5 @ 5PM\n\n\n10\nMon, Oct 27\n\n🧑‍🏫 Jointly Continuous\n\n\n\n\n\nWed, Oct 29\n\n🧑‍🏫 Hierarchies\n\n\n\n\n\nThu, Oct 30\n\n💻 Lab 8\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\nWed, Nov 5\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\nThu, Nov 6\n\n💻 Lab 9\n\nLab 9 @ 11:59 PM\n\n\n\nFri, Nov 7\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\nWed, Nov 12\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\nThu, Nov 13\n\n📝 Midterm 2\n\n\n\n\n\n13\nMon, Nov 17\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nWed, Nov 19\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nThu, Nov 20\n\n💻 Lab 10\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\nWed, Nov 26\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\nThu, Nov 27\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n15\nMon, Dec 1\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nWed, Dec 3\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nThu, Dec 4\n\n💻 Lab 11\n\nLab 11 @ 11:59 PM\n\n\n\nFri, Dec 5\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n📝 Final (9AM - 12PM)",
     "crumbs": [
       "Syllabus",
       "Schedule"
@@ -2826,12 +2966,5 @@
     "title": "You tested positive. Now what?",
     "section": "",
     "text": "Testing positive for a disease is not exactly good news, but how alarmed you should be ultimately depends on a few factors: the accuracy of the test and the overall rarity of the disease (the so-called base rate). Before you walk into the doctor’s office, the probability that you are sick is \\(P(D=+)\\), the prevalence. This is the unconditional (or marginal) probability that a random member of the population (ie you in that moment) is sick. After you test positive, the revised or conditional probability that you have the disease is given by Bayes’ theorem:\n\\[\n\\begin{aligned}\nP(D = +\\,|\\,T=+)\n&=\n\\frac{{\\color{blue}{P(T=+\\,|\\,D=+)}}{\\color{red}{P(D=+)}}}{P(T=+)}\n\\\\\n&=\n\\frac{{\\color{blue}{P(T=+\\,|\\,D=+)}}{\\color{red}{P(D=+)}}}{{\\color{blue}{P(T=+\\,|\\,D=+)}}{\\color{red}{P(D=+)}}+[1-{\\color{green}{P(T=-\\,|\\,D=-)}}][1-{\\color{red}{P(D=+)}}]}\n\\\\\n&=\n\\frac{{\\color{blue}{\\text{TPR}}}\\times{\\color{red}{\\text{PREV}}}}{{\\color{blue}{\\text{TPR}}}\\times{\\color{red}{\\text{PREV}}}+(1-{\\color{green}{\\text{TNR}}})(1-{\\color{red}{\\text{PREV}}})}.\n\\end{aligned}\n\\]\n\\(P(T=+\\,|\\,D=+)\\) is the true positive rate or sensitivity: the probability that a sick person is correctly diagnosed. \\(P(T=-\\,|\\,D=-)\\) is the true negative rate or specificity: the probability that a well person is correctly diagnosed. It is the nonlinear interaction of three numbers (prevalence, TPR, and TNR) that determines the revised likelihood that you have the disease. Two numbers interacting linearly is about all a regular human can handle off the dome, hence people are generally bad at reasoning about this stuff.\nThe application below visualizes the sample space for our simple model of disease testing. We have \\(D\\in\\{-,,\\,+\\}\\) and \\(T\\in\\{-,\\,+\\}\\), and so there are four individual outcomes:\n\n\\(P(T = +\\cap D=+)=P(T=+\\,|\\,D=+)P(D=+)=\\text{TPR}\\times P(D=+)\\);\n\\(P(T = +\\cap D=-)=P(T=+\\,|\\,D=-)P(D=-)=\\text{FPR}\\times P(D=-)\\);\n\\(P(T = -\\cap D=-)=P(T=-\\,|\\,D=-)P(D=-)=\\text{TNR}\\times P(D=-)\\);\n\\(P(T = -\\cap D=+)=P(T=-\\,|\\,D=+)P(D=+)=\\text{FNR}\\times P(D=+)\\).\n\nThe application plots the \\([0,\\,1]\\times[0,\\,1]\\) unit square, partitioned into four rectangles representing the outcomes listed above. The area of each rectangle is equal to the probability of that outcome.\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 650\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  \n  # Application title\n  titlePanel(\"The sample space of a simple diagnostic test\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"TPR\",\n                  \"Sensitivity (TPR):\",\n                  min = 0,\n                  max = 1,\n                  value = 0.5),\n      sliderInput(\"TNR\",\n                  \"Specificity (TNR):\",\n                  min = 0,\n                  max = 1,\n                  value = 0.5),\n      sliderInput(\"p\",\n                  \"Prevalence:\",\n                  min = 0,\n                  max = 1,\n                  value = 0.5)\n    ),\n    \n    mainPanel(\n      plotOutput(\"distPlot\"),\n      \n      # ---- Legend goes here ----\n      tags$div(\n        style = \"margin-top:20px;\",\n        tags$h4(\"Legend\"),\n        tags$div(style=\"display:flex; align-items:center; margin-bottom:5px;\",\n                 tags$div(style=\"width:20px; height:20px; background-color:rgba(255,0,0,0.25); margin-right:10px;\"),\n                 \"True Positive (T=+, D=+)\"\n        ),\n        tags$div(style=\"display:flex; align-items:center; margin-bottom:5px;\",\n                 tags$div(style=\"width:20px; height:20px; background-color:rgba(0,255,0,0.25); margin-right:10px;\"),\n                 \"False Negative (T=-, D=+)\"\n        ),\n        tags$div(style=\"display:flex; align-items:center; margin-bottom:5px;\",\n                 tags$div(style=\"width:20px; height:20px; background-color:rgba(0,0,255,0.25); margin-right:10px;\"),\n                 \"True Negative (T=-, D=-)\"\n        ),\n        tags$div(style=\"display:flex; align-items:center; margin-bottom:5px;\",\n                 tags$div(style=\"width:20px; height:20px; background-color:rgba(255,165,0,0.25); margin-right:10px;\"),\n                 \"False Positive (T=+, D=-)\"\n        )\n      )\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  \n  output$distPlot &lt;- renderPlot({\n    \n    p &lt;- input$p\n    TNR &lt;-input$TNR\n    TPR &lt;- input$TPR\n    \n    FNR &lt;- 1 - TPR\n    FPR &lt;- 1 - TNR\n    \n    par(mar = c(8, 8, 1, 8))\n    \n    plot(0, col = \"white\", xlim = c(0, 1), ylim = c(0, 1),\n         xaxt = \"n\", yaxt = \"n\", bty = \"n\", xlab = \"\", ylab = \"\")\n    \n    polygon(c(0, p, p, 0), c(FNR, FNR, 1.0, 1.0), col = rgb(1, 0, 0, alpha = 0.25), border = NA)\n    polygon(c(0, p, p, 0), c(0, 0, FNR, FNR), col = rgb(0, 1, 0, alpha = 0.25), border = NA)\n    polygon(c(p, 1, 1, p), c(0, 0, TNR, TNR), col = rgb(0, 0, 1, alpha = 0.25), border = NA)\n    polygon(c(p, 1, 1, p), c(TNR, TNR, 1, 1), col = rgb(1, 0.647, 0, alpha = 0.25), border = NA)\n    \n    mtext(\"TNR\", side = 4, at = TNR / 2, las = 1)\n    mtext(\"FPR\", side = 4, at = (1 + TNR) / 2, las = 1)\n    \n    mtext(\"TPR\", side = 2, at = (1 + FNR) / 2, las = 1, line = 2)\n    mtext(\"FNR\", side = 2, at = FNR / 2, las = 1, line = 2)\n    \n    mtext(\"p(D = +)\", side = 1, at = p / 2, las = 1, line = 2)\n    mtext(\"p(D = -)\", side = 1, at = (1 + p) / 2, las = 1, line = 2)\n    \n    mtext(c(\"0\", \"1\"), side = 1, at = c(0, 1), las = 1)\n    mtext(c(\"0\", \"1\"), side = 2, at = c(0, 1), las = 1)\n  })\n}\n\nshinyApp(ui = ui, server = server)\n\n\nThe application below displays how testing positive shifts the probability of disease from \\(P(D=+)\\) to \\(P(D = +\\,|\\,T=+)\\). The size of the revision ultimately depends on how big \\(P(D=+)\\) was to begin with, and how good the test is (TPR and TNR). Play around with different values and see what happens:\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\nlibrary(shiny)\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n\n    # Application title\n    titlePanel(\"What can a diagnostic test teach you?\"),\n\n    # Sidebar with a slider input for number of bins \n    sidebarLayout(\n        sidebarPanel(\n            sliderInput(\"TPR\",\n                        \"Sensitivity (TPR):\",\n                        min = 0,\n                        max = 1,\n                        value = 0.5),\n            sliderInput(\"TNR\",\n                        \"Specificity (TNR):\",\n                        min = 0,\n                        max = 1,\n                        value = 0.5)\n        ),\n\n        # Show a plot of the generated distribution\n        mainPanel(\n           plotOutput(\"distPlot\")\n        )\n    )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n\n    output$distPlot &lt;- renderPlot({\n      TPR &lt;- input$TPR\n      TNR &lt;- input$TNR\n      P &lt;- seq(0, 1, length.out = 1000)\n      B &lt;- TPR * P / (TPR * P + (1 - TNR) * (1 - P))\n\n      # draw the histogram with the specified number of bins\n      par(mar = c(5, 5, 5, 0.5))\n      plot(P, B, type = \"l\", xlim = c(0, 1), ylim = c(0, 1),\n           xlab = \"P(D = +)\", ylab = \"P(D = + | T = +)\",\n           lwd = 2, cex.lab = 2,\n           panel.first = abline(a = 0, b = 1, lty = 2, lwd = 2, col = \"grey\"))\n    })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)"
-  },
-  {
-    "objectID": "distributions/discrete-hypergeometric.html",
-    "href": "distributions/discrete-hypergeometric.html",
-    "title": "Hypergeometric distribution",
-    "section": "",
-    "text": "\\[\nP(X = k)\n= \\frac{\\binom{K}{k} \\binom{N - K}{n-k}}{\\binom{N}{n}}.\n\\]\n\ndhyper(x, m, n, k)\nphyper(q, m, n, k)\nqhyper(p, m, n, k)\nrhyper(ndraw, m, n, k)"
   }
 ]
