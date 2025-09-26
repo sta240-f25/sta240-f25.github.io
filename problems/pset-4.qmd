@@ -1,7 +1,7 @@
 ---
 title: "Problem Set 4"
 subtitle: Due Friday October 3 at 5PM
-draft: true
+draft: false
 editor: 
   mode: source
 ---
@@ -12,15 +12,15 @@ editor:
 
 ## Problem 1
 
-Something conceptual
+{{< include bank/conceptual/exam-review.qmd >}}
 
 ## Problem 2
 
-Conditional probability
+{{< include bank/conditional-probability/conditional-inequality.qmd >}}
 
 ## Problem 3
 
-Conditional probability
+{{< include bank/conditional-probability/conditional-independence.qmd >}}
 
 ## Problem 4
 
@@ -36,19 +36,19 @@ Conditional probability
 
 ## Problem 7
 
-Discrete Random Variables
+{{< include bank/random-variables-discrete/binomial-birthdays.qmd >}}
 
 ## Problem 8
 
-Discrete Random Variables
+{{< include bank/random-variables-discrete/waiting-for-five-or-seven.qmd >}}
 
 ## Problem 9
 
-Discrete Random Variables
+{{< include bank/random-variables-discrete/mak-rv.qmd >}}
 
 ## Problem 10
 
-Discrete Random Variables
+{{< include bank/random-variables-discrete/binomial-lotus.qmd >}}
 
 ## Submission
 

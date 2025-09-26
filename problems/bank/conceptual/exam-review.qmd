@@ -1,0 +1,8 @@
+Sadly, we have a midterm exam coming up on Thursday October 9. Everything you have seen on Problem Sets 1 through 4 is fair game for the exam: set theory, probability spaces and axioms, probability rules and proofs, counting, conditional probability and independence, and discrete random variables.
+
+Look back through the course materials thus far and select the topic that you think you understand the *least*. Study this topic carefully and then do two things:
+
+a. Write a few paragraphs where you explain this topic to a five-year-old using only words, pictures, and toy examples;
+a. After you're done reviewing, and after your response to part a, include one thing you're still unsure about or a question you’d like to ask about your chosen topic.
+
+After you submit this problem set, I will answer all of the class's questions and post an anonymized "Q&A" as part of the exam review materials.
