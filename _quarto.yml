@@ -125,6 +125,9 @@ website:
           - href: labs/lab-4.qmd
             text: Lab 4
       - section: "Exam Study Guides"
+        contents:
+          - href: problems/exam-midterm-1.qmd
+            text: Midterm 1
             
   page-footer:
     right: 'This page is built with [Quarto](https://quarto.org/).'
