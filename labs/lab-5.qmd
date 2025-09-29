@@ -1,0 +1,8 @@
+---
+title: "Lab 5"
+subtitle: Due Thursday October 2 at 11:59 PM
+format: html
+draft: false
+editor: 
+  mode: source
+---
