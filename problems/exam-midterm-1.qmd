@@ -3,7 +3,7 @@ title: "Midterm 1 Study Guide"
 format: html
 editor: 
   mode: source
-draft: true
+draft: false
 ---
 
 Midterm Exam 1 will take place on **Thursday October 9** during your lab section. There will be 7 problems, and they will break down as follows:
@@ -32,13 +32,21 @@ Do not skimp on the cheat sheet! Students in past semesters have neglected their
 
 # Probability spaces
 
-## Problem X
+## Problem 1
+
+{{< include bank/basic-rules/geniuses-and-chocolate-lovers.qmd >}}
+
+## Problem 2
+
+{{< include bank/basic-rules/basic-mutually-exclusive-practice.qmd >}}
+
+## Problem 3
 
 {{< include bank/basic-rules/set-minus.qmd >}}
 
-## Problem X
+## Problem 4
 
-(Something where it's like, check that the axioms are satisfied.)
+{{< include bank/basic-rules/xor-2.qmd >}}
 
 ## Want more review?
 
@@ -48,11 +56,17 @@ Do not skimp on the cheat sheet! Students in past semesters have neglected their
 
 # Counting
 
-## Problem X
+## Problem 5
 
 {{< include bank/counting/mak-cards.qmd >}}
 
-## Problem X
+## Problem 6
+
+{{< include bank/counting/library-card-PIN.qmd >}}
+
+## Problem 7
+
+{{< include bank/counting/senate-committees.qmd >}}
 
 ## Want more review?
 
@@ -66,9 +80,17 @@ Do not skimp on the cheat sheet! Students in past semesters have neglected their
 
 # Conditional probability 
 
-## Problem X
+## Problem 8
 
-## Problem X
+{{< include bank/conditional-probability/face-cards.qmd >}}
+
+## Problem 9
+
+{{< include bank/conditional-probability/all-white-balls.qmd >}}
+
+## Problem 10
+
+{{< include bank/conditional-probability/pairwise-versus-mutual-independence.qmd >}}
 
 ## Want more review?
 
@@ -81,9 +103,11 @@ Do not skimp on the cheat sheet! Students in past semesters have neglected their
 
 # Discrete random variables
 
-## Problem X
+## Problem 11
 
-## Problem X
+{{< include bank/random-variables-discrete/fibonacci-dice.qmd >}}
+
+## Problem 12
 
 {{< include bank/random-variables-discrete/memoryless-geometric.qmd >}}
 

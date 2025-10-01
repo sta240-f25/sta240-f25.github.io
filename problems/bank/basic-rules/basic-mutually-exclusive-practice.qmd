@@ -1,0 +1,6 @@
+Suppose that $A$ and $B$ are mutually exclusive events for which $P(A) = 0.3$ and $P(B) = 0.5$. What is the probability that...
+
+a.  either $A$ or $B$ occurs?
+b.  $A$ occurs but $B$ does not?
+c.  both $A$ and $B$ occur?
+d.  Are $A$ and $B$ independent? Why or why not?

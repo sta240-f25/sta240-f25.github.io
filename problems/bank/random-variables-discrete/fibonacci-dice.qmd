@@ -1,0 +1,5 @@
+Signore Fibonacci has created a a balanced, six-sided die whose faces are labeled, naturally, 1, 2, 3, 5, 8, 13. He gives a pair to Enzo, who rolls them repeatedly, eager to get double 13s. Let $X$ be the number of times he has to roll the pair of dice in order to see double 13s for the first time.
+
+a.  What is the pmf of $X$?
+b.  What is the expected value of $X$?
+c.  Find a closed-form expression for $P(X\geq m)$.

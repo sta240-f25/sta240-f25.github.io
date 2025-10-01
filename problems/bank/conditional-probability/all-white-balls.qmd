@@ -1,0 +1,5 @@
+An urn contains 5 white and 10 black balls. Four tickets labeled 1, 2, 3, and 4 reside in a box. A ticket is drawn at random from the box, and that number of balls is randomly chosen from the urn, without replacement.
+
+a.  What is the probability that all of the balls drawn are white?
+b.  If we learn that all balls drawn from the urn are white, what is the conditional probability that the #3 ticket was drawn?
+

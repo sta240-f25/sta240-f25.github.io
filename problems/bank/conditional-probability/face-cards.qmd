@@ -1,0 +1,3 @@
+In a standard deck of $52$ cards, 3 (Jack, Queen, and King) of the 13 ranks are collectively known as the "face cards" of the deck. Recall that a standard deck of $52$ cards also has $4$ suits (Hearts, Diamonds, Clubs, and Spades).
+
+Suppose you deal out two cards from the deck. What is the probability that they are both face cards given that they are both hearts?

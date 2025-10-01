@@ -1,0 +1,5 @@
+The United States Senate contains two senators -- one senior and one junior -- from each of the $50$ states.
+
+a.  If a committee of eight senators is selected, what is the probability that it will contain at least one of the two senators from a certain specified state?
+b.  If a committee of twenty senators is selected, what is the probability it will contain $15$ junior senators and $5$ senior senators?
+c.  What is the probability that a group of $50$ senators selected at random will contain one senator from each state?

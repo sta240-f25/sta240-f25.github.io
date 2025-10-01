@@ -1,0 +1,6 @@
+Congratulations! You and two of your friends are now proud owners of brand-new library cards. In order to use your new cards, all you and your friends need to do is create four-digit PINs, with numbers $0$ - $9$ available (in theory) at each position. Predictably, all of you have different ideas of what an acceptable PIN is (odd or even, leading zeros or not, etc.).
+
+a.  You are fairly chill about what you want in a PIN -- all you want is an even PIN, and you're totally fine if it starts with a zero. How many possible PINs fit your preference?
+b.  One of your friends is a bit more persnickety -- they want a PIN divisible by $5$, and they cannot stand PINs starting with a zero. How many possible PINs fit this friend's preferences?
+c.  Your other friend has some more...particular preferences -- they have an affinity for the number $16$ and thus want the digits $1$ and $6$ to appear in that exact order at some point in the PIN. Further, they also despise PINs starting with a zero. How many possible PINs fit this friend's preferences?
+

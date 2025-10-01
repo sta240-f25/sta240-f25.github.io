@@ -1,0 +1,12 @@
+a.  Let $S$ be the set of all permutations of $a$, $b$, $c$, together with the triples $aaa$, $bbb$, and $ccc$. Imagine we draw an outcome randomly from this set. Define the event $A_k=\{\text{the kth spot is occupied by the letter a}\}$ for $k=1,\,2,\,3$. Compute the probabilities $P(A_k)$, $P(A_i\cap A_j)$, $P(A_1\cap A_2\cap A_3)$, and comment on the independence of the three of events;
+
+b.  Imagine we roll two fair, six-sided die. Compute $P(A)$, $P(B)$, $P(C)$, $P(A\cap B)$, $P(A\cap C)$, $P(B\cap C)$, and $P(A\cap B\cap C)$ for the following three events and comment on their independence:
+
+$$
+\begin{aligned}
+A&=\text{first die is 1, 2, 3}\\
+B&=\text{first die is 3, 4, 5}\\
+C&=\text{the sum of the two rolls is 9}.
+\end{aligned}
+$$
+

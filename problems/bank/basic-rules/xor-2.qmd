@@ -1,0 +1,9 @@
+Let $A$, $B$, and $C$ be three arbitrary events, and let $D$ denote the event that "exactly one of these three events occurs."
+
+a.  Draw a cartoon of $A$, $B$, $C$, and $D$;
+b.  Use the three basic set operations (union, intersection, and complement) to express $D$ in terms of $A$, $B$, and $C$;
+c.  Show that
+
+$$
+P(D)=P(A) + P(B) + P(C) - 2P(A \cap B) - 2P(A \cap C) - 2P(B \cap C) + 3P(A \cap B \cap C).
+$$
