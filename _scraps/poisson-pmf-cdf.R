@@ -1,0 +1,90 @@
+library(shiny)
+
+discrete_pmf <- function(x, p, xlim = c(min(x) - 1, max(x) + 1), label = "", add_mean = FALSE){
+  plot(x, p,
+       pch = 19,
+       cex = 0.5,
+       xlab = "",
+       ylab = "",
+       main = "",
+       ylim = c(0, 0.4),
+       yaxs = "i",
+       yaxt = "n",
+       xlim = xlim,
+       xaxt = "n",
+       bty = "n"
+  )
+  segments(x,
+           rep(0, length(x) + 1),
+           x1 = x,
+           y1 = p,
+           lwd = 3
+  )
+  axis(1, at = floor(xlim[1]):ceiling(xlim[2]), cex.axis = 1)
+  axis(2, at = seq(0, 1, length.out = 11), las = 1, cex.axis = 1.5)
+  legend("topright", label, bty = "n", cex = 3)
+  if(add_mean == TRUE){
+    mtext("E(X)", side = 1, at = sum(x * p), col = "red", line = 2)
+  }
+}
+
+discrete_cdf <- function(x, p, xlim = c(min(x) - 1, max(x) + 1), label = ""){
+  closeddot = cumsum(p)
+  opencircle = c(0, closeddot[1:length(x)-1])
+  plot(x, closeddot, pch = 19, cex = 0.5,
+       ylim = c(0, 1),
+       ylab = "", main = "", xlab = "",
+       yaxt = "n",
+       xlim = xlim,
+       xaxt = "n",
+       #yaxs = "i", 
+       bty = "n")
+  points(x, opencircle, cex = 0.5)
+  segments(c(xlim[1], x), c(0, closeddot), c(x, xlim[2]), c(0, closeddot), lwd = 1)
+  axis(1, at = floor(xlim[1]):ceiling(xlim[2]), cex.axis = 1)
+  axis(2, at = seq(0, 1, length.out = 11), las = 1, cex.axis = 1.5)
+  legend("bottomright", label, bty = "n", cex = 3)
+}
+
+# Define UI for application that draws a histogram
+ui <- fluidPage(
+  
+  # Application title
+  titlePanel("The Poisson distribution"),
+  
+  # Sidebar with a slider input for number of bins 
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("lambda",
+                  "Rate:",
+                  min = 0,
+                  max = 100,
+                  value = 1,
+                  step = 0.1)
+    ),
+    
+    # Show a plot of the generated distribution
+    mainPanel(
+      plotOutput("distPlot")
+    )
+  )
+)
+
+# Define server logic required to draw a histogram
+server <- function(input, output) {
+  
+  output$distPlot <- renderPlot({
+    
+    lambda <- input$lambda
+    n <- 100
+
+    par(mfrow = c(2, 1), mar = c(4, 4, 2, 2))
+    
+    discrete_cdf(0:n, dpois(0:n, lambda))
+    discrete_pmf(0:n, dpois(0:n, lambda), add_mean = FALSE)
+    mtext("E(X)", side = 1, at = lambda, col = "red", line = 2)
+  })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
