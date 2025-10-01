@@ -12,6 +12,9 @@ project:
     - lecture-notes/sta240-notes-03-counting-examples.pdf
     - lecture-notes/sta240-notes-04-conditional-probability.pdf
     - lecture-notes/sta240-notes-05-random-variables.pdf
+    - lecture-notes/sta240-notes-06-discrete-families.pdf
+    - lecture-notes/sta240-notes-07-expectation.pdf
+    - lecture-notes/sta240-notes-08-variance.pdf
 
 website:
   page-navigation: true
@@ -124,6 +127,8 @@ website:
             text: Lab 3
           - href: labs/lab-4.qmd
             text: Lab 4
+          - href: labs/lab-5.qmd
+            text: Lab 5
       - section: "Exam Study Guides"
         contents:
           - href: problems/exam-midterm-1.qmd
