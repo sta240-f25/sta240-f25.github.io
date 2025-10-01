@@ -5,6 +5,25 @@ filters:
   - shinylive
 ---
 
+The binomial distribution is our model for the total number of successes in $n$, independent binary trials, each with identical probability of success $p\in[0,\,1]$. 
+
+|  |        |
+|------|--------------------|
+| **Notation** | $X\sim\text{Binom}(n,\,p)$  |
+| **Range** | $\{0,\,1,\,2,\,...,\,n-1,\,n\}$ |
+| **Parameter space** | $p\in[0,\,1]$ |
+| **PMF** | $P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}$ |
+| **Expectation** | $np$ |
+| **Variance** | $np(1-p)$ |
+
+
+## `R` commands
+
+[Here](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Binomial.html) is the documentation for the 
+
+## Play around!
+
+Notice that, for all values of $p\in(0,\,1)$, the shape of the PMF becomes more like the bell curve as $n$ grows: 
 
 ```{shinylive-r}
 #| standalone: true
