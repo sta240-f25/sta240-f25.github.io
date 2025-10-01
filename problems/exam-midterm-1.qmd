@@ -32,48 +32,68 @@ Do not skimp on the cheat sheet! Students in past semesters have neglected their
 
 # Probability spaces
 
-## Problem 1
+## Problem X
 
 {{< include bank/basic-rules/set-minus.qmd >}}
 
-## Problem 2
+## Problem X
 
-Something where it's like, check that the axioms are satisfied.
-
-## Problem 3
+(Something where it's like, check that the axioms are satisfied.)
 
 ## Want more review?
+
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-01-probability-spaces.pdf) on axioms and rules;
+- [Problem Set 1](https://sta240-f25.github.io/problems/pset-1.html): problems 4 - 8;
+- [Problem Set 2](https://sta240-f25.github.io/problems/pset-2.html): problems 2 - 3;
 
 # Counting
 
-## Problem 4
+## Problem X
 
-The long list of card stuff from Simon that I put on PSET 2 last semester
+{{< include bank/counting/mak-cards.qmd >}}
 
-## Problem 5
-
-## Problem 6
+## Problem X
 
 ## Want more review?
+
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-02-counting-theory.pdf) on counting theory;
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-03-counting-examples.pdf) with birthday problem and other worked examples;
+- [Lab 2](https://sta240-f25.github.io/labs/lab-2.html) worked examples;
+- [Problem Set 1](https://sta240-f25.github.io/problems/pset-1.html): problems 9 - 10;
+- [Problem Set 2](https://sta240-f25.github.io/problems/pset-2.html): problems 4 - 8;
+- [Problem Set 3](https://sta240-f25.github.io/problems/pset-3.html): problems 2 - 3;
+- Odd-numbered exercises in DeGroot & Schervish Chapters 1.6 - 1.8, 1.12.
 
 # Conditional probability 
 
-## Problem 7
+## Problem X
 
-## Problem 8
-
-## Problem 9
+## Problem X
 
 ## Want more review?
 
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-04-conditional-probability.pdf) with worked examples;
+    - The lil' [app](https://sta240-f25.github.io/apps/disease-testing.html) on disease testing;
+- [Problem Set 2](https://sta240-f25.github.io/problems/pset-2.html): problems 9 - 10;
+- [Problem Set 3](https://sta240-f25.github.io/problems/pset-3.html): problems 4 - 8;
+- [Problem Set 4](https://sta240-f25.github.io/problems/pset-4.html): problems 2 - 3;
+- Odd-numbered exercises in DeGroot & Schervish Chapter 2.
+
 # Discrete random variables
 
-## Problem 10
+## Problem X
 
-## Problem 11
-
-## Problem 12
+## Problem X
 
 {{< include bank/random-variables-discrete/memoryless-geometric.qmd >}}
 
 ## Want more review?
+
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-05-random-variables.pdf) introducing random variables;
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-06-discrete-families.pdf) on special families of discrete random variables;
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-07-expectation.pdf) on expected value;
+- [Lab 5](https://sta240-f25.github.io/labs/lab-5.html) exercises;
+- [Problem Set 2](https://sta240-f25.github.io/problems/pset-2.html): problem 7;
+- [Problem Set 3](https://sta240-f25.github.io/problems/pset-3.html): problems 9 - 10;
+- [Problem Set 4](https://sta240-f25.github.io/problems/pset-4.html): problems 4 - 10.
+

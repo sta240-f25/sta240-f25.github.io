@@ -1,0 +1,10 @@
+Suppose you are dealt six cards from a well-shuffled, standard deck of 52.
+
+a.  What is the probability of getting 3 of one rank and 3 of another?
+b.  What is the probability of getting 4 of one rank and 2 of another?
+c.  What is the probability of getting 3 aces and 3 of another rank?
+d.  What is the probability of getting 4 of one rank and 2 aces?
+e.  What is the probability that all 6 cards are in the same suit?
+f.  What is the probability that all 6 cards are consecutive (ie a hand with 3 hearts, 4 spades, 5 spades, 6 clubs, 7 hearts, and the 8 diamonds)? Assume that the ace can only be the high card;
+g.  What is the answer to the previous question if we allow the ace to be either high or low?
+h.  What is the probability of receiving the ace, king, queen, jack, 10 and 9 all in hearts?
