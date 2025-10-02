@@ -15,6 +15,17 @@ So, given a person's preferences, will they like my profile? Well, let's say tha
 
 ![The silly model imagines that a given person has eight qualities that they value most in a romantic partner, which are randomly drawn from a set of 100 desirable qualities.](images/qualities.png){#fig-qualities fig-align="center" width="60%"}
 
+::: callout-tip
+## Today's goals
+
+The main skills you will practice today are plotting PMFs and computing probabilities in our special families of discrete probability distributions. You may find these new explainers helpful:
+
+- [Plotting points](https://sta240-f25.github.io/explainers/plot.html);
+- [Computing probabilities](https://sta240-f25.github.io/explainers/probabilities.html);
+- [Binomial distribution summary](https://sta240-f25.github.io/distributions/discrete-binomial.html);
+- Geometric distribution summary;
+- [Poisson distribution summary](https://sta240-f25.github.io/distributions/discrete-poisson.html);
+:::
 
 ## Task 1
 
@@ -63,6 +74,12 @@ Let's say I first downloaded the app on a Sunday. Use `R` to compute the probabi
 When you post your profile on a dating app, everyone in your area can see and swipe on it. If someone swipes right on you, the app will usually alert you to the fact that this happened, but they will charge you for the privilege of seeing who exactly it is. So let $Z$ be the number of "likes" you receive in a given twenty-four hour period. We could model this using the Poisson distribution and say that $Z\sim \text{Poisson}(\lambda)$. If we wish to model the likes received by some disgraced undesirable like James Corden, we might pick $Z\sim \text{Poisson}(0.01)$, which has $E(Z)=0.01$. Suffice it to say, not a tremendous number of likes rolling in for that guy, on average. If we wish to model the likes received by Taylor Swift, we might pick $Z\sim\text{Poisson}(20,000,000)$. You get the idea. 
 
 For a normal guy, perhaps $Z\sim\text{Poisson}(5)$. Use `R` to compute the probability that such a person beats their average for the day.
+
+::: callout-note
+# Pit stop 
+
+We haven't gotten to the Poisson distribution in lecture yet, but you've seen it a bit on Problem Sets 0 and 1. Check out the [lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-06-discrete-families.pdf) or our [online summary](https://sta240-f25.github.io/distributions/discrete-poisson.html) for a bit of background.
+:::
 
 ## Task 8
 
