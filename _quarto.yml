@@ -105,6 +105,12 @@ website:
             text: Vectorization
           - href: explainers/rng-seed.qmd
             text: Setting a seed
+      - section: "Distribution families"
+        contents:
+          - href: distributions/discrete-binomial.qmd
+            text: Binomial
+          - href: distributions/discrete-poisson.qmd
+            text: Poisson
       - section: "Problem Sets"
         contents:
           - href: problems/pset-0.qmd
