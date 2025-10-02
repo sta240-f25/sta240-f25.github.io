@@ -15,6 +15,7 @@ So, given a person's preferences, will they like my profile? Well, let's say tha
 
 ![The silly model imagines that a given person has eight qualities that they value most in a romantic partner, which are randomly drawn from a set of 100 desirable qualities.](images/qualities.png){#fig-qualities fig-align="center" width="60%"}
 
+
 ## Task 1
 
 Imagine a random person on the app is presented with my profile. They will either like my profile and swipe right (0) or they won't like it and they will swipe left (1). Define an indicator random variable $I$ for this event:
