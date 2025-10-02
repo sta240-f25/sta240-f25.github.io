@@ -5,6 +5,40 @@ filters:
   - shinylive
 ---
 
+The Poisson distribution can be used to model the number of random arrivals in a given window of time: 
+
+- how many claims an insurance company receives in a month;
+- how many emails you receive in an hour;
+- how many "likes" you receive on a dating app in a day.
+
+The distribution is governed by one parameter $\lambda>0$ with is called the **rate**.
+
+## Basic properties
+
+|  |        |
+|------|--------------------|
+| **Notation** | $X\sim\text{Poisson}(\lambda)$  |
+| **Range** | $\mathbb{N}=\{0,\,1,\,2,\,3,\,4,\,...\}$ |
+| **Parameter space** | $\lambda>0$ |
+| **PMF** | $P(X=k)=e^{-\lambda}\frac{\lambda^k}{k!}$ |
+| **Expectation** | $\lambda$ |
+| **Variance** | $\lambda$ |
+
+## `R` commands
+
+[Here](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Poisson.html) is the documentation for the suite of commands that let you work with the Poisson distribution in `R`:
+
+```{r}
+#| eval: false
+dpois(x, lambda) # PMF: P(X = x)
+ppois(q, lambda) # CDF: P(X <= q)
+rpois(n, lambda) # random numbers
+```
+
+## Play around!
+
+As $\lambda$ grows, the distribution shifts to the right and gets wider, which makes sense since $\lambda$ acts as both the mean and variance. Furthermore, the shape of the PMF becomes more bell-like as $\lambda$ gets big. This is not an accident.
+
 
 ```{shinylive-r}
 #| standalone: true
@@ -62,13 +96,13 @@ discrete_cdf <- function(x, p, xlim = c(min(x) - 1, max(x) + 1), label = ""){
 ui <- fluidPage(
   
   # Application title
-  titlePanel("The Poisson distribution"),
+  titlePanel("Poisson distribution CDF and PMF"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
       sliderInput("lambda",
-                  "Rate:",
+                  "Rate (λ):",
                   min = 0,
                   max = 100,
                   value = 1,
