@@ -11,7 +11,7 @@ The Poisson distribution can be used to model the number of random arrivals in a
 - how many emails you receive in an hour;
 - how many "likes" you receive on a dating app in a day.
 
-The distribution is governed by one parameter $\lambda>0$ with is called the **rate**.
+The distribution is governed by one parameter $\lambda>0$ which is called the **rate**.
 
 ## Basic properties
 
