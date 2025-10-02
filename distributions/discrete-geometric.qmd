@@ -7,8 +7,8 @@ filters:
 
 The geometric distribution is based on a (possibly infinite) sequence of independent and identically distributed binary trials, each with probability of success $p$. There are two versions:
 
-- sometimes, the geometric distribution is used to count the number of trials you must wait through until the first success. The range is $\{1,\,2,\,3,\,4,\,...\}$ and the PMF is $P(X=k)=(1-p)^{k-1}p$. This is what we saw in lecture;
-- other times, the geometric distribution is used to count the number of failures that occur *before* the first success. So the range is $\mathbb{N}=\{0,\,1,\,2,\,3,\,4,\,...\}$ and the PMF is $P(X=k)=(1-p)^kp$. This is the version that `R` implements.
+- sometimes, the geometric distribution is used to count the number of trials you must wait through until the first success. The range is $\{1,\,2,\,3,\,4,\,...\}$ and the PMF is $P(X=k)=(1-p)^{k-1}p$. This is what we saw in [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-06-discrete-families.pdf);
+- other times, the geometric distribution is used to count the number of failures that occur *before* the first success. So the range is $\mathbb{N}=\{0,\,1,\,2,\,3,\,4,\,...\}$ and the PMF is $P(X=k)=(1-p)^kp$. This is the version that `R` [implements](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Geometric.html).
 
 ## Basic properties
 
