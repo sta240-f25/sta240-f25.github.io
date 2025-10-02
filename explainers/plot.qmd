@@ -1,0 +1,31 @@
+---
+title: "Plotting points"
+format: html
+---
+
+Consider two vectors of the same length:
+
+```{r}
+x <- c(0.3, 0.57, -0.11, -0.26, -0.77, pi, 4, 1, 1, 5)
+y <- c(9, 4, 1, 8, 4, 1, 5, 7, 2, 0)
+```
+
+If you want to create a scatter plot of the (x, y) pairs, you can use the `plot` command:
+
+```{r}
+plot(x, y, pch = 19)
+```
+
+If you wanted, for example, to plot the PMF of the binomial distribution, then your x vector has every value in the range, and your y vector has all of the individual probabilities:
+
+```{r}
+n <- 20
+p <- 0.5
+x <- 0:n
+pmf <- dbinom(x, n, p)
+plot(x, pmf, pch = 19)
+```
+
+Notice that we made use of the fact that the `dbinom` command is [*vectorized*](https://sta240-f25.github.io/explainers/vectorization.html) in its first argument; if you give it a vector with multiple values, it returns a vector with the probabilities for each one.
+
+
