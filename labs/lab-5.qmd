@@ -69,7 +69,7 @@ What is the distribution of $Y$? Use `R` to plot its PMF.
 
 Let's say I first downloaded the app on a Sunday. Use `R` to compute the probability that I get a match in the first week.
 
-## Task 7
+## Task 7 (optional)
 
 When you post your profile on a dating app, everyone in your area can see and swipe on it. If someone swipes right on you, the app will usually alert you to the fact that this happened, but they will charge you for the privilege of seeing who exactly it is. So let $Z$ be the number of "likes" you receive in a given twenty-four hour period. We could model this using the Poisson distribution and say that $Z\sim \text{Poisson}(\lambda)$. If we wish to model the likes received by some disgraced undesirable like James Corden, we might pick $Z\sim \text{Poisson}(0.01)$, which has $E(Z)=0.01$. Suffice it to say, not a tremendous number of likes rolling in for that guy, on average. If we wish to model the likes received by Taylor Swift, we might pick $Z\sim\text{Poisson}(20,000,000)$. You get the idea. 
 
@@ -81,7 +81,7 @@ For a normal guy, perhaps $Z\sim\text{Poisson}(5)$. Use `R` to compute the proba
 We haven't gotten to the Poisson distribution in lecture yet, but you've seen it a bit on Problem Sets 0 and 1. Check out the [lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-06-discrete-families.pdf) or our [online summary](https://sta240-f25.github.io/distributions/discrete-poisson.html) for a bit of background.
 :::
 
-## Task 8
+## Task 8 (optional)
 
 Use `R` to plot the PMF of $Z$.
 
