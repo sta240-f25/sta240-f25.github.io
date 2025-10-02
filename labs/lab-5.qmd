@@ -29,12 +29,12 @@ The main skills you will practice today are plotting PMFs and computing probabil
 
 ## Task 1
 
-Imagine a random person on the app is presented with my profile. They will either like my profile and swipe right (0) or they won't like it and they will swipe left (1). Define an indicator random variable $I$ for this event:
+Imagine a random person on the app is presented with my profile. They will either like my profile and swipe right (1) or they won't like it and they will swipe left (0). Define an indicator random variable $I$ for this event:
 
 $$
-I = \text{\href{https://youtu.be/pFCzkqCh3-I?feature=shared}{\texttt{do they like me?''}}}=\begin{cases}
-    0 \text{ (no)} & \text{if $A^c$ happens} \\ 
-    1 \text{ (yes)} & \text{if $A$ happens}. \\ 
+I =\begin{cases}
+    0  & \text{if $A^c$ happens} \\ 
+    1  & \text{if $A$ happens}. \\ 
 \end{cases}
 $$
 
