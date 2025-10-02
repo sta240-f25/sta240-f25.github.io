@@ -1866,7 +1866,7 @@
     "href": "labs/lab-5.html#task-1",
     "title": "Lab 5",
     "section": "Task 1",
-    "text": "Task 1\nImagine a random person on the app is presented with my profile. They will either like my profile and swipe right (0) or they won’t like it and they will swipe left (1). Define an indicator random variable \\(I\\) for this event:\n\\[\nI = \\text{\\href{https://youtu.be/pFCzkqCh3-I?feature=shared}{\\texttt{do they like me?''}}}=\\begin{cases}\n    0 \\text{ (no)} & \\text{if $A^c$ happens} \\\\\n    1 \\text{ (yes)} & \\text{if $A$ happens}. \\\\\n\\end{cases}\n\\]\nWhat is the probability that a random person on the app swipes right on my profile? In other words, what is \\(P(I=1)\\)?\n\n\n\n\n\n\nWrite-up\n\n\n\nIn your Quarto doc, typeset the math deriving the answer and also use R to calculate the probability.",
+    "text": "Task 1\nImagine a random person on the app is presented with my profile. They will either like my profile and swipe right (1) or they won’t like it and they will swipe left (0). Define an indicator random variable \\(I\\) for this event:\n\\[\nI =\\begin{cases}\n    0  & \\text{if $A^c$ happens} \\\\\n    1  & \\text{if $A$ happens}. \\\\\n\\end{cases}\n\\]\nWhat is the probability that a random person on the app swipes right on my profile? In other words, what is \\(P(I=1)\\)?\n\n\n\n\n\n\nWrite-up\n\n\n\nIn your Quarto doc, typeset the math deriving the answer and also use R to calculate the probability.",
     "crumbs": [
       "Labs",
       "Lab 5"
