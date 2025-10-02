@@ -1,8 +1,0 @@
----
-title: "Counting practice"
-subtitle: "STA 240 9/10/2025"
-format:
-  pdf:
-    toc: false
----
-
