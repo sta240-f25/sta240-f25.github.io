@@ -105,6 +105,10 @@ website:
             text: Vectorization
           - href: explainers/rng-seed.qmd
             text: Setting a seed
+          - href: explainers/probabilities.qmd
+            text: Computing probabilities
+          - href: explainers/plot.qmd
+            text: Plotting points
       - section: "Distribution families"
         contents:
           - href: distributions/discrete-binomial.qmd
