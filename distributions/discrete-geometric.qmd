@@ -1,0 +1,35 @@
+---
+title: "Geometric distribution"
+format: html
+filters:
+  - shinylive
+---
+
+The geometric distribution is based on a (possibly infinite) sequence of independent and identically distributed binary trials, each with probability of success $p$. There are two versions:
+
+- sometimes, the geometric distribution is used to count the number of trials you must wait through until the first success. The range is $\{1,\,2,\,3,\,4,\,...\}$ and the PMF is $P(X=k)=(1-p)^{k-1}p$. This is what we saw in lecture;
+- other times, the geometric distribution is used to count the number of failures that occur *before* the first success. So the range is $\mathbb{N}=\{0,\,1,\,2,\,3,\,4,\,...\}$ and the PMF is $P(X=k)=(1-p)^kp$. This is the version that `R` implements.
+
+## Basic properties
+
+For the first version of the distribution that we saw in lecture, the properties are:
+
+|  |        |
+|------|--------------------|
+| **Notation** | $X\sim\text{Geom}(p)$  |
+| **Range** | $\{1,\,2,\,3,\,4,\,...\}$ |
+| **Parameter space** | $p\in[0,\,1]$ |
+| **PMF** | $P(X=k)=(1-p)^{k-1}p$ |
+| **Expectation** | $1/p$ |
+| **Variance** | $\frac{1-p}{p^2}$ |
+
+## `R` commands
+
+For the second version of the distribution, `R` provides:
+
+```{r}
+#| eval: false
+dgeom(x, prob) # PMF: P(X = x)
+pgeom(q, prob) # CDF: P(X <= q)
+rgeom(n, prob) # random numbers
+```

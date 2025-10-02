@@ -6,6 +6,7 @@ format: html
 `R` provides basic commands that compute probabilities for our special families of distributions:
 
 - [Binomial](https://sta240-f25.github.io/distributions/discrete-binomial.html);
+- [Geometric](https://sta240-f25.github.io/distributions/discrete-geometric.html);
 - [Poisson](https://sta240-f25.github.io/distributions/discrete-poisson.html);
 - (we will add more as the semester wears on)
 

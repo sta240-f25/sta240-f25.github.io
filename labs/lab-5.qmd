@@ -23,7 +23,7 @@ The main skills you will practice today are plotting PMFs and computing probabil
 - [Plotting points](https://sta240-f25.github.io/explainers/plot.html);
 - [Computing probabilities](https://sta240-f25.github.io/explainers/probabilities.html);
 - [Binomial distribution summary](https://sta240-f25.github.io/distributions/discrete-binomial.html);
-- Geometric distribution summary;
+- [Geometric distribution summary](https://sta240-f25.github.io/distributions/discrete-geometric.html);
 - [Poisson distribution summary](https://sta240-f25.github.io/distributions/discrete-poisson.html);
 :::
 
