@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Lab 5 – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
@@ -20,8 +17,42 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -40,8 +71,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -67,12 +97,7 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -98,7 +123,6 @@ window.Quarto = {
   typesetMath
 };
 </script>
-
 <meta property="og:title" content="Lab 5 – STA 240 Fall 2025">
 <meta property="og:description" content="Due Thursday October 2 at 11:59 PM">
 <meta property="og:image" content="https://sta240-f25.github.io/labs/images/qualities.png">
@@ -106,13 +130,10 @@ window.Quarto = {
 <meta property="og:image:height" content="1447">
 <meta property="og:image:width" content="2880">
 </head>
-
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -123,16 +144,11 @@ window.Quarto = {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
@@ -147,7 +163,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -155,8 +171,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -199,7 +215,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -208,8 +224,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
@@ -246,7 +262,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -255,8 +271,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
@@ -341,7 +357,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -350,8 +366,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binomial</span></a>
@@ -365,12 +381,18 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypergeometric</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Poisson</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
@@ -379,8 +401,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
@@ -411,7 +433,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
@@ -420,8 +442,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
@@ -452,7 +474,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
@@ -461,26 +483,24 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#task-1" id="toc-task-1" class="nav-link active" data-scroll-target="#task-1">Task 1</a></li>
+<li><a href="#task-1" id="toc-task-1" class="nav-link active" data-scroll-target="#task-1">Task 1</a></li>
   <li><a href="#task-2" id="toc-task-2" class="nav-link" data-scroll-target="#task-2">Task 2</a></li>
   <li><a href="#task-3" id="toc-task-3" class="nav-link" data-scroll-target="#task-3">Task 3</a></li>
   <li><a href="#task-4" id="toc-task-4" class="nav-link" data-scroll-target="#task-4">Task 4</a></li>
@@ -488,14 +508,10 @@ window.Quarto = {
   <li><a href="#task-6" id="toc-task-6" class="nav-link" data-scroll-target="#task-6">Task 6</a></li>
   <li><a href="#task-7-optional" id="toc-task-7-optional" class="nav-link" data-scroll-target="#task-7-optional">Task 7 (optional)</a></li>
   <li><a href="#task-8-optional" id="toc-task-8-optional" class="nav-link" data-scroll-target="#task-8-optional">Task 8 (optional)</a></li>
-  </ul>
-</nav>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-1.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-5.html">Lab 5</a></li></ol></nav>
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-1.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-5.html">Lab 5</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">Lab 5</h1>
 <p class="subtitle lead">Due Thursday October 2 at 11:59 PM</p>
 </div>
@@ -511,21 +527,16 @@ window.Quarto = {
   
 
 
-</header>
-
-
-<p>Dating apps are horrific. Hopefully young people in college do not feel the need to use them. But for us decrepit old hags that were foolish enough to defer adulthood to the autumn of their thirties, they can feel unavoidable. So how do these work? Whelp, I make a profile, someone else on the app reviews it for no more than three seconds, and if I meet enough of their criteria, they swipe right (<em>like</em> my profile). If I fail to meet their criteria, they swipe left. If we both like each other’s profiles, it’s a match. God help us.</p>
+</header><p>Dating apps are horrific. Hopefully young people in college do not feel the need to use them. But for us decrepit old hags that were foolish enough to defer adulthood to the autumn of their thirties, they can feel unavoidable. So how do these work? Whelp, I make a profile, someone else on the app reviews it for no more than three seconds, and if I meet enough of their criteria, they swipe right (<em>like</em> my profile). If I fail to meet their criteria, they swipe left. If we both like each other’s profiles, it’s a match. God help us.</p>
 <p>Let’s model this. When the other person reviews my profile, they are deciding if I possess qualities they value. What might those qualities be? Charm, humor, wealth, height, education, hygiene, style, a deep and abiding appreciation for the films of Luis Buñuel, etc. <a href="#fig-qualities" class="quarto-xref">Figure&nbsp;1</a> imagines that the set of potentially desirable qualities are balls in the proverbial urn. For the purposes of discussion, let’s say there are a total of one hundred qualities a person could potentially value (100 balls in the jar). Every human has a list of 8 that they care most about. Everyone’s different, so we will model a given person’s preferences as a random selection (without replacement!) of 8 balls from this jar of 100.</p>
 <p>So, given a person’s preferences, will they like my profile? Well, let’s say that I possess exactly <strong>three</strong> of the one hundred desirable qualities. I won’t tell you what those three are, but suffice it to say, we have yet to list them in <a href="#fig-qualities" class="quarto-xref">Figure&nbsp;1</a>. We will treat my three qualities as three red balls in the jar, and the remaining 97 are black. Next, let <span class="math inline">\(A\)</span> be the event that at least <em>two</em> of my qualities are among the eight that a person values. If this happens, then they will swipe right on my profile.</p>
 <div id="fig-qualities" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-qualities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-qualities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/qualities.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-qualities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: The silly model imagines that a given person has eight qualities that they value most in a romantic partner, which are randomly drawn from a set of 100 desirable qualities.
-</figcaption>
-</figure>
+</figcaption></figure>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -539,16 +550,20 @@ Today’s goals
 <div class="callout-body-container callout-body">
 <p>The main skills you will practice today are plotting PMFs and computing probabilities in our special families of discrete probability distributions. You may find these new explainers helpful:</p>
 <ul>
-<li><a href="https://sta240-f25.github.io/explainers/plot.html">Plotting points</a>;</li>
-<li><a href="https://sta240-f25.github.io/explainers/probabilities.html">Computing probabilities</a>;</li>
-<li><a href="https://sta240-f25.github.io/distributions/discrete-binomial.html">Binomial distribution summary</a>;</li>
-<li><a href="https://sta240-f25.github.io/distributions/discrete-geometric.html">Geometric distribution summary</a>;</li>
-<li><a href="https://sta240-f25.github.io/distributions/discrete-poisson.html">Poisson distribution summary</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/explainers/plot.html">Plotting points</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/explainers/probabilities.html">Computing probabilities</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/distributions/discrete-binomial.html">Binomial distribution summary</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/distributions/discrete-geometric.html">Geometric distribution summary</a>;</li>
+<li>
+<a href="https://sta240-f25.github.io/distributions/discrete-poisson.html">Poisson distribution summary</a>;</li>
 </ul>
 </div>
 </div>
-<section id="task-1" class="level2">
-<h2 class="anchored" data-anchor-id="task-1">Task 1</h2>
+<section id="task-1" class="level2"><h2 class="anchored" data-anchor-id="task-1">Task 1</h2>
 <p>Imagine a random person on the app is presented with my profile. They will either like my profile and swipe right (1) or they won’t like it and they will swipe left (0). Define an indicator random variable <span class="math inline">\(I\)</span> for this event:</p>
 <p><span class="math display">\[
 I =\begin{cases}
@@ -557,69 +572,223 @@ I =\begin{cases}
 \end{cases}
 \]</span></p>
 <p>What is the probability that a random person on the app swipes right on my profile? In other words, what is <span class="math inline">\(P(I=1)\)</span>?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Write-up
+Solution
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In your Quarto doc, typeset the math deriving the answer and also use <code>R</code> to calculate the probability.</p>
+<p><span class="math display">\[
+\begin{aligned}
+    P(I=1)=P(A)&amp;=1-P(A^c)\\
+    &amp;=1-P(\text{they value none or only one of my qualities})\\
+    &amp;=1-P(\text{none})-P(\text{only one})\\
+    &amp;=1-\frac{\binom{97}{8}}{\binom{100}{8}}-\frac{\binom{3}{1}\binom{97}{7}}{\binom{100}{8}}\\
+    &amp;\approx 1 - 0.777 - 0.207\\
+    &amp;=0.016.
+\end{aligned}
+\]</span></p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">like_prob</span> <span class="op">&lt;-</span> <span class="fl">1</span> <span class="op">-</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Special.html">choose</a></span><span class="op">(</span><span class="fl">97</span>, <span class="fl">8</span><span class="op">)</span> <span class="op">+</span> <span class="fl">3</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Special.html">choose</a></span><span class="op">(</span><span class="fl">97</span>, <span class="fl">7</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/Special.html">choose</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">8</span><span class="op">)</span></span>
+<span><span class="va">like_prob</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.01627706</code></pre>
 </div>
 </div>
-</section>
-<section id="task-2" class="level2">
-<h2 class="anchored" data-anchor-id="task-2">Task 2</h2>
+</div>
+</div>
+</div>
+</section><section id="task-2" class="level2"><h2 class="anchored" data-anchor-id="task-2">Task 2</h2>
 <p>Task 1 gives the probability that one person likes my profile, but as we all know, dating apps are a numbers game. One strategy is to go on there, indiscriminately swipe right on everyone until you run out of people in your area, wait for the matches to roll in, and then filter through only those folks that have already expressed interest in you. The dating app creators know this is a possibility though, and so they cap the number of right swipes you can send in a 24 hour period (unless you buy a premium subscription). Let’s say that number is <span class="math inline">\(n=25\)</span>, as I believe it is on Bumble. So on a given day, I send 25 likes out into the world. How many of those <span class="math inline">\(n=25\)</span> people will like me back, resulting in a match? Introduce a binary random variable <span class="math inline">\(I_i\)</span> indicating whether or not person <span class="math inline">\(i=1,\,2,\, ...,\,25\)</span> likes my profile. Assume that these are all <strong>identically distributed</strong> as in Task 1, and assume that these are <strong>independent</strong>. We have yet to formally define this, but in context it means that the swiping decisions among these 25 people are not affecting one another. So none of them are sitting next to each other discussing my profile, for example.</p>
 <p>Given this setup, define a new random variable <span class="math inline">\(X\)</span> that counts the total number of matches I get. How is <span class="math inline">\(X\)</span> related to the <span class="math inline">\(I_i\)</span>? What is the distribution of <span class="math inline">\(X\)</span>? What is <span class="math inline">\(E(X)\)</span>, the number of matches I expect to receive that day?</p>
-</section>
-<section id="task-3" class="level2">
-<h2 class="anchored" data-anchor-id="task-3">Task 3</h2>
-<p>Use <code>R</code> to compute the probability that I get at least one match that day.</p>
-</section>
-<section id="task-4" class="level2">
-<h2 class="anchored" data-anchor-id="task-4">Task 4</h2>
-<p>Use <code>R</code> to plot the PMF of <span class="math inline">\(X\)</span>.</p>
-</section>
-<section id="task-5" class="level2">
-<h2 class="anchored" data-anchor-id="task-5">Task 5</h2>
-<p>Let’s say that every day, I wake up, pour the coffee, do some lil’ granny stretches so that I don’t break a hip, and then swipe on the app until I’ve sent out my 25 likes for the day. Then I wait to see if any matches roll in. I do this day after day after day. Let <span class="math inline">\(Y\)</span> be the number of days I have to wait through until I get at least one match.</p>
-<p>What is the distribution of <span class="math inline">\(Y\)</span>? Use <code>R</code> to plot its PMF.</p>
-</section>
-<section id="task-6" class="level2">
-<h2 class="anchored" data-anchor-id="task-6">Task 6</h2>
-<p>Let’s say I first downloaded the app on a Sunday. Use <code>R</code> to compute the probability that I get a match in the first week.</p>
-</section>
-<section id="task-7-optional" class="level2">
-<h2 class="anchored" data-anchor-id="task-7-optional">Task 7 (optional)</h2>
-<p>When you post your profile on a dating app, everyone in your area can see and swipe on it. If someone swipes right on you, the app will usually alert you to the fact that this happened, but they will charge you for the privilege of seeing who exactly it is. So let <span class="math inline">\(Z\)</span> be the number of “likes” you receive in a given twenty-four hour period. We could model this using the Poisson distribution and say that <span class="math inline">\(Z\sim \text{Poisson}(\lambda)\)</span>. If we wish to model the likes received by some disgraced undesirable like James Corden, we might pick <span class="math inline">\(Z\sim \text{Poisson}(0.01)\)</span>, which has <span class="math inline">\(E(Z)=0.01\)</span>. Suffice it to say, not a tremendous number of likes rolling in for that guy, on average. If we wish to model the likes received by Taylor Swift, we might pick <span class="math inline">\(Z\sim\text{Poisson}(20,000,000)\)</span>. You get the idea.</p>
-<p>For a normal guy, perhaps <span class="math inline">\(Z\sim\text{Poisson}(5)\)</span>. Use <code>R</code> to compute the probability that such a person beats their average for the day.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Pit stop
+Solution
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>We haven’t gotten to the Poisson distribution in lecture yet, but you’ve seen it a bit on Problem Sets 0 and 1. Check out the <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-06-discrete-families.pdf">lecture notes</a> or our <a href="https://sta240-f25.github.io/distributions/discrete-poisson.html">online summary</a> for a bit of background.</p>
+<ul>
+<li>
+<span class="math inline">\(X\sim\text{Binom}(25, 0.016)\)</span>;</li>
+<li>
+<span class="math inline">\(X=\sum_{i=1}^{25}I_i\)</span>;</li>
+<li>
+<span class="math inline">\(E(X) \approx 25\times0.016=0.4\)</span>.</li>
+</ul>
 </div>
 </div>
-</section>
-<section id="task-8-optional" class="level2">
-<h2 class="anchored" data-anchor-id="task-8-optional">Task 8 (optional)</h2>
+</div>
+</section><section id="task-3" class="level2"><h2 class="anchored" data-anchor-id="task-3">Task 3</h2>
+<p>Use <code>R</code> to compute the probability that I get at least one match that day.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We want <span class="math inline">\(P(X\geq 1)=1-P(X=0)\)</span>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">match_prob</span> <span class="op">&lt;-</span> <span class="fl">1</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">dbinom</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">25</span>, <span class="va">like_prob</span><span class="op">)</span></span>
+<span><span class="va">match_prob</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3365319</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="task-4" class="level2"><h2 class="anchored" data-anchor-id="task-4">Task 4</h2>
+<p>Use <code>R</code> to plot the PMF of <span class="math inline">\(X\)</span>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">25</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="va">n</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">dbinom</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="va">n</span>, <span class="va">n</span>, <span class="va">like_prob</span><span class="op">)</span>, </span>
+<span>     type <span class="op">=</span> <span class="st">"h"</span>, ylab <span class="op">=</span> <span class="st">"P(X = k)"</span>, xlab <span class="op">=</span> <span class="st">"k"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="lab-5_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="task-5" class="level2"><h2 class="anchored" data-anchor-id="task-5">Task 5</h2>
+<p>Let’s say that every day, I wake up, pour the coffee, do some lil’ granny stretches so that I don’t break a hip, and then swipe on the app until I’ve sent out my 25 likes for the day. Then I wait to see if any matches roll in. I do this day after day after day. Let <span class="math inline">\(Y\)</span> be the number of days I have to wait through until I get at least one match.</p>
+<p>What is the distribution of <span class="math inline">\(Y\)</span>? Use <code>R</code> to plot its PMF.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(Y\sim\text{Geom}(0.3365)\)</span>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">26</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Geometric.html">dgeom</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">25</span>, <span class="va">match_prob</span><span class="op">)</span>, type <span class="op">=</span> <span class="st">"h"</span>, ylab <span class="op">=</span> <span class="st">"P(Y = k)"</span>, xlab <span class="op">=</span> <span class="st">"k"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="lab-5_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="task-6" class="level2"><h2 class="anchored" data-anchor-id="task-6">Task 6</h2>
+<p>Let’s say I first downloaded the app on a Sunday. Use <code>R</code> to compute the probability that I get a match in the first week.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We want the probability that one of the first 7 trials is a success. So <span class="math inline">\(P(Y\leq 7)\)</span>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Geometric.html">pgeom</a></span><span class="op">(</span><span class="fl">7</span> <span class="op">-</span> <span class="fl">1</span>, <span class="va">match_prob</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9434099</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="task-7-optional" class="level2"><h2 class="anchored" data-anchor-id="task-7-optional">Task 7 (optional)</h2>
+<p>When you post your profile on a dating app, everyone in your area can see and swipe on it. If someone swipes right on you, the app will usually alert you to the fact that this happened, but they will charge you for the privilege of seeing who exactly it is. So let <span class="math inline">\(Z\)</span> be the number of “likes” you receive in a given twenty-four hour period. We could model this using the Poisson distribution and say that <span class="math inline">\(Z\sim \text{Poisson}(\lambda)\)</span>. If we wish to model the likes received by some disgraced undesirable like James Corden, we might pick <span class="math inline">\(Z\sim \text{Poisson}(0.01)\)</span>, which has <span class="math inline">\(E(Z)=0.01\)</span>. Suffice it to say, not a tremendous number of likes rolling in for that guy, on average. If we wish to model the likes received by Taylor Swift, we might pick <span class="math inline">\(Z\sim\text{Poisson}(20,000,000)\)</span>. You get the idea.</p>
+<p>For an ordinary person, perhaps <span class="math inline">\(Z\sim\text{Poisson}(5)\)</span>. Use <code>R</code> to compute the probability that such a person beats their average for the day.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We want <span class="math inline">\(P(Z&gt;5)=1-P(Y\leq 5)\)</span>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">ppois</a></span><span class="op">(</span><span class="fl">5</span>, lambda <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3840393</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="task-8-optional" class="level2"><h2 class="anchored" data-anchor-id="task-8-optional">Task 8 (optional)</h2>
 <p>Use <code>R</code> to plot the PMF of <span class="math inline">\(Z\)</span>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">25</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">dpois</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">25</span>, <span class="fl">5</span><span class="op">)</span>, type <span class="op">=</span> <span class="st">"h"</span>, ylab <span class="op">=</span> <span class="st">"P(Z = k)"</span>, xlab <span class="op">=</span> <span class="st">"k"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="lab-5_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1017,9 +1186,7 @@ Pit stop
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../labs/lab-4.html" class="pagination-link" aria-label="Lab 4">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lab 4</span>
       </a>          
@@ -1031,8 +1198,7 @@ Pit stop
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -1044,8 +1210,6 @@ Pit stop
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

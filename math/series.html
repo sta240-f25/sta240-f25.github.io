@@ -41,6 +41,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<meta name="shinylive:serviceworker_dir" content="..">
+<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/load-shinylive-sw.js" type="module"></script>
+<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/run-python-blocks.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/shinylive.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -362,6 +367,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypergeometric</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Poisson</span></a>
   </div>
@@ -561,6 +572,89 @@ e^x&amp;=\sum\limits_{n=0}^\infty\frac{x^n}{n!},&amp;&amp;-\infty &lt; x &lt; \i
 \ln(1-x)&amp;=-\sum\limits_{n=0}^\infty\frac{x^n}{n},&amp;&amp;-1\leq x &lt; 1.
 \end{aligned}
 \]</span></p>
+<pre class="shinylive-r" data-engine="r"><code>#| '!! shinylive warning !!': |
+#|   shinylive does not work in self-contained HTML documents.
+#|   Please set `embed-resources: false` in your metadata.
+#| standalone: true
+#| viewerHeight: 500
+
+# app.R
+library(shiny)
+
+ui &lt;- fluidPage(
+  titlePanel("Taylor Polynomial Approximation"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        inputId = "func",
+        label = "Choose a function:",
+        choices = c("exp(x)", "sin(x)")
+      ),
+      sliderInput(
+        inputId = "degree",
+        label = "Degree of Taylor polynomial (n):",
+        min = 0, max = 10, value = 1, step = 1
+      )
+    ),
+    
+    mainPanel(
+      plotOutput("taylorPlot")
+    )
+  )
+)
+
+server &lt;- function(input, output) {
+  output$taylorPlot &lt;- renderPlot({
+    # Define function and y-limits
+    f &lt;- switch(input$func,
+                "exp(x)" = function(x) exp(x),
+                "sin(x)" = function(x) sin(x))
+    x &lt;- seq(-5, 5, length.out = 400)
+    y_true &lt;- f(x)
+    
+    # Fix y-limits by function
+    ylims &lt;- switch(input$func,
+                    "exp(x)" = c(-1, 150),
+                    "sin(x)" = c(-1.5, 1.5))
+    
+    # Define Taylor polynomial
+    taylor_poly &lt;- function(x, n) {
+      sapply(x, function(xi) {
+        sum(sapply(0:n, function(k) {
+          deriv_k &lt;- switch(input$func,
+                            "exp(x)" = 1,
+                            "sin(x)" = if (k %% 4 == 0) 0 else if (k %% 4 == 1) 1 else if (k %% 4 == 2) 0 else -1)
+          deriv_k * xi^k / factorial(k)
+        }))
+      })
+    }
+    
+    y_approx &lt;- taylor_poly(x, input$degree)
+    
+    # Draw the plot
+    plot(x, y_true, type = "l", col = "black", lwd = 2,
+         ylim = ylims, xlab = "x", ylab = "y",
+         main = paste("Taylor approximation of", input$func, "around x = 0"),
+         bty = "n", axes = FALSE)
+    
+    # Add axes through origin
+    abline(h = 0, v = 0, col = "gray70")
+    axis(1, pos = 0)
+    axis(2, pos = 0, las = 1)
+    
+    # Add Taylor curve
+    lines(x, y_approx, col = "red", lwd = 2)
+    
+    # Add legend
+    legend("topleft",
+           legend = c("f(x)", paste("Taylor polynomial (n = ", input$degree, ")", sep = "")),
+           col = c("black", "red"), lwd = 2, bty = "n")
+  })
+}
+
+shinyApp(ui = ui, server = server)
+</code></pre>
 
 
 </section>

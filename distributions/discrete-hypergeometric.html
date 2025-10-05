@@ -60,6 +60,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../distributions/discrete-poisson.html" rel="next">
+<link href="../distributions/discrete-geometric.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -132,7 +134,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Hypergeometric distribution</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../distributions/discrete-binomial.html">Distribution families</a></li><li class="breadcrumb-item"><a href="../distributions/discrete-hypergeometric.html">Hypergeometric</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -355,13 +357,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Distribution families</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
@@ -372,6 +374,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-geometric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Geometric</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Hypergeometric</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -485,11 +493,16 @@ window.Quarto = {
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#basic-properties" id="toc-basic-properties" class="nav-link active" data-scroll-target="#basic-properties">Basic properties</a></li>
+  <li><a href="#r-commands" id="toc-r-commands" class="nav-link" data-scroll-target="#r-commands"><code>R</code> commands</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../distributions/discrete-binomial.html">Distribution families</a></li><li class="breadcrumb-item"><a href="../distributions/discrete-hypergeometric.html">Hypergeometric</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">Hypergeometric distribution</h1>
 </div>
 
@@ -504,20 +517,37 @@ window.Quarto = {
   
 
 
-</header><p><span class="math display">\[
-P(X = k)
-= \frac{\binom{K}{k} \binom{N - K}{n-k}}{\binom{N}{n}}.
-\]</span></p>
+</header><p>Imagine we have a finite population containing <span class="math inline">\(m\)</span> “success” cases and <span class="math inline">\(n\)</span> “failure” cases, for a total population size of <span class="math inline">\(m+n\)</span>. If we sample <span class="math inline">\(k\)</span> cases from the population <em>without replacement</em>, then a hypergeometric random variable counts the number of sampled cases that are a success.</p>
+<p>You first met this distribution on Problem Set 4 when studying <a href="https://sta240-f25.github.io/problems/pset-4.html#problem-6">contested elections</a>.</p>
+<section id="basic-properties" class="level2"><h2 class="anchored" data-anchor-id="basic-properties">Basic properties</h2>
+<table class="caption-top table"><tbody>
+<tr class="odd">
+<td><strong>Notation</strong></td>
+<td><span class="math inline">\(X\sim\text{HG}(n, m, k)\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Range</strong></td>
+<td><span class="math inline">\(\{0,\,1,\,2,\,3,\,...,\,k-1,\,k\}\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>PMF</strong></td>
+<td><span class="math inline">\(P(X = x) = \binom{n}{x} \binom{m}{k-x}/\binom{m+n}{k}\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Expectation</strong></td>
+<td><span class="math inline">\(kn/(n+m)\)</span></td>
+</tr>
+</tbody></table></section><section id="r-commands" class="level2"><h2 class="anchored" data-anchor-id="r-commands">
+<code>R</code> commands</h2>
+<p><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Hypergeometric.html">Here</a> is the documentation for the suite of commands that let you work with the hypergeometric distribution in <code>R</code>:</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">dhyper</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">phyper</a></span><span class="op">(</span><span class="va">q</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">qhyper</a></span><span class="op">(</span><span class="va">p</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">rhyper</a></span><span class="op">(</span><span class="va">ndraw</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
-
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -915,7 +945,17 @@ P(X = k)
       }
     }
   });
-  </script>
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../distributions/discrete-geometric.html" class="pagination-link" aria-label="Geometric">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Geometric</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../distributions/discrete-poisson.html" class="pagination-link" aria-label="Poisson">
+        <span class="nav-page-text">Poisson</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
