@@ -59,7 +59,7 @@
     "href": "distributions/discrete-hypergeometric.html#basic-properties",
     "title": "Hypergeometric distribution",
     "section": "Basic properties",
-    "text": "Basic properties\n\n\nNotation\n\\(X\\sim\\text{HG}(n, m, k)\\)\n\n\nRange\n\\(\\{0,\\,1,\\,2,\\,3,\\,...,\\,k-1,\\,k\\}\\)\n\n\nPMF\n\\(P(X = x) = \\binom{n}{x} \\binom{m}{k-x}/\\binom{m+n}{k}\\)\n\n\nExpectation\n\\(kn/(n+m)\\)",
+    "text": "Basic properties\n\n\nNotation\n\\(X\\sim\\text{HG}(m, n, k)\\)\n\n\nRange\n\\(\\{0,\\,1,\\,2,\\,3,\\,...,\\,k-1,\\,k\\}\\)\n\n\nPMF\n\\(P(X = x) = \\binom{m}{x} \\binom{n}{k-x}/\\binom{m+n}{k}\\)\n\n\nExpectation\n\\(km/(m+n)\\)",
     "crumbs": [
       "Distribution families",
       "Hypergeometric"
