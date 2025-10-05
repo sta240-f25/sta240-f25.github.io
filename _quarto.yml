@@ -115,6 +115,8 @@ website:
             text: Binomial
           - href: distributions/discrete-geometric.qmd
             text: Geometric
+          - href: distributions/discrete-hypergeometric.qmd
+            text: Hypergeometric
           - href: distributions/discrete-poisson.qmd
             text: Poisson
       - section: "Problem Sets"
