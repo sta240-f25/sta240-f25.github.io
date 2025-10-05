@@ -40,9 +40,23 @@ $$
 
 What is the probability that a random person on the app swipes right on my profile? In other words, what is $P(I=1)$?
 
-::: callout-tip
-## Write-up
-In your Quarto doc, typeset the math deriving the answer and also use `R` to calculate the probability.
+::: {.callout-warning collapse="true"}
+## Solution
+$$
+\begin{aligned}
+    P(I=1)=P(A)&=1-P(A^c)\\
+    &=1-P(\text{they value none or only one of my qualities})\\
+    &=1-P(\text{none})-P(\text{only one})\\
+    &=1-\frac{\binom{97}{8}}{\binom{100}{8}}-\frac{\binom{3}{1}\binom{97}{7}}{\binom{100}{8}}\\
+    &\approx 1 - 0.777 - 0.207\\
+    &=0.016.
+\end{aligned}
+$$
+
+```{r}
+like_prob <- 1 - (choose(97, 8) + 3 * choose(97, 7)) / choose(100, 8)
+like_prob
+```
 :::
 
 ## Task 2
@@ -51,13 +65,45 @@ Task 1 gives the probability that one person likes my profile, but as we all kno
 
 Given this setup, define a new random variable $X$ that counts the total number of matches I get. How is $X$ related to the $I_i$? What is the distribution of $X$? What is $E(X)$, the number of matches I expect to receive that day?
 
+::: {.callout-warning collapse="true"}
+## Solution
+
+- $X\sim\text{Binom}(25, 0.016)$; 
+- $X=\sum_{i=1}^{25}I_i$;
+- $E(X) \approx 25\times0.016=0.4$.
+
+:::
+
 ## Task 3
 
 Use `R` to compute the probability that I get at least one match that day.
 
+::: {.callout-warning collapse="true"}
+## Solution
+
+We want $P(X\geq 1)=1-P(X=0)$:
+
+```{r}
+match_prob <- 1 - dbinom(0, 25, like_prob)
+match_prob
+```
+
+:::
+
 ## Task 4
 
 Use `R` to plot the PMF of $X$.
+
+::: {.callout-warning collapse="true"}
+## Solution
+
+```{r}
+n <- 25
+plot(0:n, dbinom(0:n, n, like_prob), 
+     type = "h", ylab = "P(X = k)", xlab = "k")
+```
+
+:::
 
 ## Task 5
 
@@ -65,23 +111,59 @@ Let's say that every day, I wake up, pour the coffee, do some lil' granny stretc
 
 What is the distribution of $Y$? Use `R` to plot its PMF.
 
+::: {.callout-warning collapse="true"}
+## Solution
+
+$Y\sim\text{Geom}(0.3365)$.
+
+```{r}
+plot(1:26, dgeom(0:25, match_prob), type = "h", ylab = "P(Y = k)", xlab = "k")
+```
+
+:::
+
 ## Task 6
 
 Let's say I first downloaded the app on a Sunday. Use `R` to compute the probability that I get a match in the first week.
+
+::: {.callout-warning collapse="true"}
+## Solution
+
+We want the probability that one of the first 7 trials is a success. So $P(Y\leq 7)$:
+
+```{r}
+pgeom(7 - 1, match_prob)
+```
+
+:::
 
 ## Task 7 (optional)
 
 When you post your profile on a dating app, everyone in your area can see and swipe on it. If someone swipes right on you, the app will usually alert you to the fact that this happened, but they will charge you for the privilege of seeing who exactly it is. So let $Z$ be the number of "likes" you receive in a given twenty-four hour period. We could model this using the Poisson distribution and say that $Z\sim \text{Poisson}(\lambda)$. If we wish to model the likes received by some disgraced undesirable like James Corden, we might pick $Z\sim \text{Poisson}(0.01)$, which has $E(Z)=0.01$. Suffice it to say, not a tremendous number of likes rolling in for that guy, on average. If we wish to model the likes received by Taylor Swift, we might pick $Z\sim\text{Poisson}(20,000,000)$. You get the idea. 
 
-For a normal guy, perhaps $Z\sim\text{Poisson}(5)$. Use `R` to compute the probability that such a person beats their average for the day.
+For an ordinary person, perhaps $Z\sim\text{Poisson}(5)$. Use `R` to compute the probability that such a person beats their average for the day.
 
-::: callout-note
-# Pit stop 
+::: {.callout-warning collapse="true"}
+## Solution
 
-We haven't gotten to the Poisson distribution in lecture yet, but you've seen it a bit on Problem Sets 0 and 1. Check out the [lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-06-discrete-families.pdf) or our [online summary](https://sta240-f25.github.io/distributions/discrete-poisson.html) for a bit of background.
+We want $P(Z>5)=1-P(Y\leq 5)$:
+
+```{r}
+1 - ppois(5, lambda = 5)
+```
 :::
 
 ## Task 8 (optional)
 
 Use `R` to plot the PMF of $Z$.
+
+::: {.callout-warning collapse="true"}
+## Solution
+
+```{r}
+plot(0:25, dpois(0:25, 5), type = "h", ylab = "P(Z = k)", xlab = "k")
+```
+
+:::
+
 
