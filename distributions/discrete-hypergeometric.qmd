@@ -1,21 +1,37 @@
 ---
 title: "Hypergeometric distribution"
 format: html
-editor: 
-  mode: source
+filters:
+  - shinylive
 ---
 
-$$
-P(X = k) 
-= \frac{\binom{K}{k} \binom{N - K}{n-k}}{\binom{N}{n}}.
-$$
+
+
+## Basic properties
+
+|  |        |
+|------|--------------------|
+| **Notation** | $X\sim\text{HG}(n, m, k)$  |
+| **Range** | $\{0,\,1,\,2,\,3,\,...,\,k-1,\,k\}$ |
+| **PMF** | $P(X = x) = \frac{\binom{n}{x} \binom{m}{k-x}}{\binom{m+n}{k}}$ |
+| **Expectation** | $kn/(n+m)$ |
+
+## `R` commands
+
+[Here](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Hypergeometric.html) is the documentation for the suite of commands that let you work with the hypergeometric distribution in `R`:
 
 ```{r}
 #| eval: false
 dhyper(x, m, n, k)
 phyper(q, m, n, k)
-qhyper(p, m, n, k)
 rhyper(ndraw, m, n, k)
 ```
 
 
+## Play around!
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 500
+
+```
