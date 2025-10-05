@@ -8,7 +8,7 @@ a.  What are the range and the pmf of the random variable $X$?
 b.  For what values of $X$ does removing $k$ ballots reverse the outcome of the election?
 c.  Based on your answers to the previous parts, what is the probability that the election result is reversed when the $k$ bad ballots are removed? Give a general formula for this probability, and then compute the probability for each of the real elections listed in @tbl-elections;
 d.  The random variable $X$ that you derived in the first part can be approximated by $\text{Binom}(k,\,1/2)$. Explain why this approximation might be "good enough," and verify that it's not too bad by computing the *approximate* probability of reversal for the elections in @tbl-elections. Compare the approximate probabilities to the actual ones from the previous part;
-e.  Let's say that we consider the probability of reversal "too big" if it is greater than 5%. Create a figure in `R` with the following features:
+e.  Let's say that we consider the probability of reversal "too big" if it is greater than 5%. Create a plot in `R` like @fig-elections with the following features:
     -   the margin of victory $a-b$ on the horizontal axis;
     -   the number of bad ballots $k$ on the vertical axis;
     -   scatterplot where each point represents an election in @tbl-elections, with the points colored according to the decision that was made in the case;
@@ -29,3 +29,57 @@ f.  Write a few pithy paragraphs commenting on the following:
 | Washington governor | 2004 | 1,373,357 | 1,373,228 | 2,746,585 | 129 | 1,439 | upheld |
 
 : Close elections {#tbl-elections}
+
+```{r}
+#| code-fold: true
+#| fig-align: center
+#| label: fig-elections
+
+elections <- data.frame(
+  election = c("Ippolito", "Santucci", "DeMartini", "Maine", "Ann Arbor", "Brunswick", "Washington"),
+  a = c(1422, 58076, 2656, 1193, 10660, 2390, 1373357),
+  b = c(1405, 57981, 2594, 1060, 10659, 2383, 1373228),
+  k = c(101, 448, 136, 208, 20, 16, 1439),
+  decision = c("void", "void", "upheld", "void", "void", "upheld", "upheld"),
+  col = c("red", "red", "blue", "red", "red", "blue", "blue")
+)
+
+reversal_prob_binom <- function(a, b, k){
+  cutoff = ceiling(0.5 * (k + a - b))
+  1 - pbinom(cutoff - 1, k, 1/2)
+}
+
+margin_grid <- 0:150
+k_grid <- 0:450
+n_points <- length(margin_grid) * length(k_grid)
+
+grid <- data.frame(
+  margin = numeric(n_points),
+  k = numeric(n_points),
+  color = rep("lightblue", n_points)
+)
+
+row <- 0
+
+for(x in margin_grid){
+  for(y in k_grid){
+    row <- row + 1
+    grid[row, 1] <- x
+    grid[row, 2] <- y
+    if(reversal_prob_binom(1 + x, 1, y) >= 0.05){
+      grid[row, 3] <- "pink"
+    }
+  }
+}
+
+plot(grid$margin, grid$k, col = grid$color, 
+     pch = 19, cex = 0.2,
+     xlab = "margin of victory (a - b)", 
+     ylab = "number of invalid ballots (k)",
+     main = "Approximate probability of election reversal")
+points(elections$a - elections$b, elections$k, 
+       pch = 19, col = elections$col)
+legend(-7, 450, "> 0.05", text.col = "salmon", bty = "n", cex = 1.5)
+legend(115, 450, "< 0.05", text.col = "blue", bty = "n", cex = 1.5)
+legend(125, 85, c("Voided", "Upheld"), pch = 19, col = c("red", "blue"), bty = "n")
+```
