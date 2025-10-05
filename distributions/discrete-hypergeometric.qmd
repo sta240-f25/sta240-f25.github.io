@@ -5,7 +5,9 @@ filters:
   - shinylive
 ---
 
+Imagine we have a finite population containing $m$ "success" cases and $n$ "failure" cases, for a total population size of $m+n$. If we sample $k$ cases from the population *without replacement*, then a hypergeometric random variable counts the number of sampled cases that are a success. 
 
+You first met this distribution on Problem Set 4 when studying [contested elections](https://sta240-f25.github.io/problems/pset-4.html#problem-6).
 
 ## Basic properties
 
@@ -13,7 +15,7 @@ filters:
 |------|--------------------|
 | **Notation** | $X\sim\text{HG}(n, m, k)$  |
 | **Range** | $\{0,\,1,\,2,\,3,\,...,\,k-1,\,k\}$ |
-| **PMF** | $P(X = x) = \frac{\binom{n}{x} \binom{m}{k-x}}{\binom{m+n}{k}}$ |
+| **PMF** | $P(X = x) = \binom{n}{x} \binom{m}{k-x}/\binom{m+n}{k}$ |
 | **Expectation** | $kn/(n+m)$ |
 
 ## `R` commands
@@ -25,13 +27,4 @@ filters:
 dhyper(x, m, n, k)
 phyper(q, m, n, k)
 rhyper(ndraw, m, n, k)
-```
-
-
-## Play around!
-
-```{shinylive-r}
-#| standalone: true
-#| viewerHeight: 500
-
 ```
