@@ -13,10 +13,10 @@ You first met this distribution on Problem Set 4 when studying [contested electi
 
 |  |        |
 |------|--------------------|
-| **Notation** | $X\sim\text{HG}(n, m, k)$  |
+| **Notation** | $X\sim\text{HG}(m, n, k)$  |
 | **Range** | $\{0,\,1,\,2,\,3,\,...,\,k-1,\,k\}$ |
-| **PMF** | $P(X = x) = \binom{n}{x} \binom{m}{k-x}/\binom{m+n}{k}$ |
-| **Expectation** | $kn/(n+m)$ |
+| **PMF** | $P(X = x) = \binom{m}{x} \binom{n}{k-x}/\binom{m+n}{k}$ |
+| **Expectation** | $km/(m+n)$ |
 
 ## `R` commands
 
