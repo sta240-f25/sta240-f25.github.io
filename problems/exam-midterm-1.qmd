@@ -86,7 +86,7 @@ Do not skimp on the cheat sheet! Students in past semesters have neglected their
 
 ## Problem 9
 
-{{< include bank/conditional-probability/all-white-balls.qmd >}}
+{{< include bank/conditional-probability/bdj-white-balls.qmd >}}
 
 ## Problem 10
 
