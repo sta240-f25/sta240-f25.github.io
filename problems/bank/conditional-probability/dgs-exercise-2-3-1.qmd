@@ -1,0 +1,1 @@
+Suppose that $k$ events $B_1$, $B_2$, ..., $B_k$ form a partition of the sample space $S$, and $A\subseteq S$ is some event with positive probability $P(A)>0$. Show that if $P(B_1\mid A)<P(B_1)$, then that guarantees $P(B_i\mid A)>P(B_i)$ for at least one $i\in\{1,\,2,\,...,\,k\}$.
