@@ -9,10 +9,11 @@ draft: true
 Midterm Exam 2 will take place on **Thursday November 13** during your lab section. There will be XX problems, and they will break down as follows:
 
 0. (an undisclosed check on your visual intuition)
-1. Continuous random variables
-2. The moment-generating function
-3. Transformations
-4. Joint distributions
+1. Discrete random variables
+2. Continuous random variables
+3. The moment-generating function
+4. Transformations
+5. Joint distributions
 
 Below are practice problems for each of these areas, as well as guidance about what course materials to refer to if you want more review on a particular topic.
 
