@@ -6,7 +6,7 @@ draft: true
 Our final exam is **Friday December 12 from 9:00 AM to 12:00 PM**. There will be 11 questions, and they will break down as follows:
 
 0.  (an undisclosed check on your visual intuition)
-1.  Set theory and basic probability rules
+1.  Probability spaces and rules
 2.  Counting
 3.  Conditional probability and independence
 4.  Discrete random variables
@@ -31,3 +31,8 @@ Do not skimp on the cheat sheet! Students in past semesters have neglected their
 
 :::
 
+# Conditional probability and independence
+
+## Problem XX
+
+{{< include bank/conditional-probability/dgs-exercise-2-3-1.qmd >}}
