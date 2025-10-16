@@ -11,3 +11,5 @@ b.  Compute and interpret
 $$
 b_0=\underset{b\in\mathbb{R}}{\arg\min}\,E\left[|X-b|\right].
 $$
+
+

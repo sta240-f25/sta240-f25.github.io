@@ -18,3 +18,4 @@ $$
 ## Hint
 There are at least two ways to do part b. If you've taken multivariable calculus, you can use double integral tricks. If you haven't taken multivariable calculus yet, try integrating *by parts*.
 :::
+
