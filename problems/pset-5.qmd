@@ -6,7 +6,7 @@ editor:
   mode: source
 ---
 
-Brace yourself for a gear shift. Now, seemingly out of nowhere, STA 240 becomes a calculus class:
+Brace yourself for a gear shift. Now, seemingly out of nowhere, STA 240 becomes a calculus class.
 
 ## Problem 0
 
@@ -14,7 +14,9 @@ Brace yourself for a gear shift. Now, seemingly out of nowhere, STA 240 becomes 
 
 ## Problem 1
 
-Something conceptual
+From now to the end of the course, we will use all of the tools of single-variable calculus. You got a preview of this on [Problem Set 0](https://sta240-f25.github.io/problems/pset-0.html), and our course page also includes some math refreshers ([derivatives](https://sta240-f25.github.io/math/differentiation.html), [integrals](https://sta240-f25.github.io/math/integration.html), etc). Please review these.
+
+What areas of calculus are you the least comfortable with at the moment? How do you think the course materials could be improved to better prepare you for this aspect of the course?
 
 ## Problem 2
 

@@ -7,4 +7,4 @@ F(x) = \begin{cases}
 \end{cases}
 $$
 
-Assume $g(x)$ is continuous. What properties must $g(x)$ satisfy in order for $F(x)$ to be a valid cumulative distribution function (CDF) for a *continuous* random variable? Give three examples of functions $g(x)$ that satisfy these properties.
+Assume $g(x)$ is continuous. I want $F(x)$ to be a continuous function, and I want $F(x)$ to be a valid cumulative distribution function (CDF). What properties must $g(x)$ satisfy in order to make that happen? Give three examples of $g$ that have these properties.
