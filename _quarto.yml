@@ -122,6 +122,8 @@ website:
             text: Poisson
           - href: distributions/continuous-normal.qmd
             text: Normal
+          - href: distributions/continuous-gamma.qmd
+            text: Gamma
       - section: "Problem Sets"
         contents:
           - href: problems/pset-0.qmd

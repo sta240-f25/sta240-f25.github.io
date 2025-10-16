@@ -64,7 +64,7 @@ f(x)
 \end{cases}
 $$
 
-A random variable possessing this distribution is denoted $X\sim\text{Gamma}(\alpha,\,\beta)$, and the parameters $\alpha>0$ and $\beta>0$ are called the *shape* and the *rate.* Once we have the appropriate tools, we will derive that $E(X)=\alpha/\beta$ and $\text{var}(X)=\alpha/\beta^2$, but for now you can just take these as facts.
+A random variable possessing this distribution is denoted $X\sim\text{Gamma}(\alpha,\,\beta)$, and the parameters $\alpha>0$ and $\beta>0$ are called the *shape* and the *rate.* Once we have the appropriate tools, we will derive that $E(X)=\alpha/\beta$ and $\text{var}(X)=\alpha/\beta^2$, but for now you can just take these as facts. Our webpage has an [explainer](https://sta240-f25.github.io/distributions/continuous-gamma.html) with more.
 
 ## Task 6
 
