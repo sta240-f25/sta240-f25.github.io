@@ -1,0 +1,24 @@
+---
+title: "Summary statistics"
+format: html
+---
+
+If you have a vector of numbers in `R`, there are many basic commands you can use to compute *summary statistics*. To illustrate, here is a vector of random numbers:
+
+```{r}
+set.seed(20)
+x <- rnorm(100)
+head(x)
+```
+
+Of course, these commands are useful no matter where the numbers came from:
+
+```{r}
+sum(x) # the total of the numbers
+mean(x) # the average of the numbers
+var(x) # the variance
+sd(x) # the standard deviation
+median(x) # the median
+max(x) # the biggest number
+min(x) # the smallest number
+```

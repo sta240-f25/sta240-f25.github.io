@@ -110,6 +110,8 @@ website:
             text: Computing probabilities
           - href: explainers/plot.qmd
             text: Plotting points
+          - href: explainers/summary-statistics.qmd
+            text: Summary statistics
       - section: "Distribution families"
         contents:
           - href: distributions/discrete-binomial.qmd
