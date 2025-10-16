@@ -21,3 +21,5 @@ median(x) # the median
 max(x) # the biggest number
 min(x) # the smallest number
 ```
+
+
