@@ -1,0 +1,15 @@
+An absolutely continuous random variable $X$ has pdf
+
+$$
+f(x)=\begin{cases}
+\frac{3}{22}[5 - (x-1)^2] & 1\leq x \leq3\\
+0 & \text{else}.
+\end{cases}
+$$
+
+a.  What is the range of $X$?
+b.  Confirm that $f$ is a valid pdf.
+c.  Derive the formula for the cdf of $X$ and plot it.
+d.  Compute $P(0.9 < X < 1.1)$.
+e.  Compute $E(X)$.
+f.  Compute $\text{var}(X)$.

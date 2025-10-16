@@ -1,0 +1,13 @@
+Let $X$ be any absolutely continuous random variable with pdf $f$ and cdf $F$, and assume that $E[(X-a)^2]$ and $E\left[|X-a|\right]$ are finite for all $a\in \mathbb{R}$.
+
+a.  Compute and interpret
+
+$$
+a_0=\underset{a\in\mathbb{R}}{\arg\min}\,E[(X-a)^2].
+$$
+
+b.  Compute and interpret
+
+$$
+b_0=\underset{b\in\mathbb{R}}{\arg\min}\,E\left[|X-b|\right].
+$$

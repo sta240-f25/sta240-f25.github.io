@@ -1,10 +1,12 @@
 ---
 title: "Problem Set 5"
-subtitle: Due Friday October 24 at 5PM
-draft: true
+subtitle: Due Monday October 27 at 3PM
+draft: false
 editor: 
   mode: source
 ---
+
+Brace yourself for a gear shift. Now, seemingly out of nowhere, STA 240 becomes a calculus class:
 
 ## Problem 0
 
@@ -16,59 +18,39 @@ Something conceptual
 
 ## Problem 2
 
-Probability rules
+{{< include bank/random-variables-continuous/continuous-cdf-g.qmd >}}
 
 ## Problem 3
 
-Counting
+{{< include bank/random-variables-continuous/basic-pdf-practice.qmd >}}
 
 ## Problem 4
 
-Conditioning
+{{< include bank/random-variables-continuous/gamma-half.qmd >}}
 
 ## Problem 5
 
-Discrete
+{{< include bank/random-variables-continuous/random-point-on-line.qmd >}}
 
 ## Problem 6
 
-{{< include bank/random-variables-continuous/quantum.qmd >}}
+{{< include bank/random-variables-continuous/all-moments-finite-no-mgf.qmd >}}
 
 ## Problem 7
 
-Continuous
+{{< include bank/random-variables-continuous/expectation-short-cuts.qmd >}}
 
 ## Problem 8
 
-Continuous
+{{< include bank/random-variables-continuous/minimize-expected-error.qmd >}}
 
 ## Problem 9
 
-Continuous
+{{< include bank/random-variables-discrete/geometric-mgf.qmd >}}
 
 ## Problem 10
 
-Continuous
-
-## Problem 11
-
-Continuous
-
-## Problem 12
-
-Continuous
-
-## Problem 13
-
-Continuous
-
-## Problem 14
-
-Continuous
-
-## Problem 15
-
-Continuous
+{{< include bank/random-variables-continuous/gamma-mgf.qmd >}}
 
 ## Submission
 

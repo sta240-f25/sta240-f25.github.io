@@ -1,0 +1,20 @@
+One of the technical themes of our course is "how do I compute an expected value without wanting to vomit?" We will have many tools in our tool belt for getting this done, and you must become fluent in knowing what to use when. Below are two nifty facts that might come in handy one day.
+
+Let $X$ be an absolutely continuous random variable with pdf $f$ and cdf $F$.  
+
+a. Show that:
+
+$$
+E(X)=\int_0^1F^{-1}(x)\,\text{d} x.
+$$
+
+b. If we make the extra assumption that $X$ is a non-negative random variable, show that:
+
+$$
+E(X)=\int_0^\infty P(X>x)\,\text{d} x.
+$$
+
+::: {.callout-tip collapse="true"}
+## Hint
+There are at least two ways to do part b. If you've taken multivariable calculus, you can use double integral tricks. If you haven't taken multivariable calculus yet, try integrating *by parts*.
+:::

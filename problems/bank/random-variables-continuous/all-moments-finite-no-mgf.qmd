@@ -1,0 +1,18 @@
+Here is the cdf of an absolutely continuous random variable $X$:
+
+$$
+F(x)
+=
+\begin{cases}
+1-\exp\left(-\sqrt{x}\right)&x\geq 0\\
+0&\text{else}.
+\end{cases}
+$$
+
+
+a. What is $P(4\leq X < 9)$?
+a. What is the pdf of $X$?
+a. Compute $E(X^n)$ for any $n\in\mathbb{N}$.
+a. What is the variance of $X$?
+a. What is the median of $X$?
+

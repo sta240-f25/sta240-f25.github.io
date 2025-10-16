@@ -1,0 +1,2 @@
+a.  Compute the moment generating function of the geometric distribution. For what values of $t$ is it defined?
+b.  Use the mgf to compute the mean and variance of the geometric distribution.

@@ -1,0 +1,7 @@
+Recall the gamma function
+
+$$
+\Gamma(x)=\int_0^\infty y^{x-1}e^{-y}\,\text{d}y.
+$$
+
+Show that $\Gamma\left(\frac{1}{2}\right)=\sqrt{\pi}$.

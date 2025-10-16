@@ -1,0 +1,10 @@
+Consider this function:
+
+$$
+F(x) = \begin{cases}
+1 - e^{-g(x)} & x\geq 0\\
+0 & \text{else}.
+\end{cases}
+$$
+
+Assume $g(x)$ is continuous. What properties must $g(x)$ satisfy in order for $F(x)$ to be a valid cumulative distribution function (CDF) for a *continuous* random variable? Give three examples of functions $g(x)$ that satisfy these properties.

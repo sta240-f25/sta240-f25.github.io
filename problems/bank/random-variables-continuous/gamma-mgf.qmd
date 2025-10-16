@@ -1,0 +1,6 @@
+Consider $X\sim\textrm{Gamma}(\alpha,\,\beta)$.
+
+a.  Find $M_X(t)=E[e^{tX}]$, the moment generating function of $X$. For what values of $t$ is it defined?
+b.  Use the moment-generating function to compute $E(X)$.
+c.  Use the moment-generating function to compute $\text{var}(X)$.
+d.  If $c>0$, what is the distribution of $Y=cX$?
