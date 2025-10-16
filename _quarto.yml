@@ -120,6 +120,8 @@ website:
             text: Hypergeometric
           - href: distributions/discrete-poisson.qmd
             text: Poisson
+          - href: distributions/continuous-normal.qmd
+            text: Normal
       - section: "Problem Sets"
         contents:
           - href: problems/pset-0.qmd
