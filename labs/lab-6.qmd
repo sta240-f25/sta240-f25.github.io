@@ -37,7 +37,7 @@ Simulate `n = 5000` realizations of $X$ and then verify that the sample mean, th
 
 ::: callout-tip
 ## Set a seed!
-To ensure that your numbers are reproducible and you get the same results every time you render your document, set a random number seed of your choosing.
+To ensure that your numbers are reproducible and you get the same results every time you render your document, [set a random number seed](https://sta240-f25.github.io/explainers/rng-seed.html) of your choosing.
 :::
 
 ## Task 5
