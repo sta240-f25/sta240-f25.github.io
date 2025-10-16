@@ -98,7 +98,7 @@ website:
           - href: explainers/sample.qmd
             text: "`sample`"
           - href: explainers/if-else.qmd
-            text: is-else and logic
+            text: if-else and logic
           - href: explainers/loops.qmd
             text: for loops
           - href: explainers/vectorization.qmd
