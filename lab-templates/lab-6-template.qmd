@@ -1,0 +1,120 @@
+---
+title: "Lab 6"
+subtitle: Duke STA 240 Fall 2025
+author: replace this text with your name
+format: 
+  pdf:
+    toc: false
+editor: 
+  mode: source
+---
+
+# Task 1
+
+Type words here if necessary.
+
+```{r}
+#| label: task-1
+
+# add code here if necessary
+```
+
+{{< pagebreak >}}
+
+# Task 2
+
+Type words here.
+
+```{r}
+#| label: task-2
+
+# add code here
+```
+
+{{< pagebreak >}}
+
+# Task 3
+
+Type words here.
+
+```{r}
+#| label: task-3
+
+# add code here
+```
+
+{{< pagebreak >}}
+
+# Task 4
+
+Type words here.
+
+```{r}
+#| label: task-4
+
+# add code here
+```
+
+{{< pagebreak >}}
+
+# Task 5
+
+Type words here.
+
+```{r}
+#| label: task-5
+
+# add code here
+```
+
+{{< pagebreak >}}
+
+# Task 6
+
+Type words here.
+
+```{r}
+#| label: task-6
+
+# add code here
+```
+
+{{< pagebreak >}}
+
+# Task 7
+
+Type words here.
+
+```{r}
+#| label: task-7
+
+# add code here
+```
+
+{{< pagebreak >}}
+
+# Task 8
+
+Type words here.
+
+```{r}
+#| label: task-8
+
+# add code here
+```
+
+{{< pagebreak >}}
+
+# Task 9
+
+Type words here.
+
+```{r}
+#| label: task-9
+
+# add code here
+```
+
+
+
+
