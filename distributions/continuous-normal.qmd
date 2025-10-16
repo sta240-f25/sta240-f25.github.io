@@ -1,0 +1,122 @@
+---
+title: "Normal distribution"
+format: html
+filters:
+  - shinylive
+---
+
+I usually have a little blurb up here describing when you might use the distribution, but the normal distribution is so *central* to probability and statistics that words fail. It shows up everywhere.
+
+## Basic properties
+
+|  |        |
+|------|--------------------|
+| **Notation** | $X\sim\text{N}(\mu,\,\sigma^2)$  |
+| **Range** | $\mathbb{R}=(-\infty,\,\infty)$ |
+| **Parameter space** | $\begin{matrix}-\infty<\mu<\infty\\\sigma^2>0\end{matrix}$ |
+| **PDF** | $f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)$ |
+| **Expectation** | $\mu$ |
+| **Variance** | $\sigma^2$ |
+
+## `R` commands
+
+[Here](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Normal.html) is the documentation for the suite of commands that let you work with the normal distribution in `R`:
+
+```{r}
+#| eval: false
+dnorm(x, mean = 0, sd = 1) # PDF
+pnorm(q, mean = 0, sd = 1) # CDF: P(X <= q)
+rnorm(n, mean = 0, sd = 1) # random numbers
+```
+
+::: callout-important
+## The commands take the standard deviation, not the variance!
+You will get burned by this at least once. I guarantee it. But please take note. If you want to compute $P(X\leq -2.4)$ for $X\sim\text{N}(4, 9)$, you call `pnorm(-2.4, 4, 3)`, because $\text{sd}(X)=\sqrt{\text{var}(X)}=3$. 
+
+:::
+
+## Play around!
+
+As we have seen, the parameters $\mu$ and $\sigma$ have multiple interpretations. From a probabilistic point-of-view, they are the mean $\mu=E(X)$ and the standard deviation $\sigma=\sqrt{\text{var}(X)}$. From a purely geometric point-of-view, they control the shape of the density curve. $\mu$ is the location of the peak, and $\sigma$ controls how far the inflection points are from $\mu$. You worked that out on [Problem Set 0](https://sta240-f25.github.io/problems/pset-0.html#problem-4).
+
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 700
+
+library(shiny)
+
+ui <- fluidPage(
+  titlePanel("Normal distribution CDF and PDF"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("mu", "Mean (μ):", 
+                  min = -5, max = 5, value = 0, step = 0.1),
+      sliderInput("sigma", "Standard Deviation (σ):", 
+                  min = 0.5, max = 3, value = 1, step = 0.1)
+    ),
+    
+    mainPanel(
+      plotOutput("distPlot", height = "600px")
+    )
+  )
+)
+
+server <- function(input, output) {
+  output$distPlot <- renderPlot({
+    mu <- input$mu
+    sigma <- input$sigma
+    
+    # Fixed x range
+    x <- seq(-10, 10, length.out = 1000)
+    
+    # Compute values
+    pdf_vals <- dnorm(x, mean = mu, sd = sigma)
+    cdf_vals <- pnorm(x, mean = mu, sd = sigma)
+    
+    # Inflection points at mu ± sigma
+    inflect_left <- mu - sigma
+    inflect_right <- mu + sigma
+    
+    # Fixed y limits
+    pdf_ylim <- c(0, 0.8)
+    
+    par(mfrow = c(2, 1), mar = c(4, 4, 2, 1))
+    
+    # --- CDF Plot ---
+    plot(x, cdf_vals, type = "l", lwd = 2, col = "blue",
+         xlim = c(-10, 10), ylim = c(0, 1),
+         main = "Cumulative Distribution Function (CDF)",
+         xlab = "", ylab = "F(x)")
+    abline(h = c(0, 1), col = "gray80", lty = 2)
+    abline(v = mu, col = "gray60", lty = 3)
+    
+    # --- PDF Plot ---
+    plot(x, pdf_vals, type = "l", lwd = 2, col = "darkred",
+         xlim = c(-10, 10), ylim = pdf_ylim,
+         main = "Probability Density Function (PDF)",
+         xlab = "x", ylab = "f(x)")
+    
+    # Vertical lines at mean and inflection points
+    abline(v = mu, col = "gray60", lty = 3)
+    abline(v = c(inflect_left, inflect_right), col = "gray70", lty = 2)
+    
+    # Arrows showing sigma distance
+    y_arrow <- 0.05
+    arrows(mu, y_arrow, inflect_right, y_arrow, code = 3, angle = 10, length = 0.1)
+    arrows(mu, y_arrow, inflect_left, y_arrow, code = 3, angle = 10, length = 0.1)
+    
+    # Label σ between mean and inflection points
+    text(mu + sigma / 2, y_arrow + 0.03, expression(sigma), cex = 1.1)
+    text(mu - sigma / 2, y_arrow + 0.03, expression(sigma), cex = 1.1)
+    
+    # Label μ in the margin below the x-axis
+    mtext(expression(mu), side = 1, line = 2.2, at = mu, cex = 1.2)
+  })
+}
+
+shinyApp(ui = ui, server = server)
+
+```
+
