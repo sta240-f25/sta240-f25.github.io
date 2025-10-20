@@ -16,6 +16,8 @@ project:
     - lecture-notes/sta240-notes-06-discrete-families.pdf
     - lecture-notes/sta240-notes-07-expectation.pdf
     - lecture-notes/sta240-notes-08-variance.pdf
+    - lecture-notes/sta240-notes-09-cdf.pdf
+    - lecture-notes/sta240-notes-10-absolutely-continuous.pdf
 
 website:
   page-navigation: true
@@ -122,6 +124,8 @@ website:
             text: Hypergeometric
           - href: distributions/discrete-poisson.qmd
             text: Poisson
+          - href: distributions/continuous-uniform.qmd
+            text: Continuous uniform
           - href: distributions/continuous-normal.qmd
             text: Normal
           - href: distributions/continuous-gamma.qmd
