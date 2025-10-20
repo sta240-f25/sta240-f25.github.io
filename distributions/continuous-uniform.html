@@ -60,6 +60,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../distributions/continuous-normal.html" rel="next">
+<link href="../distributions/discrete-poisson.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -137,7 +139,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Continuous uniform distribution</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../distributions/discrete-binomial.html">Distribution families</a></li><li class="breadcrumb-item"><a href="../distributions/continuous-uniform.html">Continuous uniform</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -366,13 +368,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Distribution families</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
@@ -395,6 +397,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Poisson</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/continuous-uniform.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Continuous uniform</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -536,7 +544,7 @@ window.Quarto = {
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../distributions/discrete-binomial.html">Distribution families</a></li><li class="breadcrumb-item"><a href="../distributions/continuous-uniform.html">Continuous uniform</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">Continuous uniform distribution</h1>
 </div>
 
@@ -592,7 +600,7 @@ window.Quarto = {
 <code>R</code> commands</h2>
 <p>For the second version of the distribution, <code>R</code> provides:</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">dunif</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">min</span>, <span class="va">max</span><span class="op">)</span> <span class="co"># PDF: f(x)</span></span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">dunif</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">min</span>, <span class="va">max</span><span class="op">)</span> <span class="co"># PDF</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">punif</a></span><span class="op">(</span><span class="va">q</span>, <span class="va">min</span>, <span class="va">max</span><span class="op">)</span> <span class="co"># CDF: P(X &lt;= q)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="va">n</span>, <span class="va">min</span>, <span class="va">max</span><span class="op">)</span> <span class="co"># random numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1059,7 +1067,17 @@ shinyApp(ui = ui, server = server)</a></code></pre>
       }
     }
   });
-  </script>
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../distributions/discrete-poisson.html" class="pagination-link" aria-label="Poisson">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Poisson</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../distributions/continuous-normal.html" class="pagination-link" aria-label="Normal">
+        <span class="nav-page-text">Normal</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">

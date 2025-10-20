@@ -964,47 +964,14 @@
     ]
   },
   {
-    "objectID": "math/series.html",
-    "href": "math/series.html",
-    "title": "Infinite series",
+    "objectID": "math/greeks.html",
+    "href": "math/greeks.html",
+    "title": "Greek alphabet",
     "section": "",
-    "text": "Roughly speaking, an infinite series is the sum of infinitely many numbers:\n\\[\n\\sum\\limits_{n=0}^\\infty a_n=a_0+a_1+a_2+a_3+\\cdots\n\\]\nStrictly speaking, it is the limit of the sequence of partial sums:\n\\[\n\\sum\\limits_{n=0}^\\infty a_n=\\lim_{k\\to\\infty}\\sum\\limits_{n=0}^ka_n.\n\\]\nThis limit may or may not be finite, and there are many famous examples of this.",
+    "text": "For better or worse, Greek letters will be flying in this class, so you should have a working knowledge of the most common ones used in mathematics:\n\n\n\n\nGreek Letter\nEnglish Name\n\n\n\n\n\\(A, \\alpha\\)\nalpha\n\n\n\\(B, \\beta\\)\nbeta\n\n\n\\(\\Gamma, \\gamma\\)\ngamma\n\n\n\\(\\Delta, \\delta\\)\ndelta\n\n\n\\(E, \\epsilon\\)\nepsilon\n\n\n\\(Z, \\zeta\\)\nzeta\n\n\n\\(H, \\eta\\)\neta\n\n\n\\(\\Theta, \\theta\\)\ntheta\n\n\n\\(I, \\iota\\)\niota\n\n\n\\(K, \\kappa\\)\nkappa\n\n\n\\(\\Lambda, \\lambda\\)\nlambda\n\n\n\\(M, \\mu\\)\nmu (“mew”)\n\n\n\\(N, \\nu\\)\nnu\n\n\n\\(\\Xi, \\xi\\)\nxi\n\n\n\\(O, o\\)\nomicron\n\n\n\\(\\Pi, \\pi\\)\npi\n\n\n\\(P, \\rho\\)\nrho (“row”)\n\n\n\\(\\Sigma, \\sigma\\)\nsigma\n\n\n\\(T, \\tau\\)\ntau\n\n\n\\(Y, \\upsilon\\)\nupsilon\n\n\n\\(\\Phi, \\phi\\)\nphi\n\n\n\\(X, \\chi\\)\nchi (“kai”)\n\n\n\\(\\Psi, \\psi\\)\npsi\n\n\n\\(\\Omega, \\omega\\)\nomega",
     "crumbs": [
       "Math Review",
-      "Infinite series"
-    ]
-  },
-  {
-    "objectID": "math/series.html#geometric-series",
-    "href": "math/series.html#geometric-series",
-    "title": "Infinite series",
-    "section": "Geometric series",
-    "text": "Geometric series\nDon’t you love this:\n\\[\n\\frac{a}{1-r}=\\sum\\limits_{n=0}^\\infty ar^n,\\quad |r|&lt;1.\n\\]\nThe partial sums are also well-behaved:\n\\[\n\\sum\\limits_{n=0}^k ar^n\n=\n\\begin{cases}\na(k+1) & r=1\\\\\na\\left(\\frac{1-r^{k+1}}{1-r}\\right) & \\text{else}.\n\\end{cases}\n\\]",
-    "crumbs": [
-      "Math Review",
-      "Infinite series"
-    ]
-  },
-  {
-    "objectID": "math/series.html#p-series",
-    "href": "math/series.html#p-series",
-    "title": "Infinite series",
-    "section": "\\(p\\)-series",
-    "text": "\\(p\\)-series\nIf \\(p&gt;1\\), this converges:\n\\[\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^p}.\n\\]\nHere are concrete examples:\n\\[\n\\begin{aligned}\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n}&=\\infty &&\\text{(harmonic series)}\\\\\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^2}&=\\frac{\\pi^2}{6}\\\\\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^3}&\\approx 1.202057.\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Math Review",
-      "Infinite series"
-    ]
-  },
-  {
-    "objectID": "math/series.html#taylor-series",
-    "href": "math/series.html#taylor-series",
-    "title": "Infinite series",
-    "section": "Taylor series",
-    "text": "Taylor series\nIf a function \\(f\\) is infinitely differentiable at 0, then we can rewrite it using the Taylor expansion:\n\\[\nf(x)\n=\n\\sum\\limits_{n=0}^\\infty \\frac{f^{(n)}(0)}{n!}x^n,\\quad \\text{for some  }x.\n\\]\nThe set of \\(x\\)-values for which the Taylor expansion is valid is called the radius of convergence. Here are examples for specific functions:\n\\[\n\\begin{aligned}\n\\frac{1}{1-x}&=\\sum\\limits_{n=0}^\\infty x^n,&&-1&lt;x&lt;1\\\\\ne^x&=\\sum\\limits_{n=0}^\\infty\\frac{x^n}{n!},&&-\\infty &lt; x &lt; \\infty\\\\\n\\ln(1-x)&=-\\sum\\limits_{n=0}^\\infty\\frac{x^n}{n},&&-1\\leq x &lt; 1.\n\\end{aligned}\n\\]\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\n# app.R\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  titlePanel(\"Taylor Polynomial Approximation\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      selectInput(\n        inputId = \"func\",\n        label = \"Choose a function:\",\n        choices = c(\"exp(x)\", \"sin(x)\")\n      ),\n      sliderInput(\n        inputId = \"degree\",\n        label = \"Degree of Taylor polynomial (n):\",\n        min = 0, max = 10, value = 1, step = 1\n      )\n    ),\n    \n    mainPanel(\n      plotOutput(\"taylorPlot\")\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$taylorPlot &lt;- renderPlot({\n    # Define function and y-limits\n    f &lt;- switch(input$func,\n                \"exp(x)\" = function(x) exp(x),\n                \"sin(x)\" = function(x) sin(x))\n    x &lt;- seq(-5, 5, length.out = 400)\n    y_true &lt;- f(x)\n    \n    # Fix y-limits by function\n    ylims &lt;- switch(input$func,\n                    \"exp(x)\" = c(-1, 150),\n                    \"sin(x)\" = c(-1.5, 1.5))\n    \n    # Define Taylor polynomial\n    taylor_poly &lt;- function(x, n) {\n      sapply(x, function(xi) {\n        sum(sapply(0:n, function(k) {\n          deriv_k &lt;- switch(input$func,\n                            \"exp(x)\" = 1,\n                            \"sin(x)\" = if (k %% 4 == 0) 0 else if (k %% 4 == 1) 1 else if (k %% 4 == 2) 0 else -1)\n          deriv_k * xi^k / factorial(k)\n        }))\n      })\n    }\n    \n    y_approx &lt;- taylor_poly(x, input$degree)\n    \n    # Draw the plot\n    plot(x, y_true, type = \"l\", col = \"black\", lwd = 2,\n         ylim = ylims, xlab = \"x\", ylab = \"y\",\n         main = paste(\"Taylor approximation of\", input$func, \"around x = 0\"),\n         bty = \"n\", axes = FALSE)\n    \n    # Add axes through origin\n    abline(h = 0, v = 0, col = \"gray70\")\n    axis(1, pos = 0)\n    axis(2, pos = 0, las = 1)\n    \n    # Add Taylor curve\n    lines(x, y_approx, col = \"red\", lwd = 2)\n    \n    # Add legend\n    legend(\"topleft\",\n           legend = c(\"f(x)\", paste(\"Taylor polynomial (n = \", input$degree, \")\", sep = \"\")),\n           col = c(\"black\", \"red\"), lwd = 2, bty = \"n\")\n  })\n}\n\nshinyApp(ui = ui, server = server)",
-    "crumbs": [
-      "Math Review",
-      "Infinite series"
+      "Greek alphabet"
     ]
   },
   {
@@ -1477,6 +1444,132 @@
       "Problem Sets",
       "Problem Set 5"
     ]
+  },
+  {
+    "objectID": "problems/pset-6.html",
+    "href": "problems/pset-6.html",
+    "title": "Problem Set 6",
+    "section": "",
+    "text": "DOODLE"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-0",
+    "href": "problems/pset-6.html#problem-0",
+    "title": "Problem Set 6",
+    "section": "",
+    "text": "DOODLE"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-1",
+    "href": "problems/pset-6.html#problem-1",
+    "title": "Problem Set 6",
+    "section": "Problem 1",
+    "text": "Problem 1"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-2",
+    "href": "problems/pset-6.html#problem-2",
+    "title": "Problem Set 6",
+    "section": "Problem 2",
+    "text": "Problem 2"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-3",
+    "href": "problems/pset-6.html#problem-3",
+    "title": "Problem Set 6",
+    "section": "Problem 3",
+    "text": "Problem 3"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-4",
+    "href": "problems/pset-6.html#problem-4",
+    "title": "Problem Set 6",
+    "section": "Problem 4",
+    "text": "Problem 4"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-5",
+    "href": "problems/pset-6.html#problem-5",
+    "title": "Problem Set 6",
+    "section": "Problem 5",
+    "text": "Problem 5"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-6",
+    "href": "problems/pset-6.html#problem-6",
+    "title": "Problem Set 6",
+    "section": "Problem 6",
+    "text": "Problem 6"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-7",
+    "href": "problems/pset-6.html#problem-7",
+    "title": "Problem Set 6",
+    "section": "Problem 7",
+    "text": "Problem 7"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-8",
+    "href": "problems/pset-6.html#problem-8",
+    "title": "Problem Set 6",
+    "section": "Problem 8",
+    "text": "Problem 8"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-9",
+    "href": "problems/pset-6.html#problem-9",
+    "title": "Problem Set 6",
+    "section": "Problem 9",
+    "text": "Problem 9"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-10",
+    "href": "problems/pset-6.html#problem-10",
+    "title": "Problem Set 6",
+    "section": "Problem 10",
+    "text": "Problem 10"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-11",
+    "href": "problems/pset-6.html#problem-11",
+    "title": "Problem Set 6",
+    "section": "Problem 11",
+    "text": "Problem 11"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-12",
+    "href": "problems/pset-6.html#problem-12",
+    "title": "Problem Set 6",
+    "section": "Problem 12",
+    "text": "Problem 12"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-13",
+    "href": "problems/pset-6.html#problem-13",
+    "title": "Problem Set 6",
+    "section": "Problem 13",
+    "text": "Problem 13"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-14",
+    "href": "problems/pset-6.html#problem-14",
+    "title": "Problem Set 6",
+    "section": "Problem 14",
+    "text": "Problem 14"
+  },
+  {
+    "objectID": "problems/pset-6.html#problem-15",
+    "href": "problems/pset-6.html#problem-15",
+    "title": "Problem Set 6",
+    "section": "Problem 15",
+    "text": "Problem 15"
+  },
+  {
+    "objectID": "problems/pset-6.html#submission",
+    "href": "problems/pset-6.html#submission",
+    "title": "Problem Set 6",
+    "section": "Submission",
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.\nDo not forget to include the following:\n\nFor each problem, please acknowledge your collaborators;\nIf a problem required you to code something, please include both the code and the output. “Including the code” can be as crude as a screenshot, but you might also use Quarto to get a nice lil’ pdf that you can merge with the rest of your submission."
   },
   {
     "objectID": "problems/bank/random-variables-continuous/expectation-short-cuts.html",
@@ -3079,21 +3172,54 @@
     "href": "index.html",
     "title": "STA 240 Probability for Statistical Inference",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\nslides\n\n\n\n\nWed, Aug 27\n\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\nnotes\n\n\n\n\nThu, Aug 28\n\n💻 Lab 0 (calculus review)\n\n\n\n\n2\nMon, Sep 1\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\nWed, Sep 3\n\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\nslides notes\n\n\nIntro Survey @ 3 PM\n\n\n\nThu, Sep 4\n\n💻 Lab 1 (hello R)\n\n\nLab 1 @ 11:59 PM\n\n\n\nFri, Sep 5\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nWed, Sep 10\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nThu, Sep 11\n\n💻 Lab 2 (counting)\n\n\nLab 2 @ 11:59 PM\n\n\n\nFri, Sep 12\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nnotes Play around!\n\n\n\n\n\nWed, Sep 17\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nRead! Play around!\n\n\n\n\n\nThu, Sep 18\n\n💻 Lab 3 (disease testing)\nRead!\n\nLab 3 @ 11:59 PM\n\n\n\nFri, Sep 19\n\n\n\nPSET 0 corrections PSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\nDS: 3.1, 3.3, 4.1\n🧑‍🏫 Random variable intro\nnotes\n\n\n\n\nWed, Sep 24\n\nDS: 5.1 - 5.4\n🧑‍🏫 Discrete families\nnotes\n\n\n\n\nThu, Sep 25\n\n💻 Lab 4 (ChatGPT)\n\n\nLab 4 @ 11:59 PM\n\n\n\nFri, Sep 26\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\nDS: 4.2\n🧑‍🏫 Expected value\nnotes\n\n\n\n\nWed, Oct 1\n\nDS: 4.3\n🧑‍🏫 Variance\nnotes\n\n\n\n\nThu, Oct 2\n\n💻 Lab 5 (random dating)\n\n\nLab 5 @ 11:59 PM\n\n\n\nSun, Oct 5\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n🧑‍🏫 Continuous\n\n\n\n\n\nWed, Oct 8\n\n🧑‍🏫 Continuous\n\n\n\n\n\nThu, Oct 9\nstudy guide\n📝 Midterm 1\n\n\n\n\n\n8\nMon, Oct 13\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\nWed, Oct 15\n\n🧑‍🏫 Continuous\n\n\n\n\n\nThu, Oct 16\n\n💻 Lab 6\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n🧑‍🏫 Continuous\n\n\n\n\n\nWed, Oct 22\n\n🧑‍🏫 Jointly Discrete\n\n\n\n\n\nThu, Oct 23\n\n💻 Lab 7\n\nLab 7 @ 11:59 PM\n\n\n10\nMon, Oct 27\n\n🧑‍🏫 Jointly Continuous\n\n\nPSET 5 @ 3PM\n\n\n\nWed, Oct 29\n\n🧑‍🏫 Hierarchies\n\n\n\n\n\nThu, Oct 30\n\n💻 Lab 8\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\nWed, Nov 5\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\nThu, Nov 6\n\n💻 Lab 9\n\nLab 9 @ 11:59 PM\n\n\n\nFri, Nov 7\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\nWed, Nov 12\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\nThu, Nov 13\n\n📝 Midterm 2\n\n\n\n\n\n13\nMon, Nov 17\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nWed, Nov 19\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nThu, Nov 20\n\n💻 Lab 10\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\nWed, Nov 26\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\nThu, Nov 27\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n15\nMon, Dec 1\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nWed, Dec 3\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nThu, Dec 4\n\n💻 Lab 11\n\nLab 11 @ 11:59 PM\n\n\n\nFri, Dec 5\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n📝 Final (9AM - 12PM)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\nslides\n\n\n\n\nWed, Aug 27\n\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\nnotes\n\n\n\n\nThu, Aug 28\n\n💻 Lab 0 (calculus review)\n\n\n\n\n2\nMon, Sep 1\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\nWed, Sep 3\n\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\nslides notes\n\n\nIntro Survey @ 3 PM\n\n\n\nThu, Sep 4\n\n💻 Lab 1 (hello R)\n\n\nLab 1 @ 11:59 PM\n\n\n\nFri, Sep 5\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nWed, Sep 10\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nThu, Sep 11\n\n💻 Lab 2 (counting)\n\n\nLab 2 @ 11:59 PM\n\n\n\nFri, Sep 12\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nnotes Play around!\n\n\n\n\n\nWed, Sep 17\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nRead! Play around!\n\n\n\n\n\nThu, Sep 18\n\n💻 Lab 3 (disease testing)\nRead!\n\nLab 3 @ 11:59 PM\n\n\n\nFri, Sep 19\n\n\n\nPSET 0 corrections PSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\nDS: 3.1, 3.3, 4.1\n🧑‍🏫 Random variable intro\nnotes\n\n\n\n\nWed, Sep 24\n\nDS: 5.1 - 5.4\n🧑‍🏫 Discrete families\nnotes\n\n\n\n\nThu, Sep 25\n\n💻 Lab 4 (ChatGPT)\n\n\nLab 4 @ 11:59 PM\n\n\n\nFri, Sep 26\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\nDS: 4.2\n🧑‍🏫 Expected value\nnotes\n\n\n\n\nWed, Oct 1\n\nDS: 4.3\n🧑‍🏫 Variance\nnotes\n\n\n\n\nThu, Oct 2\n\n💻 Lab 5 (random dating)\n\n\nLab 5 @ 11:59 PM\n\n\n\nSun, Oct 5\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n🧑‍🏫 Continuous\nnotes\n\n\n\n\nWed, Oct 8\n\n🧑‍🏫 Continuous\nnotes\n\n\n\n\nThu, Oct 9\nstudy guide\n📝 Midterm 1\n\n\n\n\n\n8\nMon, Oct 13\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\nWed, Oct 15\n\n🧑‍🏫 Continuous\n\n\n\n\n\nThu, Oct 16\n\n💻 Lab 6 (normal and gamma)\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n🧑‍🏫 Continuous\n\n\n\n\n\nWed, Oct 22\n\n🧑‍🏫 Jointly Discrete\n\n\n\n\n\nThu, Oct 23\n\n💻 Lab 7 (transformations)\n\nLab 7 @ 11:59 PM\n\n\n10\nMon, Oct 27\n\n🧑‍🏫 Jointly Continuous\n\n\nPSET 5 @ 3PM\n\n\n\nWed, Oct 29\n\n🧑‍🏫 Hierarchies\n\n\n\n\n\nThu, Oct 30\n\n💻 Lab 8 (insurance)\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\nWed, Nov 5\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\nThu, Nov 6\n\n💻 Lab 9\n\nLab 9 @ 11:59 PM\n\n\n\nFri, Nov 7\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\nWed, Nov 12\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\nThu, Nov 13\n\n📝 Midterm 2\n\n\n\n\n\n13\nMon, Nov 17\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nWed, Nov 19\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nThu, Nov 20\n\n💻 Lab 10 (mle)\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\nWed, Nov 26\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\nThu, Nov 27\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n15\nMon, Dec 1\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nWed, Dec 3\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nThu, Dec 4\n\n💻 Lab 11 (bayes)\n\nLab 11 @ 11:59 PM\n\n\n\nFri, Dec 5\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n📝 Final (9AM - 12PM)",
     "crumbs": [
       "Syllabus",
       "Schedule"
     ]
   },
   {
-    "objectID": "math/greeks.html",
-    "href": "math/greeks.html",
-    "title": "Greek alphabet",
+    "objectID": "math/series.html",
+    "href": "math/series.html",
+    "title": "Infinite series",
     "section": "",
-    "text": "For better or worse, Greek letters will be flying in this class, so you should have a working knowledge of the most common ones used in mathematics:\n\n\n\n\nGreek Letter\nEnglish Name\n\n\n\n\n\\(A, \\alpha\\)\nalpha\n\n\n\\(B, \\beta\\)\nbeta\n\n\n\\(\\Gamma, \\gamma\\)\ngamma\n\n\n\\(\\Delta, \\delta\\)\ndelta\n\n\n\\(E, \\epsilon\\)\nepsilon\n\n\n\\(Z, \\zeta\\)\nzeta\n\n\n\\(H, \\eta\\)\neta\n\n\n\\(\\Theta, \\theta\\)\ntheta\n\n\n\\(I, \\iota\\)\niota\n\n\n\\(K, \\kappa\\)\nkappa\n\n\n\\(\\Lambda, \\lambda\\)\nlambda\n\n\n\\(M, \\mu\\)\nmu (“mew”)\n\n\n\\(N, \\nu\\)\nnu\n\n\n\\(\\Xi, \\xi\\)\nxi\n\n\n\\(O, o\\)\nomicron\n\n\n\\(\\Pi, \\pi\\)\npi\n\n\n\\(P, \\rho\\)\nrho (“row”)\n\n\n\\(\\Sigma, \\sigma\\)\nsigma\n\n\n\\(T, \\tau\\)\ntau\n\n\n\\(Y, \\upsilon\\)\nupsilon\n\n\n\\(\\Phi, \\phi\\)\nphi\n\n\n\\(X, \\chi\\)\nchi (“kai”)\n\n\n\\(\\Psi, \\psi\\)\npsi\n\n\n\\(\\Omega, \\omega\\)\nomega",
+    "text": "Roughly speaking, an infinite series is the sum of infinitely many numbers:\n\\[\n\\sum\\limits_{n=0}^\\infty a_n=a_0+a_1+a_2+a_3+\\cdots\n\\]\nStrictly speaking, it is the limit of the sequence of partial sums:\n\\[\n\\sum\\limits_{n=0}^\\infty a_n=\\lim_{k\\to\\infty}\\sum\\limits_{n=0}^ka_n.\n\\]\nThis limit may or may not be finite, and there are many famous examples of this.",
     "crumbs": [
       "Math Review",
-      "Greek alphabet"
+      "Infinite series"
+    ]
+  },
+  {
+    "objectID": "math/series.html#geometric-series",
+    "href": "math/series.html#geometric-series",
+    "title": "Infinite series",
+    "section": "Geometric series",
+    "text": "Geometric series\nDon’t you love this:\n\\[\n\\frac{a}{1-r}=\\sum\\limits_{n=0}^\\infty ar^n,\\quad |r|&lt;1.\n\\]\nThe partial sums are also well-behaved:\n\\[\n\\sum\\limits_{n=0}^k ar^n\n=\n\\begin{cases}\na(k+1) & r=1\\\\\na\\left(\\frac{1-r^{k+1}}{1-r}\\right) & \\text{else}.\n\\end{cases}\n\\]",
+    "crumbs": [
+      "Math Review",
+      "Infinite series"
+    ]
+  },
+  {
+    "objectID": "math/series.html#p-series",
+    "href": "math/series.html#p-series",
+    "title": "Infinite series",
+    "section": "\\(p\\)-series",
+    "text": "\\(p\\)-series\nIf \\(p&gt;1\\), this converges:\n\\[\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^p}.\n\\]\nHere are concrete examples:\n\\[\n\\begin{aligned}\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n}&=\\infty &&\\text{(harmonic series)}\\\\\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^2}&=\\frac{\\pi^2}{6}\\\\\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^3}&\\approx 1.202057.\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Math Review",
+      "Infinite series"
+    ]
+  },
+  {
+    "objectID": "math/series.html#taylor-series",
+    "href": "math/series.html#taylor-series",
+    "title": "Infinite series",
+    "section": "Taylor series",
+    "text": "Taylor series\nIf a function \\(f\\) is infinitely differentiable at 0, then we can rewrite it using the Taylor expansion:\n\\[\nf(x)\n=\n\\sum\\limits_{n=0}^\\infty \\frac{f^{(n)}(0)}{n!}x^n,\\quad \\text{for some  }x.\n\\]\nThe set of \\(x\\)-values for which the Taylor expansion is valid is called the radius of convergence. Here are examples for specific functions:\n\\[\n\\begin{aligned}\n\\frac{1}{1-x}&=\\sum\\limits_{n=0}^\\infty x^n,&&-1&lt;x&lt;1\\\\\ne^x&=\\sum\\limits_{n=0}^\\infty\\frac{x^n}{n!},&&-\\infty &lt; x &lt; \\infty\\\\\n\\ln(1-x)&=-\\sum\\limits_{n=0}^\\infty\\frac{x^n}{n},&&-1\\leq x &lt; 1.\n\\end{aligned}\n\\]\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\n# app.R\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  titlePanel(\"Taylor Polynomial Approximation\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      selectInput(\n        inputId = \"func\",\n        label = \"Choose a function:\",\n        choices = c(\"exp(x)\", \"sin(x)\")\n      ),\n      sliderInput(\n        inputId = \"degree\",\n        label = \"Degree of Taylor polynomial (n):\",\n        min = 0, max = 10, value = 1, step = 1\n      )\n    ),\n    \n    mainPanel(\n      plotOutput(\"taylorPlot\")\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$taylorPlot &lt;- renderPlot({\n    # Define function and y-limits\n    f &lt;- switch(input$func,\n                \"exp(x)\" = function(x) exp(x),\n                \"sin(x)\" = function(x) sin(x))\n    x &lt;- seq(-5, 5, length.out = 400)\n    y_true &lt;- f(x)\n    \n    # Fix y-limits by function\n    ylims &lt;- switch(input$func,\n                    \"exp(x)\" = c(-1, 150),\n                    \"sin(x)\" = c(-1.5, 1.5))\n    \n    # Define Taylor polynomial\n    taylor_poly &lt;- function(x, n) {\n      sapply(x, function(xi) {\n        sum(sapply(0:n, function(k) {\n          deriv_k &lt;- switch(input$func,\n                            \"exp(x)\" = 1,\n                            \"sin(x)\" = if (k %% 4 == 0) 0 else if (k %% 4 == 1) 1 else if (k %% 4 == 2) 0 else -1)\n          deriv_k * xi^k / factorial(k)\n        }))\n      })\n    }\n    \n    y_approx &lt;- taylor_poly(x, input$degree)\n    \n    # Draw the plot\n    plot(x, y_true, type = \"l\", col = \"black\", lwd = 2,\n         ylim = ylims, xlab = \"x\", ylab = \"y\",\n         main = paste(\"Taylor approximation of\", input$func, \"around x = 0\"),\n         bty = \"n\", axes = FALSE)\n    \n    # Add axes through origin\n    abline(h = 0, v = 0, col = \"gray70\")\n    axis(1, pos = 0)\n    axis(2, pos = 0, las = 1)\n    \n    # Add Taylor curve\n    lines(x, y_approx, col = \"red\", lwd = 2)\n    \n    # Add legend\n    legend(\"topleft\",\n           legend = c(\"f(x)\", paste(\"Taylor polynomial (n = \", input$degree, \")\", sep = \"\")),\n           col = c(\"black\", \"red\"), lwd = 2, bty = \"n\")\n  })\n}\n\nshinyApp(ui = ui, server = server)",
+    "crumbs": [
+      "Math Review",
+      "Infinite series"
     ]
   },
   {
@@ -3958,28 +4084,44 @@
     "href": "distributions/continuous-uniform.html",
     "title": "Continuous uniform distribution",
     "section": "",
-    "text": "If \\(X\\) is a continuous random quantity that is “equally likely” to take on any value in a bounded interval \\([a,\\, b]\\), then we can model it with the continuous uniform distribution."
+    "text": "If \\(X\\) is a continuous random quantity that is “equally likely” to take on any value in a bounded interval \\([a,\\, b]\\), then we can model it with the continuous uniform distribution.",
+    "crumbs": [
+      "Distribution families",
+      "Continuous uniform"
+    ]
   },
   {
     "objectID": "distributions/continuous-uniform.html#basic-properties",
     "href": "distributions/continuous-uniform.html#basic-properties",
     "title": "Continuous uniform distribution",
     "section": "Basic properties",
-    "text": "Basic properties\n\n\n\n\n\n\n\nNotation\n\\(X\\sim\\text{Unif}(a,\\,b)\\)\n\n\nRange\n\\([a,\\,b]\\)\n\n\nParameter space\n\\(-\\infty &lt; a &lt; b &lt; \\infty\\)\n\n\nPDF\n\\(f(x)=\\begin{cases}\\frac{1}{b-a} & a\\leq x\\leq b\\\\0&\\text{else}\\end{cases}\\)\n\n\nCDF\n\\(F(x)=\\begin{cases}0 & x &lt; a\\\\\\frac{x-a}{b-a} & a\\leq x\\leq b\\\\1&b&lt;x\\end{cases}\\)\n\n\nExpectation\n\\(\\frac{a+b}{2}\\)\n\n\nVariance\n\\((b-a)^2/12\\)"
+    "text": "Basic properties\n\n\n\n\n\n\n\nNotation\n\\(X\\sim\\text{Unif}(a,\\,b)\\)\n\n\nRange\n\\([a,\\,b]\\)\n\n\nParameter space\n\\(-\\infty &lt; a &lt; b &lt; \\infty\\)\n\n\nPDF\n\\(f(x)=\\begin{cases}\\frac{1}{b-a} & a\\leq x\\leq b\\\\0&\\text{else}\\end{cases}\\)\n\n\nCDF\n\\(F(x)=\\begin{cases}0 & x &lt; a\\\\\\frac{x-a}{b-a} & a\\leq x\\leq b\\\\1&b&lt;x\\end{cases}\\)\n\n\nExpectation\n\\(\\frac{a+b}{2}\\)\n\n\nVariance\n\\((b-a)^2/12\\)",
+    "crumbs": [
+      "Distribution families",
+      "Continuous uniform"
+    ]
   },
   {
     "objectID": "distributions/continuous-uniform.html#r-commands",
     "href": "distributions/continuous-uniform.html#r-commands",
     "title": "Continuous uniform distribution",
     "section": "\nR commands",
-    "text": "R commands\nFor the second version of the distribution, R provides:\n\ndunif(x, min, max) # PDF: f(x)\npunif(q, min, max) # CDF: P(X &lt;= q)\nrunif(n, min, max) # random numbers"
+    "text": "R commands\nFor the second version of the distribution, R provides:\n\ndunif(x, min, max) # PDF\npunif(q, min, max) # CDF: P(X &lt;= q)\nrunif(n, min, max) # random numbers",
+    "crumbs": [
+      "Distribution families",
+      "Continuous uniform"
+    ]
   },
   {
     "objectID": "distributions/continuous-uniform.html#play-around",
     "href": "distributions/continuous-uniform.html#play-around",
     "title": "Continuous uniform distribution",
     "section": "Play around!",
-    "text": "Play around!\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 600\n#| fig-asp: 1\n\nlibrary(shiny)\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n  \n  # Application title\n  titlePanel(\"Uniform distribution CDF and PDF\"),\n  \n  # Sidebar with a slider input for number of bins \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"a\",\n                  \"Lower bound (a):\",\n                  min = 0,\n                  max = 2,\n                  value = 1,\n                  step = 0.1),\n      sliderInput(\"b\",\n                  \"Upper bound (b):\",\n                  min = 3,\n                  max = 5,\n                  value = 4,\n                  step = 0.1)\n    ),\n    \n    # Show a plot of the generated distribution\n    mainPanel(\n      plotOutput(\"distPlot\")\n    )\n  )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n  \n  output$distPlot &lt;- renderPlot({\n    \n    a &lt;- input$a\n    b &lt;- input$b\n\n    par(mfrow = c(2, 1), mar = c(4, 4, 2, 2))\n    \n    curve(punif(x, min = a, max = b), from = -1, to = 6, n = 1000,\n          ylab = \"\", col = \"red\", xlim = c(0, 5))\n    curve(0*x, from = -1, to = a, n = 1000, \n          ylim = c(0, 1), ylab = \"\", col = \"red\", xlim = c(0, 5))\n    curve(dunif(x, min = a, max = b), from = a, to = b, n = 1000, \n          ylim = c(0, 1), ylab = \"\", col = \"red\", add = TRUE)\n    curve(0*x, from = b, to = 6, n = 1000, \n          ylim = c(0, 1), ylab = \"\", col = \"red\", add = TRUE)\n  })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)"
+    "text": "Play around!\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 600\n#| fig-asp: 1\n\nlibrary(shiny)\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n  \n  # Application title\n  titlePanel(\"Uniform distribution CDF and PDF\"),\n  \n  # Sidebar with a slider input for number of bins \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"a\",\n                  \"Lower bound (a):\",\n                  min = 0,\n                  max = 2,\n                  value = 1,\n                  step = 0.1),\n      sliderInput(\"b\",\n                  \"Upper bound (b):\",\n                  min = 3,\n                  max = 5,\n                  value = 4,\n                  step = 0.1)\n    ),\n    \n    # Show a plot of the generated distribution\n    mainPanel(\n      plotOutput(\"distPlot\")\n    )\n  )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n  \n  output$distPlot &lt;- renderPlot({\n    \n    a &lt;- input$a\n    b &lt;- input$b\n\n    par(mfrow = c(2, 1), mar = c(4, 4, 2, 2))\n    \n    curve(punif(x, min = a, max = b), from = -1, to = 6, n = 1000,\n          ylab = \"\", col = \"red\", xlim = c(0, 5))\n    curve(0*x, from = -1, to = a, n = 1000, \n          ylim = c(0, 1), ylab = \"\", col = \"red\", xlim = c(0, 5))\n    curve(dunif(x, min = a, max = b), from = a, to = b, n = 1000, \n          ylim = c(0, 1), ylab = \"\", col = \"red\", add = TRUE)\n    curve(0*x, from = b, to = 6, n = 1000, \n          ylim = c(0, 1), ylab = \"\", col = \"red\", add = TRUE)\n  })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)",
+    "crumbs": [
+      "Distribution families",
+      "Continuous uniform"
+    ]
   },
   {
     "objectID": "distributions/discrete-poisson.html",
