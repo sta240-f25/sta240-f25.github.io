@@ -1,0 +1,97 @@
+---
+title: "Continuous uniform distribution"
+format: html
+filters:
+  - shinylive
+---
+
+If $X$ is a continuous random quantity that is "equally likely" to take on any value in a bounded interval $[a,\, b]$, then we can model it with the continuous uniform distribution.
+
+## Basic properties
+
+|  |        |
+|------|--------------------|
+| **Notation** | $X\sim\text{Unif}(a,\,b)$  |
+| **Range** | $[a,\,b]$ |
+| **Parameter space** | $-\infty < a < b < \infty$ |
+| **PDF** | $f(x)=\begin{cases}\frac{1}{b-a} & a\leq x\leq b\\0&\text{else}\end{cases}$ |
+| **CDF** | $F(x)=\begin{cases}0 & x < a\\\frac{x-a}{b-a} & a\leq x\leq b\\1&b<x\end{cases}$ |
+| **Expectation** | $\frac{a+b}{2}$ |
+| **Variance** | $(b-a)^2/12$ |
+
+## `R` commands
+
+For the second version of the distribution, `R` provides:
+
+```{r}
+#| eval: false
+dunif(x, min, max) # PDF
+punif(q, min, max) # CDF: P(X <= q)
+runif(n, min, max) # random numbers
+```
+
+## Play around!
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 600
+#| fig-asp: 1
+
+library(shiny)
+
+# Define UI for application that draws a histogram
+ui <- fluidPage(
+  
+  # Application title
+  titlePanel("Uniform distribution CDF and PDF"),
+  
+  # Sidebar with a slider input for number of bins 
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("a",
+                  "Lower bound (a):",
+                  min = 0,
+                  max = 2,
+                  value = 1,
+                  step = 0.1),
+      sliderInput("b",
+                  "Upper bound (b):",
+                  min = 3,
+                  max = 5,
+                  value = 4,
+                  step = 0.1)
+    ),
+    
+    # Show a plot of the generated distribution
+    mainPanel(
+      plotOutput("distPlot")
+    )
+  )
+)
+
+# Define server logic required to draw a histogram
+server <- function(input, output) {
+  
+  output$distPlot <- renderPlot({
+    
+    a <- input$a
+    b <- input$b
+
+    par(mfrow = c(2, 1), mar = c(4, 4, 2, 2))
+    
+    curve(punif(x, min = a, max = b), from = -1, to = 6, n = 1000,
+          ylab = "", col = "red", xlim = c(0, 5))
+    curve(0*x, from = -1, to = a, n = 1000, 
+          ylim = c(0, 1), ylab = "", col = "red", xlim = c(0, 5))
+    curve(dunif(x, min = a, max = b), from = a, to = b, n = 1000, 
+          ylim = c(0, 1), ylab = "", col = "red", add = TRUE)
+    curve(0*x, from = b, to = 6, n = 1000, 
+          ylim = c(0, 1), ylab = "", col = "red", add = TRUE)
+  })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+```
+
+
