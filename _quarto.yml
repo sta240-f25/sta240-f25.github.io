@@ -18,6 +18,7 @@ project:
     - lecture-notes/sta240-notes-08-variance.pdf
     - lecture-notes/sta240-notes-09-cdf.pdf
     - lecture-notes/sta240-notes-10-absolutely-continuous.pdf
+    - lecture-notes/sta240-notes-11-moments.pdf
 
 website:
   page-navigation: true
