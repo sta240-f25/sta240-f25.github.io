@@ -23,13 +23,36 @@ By far the most famous model for such a variable is the **normal distribution**.
 
 What is the probability that $X$ will be exactly equal to 0.377?
 
+::: {.callout-warning collapse="true"}
+## Solution
+This is a continuous random variable, so $P(X=0.377)=0$.
+:::
+
 ## Task 2
 
 What is the probability that $X$ will be somewhere between 0.35 and 0.4?
 
+::: {.callout-warning collapse="true"}
+## Solution
+$P(0.35<X<0.4)=F(0.4)-F(0.35)$:
+
+```{r}
+pnorm(0.4, 0.1, 0.3) - pnorm(0.35, 0.1, 0.3)
+```
+:::
+
 ## Task 3
 
 What is the probability that $X$ will be negative?
+
+::: {.callout-warning collapse="true"}
+## Solution
+$P(X<0)=F(0)$:
+
+```{r}
+pnorm(0, 0.1, 0.3)
+```
+:::
 
 ## Task 4
 
@@ -40,10 +63,31 @@ Simulate `n = 5000` realizations of $X$ and then verify that the sample mean, th
 To ensure that your numbers are reproducible and you get the same results every time you render your document, [set a random number seed](https://sta240-f25.github.io/explainers/rng-seed.html) of your choosing.
 :::
 
+::: {.callout-warning collapse="true"}
+## Solution
+```{r}
+set.seed(1234)
+n <- 5000
+x <- rnorm(n, 0.1, 0.3)
+
+mean(x) # should be close to 0.1
+sd(x) # should be close to 0.3
+mean(x <= 0) # should be close to answer from Task 3
+```
+:::
+
 ## Task 5
 
 Plot a histogram of your random numbers from the previous part, and overlay a line plot of the "true" density.
 
+::: {.callout-warning collapse="true"}
+## Solution
+```{r}
+hist(x, breaks = "Scott", freq = FALSE)
+curve(dnorm(x, mean = 0.1, sd = 0.3), 
+      from = min(x), to = max(x), n = 1000, add = TRUE, col = "red")
+```
+:::
 
 # The gamma distribution
 
@@ -70,14 +114,59 @@ A random variable possessing this distribution is denoted $X\sim\text{Gamma}(\al
 
 The actuaries at your insurance company know that historically, monthly claims are about \$10,000 on average, with a standard deviation of \$2,000. If we want to use the model $X\sim\text{Gamma}(\alpha,\,\beta)$, how should we set $\alpha$ and $\beta$ so that $X$ has the correct location and spread?
 
+::: {.callout-warning collapse="true"}
+## Solution
+We need $\alpha/\beta = 10000$ and $\sqrt{\alpha}/\beta=2000$. Alternatively, we need
+
+$$
+\frac{\alpha/\beta}{\sqrt{\alpha}/\beta}=\frac{10000}{2000}\,\implies\,\sqrt{\alpha}=5.
+$$
+
+So $\alpha = 5^2=25$. Consequently:
+
+$$
+\frac{25}{\beta}=10000\,\implies\,\beta=\frac{25}{10000}=0.0025.
+$$
+
+**Final answer**: $\alpha = 25$ and $\beta = 0.0025$. 
+:::
+
 ## Task 7
 
 Simulate `n = 5000` random numbers from the gamma distribution using the appropriate `r-` function. Plot a histogram of these numbers using the `hist` function, and overlay a line plot of the density using the `curve` function and the appropriate `d-` function.
+
+::: {.callout-warning collapse="true"}
+## Solution
+```{r}
+set.seed(1234)
+n <- 5000
+x <- rgamma(n, 25, rate = 0.0025)
+hist(x, breaks = "Scott", freq = FALSE)
+curve(dgamma(x, 25, rate = 0.0025), 
+      from = min(x), to = max(x), n = 1000, add = TRUE, col = "red")
+```
+:::
 
 ## Task 8
 
 Verify that the sample mean and sample variance of your random numbers are close to the prescriptions from Task 6. If they are not, revisit Task 6 and adjust your choice of $\alpha$ and $\beta$ until this works.
 
+::: {.callout-warning collapse="true"}
+## Solution
+```{r}
+mean(x) # should be close to 10000
+sd(x) # should be close to 2000
+```
+:::
+
 ## Task 9
 
 What is the probability $P(X > 15,000)$? Calculate this probability exactly using the appropriate `p-` function, and also approximate it using your random numbers. Verify that the two numbers are close.
+
+::: {.callout-warning collapse="true"}
+## Solution
+```{r}
+1 - pgamma(15000, 25, rate = 0.0025)
+mean(x > 15000)
+```
+:::
