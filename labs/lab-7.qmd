@@ -1,0 +1,163 @@
+---
+title: "Lab 7"
+subtitle: Due Thursday October 23 at 11:59 PM
+format: html
+draft: false
+editor: 
+  mode: source
+---
+
+Let $X$ be a random variable, let $g$ be a transformation, and consider the new random variable $Y=g(X)$. If all we cared about was the mean of $Y$, then LOTUS provides a nice shortcut for computing $E(Y)=E[g(X)]$ directly. But often, we want to know the entire distribution of the new random variable $Y$, not just the mean. In this lab, we will learn how to calculate it.
+
+# Task 1
+
+Consider $X\sim \text{Gamma}(1,\,1)$. This is the same as saying $X\sim\text{Exponential}(1)$, which we saw in lecture on Monday.
+
+a.  What are the range and pdf of $Y=\ln X$?
+b.  Simulate `n = 5000` draws of $Y$. Plot a histogram, and add a line plot of the density you derived in part b. They should match!
+
+# Task 2
+
+Consider $X\sim\text{Unif}(-\pi/2,\,\pi/2)$.
+
+a.  What are the range and pdf of $Y=\tan X$?
+b.  Simulate `n = 5000` draws of $Y$. Plot a histogram, and add a line plot of the density you derived in part b. Can you get them to match?
+
+
+# Task 3
+
+Consider $X\sim \text{N}(0,\,1)$.
+
+a.  What are the range and pdf of $Y=e^X$?
+b.  Simulate `n = 5000` draws of $Y$. Plot a histogram, and add a line plot of the density you derived in part b. They should match!
+
+# Interlude
+
+Given $X\sim f_X$, we want the density of $Y=g(X)$. In the three examples, you followed the same basic steps: 
+
+- write the generic cdf of $Y$: $F_Y(y)=P(Y\leq y)=P(g(X)\leq y)$;
+- rewrite the event inside until $X$ is by itself (you probably have to undo or *invert* $g$ to do this);
+- since $X$ is by itself, rewrite the probability using the cdf of $X$;
+- differentiate (you probably have to use the chain rule to do this).
+
+The basic template can be neatly summarized with the so-called **change-of-variables formula**, which tells you how to compute the density of $Y$ using the density of $X$ and the transformation $g$:
+
+$$
+f_Y(y)=f_X\left(g^{-1}(y)\right)
+    \left|\frac{\text{d}}{\text{d} y}g^{-1}(y)\right|,\quad y\in\text{Range}(Y).
+$$
+
+::: {.callout-warning collapse="true"}
+## Proof
+Assume...
+
+- $X$ is absolutely continuous with pdf $f_X$;
+- $g$ is defined for all $x\in\text{Range}(X)$;
+- $g$ is differentiable and either strictly increasing or strictly decreasing (hence, invertible).
+
+There are two cases:
+
+::: {.columns }
+::: {.column width="50%"}
+**Strictly increasing**
+
+If $g$ is strictly increasing, then $g^{-1}$ is strictly increasing also. This means that $\frac{\text{d}}{\text{d} y}g^{-1}(y)$ must be positive for all $y$! It also means that $g^{-1}$ is order-*preserving*. If $a\leq b$, then $g^{-1}(a)\leq g^{-1}(b)$. 
+
+Fix arbitrary $y\in\text{Range}(Y)$. Then:
+
+$$
+\begin{aligned}
+    F_Y(y)
+    &=
+    P(Y\leq y)
+    \\
+    &=
+    P\left(g(X)\leq y\right)
+    \\
+    &=
+    P\left(X\leq g^{-1}(y)\right)
+    \\
+    &=
+    F_X\left(g^{-1}(y)\right)
+    .
+\end{aligned}
+$$
+
+Taking a derivative and applying the chain rule gives 
+
+$$
+\begin{aligned}
+    f_Y(y)
+    &=
+    \frac{\text{d}}{\text{d} y}F_X\left(g^{-1}(y)\right)
+    \\
+    &=
+    f_X\left(g^{-1}(y)\right)\underbrace{\frac{\text{d}}{\text{d} y}g^{-1}(y)}_{\text{positive!}}
+    \\
+    &=
+    f_X\left(g^{-1}(y)\right)
+    \left|\frac{\text{d}}{\text{d} y}g^{-1}(y)\right|.
+\end{aligned}
+$$
+
+:::
+
+::: {.column width="50%"}
+**Strictly decreasing**
+
+If $g$ is strictly decreasing, then $g^{-1}$ is strictly decreasing also. This means that $\frac{\text{d}}{\text{d} y}g^{-1}(y)$ must be negative for all $y$! It also means that $g^{-1}$ is order-*reversing*. If $a\leq b$, then $g^{-1}(a)\geq g^{-1}(b)$. 
+
+Fix arbitrary $y\in\text{Range}(Y)$. Then:
+
+$$
+\begin{aligned}
+    F_Y(y)
+    &=
+    P(Y\leq y)
+    \\
+    &=
+    P\left(g(X)\leq y\right)
+    \\
+    &=
+    P\left(X> g^{-1}(y)\right)
+    \\
+    &=
+    1-P\left(X\leq g^{-1}(y)\right)
+    \\
+    &=
+    1-F_X\left(g^{-1}(y)\right)
+    .
+\end{aligned}
+$$
+Taking a derivative and applying the chain rule gives 
+
+$$
+\begin{align*}
+    f_Y(y)
+    &=
+    \frac{\text{d}}{\text{d} y}[1-F_X\left(g^{-1}(y)\right)]
+    \\
+    &=
+    {\color{red}-}f_X\left(g^{-1}(y)\right)\underbrace{\frac{\text{d}}{\text{d} y}g^{-1}(y)}_{\text{negative!}}
+    \\
+    &=
+    f_X\left(g^{-1}(y)\right)
+    \left|\frac{\text{d}}{\text{d} y}g^{-1}(y)\right|.
+\end{align*}
+$$
+
+:::
+:::
+
+Either way, we got to the same place.
+
+:::
+
+# Task 4
+
+Let $X$ be an absolutely continuous random variable with pdf $f_X$, let and $a,\,b\in\mathbb{R}$ be constants, and consider the new random variable $Y=aX+b$.
+
+a.  What is $E(Y)$?
+b.  What is $\text{var}(Y)$?
+c.  Use the change-of-variables formula to find the density of $Y$?
+d.  In the special case where $X\sim\text{N}(0,\,1)$, what are $E(Y)$, $\text{var}(Y)$, and the density of $Y$? There's no need to re-derive anything here. Just plug what you know about N(0, 1) into the formulas from parts a, b, and c.
