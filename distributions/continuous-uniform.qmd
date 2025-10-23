@@ -94,4 +94,173 @@ server <- function(input, output) {
 shinyApp(ui = ui, server = server)
 ```
 
+## Derivations
+
+::: {.callout-note collapse="true"}
+## The pdf integrates to 1
+
+$$
+\begin{aligned}
+    \int_{-\infty}^\infty f_X(x)\,\text{d} x
+    &=
+    \int_{-\infty}^a f_X(x)\,\text{d} x
+    +
+    \int_{a}^b f_X(x)\,\text{d} x
+    +
+    \int_{b}^\infty f_X(x)\,\text{d} x
+    \\
+    &=
+    {\int_{-\infty}^a 0\,\text{d} x}
+    +
+    \int_{a}^b \frac{1}{b-a}\,\text{d} x
+    +
+    {\int_{b}^\infty 0\,\text{d} x}
+    \\
+    &=
+    \frac{1}{b-a}\int_a^b1\,\text{d} x
+    \\
+    &=
+    \frac{1}{b-a}
+    [x]_a^b
+    \\
+    &=
+    \frac{1}{b-a}(b-a)
+    \\
+    &=
+    1
+    .
+\end{aligned}
+$$
+:::
+
+::: {.callout-tip collapse="true"}
+## The CDF
+
+The cdf is $F_X(x)=P(X\leq x)=\int_{-\infty}^x f_X(t)\,\text{d} t$. If $x< a$, then 
+
+$$
+F_X(x)=\int_{-\infty}^xf_X(t)\,\text{d} t=\int_{-\infty}^x0\,\text{d} t=0.
+$$
+
+If $a\leq x\leq b$, then 
+
+$$
+\begin{aligned}
+    F_X(x)
+    &=
+    \int_{-\infty}^xf_X(t)\,\text{d} t
+    \\
+    &=
+    \int_{-\infty}^af_X(t)\,\text{d} t
+    +
+    \int_{a}^xf_X(t)\,\text{d} t
+    \\
+    &=
+    {\int_{-\infty}^a0\,\text{d} t}
+    +
+    \int_{a}^x\frac{1}{b-a}\,\text{d} t
+    \\
+    &=
+    \frac{1}{b-a}[t]_a^x
+    \\
+    &=
+    \frac{x-a}{b-a}
+    .
+\end{aligned}
+$$
+
+If $b < x$, then 
+
+$$
+\begin{aligned}
+    F_X(x)
+    &=
+    \int_{-\infty}^xf_X(t)\,\text{d} t
+    \\
+    &=
+    \int_{-\infty}^af_X(t)\,\text{d} t
+    +
+    \int_{a}^bf_X(t)\,\text{d} t
+    +
+    \int_{b}^xf_X(t)\,\text{d} t
+    \\
+        &=
+    {\int_{-\infty}^a0\,\text{d} t}
+    +
+    \int_{a}^b\frac{1}{b-a}\,\text{d} t
+    +
+    {\int_{b}^x0\,\text{d} t}
+    \\
+    &=1.
+\end{aligned}
+$$
+
+So the cdf of $X\sim\text{Unif}(a,\, b)$ is 
+
+$$
+    F_X(x)
+    =
+    \begin{cases}
+        0 & x<a \\
+        \frac{x-a}{b-a} & a\leq x\leq b \\
+        1 & b<x.
+    \end{cases}
+$$
+
+:::
+
+::: {.callout-note collapse="true"}
+## The mean
+
+The expected value is the midpoint of the interval:
+
+$$
+\begin{align*}
+    E(X)
+    &=
+    \int_{-\infty}^\infty 
+    xf_X(x)\,\text{d} x
+    \\
+    &=
+    \int_{-\infty}^a 
+    xf_X(x)\,\text{d} x
+    +
+    \int_{a}^b 
+    xf_X(x)\,\text{d} x
+    +
+    \int_{b}^\infty 
+    xf_X(x)\,\text{d} x
+    \\
+        &=
+    {\int_{-\infty}^a 
+    x\cdot0\,\text{d} x}
+    +
+    \int_{a}^b 
+    x\frac{1}{b-a}\,\text{d} x
+    +
+    {\int_{b}^\infty 
+    x\cdot0\,\text{d} x}
+    \\
+    &=
+    0+\frac{1}{b-a}\int_a^b x\,\text{d} x+0
+    \\
+    &=
+    \frac{1}{b-a}\left[\frac{1}{2}x^2\right]_a^b
+    \\
+    &=
+    \frac{1}{b-a}\left[\frac{1}{2}b^2-\frac{1}{2}a^2\right]
+    \\
+        &=
+    \frac{1}{2(b-a)}\left[b^2-a^2\right]
+    \\
+        &=
+    \frac{1}{2{(b-a)}}{(b-a)}(b+a)
+    \\
+    &=\frac{b+a}{2}.
+\end{align*}
+$$
+
+That's the proper derivation, but without the math, we could have reasoned our way to this answer by noting that the range is bounded, so the mean is guaranteed to exist, and the distribution is symmetric, so the mean matches the point of symmetry.
+
+:::
 
