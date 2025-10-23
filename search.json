@@ -6,7 +6,7 @@
     "section": "",
     "text": "The binomial distribution is our model for the total number of successes in \\(n\\) independent binary trials, each with identical probability of success \\(p\\in[0,\\,1]\\).",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Binomial"
     ]
   },
@@ -17,7 +17,7 @@
     "section": "Basic properties",
     "text": "Basic properties\n\n\nNotation\n\\(X\\sim\\text{Binom}(n,\\,p)\\)\n\n\nRange\n\\(\\{0,\\,1,\\,2,\\,...,\\,n-1,\\,n\\}\\)\n\n\nParameter space\n\\(p\\in[0,\\,1]\\)\n\n\nPMF\n\\(P(X=k)=\\binom{n}{k}p^k(1-p)^{n-k}\\)\n\n\nExpectation\n\\(np\\)\n\n\nVariance\n\\(np(1-p)\\)",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Binomial"
     ]
   },
@@ -28,7 +28,7 @@
     "section": "\nR commands",
     "text": "R commands\nHere is the documentation for the suite of commands that let you work with the binomial distribution in R:\n\ndbinom(x, size, prob) # PMF: P(X = x)\npbinom(q, size, prob) # CDF: P(X &lt;= q)\nrbinom(n, size, prob) # random numbers",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Binomial"
     ]
   },
@@ -39,7 +39,7 @@
     "section": "Play around!",
     "text": "Play around!\nNotice that, for all values of \\(p\\in(0,\\,1)\\), the shape of the PMF becomes more like the bell curve as \\(n\\) grows:\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\nlibrary(shiny)\n\ndiscrete_pmf &lt;- function(x, p, xlim = c(min(x) - 1, max(x) + 1), label = \"\", add_mean = FALSE){\n  plot(x, p,\n       pch = 19,\n       cex = 1,\n       xlab = \"\",\n       ylab = \"\",\n       main = \"\",\n       ylim = c(0, 1.05 * max(p)),\n       yaxs = \"i\",\n       yaxt = \"n\",\n       xlim = xlim,\n       xaxt = \"n\",\n       bty = \"n\"\n  )\n  segments(x,\n           rep(0, length(x) + 1),\n           x1 = x,\n           y1 = p,\n           lwd = 3\n  )\n  axis(1, at = floor(xlim[1]):ceiling(xlim[2]), cex.axis = 1)\n  axis(2, at = seq(0, 1, length.out = 11), las = 1, cex.axis = 1.5)\n  legend(\"topright\", label, bty = \"n\", cex = 3)\n  if(add_mean == TRUE){\n    mtext(\"E(X)\", side = 1, at = sum(x * p), col = \"red\", line = 2)\n  }\n}\n\ndiscrete_cdf &lt;- function(x, p, xlim = c(min(x) - 1, max(x) + 1), label = \"\"){\n  closeddot = cumsum(p)\n  opencircle = c(0, closeddot[1:length(x)-1])\n  plot(x, closeddot, pch = 19, cex = 1,\n       ylim = c(0, 1),\n       ylab = \"\", main = \"\", xlab = \"\",\n       yaxt = \"n\",\n       xlim = xlim,\n       xaxt = \"n\",\n       #yaxs = \"i\", \n       bty = \"n\")\n  points(x, opencircle, cex = 1)\n  segments(c(xlim[1], x), c(0, closeddot), c(x, xlim[2]), c(0, closeddot), lwd = 1)\n  axis(1, at = floor(xlim[1]):ceiling(xlim[2]), cex.axis = 1)\n  axis(2, at = seq(0, 1, length.out = 11), las = 1, cex.axis = 1.5)\n  legend(\"bottomright\", label, bty = \"n\", cex = 3)\n}\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n  \n  # Application title\n  titlePanel(\"Binomial distribution CDF and PMF\"),\n  \n  # Sidebar with a slider input for number of bins \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"p\",\n                  \"Probability of success (p):\",\n                  min = 0,\n                  max = 1,\n                  value = 0.5,\n                  step = 0.01),\n      sliderInput(\"n\",\n                  \"Number of trials (n):\",\n                  min = 1,\n                  max = 100,\n                  value = 5,\n                  step = 1)\n    ),\n    \n    # Show a plot of the generated distribution\n    mainPanel(\n      plotOutput(\"distPlot\")\n    )\n  )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n  \n  output$distPlot &lt;- renderPlot({\n    \n    p &lt;- input$p\n    n &lt;- input$n\n\n    par(mfrow = c(2, 1), mar = c(4, 4, 2, 2))\n    \n    discrete_cdf(0:n, dbinom(0:n, n, p))\n    discrete_pmf(0:n, dbinom(0:n, n, p), add_mean = TRUE)\n    \n  })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Binomial"
     ]
   },
@@ -50,7 +50,7 @@
     "section": "",
     "text": "Imagine we have a finite population containing \\(m\\) “success” cases and \\(n\\) “failure” cases, for a total population size of \\(m+n\\). If we sample \\(k\\) cases from the population without replacement, then a hypergeometric random variable counts the number of sampled cases that are a success.\nYou first met this distribution on Problem Set 4 when studying contested elections.",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Hypergeometric"
     ]
   },
@@ -61,7 +61,7 @@
     "section": "Basic properties",
     "text": "Basic properties\n\n\nNotation\n\\(X\\sim\\text{HG}(m, n, k)\\)\n\n\nRange\n\\(\\{0,\\,1,\\,2,\\,3,\\,...,\\,k-1,\\,k\\}\\)\n\n\nPMF\n\\(P(X = x) = \\binom{m}{x} \\binom{n}{k-x}/\\binom{m+n}{k}\\)\n\n\nExpectation\n\\(km/(m+n)\\)",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Hypergeometric"
     ]
   },
@@ -72,60 +72,108 @@
     "section": "\nR commands",
     "text": "R commands\nHere is the documentation for the suite of commands that let you work with the hypergeometric distribution in R:\n\ndhyper(x, m, n, k)\nphyper(q, m, n, k)\nrhyper(ndraw, m, n, k)",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Hypergeometric"
     ]
   },
   {
-    "objectID": "distributions/continuous-gamma.html",
-    "href": "distributions/continuous-gamma.html",
-    "title": "Gamma distribution",
+    "objectID": "distributions/continuous-uniform.html",
+    "href": "distributions/continuous-uniform.html",
+    "title": "Continuous uniform distribution",
     "section": "",
-    "text": "Notation\n\\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\)\n\n\nRange\n\\([0,\\,\\infty)\\)\n\n\nParameter space\n\\(\\alpha,\\,\\beta&gt;0\\)\n\n\nPDF\n\\(f(x)=\\begin{cases}\\frac{\\beta^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\beta x} &x\\geq 0\\\\0 & x&lt;0.\\end{cases}\\)\n\n\nExpectation\n\\(\\alpha/\\beta\\)\n\n\nVariance\n\\(\\alpha/\\beta^2\\)",
+    "text": "If \\(X\\) is a continuous random quantity that is “equally likely” to take on any value in a bounded interval \\([a,\\, b]\\), then we can model it with the continuous uniform distribution.",
     "crumbs": [
-      "Distribution families",
-      "Gamma"
+      "Distribution Families",
+      "Continuous uniform"
     ]
   },
   {
-    "objectID": "distributions/continuous-gamma.html#basic-properties",
-    "href": "distributions/continuous-gamma.html#basic-properties",
-    "title": "Gamma distribution",
-    "section": "",
-    "text": "Notation\n\\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\)\n\n\nRange\n\\([0,\\,\\infty)\\)\n\n\nParameter space\n\\(\\alpha,\\,\\beta&gt;0\\)\n\n\nPDF\n\\(f(x)=\\begin{cases}\\frac{\\beta^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\beta x} &x\\geq 0\\\\0 & x&lt;0.\\end{cases}\\)\n\n\nExpectation\n\\(\\alpha/\\beta\\)\n\n\nVariance\n\\(\\alpha/\\beta^2\\)",
+    "objectID": "distributions/continuous-uniform.html#basic-properties",
+    "href": "distributions/continuous-uniform.html#basic-properties",
+    "title": "Continuous uniform distribution",
+    "section": "Basic properties",
+    "text": "Basic properties\n\n\n\n\n\n\n\nNotation\n\\(X\\sim\\text{Unif}(a,\\,b)\\)\n\n\nRange\n\\([a,\\,b]\\)\n\n\nParameter space\n\\(-\\infty &lt; a &lt; b &lt; \\infty\\)\n\n\nPDF\n\\(f(x)=\\begin{cases}\\frac{1}{b-a} & a\\leq x\\leq b\\\\0&\\text{else}\\end{cases}\\)\n\n\nCDF\n\\(F(x)=\\begin{cases}0 & x &lt; a\\\\\\frac{x-a}{b-a} & a\\leq x\\leq b\\\\1&b&lt;x\\end{cases}\\)\n\n\nExpectation\n\\(\\frac{a+b}{2}\\)\n\n\nVariance\n\\((b-a)^2/12\\)",
     "crumbs": [
-      "Distribution families",
-      "Gamma"
+      "Distribution Families",
+      "Continuous uniform"
     ]
   },
   {
-    "objectID": "distributions/continuous-gamma.html#r-commands",
-    "href": "distributions/continuous-gamma.html#r-commands",
-    "title": "Gamma distribution",
+    "objectID": "distributions/continuous-uniform.html#r-commands",
+    "href": "distributions/continuous-uniform.html#r-commands",
+    "title": "Continuous uniform distribution",
     "section": "\nR commands",
-    "text": "R commands\nHere is the documentation for the suite of commands that let you work with the gamma distribution in R:\n\ndgamma(x, shape, rate = 1) # PDF\npgamma(q, shape, rate = 1) # CDF: P(X &lt;= q)\nrgamma(n, shape, rate = 1) # random numbers",
+    "text": "R commands\nFor the second version of the distribution, R provides:\n\ndunif(x, min, max) # PDF\npunif(q, min, max) # CDF: P(X &lt;= q)\nrunif(n, min, max) # random numbers",
     "crumbs": [
-      "Distribution families",
-      "Gamma"
+      "Distribution Families",
+      "Continuous uniform"
     ]
   },
   {
-    "objectID": "distributions/continuous-gamma.html#play-around",
-    "href": "distributions/continuous-gamma.html#play-around",
-    "title": "Gamma distribution",
+    "objectID": "distributions/continuous-uniform.html#play-around",
+    "href": "distributions/continuous-uniform.html#play-around",
+    "title": "Continuous uniform distribution",
     "section": "Play around!",
-    "text": "Play around!\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 700\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  titlePanel(\"Gamma distribution CDF and PDF\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"alpha\", \"Shape (α):\",\n                  min = 0.5, max = 5, value = 2, step = 0.1),\n      sliderInput(\"beta\", \"Rate (β):\",\n                  min = 0.2, max = 2, value = 0.5, step = 0.05),\n      hr(),\n      verbatimTextOutput(\"moments\")\n    ),\n    \n    mainPanel(\n      plotOutput(\"gammaPlot\", height = \"600px\")\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$moments &lt;- renderText({\n    alpha &lt;- input$alpha\n    beta  &lt;- input$beta\n    mu &lt;- alpha / beta\n    sd &lt;- sqrt(alpha) / beta\n    paste0(\"E(X) = \", round(mu, 3),\n           \"\\nsd(X) = \", round(sd, 3))\n  })\n  \n  output$gammaPlot &lt;- renderPlot({\n    alpha &lt;- input$alpha\n    beta  &lt;- input$beta\n    \n    # Fixed plotting range\n    x_min &lt;- -2\n    x_max &lt;- 25\n    x &lt;- seq(x_min, x_max, length.out = 2000)\n    \n    # PDF and CDF\n    pdf_vals &lt;- ifelse(x &gt;= 0, dgamma(x, shape = alpha, rate = beta), 0)\n    cdf_vals &lt;- ifelse(x &gt;= 0, pgamma(x, shape = alpha, rate = beta), 0)\n    \n    mu &lt;- alpha / beta\n    \n    # Fixed y-limits\n    pdf_ylim &lt;- c(0, 0.8)\n    cdf_ylim &lt;- c(0, 1)\n    \n    par(mfrow = c(2, 1), mar = c(4, 4, 2, 1))\n    \n    # --- CDF ---\n    plot(x, cdf_vals, type = \"l\", lwd = 2, col = \"blue\",\n         xlim = c(x_min, x_max), ylim = cdf_ylim,\n         main = \"Cumulative Distribution Function (CDF)\",\n         xlab = \"\", ylab = \"F(x)\")\n    abline(h = c(0, 1), col = \"gray80\", lty = 2)\n    #abline(v = mu, col = \"gray60\", lty = 3)\n    \n    # --- PDF ---\n    plot(x, pdf_vals, type = \"l\", lwd = 2, col = \"darkred\",\n         xlim = c(x_min, x_max), ylim = pdf_ylim,\n         main = \"Probability Density Function (PDF)\",\n         xlab = \"x\", ylab = \"f(x)\")\n    #abline(v = mu, col = \"gray60\", lty = 3)\n    \n    # Label E(X) with mtext along x-axis\n    if (mu &gt;= x_min && mu &lt;= x_max) {\n      mtext(\"E(X)\",\n            side = 1, line = 2.2, at = mu, cex = 1.0)\n    }\n  })\n}\n\nshinyApp(ui = ui, server = server)",
+    "text": "Play around!\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 600\n#| fig-asp: 1\n\nlibrary(shiny)\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n  \n  # Application title\n  titlePanel(\"Uniform distribution CDF and PDF\"),\n  \n  # Sidebar with a slider input for number of bins \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"a\",\n                  \"Lower bound (a):\",\n                  min = 0,\n                  max = 2,\n                  value = 1,\n                  step = 0.1),\n      sliderInput(\"b\",\n                  \"Upper bound (b):\",\n                  min = 3,\n                  max = 5,\n                  value = 4,\n                  step = 0.1)\n    ),\n    \n    # Show a plot of the generated distribution\n    mainPanel(\n      plotOutput(\"distPlot\")\n    )\n  )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n  \n  output$distPlot &lt;- renderPlot({\n    \n    a &lt;- input$a\n    b &lt;- input$b\n\n    par(mfrow = c(2, 1), mar = c(4, 4, 2, 2))\n    \n    curve(punif(x, min = a, max = b), from = -1, to = 6, n = 1000,\n          ylab = \"\", col = \"red\", xlim = c(0, 5))\n    curve(0*x, from = -1, to = a, n = 1000, \n          ylim = c(0, 1), ylab = \"\", col = \"red\", xlim = c(0, 5))\n    curve(dunif(x, min = a, max = b), from = a, to = b, n = 1000, \n          ylim = c(0, 1), ylab = \"\", col = \"red\", add = TRUE)\n    curve(0*x, from = b, to = 6, n = 1000, \n          ylim = c(0, 1), ylab = \"\", col = \"red\", add = TRUE)\n  })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)",
     "crumbs": [
-      "Distribution families",
-      "Gamma"
+      "Distribution Families",
+      "Continuous uniform"
     ]
   },
   {
-    "objectID": "apps/disease-testing.html",
-    "href": "apps/disease-testing.html",
-    "title": "You tested positive. Now what?",
+    "objectID": "distributions/continuous-uniform.html#derivations",
+    "href": "distributions/continuous-uniform.html#derivations",
+    "title": "Continuous uniform distribution",
+    "section": "Derivations",
+    "text": "Derivations\n\n\n\n\n\n\nThe pdf integrates to 1\n\n\n\n\n\n\\[\n\\begin{aligned}\n    \\int_{-\\infty}^\\infty f_X(x)\\,\\text{d} x\n    &=\n    \\int_{-\\infty}^a f_X(x)\\,\\text{d} x\n    +\n    \\int_{a}^b f_X(x)\\,\\text{d} x\n    +\n    \\int_{b}^\\infty f_X(x)\\,\\text{d} x\n    \\\\\n    &=\n    {\\int_{-\\infty}^a 0\\,\\text{d} x}\n    +\n    \\int_{a}^b \\frac{1}{b-a}\\,\\text{d} x\n    +\n    {\\int_{b}^\\infty 0\\,\\text{d} x}\n    \\\\\n    &=\n    \\frac{1}{b-a}\\int_a^b1\\,\\text{d} x\n    \\\\\n    &=\n    \\frac{1}{b-a}\n    [x]_a^b\n    \\\\\n    &=\n    \\frac{1}{b-a}(b-a)\n    \\\\\n    &=\n    1\n    .\n\\end{aligned}\n\\]\n\n\n\n\n\n\n\n\n\nThe CDF\n\n\n\n\n\nThe cdf is \\(F_X(x)=P(X\\leq x)=\\int_{-\\infty}^x f_X(t)\\,\\text{d} t\\). If \\(x&lt; a\\), then\n\\[\nF_X(x)=\\int_{-\\infty}^xf_X(t)\\,\\text{d} t=\\int_{-\\infty}^x0\\,\\text{d} t=0.\n\\]\nIf \\(a\\leq x\\leq b\\), then\n\\[\n\\begin{aligned}\n    F_X(x)\n    &=\n    \\int_{-\\infty}^xf_X(t)\\,\\text{d} t\n    \\\\\n    &=\n    \\int_{-\\infty}^af_X(t)\\,\\text{d} t\n    +\n    \\int_{a}^xf_X(t)\\,\\text{d} t\n    \\\\\n    &=\n    {\\int_{-\\infty}^a0\\,\\text{d} t}\n    +\n    \\int_{a}^x\\frac{1}{b-a}\\,\\text{d} t\n    \\\\\n    &=\n    \\frac{1}{b-a}[t]_a^x\n    \\\\\n    &=\n    \\frac{x-a}{b-a}\n    .\n\\end{aligned}\n\\]\nIf \\(b &lt; x\\), then\n\\[\n\\begin{aligned}\n    F_X(x)\n    &=\n    \\int_{-\\infty}^xf_X(t)\\,\\text{d} t\n    \\\\\n    &=\n    \\int_{-\\infty}^af_X(t)\\,\\text{d} t\n    +\n    \\int_{a}^bf_X(t)\\,\\text{d} t\n    +\n    \\int_{b}^xf_X(t)\\,\\text{d} t\n    \\\\\n        &=\n    {\\int_{-\\infty}^a0\\,\\text{d} t}\n    +\n    \\int_{a}^b\\frac{1}{b-a}\\,\\text{d} t\n    +\n    {\\int_{b}^x0\\,\\text{d} t}\n    \\\\\n    &=1.\n\\end{aligned}\n\\]\nSo the cdf of \\(X\\sim\\text{Unif}(a,\\, b)\\) is\n\\[\n    F_X(x)\n    =\n    \\begin{cases}\n        0 & x&lt;a \\\\\n        \\frac{x-a}{b-a} & a\\leq x\\leq b \\\\\n        1 & b&lt;x.\n    \\end{cases}\n\\]\n\n\n\n\n\n\n\n\n\nThe mean\n\n\n\n\n\nThe expected value is the midpoint of the interval:\n\\[\n\\begin{align*}\n    E(X)\n    &=\n    \\int_{-\\infty}^\\infty\n    xf_X(x)\\,\\text{d} x\n    \\\\\n    &=\n    \\int_{-\\infty}^a\n    xf_X(x)\\,\\text{d} x\n    +\n    \\int_{a}^b\n    xf_X(x)\\,\\text{d} x\n    +\n    \\int_{b}^\\infty\n    xf_X(x)\\,\\text{d} x\n    \\\\\n        &=\n    {\\int_{-\\infty}^a\n    x\\cdot0\\,\\text{d} x}\n    +\n    \\int_{a}^b\n    x\\frac{1}{b-a}\\,\\text{d} x\n    +\n    {\\int_{b}^\\infty\n    x\\cdot0\\,\\text{d} x}\n    \\\\\n    &=\n    0+\\frac{1}{b-a}\\int_a^b x\\,\\text{d} x+0\n    \\\\\n    &=\n    \\frac{1}{b-a}\\left[\\frac{1}{2}x^2\\right]_a^b\n    \\\\\n    &=\n    \\frac{1}{b-a}\\left[\\frac{1}{2}b^2-\\frac{1}{2}a^2\\right]\n    \\\\\n        &=\n    \\frac{1}{2(b-a)}\\left[b^2-a^2\\right]\n    \\\\\n        &=\n    \\frac{1}{2{(b-a)}}{(b-a)}(b+a)\n    \\\\\n    &=\\frac{b+a}{2}.\n\\end{align*}\n\\]\nThat’s the proper derivation, but without the math, we could have reasoned our way to this answer by noting that the range is bounded, so the mean is guaranteed to exist, and the distribution is symmetric, so the mean matches the point of symmetry.",
+    "crumbs": [
+      "Distribution Families",
+      "Continuous uniform"
+    ]
+  },
+  {
+    "objectID": "distributions/continuous-normal.html",
+    "href": "distributions/continuous-normal.html",
+    "title": "Normal distribution",
     "section": "",
-    "text": "Testing positive for a disease is not exactly good news, but how alarmed you should be ultimately depends on a few factors: the accuracy of the test and the overall rarity of the disease (the so-called base rate). Before you walk into the doctor’s office, the probability that you are sick is \\(P(D=+)\\), the prevalence. This is the unconditional (or marginal) probability that a random member of the population (ie you in that moment) is sick. After you test positive, the revised or conditional probability that you have the disease is given by Bayes’ theorem:\n\\[\n\\begin{aligned}\nP(D = +\\,|\\,T=+)\n&=\n\\frac{{\\color{blue}{P(T=+\\,|\\,D=+)}}{\\color{red}{P(D=+)}}}{P(T=+)}\n\\\\\n&=\n\\frac{{\\color{blue}{P(T=+\\,|\\,D=+)}}{\\color{red}{P(D=+)}}}{{\\color{blue}{P(T=+\\,|\\,D=+)}}{\\color{red}{P(D=+)}}+[1-{\\color{green}{P(T=-\\,|\\,D=-)}}][1-{\\color{red}{P(D=+)}}]}\n\\\\\n&=\n\\frac{{\\color{blue}{\\text{TPR}}}\\times{\\color{red}{\\text{PREV}}}}{{\\color{blue}{\\text{TPR}}}\\times{\\color{red}{\\text{PREV}}}+(1-{\\color{green}{\\text{TNR}}})(1-{\\color{red}{\\text{PREV}}})}.\n\\end{aligned}\n\\]\n\\(P(T=+\\,|\\,D=+)\\) is the true positive rate or sensitivity: the probability that a sick person is correctly diagnosed. \\(P(T=-\\,|\\,D=-)\\) is the true negative rate or specificity: the probability that a well person is correctly diagnosed. It is the nonlinear interaction of three numbers (prevalence, TPR, and TNR) that determines the revised likelihood that you have the disease. Two numbers interacting linearly is about all a regular human can handle off the dome, hence people are generally bad at reasoning about this stuff.\nThe application below visualizes the sample space for our simple model of disease testing. We have \\(D\\in\\{-,,\\,+\\}\\) and \\(T\\in\\{-,\\,+\\}\\), and so there are four individual outcomes:\n\n\\(P(T = +\\cap D=+)=P(T=+\\,|\\,D=+)P(D=+)=\\text{TPR}\\times P(D=+)\\);\n\\(P(T = +\\cap D=-)=P(T=+\\,|\\,D=-)P(D=-)=\\text{FPR}\\times P(D=-)\\);\n\\(P(T = -\\cap D=-)=P(T=-\\,|\\,D=-)P(D=-)=\\text{TNR}\\times P(D=-)\\);\n\\(P(T = -\\cap D=+)=P(T=-\\,|\\,D=+)P(D=+)=\\text{FNR}\\times P(D=+)\\).\n\nThe application plots the \\([0,\\,1]\\times[0,\\,1]\\) unit square, partitioned into four rectangles representing the outcomes listed above. The area of each rectangle is equal to the probability of that outcome.\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 650\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  \n  # Application title\n  titlePanel(\"The sample space of a simple diagnostic test\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"TPR\",\n                  \"Sensitivity (TPR):\",\n                  min = 0,\n                  max = 1,\n                  value = 0.5),\n      sliderInput(\"TNR\",\n                  \"Specificity (TNR):\",\n                  min = 0,\n                  max = 1,\n                  value = 0.5),\n      sliderInput(\"p\",\n                  \"Prevalence:\",\n                  min = 0,\n                  max = 1,\n                  value = 0.5)\n    ),\n    \n    mainPanel(\n      plotOutput(\"distPlot\"),\n      \n      # ---- Legend goes here ----\n      tags$div(\n        style = \"margin-top:20px;\",\n        tags$h4(\"Legend\"),\n        tags$div(style=\"display:flex; align-items:center; margin-bottom:5px;\",\n                 tags$div(style=\"width:20px; height:20px; background-color:rgba(255,0,0,0.25); margin-right:10px;\"),\n                 \"True Positive (T=+, D=+)\"\n        ),\n        tags$div(style=\"display:flex; align-items:center; margin-bottom:5px;\",\n                 tags$div(style=\"width:20px; height:20px; background-color:rgba(0,255,0,0.25); margin-right:10px;\"),\n                 \"False Negative (T=-, D=+)\"\n        ),\n        tags$div(style=\"display:flex; align-items:center; margin-bottom:5px;\",\n                 tags$div(style=\"width:20px; height:20px; background-color:rgba(0,0,255,0.25); margin-right:10px;\"),\n                 \"True Negative (T=-, D=-)\"\n        ),\n        tags$div(style=\"display:flex; align-items:center; margin-bottom:5px;\",\n                 tags$div(style=\"width:20px; height:20px; background-color:rgba(255,165,0,0.25); margin-right:10px;\"),\n                 \"False Positive (T=+, D=-)\"\n        )\n      )\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  \n  output$distPlot &lt;- renderPlot({\n    \n    p &lt;- input$p\n    TNR &lt;-input$TNR\n    TPR &lt;- input$TPR\n    \n    FNR &lt;- 1 - TPR\n    FPR &lt;- 1 - TNR\n    \n    par(mar = c(8, 8, 1, 8))\n    \n    plot(0, col = \"white\", xlim = c(0, 1), ylim = c(0, 1),\n         xaxt = \"n\", yaxt = \"n\", bty = \"n\", xlab = \"\", ylab = \"\")\n    \n    polygon(c(0, p, p, 0), c(FNR, FNR, 1.0, 1.0), col = rgb(1, 0, 0, alpha = 0.25), border = NA)\n    polygon(c(0, p, p, 0), c(0, 0, FNR, FNR), col = rgb(0, 1, 0, alpha = 0.25), border = NA)\n    polygon(c(p, 1, 1, p), c(0, 0, TNR, TNR), col = rgb(0, 0, 1, alpha = 0.25), border = NA)\n    polygon(c(p, 1, 1, p), c(TNR, TNR, 1, 1), col = rgb(1, 0.647, 0, alpha = 0.25), border = NA)\n    \n    mtext(\"TNR\", side = 4, at = TNR / 2, las = 1)\n    mtext(\"FPR\", side = 4, at = (1 + TNR) / 2, las = 1)\n    \n    mtext(\"TPR\", side = 2, at = (1 + FNR) / 2, las = 1, line = 2)\n    mtext(\"FNR\", side = 2, at = FNR / 2, las = 1, line = 2)\n    \n    mtext(\"p(D = +)\", side = 1, at = p / 2, las = 1, line = 2)\n    mtext(\"p(D = -)\", side = 1, at = (1 + p) / 2, las = 1, line = 2)\n    \n    mtext(c(\"0\", \"1\"), side = 1, at = c(0, 1), las = 1)\n    mtext(c(\"0\", \"1\"), side = 2, at = c(0, 1), las = 1)\n  })\n}\n\nshinyApp(ui = ui, server = server)\n\n\nThe application below displays how testing positive shifts the probability of disease from \\(P(D=+)\\) to \\(P(D = +\\,|\\,T=+)\\). The size of the revision ultimately depends on how big \\(P(D=+)\\) was to begin with, and how good the test is (TPR and TNR). Play around with different values and see what happens:\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\nlibrary(shiny)\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n\n    # Application title\n    titlePanel(\"What can a diagnostic test teach you?\"),\n\n    # Sidebar with a slider input for number of bins \n    sidebarLayout(\n        sidebarPanel(\n            sliderInput(\"TPR\",\n                        \"Sensitivity (TPR):\",\n                        min = 0,\n                        max = 1,\n                        value = 0.5),\n            sliderInput(\"TNR\",\n                        \"Specificity (TNR):\",\n                        min = 0,\n                        max = 1,\n                        value = 0.5)\n        ),\n\n        # Show a plot of the generated distribution\n        mainPanel(\n           plotOutput(\"distPlot\")\n        )\n    )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n\n    output$distPlot &lt;- renderPlot({\n      TPR &lt;- input$TPR\n      TNR &lt;- input$TNR\n      P &lt;- seq(0, 1, length.out = 1000)\n      B &lt;- TPR * P / (TPR * P + (1 - TNR) * (1 - P))\n\n      # draw the histogram with the specified number of bins\n      par(mar = c(5, 5, 5, 0.5))\n      plot(P, B, type = \"l\", xlim = c(0, 1), ylim = c(0, 1),\n           xlab = \"P(D = +)\", ylab = \"P(D = + | T = +)\",\n           lwd = 2, cex.lab = 2,\n           panel.first = abline(a = 0, b = 1, lty = 2, lwd = 2, col = \"grey\"))\n    })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)"
+    "text": "I usually have a little blurb up here describing when you might use the distribution, but the normal distribution is so central to probability and statistics that words fail. It shows up everywhere.",
+    "crumbs": [
+      "Distribution Families",
+      "Normal"
+    ]
+  },
+  {
+    "objectID": "distributions/continuous-normal.html#basic-properties",
+    "href": "distributions/continuous-normal.html#basic-properties",
+    "title": "Normal distribution",
+    "section": "Basic properties",
+    "text": "Basic properties\n\n\n\n\n\n\n\nNotation\n\\(X\\sim\\text{N}(\\mu,\\,\\sigma^2)\\)\n\n\nRange\n\\(\\mathbb{R}=(-\\infty,\\,\\infty)\\)\n\n\nParameter space\n\\(\\begin{matrix}-\\infty&lt;\\mu&lt;\\infty\\\\\\sigma^2&gt;0\\end{matrix}\\)\n\n\nPDF\n\\(f(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\\)\n\n\nExpectation\n\\(\\mu\\)\n\n\nVariance\n\\(\\sigma^2\\)",
+    "crumbs": [
+      "Distribution Families",
+      "Normal"
+    ]
+  },
+  {
+    "objectID": "distributions/continuous-normal.html#r-commands",
+    "href": "distributions/continuous-normal.html#r-commands",
+    "title": "Normal distribution",
+    "section": "\nR commands",
+    "text": "R commands\nHere is the documentation for the suite of commands that let you work with the normal distribution in R:\n\ndnorm(x, mean = 0, sd = 1) # PDF\npnorm(q, mean = 0, sd = 1) # CDF: P(X &lt;= q)\nrnorm(n, mean = 0, sd = 1) # random numbers\n\n\n\n\n\n\n\nThe commands take the standard deviation, not the variance!\n\n\n\nYou will get burned by this at least once. I guarantee it. But please take note. If you want to compute \\(P(X\\leq -2.4)\\) for \\(X\\sim\\text{N}(4, 9)\\), you call pnorm(-2.4, 4, 3), because \\(\\text{sd}(X)=\\sqrt{\\text{var}(X)}=3\\).",
+    "crumbs": [
+      "Distribution Families",
+      "Normal"
+    ]
+  },
+  {
+    "objectID": "distributions/continuous-normal.html#play-around",
+    "href": "distributions/continuous-normal.html#play-around",
+    "title": "Normal distribution",
+    "section": "Play around!",
+    "text": "Play around!\nAs we have seen, the parameters \\(\\mu\\) and \\(\\sigma\\) have multiple interpretations. From a probabilistic point-of-view, they are the mean \\(\\mu=E(X)\\) and the standard deviation \\(\\sigma=\\sqrt{\\text{var}(X)}\\). From a purely geometric point-of-view, they control the shape of the density curve. \\(\\mu\\) is the location of the peak, and \\(\\sigma\\) controls how far the inflection points are from \\(\\mu\\). You worked that out on Problem Set 0.\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 700\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  titlePanel(\"Normal distribution CDF and PDF\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"mu\", \"Mean (μ):\", \n                  min = -5, max = 5, value = 0, step = 0.1),\n      sliderInput(\"sigma\", \"Standard Deviation (σ):\", \n                  min = 0.5, max = 3, value = 1, step = 0.1)\n    ),\n    \n    mainPanel(\n      plotOutput(\"distPlot\", height = \"600px\")\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$distPlot &lt;- renderPlot({\n    mu &lt;- input$mu\n    sigma &lt;- input$sigma\n    \n    # Fixed x range\n    x &lt;- seq(-10, 10, length.out = 1000)\n    \n    # Compute values\n    pdf_vals &lt;- dnorm(x, mean = mu, sd = sigma)\n    cdf_vals &lt;- pnorm(x, mean = mu, sd = sigma)\n    \n    # Inflection points at mu ± sigma\n    inflect_left &lt;- mu - sigma\n    inflect_right &lt;- mu + sigma\n    \n    # Fixed y limits\n    pdf_ylim &lt;- c(0, 0.8)\n    \n    par(mfrow = c(2, 1), mar = c(4, 4, 2, 1))\n    \n    # --- CDF Plot ---\n    plot(x, cdf_vals, type = \"l\", lwd = 2, col = \"blue\",\n         xlim = c(-10, 10), ylim = c(0, 1),\n         main = \"Cumulative Distribution Function (CDF)\",\n         xlab = \"\", ylab = \"F(x)\")\n    abline(h = c(0, 1), col = \"gray80\", lty = 2)\n    abline(v = mu, col = \"gray60\", lty = 3)\n    \n    # --- PDF Plot ---\n    plot(x, pdf_vals, type = \"l\", lwd = 2, col = \"darkred\",\n         xlim = c(-10, 10), ylim = pdf_ylim,\n         main = \"Probability Density Function (PDF)\",\n         xlab = \"x\", ylab = \"f(x)\")\n    \n    # Vertical lines at mean and inflection points\n    abline(v = mu, col = \"gray60\", lty = 3)\n    abline(v = c(inflect_left, inflect_right), col = \"gray70\", lty = 2)\n    \n    # Arrows showing sigma distance\n    y_arrow &lt;- 0.05\n    arrows(mu, y_arrow, inflect_right, y_arrow, code = 3, angle = 10, length = 0.1)\n    arrows(mu, y_arrow, inflect_left, y_arrow, code = 3, angle = 10, length = 0.1)\n    \n    # Label σ between mean and inflection points\n    text(mu + sigma / 2, y_arrow + 0.03, expression(sigma), cex = 1.1)\n    text(mu - sigma / 2, y_arrow + 0.03, expression(sigma), cex = 1.1)\n    \n    # Label μ in the margin below the x-axis\n    mtext(expression(mu), side = 1, line = 2.2, at = mu, cex = 1.2)\n  })\n}\n\nshinyApp(ui = ui, server = server)",
+    "crumbs": [
+      "Distribution Families",
+      "Normal"
+    ]
   },
   {
     "objectID": "explainers/vectorization.html",
@@ -134,7 +182,7 @@
     "section": "",
     "text": "Functions in R are often vectorized. For example:\n\nexp(2)\n\n[1] 7.389056\n\n\nI give it one number, and it returns one number. If instead, I supply a vector, I get this:\n\nexp(c(-3, 0.001, 2, 5, 600, 1, 0))\n\n[1]  4.978707e-02  1.001001e+00  7.389056e+00  1.484132e+02 3.773020e+260\n[6]  2.718282e+00  1.000000e+00\n\n\nSo when I supply a regular ol’ number as an argument, the exp function returns a number. When I supply a vector, it returns a vector; the exp function knows to act entry-wise and give me back a vector with the output of each entry-wise computation. In other words, I didn’t have to write a loop to manually do this. The function is vectorized, so it effectively runs the loop for me.\nSo consider for instance the set of numbers \\(A = \\{-100, -6, 0.001, \\pi, 30\\}\\), and this stupid function:\n\\[\nf(x) = \\ln^2\\left|\\frac{2x}{1-\\sin(x)}\\right|.\n\\]\nIf I wanted to compute the value of \\(f\\) for each of the arguments in \\(A\\), I could write a loop that goes entry-by-entry through \\(A\\) and applies the function \\(f\\) to it. But in R, because arithmetic operations are vectorized, I can do this:\n\nA = c(-100, -6, 0.001, pi, 30)\n\nlog( abs( (2 * A) / ( 1 - sin(A) ) ) ) ^ 2 \n\n[1] 36.051349  7.910714 38.608919  3.377792 11.609009\n\n\nDumb!\nAll of the basic arithmetic operations are vectorized like this:\n\nc(1, 2, 3) + 2\n\n[1] 3 4 5\n\n\n\nc(1, 2, 3) + c(1, 2, 3)\n\n[1] 2 4 6\n\n\n\nfloor(c(4, 5.1, 6.9))\n\n[1] 4 5 6",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Vectorization"
     ]
   },
@@ -145,7 +193,7 @@
     "section": "",
     "text": "If you have a vector of numbers in R, there are many basic commands you can use to compute summary statistics. To illustrate, here is a vector of random numbers:\n\nset.seed(20)\nx &lt;- rnorm(100)\n\nOf course, these commands are useful no matter where the numbers came from:\n\nsum(x) # the total of the numbers\n\n[1] 0.4908104\n\nmean(x) # the average of the numbers\n\n[1] 0.004908104\n\nvar(x) # the variance\n\n[1] 0.9799034\n\nsd(x) # the standard deviation\n\n[1] 0.9899007\n\nmedian(x) # the median\n\n[1] -0.02486056\n\nmax(x) # the biggest number\n\n[1] 2.208443\n\nmin(x) # the smallest number\n\n[1] -2.889718",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Summary statistics"
     ]
   },
@@ -156,7 +204,7 @@
     "section": "",
     "text": "Statistical computing software like R can generate (pseudo)random numbers, like this:\n\nsample(c(1, 2, 3, 4, 5, 6), 5, replace = TRUE)\n\n[1] 1 4 1 2 5\n\n\nOr this:\n\nrbinom(5, 50, 0.3)\n\n[1] 20 16 16 10 12\n\n\nOr this:\n\nrnorm(5)\n\n[1] -0.928567035 -0.294720447 -0.005767173  2.404653389  0.763593461\n\n\nLook pretty random to me. This allows us to perform simulations, which is an important part of the modern statistician’s toolkit. Having said that, when you’re working with computer-generated random numbers, you want your work to be reproducible so that other people can check it. This means that you want to set a random number seed before you do a simulation. This ensures that the stream of random numbers in your simulation is the same every time, and someone else could run your code and get the exact same results that you did.\nSetting a seed looks like this:\n\nset.seed(8675309)\n\nrnorm(5)\n\n[1] -0.9965824  0.7218241 -0.6172088  2.0293916  1.0654161\n\n\nEvery time you run that code, you will get the same numbers:\n\nset.seed(8675309)\n\nrnorm(5)\n\n[1] -0.9965824  0.7218241 -0.6172088  2.0293916  1.0654161\n\n\nSo, if you ever write a code chunk that generates random numbers (eg. using the sample function or one of the r- functions), you should begin the code chunk by setting a random number seed so that you get the same results every time you run your stuff. The syntax as you saw above is set.seed(INTEGER). Sometimes we will tell you what number to use. Other times (and once you exit the course), you can put whatever you want. It doesn’t really matter. If you require inspiration, try these:\n\n1\n20\n988\n24601\n362436\n525600\n8675309\n8005882300",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Setting a seed"
     ]
   },
@@ -167,7 +215,7 @@
     "section": "",
     "text": "LaTeX is a software system for typesetting documents with a bunch of math in them1. It is fully integrated into Quarto, so you can do all of your writing and coding and plotting and math-ing in one place. Pretty neat. We’ll just show you a few things to get you going, but if you want to use the entire system for realz, you should make an Overleaf account and start playing.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Typing math"
     ]
   },
@@ -178,7 +226,7 @@
     "section": "Inline math goes between single dollar signs",
     "text": "Inline math goes between single dollar signs\n\n\n\n\n\n\n\nGoal\ninclude an equation in the middle of a sentence\n\n\nWhat you type in the .qmd file\nThe function $h(x)=\\ln x^2$ is my favorite\n\n\nHow it will look when you render\nThe function \\(h(x)=\\ln x^2\\) is my favorite.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Typing math"
     ]
   },
@@ -189,7 +237,7 @@
     "section": "A math block goes between double dollar signs",
     "text": "A math block goes between double dollar signs\nSay you want a whole bunch of math set off on a new line, in between your paragraphs, like this:\n\\[\nf(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n\\]\nIn that case, you put this into your source .qmd file:\n\n$$\nf(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n$$\n\nWhen you render, you’ll get the pretty math. Notice some of the commands we used:\n\n\n\\exp for \\(\\exp\\);\n\n\\sqrt{2} for the square root \\(\\sqrt{2}\\);\n\n\\frac{1}{2} to get a fraction \\(\\frac{1}{2}\\);\n\n(x-\\mu)^2 to get an exponent \\((x-\\mu)^2\\);\n\n\\mu, \\sigma, \\pi for the Greek letters \\(\\mu\\), \\(\\sigma\\), and \\(\\pi\\);\nand so on.\n\n\n\n\n\n\n\nMath commands in LaTeX\n\n\n\nHere is a bank of common LaTeX commands. You won’t use most of them. Alternatively, Detexify is a very useful site where you can draw a symbol and it will tell you what the LaTeX command is for it.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Typing math"
     ]
   },
@@ -200,7 +248,7 @@
     "section": "Lining equations up",
     "text": "Lining equations up\nIf you are typesetting a sequence of equalities, you should do it inside an aligned environment so that the equal signs are all lined up nice.\nIf you type this:\n\n$$\n\\begin{aligned}\nx(x+1)(x-1) &= (x^2+x)(x-1)\\\\\n&=x^3-x^2+x^2-x\\\\\n&=x^3-x.\n\\end{aligned}\n$$\n\nYou will get this:\n\\[\n\\begin{aligned}\nx(x+1)(x-1) &= (x^2+x)(x-1)\\\\\n&=x^3-x^2+x^2-x\\\\\n&=x^3-x.\n\\end{aligned}\n\\]\nThe \\\\ introduces a line break, and the & in each equation tells it where to line things up.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Typing math"
     ]
   },
@@ -211,7 +259,7 @@
     "section": "Footnotes",
     "text": "Footnotes\n\nThere is no consensus on how to pronounce “LaTeX.” JZ says “lah-tech.” Some folks say “lay-tech.” Some even say “lay-techs,” just like a latex glove. But we all agree that the emphasis is on the first syllable. Perhaps I’ll award 2.56 bonus points if you invent a new way to pronounce it. But probably not.↩︎",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Typing math"
     ]
   },
@@ -222,7 +270,7 @@
     "section": "",
     "text": "Sometimes we want our code to make a decision: do one thing if a condition is true, and something else if it’s false. In R, the tool for this is if ... else. The pattern looks like this:\n\nif (condition) {\n  do_something\n} else {\n  do_something_else\n}\n\nSuppose we roll a six-sided die:\n\nroll &lt;- sample(1:6, size = 1)\nroll\n\n[1] 2\n\n\nWe might want to check whether the outcome is “big” (4, 5, or 6) or “small” (1, 2, or 3). Here’s how we can use if else to do that:\n\nif (roll &gt;= 4) {\n  result &lt;- \"Big\"\n} else {\n  result &lt;- \"Small\"\n}\n\nresult\n\n[1] \"Small\"\n\n\nLet’s unpack:\n\nFirst, sample(1:6, size = 1) chooses a random number from 1 to 6;\nThen the if else checks: if the roll is 4 or higher, we call it “Big.” Otherwise, we call it “Small.”\n\nThis is how you can make simple decisions in R code.\nLogical conditions\nIn the condition of if, you can use logical comparisons. Here are the most common ones:\n\n\n\n\n\n\n\nOperator\nMeaning\nExample\n\n\n\n==\nequal to\n\nx == 3 is TRUE if x is 3\n\n\n!=\nnot equal to\n\nx != 3 is TRUE if x is not 3\n\n\n&lt;\nless than\n\nx &lt; 5 is TRUE if x is less than 5\n\n\n&lt;=\nless than or equal\nx &lt;= 5\n\n\n&gt;\ngreater than\nx &gt; 10\n\n\n&gt;=\ngreater than or equal\nx &gt;= 10\n\n\n&\nAND (both conditions true)\nx &gt; 0 & x &lt; 5\n\n\n|\nOR (at least one true)\nx &lt; 0 | x &gt; 10\n\n\n!\nNOT (negates a condition)\n!(x == 3)\n\n\n%in%\nelement of a vector\n\nx %in% c(1,2,3) is TRUE if x is 1, 2, or 3\n\n\n\nHere they are in action:\n\nx &lt;- 4\nx &gt; 3       \n\n[1] TRUE\n\nx &lt; 3       \n\n[1] FALSE\n\nx &gt;= 3 & x &lt;= 5   \n\n[1] TRUE\n\nx &lt; 3 | x &gt; 5     \n\n[1] FALSE\n\n!(x == 4)   \n\n[1] FALSE\n\n\nHere is how these might be deployed in the context of if-else:\n\nif (x &gt; 0 & x %% 2 == 0) {\n  result &lt;- \"Positive even\"\n} else {\n  result &lt;- \"Other\"\n}\nresult\n\n[1] \"Positive even\"",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "if-else and logic"
     ]
   },
@@ -233,7 +281,7 @@
     "section": "",
     "text": "Quarto is a technical publishing system that allows you to write documents where text, math, code, and the output of that code are seamlessly integrated in a reproducible way. Quarto is baller. I had never used it before coming to Duke, and now I am low-key obsessed. You will mainly use Quarto for the lab write-ups in this class, but if you wish to use it for your problem set solutions as well, be my guest!\nBelow is a very brief primer to get you started. If you took STA 101 or STA 199, you have already used Quarto extensively and can probably skip this. If you wish to go deeper and become a Quarto power user, what are you waiting for?",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Quarto"
     ]
   },
@@ -244,7 +292,7 @@
     "section": "Quick start",
     "text": "Quick start\nHere is a screenshot of my RStudio container:\n\n\n\n\n\nIn the upper left, I have the editor open, and I’m working on a .qmd file. This is just a text file with a special format. When I’m done editing, I hit the Render button (circled in red), and if there are no errors, a nice .pdf file is produced in the Viewer tab in the bottom right.\nThat’s pretty much the whole ballgame:\n\nEdit the .qmd file → hit Render → get a .pdf\n\nAlright, so what goes in the .qmd file?\n\nAt the top, in between ---, you have the document’s metadata: title, author, date, and so forth. We are not going to get fancy with it, but there are loads of settings you can play with;\nYou can write text the same as you would in Google Docs or Microsoft Word. Quarto syntax is based on markdown, and you can learn about the formatting options here;\nThe grey block beginning with ```{r} and ending with ``` is called a code chunk. Chunks of code go in there. In the rendered document, the code will be nicely formatted and stylized amidst the text;\nWhen you render, the code in your code chunks is actually executed, and the output is included in the final document. This is super convenient for producing tables and figures;\nYou can also include nicely formatted equations and math notation in your Quarto documents. See here for details.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Quarto"
     ]
   },
@@ -255,7 +303,7 @@
     "section": "",
     "text": "A for loop is a way to repeat the same steps several times. It’s useful when we want to do something over and over again, like simulate a random experiment.\nThe pattern looks like this:\nfor (i in 1:N) {\n  do_something\n}",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "for loops"
     ]
   },
@@ -266,7 +314,7 @@
     "section": "Example: Counting sixes in 100 dice rolls",
     "text": "Example: Counting sixes in 100 dice rolls\n\nsix_count &lt;- 0  # start a counter\n\nfor (i in 1:100) {\n  roll &lt;- sample(1:6, size = 1)\n  if (roll == 6) {\n    six_count &lt;- six_count + 1\n  }\n}\n\nsix_count\n\n[1] 16\n\n\n\nThe loop goes through i = 1, 2, ..., 100.\n\nEach time, it rolls a die and checks if it’s a six.\n\nIf it is, it increments six_count by 1.\n\nAt the end, six_count is the total number of sixes rolled in 100 trials.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "for loops"
     ]
   },
@@ -277,7 +325,7 @@
     "section": "Example: plotting many lines",
     "text": "Example: plotting many lines\nIn this explainer, we saw how to use the curve function to plot lines. If you want a plot with many lines, you can just call the curve function many times with the add = TRUE argument to layer things. In that explainer, we just hard-coded the multiple calls to curve. A for loop can clean that up:\n\ncurve(1*x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"\")\n\nfor(a in 2:25){\n  curve(a*x^2, from = -5, to = 5, n = 500, ylab = \"\", add = TRUE)\n}\n\n\n\n\n\n\n\nThat code plots the function \\(ax^2\\) every value of \\(a=1,\\,2,\\,3,\\,...,\\,25\\). Instead of writing 25 calls to the curve function, I consolidate with a loop.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "for loops"
     ]
   },
@@ -893,7 +941,7 @@
     "section": "",
     "text": "Let \\(a\\), \\(b\\), \\(c\\), and \\(d\\) be arbitrary real numbers, and let \\(n\\) be a positive integer:\n\\[\n\\begin{aligned}\na^0&=1\\\\\na^1&=a\\\\\na^ca^d&=a^{c+d}\\\\\n\\frac{a^c}{a^d}&=a^{c - d}\\\\\na^{-c}&=\\frac{1}{a^c}\\\\\n(a^c)^d&=a^{cd}\\\\\n(ab)^c&=a^cb^c\\\\\n\\left(\\frac{a}{b}\\right)^c&=\\frac{a^c}{b^c}\\\\\na^{1/n}&=\\sqrt[n]{a}.\n\\end{aligned}\n\\]\nA particularly important function for us is the exponential function \\(e^x\\), where \\(e\\approx 2.71828\\) is Euler’s number. Because it is defined as an exponent, the exponential function obeys all the rules above: \\(e^xe^y=e^{x+y}\\), \\(e^0=1\\), etc.\nHere’s the graph of the function:\n\nCodepar(mar = c(4, 4, 4, 0.5))\ncurve(exp(x), \n      from = -3, \n      to = 3, \n      n = 500, \n      col = \"red\", \n      lwd = 2,\n      yaxt = \"n\", \n      yaxs = \"i\",\n      bty = \"n\",\n      ylab = expression(e^x),\n      main = \"Graph of the exponential function\",\n      ylim = c(0, 20))\naxis(2, pos = 0)\n\n\n\n\n\n\n\nA few things to notice:\n\nthe exponential is strictly increasing (never plateaus or goes down);\nit increases very quickly;\nit is defined for all real numbers \\(x\\);\nit is strictly positive: \\(e^x&gt;0\\) for all \\(x\\in\\mathbb{R}\\).\n\n\n\n\n\n\n\nAlternative notation\n\n\n\nSometimes we will write \\(\\exp(x)\\) instead of \\(e^x\\), but they mean the same thing. We do this to make complicated expressions like this a little easier to read: \\[\ne^{-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}}=\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n\\]",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Exponents and logarithms"
     ]
   },
@@ -904,7 +952,7 @@
     "section": "",
     "text": "Let \\(a\\), \\(b\\), \\(c\\), and \\(d\\) be arbitrary real numbers, and let \\(n\\) be a positive integer:\n\\[\n\\begin{aligned}\na^0&=1\\\\\na^1&=a\\\\\na^ca^d&=a^{c+d}\\\\\n\\frac{a^c}{a^d}&=a^{c - d}\\\\\na^{-c}&=\\frac{1}{a^c}\\\\\n(a^c)^d&=a^{cd}\\\\\n(ab)^c&=a^cb^c\\\\\n\\left(\\frac{a}{b}\\right)^c&=\\frac{a^c}{b^c}\\\\\na^{1/n}&=\\sqrt[n]{a}.\n\\end{aligned}\n\\]\nA particularly important function for us is the exponential function \\(e^x\\), where \\(e\\approx 2.71828\\) is Euler’s number. Because it is defined as an exponent, the exponential function obeys all the rules above: \\(e^xe^y=e^{x+y}\\), \\(e^0=1\\), etc.\nHere’s the graph of the function:\n\nCodepar(mar = c(4, 4, 4, 0.5))\ncurve(exp(x), \n      from = -3, \n      to = 3, \n      n = 500, \n      col = \"red\", \n      lwd = 2,\n      yaxt = \"n\", \n      yaxs = \"i\",\n      bty = \"n\",\n      ylab = expression(e^x),\n      main = \"Graph of the exponential function\",\n      ylim = c(0, 20))\naxis(2, pos = 0)\n\n\n\n\n\n\n\nA few things to notice:\n\nthe exponential is strictly increasing (never plateaus or goes down);\nit increases very quickly;\nit is defined for all real numbers \\(x\\);\nit is strictly positive: \\(e^x&gt;0\\) for all \\(x\\in\\mathbb{R}\\).\n\n\n\n\n\n\n\nAlternative notation\n\n\n\nSometimes we will write \\(\\exp(x)\\) instead of \\(e^x\\), but they mean the same thing. We do this to make complicated expressions like this a little easier to read: \\[\ne^{-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}}=\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right).\n\\]",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Exponents and logarithms"
     ]
   },
@@ -915,7 +963,7 @@
     "section": "Logarithm rules",
     "text": "Logarithm rules\nThe natural logarithm function \\(\\ln(x)\\) is the inverse of the exponential function \\(e^x\\). So when we write \\(\\ln(4)\\), we’re asking “\\(e\\) raised to what power is equal to 4?” Turns out it’s \\(\\ln(4)\\approx 1.386\\), so \\(e^{1.386}\\approx 4\\).\nHere’s the graph of the function:\n\nCodepar(mar = c(4, 4, 1, 0.5))\ncurve(log(x), \n      from = 0, \n      to = 8, \n      n = 500, \n      col = \"red\", \n      lwd = 2,\n      xaxt = \"n\", \n      xaxs = \"i\",\n      bty = \"n\",\n      ylab = \"ln(x)\",\n      main = \"Graph of the natural logarithm\")\naxis(1, pos = 0)\n\n\n\n\n\n\n\nA few things to notice:\n\nthe natural log is strictly increasing (never plateaus or goes down);\nit increases veeery slowly;\nit is only defined for strictly positive numbers;\nit returns both positive and negative values;\nthere is a vertical asymptote at \\(x=0\\).\n\nSo, word to the wise: if you find yourself plugging negative numbers into the natural log, you’ve probably made a mistake someplace.\nAnyhow, the natural logarithm has several properties you need to know. Let \\(x\\) and \\(y\\) be arbitrary positive numbers, and let \\(c\\) be any real number (could be negative):\n\\[\n\\begin{aligned}\n\\ln(xy)&=\\ln(x)+\\ln(y)\\\\\n\\ln\\left(\\frac{x}{y}\\right)&=\\ln(x)-\\ln(y)\\\\\n\\ln(x^c)&=c\\ln(x)\\\\\n\\ln(1/x)&=-\\ln(x)\\\\\n\\ln(e^x)&=x\\\\\n\\ln(e)&=1\\\\\n\\ln(1)&=0.\n\\end{aligned}\n\\]",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Exponents and logarithms"
     ]
   },
@@ -926,7 +974,7 @@
     "section": "",
     "text": "The derivative of a function \\(f(x)\\) is its instantaneous rate of change. On a graph, this corresponds to the slope of the tangent line. We will denote derivatives by \\(f'(x)\\) or \\(\\text{d}f/\\text{d}x\\) or something like that.\nWhen it exists, which it doesn’t always, the derivative is defined as the limit of difference quotients:\n\\[\nf'(x)=\\lim_{\\Delta x\\to0}\\frac{f(x+\\Delta x)-f(x)}{\\Delta x}.\n\\]\nSo, “rise over run” as the “run” bit gets arbitrarily small.\nAs such, the derivative is the continuous analog to a discrete difference.",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Differentiation"
     ]
   },
@@ -937,7 +985,7 @@
     "section": "Derivative rules",
     "text": "Derivative rules\n\n\n\n\n\n\n\nrule\nfunction\nderivative\n\n\n\nconstant\n\\(h(x)=c\\)\n\\(h'(x)=0\\)\n\n\nscaling\n\\(h(x)=c\\cdot f(x)\\)\n\\(h'(x)=c\\cdot f'(x)\\)\n\n\nsum/difference\n\\(h(x)=f(x)\\pm g(x)\\)\n\\(h'(x)=f'(x)\\pm g'(x)\\)\n\n\nlinearity\n\\(h(x)=a\\cdot f(x)\\pm b\\cdot g(x)\\)\n\\(h'(x)=a\\cdot f'(x)\\pm b\\cdot g'(x)\\)\n\n\npower\n\\(h(x)=x^n\\)\n\\(h'(x)=nx^{n-1}\\)\n\n\nproduct\n\\(h(x)=f(x)g(x)\\)\n\\(h'(x)=f'(x)g(x)+f(x)g'(x)\\)\n\n\nquotient\n\\(h(x)=f(x)/g(x)\\)\n\\(h'(x)=\\frac{f'(x)g(x)+f(x)g'(x)}{g(x)^2}\\)\n\n\nchain\n\\(h(x)=f(g(x))\\)\n\\(h'(x)=f'(g(x))g'(x)\\)\n\n\nexponential\n\\(h(x)=e^x\\)\n\\(h'(x)=e^x\\)\n\n\nnatural log\n\\(h(x)=\\ln(x)\\)\n\\(h'(x)=1/x\\)",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Differentiation"
     ]
   },
@@ -948,7 +996,7 @@
     "section": "Curvature",
     "text": "Curvature\nIf you take the derivative of \\(f\\), you get the first derivative \\(f'\\). If you take the derivative of the derivative, you get the second derivative \\(f''\\). The derivative of the derivative of the derivative is the third derivative \\(f'''\\), and on and on. But let’s focus on the first two. The derivatives contain information about the shape of the original function:\n\nthe first derivative tells you if the function is increasing or decreasing;\n\nif \\(f'(x)&gt;0\\), then \\(f\\) is increasing at \\(x\\);\nif \\(f'(x)&lt;0\\), then \\(f\\) is decreasing at \\(x\\);\nif \\(f'(x)=0\\), then \\(f\\) is not changing at \\(x\\);\n\n\nif the second derivative tells you about the curvature (aka concavity) of the function:\n\nif \\(f''(x)&gt;0\\), then \\(f\\) is concave up (\\(\\cup\\), smiling) at \\(x\\);\nif \\(f''(x)&lt;0\\), then \\(f\\) is concave down (\\(\\cap\\), frowning) at \\(x\\).\n\n\n\nHere is an illustration with the function \\(f(x)=x^3-x\\) and its derivatives \\(f'(x)=3x^2-1\\) and \\(f''(x)=6x\\) (power rule!):\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\nWhen the first derivative changes sign (at \\(x^\\star=\\pm1/\\sqrt{3}\\)), that corresponds to the original function switching from increasing to decreasing, or vice versa. When the second derivative changes sign (at \\(x_0=0\\)), that corresponds to the original function switching from concave down (frowning) to concave up (smiling). A point like \\(x=0\\) in this example where the concavity changes is called an inflection point. If \\(x_0\\) is an inflection point, then that means it’s also a root of the second derivative: \\(f''(x_0)=0\\). In order for the second derivative to change sign, it has to cross the \\(x\\)-axis.\nHowever, just because the second derivative is zero doesn’t mean there was inflection. Consider \\(f(x)=x^4\\) and its derivatives \\(f'(x)=4x^3\\) and \\(f''(x)=12x^2\\):\n\n\n\n\n\n\n\nFigure 2\n\n\n\n\nIn this case, we see that while the second derivative has a root at zero, it doesn’t actually cross the \\(x\\)-axis. It’s just swooping down and giving it a gentle lil’ smooch from above. Correspondingly, we see that the original function never changes concavity. Therefore, we say that \\(f''=0\\) is a necessary but not sufficient condition for the original \\(f\\) to change concavity. To verify, you must actually check that the second derivative has different sign before and after the root. Bummer!",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Differentiation"
     ]
   },
@@ -959,7 +1007,7 @@
     "section": "Optimization",
     "text": "Optimization\nDifferentiation is useful when we seek to optimize a function. That is, find where it has local maxima or minima. For purposes of illustration, I’ll focus on maxima. Formally, given an objective function \\(f\\), we seek to find the \\(x\\)-values at which \\(f\\) has a maximum:\n\\[\n\\underset{x\\in\\mathbb{R}}{\\arg\\max}\\,f(x).\n\\]\nNotice that I did not write \\(\\max f(x)\\). In this class, it turns out that we will seldom care about the actual largest value that the function obtains. Instead, we care only for where that value occurs. So we are interested in the maximizer; the location of the maximum; the \\(x\\)-value that does the maximizing. Hence, argmax and not max. Here’s an illustration:\n\n\n\n\n\n\n\n\nInspecting this picture, we notice that the maximum corresponds to a point where the derivative (slope of the tangent line) is zero. In order for the function to “top out,” it must at some point have switched from being increasing (positive derivative) to decreasing (negative derivative). When we ask where the maximum occurs, that’s the same as asking where the first derivative switched sign (ie crossed the \\(x\\)-axis). So to optimize \\(f\\), perhaps we can compute its first derivative, set it equal to 0, and solve.\n\\[\n\\begin{aligned}\nf'(x)\n=\n-2x+6&=0\n\\quad\n\\implies\n\\quad\nx^\\star=3.\n\\end{aligned}\n\\]\nA point like \\(x^\\star\\) in this example is called a critical point. A critical point may be the location of a maximum, but you have to check. If you recall the example in Figure 1, there are two critical points \\(x^\\star = \\pm 1/\\sqrt{3}\\), but they correspond to different things: one is a minimum and one is a maximum. In order to classify the critical points as maximizers or minimizers, you perform the second derivative test:\n\nif \\(f'(x^\\star)=0\\) and \\(f''(x^\\star)&lt;0\\), then \\(x^\\star\\) is a maximizer;\nif \\(f'(x^\\star)=0\\) and \\(f''(x^\\star)&gt;0\\), then \\(x^\\star\\) is a minimizer;\nif \\(f'(x^\\star)=0\\) and \\(f''(x^\\star)=0\\), then the test is inconclusive.",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Differentiation"
     ]
   },
@@ -970,9 +1018,16 @@
     "section": "",
     "text": "For better or worse, Greek letters will be flying in this class, so you should have a working knowledge of the most common ones used in mathematics:\n\n\n\n\nGreek Letter\nEnglish Name\n\n\n\n\n\\(A, \\alpha\\)\nalpha\n\n\n\\(B, \\beta\\)\nbeta\n\n\n\\(\\Gamma, \\gamma\\)\ngamma\n\n\n\\(\\Delta, \\delta\\)\ndelta\n\n\n\\(E, \\epsilon\\)\nepsilon\n\n\n\\(Z, \\zeta\\)\nzeta\n\n\n\\(H, \\eta\\)\neta\n\n\n\\(\\Theta, \\theta\\)\ntheta\n\n\n\\(I, \\iota\\)\niota\n\n\n\\(K, \\kappa\\)\nkappa\n\n\n\\(\\Lambda, \\lambda\\)\nlambda\n\n\n\\(M, \\mu\\)\nmu (“mew”)\n\n\n\\(N, \\nu\\)\nnu\n\n\n\\(\\Xi, \\xi\\)\nxi\n\n\n\\(O, o\\)\nomicron\n\n\n\\(\\Pi, \\pi\\)\npi\n\n\n\\(P, \\rho\\)\nrho (“row”)\n\n\n\\(\\Sigma, \\sigma\\)\nsigma\n\n\n\\(T, \\tau\\)\ntau\n\n\n\\(Y, \\upsilon\\)\nupsilon\n\n\n\\(\\Phi, \\phi\\)\nphi\n\n\n\\(X, \\chi\\)\nchi (“kai”)\n\n\n\\(\\Psi, \\psi\\)\npsi\n\n\n\\(\\Omega, \\omega\\)\nomega",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Greek alphabet"
     ]
+  },
+  {
+    "objectID": "math/massage-and-squint.html",
+    "href": "math/massage-and-squint.html",
+    "title": "“Massage and squint”",
+    "section": "",
+    "text": "In this class, we have to simplify many sums, infinite series, and integrals (eg when computing expected values). Sometimes, we have to do this using the formal techniques we learned in Calc II, but other times, we can get the job done by just doing a bunch of creative rewriting. Here’s the main idea:\n\nThen, you can\n\nLet’s unpack that:\n\nmassaging: u-substitution if it’s an integral, re-indexing if it’s a sum, multiply by a cleverly written 1, add a cleverly written 0, complete the square, etc;\nfamiliar object: geometric series, Taylor series of a friendly function (probably \\(e^x\\)), gamma function, kernel of special density like the Gaussian, etc.\n\n\n\n\n\n\n\nPay attention!\n\n\n\nIf you are going to be a stats major/minor, I know for an absolute fact that you will be doing this stuff early and often in STA 332 and STA 402.\n\n\n\nKernel tricks\n\n\nExamples\n\nPSET 0 mea of poisson\npoisson mgf\nnormal mgf\ngamma mgf\npset 5 …"
   },
   {
     "objectID": "qa/exam-1-q-and-a.html",
@@ -1817,6 +1872,259 @@
     "text": "A five-card hand is randomly dealt to you from a well-shuffled deck of 52 standard playing cards. What is the probability that your hand contains exactly two suits?"
   },
   {
+    "objectID": "labs/lab-7.html",
+    "href": "labs/lab-7.html",
+    "title": "Lab 7",
+    "section": "",
+    "text": "Let \\(X\\) be a random variable, let \\(g\\) be a transformation, and consider the new random variable \\(Y=g(X)\\). If all we cared about was the mean of \\(Y\\), then LOTUS provides a nice shortcut for computing \\(E(Y)=E[g(X)]\\) directly. But often, we want to know the entire distribution of the new random variable \\(Y\\), not just the mean. In this lab, we will learn how to calculate it.\n\nTask 1\nConsider \\(X\\sim \\text{Gamma}(1,\\,1)\\). This is the same as saying \\(X\\sim\\text{Exponential}(1)\\), which we saw in lecture on Monday.\n\nWhat are the range and pdf of \\(Y=\\ln X\\)?\nSimulate n = 5000 draws of \\(Y\\). Plot a histogram, and add a line plot of the density you derived in part b. They should match!\n\n\n\nTask 2\nConsider \\(X\\sim\\text{Unif}(-\\pi/2,\\,\\pi/2)\\).\n\nWhat are the range and pdf of \\(Y=\\tan X\\)?\nSimulate n = 5000 draws of \\(Y\\). Plot a histogram, and add a line plot of the density you derived in part b. Can you get them to match?\n\n\n\nTask 3\nConsider \\(X\\sim \\text{N}(0,\\,1)\\).\n\nWhat are the range and pdf of \\(Y=e^X\\)?\nSimulate n = 5000 draws of \\(Y\\). Plot a histogram, and add a line plot of the density you derived in part b. They should match!\n\n\n\nInterlude\nGiven \\(X\\sim f_X\\), we want the density of \\(Y=g(X)\\). In the three examples, you followed the same basic steps:\n\nwrite the generic cdf of \\(Y\\): \\(F_Y(y)=P(Y\\leq y)=P(g(X)\\leq y)\\);\nrewrite the event inside until \\(X\\) is by itself (you probably have to undo or invert \\(g\\) to do this);\nsince \\(X\\) is by itself, rewrite the probability using the cdf of \\(X\\);\ndifferentiate (you probably have to use the chain rule to do this).\n\nThe basic template can be neatly summarized with the so-called change-of-variables formula, which tells you how to compute the density of \\(Y\\) using the density of \\(X\\) and the transformation \\(g\\):\n\\[\nf_Y(y)=f_X\\left(g^{-1}(y)\\right)\n    \\left|\\frac{\\text{d}}{\\text{d} y}g^{-1}(y)\\right|,\\quad y\\in\\text{Range}(Y).\n\\]\n\n\n\n\n\n\nProof\n\n\n\n\n\nAssume…\n\n\\(X\\) is absolutely continuous with pdf \\(f_X\\);\n\\(g\\) is defined for all \\(x\\in\\text{Range}(X)\\);\n\\(g\\) is differentiable and either strictly increasing or strictly decreasing (hence, invertible).\n\nThere are two cases:\n\n\nStrictly increasing\nIf \\(g\\) is strictly increasing, then \\(g^{-1}\\) is strictly increasing also. This means that \\(\\frac{\\text{d}}{\\text{d} y}g^{-1}(y)\\) must be positive for all \\(y\\)! It also means that \\(g^{-1}\\) is order-preserving. If \\(a\\leq b\\), then \\(g^{-1}(a)\\leq g^{-1}(b)\\).\nFix arbitrary \\(y\\in\\text{Range}(Y)\\). Then:\n\\[\n\\begin{aligned}\n    F_Y(y)\n    &=\n    P(Y\\leq y)\n    \\\\\n    &=\n    P\\left(g(X)\\leq y\\right)\n    \\\\\n    &=\n    P\\left(X\\leq g^{-1}(y)\\right)\n    \\\\\n    &=\n    F_X\\left(g^{-1}(y)\\right)\n    .\n\\end{aligned}\n\\]\nTaking a derivative and applying the chain rule gives\n\\[\n\\begin{aligned}\n    f_Y(y)\n    &=\n    \\frac{\\text{d}}{\\text{d} y}F_X\\left(g^{-1}(y)\\right)\n    \\\\\n    &=\n    f_X\\left(g^{-1}(y)\\right)\\underbrace{\\frac{\\text{d}}{\\text{d} y}g^{-1}(y)}_{\\text{positive!}}\n    \\\\\n    &=\n    f_X\\left(g^{-1}(y)\\right)\n    \\left|\\frac{\\text{d}}{\\text{d} y}g^{-1}(y)\\right|.\n\\end{aligned}\n\\]\n\nStrictly decreasing\nIf \\(g\\) is strictly decreasing, then \\(g^{-1}\\) is strictly decreasing also. This means that \\(\\frac{\\text{d}}{\\text{d} y}g^{-1}(y)\\) must be negative for all \\(y\\)! It also means that \\(g^{-1}\\) is order-reversing. If \\(a\\leq b\\), then \\(g^{-1}(a)\\geq g^{-1}(b)\\).\nFix arbitrary \\(y\\in\\text{Range}(Y)\\). Then:\n\\[\n\\begin{aligned}\n    F_Y(y)\n    &=\n    P(Y\\leq y)\n    \\\\\n    &=\n    P\\left(g(X)\\leq y\\right)\n    \\\\\n    &=\n    P\\left(X&gt; g^{-1}(y)\\right)\n    \\\\\n    &=\n    1-P\\left(X\\leq g^{-1}(y)\\right)\n    \\\\\n    &=\n    1-F_X\\left(g^{-1}(y)\\right)\n    .\n\\end{aligned}\n\\] Taking a derivative and applying the chain rule gives\n\\[\n\\begin{align*}\n    f_Y(y)\n    &=\n    \\frac{\\text{d}}{\\text{d} y}[1-F_X\\left(g^{-1}(y)\\right)]\n    \\\\\n    &=\n    {\\color{red}-}f_X\\left(g^{-1}(y)\\right)\\underbrace{\\frac{\\text{d}}{\\text{d} y}g^{-1}(y)}_{\\text{negative!}}\n    \\\\\n    &=\n    f_X\\left(g^{-1}(y)\\right)\n    \\left|\\frac{\\text{d}}{\\text{d} y}g^{-1}(y)\\right|.\n\\end{align*}\n\\]\n\n\nEither way, we got to the same place.\n\n\n\n\n\nTask 4\nLet \\(X\\) be an absolutely continuous random variable with pdf \\(f_X\\), let and \\(a,\\,b\\in\\mathbb{R}\\) be constants, and consider the new random variable \\(Y=aX+b\\).\n\nWhat is \\(E(Y)\\)?\nWhat is \\(\\text{var}(Y)\\)?\nUse the change-of-variables formula to find the density of \\(Y\\)?\nIn the special case where \\(X\\sim\\text{N}(0,\\,1)\\), what are \\(E(Y)\\), \\(\\text{var}(Y)\\), and the density of \\(Y\\)? There’s no need to re-derive anything here. Just plug what you know about N(0, 1) into the formulas from parts a, b, and c.",
+    "crumbs": [
+      "Labs",
+      "Lab 7"
+    ]
+  },
+  {
+    "objectID": "labs/lab-4.html",
+    "href": "labs/lab-4.html",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "",
+    "text": "If you’ve ever asked ChatGPT a question, you may have noticed something; it generates its response one word at a time right before your eyes:\nWhat exactly is it doing? Well, ask it! If you do, the explanation will go something like this…\nChatGPT is an example of a large language model (LLM). Under the hood, there’s this fancy pants deep neural network machine learning mumbo jumbo that has been trained on a massive corpus of documents (books, newspaper articles, academic publications, reddit, all of Wikipedia, etc). When you ask it a question like “What color is the apple?”, the model asks itself “conditional on the text you just gave me, what is the likely next word?” Based on the text it was trained on and the underlying ML model, ChatGPT constructs a conditional probability distribution over the set of “next words” and simulates from it, like with the sample function. The new word that it simulates gets added to the end of the text you provided, and it repeats the process over again: given where we are now, what is the next word likely to be? And on and on…\nSo say you ask it “What color is the apple?” Based on that, the model constructs a probability distribution for \\(P(\\text{next word}\\,|\\,\\texttt{\"What color is the apple?\"})\\). The sample space \\(S\\) here is (basically) the set of all words that the model has seen. That set could be pretty big, but nevertheless it is finite, so we just need to list out all of the possible words together with their individual probabilities:\nOnce this is constructed, the model simulates from the distribution. You could imagine that the code might look something like sample(words, size = 1, prob = conditional_probs). So say that happens and the next word we simulate is “the.” That gets added to the end, and now we want to know \\(P(\\text{next word}\\,|\\,\\texttt{\"What color is the apple? the\"})\\). So we query the underlying model, and it constructs a new distribution on words, conditional on this revised context:\nNotice that the information we are conditioning on has changed, so the probabilities change. Based on the new probabilities, we simulate the next word. Let’s say it ends up being “apple.” So we add that to the end, and ask the model to construct a new distribution for \\(P(\\text{next word}\\,|\\,\\texttt{\"What color is the apple? the apple\"})\\):\nNow we simulate “is,” add that to the end, and query the model for \\(P(\\text{next word}\\,|\\,\\texttt{\"What color is the apple? the apple is\"})\\):\nWe see at this point that “red” is the most likely next word, but we are not searching the table for the most likely next word and slavishly returning it. We are simulating. So there’s a 35% chance we’ll come up with “red,” but also a non-trivial possibility that we’ll come up with “green.” You will notice that if you ask ChatGPT the exact same question multiple times (literally the identical text prompt), it returns different answers. That is because of this element of randomness.\nObviously, the elephant in the room in the above discussion is “where did the probabilities come from?” This is the magic, such as it is, of LLMs. In order to implement this scheme, we need to be able to construct a conditional probability distribution on words given any context. So no matter if you give it “What color is the apple” or “Explain string theory like I’m a genius” or “Why did my wife leave me” or “que se passe t’il,” it needs to come up with a meaningful and useful distribution for the next word, and it has to repeat this thousands if not millions of times. There are so many possibilities that it’s kind of bonkers to expect to be able to do this, but with enough data and computing power and a big enough model, apparently we can pull it off, at least some of the time.\nSo, the question of “where did the probabilities come from?” is sadly beyond the scope of our course. However, the question of “what do you do with the probabilities once you have them?” is perfectly accessible to us, even at this early stage, so let’s have some fun.",
+    "crumbs": [
+      "Labs",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "labs/lab-4.html#task-1",
+    "href": "labs/lab-4.html#task-1",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 1",
+    "text": "Task 1\nWe have provided you with a pre-trained language model kn, a vector midsummer_words containing the 3,063 unique words in the play, and a function next_word_probs:\n\ncond_dist &lt;- next_word_probs(context, midsummer_words, kn)\ntail(cond_dist)\n\n         words         prob\n3058  unearned 3.375323e-05\n3059    'scape 3.375323e-05\n3060 serpent's 3.375323e-05\n3061    amends 6.751470e-05\n3062      liar 3.375323e-05\n3063   restore 3.375323e-05\n\n\nSo, given the context, the set of possible words, and the model, it returns a table (a data frame) listing out all the words together with their conditional probabilities given the context.\nRun this function and use the output together with the sample function to simulate a new word.",
+    "crumbs": [
+      "Labs",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "labs/lab-4.html#task-2",
+    "href": "labs/lab-4.html#task-2",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 2",
+    "text": "Task 2\nUse the paste function to append the word you simulated in Task 1 to the end of context. Then, starting from this updated context, go back to the beginning, generate a new conditional distribution, and use it to simulate a new word.",
+    "crumbs": [
+      "Labs",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "labs/lab-4.html#task-3",
+    "href": "labs/lab-4.html#task-3",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 3",
+    "text": "Task 3\nWrite a for loop that iterates the process in Tasks 1 and 2 in order to add six new words to the context.\n\n\n\n\n\n\nThis might be a tad slow.\n\n\n\nThe function next_word_probs is doing a lot of work under the hood, so in the upcoming tasks, do not be alarmed if it takes a few seconds to run.",
+    "crumbs": [
+      "Labs",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "labs/lab-4.html#task-4",
+    "href": "labs/lab-4.html#task-4",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 4",
+    "text": "Task 4\nRerun your code five times to generate five different responses. How many of them would you consider approximately coherent?",
+    "crumbs": [
+      "Labs",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "labs/lab-4.html#task-5",
+    "href": "labs/lab-4.html#task-5",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 5",
+    "text": "Task 5\nNow that you have the basic code, play around with different starting contexts besides “now fair hippolyta.” Bear in mind that our world is small here. We’ve trained the model on a single, old text, so if you want coherent responses, you should probably give it something in the ballpark of what it has seen before. I doubt “which banger slaps hardest my dude” will yield anything meaningful (though feel free to try!). For inspiration, here is the full text of the original play.",
+    "crumbs": [
+      "Labs",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "labs/lab-4.html#task-6",
+    "href": "labs/lab-4.html#task-6",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 6",
+    "text": "Task 6\nUp to now we’ve been worrying a lot about individual words, but individual words don’t create meaning. It’s how those words interact across phrases and sentences and paragraphs. Unfortunately, we do not have methods for inducing a probability distribution over the set of all possible sentences, or the set of all possible thoughts. But in a sense, language models are attempting to approximate such a thing. And on the evidence to date, maybe they succeed sometimes. Anyway, how do we go from a method that gets things right on the word level to a method that gets things right on the sentence level? Well, therein lies the art of the engineers that work on these things, and one method they have found helpful is called temperature sampling.\nSo far, given the current context, the model returns a (conditional) probability \\(p(i)\\) for each word \\(i\\in \\text{corpus}\\). So far we’ve used these probabilities unmodified. With temperature sampling, before we draw the next word, we first adjust the probabilities based on a user-defined tuning parameter \\(t&gt;0\\) called the temperature:\n\\[\np_t(i) = \\frac{p(i)^{1/t}}{\\sum\\limits_{j\\in\\text{corpus}}p(j)^{1/t}},\\quad i\\in\\text{corpus}.\n\\]\nIf \\(t=1\\), we’re back to the original probabilities: \\(p_1(i)=p(i)\\). Otherwise, to quote the \\(k\\)-grams people, “higher and lower temperatures make the original probability distribution smoother and rougher, respectively. By making a physical analogy, we can think of less probable words as states with higher energies, and the effect of higher (lower) temperatures is to make more (less) likely to excite these high energy states.” Why do people do this? To the best of my knowledge, it is no deeper than “it seems to work well.” In practice, adjusting the temperature seems to have a macro effect on the overall character of the sentences.\nThe function next_word_probs that we gave you has a fourth argument temp where you can give it a number and it will give you the tempered probabilities. Play around with big and small values, and report any effect that it has on the overall quality of the sentences.\n\n\n\n\n\n\nThink about it\n\n\n\nAs you increase the temperature and \\(t\\to\\infty\\), what does that do to the probabilities?",
+    "crumbs": [
+      "Labs",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "labs/lab-4.html#task-7-optional",
+    "href": "labs/lab-4.html#task-7-optional",
+    "title": "Lab 4 - How does ChatGPT generate the next word?",
+    "section": "Task 7 (optional)",
+    "text": "Task 7 (optional)\nCode temperature sampling yourself. Take the probabilities that probs &lt;- next_word_probs(...) gives you when temp = 1.0, and then use basic R commands to apply the formula above and compute a vector temp_probs with the revised numbers for temp = 0.5. Check that your numbers agree with the ones that our function next_word_probs gives when you supply 0.5 as the fourth argument.",
+    "crumbs": [
+      "Labs",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html",
+    "href": "labs/lab-3.html",
+    "title": "Lab 3",
+    "section": "",
+    "text": "Note\n\n\n\nThis assignment was adapted from:\n\nMeng, Xiao-Li (2023): “Double your variance, dirtify your Bayes, devour your pufferfish, and draw your kidstrogram,” The New England Journal of Statistics in Data Science, vol 1 no 1.\nCar Talk (1977 - 2012) was a popular show on NPR. It featured a segment called the “Puzzler,” where the hosts would read a brain teaser and invite listeners to send in solutions for the chance to win a prize. Here is the text of one such Puzzler (original audio at around 19:19 here):\nIn what follows, you may find some notation useful. Let \\(D\\) denote your true disease status, and \\(T\\) denote the result of your test. Then\n\\[\n\\begin{align*}\n    p &= P(D=+) && \\text{(prevalence)}\n    \\\\\n    f_{-}&=P(T=-\\,|\\, D=+) && \\text{(false negative rate)}\n    \\\\\n    f_{+}&=P(T=+\\,|\\, D=-) && \\text{(false positive rate)}\n    \\\\\n    1-f_{-}&=P(T=+\\,|\\, D = +) && \\text{(sensitivity)}\n    \\\\\n    1-f_{+}&=P(T=-\\,|\\, D = -) && \\text{(specificity)}.\n\\end{align*}\n\\]",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#task-1",
+    "href": "labs/lab-3.html#task-1",
+    "title": "Lab 3",
+    "section": "Task 1",
+    "text": "Task 1\nBefore you read anything else below, try to solve the puzzler yourself. What do you come up with?\n\n\n\n\n\n\nSolution\n\n\n\n\n\nObviously you will struggle to come up with anything, and a lot depends on how you interpret “It’s 95% accurate….5% of the people who take the test will test positive but they don’t really have the disease.” My solution below interprets this as the false positive rate. The puzzler says nothing about the false negative rate, and so you can’t actually answer the question because you do not have enough information.",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#task-2",
+    "href": "labs/lab-3.html#task-2",
+    "title": "Lab 3",
+    "section": "Task 2",
+    "text": "Task 2\nExplain the correct way to solve this problem. Exactly what probability are we asked to compute, and what formula should we apply to do it? Does the prompt actually provide enough information to ultimately get the job done?\n\n\n\n\n\n\nSolution\n\n\n\n\n\nThe Puzzler asks us to compute \\(P(D=+\\,|\\, T=+)\\), which in principle we can do with Bayes’ theorem:\n\\[\n\\begin{aligned}\n    P(D=+\\,|\\, T=+)\n    &=\n    \\frac{P(T=+\\,|\\, D=+)P(D=+)}{P(T=+)}\n    \\\\\n    &=\n    \\frac{P(T=+\\,|\\, D=+)P(D=+)}{P(T=+\\,|\\, D=+)P(D=+)+P(T=+\\,|\\, D=-)P(D=-)}\n    \\\\\n    &=\n    \\frac{(1-f_-)p}{(1-f_-)p+f_+(1-p)}\n    .\n\\end{aligned}\n\\]\nUnfortunately, the show doesn’t tell us \\(f_-\\), so you cannot actually compute the answer.",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#task-3",
+    "href": "labs/lab-3.html#task-3",
+    "title": "Lab 3",
+    "section": "Task 3",
+    "text": "Task 3\nBeneath the fold is the solution that the hosts ultimately revealed.\n\n\n\n\n\n\nThe show’s solution\n\n\n\n\n\nOriginal audio at around 20:30 here:\n\nLet’s say 1000 people take the test. Fifty people will test positive and yet they will not have it. One will test positive and have it. So your chances of actually having it, even though you tested positive, are one in 51, or a little less than 2%.\n\n\n\n\nSo, what do you think? Did they get it right? Explain how the show interpreted the information given in the Puzzler, and explain what arithmetic formula they implicitly applied in order to compute their answer.\n\n\n\n\n\n\nSolution\n\n\n\n\n\nWhen they say “0.1% of the people actually contract the disease,” this refers to the prevalence, and when they say “5% of the people who take the test will test positive but they don’t really have the disease,” this refers to the false positive rate. So \\(p=0.001\\), and \\(f_+=0.05\\). Based only on these, they somehow came up with:\n\\[\n\\frac{p}{p+f_+}=\\frac{0.001}{.001 + 0.05} = \\frac{1}{51}\\approx 0.0196.\n\\]",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#task-4",
+    "href": "labs/lab-3.html#task-4",
+    "title": "Lab 3",
+    "section": "Task 4",
+    "text": "Task 4\nExplain two things:\n\nUnder what conditions is the formula that the show used actually an upper bound on the correct answer?\nEven though their number is not exactly correct, why might an upper bound on the true probability still be a useful thing to calculate?\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\nBy factoring \\(1-f_-\\) out of the numerator and denominator, we can rewrite the correct formula as\n\\[\nP(D=+\\,|\\, T = +)=\\frac{(1-f_-)p}{(1-f_-)p+f_+(1-p)}=\\frac{p}{p+f_+\\left(\\frac{1-p}{1-f_-}\\right)}.\n\\]\nIf \\(p\\leq f_-\\), then \\(1-f_-\\leq 1-p\\), which implies\n\\[\np+f_+\\leq p+f_+\\left(\\frac{1-p}{1-f_-}\\right).\n\\]\nAs a consequence, we see that\n\\[\nP(D=+\\,|\\, T = +)\n=\n\\frac{p}{p+f_+\\left(\\frac{1-p}{1-f_-}\\right)}\n\\leq \\frac{p}{p+f_+},\n\\quad \\text{when }p\\leq f_-\n.\n\\]\nSo the formula that the show applied is an upper bound for the true probability.\nTwo types of errors are possible in a situation like this: treating a disease that is not there, or failing to treat a disease that is there. On balance, the second error is probably the worse of the two, so I would rather overestimate the probability that I have the disease than underestimate it.",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-3.html#task-5",
+    "href": "labs/lab-3.html#task-5",
+    "title": "Lab 3",
+    "section": "Task 5",
+    "text": "Task 5\nSo, the show’s answer, while wrong, could still be potentially useful upper bound on the true probability. Neat! But how wrong is it, even? To get a sense of this, use R to create some line plots with the prevalence \\(p\\in[0,\\, 1]\\) on the horizontal axis and the true and approximate probabilities for different values of \\(f_-\\) and \\(f_+\\) on the vertical axis. Mix-and-match \\(f_-,\\, f_+\\in\\{0.1,\\, 0.2\\}\\), and comment on the difference between the two curves.\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\nCodeFPR = c(0.1, 0.2)\nFNR = c(0.1, 0.2)\npar(mfrow = c(2, 2))\nfor (i in 1:2){\n  for (j in 1:2){\n    f_plus = FPR[i]\n    f_minus = FNR[j]\n    curve(x / (x + f_plus),\n          col = \"blue\",\n          xlab = \"p\", \n          ylab = \"\", \n          xlim = c(0, 1),\n          ylim = c(0, 1),\n          main = paste(\"FNR = \", f_minus, \"; FPR = \", f_plus))\n    curve(x / (x + f_plus * ((1 - x) / (1 - f_minus))),\n          col = \"red\", add = TRUE)\n    legend(\"bottomright\",\n           c(\"True Probability\", \"Car Talk Answer\"),\n           col = c(\"red\", \"blue\"),\n           bty = \"n\",\n           lty = c(1, 1)\n           )\n  }\n}\n\n\n\n\n\n\n\nWhen the prevalence is low (ie rare disease) the Car Talk curve is a very close upper bound on the true probability. For higher prevalence, the Car Talk curve is no longer an upper bound, and the curves get farther apart.",
+    "crumbs": [
+      "Labs",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html",
+    "href": "labs/lab-2.html",
+    "title": "Lab 2",
+    "section": "",
+    "text": "Last week, you used the sample function to simulate random phenomena that had a finite sample space with equally-likely outcomes: coin flips, die rolls, playing cards. Using a loop, you repeated an experiment many many times, calculated the proportion of the time some event happened, and used that proportion as an approximation of the probability1. In class this week, we learned counting techniques for actually doing the math to compute these probabilities exactly.\nIn this lab, you will do both of these things, the math and the simulation, and verify that they agree. The examples today are small potatoes, but these generic skills are important. Being able to whip up computer simulations of random systems is one of the main skills that will empower you to continue self-studying probability and statistics after you leave the classroom. Hardly a day goes by when myself and my colleagues don’t run a simulation of some kind.",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#task-0-review",
+    "href": "labs/lab-2.html#task-0-review",
+    "title": "Lab 2",
+    "section": "Task 0 (review)",
+    "text": "Task 0 (review)\nConsider this question from Lab 1:\n\na five-card hand is randomly dealt to you from a well-shuffled deck. What is the probability that the hand contains at least one ace?\n\nLast week, we didn’t have the tools to do the math, but we could program a computer to approximate:\n\ndeck_of_cards &lt;- c(\"AH\", \"2H\", \"3H\", \"4H\", \"5H\", \"6H\", \"7H\", \"8H\", \"9H\", \"10H\", \"JH\", \"QH\", \"KH\",\n                   \"AD\", \"2D\", \"3D\", \"4D\", \"5D\", \"6D\", \"7D\", \"8D\", \"9D\", \"10D\", \"JD\", \"QD\", \"KD\",\n                   \"AC\", \"2C\", \"3C\", \"4C\", \"5C\", \"6C\", \"7C\", \"8C\", \"9C\", \"10C\", \"JC\", \"QC\", \"KC\",\n                   \"AS\", \"2S\", \"3S\", \"4S\", \"5S\", \"6S\", \"7S\", \"8S\", \"9S\", \"10S\", \"JS\", \"QS\", \"KS\")\n\nset.seed(123)\n\noutcomes &lt;- c()\n\nfor (i in 1:10000) {\n  hand &lt;- sample(deck_of_cards, size = 5, replace = FALSE)\n  if (any(hand %in% c(\"AH\",\"AD\",\"AC\",\"AS\"))) {\n    outcomes &lt;- c(outcomes, 1)\n  } else {\n    outcomes &lt;- c(outcomes, 0)\n  }\n}\n\nmean(outcomes)\n\n[1] 0.3473\n\n\nNow let’s see how the math goes. The complement of the target event “at least one ace” is “no aces at all.” This is simpler and may be easier to count, so we will apply:\n\\[\nP(A)=1-P(A^c)=1-\\frac{\\#(A^c)}{\\#(S)}.\n\\]\nThe sample space \\(S\\) is the set of all five-card hands you could be dealt. We are selecting \\(k=5\\) from \\(n=52\\) without replacement and ignoring order, so \\(\\#(S)=\\binom{52}{5}\\). The event \\(A^c\\) is the set of all five-card hands that do not include an ace. There are 48 non-ace cards, and so \\(\\#(A^c)=\\binom{48}{5}\\). As such\n\\[\nP(A)=1-\\frac{\\binom{48}{5}}{\\binom{52}{5}}\\approx 0.34.\n\\]\nTo get the actual number, we can use the choose function in R. Try typing this into the console:\n\n1 - choose(48, 5) / choose(52, 5)\n\n[1] 0.341158\n\n\nThis is close to the number we approximated via simulation. Phew!",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#task-1-i-do-it",
+    "href": "labs/lab-2.html#task-1-i-do-it",
+    "title": "Lab 2",
+    "section": "Task 1 (I do it)",
+    "text": "Task 1 (I do it)\n\n\nScenario: roll three fair dice;\n\nEvent: all three dice show different numbers.\n\nThis code simulates 7,500 trials and computes the proportion of the time the event occurs:\n\nset.seed(37367)\n\nnreps &lt;- 7500\ncounter &lt;- 0\n\nfor(i in 1:nreps){\n  \n  rolls &lt;- sample(1:6, 3, replace = TRUE)\n  \n  if( length(unique(rolls)) == 3 ){\n    \n    counter &lt;- counter + 1\n    \n  }\n  \n}\n\ncounter / nreps # proportion\n\n[1] 0.558\n\n\nIn order to do the math, we apply \\(P(A)=\\#(A)/\\#(S)\\) directly. The sample space \\(S\\) is the set of all three-dice rolls. Thought of as three experiments in the sense of the counting principle, the number of ways we could mix and match the rolls is \\(\\#(S)=6\\times6\\times6=6^3=216\\). The target event \\(A\\) is the set of all three-dice rolls where all numbers are different (ie sampling without replacement), and so \\(\\#(A)=6\\times 5\\times 4=120\\). Putting it into R gives:\n\n120 / 216\n\n[1] 0.5555556\n\n\nWe conclude then that\n\\[\nP(A) = \\frac{6\\times 5\\times 4}{6^3} = \\frac{120}{216} \\approx 0.555,\n\\]\nwhich agrees with our simulation.",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#task-2-we-do-it",
+    "href": "labs/lab-2.html#task-2-we-do-it",
+    "title": "Lab 2",
+    "section": "Task 2 (we do it)",
+    "text": "Task 2 (we do it)\n\n\nScenario: 6 balls are randomly drawn from a jar containing 5 red, 4 blue, 3 green;\n\nEvent: you draw exactly 3 red or exactly 2 green.\n\nHere is a representation of the contents of the jar that you can sample from:\n\njar &lt;- c(rep(\"R\", 5), rep(\"B\", 4), rep(\"G\", 3))\njar\n\n [1] \"R\" \"R\" \"R\" \"R\" \"R\" \"B\" \"B\" \"B\" \"B\" \"G\" \"G\" \"G\"\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\nset.seed(2025)\nnsim &lt;- 20000\ncount_event &lt;- 0\n\njar &lt;- c(rep(\"R\", 5), rep(\"B\", 4), rep(\"G\", 3))\n\nfor (i in 1:nsim) {\n  hand &lt;- sample(jar, 6, replace = FALSE)\n  n_red &lt;- sum(hand == \"R\")\n  n_green &lt;- sum(hand == \"G\")\n  \n  if (n_red == 3 | n_green == 2) {\n    count_event &lt;- count_event + 1\n  }\n}\n\ncount_event / nsim\n\n[1] 0.6606\n\n\n\n\n\\(A\\) = exactly 3 red, \\(B\\) = exactly 2 green\nBoth could happen so \\(A\\cap B\\) is non-empty;\n\n\\(\\#(S)=\\binom{12}{6}\\);\n\n\\(\\#(A) = \\binom{5}{3}\\binom{7}{3}\\);\n\n\\(\\#(B) = \\binom{3}{2}\\binom{9}{4}\\);\n\n\\(\\#(A\\cap B)=\\binom{5}{3}\\binom{3}{2}4\\);\nSo\n\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\frac{\\binom{5}{3}\\binom{7}{3}}{\\binom{12}{6}}+\\frac{\\binom{3}{2}\\binom{9}{4}}{\\binom{12}{6}}-\\frac{\\binom{5}{3}\\binom{3}{2}4}{\\binom{12}{6}}.\n\\]\nCalculate:\n\nPA &lt;- choose(5, 3) * choose(7, 3) / choose(12, 6)\nPB &lt;- choose(3, 2) * choose(9, 4) / choose(12, 6)\nPAB &lt;- choose(5, 3) * choose(3, 2) * 4 / choose(12, 6)\n\nPA + PB - PAB\n\n[1] 0.6580087",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#task-3-you-do-it",
+    "href": "labs/lab-2.html#task-3-you-do-it",
+    "title": "Lab 2",
+    "section": "Task 3 (you do it)",
+    "text": "Task 3 (you do it)\n\n\n\n\n\nFigure 1: 8 safe rooks\n\n\n\n\nScenario: you randomly place 8 rooks on distinct squares of a chess board;\n\nEvent: all 8 rooks are safe from one another.\n\nFigure 1 displays an example of a safe position. In chess, rooks are permitted to move up-and-down or side-to-side as far as they want, but not diagonally or anything else.\nThis code creates a matrix representing the chess board, from which you can sample the random positions:\n\nboard &lt;- outer(letters[1:8], 1:8, paste0)\nboard\n\n     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]\n[1,] \"a1\" \"a2\" \"a3\" \"a4\" \"a5\" \"a6\" \"a7\" \"a8\"\n[2,] \"b1\" \"b2\" \"b3\" \"b4\" \"b5\" \"b6\" \"b7\" \"b8\"\n[3,] \"c1\" \"c2\" \"c3\" \"c4\" \"c5\" \"c6\" \"c7\" \"c8\"\n[4,] \"d1\" \"d2\" \"d3\" \"d4\" \"d5\" \"d6\" \"d7\" \"d8\"\n[5,] \"e1\" \"e2\" \"e3\" \"e4\" \"e5\" \"e6\" \"e7\" \"e8\"\n[6,] \"f1\" \"f2\" \"f3\" \"f4\" \"f5\" \"f6\" \"f7\" \"f8\"\n[7,] \"g1\" \"g2\" \"g3\" \"g4\" \"g5\" \"g6\" \"g7\" \"g8\"\n[8,] \"h1\" \"h2\" \"h3\" \"h4\" \"h5\" \"h6\" \"h7\" \"h8\"\n\n\nHere’s an example of 8 random squares chosen for the rooks:\n\nrandom_position\n\n[1] \"g6\" \"h4\" \"h6\" \"f4\" \"d1\" \"c6\" \"d7\" \"d6\"\n\n\nSo that’s where your 8 rooks live. In order to check whether or not they are safe from one another, you might find it helpful to separate out the row information and the column information of the placement using the substring command:\n\nsubstring(random_position, 1, 1)\n\n[1] \"g\" \"h\" \"h\" \"f\" \"d\" \"c\" \"d\" \"d\"\n\nsubstring(random_position, 2, 2)\n\n[1] \"6\" \"4\" \"6\" \"4\" \"1\" \"6\" \"7\" \"6\"\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\nboard &lt;- outer(letters[1:8], 1:8, paste0)\n\nset.seed(2025)\nnsim &lt;- 100000\ncount_safe &lt;- 0\n\nfor (i in 1:nsim) {\n  rooks &lt;- sample(board, 8)\n  \n  # split into rows (numbers) and cols (letters)\n  r &lt;- substring(rooks, 2, 2) # row = the number part\n  c &lt;- substring(rooks, 1, 1) # col = the letter part\n  \n  # safe if all 8 rows are different AND all 8 cols are different\n  if (length(unique(r)) == 8 & length(unique(c)) == 8) {\n    count_safe &lt;- count_safe + 1\n  }\n}\n\ncount_safe / nsim\n\n[1] 1e-05\n\n\n\nRecall that rooks can move up and down or side-to-side, but not diagonally. In order to be safe from one another, two rooks therefore need to occupy different rows and columns of the board. For the eight rooks to be mutually safe, they all must be in different columns and different rows from one another;\nThere are \\(n=8\\cdot 8=64\\) squares on the board, and we are selecting \\(k=8\\) of them at which to place the rooks. The rooks are identical, so order doesn’t matter, and it’s without replacement since the squares need to be distinct, and so the total number of possible outcomes is \\(\\#(S)=\\binom{64}{8}\\);\nThe event \\(A\\) we care about is “the rooks are safe from one another,” and this can happen \\(\\#(A)=8!\\) ways.\nWe know that a safe placement will have every row and column occupied by exactly one rook, so let us imagine building up a safe placement row-wise, starting from the bottom and working upward. There are 8 ways to place a single rook on the bottom row. No other rooks can go there, so we move to the next row. There are only 7 ways to place the next rook in the next row, because we must avoid the column occupied by the first rook. Similarly, there are only 6 ways to place the next rook in the next row, because we must avoid the two columns occupied by the first two rooks. And so on. As a consequence of the counting principle, where we regard each row as an experiment, we see that \\(\\#(A)=8\\times7\\times6\\times\\cdots\\times2\\times1=8!\\).\nSo\n\n\\[\nP(A)=\\frac{\\#(A)}{\\#(S)}=\\frac{8!}{\\binom{64}{8}}\\approx0.0000091095.\n\\].\n\nfactorial(8) / choose(64, 8)\n\n[1] 9.109465e-06",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-2.html#footnotes",
+    "href": "labs/lab-2.html#footnotes",
+    "title": "Lab 2",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nThe proportion will converge to the true probability by the law of large numbers, which we will study later in the course.↩︎",
+    "crumbs": [
+      "Labs",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "labs/lab-1.html",
+    "href": "labs/lab-1.html",
+    "title": "Lab 1",
+    "section": "",
+    "text": "This class will introduce you to the basics of the R programming language, but in contrast to courses like STA 101 or 1991, we will not primarily be using R for data analysis. Instead, we will be using it to run simulations. That is, we will use R to build little computational “laboratories” where we can poke and prod a random system and explore its properties. This skill complements a lot of the math we will be doing. In the modern era, mathematical reasoning and computer simulation are mutually reinforcing; you can check whether you did a calculation correctly by comparing with a simulation, and you can verify that a simulation result is legit by doing a proper calculation. Furthermore, in complex systems where the math is intractable, you can use simulation to explore what’s going on.\nDuring the semester, I will summarize the basic R skills we need in a series of concise “explainers” posted to the course webpage. Here’s what we have so far:\nPlease dip into those as needed.\nIn today’s lab, you will use R to simulate some basic random experiments and approximate probabilities. Along the way, you will get a light workout with if-else statements and for loops.",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "labs/lab-1.html#footnotes",
+    "href": "labs/lab-1.html#footnotes",
+    "title": "Lab 1",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nThe wise among us know that these are pronounced STAAAWANOWA and STAAAWANANA, respectively.↩︎",
+    "crumbs": [
+      "Labs",
+      "Lab 1"
+    ]
+  },
+  {
     "objectID": "labs/lab-5.html",
     "href": "labs/lab-5.html",
     "title": "Lab 5",
@@ -1916,248 +2224,6 @@
     ]
   },
   {
-    "objectID": "labs/lab-1.html",
-    "href": "labs/lab-1.html",
-    "title": "Lab 1",
-    "section": "",
-    "text": "This class will introduce you to the basics of the R programming language, but in contrast to courses like STA 101 or 1991, we will not primarily be using R for data analysis. Instead, we will be using it to run simulations. That is, we will use R to build little computational “laboratories” where we can poke and prod a random system and explore its properties. This skill complements a lot of the math we will be doing. In the modern era, mathematical reasoning and computer simulation are mutually reinforcing; you can check whether you did a calculation correctly by comparing with a simulation, and you can verify that a simulation result is legit by doing a proper calculation. Furthermore, in complex systems where the math is intractable, you can use simulation to explore what’s going on.\nDuring the semester, I will summarize the basic R skills we need in a series of concise “explainers” posted to the course webpage. Here’s what we have so far:\nPlease dip into those as needed.\nIn today’s lab, you will use R to simulate some basic random experiments and approximate probabilities. Along the way, you will get a light workout with if-else statements and for loops.",
-    "crumbs": [
-      "Labs",
-      "Lab 1"
-    ]
-  },
-  {
-    "objectID": "labs/lab-1.html#footnotes",
-    "href": "labs/lab-1.html#footnotes",
-    "title": "Lab 1",
-    "section": "Footnotes",
-    "text": "Footnotes\n\nThe wise among us know that these are pronounced STAAAWANOWA and STAAAWANANA, respectively.↩︎",
-    "crumbs": [
-      "Labs",
-      "Lab 1"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html",
-    "href": "labs/lab-2.html",
-    "title": "Lab 2",
-    "section": "",
-    "text": "Last week, you used the sample function to simulate random phenomena that had a finite sample space with equally-likely outcomes: coin flips, die rolls, playing cards. Using a loop, you repeated an experiment many many times, calculated the proportion of the time some event happened, and used that proportion as an approximation of the probability1. In class this week, we learned counting techniques for actually doing the math to compute these probabilities exactly.\nIn this lab, you will do both of these things, the math and the simulation, and verify that they agree. The examples today are small potatoes, but these generic skills are important. Being able to whip up computer simulations of random systems is one of the main skills that will empower you to continue self-studying probability and statistics after you leave the classroom. Hardly a day goes by when myself and my colleagues don’t run a simulation of some kind.",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#task-0-review",
-    "href": "labs/lab-2.html#task-0-review",
-    "title": "Lab 2",
-    "section": "Task 0 (review)",
-    "text": "Task 0 (review)\nConsider this question from Lab 1:\n\na five-card hand is randomly dealt to you from a well-shuffled deck. What is the probability that the hand contains at least one ace?\n\nLast week, we didn’t have the tools to do the math, but we could program a computer to approximate:\n\ndeck_of_cards &lt;- c(\"AH\", \"2H\", \"3H\", \"4H\", \"5H\", \"6H\", \"7H\", \"8H\", \"9H\", \"10H\", \"JH\", \"QH\", \"KH\",\n                   \"AD\", \"2D\", \"3D\", \"4D\", \"5D\", \"6D\", \"7D\", \"8D\", \"9D\", \"10D\", \"JD\", \"QD\", \"KD\",\n                   \"AC\", \"2C\", \"3C\", \"4C\", \"5C\", \"6C\", \"7C\", \"8C\", \"9C\", \"10C\", \"JC\", \"QC\", \"KC\",\n                   \"AS\", \"2S\", \"3S\", \"4S\", \"5S\", \"6S\", \"7S\", \"8S\", \"9S\", \"10S\", \"JS\", \"QS\", \"KS\")\n\nset.seed(123)\n\noutcomes &lt;- c()\n\nfor (i in 1:10000) {\n  hand &lt;- sample(deck_of_cards, size = 5, replace = FALSE)\n  if (any(hand %in% c(\"AH\",\"AD\",\"AC\",\"AS\"))) {\n    outcomes &lt;- c(outcomes, 1)\n  } else {\n    outcomes &lt;- c(outcomes, 0)\n  }\n}\n\nmean(outcomes)\n\n[1] 0.3473\n\n\nNow let’s see how the math goes. The complement of the target event “at least one ace” is “no aces at all.” This is simpler and may be easier to count, so we will apply:\n\\[\nP(A)=1-P(A^c)=1-\\frac{\\#(A^c)}{\\#(S)}.\n\\]\nThe sample space \\(S\\) is the set of all five-card hands you could be dealt. We are selecting \\(k=5\\) from \\(n=52\\) without replacement and ignoring order, so \\(\\#(S)=\\binom{52}{5}\\). The event \\(A^c\\) is the set of all five-card hands that do not include an ace. There are 48 non-ace cards, and so \\(\\#(A^c)=\\binom{48}{5}\\). As such\n\\[\nP(A)=1-\\frac{\\binom{48}{5}}{\\binom{52}{5}}\\approx 0.34.\n\\]\nTo get the actual number, we can use the choose function in R. Try typing this into the console:\n\n1 - choose(48, 5) / choose(52, 5)\n\n[1] 0.341158\n\n\nThis is close to the number we approximated via simulation. Phew!",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#task-1-i-do-it",
-    "href": "labs/lab-2.html#task-1-i-do-it",
-    "title": "Lab 2",
-    "section": "Task 1 (I do it)",
-    "text": "Task 1 (I do it)\n\n\nScenario: roll three fair dice;\n\nEvent: all three dice show different numbers.\n\nThis code simulates 7,500 trials and computes the proportion of the time the event occurs:\n\nset.seed(37367)\n\nnreps &lt;- 7500\ncounter &lt;- 0\n\nfor(i in 1:nreps){\n  \n  rolls &lt;- sample(1:6, 3, replace = TRUE)\n  \n  if( length(unique(rolls)) == 3 ){\n    \n    counter &lt;- counter + 1\n    \n  }\n  \n}\n\ncounter / nreps # proportion\n\n[1] 0.558\n\n\nIn order to do the math, we apply \\(P(A)=\\#(A)/\\#(S)\\) directly. The sample space \\(S\\) is the set of all three-dice rolls. Thought of as three experiments in the sense of the counting principle, the number of ways we could mix and match the rolls is \\(\\#(S)=6\\times6\\times6=6^3=216\\). The target event \\(A\\) is the set of all three-dice rolls where all numbers are different (ie sampling without replacement), and so \\(\\#(A)=6\\times 5\\times 4=120\\). Putting it into R gives:\n\n120 / 216\n\n[1] 0.5555556\n\n\nWe conclude then that\n\\[\nP(A) = \\frac{6\\times 5\\times 4}{6^3} = \\frac{120}{216} \\approx 0.555,\n\\]\nwhich agrees with our simulation.",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#task-2-we-do-it",
-    "href": "labs/lab-2.html#task-2-we-do-it",
-    "title": "Lab 2",
-    "section": "Task 2 (we do it)",
-    "text": "Task 2 (we do it)\n\n\nScenario: 6 balls are randomly drawn from a jar containing 5 red, 4 blue, 3 green;\n\nEvent: you draw exactly 3 red or exactly 2 green.\n\nHere is a representation of the contents of the jar that you can sample from:\n\njar &lt;- c(rep(\"R\", 5), rep(\"B\", 4), rep(\"G\", 3))\njar\n\n [1] \"R\" \"R\" \"R\" \"R\" \"R\" \"B\" \"B\" \"B\" \"B\" \"G\" \"G\" \"G\"\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\nset.seed(2025)\nnsim &lt;- 20000\ncount_event &lt;- 0\n\njar &lt;- c(rep(\"R\", 5), rep(\"B\", 4), rep(\"G\", 3))\n\nfor (i in 1:nsim) {\n  hand &lt;- sample(jar, 6, replace = FALSE)\n  n_red &lt;- sum(hand == \"R\")\n  n_green &lt;- sum(hand == \"G\")\n  \n  if (n_red == 3 | n_green == 2) {\n    count_event &lt;- count_event + 1\n  }\n}\n\ncount_event / nsim\n\n[1] 0.6606\n\n\n\n\n\\(A\\) = exactly 3 red, \\(B\\) = exactly 2 green\nBoth could happen so \\(A\\cap B\\) is non-empty;\n\n\\(\\#(S)=\\binom{12}{6}\\);\n\n\\(\\#(A) = \\binom{5}{3}\\binom{7}{3}\\);\n\n\\(\\#(B) = \\binom{3}{2}\\binom{9}{4}\\);\n\n\\(\\#(A\\cap B)=\\binom{5}{3}\\binom{3}{2}4\\);\nSo\n\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\frac{\\binom{5}{3}\\binom{7}{3}}{\\binom{12}{6}}+\\frac{\\binom{3}{2}\\binom{9}{4}}{\\binom{12}{6}}-\\frac{\\binom{5}{3}\\binom{3}{2}4}{\\binom{12}{6}}.\n\\]\nCalculate:\n\nPA &lt;- choose(5, 3) * choose(7, 3) / choose(12, 6)\nPB &lt;- choose(3, 2) * choose(9, 4) / choose(12, 6)\nPAB &lt;- choose(5, 3) * choose(3, 2) * 4 / choose(12, 6)\n\nPA + PB - PAB\n\n[1] 0.6580087",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#task-3-you-do-it",
-    "href": "labs/lab-2.html#task-3-you-do-it",
-    "title": "Lab 2",
-    "section": "Task 3 (you do it)",
-    "text": "Task 3 (you do it)\n\n\n\n\n\nFigure 1: 8 safe rooks\n\n\n\n\nScenario: you randomly place 8 rooks on distinct squares of a chess board;\n\nEvent: all 8 rooks are safe from one another.\n\nFigure 1 displays an example of a safe position. In chess, rooks are permitted to move up-and-down or side-to-side as far as they want, but not diagonally or anything else.\nThis code creates a matrix representing the chess board, from which you can sample the random positions:\n\nboard &lt;- outer(letters[1:8], 1:8, paste0)\nboard\n\n     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]\n[1,] \"a1\" \"a2\" \"a3\" \"a4\" \"a5\" \"a6\" \"a7\" \"a8\"\n[2,] \"b1\" \"b2\" \"b3\" \"b4\" \"b5\" \"b6\" \"b7\" \"b8\"\n[3,] \"c1\" \"c2\" \"c3\" \"c4\" \"c5\" \"c6\" \"c7\" \"c8\"\n[4,] \"d1\" \"d2\" \"d3\" \"d4\" \"d5\" \"d6\" \"d7\" \"d8\"\n[5,] \"e1\" \"e2\" \"e3\" \"e4\" \"e5\" \"e6\" \"e7\" \"e8\"\n[6,] \"f1\" \"f2\" \"f3\" \"f4\" \"f5\" \"f6\" \"f7\" \"f8\"\n[7,] \"g1\" \"g2\" \"g3\" \"g4\" \"g5\" \"g6\" \"g7\" \"g8\"\n[8,] \"h1\" \"h2\" \"h3\" \"h4\" \"h5\" \"h6\" \"h7\" \"h8\"\n\n\nHere’s an example of 8 random squares chosen for the rooks:\n\nrandom_position\n\n[1] \"g6\" \"h4\" \"h6\" \"f4\" \"d1\" \"c6\" \"d7\" \"d6\"\n\n\nSo that’s where your 8 rooks live. In order to check whether or not they are safe from one another, you might find it helpful to separate out the row information and the column information of the placement using the substring command:\n\nsubstring(random_position, 1, 1)\n\n[1] \"g\" \"h\" \"h\" \"f\" \"d\" \"c\" \"d\" \"d\"\n\nsubstring(random_position, 2, 2)\n\n[1] \"6\" \"4\" \"6\" \"4\" \"1\" \"6\" \"7\" \"6\"\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\nboard &lt;- outer(letters[1:8], 1:8, paste0)\n\nset.seed(2025)\nnsim &lt;- 100000\ncount_safe &lt;- 0\n\nfor (i in 1:nsim) {\n  rooks &lt;- sample(board, 8)\n  \n  # split into rows (numbers) and cols (letters)\n  r &lt;- substring(rooks, 2, 2) # row = the number part\n  c &lt;- substring(rooks, 1, 1) # col = the letter part\n  \n  # safe if all 8 rows are different AND all 8 cols are different\n  if (length(unique(r)) == 8 & length(unique(c)) == 8) {\n    count_safe &lt;- count_safe + 1\n  }\n}\n\ncount_safe / nsim\n\n[1] 1e-05\n\n\n\nRecall that rooks can move up and down or side-to-side, but not diagonally. In order to be safe from one another, two rooks therefore need to occupy different rows and columns of the board. For the eight rooks to be mutually safe, they all must be in different columns and different rows from one another;\nThere are \\(n=8\\cdot 8=64\\) squares on the board, and we are selecting \\(k=8\\) of them at which to place the rooks. The rooks are identical, so order doesn’t matter, and it’s without replacement since the squares need to be distinct, and so the total number of possible outcomes is \\(\\#(S)=\\binom{64}{8}\\);\nThe event \\(A\\) we care about is “the rooks are safe from one another,” and this can happen \\(\\#(A)=8!\\) ways.\nWe know that a safe placement will have every row and column occupied by exactly one rook, so let us imagine building up a safe placement row-wise, starting from the bottom and working upward. There are 8 ways to place a single rook on the bottom row. No other rooks can go there, so we move to the next row. There are only 7 ways to place the next rook in the next row, because we must avoid the column occupied by the first rook. Similarly, there are only 6 ways to place the next rook in the next row, because we must avoid the two columns occupied by the first two rooks. And so on. As a consequence of the counting principle, where we regard each row as an experiment, we see that \\(\\#(A)=8\\times7\\times6\\times\\cdots\\times2\\times1=8!\\).\nSo\n\n\\[\nP(A)=\\frac{\\#(A)}{\\#(S)}=\\frac{8!}{\\binom{64}{8}}\\approx0.0000091095.\n\\].\n\nfactorial(8) / choose(64, 8)\n\n[1] 9.109465e-06",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-2.html#footnotes",
-    "href": "labs/lab-2.html#footnotes",
-    "title": "Lab 2",
-    "section": "Footnotes",
-    "text": "Footnotes\n\nThe proportion will converge to the true probability by the law of large numbers, which we will study later in the course.↩︎",
-    "crumbs": [
-      "Labs",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "labs/lab-3.html",
-    "href": "labs/lab-3.html",
-    "title": "Lab 3",
-    "section": "",
-    "text": "Note\n\n\n\nThis assignment was adapted from:\n\nMeng, Xiao-Li (2023): “Double your variance, dirtify your Bayes, devour your pufferfish, and draw your kidstrogram,” The New England Journal of Statistics in Data Science, vol 1 no 1.\nCar Talk (1977 - 2012) was a popular show on NPR. It featured a segment called the “Puzzler,” where the hosts would read a brain teaser and invite listeners to send in solutions for the chance to win a prize. Here is the text of one such Puzzler (original audio at around 19:19 here):\nIn what follows, you may find some notation useful. Let \\(D\\) denote your true disease status, and \\(T\\) denote the result of your test. Then\n\\[\n\\begin{align*}\n    p &= P(D=+) && \\text{(prevalence)}\n    \\\\\n    f_{-}&=P(T=-\\,|\\, D=+) && \\text{(false negative rate)}\n    \\\\\n    f_{+}&=P(T=+\\,|\\, D=-) && \\text{(false positive rate)}\n    \\\\\n    1-f_{-}&=P(T=+\\,|\\, D = +) && \\text{(sensitivity)}\n    \\\\\n    1-f_{+}&=P(T=-\\,|\\, D = -) && \\text{(specificity)}.\n\\end{align*}\n\\]",
-    "crumbs": [
-      "Labs",
-      "Lab 3"
-    ]
-  },
-  {
-    "objectID": "labs/lab-3.html#task-1",
-    "href": "labs/lab-3.html#task-1",
-    "title": "Lab 3",
-    "section": "Task 1",
-    "text": "Task 1\nBefore you read anything else below, try to solve the puzzler yourself. What do you come up with?\n\n\n\n\n\n\nSolution\n\n\n\n\n\nObviously you will struggle to come up with anything, and a lot depends on how you interpret “It’s 95% accurate….5% of the people who take the test will test positive but they don’t really have the disease.” My solution below interprets this as the false positive rate. The puzzler says nothing about the false negative rate, and so you can’t actually answer the question because you do not have enough information.",
-    "crumbs": [
-      "Labs",
-      "Lab 3"
-    ]
-  },
-  {
-    "objectID": "labs/lab-3.html#task-2",
-    "href": "labs/lab-3.html#task-2",
-    "title": "Lab 3",
-    "section": "Task 2",
-    "text": "Task 2\nExplain the correct way to solve this problem. Exactly what probability are we asked to compute, and what formula should we apply to do it? Does the prompt actually provide enough information to ultimately get the job done?\n\n\n\n\n\n\nSolution\n\n\n\n\n\nThe Puzzler asks us to compute \\(P(D=+\\,|\\, T=+)\\), which in principle we can do with Bayes’ theorem:\n\\[\n\\begin{aligned}\n    P(D=+\\,|\\, T=+)\n    &=\n    \\frac{P(T=+\\,|\\, D=+)P(D=+)}{P(T=+)}\n    \\\\\n    &=\n    \\frac{P(T=+\\,|\\, D=+)P(D=+)}{P(T=+\\,|\\, D=+)P(D=+)+P(T=+\\,|\\, D=-)P(D=-)}\n    \\\\\n    &=\n    \\frac{(1-f_-)p}{(1-f_-)p+f_+(1-p)}\n    .\n\\end{aligned}\n\\]\nUnfortunately, the show doesn’t tell us \\(f_-\\), so you cannot actually compute the answer.",
-    "crumbs": [
-      "Labs",
-      "Lab 3"
-    ]
-  },
-  {
-    "objectID": "labs/lab-3.html#task-3",
-    "href": "labs/lab-3.html#task-3",
-    "title": "Lab 3",
-    "section": "Task 3",
-    "text": "Task 3\nBeneath the fold is the solution that the hosts ultimately revealed.\n\n\n\n\n\n\nThe show’s solution\n\n\n\n\n\nOriginal audio at around 20:30 here:\n\nLet’s say 1000 people take the test. Fifty people will test positive and yet they will not have it. One will test positive and have it. So your chances of actually having it, even though you tested positive, are one in 51, or a little less than 2%.\n\n\n\n\nSo, what do you think? Did they get it right? Explain how the show interpreted the information given in the Puzzler, and explain what arithmetic formula they implicitly applied in order to compute their answer.\n\n\n\n\n\n\nSolution\n\n\n\n\n\nWhen they say “0.1% of the people actually contract the disease,” this refers to the prevalence, and when they say “5% of the people who take the test will test positive but they don’t really have the disease,” this refers to the false positive rate. So \\(p=0.001\\), and \\(f_+=0.05\\). Based only on these, they somehow came up with:\n\\[\n\\frac{p}{p+f_+}=\\frac{0.001}{.001 + 0.05} = \\frac{1}{51}\\approx 0.0196.\n\\]",
-    "crumbs": [
-      "Labs",
-      "Lab 3"
-    ]
-  },
-  {
-    "objectID": "labs/lab-3.html#task-4",
-    "href": "labs/lab-3.html#task-4",
-    "title": "Lab 3",
-    "section": "Task 4",
-    "text": "Task 4\nExplain two things:\n\nUnder what conditions is the formula that the show used actually an upper bound on the correct answer?\nEven though their number is not exactly correct, why might an upper bound on the true probability still be a useful thing to calculate?\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\nBy factoring \\(1-f_-\\) out of the numerator and denominator, we can rewrite the correct formula as\n\\[\nP(D=+\\,|\\, T = +)=\\frac{(1-f_-)p}{(1-f_-)p+f_+(1-p)}=\\frac{p}{p+f_+\\left(\\frac{1-p}{1-f_-}\\right)}.\n\\]\nIf \\(p\\leq f_-\\), then \\(1-f_-\\leq 1-p\\), which implies\n\\[\np+f_+\\leq p+f_+\\left(\\frac{1-p}{1-f_-}\\right).\n\\]\nAs a consequence, we see that\n\\[\nP(D=+\\,|\\, T = +)\n=\n\\frac{p}{p+f_+\\left(\\frac{1-p}{1-f_-}\\right)}\n\\leq \\frac{p}{p+f_+},\n\\quad \\text{when }p\\leq f_-\n.\n\\]\nSo the formula that the show applied is an upper bound for the true probability.\nTwo types of errors are possible in a situation like this: treating a disease that is not there, or failing to treat a disease that is there. On balance, the second error is probably the worse of the two, so I would rather overestimate the probability that I have the disease than underestimate it.",
-    "crumbs": [
-      "Labs",
-      "Lab 3"
-    ]
-  },
-  {
-    "objectID": "labs/lab-3.html#task-5",
-    "href": "labs/lab-3.html#task-5",
-    "title": "Lab 3",
-    "section": "Task 5",
-    "text": "Task 5\nSo, the show’s answer, while wrong, could still be potentially useful upper bound on the true probability. Neat! But how wrong is it, even? To get a sense of this, use R to create some line plots with the prevalence \\(p\\in[0,\\, 1]\\) on the horizontal axis and the true and approximate probabilities for different values of \\(f_-\\) and \\(f_+\\) on the vertical axis. Mix-and-match \\(f_-,\\, f_+\\in\\{0.1,\\, 0.2\\}\\), and comment on the difference between the two curves.\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\nCodeFPR = c(0.1, 0.2)\nFNR = c(0.1, 0.2)\npar(mfrow = c(2, 2))\nfor (i in 1:2){\n  for (j in 1:2){\n    f_plus = FPR[i]\n    f_minus = FNR[j]\n    curve(x / (x + f_plus),\n          col = \"blue\",\n          xlab = \"p\", \n          ylab = \"\", \n          xlim = c(0, 1),\n          ylim = c(0, 1),\n          main = paste(\"FNR = \", f_minus, \"; FPR = \", f_plus))\n    curve(x / (x + f_plus * ((1 - x) / (1 - f_minus))),\n          col = \"red\", add = TRUE)\n    legend(\"bottomright\",\n           c(\"True Probability\", \"Car Talk Answer\"),\n           col = c(\"red\", \"blue\"),\n           bty = \"n\",\n           lty = c(1, 1)\n           )\n  }\n}\n\n\n\n\n\n\n\nWhen the prevalence is low (ie rare disease) the Car Talk curve is a very close upper bound on the true probability. For higher prevalence, the Car Talk curve is no longer an upper bound, and the curves get farther apart.",
-    "crumbs": [
-      "Labs",
-      "Lab 3"
-    ]
-  },
-  {
-    "objectID": "labs/lab-4.html",
-    "href": "labs/lab-4.html",
-    "title": "Lab 4 - How does ChatGPT generate the next word?",
-    "section": "",
-    "text": "If you’ve ever asked ChatGPT a question, you may have noticed something; it generates its response one word at a time right before your eyes:\nWhat exactly is it doing? Well, ask it! If you do, the explanation will go something like this…\nChatGPT is an example of a large language model (LLM). Under the hood, there’s this fancy pants deep neural network machine learning mumbo jumbo that has been trained on a massive corpus of documents (books, newspaper articles, academic publications, reddit, all of Wikipedia, etc). When you ask it a question like “What color is the apple?”, the model asks itself “conditional on the text you just gave me, what is the likely next word?” Based on the text it was trained on and the underlying ML model, ChatGPT constructs a conditional probability distribution over the set of “next words” and simulates from it, like with the sample function. The new word that it simulates gets added to the end of the text you provided, and it repeats the process over again: given where we are now, what is the next word likely to be? And on and on…\nSo say you ask it “What color is the apple?” Based on that, the model constructs a probability distribution for \\(P(\\text{next word}\\,|\\,\\texttt{\"What color is the apple?\"})\\). The sample space \\(S\\) here is (basically) the set of all words that the model has seen. That set could be pretty big, but nevertheless it is finite, so we just need to list out all of the possible words together with their individual probabilities:\nOnce this is constructed, the model simulates from the distribution. You could imagine that the code might look something like sample(words, size = 1, prob = conditional_probs). So say that happens and the next word we simulate is “the.” That gets added to the end, and now we want to know \\(P(\\text{next word}\\,|\\,\\texttt{\"What color is the apple? the\"})\\). So we query the underlying model, and it constructs a new distribution on words, conditional on this revised context:\nNotice that the information we are conditioning on has changed, so the probabilities change. Based on the new probabilities, we simulate the next word. Let’s say it ends up being “apple.” So we add that to the end, and ask the model to construct a new distribution for \\(P(\\text{next word}\\,|\\,\\texttt{\"What color is the apple? the apple\"})\\):\nNow we simulate “is,” add that to the end, and query the model for \\(P(\\text{next word}\\,|\\,\\texttt{\"What color is the apple? the apple is\"})\\):\nWe see at this point that “red” is the most likely next word, but we are not searching the table for the most likely next word and slavishly returning it. We are simulating. So there’s a 35% chance we’ll come up with “red,” but also a non-trivial possibility that we’ll come up with “green.” You will notice that if you ask ChatGPT the exact same question multiple times (literally the identical text prompt), it returns different answers. That is because of this element of randomness.\nObviously, the elephant in the room in the above discussion is “where did the probabilities come from?” This is the magic, such as it is, of LLMs. In order to implement this scheme, we need to be able to construct a conditional probability distribution on words given any context. So no matter if you give it “What color is the apple” or “Explain string theory like I’m a genius” or “Why did my wife leave me” or “que se passe t’il,” it needs to come up with a meaningful and useful distribution for the next word, and it has to repeat this thousands if not millions of times. There are so many possibilities that it’s kind of bonkers to expect to be able to do this, but with enough data and computing power and a big enough model, apparently we can pull it off, at least some of the time.\nSo, the question of “where did the probabilities come from?” is sadly beyond the scope of our course. However, the question of “what do you do with the probabilities once you have them?” is perfectly accessible to us, even at this early stage, so let’s have some fun.",
-    "crumbs": [
-      "Labs",
-      "Lab 4"
-    ]
-  },
-  {
-    "objectID": "labs/lab-4.html#task-1",
-    "href": "labs/lab-4.html#task-1",
-    "title": "Lab 4 - How does ChatGPT generate the next word?",
-    "section": "Task 1",
-    "text": "Task 1\nWe have provided you with a pre-trained language model kn, a vector midsummer_words containing the 3,063 unique words in the play, and a function next_word_probs:\n\ncond_dist &lt;- next_word_probs(context, midsummer_words, kn)\ntail(cond_dist)\n\n         words         prob\n3058  unearned 3.375323e-05\n3059    'scape 3.375323e-05\n3060 serpent's 3.375323e-05\n3061    amends 6.751470e-05\n3062      liar 3.375323e-05\n3063   restore 3.375323e-05\n\n\nSo, given the context, the set of possible words, and the model, it returns a table (a data frame) listing out all the words together with their conditional probabilities given the context.\nRun this function and use the output together with the sample function to simulate a new word.",
-    "crumbs": [
-      "Labs",
-      "Lab 4"
-    ]
-  },
-  {
-    "objectID": "labs/lab-4.html#task-2",
-    "href": "labs/lab-4.html#task-2",
-    "title": "Lab 4 - How does ChatGPT generate the next word?",
-    "section": "Task 2",
-    "text": "Task 2\nUse the paste function to append the word you simulated in Task 1 to the end of context. Then, starting from this updated context, go back to the beginning, generate a new conditional distribution, and use it to simulate a new word.",
-    "crumbs": [
-      "Labs",
-      "Lab 4"
-    ]
-  },
-  {
-    "objectID": "labs/lab-4.html#task-3",
-    "href": "labs/lab-4.html#task-3",
-    "title": "Lab 4 - How does ChatGPT generate the next word?",
-    "section": "Task 3",
-    "text": "Task 3\nWrite a for loop that iterates the process in Tasks 1 and 2 in order to add six new words to the context.\n\n\n\n\n\n\nThis might be a tad slow.\n\n\n\nThe function next_word_probs is doing a lot of work under the hood, so in the upcoming tasks, do not be alarmed if it takes a few seconds to run.",
-    "crumbs": [
-      "Labs",
-      "Lab 4"
-    ]
-  },
-  {
-    "objectID": "labs/lab-4.html#task-4",
-    "href": "labs/lab-4.html#task-4",
-    "title": "Lab 4 - How does ChatGPT generate the next word?",
-    "section": "Task 4",
-    "text": "Task 4\nRerun your code five times to generate five different responses. How many of them would you consider approximately coherent?",
-    "crumbs": [
-      "Labs",
-      "Lab 4"
-    ]
-  },
-  {
-    "objectID": "labs/lab-4.html#task-5",
-    "href": "labs/lab-4.html#task-5",
-    "title": "Lab 4 - How does ChatGPT generate the next word?",
-    "section": "Task 5",
-    "text": "Task 5\nNow that you have the basic code, play around with different starting contexts besides “now fair hippolyta.” Bear in mind that our world is small here. We’ve trained the model on a single, old text, so if you want coherent responses, you should probably give it something in the ballpark of what it has seen before. I doubt “which banger slaps hardest my dude” will yield anything meaningful (though feel free to try!). For inspiration, here is the full text of the original play.",
-    "crumbs": [
-      "Labs",
-      "Lab 4"
-    ]
-  },
-  {
-    "objectID": "labs/lab-4.html#task-6",
-    "href": "labs/lab-4.html#task-6",
-    "title": "Lab 4 - How does ChatGPT generate the next word?",
-    "section": "Task 6",
-    "text": "Task 6\nUp to now we’ve been worrying a lot about individual words, but individual words don’t create meaning. It’s how those words interact across phrases and sentences and paragraphs. Unfortunately, we do not have methods for inducing a probability distribution over the set of all possible sentences, or the set of all possible thoughts. But in a sense, language models are attempting to approximate such a thing. And on the evidence to date, maybe they succeed sometimes. Anyway, how do we go from a method that gets things right on the word level to a method that gets things right on the sentence level? Well, therein lies the art of the engineers that work on these things, and one method they have found helpful is called temperature sampling.\nSo far, given the current context, the model returns a (conditional) probability \\(p(i)\\) for each word \\(i\\in \\text{corpus}\\). So far we’ve used these probabilities unmodified. With temperature sampling, before we draw the next word, we first adjust the probabilities based on a user-defined tuning parameter \\(t&gt;0\\) called the temperature:\n\\[\np_t(i) = \\frac{p(i)^{1/t}}{\\sum\\limits_{j\\in\\text{corpus}}p(j)^{1/t}},\\quad i\\in\\text{corpus}.\n\\]\nIf \\(t=1\\), we’re back to the original probabilities: \\(p_1(i)=p(i)\\). Otherwise, to quote the \\(k\\)-grams people, “higher and lower temperatures make the original probability distribution smoother and rougher, respectively. By making a physical analogy, we can think of less probable words as states with higher energies, and the effect of higher (lower) temperatures is to make more (less) likely to excite these high energy states.” Why do people do this? To the best of my knowledge, it is no deeper than “it seems to work well.” In practice, adjusting the temperature seems to have a macro effect on the overall character of the sentences.\nThe function next_word_probs that we gave you has a fourth argument temp where you can give it a number and it will give you the tempered probabilities. Play around with big and small values, and report any effect that it has on the overall quality of the sentences.\n\n\n\n\n\n\nThink about it\n\n\n\nAs you increase the temperature and \\(t\\to\\infty\\), what does that do to the probabilities?",
-    "crumbs": [
-      "Labs",
-      "Lab 4"
-    ]
-  },
-  {
-    "objectID": "labs/lab-4.html#task-7-optional",
-    "href": "labs/lab-4.html#task-7-optional",
-    "title": "Lab 4 - How does ChatGPT generate the next word?",
-    "section": "Task 7 (optional)",
-    "text": "Task 7 (optional)\nCode temperature sampling yourself. Take the probabilities that probs &lt;- next_word_probs(...) gives you when temp = 1.0, and then use basic R commands to apply the formula above and compute a vector temp_probs with the revised numbers for temp = 0.5. Check that your numbers agree with the ones that our function next_word_probs gives when you supply 0.5 as the fourth argument.",
-    "crumbs": [
-      "Labs",
-      "Lab 4"
-    ]
-  },
-  {
     "objectID": "labs/lab-6.html",
     "href": "labs/lab-6.html",
     "title": "Lab 6",
@@ -2173,7 +2239,7 @@
     "href": "labs/lab-6.html#task-1",
     "title": "Lab 6",
     "section": "Task 1",
-    "text": "Task 1\nWhat is the probability that \\(X\\) will be exactly equal to 0.377?",
+    "text": "Task 1\nWhat is the probability that \\(X\\) will be exactly equal to 0.377?\n\n\n\n\n\n\nSolution\n\n\n\n\n\nThis is a continuous random variable, so \\(P(X=0.377)=0\\).",
     "crumbs": [
       "Labs",
       "Lab 6"
@@ -2184,7 +2250,7 @@
     "href": "labs/lab-6.html#task-2",
     "title": "Lab 6",
     "section": "Task 2",
-    "text": "Task 2\nWhat is the probability that \\(X\\) will be somewhere between 0.35 and 0.4?",
+    "text": "Task 2\nWhat is the probability that \\(X\\) will be somewhere between 0.35 and 0.4?\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\\(P(0.35&lt;X&lt;0.4)=F(0.4)-F(0.35)\\):\n\npnorm(0.4, 0.1, 0.3) - pnorm(0.35, 0.1, 0.3)\n\n[1] 0.04367313",
     "crumbs": [
       "Labs",
       "Lab 6"
@@ -2195,7 +2261,7 @@
     "href": "labs/lab-6.html#task-3",
     "title": "Lab 6",
     "section": "Task 3",
-    "text": "Task 3\nWhat is the probability that \\(X\\) will be negative?",
+    "text": "Task 3\nWhat is the probability that \\(X\\) will be negative?\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\\(P(X&lt;0)=F(0)\\):\n\npnorm(0, 0.1, 0.3)\n\n[1] 0.3694413",
     "crumbs": [
       "Labs",
       "Lab 6"
@@ -2206,7 +2272,7 @@
     "href": "labs/lab-6.html#task-4",
     "title": "Lab 6",
     "section": "Task 4",
-    "text": "Task 4\nSimulate n = 5000 realizations of \\(X\\) and then verify that the sample mean, the sample standard deviation, and the sample proportion of negative values agree with the “true,” theoretical numbers.\n\n\n\n\n\n\nSet a seed!\n\n\n\nTo ensure that your numbers are reproducible and you get the same results every time you render your document, set a random number seed of your choosing.",
+    "text": "Task 4\nSimulate n = 5000 realizations of \\(X\\) and then verify that the sample mean, the sample standard deviation, and the sample proportion of negative values agree with the “true,” theoretical numbers.\n\n\n\n\n\n\nSet a seed!\n\n\n\nTo ensure that your numbers are reproducible and you get the same results every time you render your document, set a random number seed of your choosing.\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\nset.seed(1234)\nn &lt;- 5000\nx &lt;- rnorm(n, 0.1, 0.3)\n\nmean(x) # should be close to 0.1\n\n[1] 0.09809359\n\nsd(x) # should be close to 0.3\n\n[1] 0.2974035\n\nmean(x &lt;= 0) # should be close to answer from Task 3\n\n[1] 0.3684",
     "crumbs": [
       "Labs",
       "Lab 6"
@@ -2217,7 +2283,7 @@
     "href": "labs/lab-6.html#task-5",
     "title": "Lab 6",
     "section": "Task 5",
-    "text": "Task 5\nPlot a histogram of your random numbers from the previous part, and overlay a line plot of the “true” density.",
+    "text": "Task 5\nPlot a histogram of your random numbers from the previous part, and overlay a line plot of the “true” density.\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\nhist(x, breaks = \"Scott\", freq = FALSE)\ncurve(dnorm(x, mean = 0.1, sd = 0.3), \n      from = min(x), to = max(x), n = 1000, add = TRUE, col = \"red\")",
     "crumbs": [
       "Labs",
       "Lab 6"
@@ -2228,7 +2294,7 @@
     "href": "labs/lab-6.html#task-6",
     "title": "Lab 6",
     "section": "Task 6",
-    "text": "Task 6\nThe actuaries at your insurance company know that historically, monthly claims are about $10,000 on average, with a standard deviation of $2,000. If we want to use the model \\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\), how should we set \\(\\alpha\\) and \\(\\beta\\) so that \\(X\\) has the correct location and spread?",
+    "text": "Task 6\nThe actuaries at your insurance company know that historically, monthly claims are about $10,000 on average, with a standard deviation of $2,000. If we want to use the model \\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\), how should we set \\(\\alpha\\) and \\(\\beta\\) so that \\(X\\) has the correct location and spread?\n\n\n\n\n\n\nSolution\n\n\n\n\n\nWe need \\(\\alpha/\\beta = 10000\\) and \\(\\sqrt{\\alpha}/\\beta=2000\\). Alternatively, we need\n\\[\n\\frac{\\alpha/\\beta}{\\sqrt{\\alpha}/\\beta}=\\frac{10000}{2000}\\,\\implies\\,\\sqrt{\\alpha}=5.\n\\]\nSo \\(\\alpha = 5^2=25\\). Consequently:\n\\[\n\\frac{25}{\\beta}=10000\\,\\implies\\,\\beta=\\frac{25}{10000}=0.0025.\n\\]\nFinal answer: \\(\\alpha = 25\\) and \\(\\beta = 0.0025\\).",
     "crumbs": [
       "Labs",
       "Lab 6"
@@ -2239,7 +2305,7 @@
     "href": "labs/lab-6.html#task-7",
     "title": "Lab 6",
     "section": "Task 7",
-    "text": "Task 7\nSimulate n = 5000 random numbers from the gamma distribution using the appropriate r- function. Plot a histogram of these numbers using the hist function, and overlay a line plot of the density using the curve function and the appropriate d- function.",
+    "text": "Task 7\nSimulate n = 5000 random numbers from the gamma distribution using the appropriate r- function. Plot a histogram of these numbers using the hist function, and overlay a line plot of the density using the curve function and the appropriate d- function.\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\nset.seed(1234)\nn &lt;- 5000\nx &lt;- rgamma(n, 25, rate = 0.0025)\nhist(x, breaks = \"Scott\", freq = FALSE)\ncurve(dgamma(x, 25, rate = 0.0025), \n      from = min(x), to = max(x), n = 1000, add = TRUE, col = \"red\")",
     "crumbs": [
       "Labs",
       "Lab 6"
@@ -2250,7 +2316,7 @@
     "href": "labs/lab-6.html#task-8",
     "title": "Lab 6",
     "section": "Task 8",
-    "text": "Task 8\nVerify that the sample mean and sample variance of your random numbers are close to the prescriptions from Task 6. If they are not, revisit Task 6 and adjust your choice of \\(\\alpha\\) and \\(\\beta\\) until this works.",
+    "text": "Task 8\nVerify that the sample mean and sample variance of your random numbers are close to the prescriptions from Task 6. If they are not, revisit Task 6 and adjust your choice of \\(\\alpha\\) and \\(\\beta\\) until this works.\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\nmean(x) # should be close to 10000\n\n[1] 10022.66\n\nsd(x) # should be close to 2000\n\n[1] 1972.818",
     "crumbs": [
       "Labs",
       "Lab 6"
@@ -2261,7 +2327,7 @@
     "href": "labs/lab-6.html#task-9",
     "title": "Lab 6",
     "section": "Task 9",
-    "text": "Task 9\nWhat is the probability \\(P(X &gt; 15,000)\\)? Calculate this probability exactly using the appropriate p- function, and also approximate it using your random numbers. Verify that the two numbers are close.",
+    "text": "Task 9\nWhat is the probability \\(P(X &gt; 15,000)\\)? Calculate this probability exactly using the appropriate p- function, and also approximate it using your random numbers. Verify that the two numbers are close.\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\n1 - pgamma(15000, 25, rate = 0.0025)\n\n[1] 0.01259674\n\nmean(x &gt; 15000)\n\n[1] 0.011",
     "crumbs": [
       "Labs",
       "Lab 6"
@@ -3185,7 +3251,7 @@
     "section": "",
     "text": "Roughly speaking, an infinite series is the sum of infinitely many numbers:\n\\[\n\\sum\\limits_{n=0}^\\infty a_n=a_0+a_1+a_2+a_3+\\cdots\n\\]\nStrictly speaking, it is the limit of the sequence of partial sums:\n\\[\n\\sum\\limits_{n=0}^\\infty a_n=\\lim_{k\\to\\infty}\\sum\\limits_{n=0}^ka_n.\n\\]\nThis limit may or may not be finite, and there are many famous examples of this.",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Infinite series"
     ]
   },
@@ -3196,7 +3262,7 @@
     "section": "Geometric series",
     "text": "Geometric series\nDon’t you love this:\n\\[\n\\frac{a}{1-r}=\\sum\\limits_{n=0}^\\infty ar^n,\\quad |r|&lt;1.\n\\]\nThe partial sums are also well-behaved:\n\\[\n\\sum\\limits_{n=0}^k ar^n\n=\n\\begin{cases}\na(k+1) & r=1\\\\\na\\left(\\frac{1-r^{k+1}}{1-r}\\right) & \\text{else}.\n\\end{cases}\n\\]",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Infinite series"
     ]
   },
@@ -3207,7 +3273,7 @@
     "section": "\\(p\\)-series",
     "text": "\\(p\\)-series\nIf \\(p&gt;1\\), this converges:\n\\[\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^p}.\n\\]\nHere are concrete examples:\n\\[\n\\begin{aligned}\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n}&=\\infty &&\\text{(harmonic series)}\\\\\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^2}&=\\frac{\\pi^2}{6}\\\\\n\\sum\\limits_{n=1}^\\infty\\frac{1}{n^3}&\\approx 1.202057.\n\\end{aligned}\n\\]",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Infinite series"
     ]
   },
@@ -3218,8 +3284,19 @@
     "section": "Taylor series",
     "text": "Taylor series\nIf a function \\(f\\) is infinitely differentiable at 0, then we can rewrite it using the Taylor expansion:\n\\[\nf(x)\n=\n\\sum\\limits_{n=0}^\\infty \\frac{f^{(n)}(0)}{n!}x^n,\\quad \\text{for some  }x.\n\\]\nThe set of \\(x\\)-values for which the Taylor expansion is valid is called the radius of convergence. Here are examples for specific functions:\n\\[\n\\begin{aligned}\n\\frac{1}{1-x}&=\\sum\\limits_{n=0}^\\infty x^n,&&-1&lt;x&lt;1\\\\\ne^x&=\\sum\\limits_{n=0}^\\infty\\frac{x^n}{n!},&&-\\infty &lt; x &lt; \\infty\\\\\n\\ln(1-x)&=-\\sum\\limits_{n=0}^\\infty\\frac{x^n}{n},&&-1\\leq x &lt; 1.\n\\end{aligned}\n\\]\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\n# app.R\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  titlePanel(\"Taylor Polynomial Approximation\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      selectInput(\n        inputId = \"func\",\n        label = \"Choose a function:\",\n        choices = c(\"exp(x)\", \"sin(x)\")\n      ),\n      sliderInput(\n        inputId = \"degree\",\n        label = \"Degree of Taylor polynomial (n):\",\n        min = 0, max = 10, value = 1, step = 1\n      )\n    ),\n    \n    mainPanel(\n      plotOutput(\"taylorPlot\")\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$taylorPlot &lt;- renderPlot({\n    # Define function and y-limits\n    f &lt;- switch(input$func,\n                \"exp(x)\" = function(x) exp(x),\n                \"sin(x)\" = function(x) sin(x))\n    x &lt;- seq(-5, 5, length.out = 400)\n    y_true &lt;- f(x)\n    \n    # Fix y-limits by function\n    ylims &lt;- switch(input$func,\n                    \"exp(x)\" = c(-1, 150),\n                    \"sin(x)\" = c(-1.5, 1.5))\n    \n    # Define Taylor polynomial\n    taylor_poly &lt;- function(x, n) {\n      sapply(x, function(xi) {\n        sum(sapply(0:n, function(k) {\n          deriv_k &lt;- switch(input$func,\n                            \"exp(x)\" = 1,\n                            \"sin(x)\" = if (k %% 4 == 0) 0 else if (k %% 4 == 1) 1 else if (k %% 4 == 2) 0 else -1)\n          deriv_k * xi^k / factorial(k)\n        }))\n      })\n    }\n    \n    y_approx &lt;- taylor_poly(x, input$degree)\n    \n    # Draw the plot\n    plot(x, y_true, type = \"l\", col = \"black\", lwd = 2,\n         ylim = ylims, xlab = \"x\", ylab = \"y\",\n         main = paste(\"Taylor approximation of\", input$func, \"around x = 0\"),\n         bty = \"n\", axes = FALSE)\n    \n    # Add axes through origin\n    abline(h = 0, v = 0, col = \"gray70\")\n    axis(1, pos = 0)\n    axis(2, pos = 0, las = 1)\n    \n    # Add Taylor curve\n    lines(x, y_approx, col = \"red\", lwd = 2)\n    \n    # Add legend\n    legend(\"topleft\",\n           legend = c(\"f(x)\", paste(\"Taylor polynomial (n = \", input$degree, \")\", sep = \"\")),\n           col = c(\"black\", \"red\"), lwd = 2, bty = \"n\")\n  })\n}\n\nshinyApp(ui = ui, server = server)",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Infinite series"
+    ]
+  },
+  {
+    "objectID": "math/gamma-function.html",
+    "href": "math/gamma-function.html",
+    "title": "The gamma function",
+    "section": "",
+    "text": "The gamma function is a continuous function that interpolates the factorials. It is an interesting mathematical object in its own right, but for students of probability, it appears in the normalizing constant of the gamma density, and recognizing the gamma function is a useful technique for simplifying certain integrals.\nDefinition\nHere it is:\n\\[\n\\Gamma(x)=\\int_0^\\infty z^{x-1}e^{-z}\\,\\text{d}z,\\quad x &gt;0.\n\\]\nPay attention. \\(x\\) is the argument to the function. It’s treated as a constant. \\(z\\) is the dummy variable of integration. It doesn’t affect the actual value of the expression, and you can change it to whatever you want: \\(y\\), \\(u\\), \\(t\\), whatever. At the end of the day, the value of the integral is just a number; plug in different \\(x\\) values, and you get different numbers. That’s the gamma function. Figure 1 displays the picture.\nR provides the gamma command for actually computing this:\n\ngamma(0.5) # √π\n\n[1] 1.772454\n\ngamma(1)   # 1\n\n[1] 1\n\ngamma(4)   # 3!\n\n[1] 6\n\ngamma(8)   # 7!\n\n[1] 5040\n\n\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\nProperties\nYou first met the gamma function on Problem Set 0, where you showed that it satisfies the following recursion:\n\\[\n\\Gamma(x+1) = x\\Gamma(x).\n\\]\nThat works for any real number \\(x&gt;0\\). But now let’s say you plug in an integer \\(n\\geq 2\\). As a result of the recursion, something cute happens:\n\\[\n\\begin{aligned}\n\\Gamma(n)&=\\Gamma(n-1+1)\\\\\n&=(n-1)\\Gamma(n-1)\\\\\n&=(n-1)(n-2)\\Gamma(n-2)\\\\\n&=(n-1)(n-2)(n-3)\\Gamma(n-3)\\\\\n&\\vdots\\\\\n&=(n-1)(n-2)(n-3)\\cdots 3\\cdot2\\cdot\\Gamma(2)\\\\\n&=(n-1)(n-2)(n-3)\\cdots 3\\cdot2\\cdot1\\cdot\\Gamma(1)\\\\\n&=(n-1)!\n\\end{aligned}\n\\]\nThe last line follows because \\(\\Gamma(1)=\\int_0^\\infty \\exp(-x)\\,\\textrm{d}x=1\\) (shown here, but make sure you can do it yourself). The punchline is that the gamma function is a continuous function that interpolates the factorials. That is, it’s a smooth curve that “connects the dots,” like you see in Figure 1.",
+    "crumbs": [
+      "Math Helpers",
+      "Gamma function"
     ]
   },
   {
@@ -3229,7 +3306,7 @@
     "section": "",
     "text": "The limit of a function \\(f(x)\\) at a point \\(c\\) is the value that the function approaches as \\(x\\) approaches \\(c\\). We denote this:\n\\[\n\\lim_{x\\to c}f(x).\n\\]\nIf the limit of the function and the actual value of the function agree, then the function is continuous:\n\\[\n\\lim_{x\\to c}f(x)=f(c)\n\\] If a function is continuous, that makes it especially convenient to evaluate limits because it means you can just plug-in and evaluate the darn function. But as Figure 1 illustrates, not all functions are continuous. Some functions have breaks and jumps and holes that make them discontinuous.\nBut not all discontinuities are created equal:",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Limits and continuity"
     ]
   },
@@ -3240,7 +3317,7 @@
     "section": "Limit rules",
     "text": "Limit rules\nAssume \\(\\lim_{x\\to c}f(x)\\) and \\(\\lim_{x\\to c}g(x)\\) exist, let \\(a,\\,b\\in\\mathbb{R}\\) be arbitrary constants, and let \\(r&gt;0\\). Then:\n\n\n\n\n\n\n\nrule\nformula\n\n\n\n\nscaling\n\\[\\lim_{x\\to c}[a\\cdot f(x)]=a\\lim_{x\\to c}f(x)\\]\n\n\nsum/difference\n\\[\\lim_{x\\to c}[f(x)\\pm g(x)]=\\lim_{x\\to c}f(x)\\pm\\lim_{x\\to c}g(x)\\]\n\n\nlinearity\n\\[\\lim_{x\\to c}[a\\cdot f(x)\\pm b\\cdot g(x)]=a\\lim_{x\\to c}f(x)\\pm b\\lim_{x\\to c}g(x)\\]\n\n\nproduct\n\\[\\lim_{x\\to c}f(x)g(x)=\\left[\\lim_{x\\to c}f(x)\\right]\\left[\\lim_{x\\to c}g(x)\\right]\\]\n\n\nquotient\n\\[\\lim_{x\\to c}\\frac{f(x)}{g(x)}=\\frac{\\lim_{x\\to c} f(x)}{\\lim_{x\\to c} g(x)},\\quad \\text{if }\\lim_{x\\to c} g(x)\\neq0\\]\n\n\npower\n\\[\\lim_{x\\to c}f(x)^r=\\left[\\lim_{x\\to c}f(x)\\right]^r,\\quad \\text{if }c&gt;0,\\, \\lim_{x\\to c} f(x)\\geq0\\]",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Limits and continuity"
     ]
   },
@@ -3251,7 +3328,7 @@
     "section": "Indeterminate forms and L’Hôpital’s rule",
     "text": "Indeterminate forms and L’Hôpital’s rule\nMost of the time, we hope that we can appeal to continuity and evaluate limits by simply “plugging-in.” But sometimes plugging in gives loony stuff:\n\\[\n\\begin{aligned}\n\\lim_{x\\to 0}\\frac{\\sin x}{x}=1, &\\text{ but }\\frac{\\sin(0)}{0}=\\frac{0}{0};\\\\\n\\lim_{x\\to \\infty}\\frac{\\ln x}{x}=0, &\\text{ but }\\frac{\\ln\\infty}{\\infty}=\\frac{\\infty}{\\infty}.\\\\\n\\end{aligned}\n\\]\nThings like \\(0/0\\), \\(\\infty/\\infty\\), and \\(0\\times\\infty\\) are examples of indeterminate forms. If you get one, it doesn’t necessarily mean that the limit does not exist. It just means that the jury is still out; it’s indeterminate. To continue investigating, you can use a tool called L’Hôpital’s rule. Whenever \\(\\lim_{x\\to c}f(x)=\\lim_{x\\to c}g(x)=0\\) or \\(\\pm\\infty\\), the rule says that\n\\[\n\\lim_{x\\to c}\\frac{f(x)}{g(x)}=\\lim_{x\\to c}\\frac{f'(x)}{g'(x)}.\n\\] The hope is that the new function \\(f'(x)/g'(x)\\) will be well-behaved at \\(c\\), meaning you can simplify by just plugging in. However, after applying L’Hôpital’s rule once and trying to plug-in, you may still get an indeterminate form. In that case, you’ll have to take another round of derivatives, and maybe another after that, until the clouds finally part and the sun shines upon you.\n\n\n\n\n\n\nExample: multiple rounds of L’Hôpital’s\n\n\n\nConsider:\n\\[\n\\lim_{x\\to\\infty}\\frac{(\\ln x)^2}{x}.\n\\]\n\\(\\lim_{x\\to\\infty}(\\ln x)^2=\\infty\\) and \\(\\lim_{x\\to\\infty}x=\\infty\\), so let’s take some derivatives:\n\\[\n\\begin{aligned}\n\\frac{\\text{d}}{\\text{d}x}(\\ln x)^2&=\\frac{2\\ln x}{x}\\\\\n\\frac{\\text{d}}{\\text{d}x}x&=1.\n\\end{aligned}\n\\] The ratio of derivatives is thus \\(2(\\ln x)/x\\), but this still gives an indeterminate form because \\(\\lim_{x\\to\\infty}2\\ln x=\\infty\\) and \\(\\lim_{x\\to\\infty}x=\\infty\\), so we have to go again:\n\\[\n\\begin{aligned}\n\\frac{\\text{d}}{\\text{d}x}2\\ln x&=\\frac{2}{x}\\\\\n\\frac{\\text{d}}{\\text{d}x}x&=1.\n\\end{aligned}\n\\] The ratio of these derivatives is just \\(2/x\\), and that goes to 0 as \\(x\\to \\infty\\). In sum,\n\\[\n\\lim_{x\\to\\infty}\\frac{(\\ln x)^2}{x}\n\\overset{\\text{L'H}}{=}\n\\lim_{x\\to\\infty}\\frac{2\\ln x}{x}\n\\overset{\\text{L'H}}{=}\n\\lim_{x\\to\\infty}\\frac{2}{x}\n=\n0.\n\\]",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Limits and continuity"
     ]
   },
@@ -3262,7 +3339,7 @@
     "section": "",
     "text": "Crudely, the definite integral of a function gives you the (signed) area between the graph of the function and the \\(x\\)-axis.\nWhen it exists, which it doesn’t always, the definite integral can be defined as the limit of Riemann sums:\n\\[\n\\int_a^b f(x)\\,\\text{d}x=\\lim_{\\Delta x\\to 0}\\sum\\limits_{i=1}^n f(x_i^*)\\Delta x.\n\\]\nJust as the derivative is the continuous analog to a discrete difference, the integral is the continuous analog to a discrete sum.",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Integration"
     ]
   },
@@ -3273,7 +3350,7 @@
     "section": "Integral rules",
     "text": "Integral rules\n\n\n\n\n\n\nrule\nformula\n\n\n\ndummy variable\n\\(\\int_a^bf(x)\\,\\text{d}x=\\int_a^bf(t)\\,\\text{d}t=\\int_a^bf(u)\\,\\text{d}u=\\cdots\\)\n\n\nopposite\n\\(\\int_a^bf(x)\\,\\text{d}x=-\\int_b^af(x)\\,\\text{d}x\\)\n\n\nscaling\n\\(\\int_a^bcf(x)\\,\\text{d}x=c\\int_a^bf(x)\\,\\text{d}x\\)\n\n\nsum/difference\n\\(\\int_a^b[f(x)\\pm g(x)]\\text{d}x=\\int_a^bf(x)\\,\\text{d}x \\pm\\int_a^bg(x)\\text{d}x\\)\n\n\nlinearity\n\\(\\int_a^b[p\\cdot f(x)\\pm q\\cdot g(x)]\\text{d}x=p\\int_a^bf(x)\\,\\text{d}x \\pm q\\int_a^bg(x)\\text{d}x\\)\n\n\nsplit\n\\(\\int_a^bf(x)\\,\\text{d}x=\\int_a^cf(x)\\,\\text{d}x+\\int_c^bf(x)\\,\\text{d}x\\)",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Integration"
     ]
   },
@@ -3284,7 +3361,7 @@
     "section": "The fundamental theorem of calculus",
     "text": "The fundamental theorem of calculus\nThe fundamental theorem of calculus is a bridge between the seemingly unrelated worlds of derivatives and integrals:\n\\[\n\\int_a^bf(x)\\,\\text{d}x=F(b)-F(a),\\quad f(x)=F'(x).\n\\]\nOn a practical level, it provides a route for evaluating definite integrals by antidifferentiation. The function you are trying to integrate (called the integrand) is \\(f\\). You imagine \\(f\\) is the derivative of some function \\(F\\) which you don’t yet know. If you can “undo” the differentiation and figure out what \\(F\\) is, then you can evaluate the integral.\n\n\n\n\n\n\nExample: antidifferentiation\n\n\n\nConsider \\[\n\\int_1^2\\frac{1}{x^2}\\,\\text{d}x.\n\\] What function, when you take its derivative, gives you \\(1/x^2=x^{-2}\\)? To answer that, you’re essentially undoing the power rule. After a while, you realize \\[\n\\frac{\\text{d}}{\\text{d}x}\\left(-\\frac{1}{x}\\right)=\\frac{1}{x^2},\n\\] and so\n\\[\n\\int_1^2\\frac{1}{x^2}\\,\\text{d}x=\\left[-\\frac{1}{x}\\right]_1^2=-\\frac{1}{2}-\\left(-\\frac{1}{1}\\right)=\\frac{1}{2}.\n\\]",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Integration"
     ]
   },
@@ -3295,7 +3372,7 @@
     "section": "Integration by substitution",
     "text": "Integration by substitution\nWhen you perform a \\(u\\)-substitution, you’re basically trying to undo the chain rule:\n\\[\n\\int_a^bf(g(x))g'(x)\\,\\text{d}x=\\int_{g(a)}^{g(b)}f(u)\\,\\text{d}u.\n\\]\nThe goal is ultimately to rewrite the integral in a nicer form so that you can recognize what the appropriate antiderivative is and then apply the FTOC.\n\n\n\n\n\n\nExample: \\(u\\)-sub\n\n\n\nCheck out this ugly thing:\n\\[\n\\int_0^2\n\\frac{x}{\\sqrt{x^2+1}}\\,\\text{d}x.\n\\]\nIt’s actually not too bad if you make the right substitution: \\(u=x^2+1\\) and \\(\\text{d}u=2x\\,\\text{d}x\\). Then you can polish it off by undoing the power rule:\n\\[\n\\begin{aligned}\n\\int_0^2\n\\frac{x}{\\sqrt{x^2+1}}\\,\\text{d}x\n&=\n\\frac{1}{2}\\int_1^5\\frac{\\text{d}u}{\\sqrt{u}}\n\\\\\n&=\n\\frac{1}{2}\\left[2u^{1/2}\\right]_1^5\n\\\\\n&=\n\\frac{1}{2}\n\\left(2\\sqrt{5}-2\\sqrt{1}\\right)\n\\\\\n&=\n\\sqrt{5}-1.\n\\end{aligned}\n\\]\nPlease please please do not forget to change the bounds of the integral when you do a substitution. We had \\(u=g(x)=x^2+1\\), so after the change of variables, the lower bound becomes \\(g(0)=1\\) and the upper bound becomes \\(g(2)=5\\).",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Integration"
     ]
   },
@@ -3306,7 +3383,7 @@
     "section": "Integration by parts",
     "text": "Integration by parts\nLet’s face it; this sucks. But sometimes you have to integrate a funky product, and there’s no way around it, so you do this:\n\\[\n\\int_a^b u(x) v'(x) \\, \\text{d}x\n    = \\left[u(x) v(x)\\right]_a^b - \\int_a^b v(x)u'(x)  \\, \\text{d}x\n\\]\nThrough the subtlest of black magic, you have to decide what parts of the integrand to treat as \\(u\\) and \\(\\text{d}v=v'\\,\\text{d}x\\). Typically you make \\(u\\) something that is easy to differentiate, and you make \\(\\text{d}v\\) something that is easy to antidifferentiate. Good luck!\n\n\n\n\n\n\nExample: IBP\n\n\n\nConsider this integral:\n\\[\n\\int_1^2\\frac{\\ln(x)}{x^2}\\text{d}x\n\\] \\(\\ln(x)\\) is easier to differentiate, and \\(1/x^2\\) is easier to antidifferentiate, which suggests the following choice:\n\\[\n\\begin{aligned}\nu&=\\ln(x)\\\\\n\\text{d}u&=\\frac{\\text{d}x}{x}\\\\\nv&=-x^{-1}\\\\\n\\text{d}v&=x^{-2}\\,\\text{d}x.\n\\end{aligned}\n\\]\nLet the fun begin:\n\\[\n\\begin{aligned}\n\\int_1^2\\frac{\\ln(x)}{x^2}\\text{d}x\n&=\n\\left[-\\frac{\\ln(x)}{x}\\right]_1^2\n+\n\\int_1^2\\frac{\\text{d}x}{x^2}\n\\\\\n&=\n\\left[-\\frac{\\ln(x)}{x}\\right]_1^2\n+\n\\left[-x^{-1}\\right]_1^2\n\\\\\n&=\n\\left[-\\frac{\\ln(2)}{2}-\\left(-\\frac{\\ln(1)}{1}\\right)\\right]\n+\n\\left[-\\frac{1}{2}-\\left(-\\frac{1}{1}\\right)\\right]\n\\\\\n&=\n-\\frac{\\ln(2)}{2} + \\frac{1}{2}.\n\\end{aligned}\n\\]",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Integration"
     ]
   },
@@ -3317,7 +3394,7 @@
     "section": "Improper integration (we will do this a lot!)",
     "text": "Improper integration (we will do this a lot!)\nAn improper integral is the limit of a definite integral as one or more of the bounds tend toward some extreme value, typically \\(\\pm\\infty\\). So a one-sided improper integral is defined like this:\n\\[\n\\int_a^\\infty f(x)\\,\\text{d}x=\\lim_{b\\to\\infty}\\int_a^bf(x)\\,\\text{d}x.\n\\]\nA two-sided improper integral is defined as the sum of two one-sided improper integrals, where we make use of the “splitting” property:\n\\[\n\\begin{aligned}\n\\int_{-\\infty}^\\infty f(x)\\,\\text{d}x\n&=\n\\int_{-\\infty}^c f(x)\\,\\text{d}x + \\int_c^\\infty f(x)\\,\\text{d}x\n\\\\\n&=\n\\lim_{a\\to-\\infty}\\int_a^cf(x)\\,\\text{d}x+\\lim_{b\\to\\infty}\\int_c^bf(x)\\,\\text{d}x.\n\\end{aligned}\n\\]\nYou can pick whatever value of \\(c\\) is most convenient. Zero will be a common choice.\n\n\n\n\n\n\nExample: improper integral with infinite bound\n\n\n\n\\[\n\\begin{aligned}\n\\int_0^\\infty e^{-x}\\,\\text{d}x\n&=\n\\lim_{b\\to\\infty}\\int_0^be^{-x}\\,\\text{d}x\n\\\\\n&=\n\\lim_{b\\to\\infty}\n[-e^{-x}]_0^b\n\\\\\n&=\n\\lim_{b\\to\\infty}\n\\left(-e^{-b}-(-e^{-0})\\right)\n\\\\\n&=\n-\\lim_{b\\to\\infty}\\frac{1}{e^b}+1\n\\\\\n&=\n-0+1\n\\\\\n&=1.\n\\end{aligned}\n\\]\n\n\n\n\n\n\n\n\nExample: improper integral with finite bound\n\n\n\nYou still might need improper integration, even for an ordinary-looking thing like this:\n\\[\n\\int_0^1\\frac{1}{\\sqrt{x}}\\text{d}x.\n\\]\nYou can see why if you plot the integrand:\n\n\n\n\n\n\n\n\nThere’s a vertical asymptote at \\(x=0\\), so this is also an improper integral:\n\\[\n\\begin{aligned}\n\\int_0^1\\frac{1}{\\sqrt{x}}\\text{d}x\n&=\n\\lim_{a\\to 0}\\int_a^1\\frac{1}{\\sqrt{x}}\\text{d}x\n\\\\\n&=\n\\lim_{a\\to 0}\\left[2x^{1/2}\\right]_a^1\n\\\\\n&=\n\\lim_{a\\to 0}\\left[2\\cdot 1^{1/2}-2a^{1/2}\\right]\n\\\\\n&=2-2\\cdot0^{1/2}\n\\\\\n&=\n2.\n\\end{aligned}\n\\]\n\\(2x^{1/2}\\) is continuous at 0, so to evaluate the limit you can just plug-in.",
     "crumbs": [
-      "Math Review",
+      "Math Helpers",
       "Integration"
     ]
   },
@@ -3877,7 +3954,7 @@
     "section": "",
     "text": "R provides basic commands that compute probabilities for our special families of distributions:\nEach family has its own commands, but the pattern is the same.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Computing probabilities"
     ]
   },
@@ -3888,7 +3965,7 @@
     "section": "Evaluating the PMF",
     "text": "Evaluating the PMF\nTo evaluate the PMF \\(P(X=x)\\), you use a d- command:\n\ndbinom(x, size, prob)\ndgeom(x, prob)\ndpois(x, lambda)\n\nFor example:\n\n# P(X = 0)\ndbinom(0, 5, 0.5)       \n\n[1] 0.03125\n\n# P(X = 1)\ndbinom(1, 5, 0.5)\n\n[1] 0.15625\n\n# P(X = 0 or X = 1)\ndbinom(c(0, 1), 5, 0.5)\n\n[1] 0.03125 0.15625\n\n# Add up every probability\nsum(dbinom(0:5, 5, 0.2))\n\n[1] 1\n\n# P(0 &lt;= Z &lt;- 6)\ndpois(0:6, 5)\n\n[1] 0.006737947 0.033689735 0.084224337 0.140373896 0.175467370 0.175467370\n[7] 0.146222808\n\n\nNotice that these d- commands are vectorized.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Computing probabilities"
     ]
   },
@@ -3899,7 +3976,7 @@
     "section": "Evaluating the CDF",
     "text": "Evaluating the CDF\nTo evaluate the CDF \\(F(q) = P(X\\leq q)\\), you use a p- command:\n\npbinom(q, size, prob)\npgeom(q, prob)\nppois(q, lambda)\n\nNotice right away that the p- commands and d- commands are consistent with one another:\n\n# P(X &lt;= 2)\npbinom(2, 5, 0.3)\n\n[1] 0.83692\n\n# P(X = 0) + P(X = 1) + P(X = 2)\nsum(dbinom(0:2, 5, 0.3))\n\n[1] 0.83692",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Computing probabilities"
     ]
   },
@@ -3910,7 +3987,7 @@
     "section": "",
     "text": "R is a programming language, like Python, C++, Java, Julia, etc. RStudio is an IDE (integrated development environment) that allows you to interacts with R in a convenient way. So if R is the engine, RStudio is the dashboard.\nWhen you launch RStudio, you see something like this:\n\n\n\n\n\nThere are four panes:\n\n(bottom left) this is the console. It’s a command line where you can type input and get output. At the very least, you can use R as an overgrown calculator;\n(top left) this is the editor. If you are writing a bunch of code you want to save for later (like on your labs), you can edit the text file here;\n(top right) this is the environment. It’s a list of all the data and variables you have loaded;\n(bottom right) this panel is multipurpose. Depending on the tab you select, it can display the file directory, the plot you created, the documentation, or your rendered pdf.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "The lay of the land"
     ]
   },
@@ -3921,7 +3998,7 @@
     "section": "",
     "text": "You can use the curve function to plot a line graph of a function. If that function were \\(f(x) = x^2\\) for example, you would type this:\n\ncurve(x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"f(x)\")\n\n\n\n\n\n\n\nThis function takes many arguments.\n\nthe first argument is a formula for the function you want to graph. The curve command implicitly assumes that x is the argument, and everything else is constant;\n\nfrom and to give the bounds of the \\(x\\)-axis;\nThis command is basically evaluating the function at many points and connecting the dots. n specifies how many dots. Too few, and the picture would look all cattywampus:\n\n\ncurve(x^2, from = -5, to = 5, n = 5)\n\n\n\n\n\n\n\nIf you want multiple lines on one graph, you can call curve multiple times, and include the add argument in all but the first call:\n\ncurve(1*x^2, from = -5, to = 5, n = 500, col = \"red\", ylab = \"\")\ncurve(2*x^2, from = -5, to = 5, n = 500, col = \"blue\", ylab = \"\", add = TRUE)\ncurve(3*x^2, from = -5, to = 5, n = 500, col = \"darkgreen\", ylab = \"\", add = TRUE)\nlegend(\"bottomleft\", c(\"a = 1\", \"a = 2\", \"a = 3\"), \n       col = c(\"red\", \"blue\", \"darkgreen\"), lty = 1, bty = \"n\")",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Plotting lines"
     ]
   },
@@ -3932,7 +4009,7 @@
     "section": "",
     "text": "Consider two vectors of the same length:\n\nx &lt;- c(0.3, 0.57, -0.11, -0.26, -0.77, pi, 4, 1, 1, 5)\ny &lt;- c(9, 4, 1, 8, 4, 1, 5, 7, 2, 0)\n\nIf you want to create a scatter plot of the (x, y) pairs, you can use the plot command:\n\nplot(x, y, pch = 19)\n\n\n\n\n\n\n\nIf you wanted, for example, to plot the PMF of the binomial distribution, then your x vector has every value in the range, and your y vector has all of the individual probabilities:\n\nn &lt;- 20\np &lt;- 0.5\nx &lt;- 0:n\npmf &lt;- dbinom(x, n, p)\nplot(x, pmf, pch = 19)\n\n\n\n\n\n\n\nNotice that we made use of the fact that the dbinom command is vectorized in its first argument; if you give it a vector with multiple values, it returns a vector with the probabilities for each one.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Plotting points"
     ]
   },
@@ -3943,7 +4020,7 @@
     "section": "",
     "text": "A vector in R is just an ordered set of values that have the same type. The easiest way to create one is to manually list out the values, separated by commas, inside c():\n\nmyvec &lt;- c(pi, 5, 3.6, 2, 9, 6000) \nmyvec\n\n[1]    3.141593    5.000000    3.600000    2.000000    9.000000 6000.000000\n\n\nIf you want to list out all of the integers between some min and max, you can use this shortcut:\n\n5:15\n\n [1]  5  6  7  8  9 10 11 12 13 14 15\n\n\nMore generally, if you want a vector of evenly spaced numbers between a min and a max, do this:\n\na &lt;- seq(0, 1, length.out = 11) \na\n\n [1] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0\n\n\nIf you want to create a “blank” vector that just has zeros in it, here you go:\n\nz &lt;- numeric(10)\nz\n\n [1] 0 0 0 0 0 0 0 0 0 0\n\n\nIn all of those cases, our vector contained numbers, but there is nothing special about numbers. Here is a vector where each value is a string (a piece of text):\n\npoetry &lt;- c(\"Mary\", \"had\", \"a\", \"little\", \"chainsaw\")\npoetry\n\n[1] \"Mary\"     \"had\"      \"a\"        \"little\"   \"chainsaw\"\n\n\nIf you have two vectors and you want to combine them into one, you can just use the c() command again. The “c” stands for “concatenate.” You’re concatenating, or joining, the vectors end-to-end:\n\nmore &lt;- c(\"whose\", \"chain\", \"was\", \"red\", \"as\")\n\nmasterpiece &lt;- c(poetry, more)\nmasterpiece\n\n [1] \"Mary\"     \"had\"      \"a\"        \"little\"   \"chainsaw\" \"whose\"   \n [7] \"chain\"    \"was\"      \"red\"      \"as\"",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Vectors"
     ]
   },
@@ -3954,7 +4031,7 @@
     "section": "",
     "text": "Using R for the calculator is like buying a plane ticket to get free peanuts. But I have done my taxes in R, so…\n\n2 + 2 # addition\n\n[1] 4\n\n5 - 2 # subtraction\n\n[1] 3\n\n0.5 * 6 # multiplication\n\n[1] 3\n\n3 / 4 # division\n\n[1] 0.75\n\nsqrt(2) # square root\n\n[1] 1.414214\n\n4 ^ 2 # exponent\n\n[1] 16\n\nexp(4.9) # base-e exponent\n\n[1] 134.2898\n\nlog(7) # natural log\n\n[1] 1.94591\n\nabs(-6) # absolute value\n\n[1] 6\n\nceiling(4.6) # round up\n\n[1] 5\n\nfloor(4.6) # round down\n\n[1] 4\n\nfactorial(4) # n! = n x (n-1) x ... x 2 x 1\n\n[1] 24\n\nchoose(8, 3) # binomial coefficient (we'll get there)\n\n[1] 56",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Basic math"
     ]
   },
@@ -3965,7 +4042,7 @@
     "section": "",
     "text": "The path of least resistance to using R in this class is to reserve a container from the Duke Container Manager. It’s hosted in the cloud, and it has all of the software you will ever need for this class.\n\nGo here: https://cmgr.oit.duke.edu/containers. You may have to log in with your NetID at some point;\n(The first time you do this, you look for STA240 under “Reservations available” on the righthand side, and click “reserve STA240”. After you do that once, STA240 will appear under “My reservations” on the lefthand side forever more)\nClick STA240 under “My reservations”;\nLogin;\nStart. It may take a while, but then RStudio should launch in your browser.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Getting started"
     ]
   },
@@ -3976,7 +4053,7 @@
     "section": "",
     "text": "The path of least resistance to using R in this class is to reserve a container from the Duke Container Manager. It’s hosted in the cloud, and it has all of the software you will ever need for this class.\n\nGo here: https://cmgr.oit.duke.edu/containers. You may have to log in with your NetID at some point;\n(The first time you do this, you look for STA240 under “Reservations available” on the righthand side, and click “reserve STA240”. After you do that once, STA240 will appear under “My reservations” on the lefthand side forever more)\nClick STA240 under “My reservations”;\nLogin;\nStart. It may take a while, but then RStudio should launch in your browser.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Getting started"
     ]
   },
@@ -3987,7 +4064,7 @@
     "section": "Option 2: download it yourself",
     "text": "Option 2: download it yourself\nOf course, you won’t have containers after you graduate, so maybe it’s a good idea to hike up your big girl pants and actually install something. It’s pretty easy:\n\nDownload R: https://cran.r-project.org\nDownload RStudio: https://posit.co/download/rstudio-desktop/\n(optional) Install tinytex: https://yihui.org/tinytex/",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "Getting started"
     ]
   },
@@ -3998,7 +4075,7 @@
     "section": "",
     "text": "The function sample() lets us pick random values. This is very useful in probability, because it allows us to simulate experiments like coin flips, die rolls, or drawing cards.\nThe pattern is:\nsample(x, size = n, replace = FALSE)",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "`sample`"
     ]
   },
@@ -4009,7 +4086,7 @@
     "section": "Example: coin flip",
     "text": "Example: coin flip\nThis chooses either heads (H) or tails (T) at random:\n\nsample(c(\"H\", \"T\"), size = 1)\n\n[1] \"H\"",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "`sample`"
     ]
   },
@@ -4020,7 +4097,7 @@
     "section": "Example: die roll",
     "text": "Example: die roll\nThis rolls a fair die twenty times:\n\nsample(1:6, size = 20, replace = TRUE)\n\n [1] 6 3 2 4 3 3 2 1 4 1 2 6 5 1 1 4 5 4 4 5\n\n\nWe need replace = TRUE here, because after rolling a die, the next roll can be the same number again.",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "`sample`"
     ]
   },
@@ -4031,96 +4108,70 @@
     "section": "Example: Spotify shuffle",
     "text": "Example: Spotify shuffle\nHere’s my playlist:\n\nplaylist &lt;- c(\"Ramble On\",\n              \"It's Raining Men\",\n              \"Tears\",\n              \"Tiptoe Through the Tulips\",\n              \"Gangsta's Paradise\",\n              \"Days of Wine and Roses\")\n\nThere are 6 songs, so if I generate a sample of size 6 without replacement, I will ultimately draw each song exactly once, but in a random order:\n\nsample(playlist, size = length(playlist), replace = FALSE)\n\n[1] \"Tears\"                     \"Tiptoe Through the Tulips\"\n[3] \"Gangsta's Paradise\"        \"Ramble On\"                \n[5] \"Days of Wine and Roses\"    \"It's Raining Men\"",
     "crumbs": [
-      "`R` Explainers",
+      "`R` Helpers",
       "`sample`"
     ]
   },
   {
-    "objectID": "distributions/continuous-normal.html",
-    "href": "distributions/continuous-normal.html",
-    "title": "Normal distribution",
+    "objectID": "apps/disease-testing.html",
+    "href": "apps/disease-testing.html",
+    "title": "You tested positive. Now what?",
     "section": "",
-    "text": "I usually have a little blurb up here describing when you might use the distribution, but the normal distribution is so central to probability and statistics that words fail. It shows up everywhere.",
-    "crumbs": [
-      "Distribution families",
-      "Normal"
-    ]
+    "text": "Testing positive for a disease is not exactly good news, but how alarmed you should be ultimately depends on a few factors: the accuracy of the test and the overall rarity of the disease (the so-called base rate). Before you walk into the doctor’s office, the probability that you are sick is \\(P(D=+)\\), the prevalence. This is the unconditional (or marginal) probability that a random member of the population (ie you in that moment) is sick. After you test positive, the revised or conditional probability that you have the disease is given by Bayes’ theorem:\n\\[\n\\begin{aligned}\nP(D = +\\,|\\,T=+)\n&=\n\\frac{{\\color{blue}{P(T=+\\,|\\,D=+)}}{\\color{red}{P(D=+)}}}{P(T=+)}\n\\\\\n&=\n\\frac{{\\color{blue}{P(T=+\\,|\\,D=+)}}{\\color{red}{P(D=+)}}}{{\\color{blue}{P(T=+\\,|\\,D=+)}}{\\color{red}{P(D=+)}}+[1-{\\color{green}{P(T=-\\,|\\,D=-)}}][1-{\\color{red}{P(D=+)}}]}\n\\\\\n&=\n\\frac{{\\color{blue}{\\text{TPR}}}\\times{\\color{red}{\\text{PREV}}}}{{\\color{blue}{\\text{TPR}}}\\times{\\color{red}{\\text{PREV}}}+(1-{\\color{green}{\\text{TNR}}})(1-{\\color{red}{\\text{PREV}}})}.\n\\end{aligned}\n\\]\n\\(P(T=+\\,|\\,D=+)\\) is the true positive rate or sensitivity: the probability that a sick person is correctly diagnosed. \\(P(T=-\\,|\\,D=-)\\) is the true negative rate or specificity: the probability that a well person is correctly diagnosed. It is the nonlinear interaction of three numbers (prevalence, TPR, and TNR) that determines the revised likelihood that you have the disease. Two numbers interacting linearly is about all a regular human can handle off the dome, hence people are generally bad at reasoning about this stuff.\nThe application below visualizes the sample space for our simple model of disease testing. We have \\(D\\in\\{-,,\\,+\\}\\) and \\(T\\in\\{-,\\,+\\}\\), and so there are four individual outcomes:\n\n\\(P(T = +\\cap D=+)=P(T=+\\,|\\,D=+)P(D=+)=\\text{TPR}\\times P(D=+)\\);\n\\(P(T = +\\cap D=-)=P(T=+\\,|\\,D=-)P(D=-)=\\text{FPR}\\times P(D=-)\\);\n\\(P(T = -\\cap D=-)=P(T=-\\,|\\,D=-)P(D=-)=\\text{TNR}\\times P(D=-)\\);\n\\(P(T = -\\cap D=+)=P(T=-\\,|\\,D=+)P(D=+)=\\text{FNR}\\times P(D=+)\\).\n\nThe application plots the \\([0,\\,1]\\times[0,\\,1]\\) unit square, partitioned into four rectangles representing the outcomes listed above. The area of each rectangle is equal to the probability of that outcome.\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 650\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  \n  # Application title\n  titlePanel(\"The sample space of a simple diagnostic test\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"TPR\",\n                  \"Sensitivity (TPR):\",\n                  min = 0,\n                  max = 1,\n                  value = 0.5),\n      sliderInput(\"TNR\",\n                  \"Specificity (TNR):\",\n                  min = 0,\n                  max = 1,\n                  value = 0.5),\n      sliderInput(\"p\",\n                  \"Prevalence:\",\n                  min = 0,\n                  max = 1,\n                  value = 0.5)\n    ),\n    \n    mainPanel(\n      plotOutput(\"distPlot\"),\n      \n      # ---- Legend goes here ----\n      tags$div(\n        style = \"margin-top:20px;\",\n        tags$h4(\"Legend\"),\n        tags$div(style=\"display:flex; align-items:center; margin-bottom:5px;\",\n                 tags$div(style=\"width:20px; height:20px; background-color:rgba(255,0,0,0.25); margin-right:10px;\"),\n                 \"True Positive (T=+, D=+)\"\n        ),\n        tags$div(style=\"display:flex; align-items:center; margin-bottom:5px;\",\n                 tags$div(style=\"width:20px; height:20px; background-color:rgba(0,255,0,0.25); margin-right:10px;\"),\n                 \"False Negative (T=-, D=+)\"\n        ),\n        tags$div(style=\"display:flex; align-items:center; margin-bottom:5px;\",\n                 tags$div(style=\"width:20px; height:20px; background-color:rgba(0,0,255,0.25); margin-right:10px;\"),\n                 \"True Negative (T=-, D=-)\"\n        ),\n        tags$div(style=\"display:flex; align-items:center; margin-bottom:5px;\",\n                 tags$div(style=\"width:20px; height:20px; background-color:rgba(255,165,0,0.25); margin-right:10px;\"),\n                 \"False Positive (T=+, D=-)\"\n        )\n      )\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  \n  output$distPlot &lt;- renderPlot({\n    \n    p &lt;- input$p\n    TNR &lt;-input$TNR\n    TPR &lt;- input$TPR\n    \n    FNR &lt;- 1 - TPR\n    FPR &lt;- 1 - TNR\n    \n    par(mar = c(8, 8, 1, 8))\n    \n    plot(0, col = \"white\", xlim = c(0, 1), ylim = c(0, 1),\n         xaxt = \"n\", yaxt = \"n\", bty = \"n\", xlab = \"\", ylab = \"\")\n    \n    polygon(c(0, p, p, 0), c(FNR, FNR, 1.0, 1.0), col = rgb(1, 0, 0, alpha = 0.25), border = NA)\n    polygon(c(0, p, p, 0), c(0, 0, FNR, FNR), col = rgb(0, 1, 0, alpha = 0.25), border = NA)\n    polygon(c(p, 1, 1, p), c(0, 0, TNR, TNR), col = rgb(0, 0, 1, alpha = 0.25), border = NA)\n    polygon(c(p, 1, 1, p), c(TNR, TNR, 1, 1), col = rgb(1, 0.647, 0, alpha = 0.25), border = NA)\n    \n    mtext(\"TNR\", side = 4, at = TNR / 2, las = 1)\n    mtext(\"FPR\", side = 4, at = (1 + TNR) / 2, las = 1)\n    \n    mtext(\"TPR\", side = 2, at = (1 + FNR) / 2, las = 1, line = 2)\n    mtext(\"FNR\", side = 2, at = FNR / 2, las = 1, line = 2)\n    \n    mtext(\"p(D = +)\", side = 1, at = p / 2, las = 1, line = 2)\n    mtext(\"p(D = -)\", side = 1, at = (1 + p) / 2, las = 1, line = 2)\n    \n    mtext(c(\"0\", \"1\"), side = 1, at = c(0, 1), las = 1)\n    mtext(c(\"0\", \"1\"), side = 2, at = c(0, 1), las = 1)\n  })\n}\n\nshinyApp(ui = ui, server = server)\n\n\nThe application below displays how testing positive shifts the probability of disease from \\(P(D=+)\\) to \\(P(D = +\\,|\\,T=+)\\). The size of the revision ultimately depends on how big \\(P(D=+)\\) was to begin with, and how good the test is (TPR and TNR). Play around with different values and see what happens:\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\nlibrary(shiny)\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n\n    # Application title\n    titlePanel(\"What can a diagnostic test teach you?\"),\n\n    # Sidebar with a slider input for number of bins \n    sidebarLayout(\n        sidebarPanel(\n            sliderInput(\"TPR\",\n                        \"Sensitivity (TPR):\",\n                        min = 0,\n                        max = 1,\n                        value = 0.5),\n            sliderInput(\"TNR\",\n                        \"Specificity (TNR):\",\n                        min = 0,\n                        max = 1,\n                        value = 0.5)\n        ),\n\n        # Show a plot of the generated distribution\n        mainPanel(\n           plotOutput(\"distPlot\")\n        )\n    )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n\n    output$distPlot &lt;- renderPlot({\n      TPR &lt;- input$TPR\n      TNR &lt;- input$TNR\n      P &lt;- seq(0, 1, length.out = 1000)\n      B &lt;- TPR * P / (TPR * P + (1 - TNR) * (1 - P))\n\n      # draw the histogram with the specified number of bins\n      par(mar = c(5, 5, 5, 0.5))\n      plot(P, B, type = \"l\", xlim = c(0, 1), ylim = c(0, 1),\n           xlab = \"P(D = +)\", ylab = \"P(D = + | T = +)\",\n           lwd = 2, cex.lab = 2,\n           panel.first = abline(a = 0, b = 1, lty = 2, lwd = 2, col = \"grey\"))\n    })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)"
   },
   {
-    "objectID": "distributions/continuous-normal.html#basic-properties",
-    "href": "distributions/continuous-normal.html#basic-properties",
-    "title": "Normal distribution",
-    "section": "Basic properties",
-    "text": "Basic properties\n\n\n\n\n\n\n\nNotation\n\\(X\\sim\\text{N}(\\mu,\\,\\sigma^2)\\)\n\n\nRange\n\\(\\mathbb{R}=(-\\infty,\\,\\infty)\\)\n\n\nParameter space\n\\(\\begin{matrix}-\\infty&lt;\\mu&lt;\\infty\\\\\\sigma^2&gt;0\\end{matrix}\\)\n\n\nPDF\n\\(f(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\\)\n\n\nExpectation\n\\(\\mu\\)\n\n\nVariance\n\\(\\sigma^2\\)",
-    "crumbs": [
-      "Distribution families",
-      "Normal"
-    ]
-  },
-  {
-    "objectID": "distributions/continuous-normal.html#r-commands",
-    "href": "distributions/continuous-normal.html#r-commands",
-    "title": "Normal distribution",
-    "section": "\nR commands",
-    "text": "R commands\nHere is the documentation for the suite of commands that let you work with the normal distribution in R:\n\ndnorm(x, mean = 0, sd = 1) # PDF\npnorm(q, mean = 0, sd = 1) # CDF: P(X &lt;= q)\nrnorm(n, mean = 0, sd = 1) # random numbers\n\n\n\n\n\n\n\nThe commands take the standard deviation, not the variance!\n\n\n\nYou will get burned by this at least once. I guarantee it. But please take note. If you want to compute \\(P(X\\leq -2.4)\\) for \\(X\\sim\\text{N}(4, 9)\\), you call pnorm(-2.4, 4, 3), because \\(\\text{sd}(X)=\\sqrt{\\text{var}(X)}=3\\).",
-    "crumbs": [
-      "Distribution families",
-      "Normal"
-    ]
-  },
-  {
-    "objectID": "distributions/continuous-normal.html#play-around",
-    "href": "distributions/continuous-normal.html#play-around",
-    "title": "Normal distribution",
-    "section": "Play around!",
-    "text": "Play around!\nAs we have seen, the parameters \\(\\mu\\) and \\(\\sigma\\) have multiple interpretations. From a probabilistic point-of-view, they are the mean \\(\\mu=E(X)\\) and the standard deviation \\(\\sigma=\\sqrt{\\text{var}(X)}\\). From a purely geometric point-of-view, they control the shape of the density curve. \\(\\mu\\) is the location of the peak, and \\(\\sigma\\) controls how far the inflection points are from \\(\\mu\\). You worked that out on Problem Set 0.\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 700\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  titlePanel(\"Normal distribution CDF and PDF\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"mu\", \"Mean (μ):\", \n                  min = -5, max = 5, value = 0, step = 0.1),\n      sliderInput(\"sigma\", \"Standard Deviation (σ):\", \n                  min = 0.5, max = 3, value = 1, step = 0.1)\n    ),\n    \n    mainPanel(\n      plotOutput(\"distPlot\", height = \"600px\")\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$distPlot &lt;- renderPlot({\n    mu &lt;- input$mu\n    sigma &lt;- input$sigma\n    \n    # Fixed x range\n    x &lt;- seq(-10, 10, length.out = 1000)\n    \n    # Compute values\n    pdf_vals &lt;- dnorm(x, mean = mu, sd = sigma)\n    cdf_vals &lt;- pnorm(x, mean = mu, sd = sigma)\n    \n    # Inflection points at mu ± sigma\n    inflect_left &lt;- mu - sigma\n    inflect_right &lt;- mu + sigma\n    \n    # Fixed y limits\n    pdf_ylim &lt;- c(0, 0.8)\n    \n    par(mfrow = c(2, 1), mar = c(4, 4, 2, 1))\n    \n    # --- CDF Plot ---\n    plot(x, cdf_vals, type = \"l\", lwd = 2, col = \"blue\",\n         xlim = c(-10, 10), ylim = c(0, 1),\n         main = \"Cumulative Distribution Function (CDF)\",\n         xlab = \"\", ylab = \"F(x)\")\n    abline(h = c(0, 1), col = \"gray80\", lty = 2)\n    abline(v = mu, col = \"gray60\", lty = 3)\n    \n    # --- PDF Plot ---\n    plot(x, pdf_vals, type = \"l\", lwd = 2, col = \"darkred\",\n         xlim = c(-10, 10), ylim = pdf_ylim,\n         main = \"Probability Density Function (PDF)\",\n         xlab = \"x\", ylab = \"f(x)\")\n    \n    # Vertical lines at mean and inflection points\n    abline(v = mu, col = \"gray60\", lty = 3)\n    abline(v = c(inflect_left, inflect_right), col = \"gray70\", lty = 2)\n    \n    # Arrows showing sigma distance\n    y_arrow &lt;- 0.05\n    arrows(mu, y_arrow, inflect_right, y_arrow, code = 3, angle = 10, length = 0.1)\n    arrows(mu, y_arrow, inflect_left, y_arrow, code = 3, angle = 10, length = 0.1)\n    \n    # Label σ between mean and inflection points\n    text(mu + sigma / 2, y_arrow + 0.03, expression(sigma), cex = 1.1)\n    text(mu - sigma / 2, y_arrow + 0.03, expression(sigma), cex = 1.1)\n    \n    # Label μ in the margin below the x-axis\n    mtext(expression(mu), side = 1, line = 2.2, at = mu, cex = 1.2)\n  })\n}\n\nshinyApp(ui = ui, server = server)",
-    "crumbs": [
-      "Distribution families",
-      "Normal"
-    ]
-  },
-  {
-    "objectID": "distributions/continuous-uniform.html",
-    "href": "distributions/continuous-uniform.html",
-    "title": "Continuous uniform distribution",
+    "objectID": "distributions/continuous-gamma.html",
+    "href": "distributions/continuous-gamma.html",
+    "title": "Gamma distribution",
     "section": "",
-    "text": "If \\(X\\) is a continuous random quantity that is “equally likely” to take on any value in a bounded interval \\([a,\\, b]\\), then we can model it with the continuous uniform distribution.",
+    "text": "Notation\n\\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\)\n\n\nRange\n\\([0,\\,\\infty)\\)\n\n\nParameter space\n\\(\\alpha,\\,\\beta&gt;0\\)\n\n\nPDF\n\\(f(x)=\\begin{cases}\\frac{\\beta^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\beta x} &x\\geq 0\\\\0 & x&lt;0.\\end{cases}\\)\n\n\nMGF\n\n\\(M(t)=\\left(\\frac{\\beta}{\\beta-t}\\right)^\\alpha\\), \\(t&lt;\\beta\\)\n\n\n\nExpectation\n\\(\\alpha/\\beta\\)\n\n\nVariance\n\\(\\alpha/\\beta^2\\)",
     "crumbs": [
-      "Distribution families",
-      "Continuous uniform"
+      "Distribution Families",
+      "Gamma"
     ]
   },
   {
-    "objectID": "distributions/continuous-uniform.html#basic-properties",
-    "href": "distributions/continuous-uniform.html#basic-properties",
-    "title": "Continuous uniform distribution",
-    "section": "Basic properties",
-    "text": "Basic properties\n\n\n\n\n\n\n\nNotation\n\\(X\\sim\\text{Unif}(a,\\,b)\\)\n\n\nRange\n\\([a,\\,b]\\)\n\n\nParameter space\n\\(-\\infty &lt; a &lt; b &lt; \\infty\\)\n\n\nPDF\n\\(f(x)=\\begin{cases}\\frac{1}{b-a} & a\\leq x\\leq b\\\\0&\\text{else}\\end{cases}\\)\n\n\nCDF\n\\(F(x)=\\begin{cases}0 & x &lt; a\\\\\\frac{x-a}{b-a} & a\\leq x\\leq b\\\\1&b&lt;x\\end{cases}\\)\n\n\nExpectation\n\\(\\frac{a+b}{2}\\)\n\n\nVariance\n\\((b-a)^2/12\\)",
+    "objectID": "distributions/continuous-gamma.html#basic-properties",
+    "href": "distributions/continuous-gamma.html#basic-properties",
+    "title": "Gamma distribution",
+    "section": "",
+    "text": "Notation\n\\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\)\n\n\nRange\n\\([0,\\,\\infty)\\)\n\n\nParameter space\n\\(\\alpha,\\,\\beta&gt;0\\)\n\n\nPDF\n\\(f(x)=\\begin{cases}\\frac{\\beta^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\beta x} &x\\geq 0\\\\0 & x&lt;0.\\end{cases}\\)\n\n\nMGF\n\n\\(M(t)=\\left(\\frac{\\beta}{\\beta-t}\\right)^\\alpha\\), \\(t&lt;\\beta\\)\n\n\n\nExpectation\n\\(\\alpha/\\beta\\)\n\n\nVariance\n\\(\\alpha/\\beta^2\\)",
     "crumbs": [
-      "Distribution families",
-      "Continuous uniform"
+      "Distribution Families",
+      "Gamma"
     ]
   },
   {
-    "objectID": "distributions/continuous-uniform.html#r-commands",
-    "href": "distributions/continuous-uniform.html#r-commands",
-    "title": "Continuous uniform distribution",
+    "objectID": "distributions/continuous-gamma.html#r-commands",
+    "href": "distributions/continuous-gamma.html#r-commands",
+    "title": "Gamma distribution",
     "section": "\nR commands",
-    "text": "R commands\nFor the second version of the distribution, R provides:\n\ndunif(x, min, max) # PDF\npunif(q, min, max) # CDF: P(X &lt;= q)\nrunif(n, min, max) # random numbers",
+    "text": "R commands\nHere is the documentation for the suite of commands that let you work with the gamma distribution in R:\n\ndgamma(x, shape, rate = 1) # PDF\npgamma(q, shape, rate = 1) # CDF: P(X &lt;= q)\nrgamma(n, shape, rate = 1) # random numbers",
     "crumbs": [
-      "Distribution families",
-      "Continuous uniform"
+      "Distribution Families",
+      "Gamma"
     ]
   },
   {
-    "objectID": "distributions/continuous-uniform.html#play-around",
-    "href": "distributions/continuous-uniform.html#play-around",
-    "title": "Continuous uniform distribution",
+    "objectID": "distributions/continuous-gamma.html#play-around",
+    "href": "distributions/continuous-gamma.html#play-around",
+    "title": "Gamma distribution",
     "section": "Play around!",
-    "text": "Play around!\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 600\n#| fig-asp: 1\n\nlibrary(shiny)\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n  \n  # Application title\n  titlePanel(\"Uniform distribution CDF and PDF\"),\n  \n  # Sidebar with a slider input for number of bins \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"a\",\n                  \"Lower bound (a):\",\n                  min = 0,\n                  max = 2,\n                  value = 1,\n                  step = 0.1),\n      sliderInput(\"b\",\n                  \"Upper bound (b):\",\n                  min = 3,\n                  max = 5,\n                  value = 4,\n                  step = 0.1)\n    ),\n    \n    # Show a plot of the generated distribution\n    mainPanel(\n      plotOutput(\"distPlot\")\n    )\n  )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n  \n  output$distPlot &lt;- renderPlot({\n    \n    a &lt;- input$a\n    b &lt;- input$b\n\n    par(mfrow = c(2, 1), mar = c(4, 4, 2, 2))\n    \n    curve(punif(x, min = a, max = b), from = -1, to = 6, n = 1000,\n          ylab = \"\", col = \"red\", xlim = c(0, 5))\n    curve(0*x, from = -1, to = a, n = 1000, \n          ylim = c(0, 1), ylab = \"\", col = \"red\", xlim = c(0, 5))\n    curve(dunif(x, min = a, max = b), from = a, to = b, n = 1000, \n          ylim = c(0, 1), ylab = \"\", col = \"red\", add = TRUE)\n    curve(0*x, from = b, to = 6, n = 1000, \n          ylim = c(0, 1), ylab = \"\", col = \"red\", add = TRUE)\n  })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)",
+    "text": "Play around!\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 700\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  titlePanel(\"Gamma distribution CDF and PDF\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"alpha\", \"Shape (α):\",\n                  min = 0.5, max = 5, value = 2, step = 0.1),\n      sliderInput(\"beta\", \"Rate (β):\",\n                  min = 0.2, max = 2, value = 0.5, step = 0.05),\n      hr(),\n      verbatimTextOutput(\"moments\")\n    ),\n    \n    mainPanel(\n      plotOutput(\"gammaPlot\", height = \"600px\")\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$moments &lt;- renderText({\n    alpha &lt;- input$alpha\n    beta  &lt;- input$beta\n    mu &lt;- alpha / beta\n    sd &lt;- sqrt(alpha) / beta\n    paste0(\"E(X) = \", round(mu, 3),\n           \"\\nsd(X) = \", round(sd, 3))\n  })\n  \n  output$gammaPlot &lt;- renderPlot({\n    alpha &lt;- input$alpha\n    beta  &lt;- input$beta\n    \n    # Fixed plotting range\n    x_min &lt;- -2\n    x_max &lt;- 25\n    x &lt;- seq(x_min, x_max, length.out = 2000)\n    \n    # PDF and CDF\n    pdf_vals &lt;- ifelse(x &gt;= 0, dgamma(x, shape = alpha, rate = beta), 0)\n    cdf_vals &lt;- ifelse(x &gt;= 0, pgamma(x, shape = alpha, rate = beta), 0)\n    \n    mu &lt;- alpha / beta\n    \n    # Fixed y-limits\n    pdf_ylim &lt;- c(0, 0.8)\n    cdf_ylim &lt;- c(0, 1)\n    \n    par(mfrow = c(2, 1), mar = c(4, 4, 2, 1))\n    \n    # --- CDF ---\n    plot(x, cdf_vals, type = \"l\", lwd = 2, col = \"blue\",\n         xlim = c(x_min, x_max), ylim = cdf_ylim,\n         main = \"Cumulative Distribution Function (CDF)\",\n         xlab = \"\", ylab = \"F(x)\")\n    abline(h = c(0, 1), col = \"gray80\", lty = 2)\n    #abline(v = mu, col = \"gray60\", lty = 3)\n    \n    # --- PDF ---\n    plot(x, pdf_vals, type = \"l\", lwd = 2, col = \"darkred\",\n         xlim = c(x_min, x_max), ylim = pdf_ylim,\n         main = \"Probability Density Function (PDF)\",\n         xlab = \"x\", ylab = \"f(x)\")\n    #abline(v = mu, col = \"gray60\", lty = 3)\n    \n    # Label E(X) with mtext along x-axis\n    if (mu &gt;= x_min && mu &lt;= x_max) {\n      mtext(\"E(X)\",\n            side = 1, line = 2.2, at = mu, cex = 1.0)\n    }\n  })\n}\n\nshinyApp(ui = ui, server = server)",
     "crumbs": [
-      "Distribution families",
-      "Continuous uniform"
+      "Distribution Families",
+      "Gamma"
+    ]
+  },
+  {
+    "objectID": "distributions/continuous-gamma.html#derivations",
+    "href": "distributions/continuous-gamma.html#derivations",
+    "title": "Gamma distribution",
+    "section": "Derivations",
+    "text": "Derivations\n\n\n\n\n\n\nMoment-generating function\n\n\n\n\n\nThis is classic “massage and squint.” Let \\(t\\in(-\\infty,\\,\\beta)\\). Then\n\\[\n      \\begin{align*}\n          M_X(t)&=E\\left(e^{tX}\\right)\\\\\n          &=\\int_0^\\infty e^{tx}\\frac{\\beta^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\beta x}\\,\\text{d} x && \\text{LOTUS}\\\\\n          &=\\frac{\\beta^\\alpha}{\\Gamma(\\alpha)}\\int_0^\\infty x^{\\alpha-1}e^{tx}e^{-\\beta x}\\,\\text{d} x && \\text{pull out constant}\\\\\n          &=\\frac{\\beta^\\alpha}{\\Gamma(\\alpha)}\\int_0^\\infty x^{\\alpha-1}e^{tx-\\beta x}\\,\\text{d} x&& \\text{combine base-e terms}\\\\\n`         &=\\frac{\\beta^\\alpha}{\\Gamma(\\alpha)}\\int_0^\\infty x^{\\alpha-1}e^{(t-\\beta) x}\\,\\text{d} x&& \\text{factor out }x\\\\\n`         &=\\frac{\\beta^\\alpha}{\\Gamma(\\alpha)}\\int_0^\\infty x^{\\alpha-1}e^{-(\\beta-t) x}\\,\\text{d} x&& \\text{factor out -1}\\\\\n          &=\\frac{\\beta^\\alpha}{\\Gamma(\\alpha)}\\int_0^\\infty \\underbrace{x^{\\alpha-1}e^{-(\\beta-t)x}}_{\\text{kernel of Gamma}(\\alpha,\\,\\beta-t)}\\,\\text{d} x && \\text{recognize}\\\\\n          &=\\frac{\\beta^\\alpha}{{\\Gamma(\\alpha)}}\\frac{{\\Gamma(\\alpha)}}{(\\beta-t)^\\alpha}\\\\\n          &=\\left(\\frac{\\beta}{\\beta-t}\\right)^\\alpha.\n      \\end{align*}\n\\]\nIn order to invoke the gamma density kernel, we require that \\(t&lt;\\beta\\) so that the rate parameter of the implied gamma is positive.",
+    "crumbs": [
+      "Distribution Families",
+      "Gamma"
     ]
   },
   {
@@ -4130,7 +4181,7 @@
     "section": "",
     "text": "The Poisson distribution can be used to model the number of random arrivals in a given window of time:\nThe distribution is governed by one parameter \\(\\lambda&gt;0\\) which is called the rate.",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Poisson"
     ]
   },
@@ -4141,7 +4192,7 @@
     "section": "Basic properties",
     "text": "Basic properties\n\n\nNotation\n\\(X\\sim\\text{Poisson}(\\lambda)\\)\n\n\nRange\n\\(\\mathbb{N}=\\{0,\\,1,\\,2,\\,3,\\,4,\\,...\\}\\)\n\n\nParameter space\n\\(\\lambda&gt;0\\)\n\n\nPMF\n\\(P(X=k)=e^{-\\lambda}\\frac{\\lambda^k}{k!}\\)\n\n\nExpectation\n\\(\\lambda\\)\n\n\nVariance\n\\(\\lambda\\)",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Poisson"
     ]
   },
@@ -4152,7 +4203,7 @@
     "section": "\nR commands",
     "text": "R commands\nHere is the documentation for the suite of commands that let you work with the Poisson distribution in R:\n\ndpois(x, lambda) # PMF: P(X = x)\nppois(q, lambda) # CDF: P(X &lt;= q)\nrpois(n, lambda) # random numbers",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Poisson"
     ]
   },
@@ -4163,7 +4214,7 @@
     "section": "Play around!",
     "text": "Play around!\nAs \\(\\lambda\\) grows, the distribution shifts to the right and gets wider, which makes sense since \\(\\lambda\\) acts as both the mean and variance. Furthermore, the shape of the PMF becomes more bell-like as \\(\\lambda\\) gets big. This is not an accident.\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\nlibrary(shiny)\n\ndiscrete_pmf &lt;- function(x, p, xlim = c(min(x) - 1, max(x) + 1), label = \"\", add_mean = FALSE){\n  plot(x, p,\n       pch = 19,\n       cex = 0.5,\n       xlab = \"\",\n       ylab = \"\",\n       main = \"\",\n       ylim = c(0, 0.4),\n       yaxs = \"i\",\n       yaxt = \"n\",\n       xlim = xlim,\n       xaxt = \"n\",\n       bty = \"n\"\n  )\n  segments(x,\n           rep(0, length(x) + 1),\n           x1 = x,\n           y1 = p,\n           lwd = 3\n  )\n  axis(1, at = floor(xlim[1]):ceiling(xlim[2]), cex.axis = 1)\n  axis(2, at = seq(0, 1, length.out = 11), las = 1, cex.axis = 1.5)\n  legend(\"topright\", label, bty = \"n\", cex = 3)\n  if(add_mean == TRUE){\n    mtext(\"E(X)\", side = 1, at = sum(x * p), col = \"red\", line = 2)\n  }\n}\n\ndiscrete_cdf &lt;- function(x, p, xlim = c(min(x) - 1, max(x) + 1), label = \"\"){\n  closeddot = cumsum(p)\n  opencircle = c(0, closeddot[1:length(x)-1])\n  plot(x, closeddot, pch = 19, cex = 0.5,\n       ylim = c(0, 1),\n       ylab = \"\", main = \"\", xlab = \"\",\n       yaxt = \"n\",\n       xlim = xlim,\n       xaxt = \"n\",\n       #yaxs = \"i\", \n       bty = \"n\")\n  points(x, opencircle, cex = 0.5)\n  segments(c(xlim[1], x), c(0, closeddot), c(x, xlim[2]), c(0, closeddot), lwd = 1)\n  axis(1, at = floor(xlim[1]):ceiling(xlim[2]), cex.axis = 1)\n  axis(2, at = seq(0, 1, length.out = 11), las = 1, cex.axis = 1.5)\n  legend(\"bottomright\", label, bty = \"n\", cex = 3)\n}\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n  \n  # Application title\n  titlePanel(\"Poisson distribution CDF and PMF\"),\n  \n  # Sidebar with a slider input for number of bins \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"lambda\",\n                  \"Rate (λ):\",\n                  min = 0,\n                  max = 100,\n                  value = 1,\n                  step = 0.1)\n    ),\n    \n    # Show a plot of the generated distribution\n    mainPanel(\n      plotOutput(\"distPlot\")\n    )\n  )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n  \n  output$distPlot &lt;- renderPlot({\n    \n    lambda &lt;- input$lambda\n    n &lt;- 100\n\n    par(mfrow = c(2, 1), mar = c(4, 4, 2, 2))\n    \n    discrete_cdf(0:n, dpois(0:n, lambda))\n    discrete_pmf(0:n, dpois(0:n, lambda), add_mean = FALSE)\n    mtext(\"E(X)\", side = 1, at = lambda, col = \"red\", line = 2)\n  })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Poisson"
     ]
   },
@@ -4174,7 +4225,7 @@
     "section": "",
     "text": "The geometric distribution is based on a (possibly infinite) sequence of independent and identically distributed binary trials, each with probability of success \\(p\\). There are two versions:",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Geometric"
     ]
   },
@@ -4185,7 +4236,7 @@
     "section": "Basic properties",
     "text": "Basic properties\nFor the first version of the distribution that we saw in lecture, the properties are:\n\n\nNotation\n\\(X\\sim\\text{Geom}(p)\\)\n\n\nRange\n\\(\\{1,\\,2,\\,3,\\,4,\\,...\\}\\)\n\n\nParameter space\n\\(p\\in[0,\\,1]\\)\n\n\nPMF\n\\(P(X=k)=(1-p)^{k-1}p\\)\n\n\nExpectation\n\\(1/p\\)\n\n\nVariance\n\\(\\frac{1-p}{p^2}\\)",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Geometric"
     ]
   },
@@ -4196,7 +4247,7 @@
     "section": "\nR commands",
     "text": "R commands\nFor the second version of the distribution, R provides:\n\ndgeom(x, prob) # PMF: P(X = x)\npgeom(q, prob) # CDF: P(X &lt;= q)\nrgeom(n, prob) # random numbers",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Geometric"
     ]
   },
@@ -4207,7 +4258,7 @@
     "section": "Play around!",
     "text": "Play around!\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\nlibrary(shiny)\n\ndiscrete_pmf &lt;- function(x, p, xlim = c(min(x) - 1, max(x) + 1), label = \"\", add_mean = FALSE){\n  plot(x, p,\n       pch = 19,\n       cex = 0.5,\n       xlab = \"\",\n       ylab = \"\",\n       main = \"\",\n       ylim = c(0, 0.4),\n       yaxs = \"i\",\n       yaxt = \"n\",\n       xlim = xlim,\n       xaxt = \"n\",\n       bty = \"n\"\n  )\n  segments(x,\n           rep(0, length(x) + 1),\n           x1 = x,\n           y1 = p,\n           lwd = 3\n  )\n  axis(1, at = floor(xlim[1]):ceiling(xlim[2]), cex.axis = 1)\n  axis(2, at = seq(0, 1, length.out = 11), las = 1, cex.axis = 1.5)\n  legend(\"topright\", label, bty = \"n\", cex = 3)\n  if(add_mean == TRUE){\n    mtext(\"E(X)\", side = 1, at = sum(x * p), col = \"red\", line = 2)\n  }\n}\n\ndiscrete_cdf &lt;- function(x, p, xlim = c(min(x) - 1, max(x) + 1), label = \"\"){\n  closeddot = cumsum(p)\n  opencircle = c(0, closeddot[1:length(x)-1])\n  plot(x, closeddot, pch = 19, cex = 0.5,\n       ylim = c(0, 1),\n       ylab = \"\", main = \"\", xlab = \"\",\n       yaxt = \"n\",\n       xlim = xlim,\n       xaxt = \"n\",\n       #yaxs = \"i\", \n       bty = \"n\")\n  points(x, opencircle, cex = 0.5)\n  segments(c(xlim[1], x), c(0, closeddot), c(x, xlim[2]), c(0, closeddot), lwd = 1)\n  axis(1, at = floor(xlim[1]):ceiling(xlim[2]), cex.axis = 1)\n  axis(2, at = seq(0, 1, length.out = 11), las = 1, cex.axis = 1.5)\n  legend(\"bottomright\", label, bty = \"n\", cex = 3)\n}\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n  \n  # Application title\n  titlePanel(\"Geometric distribution CDF and PMF\"),\n  \n  # Sidebar with a slider input for number of bins \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"p\",\n                  \"Probability of success (p):\",\n                  min = 0,\n                  max = 1,\n                  value = 0.5,\n                  step = 0.01)\n    ),\n    \n    # Show a plot of the generated distribution\n    mainPanel(\n      plotOutput(\"distPlot\")\n    )\n  )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n  \n  output$distPlot &lt;- renderPlot({\n    \n    p &lt;- input$p\n    n &lt;- 30\n\n    par(mfrow = c(2, 1), mar = c(4, 4, 2, 2))\n    \n    discrete_cdf(1:n, dgeom(0:(n-1), p))\n    plot(1:n, dgeom(0:(n-1), p), type = \"h\",\n         #ylim = c(0, 1),\n        yaxs = \"i\",\n       yaxt = \"n\",\n       ylab = \"\",\n       xlim = c(0, n + 1),\n       xlab = \"\",\n       xaxt = \"n\",\n       bty = \"n\")\n    axis(1, at = 0:(n+1), cex.axis = 1)\n    axis(2, at = seq(0, 1, length.out = 11), las = 1, cex.axis = 1.5)\n    mtext(\"E(X)\", side = 1, at = 1 / p, col = \"red\", line = 2)\n  })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)",
     "crumbs": [
-      "Distribution families",
+      "Distribution Families",
       "Geometric"
     ]
   }

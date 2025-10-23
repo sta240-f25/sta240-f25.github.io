@@ -139,7 +139,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../distributions/discrete-binomial.html">Distribution families</a></li><li class="breadcrumb-item"><a href="../distributions/continuous-uniform.html">Continuous uniform</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../distributions/discrete-binomial.html">Distribution Families</a></li><li class="breadcrumb-item"><a href="../distributions/continuous-uniform.html">Continuous uniform</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -221,7 +221,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Math Review</span></a>
+ <span class="menu-text">Math Helpers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -263,12 +263,18 @@ window.Quarto = {
  <span class="menu-text">Infinite series</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/gamma-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gamma function</span></a>
+  </div>
+</li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text"><code>R</code> Explainers</span></a>
+ <span class="menu-text"><code>R</code> Helpers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -369,7 +375,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Distribution families</span></a>
+ <span class="menu-text">Distribution Families</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -511,6 +517,12 @@ window.Quarto = {
  <span class="menu-text">Lab 6</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 7</span></a>
+  </div>
+</li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -541,10 +553,11 @@ window.Quarto = {
 <li><a href="#basic-properties" id="toc-basic-properties" class="nav-link active" data-scroll-target="#basic-properties">Basic properties</a></li>
   <li><a href="#r-commands" id="toc-r-commands" class="nav-link" data-scroll-target="#r-commands"><code>R</code> commands</a></li>
   <li><a href="#play-around" id="toc-play-around" class="nav-link" data-scroll-target="#play-around">Play around!</a></li>
+  <li><a href="#derivations" id="toc-derivations" class="nav-link" data-scroll-target="#derivations">Derivations</a></li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../distributions/discrete-binomial.html">Distribution families</a></li><li class="breadcrumb-item"><a href="../distributions/continuous-uniform.html">Continuous uniform</a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../distributions/discrete-binomial.html">Distribution Families</a></li><li class="breadcrumb-item"><a href="../distributions/continuous-uniform.html">Continuous uniform</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">Continuous uniform distribution</h1>
 </div>
 
@@ -667,6 +680,194 @@ server &lt;- function(input, output) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)</a></code></pre>
+</section><section id="derivations" class="level2"><h2 class="anchored" data-anchor-id="derivations">Derivations</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The pdf integrates to 1
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{aligned}
+    \int_{-\infty}^\infty f_X(x)\,\text{d} x
+    &amp;=
+    \int_{-\infty}^a f_X(x)\,\text{d} x
+    +
+    \int_{a}^b f_X(x)\,\text{d} x
+    +
+    \int_{b}^\infty f_X(x)\,\text{d} x
+    \\
+    &amp;=
+    {\int_{-\infty}^a 0\,\text{d} x}
+    +
+    \int_{a}^b \frac{1}{b-a}\,\text{d} x
+    +
+    {\int_{b}^\infty 0\,\text{d} x}
+    \\
+    &amp;=
+    \frac{1}{b-a}\int_a^b1\,\text{d} x
+    \\
+    &amp;=
+    \frac{1}{b-a}
+    [x]_a^b
+    \\
+    &amp;=
+    \frac{1}{b-a}(b-a)
+    \\
+    &amp;=
+    1
+    .
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The CDF
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The cdf is <span class="math inline">\(F_X(x)=P(X\leq x)=\int_{-\infty}^x f_X(t)\,\text{d} t\)</span>. If <span class="math inline">\(x&lt; a\)</span>, then</p>
+<p><span class="math display">\[
+F_X(x)=\int_{-\infty}^xf_X(t)\,\text{d} t=\int_{-\infty}^x0\,\text{d} t=0.
+\]</span></p>
+<p>If <span class="math inline">\(a\leq x\leq b\)</span>, then</p>
+<p><span class="math display">\[
+\begin{aligned}
+    F_X(x)
+    &amp;=
+    \int_{-\infty}^xf_X(t)\,\text{d} t
+    \\
+    &amp;=
+    \int_{-\infty}^af_X(t)\,\text{d} t
+    +
+    \int_{a}^xf_X(t)\,\text{d} t
+    \\
+    &amp;=
+    {\int_{-\infty}^a0\,\text{d} t}
+    +
+    \int_{a}^x\frac{1}{b-a}\,\text{d} t
+    \\
+    &amp;=
+    \frac{1}{b-a}[t]_a^x
+    \\
+    &amp;=
+    \frac{x-a}{b-a}
+    .
+\end{aligned}
+\]</span></p>
+<p>If <span class="math inline">\(b &lt; x\)</span>, then</p>
+<p><span class="math display">\[
+\begin{aligned}
+    F_X(x)
+    &amp;=
+    \int_{-\infty}^xf_X(t)\,\text{d} t
+    \\
+    &amp;=
+    \int_{-\infty}^af_X(t)\,\text{d} t
+    +
+    \int_{a}^bf_X(t)\,\text{d} t
+    +
+    \int_{b}^xf_X(t)\,\text{d} t
+    \\
+        &amp;=
+    {\int_{-\infty}^a0\,\text{d} t}
+    +
+    \int_{a}^b\frac{1}{b-a}\,\text{d} t
+    +
+    {\int_{b}^x0\,\text{d} t}
+    \\
+    &amp;=1.
+\end{aligned}
+\]</span></p>
+<p>So the cdf of <span class="math inline">\(X\sim\text{Unif}(a,\, b)\)</span> is</p>
+<p><span class="math display">\[
+    F_X(x)
+    =
+    \begin{cases}
+        0 &amp; x&lt;a \\
+        \frac{x-a}{b-a} &amp; a\leq x\leq b \\
+        1 &amp; b&lt;x.
+    \end{cases}
+\]</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The mean
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The expected value is the midpoint of the interval:</p>
+<p><span class="math display">\[
+\begin{align*}
+    E(X)
+    &amp;=
+    \int_{-\infty}^\infty
+    xf_X(x)\,\text{d} x
+    \\
+    &amp;=
+    \int_{-\infty}^a
+    xf_X(x)\,\text{d} x
+    +
+    \int_{a}^b
+    xf_X(x)\,\text{d} x
+    +
+    \int_{b}^\infty
+    xf_X(x)\,\text{d} x
+    \\
+        &amp;=
+    {\int_{-\infty}^a
+    x\cdot0\,\text{d} x}
+    +
+    \int_{a}^b
+    x\frac{1}{b-a}\,\text{d} x
+    +
+    {\int_{b}^\infty
+    x\cdot0\,\text{d} x}
+    \\
+    &amp;=
+    0+\frac{1}{b-a}\int_a^b x\,\text{d} x+0
+    \\
+    &amp;=
+    \frac{1}{b-a}\left[\frac{1}{2}x^2\right]_a^b
+    \\
+    &amp;=
+    \frac{1}{b-a}\left[\frac{1}{2}b^2-\frac{1}{2}a^2\right]
+    \\
+        &amp;=
+    \frac{1}{2(b-a)}\left[b^2-a^2\right]
+    \\
+        &amp;=
+    \frac{1}{2{(b-a)}}{(b-a)}(b+a)
+    \\
+    &amp;=\frac{b+a}{2}.
+\end{align*}
+\]</span></p>
+<p>That’s the proper derivation, but without the math, we could have reasoned our way to this answer by noting that the range is bounded, so the mean is guaranteed to exist, and the distribution is symmetric, so the mean matches the point of symmetry.</p>
+</div>
+</div>
+</div>
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
