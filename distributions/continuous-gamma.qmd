@@ -13,6 +13,7 @@ filters:
 | **Range** | $[0,\,\infty)$ |
 | **Parameter space** | $\alpha,\,\beta>0$ |
 | **PDF** | $f(x)=\begin{cases}\frac{\beta^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x} &x\geq 0\\0 & x<0.\end{cases}$ |
+| **MGF** | $M(t)=\left(\frac{\beta}{\beta-t}\right)^\alpha$, $t<\beta$ |
 | **Expectation** | $\alpha/\beta$ |
 | **Variance** | $\alpha/\beta^2$ |
 
@@ -113,4 +114,27 @@ shinyApp(ui = ui, server = server)
 
 
 ```
+
+## Derivations
+
+::: {.callout-note collapse="true"}
+## Moment-generating function
+This is classic "massage and squint." Let $t\in(-\infty,\,\beta)$. Then
+
+$$
+      \begin{align*}
+          M_X(t)&=E\left(e^{tX}\right)\\
+          &=\int_0^\infty e^{tx}\frac{\beta^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x}\,\text{d} x && \text{LOTUS}\\
+          &=\frac{\beta^\alpha}{\Gamma(\alpha)}\int_0^\infty x^{\alpha-1}e^{tx}e^{-\beta x}\,\text{d} x && \text{pull out constant}\\
+          &=\frac{\beta^\alpha}{\Gamma(\alpha)}\int_0^\infty x^{\alpha-1}e^{tx-\beta x}\,\text{d} x&& \text{combine base-e terms}\\
+`         &=\frac{\beta^\alpha}{\Gamma(\alpha)}\int_0^\infty x^{\alpha-1}e^{(t-\beta) x}\,\text{d} x&& \text{factor out }x\\
+`         &=\frac{\beta^\alpha}{\Gamma(\alpha)}\int_0^\infty x^{\alpha-1}e^{-(\beta-t) x}\,\text{d} x&& \text{factor out -1}\\
+          &=\frac{\beta^\alpha}{\Gamma(\alpha)}\int_0^\infty \underbrace{x^{\alpha-1}e^{-(\beta-t)x}}_{\text{kernel of Gamma}(\alpha,\,\beta-t)}\,\text{d} x && \text{recognize}\\
+          &=\frac{\beta^\alpha}{{\Gamma(\alpha)}}\frac{{\Gamma(\alpha)}}{(\beta-t)^\alpha}\\
+          &=\left(\frac{\beta}{\beta-t}\right)^\alpha.
+      \end{align*}
+$$
+
+In order to invoke the gamma density kernel, we require that $t<\beta$ so that the rate parameter of the implied gamma is positive.
+:::
 
