@@ -1,0 +1,80 @@
+---
+title: "The gamma function"
+format: html
+---
+
+The **gamma function** is a continuous function that *interpolates the factorials*. It is an interesting mathematical object in its own right, but for students of probability, it appears in the normalizing constant of the gamma density, and recognizing the gamma function is a useful technique for simplifying certain integrals.
+
+# Definition
+
+Here it is:
+
+$$
+\Gamma(x)=\int_0^\infty z^{x-1}e^{-z}\,\text{d}z,\quad x >0.
+$$
+
+Pay attention. $x$ is the argument to the function. It's treated as a constant. $z$ is the dummy variable of integration. It doesn't affect the actual value of the expression, and you can change it to whatever you want: $y$, $u$, $t$, whatever. At the end of the day, the value of the integral is just a number; plug in different $x$ values, and you get different numbers. That's the gamma function. @fig-gamma displays the picture.
+
+`R` provides the `gamma` command for actually computing this:
+
+```{r}
+gamma(0.5) # √π
+gamma(1)   # 1
+gamma(4)   # 3!
+gamma(8)   # 7!
+```
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| fig-asp: 0.8
+#| label: fig-gamma
+
+pts <- c(0.5, 1, 2, 3, 4)
+curve(gamma(x), 
+      from = 0, 
+      to = 5, 
+      n = 1000, 
+      col = "red", 
+      ylim = c(0, 9), 
+      bty = "n",
+      xaxt = "n",
+      yaxt = "n",
+      ylab = expression(Gamma(x)),
+      lwd = 2,
+      main = "The gamma function"
+      )
+lines(pts, gamma(pts), type = "h", lty = 2, col = "grey")
+segments(0, gamma(pts), pts, gamma(pts), lty = 2, col = "grey")
+points(pts, gamma(pts), pch = 19)
+axis(1, pos = 0)
+axis(1, at = 0.5, pos = 0)
+axis(2, at = 0:10, pos = 0, las = 1)
+mtext("√π", side = 2, at = sqrt(pi), las = 1, line = 1.2)
+```
+
+# Properties
+
+You first met the gamma function on [Problem Set 0](https://sta240-f25.github.io/problems/pset-0.html#problem-5), where you showed that it satisfies the following *recursion*:
+
+$$
+\Gamma(x+1) = x\Gamma(x).
+$$
+
+That works for any real number $x>0$. But now let's say you plug in an integer $n\geq 2$. As a result of the recursion, something cute happens:
+
+$$
+\begin{aligned}
+\Gamma(n)&=\Gamma(n-1+1)\\
+&=(n-1)\Gamma(n-1)\\
+&=(n-1)(n-2)\Gamma(n-2)\\
+&=(n-1)(n-2)(n-3)\Gamma(n-3)\\
+&\vdots\\
+&=(n-1)(n-2)(n-3)\cdots 3\cdot2\cdot\Gamma(2)\\
+&=(n-1)(n-2)(n-3)\cdots 3\cdot2\cdot1\cdot\Gamma(1)\\
+&=(n-1)!
+\end{aligned}
+$$
+
+The last line follows because $\Gamma(1)=\int_0^\infty \exp(-x)\,\textrm{d}x=1$ (shown [here](https://sta240-f25.github.io/math/integration.html#improper-integration-we-will-do-this-a-lot), but make sure you can do it yourself). The punchline is that the gamma function is a continuous function that *interpolates* the factorials. That is, it's a smooth curve that "connects the dots," like you see in @fig-gamma.
