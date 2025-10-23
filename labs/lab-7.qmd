@@ -7,7 +7,19 @@ editor:
   mode: source
 ---
 
-Let $X$ be a random variable, let $g$ be a transformation, and consider the new random variable $Y=g(X)$. If all we cared about was the mean of $Y$, then LOTUS provides a nice shortcut for computing $E(Y)=E[g(X)]$ directly. But often, we want to know the entire distribution of the new random variable $Y$, not just the mean. In this lab, we will learn how to calculate it.
+Let $X$ be a random variable, let $g$ be a transformation, and consider the new random variable $Y=g(X)$. If all we cared about was the mean of $Y$, then LOTUS provides a nice shortcut for computing $E(Y)=E[g(X)]$ directly. But often, we want to know the entire distribution of the new random variable $Y$, not just the mean. Today we will learn how to calculate it.
+
+::: callout-tip
+## The template
+In all that follows, $X$ is continuous with pdf $f_X$ and cdf $F_X$. The goal in each case is to compute the density $f_Y$ of the new random variable $Y=g(X)$. The process for doing this is always the same:
+
+0. Plot the transformation $g$ so you understand what's going on;
+1. Figure out what $\text{Range}(Y)$ is;
+2. Find the cdf of $Y$: $F_Y(y)=P(Y\leq y)$;
+3. Differentiate it to get the pdf: $f_Y(y)=F'_Y(y)$.
+
+This is the so-called "cdf method."
+:::
 
 # Task 1
 
@@ -16,6 +28,57 @@ Consider $X\sim \text{Gamma}(1,\,1)$. This is the same as saying $X\sim\text{Exp
 a.  What are the range and pdf of $Y=\ln X$?
 b.  Simulate `n = 5000` draws of $Y$. Plot a histogram, and add a line plot of the density you derived in part b. They should match!
 
+::: {.callout-warning collapse="true"}
+## Solution
+
+To begin, we know that $\text{Range}(X)=[0,\,\infty)$ and 
+
+$$
+\begin{aligned}
+F_X(x)&=1-e^{-x},&&x\geq0\\
+f_X(x) &= e^{-x}, &&x\geq0.
+\end{aligned}
+$$
+
+One of our [math helpers](https://sta240-f25.github.io/math/logexp.html) displays the graph of the natural log and its inverse, the exponential. Consulting these, we note a few things:
+
+- the natural log takes in strictly positive numbers and spits out both positive *and* negative numbers;
+- both the natural log and the exponential are strictly increasing. In other words, they are *order-preserving*.
+
+The first property implies that $\text{Range}(Y)=\mathbb{R}$. So fix arbitrary $y\in \mathbb{R}$. The cdf of $Y$ is 
+
+$$
+\begin{aligned}
+F_Y(y)&=P(Y\leq y)\\
+&=P(\ln X\leq y)\\
+&=P(e^{\ln X}\leq e^y)\\
+&=P\left(X\leq e^y\right)\\
+&=F_X\left(e^y\right)\\
+&=1-e^{-e^y}.
+\end{aligned}
+$$
+
+Since the exponential function is order-preserving, we didn't have to chage the inequality when we applied it to both sides. To get the pdf, take a derivative (using the chain rule!):
+
+$$
+f_Y(y)=F_Y'(y)=\frac{\text{d}}{\text{d} y}\left(1-e^{-e^y}\right)=0-(-e^y)e^{-e^y}=e^{y-e^y},\quad y\in\mathbb{R}.
+$$
+
+If we compare this density to the histogram from a simulation, they agree:
+
+```{r}
+#| fig-align: center
+set.seed(20)
+X <- rgamma(5000, shape = 1, rate = 1)
+Y <- log(X)
+hist(Y, breaks = "Scott", freq = FALSE)
+curve(exp(x - exp(x)), from = min(Y), to = max(Y), n = 1000, 
+      col = "red", lwd = 3, add = TRUE)
+```
+
+Phew!
+:::
+
 # Task 2
 
 Consider $X\sim\text{Unif}(-\pi/2,\,\pi/2)$.
@@ -23,6 +86,93 @@ Consider $X\sim\text{Unif}(-\pi/2,\,\pi/2)$.
 a.  What are the range and pdf of $Y=\tan X$?
 b.  Simulate `n = 5000` draws of $Y$. Plot a histogram, and add a line plot of the density you derived in part b. Can you get them to match?
 
+::: {.callout-warning collapse="true"}
+## Solution
+
+By construction, $\text{Range}(X)=(-\pi/2,\,\pi/2)$. You can read more about the continuous uniform [here](https://sta240-f25.github.io/distributions/continuous-uniform.html), and we see see that the cdf is 
+
+$$
+F_X(x)
+=
+\begin{cases}
+0 & x\leq -\frac{\pi}{2}\\
+\frac{x-\left(-\frac{\pi}{2}\right)}{\frac{\pi}{2}-\left(-\frac{\pi}{2}\right)} & -\frac{\pi}{2}<x<\frac{\pi}{2}\\
+1 & \frac{\pi}{2}\leq x.
+\end{cases}
+$$
+
+So when $-\frac{\pi}{2}<x<\frac{\pi}{2}$, we have 
+
+$$
+F_X(x)=\frac{x+\frac{\pi}{2}}{\pi}=\frac{x}{\pi}+\frac{1}{2}.
+$$
+
+
+The transformation is 
+
+```{r}
+#| echo: false
+#| fig-align: center
+curve(tan(x), from = -pi * 0.99/2, to = pi * 0.99/2, n = 1000, col = "red",
+      ylim = c(-10, 10), xaxt = "n", yaxt = "n", bty = "n", ylab = "X", xlab = "Y",
+      lwd = 2, main = "tan x")
+axis(1, pos = 0)
+axis(2, pos = 0)
+```
+
+Again, strictly-increasing, and it maps to all real numbers. So $\text{Range}(Y)=\mathbb{R}$. Now let's fix arbitrary $y\in\mathbb{R}$ and find the cdf:
+
+$$
+\begin{aligned}
+    F_Y(y)&=P(Y\leq y)\\
+    &=P(\tan X\leq y)\\
+    &=P(X\leq \tan^{-1}y)\\
+    &=F_X(\tan^{-1}y)\\
+    &=\frac{\tan^{-1}y}{\pi}+\frac{1}{2}.
+\end{aligned}
+$$
+
+Take a derivative to get the pdf:
+
+$$
+f_Y(y)
+=
+F'_Y(y)
+=
+\frac{\textrm{d}}{\textrm{d}y}
+\left(
+\frac{\tan^{-1}y}{\pi}+\frac{1}{2}
+\right)
+=
+\frac{1}{\pi(1+y^2)},\quad y\in\mathbb{R}.
+$$
+
+Rest assured that we did the math right, but you'd have a hard time verifying it with a simulation:
+
+```{r}
+#| fig-align: center
+set.seed(20)
+X <- runif(5000, -pi / 2, pi / 2)
+Y <- tan(X)
+hist(Y, breaks = "Scott", freq = FALSE)
+```
+
+Here is the graph of the density we derived, and for reference I added the pdf of the standard normal distribution (bell curve):
+
+```{r}
+#| code-fold: true
+#| fig-align: center
+curve(dnorm(x), from = -7, to = 7, n = 1000, ylab = "", bty = "n")
+curve(dcauchy(x), from = -7, to = 7, n = 1000, add = TRUE, col = "red")
+legend("topright", c("N(0, 1) density", "Cauchy density"), bty = "n",
+       lty = 1, col = c("black", "red"))
+```
+
+Compared to the bell curve, this new density has *very* heavy tails. They are so heavy in fact that this distribution does not have a finite mean or variance or any other moment. It is very ill-behaved, and it frequently surprises with extreme values far out in the tails. That's why the histogram looks awful and always will. 
+
+This distribution we just derived is quite famous. It's called the [Cauchy distribution](https://en.wikipedia.org/wiki/Cauchy_distribution).
+
+:::
 
 # Task 3
 
@@ -30,6 +180,58 @@ Consider $X\sim \text{N}(0,\,1)$.
 
 a.  What are the range and pdf of $Y=e^X$?
 b.  Simulate `n = 5000` draws of $Y$. Plot a histogram, and add a line plot of the density you derived in part b. They should match!
+
+::: {.callout-warning collapse="true"}
+## Solution
+We know that $\text{Range}(X)=\mathbb{R}$ and that 
+
+$$
+\begin{aligned}
+f_X(x)&=\frac{1}{\sqrt{2\pi}}e^{-x^2/2},&&x\in\mathbb{R}\\
+F_X(x)&=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^xe^{-t^2/2}\,\text{d}t,&&x\in\mathbb{R}.
+\end{aligned}
+$$
+
+Newsflash: the cdf of the normal distribution is unknown. We can approximate it arbitrarily well using numerical methods, but we don't actually have a clean formula for it. The integral above is simply intractable.
+
+Anyway, the transformations involved here are again the [exponential and the natural log](https://sta240-f25.github.io/math/logexp.html), which we already saw in Task 1. Both are strictly-increasing. The exponential takes any real number and maps it to something *strictly positive*, so we see then that $\text{Range}(Y)=(0,\,\infty)$. Fixing $y>0$, we compute:
+
+$$
+  \begin{align*}
+      F_Y(y)&=P(Y\leq y)\\
+      &=P(e^X\leq y)\\
+      &=P\left(X\leq \ln y\right)\\
+      &=F_X\left(\ln y\right).
+  \end{align*}
+$$
+
+As such, the pdf is:
+
+$$
+\begin{aligned}
+f_Y(y)
+=
+F'_Y(y)&=\frac{\text{d}}{\text{d} y}F_X(\ln y)\\
+&=F_X'(\ln y)\frac{\text{d}}{\text{d}y}\ln y\\
+&=f_X(\ln y)\frac{1}{y}\\
+&=\frac{1}{\sqrt{2\pi}}e^{-(\ln y)^2/2}\frac{1}{y},&&y>0.
+\end{aligned}
+$$
+
+This matches with a simulation:
+
+```{r}
+#| fig-align: center
+set.seed(20)
+X <- rnorm(5000)
+Y <- exp(X)
+hist(Y, breaks = "Scott", freq = FALSE)
+curve(dnorm(log(x)) / x, from = min(Y), to = max(Y), n = 1000, 
+      col = "red", lwd = 3, add = TRUE)
+```
+
+The distribution we derived here is an example of the [log-normal distribution](https://en.wikipedia.org/wiki/Log-normal_distribution).
+:::
 
 # Interlude
 
@@ -155,9 +357,57 @@ Either way, we got to the same place.
 
 # Task 4
 
-Let $X$ be an absolutely continuous random variable with pdf $f_X$, let and $a,\,b\in\mathbb{R}$ be constants, and consider the new random variable $Y=aX+b$.
+Let $X$ be an absolutely continuous random variable with pdf $f_X$, let and $a,\,b\in\mathbb{R}$ be non-zero constants, and consider the new random variable $Y=aX+b$.
 
 a.  What is $E(Y)$?
 b.  What is $\text{var}(Y)$?
 c.  Use the change-of-variables formula to find the density of $Y$?
 d.  In the special case where $X\sim\text{N}(0,\,1)$, what are $E(Y)$, $\text{var}(Y)$, and the density of $Y$? There's no need to re-derive anything here. Just plug what you know about N(0, 1) into the formulas from parts a, b, and c.
+
+::: {.callout-warning collapse="true"}
+## Solution
+We know from lecture that $E(Y)=E(aX+b)=aE(X)+b$ and $\text{var}(Y)=\text{var}(aX+b)=a^2\text{var}(X)$. 
+
+If $g(x)=ax+b$ is the linear transformation, then the inverse transformation and its derivative are
+
+$$
+\begin{align*}
+        g^{-1}(y)&=\frac{y-b}{a}\\
+        \frac{\text{d}}{\text{d} y}g^{-1}(y)&=\frac{1}{a},
+    \end{align*}
+$$
+
+and the change-of-variables formula gives:
+
+$$
+f_Y(y)=f_X\left(\frac{y-b}{a}\right)\frac{1}{|a|}.
+$$
+
+If $X\sim\text{N}(0,\,1)$, then we know from lecture that $E(X)=0$, $\text{var}(X)=1$, and 
+
+$$
+f_X(x)=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}x^2\right),\quad x\in\mathbb{R}.
+$$
+
+A new random variable $Y=aX+b$ has 
+
+$$
+E(Y)=aE(X)+b=a\cdot 0+b=b,
+$$
+
+and 
+
+$$
+\text{var}(Y)=a^2\text{var}(X)=a^2\cdot 1=a^2,
+$$
+
+and
+
+$$
+f_Y(y)=\frac{1}{|a|}\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}\left(\frac{x-b}{a}\right)^2\right)=\frac{1}{\sqrt{2\pi a^2}}\exp\left(-\frac{1}{2}\frac{\left(x-b\right)^2}{a^2}\right).
+$$
+
+So $Y\sim \text{N}(b,\, a^2)$. That's where the general normal comes from. It's just a location-scale transformation of the standard normal.
+:::
+
+
