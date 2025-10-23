@@ -69,7 +69,7 @@ website:
             text: University resources
           - href: index.qmd
             text: Schedule
-      - section: "Math Review"
+      - section: "Math Helpers"
         contents:
           - href: math/greeks.qmd
             text: Greek alphabet
@@ -83,7 +83,11 @@ website:
             text: Limits and continuity
           - href: math/series.qmd
             text: Infinite series
-      - section: "`R` Explainers"
+          - href: math/gamma-function.qmd
+            text: Gamma function
+          #- href: math/massage-and-squint.qmd
+          #  text: "Massage and squint"
+      - section: "`R` Helpers"
         contents:
           - href: explainers/setup.qmd
             text: Getting started
@@ -115,7 +119,7 @@ website:
             text: Plotting points
           - href: explainers/summary-statistics.qmd
             text: Summary statistics
-      - section: "Distribution families"
+      - section: "Distribution Families"
         contents:
           - href: distributions/discrete-binomial.qmd
             text: Binomial
@@ -159,6 +163,8 @@ website:
             text: Lab 5
           - href: labs/lab-6.qmd
             text: Lab 6
+          - href: labs/lab-7.qmd
+            text: Lab 7
       - section: "Exam Study Guides"
         contents:
           - href: problems/exam-midterm-1.qmd
