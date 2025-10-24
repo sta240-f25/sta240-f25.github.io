@@ -1,0 +1,39 @@
+---
+title: "Histogram"
+format: html
+---
+
+To visualize the distribution of a set of numbers, you can plot a **histogram**. If you keep studying statistics, you will learn that a histogram is a statistical *estimator* of a probability density function. Neat!
+
+Anyway, this is super simple in `R`. Here is a vector of random numbers:
+
+```{r}
+set.seed(1)
+x <- rgamma(5000, shape = 2, rate = 1)
+```
+
+To plot a histogram, use the `hist` command:
+
+```{r}
+#| fig-align: center
+hist(x, breaks = "Scott", freq = FALSE,
+     main = "My histogram",
+     xlab = "x values",
+     ylab = "density", 
+     col = "lightblue", 
+     border = "white")
+```
+
+The `hist` command has many arguments, and you can read [the documentation](https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/hist.html) for more detail. Apart from the cosmetic stuff controlling the labeling and the color, there are three main arguments to think about:
+
+- the first argument is obviously the vector of numbers whose distribution you want to visualize;
+- `breaks` determines the size of the bins (ie how many bars the histogram has). You can play around with different options, but I always set `breaks = "Scott"` because [David Scott](https://profiles.rice.edu/faculty/david-scott) was one of my professors in graduate school and [he knows his shit](https://en.wikipedia.org/wiki/Scott%27s_rule). So we pour one out for David and set `breaks = "Scott"`;
+- if you set `freq = TRUE`, the height of the bars will correspond to the *count* of how many values fall into the bin. `freq = FALSE` renormalizes the bar heights so that the area under the histogram is literally one, and the histogram can be directly compared with a density, which we will often do.
+
+```{r}
+#| fig-align: center
+hist(x, breaks = "Scott", freq = FALSE)
+curve(dgamma(x, 2, 1), from = min(x), to = max(x), n = 1000, 
+      col = "red", lwd = 3, add = TRUE)
+```
+
