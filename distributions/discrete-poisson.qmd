@@ -239,6 +239,6 @@ E(X^2)=M''(0)&=\lambda^2+\lambda
 \end{aligned}
 $$
 
-So $E(X) = \lambda$ and $\var(X) = E(X^2) - E(X)^2 = \lambda^2 + \lambda - \lambda^2 = \lambda$.
+So $E(X) = \lambda$ and $\text{var}(X) = E(X^2) - E(X)^2 = \lambda^2 + \lambda - \lambda^2 = \lambda$.
 :::
 
