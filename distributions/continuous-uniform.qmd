@@ -27,6 +27,7 @@ For the second version of the distribution, `R` provides:
 #| eval: false
 dunif(x, min, max) # PDF
 punif(q, min, max) # CDF: P(X <= q)
+qunif(p, min, max) # quantile function
 runif(n, min, max) # random numbers
 ```
 
