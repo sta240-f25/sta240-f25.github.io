@@ -21,6 +21,7 @@ The distribution is governed by one parameter $\lambda>0$ which is called the **
 | **Range** | $\mathbb{N}=\{0,\,1,\,2,\,3,\,4,\,...\}$ |
 | **Parameter space** | $\lambda>0$ |
 | **PMF** | $P(X=k)=e^{-\lambda}\frac{\lambda^k}{k!}$ |
+| **MGF** | $M(t)=\exp(\lambda(e^t-1))$, $t\in\mathbb{R}$ |
 | **Expectation** | $\lambda$ |
 | **Variance** | $\lambda$ |
 
@@ -31,7 +32,8 @@ The distribution is governed by one parameter $\lambda>0$ which is called the **
 ```{r}
 #| eval: false
 dpois(x, lambda) # PMF: P(X = x)
-ppois(q, lambda) # CDF: P(X <= q)
+ppois(q, lambda) # CDF: F(q) = P(X <= q)
+qpois(p, lambda) # quantile function (inverse CDF)
 rpois(n, lambda) # random numbers
 ```
 
@@ -135,4 +137,108 @@ server <- function(input, output) {
 # Run the application 
 shinyApp(ui = ui, server = server)
 ```
+
+## Derivations
+
+::: {.callout-note collapse="true"}
+## The mean (via the definition)
+
+Massage and squint until you recognize the Taylor series of $e^x$:
+
+$$
+    \begin{align*}
+    E(X)
+    &=
+\sum\limits_{n=0}^\infty nP(X=n)
+    \\
+    &=
+    \sum\limits_{n=0}^\infty 
+    n
+    \frac{\lambda^n}{n!}e^{-\lambda}
+    \\
+    &=
+    e^{-\lambda}
+    \sum\limits_{n=0}^\infty 
+    n
+    \frac{\lambda^n}{n!}
+    &&
+    \text{Pull out constant}
+    \\
+    &=
+    e^{-\lambda}
+    \sum\limits_{n=1}^\infty 
+    n
+    \frac{\lambda^n}{n!}
+    &&
+    n=0\text{ term is equal to 0}
+    \\
+    &=
+    e^{-\lambda}
+    \sum\limits_{n=1}^\infty 
+    \frac{\lambda^n}{(n-1)!}
+    &&
+    n\text{ cancels}
+    \\
+    &=
+    \lambda e^{-\lambda}
+    \sum\limits_{n=1}^\infty 
+    \frac{\lambda^{n-1}}{(n-1)!}
+    &&
+    \text{Pull out }\lambda
+    \\
+    &=
+    \lambda e^{-\lambda}
+    \sum\limits_{j=0}^\infty 
+    \frac{\lambda^{j}}{j!}
+    &&
+    \text{Reindex}
+    \\
+    &=
+    \lambda e^{-\lambda}
+    e^\lambda
+    &&
+    \text{Recall Taylor series: } e^x=\sum\limits_{k=0}^\infty \frac{x^k}{k!}\,\forall\,x\in\mathbb{R}
+    \\
+    &=
+    \lambda
+    .
+\end{align*}
+$$
+:::
+
+::: {.callout-tip collapse="true"}
+## The moment-generating function
+Massage and squint until you recognize the Taylor series of $e^x$:
+
+$$
+\begin{aligned}
+M(t)&=E[e^{tX}]\\
+&=\sum\limits_{k=0}^\infty e^{tk}\frac{\lambda^k}{k!}e^{-\lambda}\\
+&=\sum\limits_{k=0}^\infty \left(e^{t}\right)^k\frac{\lambda^k}{k!}e^{-\lambda}\\
+&=\sum\limits_{k=0}^\infty \frac{\left(\lambda e^{t}\right)^k}{k!}e^{-\lambda}\\
+&=e^{-\lambda}\sum\limits_{k=0}^\infty \frac{\left(\lambda e^{t}\right)^k}{k!}\\
+&=e^{-\lambda}e^{\lambda e^t}\\
+&=e^{\lambda e^t-\lambda}.
+\end{aligned}
+$$
+
+This works for any $t\in\mathbb{R}$.
+:::
+
+::: {.callout-note collapse="true"}
+## The mean and variance (via the MGF)
+Use the chain rule, product rule, etc to compute the first two derivatives of the MGF, and then plug in zero:
+
+$$
+\begin{aligned}
+M'(t)&=\lambda e^t\exp(\lambda e^t-\lambda)\\
+M''(t)&=(\lambda e^t)^2\exp(\lambda e^t-\lambda)+\lambda e^t\exp(\lambda e^t-\lambda)\\
+\\
+E(X)=M'(0)&=\lambda\\
+E(X^2)=M''(0)&=\lambda^2+\lambda
+\end{aligned}
+$$
+
+So $E(X) = \lambda$ and $\var(X) = E(X^2) - E(X)^2 = \lambda^2 + \lambda - \lambda^2 = \lambda$.
+:::
 
