@@ -23,6 +23,8 @@ I usually have a little blurb up here describing how the distribution arises or 
 Fun facts:
 
 - This is also known as the *Gaussian* distribution;
+- N(0, 1) is called the **standard normal**;
+- The density of the normal is the familiar *bell curve*;
 - We do not have a closed-form for the CDF. We can approximate it arbitrarily well in a computer, but we can't actually simplify the integral and get a neat formula. Bummer!
 
 ## `R` commands
