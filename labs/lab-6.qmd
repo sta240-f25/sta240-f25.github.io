@@ -39,6 +39,19 @@ $P(0.35<X<0.4)=F(0.4)-F(0.35)$:
 ```{r}
 pnorm(0.4, 0.1, 0.3) - pnorm(0.35, 0.1, 0.3)
 ```
+
+This is the area of the shaded region under the density curve:
+
+```{r}
+#| echo: false
+#| fig-align: center
+curve(dnorm(x, 0.1, 0.3), from = -1, to = 1, n = 1000, bty = "n", yaxs = "i", ylab = "",
+      main = "Density of N(0.1, 0.09)")
+x_grid <- seq(0.35, 0.4, length.out = 100)
+polygon(c(x_grid, rev(x_grid)), c(numeric(100), dnorm(rev(x_grid), 0.1, 0.3)),
+        col = "salmon", border = NA)
+curve(dnorm(x, 0.1, 0.3), from = -1, to = 1, n = 1000, add = TRUE)
+```
 :::
 
 ## Task 3
@@ -52,6 +65,20 @@ $P(X<0)=F(0)$:
 ```{r}
 pnorm(0, 0.1, 0.3)
 ```
+
+This is the area of the shaded region under the density curve:
+
+```{r}
+#| echo: false
+#| fig-align: center
+curve(dnorm(x, 0.1, 0.3), from = -1, to = 1, n = 1000, bty = "n", yaxs = "i", ylab = "",
+      main = "Density of N(0.1, 0.09)")
+x_grid <- seq(-1, 0, length.out = 1000)
+polygon(c(x_grid, rev(x_grid)), c(numeric(1000), dnorm(rev(x_grid), 0.1, 0.3)),
+        col = "salmon", border = NA)
+curve(dnorm(x, 0.1, 0.3), from = -1, to = 1, n = 1000, add = TRUE)
+```
+
 :::
 
 ## Task 4
@@ -169,4 +196,18 @@ What is the probability $P(X > 15,000)$? Calculate this probability exactly usin
 1 - pgamma(15000, 25, rate = 0.0025)
 mean(x > 15000)
 ```
+
+This is the area of the shaded region under the density curve:
+
+```{r}
+#| echo: false
+#| fig-align: center
+curve(dgamma(x, 25, rate = 0.0025), from = 4000, to = 17000, n = 5000, bty = "n", yaxs = "i", ylab = "",
+      main = "Density of Gamma(25, 0.0025)")
+x_grid <- seq(15000, 17000, length.out = 1000)
+polygon(c(x_grid, rev(x_grid)), c(numeric(1000), dgamma(rev(x_grid), 25, rate = 0.0025)),
+        col = "salmon", border = NA)
+curve(dgamma(x, 25, rate = 0.0025), from = 4000, to = 17000, n = 5000, add = TRUE)
+```
+
 :::
