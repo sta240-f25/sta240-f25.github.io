@@ -18,7 +18,6 @@ The binomial distribution is our model for the total number of successes in $n$ 
 | **Expectation** | $np$ |
 | **Variance** | $np(1-p)$ |
 
-
 ## `R` commands
 
 [Here](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Binomial.html) is the documentation for the suite of commands that let you work with the binomial distribution in `R`:
@@ -27,6 +26,7 @@ The binomial distribution is our model for the total number of successes in $n$ 
 #| eval: false
 dbinom(x, size, prob) # PMF: P(X = x)
 pbinom(q, size, prob) # CDF: P(X <= q)
+qbinom(p, size, prob) # quantile function (inverse CDF)
 rbinom(n, size, prob) # random numbers
 ```
 
