@@ -110,9 +110,9 @@ Use this fact to make your life easier!
 
 "Massage and squint" is just a grand exercise in pattern recognition, so here is a running list of examples from the course. Study these carefully:
 
-- Poisson mean from PSET 0 #3;
-- Poisson MGF from lecture;
-- Standard normal MGF from lecture;
-- Gamma MGF from lecture;
-- PSET 5 #4
-- PSET 5 #6c
+- [Poisson mean](https://sta240-f25.github.io/distributions/discrete-poisson.html#derivations) from PSET 0 #3;
+- [Poisson MGF](https://sta240-f25.github.io/distributions/discrete-poisson.html#derivations) from lecture;
+- [Standard normal MGF](https://sta240-f25.github.io/distributions/continuous-normal.html#derivations) from lecture;
+- [Gamma MGF](https://sta240-f25.github.io/distributions/continuous-gamma.html#derivations) from lecture;
+- [PSET 5 #4](https://sta240-f25.github.io/problems/pset-5.html#problem-4);
+- [PSET 5 #6c](https://sta240-f25.github.io/problems/pset-5.html#problem-6).
