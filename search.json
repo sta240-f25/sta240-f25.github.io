@@ -2656,7 +2656,7 @@
     "href": "problems/bank/random-variables-continuous/random-point-on-line.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "A point is chosen at random on a line segment of length \\(L\\). Interpret this statement, and find the probability that the ratio of the shorter to the longer segment is less than \\(\\frac{1}{4}\\)."
+    "text": "A point is chosen at random on a line segment of length \\(L\\). Interpret this statement, and find the probability that the ratio of the shorter to the longer segment is less than \\(\\frac{1}{4}\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nIt might help to read about the continuous uniform distribution."
   },
   {
     "objectID": "problems/bank/random-variables-continuous/basic-pdf-practice.html",
@@ -2869,7 +2869,7 @@
     "href": "problems/pset-5.html#problem-5",
     "title": "Problem Set 5",
     "section": "Problem 5",
-    "text": "Problem 5\nA point is chosen at random on a line segment of length \\(L\\). Interpret this statement, and find the probability that the ratio of the shorter to the longer segment is less than \\(\\frac{1}{4}\\).",
+    "text": "Problem 5\nA point is chosen at random on a line segment of length \\(L\\). Interpret this statement, and find the probability that the ratio of the shorter to the longer segment is less than \\(\\frac{1}{4}\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nIt might help to read about the continuous uniform distribution.",
     "crumbs": [
       "Problem Sets",
       "Problem Set 5"
