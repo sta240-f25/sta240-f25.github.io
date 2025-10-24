@@ -1,4 +1,7 @@
 A point is chosen at random on a line segment of length $L$. Interpret this statement, and find the probability that the ratio of the shorter to the longer segment is less than $\frac{1}{4}$.
 
-
+::: {.callout-tip collapse="true"}
+## Hint
+It might help to read about the [continuous uniform distribution](https://sta240-f25.github.io/distributions/continuous-uniform.html).
+:::
 
