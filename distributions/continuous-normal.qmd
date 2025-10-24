@@ -5,7 +5,7 @@ filters:
   - shinylive
 ---
 
-I usually have a little blurb up here describing when you might use the distribution, but the normal distribution is so *central* to probability and statistics that words fail. It shows up everywhere.
+I usually have a little blurb up here describing how the distribution arises or when you might use it, but the normal distribution is so *central* to probability and statistics that words fail. It shows up everywhere.
 
 ## Basic properties
 
@@ -15,8 +15,15 @@ I usually have a little blurb up here describing when you might use the distribu
 | **Range** | $\mathbb{R}=(-\infty,\,\infty)$ |
 | **Parameter space** | $\begin{matrix}-\infty<\mu<\infty\\\sigma^2>0\end{matrix}$ |
 | **PDF** | $f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)$ |
+| **CDF** | $F(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^x\exp\left(-\frac{1}{2}\frac{(t-\mu)^2}{\sigma^2}\right)\,\text{d}x$ |
+| **MGF** | $M(t) = \exp\left(\mu t+\frac{\sigma^2}{2}t^2\right)$, $t\in\mathbb{R}$ |
 | **Expectation** | $\mu$ |
 | **Variance** | $\sigma^2$ |
+
+Fun facts:
+
+- This is also known as the *Gaussian* distribution;
+- We do not have a closed-form for the CDF. We can approximate it arbitrarily well in a computer, but we can't actually simplify the integral and get a neat formula. Bummer!
 
 ## `R` commands
 
@@ -25,7 +32,8 @@ I usually have a little blurb up here describing when you might use the distribu
 ```{r}
 #| eval: false
 dnorm(x, mean = 0, sd = 1) # PDF
-pnorm(q, mean = 0, sd = 1) # CDF: P(X <= q)
+pnorm(q, mean = 0, sd = 1) # CDF: F(q) = P(X <= q)
+qnorm(p, mean = 0, sd = 1) # quantile function (inverse CDF)
 rnorm(n, mean = 0, sd = 1) # random numbers
 ```
 
@@ -120,3 +128,26 @@ shinyApp(ui = ui, server = server)
 
 ```
 
+## Derivations
+
+::: {.callout-note collapse="true"}
+## Moment-generating function of N(0, 1)
+$$
+\begin{aligned}
+M(t)&=E[e^{tX}] && \text{definition}\\
+&=\int_{-\infty}^\infty e^{tx}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^2}\,\textrm{d}x && \text{LOTUS}\\
+&=\int_{-\infty}^\infty\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^2+tx}\,\textrm{d}x && \text{combine base-$e$ terms}\\
+&=\int_{-\infty}^\infty\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}(x^2-2tx)}\,\textrm{d}x && \text{factor out -1/2}\\
+&=\int_{-\infty}^\infty\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}(x^2-2tx+t^2-t^2)}\,\textrm{d}x && \text{add/subtract $t^2$}\\
+&=\int_{-\infty}^\infty\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}[(x-t)^2-t^2]}\,\textrm{d}x && \text{factor first three terms}\\
+&=\int_{-\infty}^\infty\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}(x-t)^2+\frac{1}{2}t^2}\,\textrm{d}x && \text{distribute -1/2}\\
+&=\int_{-\infty}^\infty\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}(x-t)^2}e^{\frac{1}{2}t^2}\,\textrm{d}x\\
+&=e^{\frac{1}{2}t^2}\int_{-\infty}^\infty\underbrace{\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}(x-t)^2}}_{\textrm{N}(t,\,1)\text{ PDF}}\,\textrm{d}x&&\text{pull constant out of integral}\\
+&=e^{\frac{1}{2}t^2}\cdot 1&&\text{PDFs integrate to 1}\\
+&=e^{\frac{1}{2}t^2}.
+\end{aligned}
+$$
+
+This works for any $t\in\mathbb{R}$.
+
+:::
