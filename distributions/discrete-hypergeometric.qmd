@@ -24,7 +24,8 @@ You first met this distribution on Problem Set 4 when studying [contested electi
 
 ```{r}
 #| eval: false
-dhyper(x, m, n, k)
-phyper(q, m, n, k)
-rhyper(ndraw, m, n, k)
+dhyper(x, m, n, k)     # PMF: P(X = x)
+phyper(q, m, n, k)     # CDF: P(X <= q)
+qhyper(p, m, n, k)     # quantile function (inverse CDF)
+rhyper(ndraw, m, n, k) # random numbers
 ```

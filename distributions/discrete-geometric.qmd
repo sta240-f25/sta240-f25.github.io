@@ -31,6 +31,7 @@ For the second version of the distribution, `R` provides:
 #| eval: false
 dgeom(x, prob) # PMF: P(X = x)
 pgeom(q, prob) # CDF: P(X <= q)
+qgeom(p, prob) # quantile function (inverse CDF)
 rgeom(n, prob) # random numbers
 ```
 
