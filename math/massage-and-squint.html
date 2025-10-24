@@ -29,6 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../explainers/setup.html" rel="next">
+<link href="../math/gamma-function.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -111,7 +113,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">“Massage and squint”</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Helpers</a></li><li class="breadcrumb-item"><a href="../math/massage-and-squint.html">Massage and squint</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -197,13 +199,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Math Helpers</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
@@ -244,6 +246,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../math/gamma-function.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/massage-and-squint.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Massage and squint</span></a>
   </div>
 </li>
       </ul>
@@ -543,7 +551,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Helpers</a></li><li class="breadcrumb-item"><a href="../math/massage-and-squint.html">Massage and squint</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">“Massage and squint”</h1>
 <p class="subtitle lead">"rewrite and recognize", or "kernel tricks"</p>
@@ -674,12 +682,12 @@ Example: gamma integral
 <h1>Examples</h1>
 <p>“Massage and squint” is just a grand exercise in pattern recognition, so here is a running list of examples from the course. Study these carefully:</p>
 <ul>
-<li>Poisson mean from PSET 0 #3;</li>
-<li>Poisson MGF from lecture;</li>
-<li>Standard normal MGF from lecture;</li>
-<li>Gamma MGF from lecture;</li>
-<li>PSET 5 #4</li>
-<li>PSET 5 #6c</li>
+<li><a href="https://sta240-f25.github.io/distributions/discrete-poisson.html#derivations">Poisson mean</a> from PSET 0 #3;</li>
+<li><a href="https://sta240-f25.github.io/distributions/discrete-poisson.html#derivations">Poisson MGF</a> from lecture;</li>
+<li><a href="https://sta240-f25.github.io/distributions/continuous-normal.html#derivations">Standard normal MGF</a> from lecture;</li>
+<li><a href="https://sta240-f25.github.io/distributions/continuous-gamma.html#derivations">Gamma MGF</a> from lecture;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-5.html#problem-4">PSET 5 #4</a>;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-5.html#problem-6">PSET 5 #6c</a>.</li>
 </ul>
 
 
@@ -1085,6 +1093,18 @@ Example: gamma integral
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../math/gamma-function.html" class="pagination-link" aria-label="Gamma function">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Gamma function</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../explainers/setup.html" class="pagination-link" aria-label="Getting started">
+        <span class="nav-page-text">Getting started</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

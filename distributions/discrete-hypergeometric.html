@@ -264,6 +264,12 @@ window.Quarto = {
  <span class="menu-text">Gamma function</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/massage-and-squint.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Massage and squint</span></a>
+  </div>
+</li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -595,9 +601,10 @@ window.Quarto = {
 <code>R</code> commands</h2>
 <p><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Hypergeometric.html">Here</a> is the documentation for the suite of commands that let you work with the hypergeometric distribution in <code>R</code>:</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">dhyper</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">phyper</a></span><span class="op">(</span><span class="va">q</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">rhyper</a></span><span class="op">(</span><span class="va">ndraw</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">dhyper</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span>     <span class="co"># PMF: P(X = x)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">phyper</a></span><span class="op">(</span><span class="va">q</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span>     <span class="co"># CDF: P(X &lt;= q)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">qhyper</a></span><span class="op">(</span><span class="va">p</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span>     <span class="co"># quantile function (inverse CDF)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">rhyper</a></span><span class="op">(</span><span class="va">ndraw</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span> <span class="co"># random numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

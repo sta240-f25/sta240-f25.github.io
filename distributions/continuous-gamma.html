@@ -269,6 +269,12 @@ window.Quarto = {
  <span class="menu-text">Gamma function</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/massage-and-squint.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Massage and squint</span></a>
+  </div>
+</li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -557,6 +563,7 @@ window.Quarto = {
    
   <ul>
 <li><a href="#basic-properties" id="toc-basic-properties" class="nav-link active" data-scroll-target="#basic-properties">Basic properties</a></li>
+  <li><a href="#special-cases" id="toc-special-cases" class="nav-link" data-scroll-target="#special-cases">Special cases</a></li>
   <li><a href="#r-commands" id="toc-r-commands" class="nav-link" data-scroll-target="#r-commands"><code>R</code> commands</a></li>
   <li><a href="#play-around" id="toc-play-around" class="nav-link" data-scroll-target="#play-around">Play around!</a></li>
   <li><a href="#derivations" id="toc-derivations" class="nav-link" data-scroll-target="#derivations">Derivations</a></li>
@@ -578,7 +585,13 @@ window.Quarto = {
   
 
 
-</header><section id="basic-properties" class="level2"><h2 class="anchored" data-anchor-id="basic-properties">Basic properties</h2>
+</header><p>The gamma distribution is a common choice for modeling continuous quantities that are non-negative: dollar amounts, waiting times, etc. It is governed by two positive parameters: the <strong>shape</strong> <span class="math inline">\(\alpha&gt;0\)</span> and the <strong>rate</strong> <span class="math inline">\(\beta&gt;0\)</span>. Don’t worry about interpreting what those words mean. They’re just labels.</p>
+<section id="basic-properties" class="level2"><h2 class="anchored" data-anchor-id="basic-properties">Basic properties</h2>
+<p>The gamma distribution gets its name because it is related to the so-called gamma function, which appears in the normalizing constant:</p>
+<p><span class="math display">\[
+\Gamma(\alpha) = \int_0^\infty x^{\alpha-1}e^{-x}\,\text{d}x.
+\]</span></p>
+<p>We have a lil’ <a href="https://sta240-f25.github.io/math/gamma-function.html">math explainer</a> where you can read more about it.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 23%">
@@ -616,12 +629,28 @@ window.Quarto = {
 <td><span class="math inline">\(\alpha/\beta^2\)</span></td>
 </tr>
 </tbody>
-</table></section><section id="r-commands" class="level2"><h2 class="anchored" data-anchor-id="r-commands">
+</table></section><section id="special-cases" class="level2"><h2 class="anchored" data-anchor-id="special-cases">Special cases</h2>
+<p>Particular special cases of the gamma distribution get special nicknames:</p>
+<ul>
+<li>If <span class="math inline">\(X\sim\text{Gamma}(1,\,\beta)\)</span>, then <span class="math inline">\(X\)</span> has the <strong>exponential distribution</strong>, denoted <span class="math inline">\(X\sim\text{Exp}(\beta)\)</span> This special case is nice because we get closed-form expressions for the CDF and the quantile function:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+f(x)&amp;=\beta e^{-\beta x}\\
+F(x)&amp;=1-e^{-\beta x}\\
+F^{-1}(p)&amp;=-\frac{\ln(1-p)}{\beta}.
+\end{aligned}
+\]</span></p>
+<ul>
+<li><p>If <span class="math inline">\(X\sim\text{Gamma}(\nu/2,\, 1/2)\)</span>, then <span class="math inline">\(X\)</span> has the <strong>chi-squared distribution</strong>, denoted <span class="math inline">\(X\sim\chi^2_\nu\)</span>. In this context we call the parameter <span class="math inline">\(\nu&gt;0\)</span> the <strong>degrees of freedom</strong> of the chi-squared distribution.</p></li>
+<li><p>If <span class="math inline">\(X\sim\text{Gamma}(k,\,\beta)\)</span> for some integer <span class="math inline">\(k\)</span>, then <span class="math inline">\(X\)</span> has the <strong>Erlang distribution</strong>, denoted <span class="math inline">\(X\sim\text{Erlang}(k,\, \beta)\)</span></p></li>
+</ul></section><section id="r-commands" class="level2"><h2 class="anchored" data-anchor-id="r-commands">
 <code>R</code> commands</h2>
 <p><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/GammaDist.html">Here</a> is the documentation for the suite of commands that let you work with the gamma distribution in <code>R</code>:</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html">dgamma</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">shape</span>, rate <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># PDF</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html">pgamma</a></span><span class="op">(</span><span class="va">q</span>, <span class="va">shape</span>, rate <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># CDF: P(X &lt;= q)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html">qgamma</a></span><span class="op">(</span><span class="va">p</span>, <span class="va">shape</span>, rate <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># quantile function (inverse CDF)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html">rgamma</a></span><span class="op">(</span><span class="va">n</span>, <span class="va">shape</span>, rate <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># random numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="play-around" class="level2"><h2 class="anchored" data-anchor-id="play-around">Play around!</h2>
@@ -710,8 +739,54 @@ shinyApp(ui = ui, server = server)
 
 </a></code></pre>
 </section><section id="derivations" class="level2"><h2 class="anchored" data-anchor-id="derivations">Derivations</h2>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+CDF, quantile function, and median of Gamma(1, <span class="math inline">\(\beta\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Let <span class="math inline">\(X\sim\text{Exp}(\beta)\)</span>, and recall that this means <span class="math inline">\(X\sim\text{Gamma}(\alpha=1,\, \beta)\)</span>. So the pdf is <span class="math inline">\(f_X(x)=\beta\exp(-\beta x)\)</span> for <span class="math inline">\(x&gt;0\)</span>, and the cdf is</p>
+<p><span class="math display">\[
+\begin{aligned}
+F_X(x)
+&amp;=
+\int_0^x\beta e^{-\beta t}\,\text{d} t
+=
+[
+-e^{\beta t}
+]_0^x
+=
+1-e^{-\beta x},\quad x&gt;0.
+\end{aligned}
+\]</span></p>
+<p>For some <span class="math inline">\(y\in(0,\, 1)\)</span>, we see that</p>
+<p><span class="math display">\[
+\begin{align*}
+y&amp;=1-e^{-\beta x}\\
+e^{-y}&amp;=1-y\\
+-\beta x&amp;=\ln(1-y)\\
+x&amp;=\frac{-\ln(1-y)}{\beta},
+\end{align*}
+\]</span></p>
+<p>and so the quantile function is</p>
+<p><span class="math display">\[
+F_X^{-1}(y)=-\frac{\ln(1-y)}{\beta},
+\]</span></p>
+<p>and the median of the exponential distribution is</p>
+<p><span class="math display">\[
+F_X^{-1}(0.5)=-\frac{\ln(1-0.5)}{\beta}=-\frac{\ln(0.5)}{\beta}=\frac{\ln 2}{\beta}.
+\]</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -720,7 +795,7 @@ Moment-generating function
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This is classic “massage and squint.” Let <span class="math inline">\(t\in(-\infty,\,\beta)\)</span>. Then</p>
 <p><span class="math display">\[

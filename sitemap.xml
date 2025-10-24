@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sta240-f25.github.io/distributions/discrete-binomial.html</loc>
-    <lastmod>2025-10-23T14:52:53.925Z</lastmod>
+    <lastmod>2025-10-24T08:20:54.763Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/distributions/discrete-hypergeometric.html</loc>
-    <lastmod>2025-10-05T15:05:29.154Z</lastmod>
+    <lastmod>2025-10-24T08:23:23.356Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/distributions/continuous-log-normal.html</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/distributions/continuous-uniform.html</loc>
-    <lastmod>2025-10-23T14:56:26.732Z</lastmod>
+    <lastmod>2025-10-24T08:17:49.742Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/distributions/continuous-normal.html</loc>
@@ -78,7 +78,7 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/math/gamma-function.html</loc>
-    <lastmod>2025-10-23T03:06:49.835Z</lastmod>
+    <lastmod>2025-10-24T07:11:59.111Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/math/series.html</loc>
@@ -442,7 +442,7 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/math/massage-and-squint.html</loc>
-    <lastmod>2025-10-24T06:10:13.839Z</lastmod>
+    <lastmod>2025-10-24T07:26:18.888Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/math/greeks.html</loc>
@@ -514,7 +514,7 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/distributions/continuous-gamma.html</loc>
-    <lastmod>2025-10-23T14:28:45.951Z</lastmod>
+    <lastmod>2025-10-24T08:18:26.536Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/distributions/continuous-cauchy.html</loc>
@@ -522,10 +522,10 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/distributions/discrete-poisson.html</loc>
-    <lastmod>2025-10-24T05:25:34.023Z</lastmod>
+    <lastmod>2025-10-24T07:28:05.077Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/distributions/discrete-geometric.html</loc>
-    <lastmod>2025-10-23T14:53:05.513Z</lastmod>
+    <lastmod>2025-10-24T08:22:21.193Z</lastmod>
   </url>
 </urlset>

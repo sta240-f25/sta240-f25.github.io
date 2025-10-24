@@ -60,7 +60,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../explainers/setup.html" rel="next">
+<link href="../math/massage-and-squint.html" rel="next">
 <link href="../math/series.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -265,6 +265,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../math/gamma-function.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Gamma function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/massage-and-squint.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Massage and squint</span></a>
   </div>
 </li>
       </ul>
@@ -581,6 +587,18 @@ window.Quarto = {
 \Gamma(x)=\int_0^\infty z^{x-1}e^{-z}\,\text{d}z,\quad x &gt;0.
 \]</span></p>
 <p>Pay attention. <span class="math inline">\(x\)</span> is the argument to the function. It’s treated as a constant. <span class="math inline">\(z\)</span> is the dummy variable of integration. It doesn’t affect the actual value of the expression, and you can change it to whatever you want: <span class="math inline">\(y\)</span>, <span class="math inline">\(u\)</span>, <span class="math inline">\(t\)</span>, whatever. At the end of the day, the value of the integral is just a number; plug in different <span class="math inline">\(x\)</span> values, and you get different numbers. That’s the gamma function. <a href="#fig-gamma" class="quarto-xref">Figure&nbsp;1</a> displays the picture.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-gamma" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-gamma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="gamma-function_files/figure-html/fig-gamma-1.png" id="fig-gamma" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-gamma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption></figure>
+</div>
+</div>
+</div>
 <p><code>R</code> provides the <code>gamma</code> command for actually computing this:</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Special.html">gamma</a></span><span class="op">(</span><span class="fl">0.5</span><span class="op">)</span> <span class="co"># √π</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -598,18 +616,6 @@ window.Quarto = {
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Special.html">gamma</a></span><span class="op">(</span><span class="fl">8</span><span class="op">)</span>   <span class="co"># 7!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5040</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-gamma" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-gamma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="gamma-function_files/figure-html/fig-gamma-1.png" id="fig-gamma" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-gamma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption></figure>
-</div>
 </div>
 </div>
 </section><section id="properties" class="level1"><h1>Properties</h1>
@@ -631,6 +637,7 @@ Figure&nbsp;1
 \end{aligned}
 \]</span></p>
 <p>The last line follows because <span class="math inline">\(\Gamma(1)=\int_0^\infty \exp(-x)\,\textrm{d}x=1\)</span> (shown <a href="https://sta240-f25.github.io/math/integration.html#improper-integration-we-will-do-this-a-lot">here</a>, but make sure you can do it yourself). The punchline is that the gamma function is a continuous function that <em>interpolates</em> the factorials. That is, it’s a smooth curve that “connects the dots,” like you see in <a href="#fig-gamma" class="quarto-xref">Figure&nbsp;1</a>.</p>
+<p>The gamma function has many funky properties that have kept mathematicians busy for a long time. For instance, <span class="math inline">\(\Gamma(1/2)=\sqrt{\pi}\)</span>, which you showed on <a href="https://sta240-f25.github.io/problems/pset-5.html#problem-4">Problem Set 5</a>. If you’re interested, <a href="https://en.wikipedia.org/wiki/Particular_values_of_the_gamma_function">there’s more where that came from</a>.</p>
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
@@ -1037,8 +1044,8 @@ Figure&nbsp;1
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../explainers/setup.html" class="pagination-link" aria-label="Getting started">
-        <span class="nav-page-text">Getting started</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../math/massage-and-squint.html" class="pagination-link" aria-label="Massage and squint">
+        <span class="nav-page-text">Massage and squint</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
