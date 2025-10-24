@@ -1,0 +1,118 @@
+---
+title: "\"Massage and squint\""
+subtitle: \"rewrite and recognize\", or \"kernel tricks\"
+format: html
+---
+
+In this class, we have to simplify many sums, infinite series, and integrals (eg when computing expected values). Sometimes, we have to do this using the formal techniques we learned in Calc II, but other times, the sum or integral is just a familiar object in disguise. If we can recognize that, we can avoid doing any hardcore math.
+
+Here's the principle:
+
+> Take your sum or integral and rewrite it ("massage" it) until you recognize (after "squinting" at it) that it is equivalent to a familiar object. Then plug in what you know.
+
+Let's unpack that:
+
+- **massaging**: u-substitution if it's an integral, re-indexing if it's a sum, multiply by a cleverly written 1, add a cleverly written 0, complete the square, etc;
+- **familiar object**: geometric series, Taylor series of a friendly function (probably $e^x$), gamma function, kernel of special density like the Gaussian, etc.
+
+::: callout-warning
+## Pay attention!
+
+If you are going to be a stats major/minor, I know for an absolute fact that you will be doing this stuff early and often in STA 332 and STA 402, so take the practice seriously.
+:::
+
+# Kernel tricks
+
+> Probability density functions must integrate to 1. 
+
+Like "energy is conserved" or "demand curves slope down," the above statement is true and simple, but surprisingly powerful.
+
+As we have seen several times, all densities have the following format:
+
+$$
+f(x;\,\boldsymbol{\theta})=\underbrace{c(\boldsymbol{\theta})}_{\text{normalizing constant}}\underbrace{k(x;\,\boldsymbol{\theta})}_{\text{kernel}}.
+$$
+
+Here, $\boldsymbol{\theta}$ is generic notation for the *parameters* of the distribution. So $\boldsymbol{\theta}=(\mu,\, \sigma^2)$ for the normal, or $\boldsymbol{\theta}=(\alpha,\,\beta)$ for the gamma. $k(x;\,\boldsymbol{\theta})$ is the **density kernel** or *unnormalized* density. It's the part of the density formula that actually depends on the argument $x$. $c(\boldsymbol{\theta})$ is the normalizing constant that hangs out in the front and serves just to make sure that the whole thing integrates to 1. Since 
+
+$$
+\int_{-\infty}^\infty f(x;\,\boldsymbol{\theta})\,\text{d} x
+=
+\int_{-\infty}^\infty c(\boldsymbol{\theta})k(x;\,\boldsymbol{\theta})\,\text{d} x
+=
+c(\boldsymbol{\theta})\int_{-\infty}^\infty k(x;\,\boldsymbol{\theta})\,\text{d} x=1,
+$$
+
+then
+
+$$
+\int_{-\infty}^\infty k(x;\,\boldsymbol{\theta})\,\text{d} x=\frac{1}{c(\boldsymbol{\theta})},
+$$
+
+So, the integral of the kernel is the inverse of the normalizing constant. Based on this simple fact, every probability density function you encounter gives you a free integral identity that you can use in subsequent computations.
+
+::: callout-tip
+## Example: Gaussian integral
+
+For the Gaussian density:
+    
+$$
+\begin{align*}
+    c(\boldsymbol{\theta})
+    &=
+    \frac{1}{\sqrt{2\pi\sigma^2}}
+    \\
+    k(x;\,\boldsymbol{\theta})
+    &=
+    \exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)
+    .
+\end{align*}
+$$
+
+So for any values of $\mu\in\mathbb{R}$ and $\sigma>0$, we get 
+    
+$$
+\int_{-\infty}^\infty\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)\text{d} x=\sqrt{2\pi\sigma^2}.
+$$
+
+Use this fact to make your life easier!
+:::
+
+::: callout-note
+## Example: gamma integral
+
+For the gamma density:
+
+$$
+\begin{align*}
+    c(\boldsymbol{\theta})
+    &=
+    \frac{\beta^\alpha}{\Gamma(\alpha)}
+    \\
+    k(x;\,\boldsymbol{\theta})
+    &=
+    x^{\alpha-1}
+    e^{-\beta x}
+\end{align*}
+$$
+
+So for any values of $\alpha,\,\beta>0$, we get 
+
+$$
+\int_0^\infty x^{\alpha-1}e^{-\beta x}\,\text{d} x=\frac{\Gamma(\alpha)}{\beta^\alpha}
+$$
+
+Use this fact to make your life easier!
+:::
+
+
+# Examples
+
+"Massage and squint" is just a grand exercise in pattern recognition, so here is a running list of examples from the course. Study these carefully:
+
+- Poisson mean from PSET 0 #3;
+- Poisson MGF from lecture;
+- Standard normal MGF from lecture;
+- Gamma MGF from lecture;
+- PSET 5 #4
+- PSET 5 #6c
