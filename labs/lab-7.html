@@ -368,6 +368,12 @@ window.Quarto = {
  <span class="menu-text">Summary statistics</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/histogram.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Histograms</span></a>
+  </div>
+</li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -934,7 +940,7 @@ Proof
 </div>
 </div>
 </section><section id="task-4" class="level1"><h1>Task 4</h1>
-<p>Let <span class="math inline">\(X\)</span> be an absolutely continuous random variable with pdf <span class="math inline">\(f_X\)</span>, let and <span class="math inline">\(a,\,b\in\mathbb{R}\)</span> be non-zero constants, and consider the new random variable <span class="math inline">\(Y=aX+b\)</span>.</p>
+<p>Let <span class="math inline">\(X\)</span> be an absolutely continuous random variable with pdf <span class="math inline">\(f_X\)</span>, let <span class="math inline">\(a,\,b\in\mathbb{R}\)</span> be non-zero constants, and consider the new random variable <span class="math inline">\(Y=aX+b\)</span>.</p>
 <ol type="a">
 <li>What is <span class="math inline">\(E(Y)\)</span>?</li>
 <li>What is <span class="math inline">\(\text{var}(Y)\)</span>?</li>
@@ -981,7 +987,7 @@ E(Y)=aE(X)+b=a\cdot 0+b=b,
 <p><span class="math display">\[
 f_Y(y)=\frac{1}{|a|}\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}\left(\frac{x-b}{a}\right)^2\right)=\frac{1}{\sqrt{2\pi a^2}}\exp\left(-\frac{1}{2}\frac{\left(x-b\right)^2}{a^2}\right).
 \]</span></p>
-<p>So <span class="math inline">\(Y\sim \text{N}(b,\, a^2)\)</span>. That’s where the general normal comes from. It’s just a location-scale transformation of the standard normal.</p>
+<p>So <span class="math inline">\(Y\sim \text{N}(b,\, a^2)\)</span>. That’s where the general normal comes from: you apply a linear transformation to the standard normal.</p>
 </div>
 </div>
 </div>

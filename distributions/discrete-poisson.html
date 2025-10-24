@@ -370,6 +370,12 @@ window.Quarto = {
  <span class="menu-text">Summary statistics</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/histogram.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Histograms</span></a>
+  </div>
+</li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -553,6 +559,7 @@ window.Quarto = {
 <li><a href="#basic-properties" id="toc-basic-properties" class="nav-link active" data-scroll-target="#basic-properties">Basic properties</a></li>
   <li><a href="#r-commands" id="toc-r-commands" class="nav-link" data-scroll-target="#r-commands"><code>R</code> commands</a></li>
   <li><a href="#play-around" id="toc-play-around" class="nav-link" data-scroll-target="#play-around">Play around!</a></li>
+  <li><a href="#derivations" id="toc-derivations" class="nav-link" data-scroll-target="#derivations">Derivations</a></li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -597,10 +604,16 @@ window.Quarto = {
 <td><span class="math inline">\(P(X=k)=e^{-\lambda}\frac{\lambda^k}{k!}\)</span></td>
 </tr>
 <tr class="odd">
+<td><strong>MGF</strong></td>
+<td>
+<span class="math inline">\(M(t)=\exp(\lambda(e^t-1))\)</span>, <span class="math inline">\(t\in\mathbb{R}\)</span>
+</td>
+</tr>
+<tr class="even">
 <td><strong>Expectation</strong></td>
 <td><span class="math inline">\(\lambda\)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Variance</strong></td>
 <td><span class="math inline">\(\lambda\)</span></td>
 </tr>
@@ -609,7 +622,8 @@ window.Quarto = {
 <p><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Poisson.html">Here</a> is the documentation for the suite of commands that let you work with the Poisson distribution in <code>R</code>:</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">dpois</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">lambda</span><span class="op">)</span> <span class="co"># PMF: P(X = x)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">ppois</a></span><span class="op">(</span><span class="va">q</span>, <span class="va">lambda</span><span class="op">)</span> <span class="co"># CDF: P(X &lt;= q)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">ppois</a></span><span class="op">(</span><span class="va">q</span>, <span class="va">lambda</span><span class="op">)</span> <span class="co"># CDF: F(q) = P(X &lt;= q)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">qpois</a></span><span class="op">(</span><span class="va">p</span>, <span class="va">lambda</span><span class="op">)</span> <span class="co"># quantile function (inverse CDF)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">rpois</a></span><span class="op">(</span><span class="va">n</span>, <span class="va">lambda</span><span class="op">)</span> <span class="co"># random numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="play-around" class="level2"><h2 class="anchored" data-anchor-id="play-around">Play around!</h2>
@@ -710,6 +724,136 @@ server &lt;- function(input, output) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)</a></code></pre>
+</section><section id="derivations" class="level2"><h2 class="anchored" data-anchor-id="derivations">Derivations</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The mean (via the definition)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Massage and squint until you recognize the Taylor series of <span class="math inline">\(e^x\)</span>:</p>
+<p><span class="math display">\[
+    \begin{align*}
+    E(X)
+    &amp;=
+\sum\limits_{n=0}^\infty nP(X=n)
+    \\
+    &amp;=
+    \sum\limits_{n=0}^\infty
+    n
+    \frac{\lambda^n}{n!}e^{-\lambda}
+    \\
+    &amp;=
+    e^{-\lambda}
+    \sum\limits_{n=0}^\infty
+    n
+    \frac{\lambda^n}{n!}
+    &amp;&amp;
+    \text{Pull out constant}
+    \\
+    &amp;=
+    e^{-\lambda}
+    \sum\limits_{n=1}^\infty
+    n
+    \frac{\lambda^n}{n!}
+    &amp;&amp;
+    n=0\text{ term is equal to 0}
+    \\
+    &amp;=
+    e^{-\lambda}
+    \sum\limits_{n=1}^\infty
+    \frac{\lambda^n}{(n-1)!}
+    &amp;&amp;
+    n\text{ cancels}
+    \\
+    &amp;=
+    \lambda e^{-\lambda}
+    \sum\limits_{n=1}^\infty
+    \frac{\lambda^{n-1}}{(n-1)!}
+    &amp;&amp;
+    \text{Pull out }\lambda
+    \\
+    &amp;=
+    \lambda e^{-\lambda}
+    \sum\limits_{j=0}^\infty
+    \frac{\lambda^{j}}{j!}
+    &amp;&amp;
+    \text{Reindex}
+    \\
+    &amp;=
+    \lambda e^{-\lambda}
+    e^\lambda
+    &amp;&amp;
+    \text{Recall Taylor series: } e^x=\sum\limits_{k=0}^\infty \frac{x^k}{k!}\,\forall\,x\in\mathbb{R}
+    \\
+    &amp;=
+    \lambda
+    .
+\end{align*}
+\]</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The moment-generating function
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Massage and squint until you recognize the Taylor series of <span class="math inline">\(e^x\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+M(t)&amp;=E[e^{tX}]\\
+&amp;=\sum\limits_{k=0}^\infty e^{tk}\frac{\lambda^k}{k!}e^{-\lambda}\\
+&amp;=\sum\limits_{k=0}^\infty \left(e^{t}\right)^k\frac{\lambda^k}{k!}e^{-\lambda}\\
+&amp;=\sum\limits_{k=0}^\infty \frac{\left(\lambda e^{t}\right)^k}{k!}e^{-\lambda}\\
+&amp;=e^{-\lambda}\sum\limits_{k=0}^\infty \frac{\left(\lambda e^{t}\right)^k}{k!}\\
+&amp;=e^{-\lambda}e^{\lambda e^t}\\
+&amp;=e^{\lambda e^t-\lambda}.
+\end{aligned}
+\]</span></p>
+<p>This works for any <span class="math inline">\(t\in\mathbb{R}\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The mean and variance (via the MGF)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use the chain rule, product rule, etc to compute the first two derivatives of the MGF, and then plug in zero:</p>
+<p><span class="math display">\[
+\begin{aligned}
+M'(t)&amp;=\lambda e^t\exp(\lambda e^t-\lambda)\\
+M''(t)&amp;=(\lambda e^t)^2\exp(\lambda e^t-\lambda)+\lambda e^t\exp(\lambda e^t-\lambda)\\
+\\
+E(X)=M'(0)&amp;=\lambda\\
+E(X^2)=M''(0)&amp;=\lambda^2+\lambda
+\end{aligned}
+\]</span></p>
+<p>So <span class="math inline">\(E(X) = \lambda\)</span> and <span class="math inline">\(\var(X) = E(X^2) - E(X)^2 = \lambda^2 + \lambda - \lambda^2 = \lambda\)</span>.</p>
+</div>
+</div>
+</div>
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">

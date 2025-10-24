@@ -347,6 +347,12 @@ window.Quarto = {
  <span class="menu-text">Summary statistics</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/histogram.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Histograms</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -557,9 +563,10 @@ window.Quarto = {
 </header>
 
 
-<p>In this class, we have to simplify many sums, infinite series, and integrals (eg when computing expected values). Sometimes, we have to do this using the formal techniques we learned in Calc II, but other times, we can get the job done by just doing a bunch of creative rewriting. Here’s the main idea:</p>
+<p>In this class, we have to simplify many sums, infinite series, and integrals (eg when computing expected values). Sometimes, we have to do this using the formal techniques we learned in Calc II, but other times, the sum or integral is just a familiar object in disguise. If we can recognize that, we can avoid doing any hardcore math.</p>
+<p>Here’s the principle:</p>
 <blockquote class="blockquote">
-<p>Then, you can</p>
+<p>Take your sum or integral and rewrite it (“massage” it) until you recognize (after “squinting” at it) that it is equivalent to a familiar object. Then plug in what you know.</p>
 </blockquote>
 <p>Let’s unpack that:</p>
 <ul>
@@ -576,21 +583,103 @@ Pay attention!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you are going to be a stats major/minor, I know for an absolute fact that you will be doing this stuff early and often in STA 332 and STA 402.</p>
+<p>If you are going to be a stats major/minor, I know for an absolute fact that you will be doing this stuff early and often in STA 332 and STA 402, so take the practice seriously.</p>
 </div>
 </div>
 <section id="kernel-tricks" class="level1">
 <h1>Kernel tricks</h1>
+<blockquote class="blockquote">
+<p>Probability density functions must integrate to 1.</p>
+</blockquote>
+<p>Like “energy is conserved” or “demand curves slope down,” the above statement is true and simple, but surprisingly powerful.</p>
+<p>As we have seen several times, all densities have the following format:</p>
+<p><span class="math display">\[
+f(x;\,\boldsymbol{\theta})=\underbrace{c(\boldsymbol{\theta})}_{\text{normalizing constant}}\underbrace{k(x;\,\boldsymbol{\theta})}_{\text{kernel}}.
+\]</span></p>
+<p>Here, <span class="math inline">\(\boldsymbol{\theta}\)</span> is generic notation for the <em>parameters</em> of the distribution. So <span class="math inline">\(\boldsymbol{\theta}=(\mu,\, \sigma^2)\)</span> for the normal, or <span class="math inline">\(\boldsymbol{\theta}=(\alpha,\,\beta)\)</span> for the gamma. <span class="math inline">\(k(x;\,\boldsymbol{\theta})\)</span> is the <strong>density kernel</strong> or <em>unnormalized</em> density. It’s the part of the density formula that actually depends on the argument <span class="math inline">\(x\)</span>. <span class="math inline">\(c(\boldsymbol{\theta})\)</span> is the normalizing constant that hangs out in the front and serves just to make sure that the whole thing integrates to 1. Since</p>
+<p><span class="math display">\[
+\int_{-\infty}^\infty f(x;\,\boldsymbol{\theta})\,\text{d} x
+=
+\int_{-\infty}^\infty c(\boldsymbol{\theta})k(x;\,\boldsymbol{\theta})\,\text{d} x
+=
+c(\boldsymbol{\theta})\int_{-\infty}^\infty k(x;\,\boldsymbol{\theta})\,\text{d} x=1,
+\]</span></p>
+<p>then</p>
+<p><span class="math display">\[
+\int_{-\infty}^\infty k(x;\,\boldsymbol{\theta})\,\text{d} x=\frac{1}{c(\boldsymbol{\theta})},
+\]</span></p>
+<p>So, the integral of the kernel is the inverse of the normalizing constant. Based on this simple fact, every probability density function you encounter gives you a free integral identity that you can use in subsequent computations.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example: Gaussian integral
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For the Gaussian density:</p>
+<p><span class="math display">\[
+\begin{align*}
+    c(\boldsymbol{\theta})
+    &amp;=
+    \frac{1}{\sqrt{2\pi\sigma^2}}
+    \\
+    k(x;\,\boldsymbol{\theta})
+    &amp;=
+    \exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)
+    .
+\end{align*}
+\]</span></p>
+<p>So for any values of <span class="math inline">\(\mu\in\mathbb{R}\)</span> and <span class="math inline">\(\sigma&gt;0\)</span>, we get</p>
+<p><span class="math display">\[
+\int_{-\infty}^\infty\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)\text{d} x=\sqrt{2\pi\sigma^2}.
+\]</span></p>
+<p>Use this fact to make your life easier!</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example: gamma integral
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For the gamma density:</p>
+<p><span class="math display">\[
+\begin{align*}
+    c(\boldsymbol{\theta})
+    &amp;=
+    \frac{\beta^\alpha}{\Gamma(\alpha)}
+    \\
+    k(x;\,\boldsymbol{\theta})
+    &amp;=
+    x^{\alpha-1}
+    e^{-\beta x}
+\end{align*}
+\]</span></p>
+<p>So for any values of <span class="math inline">\(\alpha,\,\beta&gt;0\)</span>, we get</p>
+<p><span class="math display">\[
+\int_0^\infty x^{\alpha-1}e^{-\beta x}\,\text{d} x=\frac{\Gamma(\alpha)}{\beta^\alpha}
+\]</span></p>
+<p>Use this fact to make your life easier!</p>
+</div>
+</div>
 </section>
 <section id="examples" class="level1">
 <h1>Examples</h1>
+<p>“Massage and squint” is just a grand exercise in pattern recognition, so here is a running list of examples from the course. Study these carefully:</p>
 <ul>
-<li>PSET 0 mea of poisson</li>
-<li>poisson mgf</li>
-<li>normal mgf</li>
-<li>gamma mgf</li>
-<li>pset 5 …</li>
-<li></li>
+<li>Poisson mean from PSET 0 #3;</li>
+<li>Poisson MGF from lecture;</li>
+<li>Standard normal MGF from lecture;</li>
+<li>Gamma MGF from lecture;</li>
+<li>PSET 5 #4</li>
+<li>PSET 5 #6c</li>
 </ul>
 
 

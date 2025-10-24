@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>all-white-balls – STA 240 Fall 2025</title>
+<title>Histogram – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +17,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
-
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../distributions/discrete-binomial.html" rel="next">
+<link href="../explainers/summary-statistics.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -66,39 +98,32 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-
-
-<meta property="og:title" content="STA 240 Fall 2025">
+<meta property="og:title" content="Histogram – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
+<meta property="og:image" content="https://sta240-f25.github.io/explainers/histogram_files/figure-html/unnamed-chunk-2-1.png">
 <meta property="og:site_name" content="STA 240 Fall 2025">
+<meta property="og:image:height" content="960">
+<meta property="og:image:width" content="1344">
 </head>
-
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../explainers/setup.html"><code>R</code> Helpers</a></li><li class="breadcrumb-item"><a href="../explainers/histogram.html">Histograms</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      <img src="../../../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
@@ -113,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -121,228 +146,264 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching team</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Materials</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignments and grading</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Policies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">University resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Math Review</span></a>
+ <span class="menu-text">Math Helpers</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/greeks.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/logexp.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/logexp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exponents and logarithms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/differentiation.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/differentiation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Differentiation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/integration.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/integration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Integration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/limits.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/limits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limits and continuity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/series.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/series.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Infinite series</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/gamma-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gamma function</span></a>
+  </div>
+</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text"><code>R</code> Explainers</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text"><code>R</code> Helpers</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/hello-rstudio.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/hello-rstudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The lay of the land</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/latex.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/latex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Typing math</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/math.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/math.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic math</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/vectors.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/vectors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectors</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/sample.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/sample.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><code>sample</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/if-else.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">is-else and logic</span></a>
+  <a href="../explainers/if-else.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">if-else and logic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">for loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectorization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/rng-seed.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/rng-seed.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting a seed</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/probabilities.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/probabilities.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Computing probabilities</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/plot.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/plot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting points</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/summary-statistics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary statistics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/histogram.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Histograms</span></a>
+  </div>
+</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Distribution families</span></a>
+ <span class="menu-text">Distribution Families</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binomial</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-geometric.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-geometric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Geometric</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hypergeometric</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Poisson</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/continuous-uniform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Continuous uniform</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/continuous-normal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Normal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/continuous-gamma.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gamma</span></a>
+  </div>
+</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
@@ -351,39 +412,45 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-0.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 4</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/pset-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Problem Set 5</span></a>
+  </div>
+</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
@@ -392,39 +459,51 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-5.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 5</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 7</span></a>
+  </div>
+</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
@@ -433,39 +512,81 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../explainers/setup.html"><code>R</code> Helpers</a></li><li class="breadcrumb-item"><a href="../explainers/histogram.html">Histograms</a></li></ol></nav><div class="quarto-title">
+<h1 class="title">Histogram</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<p>An urn contains 5 white and 10 black balls. Four tickets labeled 1, 2, 3, and 4 reside in a box. A ticket is drawn at random from the box, and that number of balls is randomly chosen from the urn, without replacement.</p>
-<ol type="a">
-<li>What is the probability that all of the balls drawn are white?</li>
-<li>If we learn that all balls drawn from the urn are white, what is the conditional probability that the #3 ticket was drawn?</li>
-</ol>
+    
+  
+    
+  </div>
+  
+
+
+</header><p>To visualize the distribution of a set of numbers, you can plot a <strong>histogram</strong>. If you keep studying statistics, you will learn that a histogram is a statistical <em>estimator</em> of a probability density function. Neat!</p>
+<p>Anyway, this is super simple in <code>R</code>. Here is a vector of random numbers:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html">rgamma</a></span><span class="op">(</span><span class="fl">5000</span>, shape <span class="op">=</span> <span class="fl">2</span>, rate <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To plot a histogram, use the <code>hist</code> command:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">x</span>, breaks <span class="op">=</span> <span class="st">"Scott"</span>, freq <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>     main <span class="op">=</span> <span class="st">"My histogram"</span>,</span>
+<span>     xlab <span class="op">=</span> <span class="st">"x values"</span>,</span>
+<span>     ylab <span class="op">=</span> <span class="st">"density"</span>, </span>
+<span>     col <span class="op">=</span> <span class="st">"lightblue"</span>, </span>
+<span>     border <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="histogram_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The <code>hist</code> command has many arguments, and you can read <a href="https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/hist.html">the documentation</a> for more detail. Apart from the cosmetic stuff controlling the labeling and the color, there are three main arguments to think about:</p>
+<ul>
+<li>the first argument is obviously the vector of numbers whose distribution you want to visualize;</li>
+<li>
+<code>breaks</code> determines the size of the bins (ie how many bars the histogram has). You can play around with different options, but I always set <code>breaks = "Scott"</code> because <a href="https://profiles.rice.edu/faculty/david-scott">David Scott</a> was one of my professors in graduate school and <a href="https://en.wikipedia.org/wiki/Scott%27s_rule">he knows his shit</a>. So we pour one out for David and set <code>breaks = "Scott"</code>;</li>
+<li>if you set <code>freq = TRUE</code>, the height of the bars will correspond to the <em>count</em> of how many values fall into the bin. <code>freq = FALSE</code> renormalizes the bar heights so that the area under the histogram is literally one, and the histogram can be directly compared with a density, which we will often do.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">x</span>, breaks <span class="op">=</span> <span class="st">"Scott"</span>, freq <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/curve.html">curve</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html">dgamma</a></span><span class="op">(</span><span class="va">x</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">)</span>, from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, n <span class="op">=</span> <span class="fl">1000</span>, </span>
+<span>      col <span class="op">=</span> <span class="st">"red"</span>, lwd <span class="op">=</span> <span class="fl">3</span>, add <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="histogram_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -863,10 +984,19 @@ ul.task-list li input[type="checkbox"] {
       }
     }
   });
-  </script>
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../explainers/summary-statistics.html" class="pagination-link" aria-label="Summary statistics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Summary statistics</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../distributions/discrete-binomial.html" class="pagination-link" aria-label="Binomial">
+        <span class="nav-page-text">Binomial</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -878,8 +1008,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
