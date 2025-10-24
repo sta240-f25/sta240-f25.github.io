@@ -5,7 +5,18 @@ filters:
   - shinylive
 ---
 
+The gamma distribution is a common choice for modeling continuous quantities that are non-negative: dollar amounts, waiting times, etc. It is governed by two positive parameters: the **shape** $\alpha>0$ and the **rate** $\beta>0$. Don't worry about interpreting what those words mean. They're just labels.
+
 ## Basic properties
+
+The gamma distribution gets its name because it is related to the so-called gamma function, which appears in the normalizing constant:
+
+$$
+\Gamma(\alpha) = \int_0^\infty x^{\alpha-1}e^{-x}\,\text{d}x.
+$$
+
+We have a lil' [math explainer](https://sta240-f25.github.io/math/gamma-function.html) where you can read more about it.
+
 
 |  |        |
 |------|--------------------|
@@ -17,6 +28,25 @@ filters:
 | **Expectation** | $\alpha/\beta$ |
 | **Variance** | $\alpha/\beta^2$ |
 
+## Special cases
+
+Particular special cases of the gamma distribution get special nicknames:
+
+- If $X\sim\text{Gamma}(1,\,\beta)$, then $X$ has the **exponential distribution**, denoted $X\sim\text{Exp}(\beta)$ This special case is nice because we get closed-form expressions for the CDF and the quantile function:
+
+$$
+\begin{aligned}
+f(x)&=\beta e^{-\beta x}\\
+F(x)&=1-e^{-\beta x}\\
+F^{-1}(p)&=-\frac{\ln(1-p)}{\beta}.
+\end{aligned}
+$$
+
+- If $X\sim\text{Gamma}(\nu/2,\, 1/2)$, then $X$ has the  **chi-squared distribution**, denoted $X\sim\chi^2_\nu$. In this context we call the parameter $\nu>0$ the **degrees of freedom** of the chi-squared distribution.
+
+- If $X\sim\text{Gamma}(k,\,\beta)$ for some integer $k$, then $X$ has the **Erlang distribution**, denoted $X\sim\text{Erlang}(k,\, \beta)$
+
+
 ## `R` commands
 
 [Here](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/GammaDist.html) is the documentation for the suite of commands that let you work with the gamma distribution in `R`:
@@ -25,6 +55,7 @@ filters:
 #| eval: false
 dgamma(x, shape, rate = 1) # PDF
 pgamma(q, shape, rate = 1) # CDF: P(X <= q)
+qgamma(p, shape, rate = 1) # quantile function (inverse CDF)
 rgamma(n, shape, rate = 1) # random numbers
 ```
 
@@ -116,6 +147,50 @@ shinyApp(ui = ui, server = server)
 ```
 
 ## Derivations
+
+::: {.callout-tip collapse="true"}
+## CDF, quantile function, and median of Gamma(1, $\beta$)
+
+Let $X\sim\text{Exp}(\beta)$, and recall that this means $X\sim\text{Gamma}(\alpha=1,\, \beta)$. So the pdf is $f_X(x)=\beta\exp(-\beta x)$ for $x>0$, and the cdf is 
+
+$$
+\begin{aligned}
+F_X(x)
+&=
+\int_0^x\beta e^{-\beta t}\,\text{d} t
+=
+[
+-e^{\beta t}
+]_0^x
+=
+1-e^{-\beta x},\quad x>0.
+\end{aligned}
+$$
+
+For some $y\in(0,\, 1)$, we see that
+
+$$
+\begin{align*}
+y&=1-e^{-\beta x}\\
+e^{-y}&=1-y\\
+-\beta x&=\ln(1-y)\\
+x&=\frac{-\ln(1-y)}{\beta},
+\end{align*}
+$$
+
+and so the quantile function is 
+
+$$
+F_X^{-1}(y)=-\frac{\ln(1-y)}{\beta},
+$$
+
+and the median of the exponential distribution is 
+
+$$
+F_X^{-1}(0.5)=-\frac{\ln(1-0.5)}{\beta}=-\frac{\ln(0.5)}{\beta}=\frac{\ln 2}{\beta}.
+$$
+
+:::
 
 ::: {.callout-note collapse="true"}
 ## Moment-generating function
