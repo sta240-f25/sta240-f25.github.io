@@ -85,8 +85,8 @@ website:
             text: Infinite series
           - href: math/gamma-function.qmd
             text: Gamma function
-          #- href: math/massage-and-squint.qmd
-          #  text: "Massage and squint"
+          - href: math/massage-and-squint.qmd
+            text: Massage and squint
       - section: "`R` Helpers"
         contents:
           - href: explainers/setup.qmd
@@ -119,6 +119,8 @@ website:
             text: Plotting points
           - href: explainers/summary-statistics.qmd
             text: Summary statistics
+          - href: explainers/histogram.qmd
+            text: Histograms
       - section: "Distribution Families"
         contents:
           - href: distributions/discrete-binomial.qmd
