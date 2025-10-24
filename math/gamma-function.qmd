@@ -15,16 +15,6 @@ $$
 
 Pay attention. $x$ is the argument to the function. It's treated as a constant. $z$ is the dummy variable of integration. It doesn't affect the actual value of the expression, and you can change it to whatever you want: $y$, $u$, $t$, whatever. At the end of the day, the value of the integral is just a number; plug in different $x$ values, and you get different numbers. That's the gamma function. @fig-gamma displays the picture.
 
-`R` provides the `gamma` command for actually computing this:
-
-```{r}
-gamma(0.5) # √π
-gamma(1)   # 1
-gamma(4)   # 3!
-gamma(8)   # 7!
-```
-
-
 ```{r}
 #| echo: false
 #| warning: false
@@ -54,6 +44,15 @@ axis(2, at = 0:10, pos = 0, las = 1)
 mtext("√π", side = 2, at = sqrt(pi), las = 1, line = 1.2)
 ```
 
+`R` provides the `gamma` command for actually computing this:
+
+```{r}
+gamma(0.5) # √π
+gamma(1)   # 1
+gamma(4)   # 3!
+gamma(8)   # 7!
+```
+
 # Properties
 
 You first met the gamma function on [Problem Set 0](https://sta240-f25.github.io/problems/pset-0.html#problem-5), where you showed that it satisfies the following *recursion*:
@@ -78,3 +77,5 @@ $$
 $$
 
 The last line follows because $\Gamma(1)=\int_0^\infty \exp(-x)\,\textrm{d}x=1$ (shown [here](https://sta240-f25.github.io/math/integration.html#improper-integration-we-will-do-this-a-lot), but make sure you can do it yourself). The punchline is that the gamma function is a continuous function that *interpolates* the factorials. That is, it's a smooth curve that "connects the dots," like you see in @fig-gamma.
+
+The gamma function has many funky properties that have kept mathematicians busy for a long time. For instance, $\Gamma(1/2)=\sqrt{\pi}$, which you showed on [Problem Set 5](https://sta240-f25.github.io/problems/pset-5.html#problem-4). If you're interested, [there's more where that came from](https://en.wikipedia.org/wiki/Particular_values_of_the_gamma_function).
