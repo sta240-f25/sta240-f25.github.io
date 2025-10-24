@@ -19,9 +19,13 @@ If $X$ is a continuous random quantity that is "equally likely" to take on any v
 | **Expectation** | $\frac{a+b}{2}$ |
 | **Variance** | $(b-a)^2/12$ |
 
+Fun facts:
+
+- Unif(0, 1) is called the **standard uniform** distribution.
+
 ## `R` commands
 
-For the second version of the distribution, `R` provides:
+[Here](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Uniform.html) is the documentation for the suite of commands that let you work with the normal distribution in `R`:
 
 ```{r}
 #| eval: false
