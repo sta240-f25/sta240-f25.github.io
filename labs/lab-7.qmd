@@ -357,7 +357,7 @@ Either way, we got to the same place.
 
 # Task 4
 
-Let $X$ be an absolutely continuous random variable with pdf $f_X$, let and $a,\,b\in\mathbb{R}$ be non-zero constants, and consider the new random variable $Y=aX+b$.
+Let $X$ be an absolutely continuous random variable with pdf $f_X$, let $a,\,b\in\mathbb{R}$ be non-zero constants, and consider the new random variable $Y=aX+b$.
 
 a.  What is $E(Y)$?
 b.  What is $\text{var}(Y)$?
@@ -407,7 +407,7 @@ $$
 f_Y(y)=\frac{1}{|a|}\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}\left(\frac{x-b}{a}\right)^2\right)=\frac{1}{\sqrt{2\pi a^2}}\exp\left(-\frac{1}{2}\frac{\left(x-b\right)^2}{a^2}\right).
 $$
 
-So $Y\sim \text{N}(b,\, a^2)$. That's where the general normal comes from. It's just a location-scale transformation of the standard normal.
+So $Y\sim \text{N}(b,\, a^2)$. That's where the general normal comes from: you apply a linear transformation to the standard normal.
 :::
 
 
