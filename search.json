@@ -92,7 +92,7 @@
     "href": "distributions/continuous-uniform.html#basic-properties",
     "title": "Continuous uniform distribution",
     "section": "Basic properties",
-    "text": "Basic properties\n\n\n\n\n\n\n\nNotation\n\\(X\\sim\\text{Unif}(a,\\,b)\\)\n\n\nRange\n\\([a,\\,b]\\)\n\n\nParameter space\n\\(-\\infty &lt; a &lt; b &lt; \\infty\\)\n\n\nPDF\n\\(f(x)=\\begin{cases}\\frac{1}{b-a} & a\\leq x\\leq b\\\\0&\\text{else}\\end{cases}\\)\n\n\nCDF\n\\(F(x)=\\begin{cases}0 & x &lt; a\\\\\\frac{x-a}{b-a} & a\\leq x\\leq b\\\\1&b&lt;x\\end{cases}\\)\n\n\nExpectation\n\\(\\frac{a+b}{2}\\)\n\n\nVariance\n\\((b-a)^2/12\\)",
+    "text": "Basic properties\n\n\n\n\n\n\n\nNotation\n\\(X\\sim\\text{Unif}(a,\\,b)\\)\n\n\nRange\n\\([a,\\,b]\\)\n\n\nParameter space\n\\(-\\infty &lt; a &lt; b &lt; \\infty\\)\n\n\nPDF\n\\(f(x)=\\begin{cases}\\frac{1}{b-a} & a\\leq x\\leq b\\\\0&\\text{else}\\end{cases}\\)\n\n\nCDF\n\\(F(x)=\\begin{cases}0 & x &lt; a\\\\\\frac{x-a}{b-a} & a\\leq x\\leq b\\\\1&b&lt;x\\end{cases}\\)\n\n\nExpectation\n\\(\\frac{a+b}{2}\\)\n\n\nVariance\n\\((b-a)^2/12\\)\n\n\n\nFun facts:\n\nUnif(0, 1) is called the standard uniform distribution.",
     "crumbs": [
       "Distribution Families",
       "Continuous uniform"
@@ -103,7 +103,7 @@
     "href": "distributions/continuous-uniform.html#r-commands",
     "title": "Continuous uniform distribution",
     "section": "\nR commands",
-    "text": "R commands\nFor the second version of the distribution, R provides:\n\ndunif(x, min, max) # PDF\npunif(q, min, max) # CDF: P(X &lt;= q)\nqunif(p, min, max) # quantile function\nrunif(n, min, max) # random numbers",
+    "text": "R commands\nHere is the documentation for the suite of commands that let you work with the normal distribution in R:\n\ndunif(x, min, max) # PDF\npunif(q, min, max) # CDF: P(X &lt;= q)\nqunif(p, min, max) # quantile function\nrunif(n, min, max) # random numbers",
     "crumbs": [
       "Distribution Families",
       "Continuous uniform"
@@ -147,7 +147,7 @@
     "href": "distributions/continuous-normal.html#basic-properties",
     "title": "Normal distribution",
     "section": "Basic properties",
-    "text": "Basic properties\n\n\n\n\n\n\n\nNotation\n\\(X\\sim\\text{N}(\\mu,\\,\\sigma^2)\\)\n\n\nRange\n\\(\\mathbb{R}=(-\\infty,\\,\\infty)\\)\n\n\nParameter space\n\\(\\begin{matrix}-\\infty&lt;\\mu&lt;\\infty\\\\\\sigma^2&gt;0\\end{matrix}\\)\n\n\nPDF\n\\(f(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\\)\n\n\nCDF\n\\(F(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\int_{-\\infty}^x\\exp\\left(-\\frac{1}{2}\\frac{(t-\\mu)^2}{\\sigma^2}\\right)\\,\\text{d}x\\)\n\n\nMGF\n\n\\(M(t) = \\exp\\left(\\mu t+\\frac{\\sigma^2}{2}t^2\\right)\\), \\(t\\in\\mathbb{R}\\)\n\n\n\nExpectation\n\\(\\mu\\)\n\n\nVariance\n\\(\\sigma^2\\)\n\n\n\nFun facts:\n\nThis is also known as the Gaussian distribution;\nWe do not have a closed-form for the CDF. We can approximate it arbitrarily well in a computer, but we can’t actually simplify the integral and get a neat formula. Bummer!",
+    "text": "Basic properties\n\n\n\n\n\n\n\nNotation\n\\(X\\sim\\text{N}(\\mu,\\,\\sigma^2)\\)\n\n\nRange\n\\(\\mathbb{R}=(-\\infty,\\,\\infty)\\)\n\n\nParameter space\n\\(\\begin{matrix}-\\infty&lt;\\mu&lt;\\infty\\\\\\sigma^2&gt;0\\end{matrix}\\)\n\n\nPDF\n\\(f(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\\)\n\n\nCDF\n\\(F(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\int_{-\\infty}^x\\exp\\left(-\\frac{1}{2}\\frac{(t-\\mu)^2}{\\sigma^2}\\right)\\,\\text{d}x\\)\n\n\nMGF\n\n\\(M(t) = \\exp\\left(\\mu t+\\frac{\\sigma^2}{2}t^2\\right)\\), \\(t\\in\\mathbb{R}\\)\n\n\n\nExpectation\n\\(\\mu\\)\n\n\nVariance\n\\(\\sigma^2\\)\n\n\n\nFun facts:\n\nThis is also known as the Gaussian distribution;\nN(0, 1) is called the standard normal;\nThe density of the normal is the familiar bell curve;\nWe do not have a closed-form for the CDF. We can approximate it arbitrarily well in a computer, but we can’t actually simplify the integral and get a neat formula. Bummer!",
     "crumbs": [
       "Distribution Families",
       "Normal"
@@ -1059,7 +1059,7 @@
     "href": "index.html",
     "title": "STA 240 Probability for Statistical Inference",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\nslides\n\n\n\n\nWed, Aug 27\n\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\nnotes\n\n\n\n\nThu, Aug 28\n\n💻 Lab 0 (calculus review)\n\n\n\n\n2\nMon, Sep 1\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\nWed, Sep 3\n\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\nslides notes\n\n\nIntro Survey @ 3 PM\n\n\n\nThu, Sep 4\n\n💻 Lab 1 (hello R)\n\n\nLab 1 @ 11:59 PM\n\n\n\nFri, Sep 5\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nWed, Sep 10\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nThu, Sep 11\n\n💻 Lab 2 (counting)\n\n\nLab 2 @ 11:59 PM\n\n\n\nFri, Sep 12\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nnotes Play around!\n\n\n\n\n\nWed, Sep 17\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nRead! Play around!\n\n\n\n\n\nThu, Sep 18\n\n💻 Lab 3 (disease testing)\nRead!\n\nLab 3 @ 11:59 PM\n\n\n\nFri, Sep 19\n\n\n\nPSET 0 corrections PSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\nDS: 3.1, 3.3, 4.1\n🧑‍🏫 Random variable intro\nnotes\n\n\n\n\nWed, Sep 24\n\nDS: 5.1 - 5.4\n🧑‍🏫 Discrete families\nnotes\n\n\n\n\nThu, Sep 25\n\n💻 Lab 4 (ChatGPT)\n\n\nLab 4 @ 11:59 PM\n\n\n\nFri, Sep 26\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\nDS: 4.2\n🧑‍🏫 Expected value\nnotes\n\n\n\n\nWed, Oct 1\n\nDS: 4.3\n🧑‍🏫 Variance\nnotes\n\n\n\n\nThu, Oct 2\n\n💻 Lab 5 (random dating)\n\n\nLab 5 @ 11:59 PM\n\n\n\nSun, Oct 5\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n🧑‍🏫 CDF\nnotes\n\n\n\n\nWed, Oct 8\n\n🧑‍🏫 Absolutely continuous\nnotes\n\n\n\n\nThu, Oct 9\nstudy guide\n📝 Midterm 1\n\n\n\n\n\n8\nMon, Oct 13\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\nWed, Oct 15\n\n🧑‍🏫 Normal, gamma\n\nnormal primer gamma primer\n\n\n\n\n\nThu, Oct 16\n\n💻 Lab 6 (normal and gamma)\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n🧑‍🏫 Moments, quantiles\nnotes\n\n\n\n\nWed, Oct 22\n\n🧑‍🏫 MGF\n\n\n\n\n\nThu, Oct 23\n\n💻 Lab 7 (transformations)\n\n\nLab 7 @ 11:59 PM\n\n\n10\nMon, Oct 27\n\n🧑‍🏫 Jointly Discrete\n\n\nPSET 5 @ 3PM\n\n\n\nWed, Oct 29\n\n🧑‍🏫 Jointly continuous\n\n\n\n\n\nThu, Oct 30\n\n💻 Lab 8 (insurance)\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\nWed, Nov 5\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\nThu, Nov 6\n\n💻 Lab 9 (simulation)\n\nLab 9 @ 11:59 PM\n\n\n\nFri, Nov 7\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\nWed, Nov 12\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\nThu, Nov 13\n\n📝 Midterm 2\n\n\n\n\n\n13\nMon, Nov 17\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nWed, Nov 19\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nThu, Nov 20\n\n💻 Lab 10 (mle)\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\nWed, Nov 26\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\nThu, Nov 27\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n15\nMon, Dec 1\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nWed, Dec 3\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nThu, Dec 4\n\n💻 Lab 11 (bayes)\n\nLab 11 @ 11:59 PM\n\n\n\nFri, Dec 5\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n📝 Final (9AM - 12PM)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\nslides\n\n\n\n\nWed, Aug 27\n\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\nnotes\n\n\n\n\nThu, Aug 28\n\n💻 Lab 0 (calculus review)\n\n\n\n\n2\nMon, Sep 1\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\nWed, Sep 3\n\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\nslides notes\n\n\nIntro Survey @ 3 PM\n\n\n\nThu, Sep 4\n\n💻 Lab 1 (hello R)\n\n\nLab 1 @ 11:59 PM\n\n\n\nFri, Sep 5\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nWed, Sep 10\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nThu, Sep 11\n\n💻 Lab 2 (counting)\n\n\nLab 2 @ 11:59 PM\n\n\n\nFri, Sep 12\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nnotes Play around!\n\n\n\n\n\nWed, Sep 17\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nRead! Play around!\n\n\n\n\n\nThu, Sep 18\n\n💻 Lab 3 (disease testing)\nRead!\n\nLab 3 @ 11:59 PM\n\n\n\nFri, Sep 19\n\n\n\nPSET 0 corrections PSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\nDS: 3.1, 3.3, 4.1\n🧑‍🏫 Random variable intro\nnotes\n\n\n\n\nWed, Sep 24\n\nDS: 5.1 - 5.4\n🧑‍🏫 Discrete families\nnotes\n\n\n\n\nThu, Sep 25\n\n💻 Lab 4 (ChatGPT)\n\n\nLab 4 @ 11:59 PM\n\n\n\nFri, Sep 26\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\nDS: 4.2\n🧑‍🏫 Expected value\nnotes\n\n\n\n\nWed, Oct 1\n\nDS: 4.3\n🧑‍🏫 Variance\nnotes\n\n\n\n\nThu, Oct 2\n\n💻 Lab 5 (random dating)\n\n\nLab 5 @ 11:59 PM\n\n\n\nSun, Oct 5\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\n🧑‍🏫 CDF\nnotes\n\n\n\n\nWed, Oct 8\n\n🧑‍🏫 Absolutely continuous\nnotes\n\n\n\n\nThu, Oct 9\nstudy guide\n📝 Midterm 1\n\n\n\n\n\n8\nMon, Oct 13\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\nWed, Oct 15\n\n🧑‍🏫 Normal, gamma\n\nnormal primer gamma primer\n\n\n\n\n\nThu, Oct 16\n\n💻 Lab 6 (normal and gamma)\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\n🧑‍🏫 Moments, quantiles\nnotes\n\n\n\n\nWed, Oct 22\n\n🧑‍🏫 MGF\n\n\n\n\n\nThu, Oct 23\n\n💻 Lab 7 (transformations)\n\n\nLab 7 @ 11:59 PM\n\n\n10\nMon, Oct 27\n\n🧑‍🏫 Jointly Discrete\n\n\nPSET 5 @ 3PM\n\n\n\nWed, Oct 29\n\n🧑‍🏫 Jointly continuous\n\n\n\n\n\nThu, Oct 30\n\n💻 Lab 8 (insurance)\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\n🧑‍🏫 Sums and Averages\n\n\n\n\n\nWed, Nov 5\n\n🧑‍🏫 Law of Large Numbers\n\n\n\n\n\nThu, Nov 6\n\n💻 Lab 9 (simulation)\n\nLab 9 @ 11:59 PM\n\n\n\nFri, Nov 7\n\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\n🧑‍🏫 Central Limit Theorem\n\n\n\n\n\nWed, Nov 12\n\n🧑‍🏫 What is statistics?\n\n\n\n\n\nThu, Nov 13\n\n📝 Midterm 2\n\n\n\n\n\n13\nMon, Nov 17\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nWed, Nov 19\n\n🧑‍🏫 Maximum likelihood\n\n\n\n\n\nThu, Nov 20\n\n💻 Lab 10 (mle)\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\n🧑‍🏫 Whence AP Statistics?\n\n\n\n\n\nWed, Nov 26\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\nThu, Nov 27\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n15\nMon, Dec 1\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nWed, Dec 3\n\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nThu, Dec 4\n\n💻 Lab 11 (bayes)\n\nLab 11 @ 11:59 PM\n\n\n\nFri, Dec 5\n\n\n\nPSET 7 @ 5PM\n\n\n16\nFri, Dec 12\n\n📝 Final (9AM - 12PM)",
     "crumbs": [
       "Syllabus",
       "Schedule"
@@ -1714,18 +1714,25 @@
     "text": "Here is the cdf of an absolutely continuous random variable \\(X\\):\n\\[\nF(x)\n=\n\\begin{cases}\n1-\\exp\\left(-\\sqrt{x}\\right)&x\\geq 0\\\\\n0&\\text{else}.\n\\end{cases}\n\\]\n\nWhat is \\(P(4\\leq X &lt; 9)\\)?\nWhat is the pdf of \\(X\\)?\nCompute \\(E(X^n)\\) for any \\(n\\in\\mathbb{N}\\).\nWhat is the variance of \\(X\\)?\nWhat is the median of \\(X\\)?\n\n\n\n\n\n\n\nHint\n\n\n\nAll of the moments of this distribution are finite, but nevertheless, it doesn’t have a moment-generating function (MGF). So you’ll hit a dead-end if you try using that to compute the moments. Instead, use LOTUS. It’s a subtle calculation, but it actually works out pretty nice."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/minimize-expected-error.html",
-    "href": "problems/bank/random-variables-continuous/minimize-expected-error.html",
+    "objectID": "problems/bank/random-variables-continuous/pareto.html",
+    "href": "problems/bank/random-variables-continuous/pareto.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(X\\) be any absolutely continuous random variable with pdf \\(f\\) and cdf \\(F\\), and assume that \\(E[(X-a)^2]\\) and \\(E\\left[|X-a|\\right]\\) are finite for all \\(a\\in \\mathbb{R}\\).\n\nCompute and interpret\n\n\\[\na_0=\\underset{a\\in\\mathbb{R}}{\\arg\\min}\\,E[(X-a)^2].\n\\]\n\nCompute and interpret\n\n\\[\nb_0=\\underset{b\\in\\mathbb{R}}{\\arg\\min}\\,E\\left[|X-b|\\right].\n\\]"
+    "text": "Here is the cdf of an absolutely continuous random variable \\(X\\):\n\\[\nF(x;\\,\\alpha,\\,\\theta)\n=\n\\begin{cases}\n1-\\left(\\frac{\\theta}{x + \\theta}\\right)^\\alpha & x &gt;0 \\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\nThe parameters \\(\\alpha\\) and \\(\\theta\\) are just positive constants.\n\nFind the pdf of \\(X\\) and plot it for \\(\\alpha=1,\\, 2,\\, 3\\) and \\(\\theta = 1\\);\nCompute the median of \\(X\\);\nCompute \\(E(X)\\). Is it finite for all values of the parameters?\nCompute \\(\\textrm{var}(X)\\). Is it finite for all values of the parameters?\nFix \\((\\alpha,\\,\\theta) = (3,\\, 100)\\) and compute \\(P(X &gt; 75\\,|\\, X &gt; 50)\\)."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/gamma-half.html",
-    "href": "problems/bank/random-variables-continuous/gamma-half.html",
+    "objectID": "problems/bank/random-variables-continuous/random-point-on-line.html",
+    "href": "problems/bank/random-variables-continuous/random-point-on-line.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Recall the gamma function\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\text{d}y.\n\\]\nShow that \\(\\Gamma\\left(\\frac{1}{2}\\right)=\\sqrt{\\pi}\\)."
+    "text": "A point is chosen at random on a line segment of length \\(L\\). Interpret this statement, and find the probability that the ratio of the shorter to the longer segment is less than \\(\\frac{1}{4}\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nIt might help to read about the continuous uniform distribution."
+  },
+  {
+    "objectID": "problems/bank/random-variables-continuous/rayleigh.html",
+    "href": "problems/bank/random-variables-continuous/rayleigh.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Consider a random variable \\(X\\) with pdf\n\\[\nf(x;\\,\\theta) =\\begin{cases}\n\\frac{x}{\\theta}e^{-\\frac{x^2}{2\\theta}} & x\\geq 0\\\\\n0 & \\text{else},\n\\end{cases}\n\\]\nwhere \\(\\theta &gt;0\\) is a parameter.\n\nCompute the CDF of \\(X\\).\nCompute the median of \\(X\\)."
   },
   {
     "objectID": "problems/bank/random-variables-continuous/gamma-mgf.html",
@@ -1908,6 +1915,34 @@
     "title": "STA 240 Fall 2025",
     "section": "",
     "text": "Out of the students in a class, 60% are geniuses, 70% love chocolate, and 40% fall into both categories. Determine the probability that a randomly selected student is neither a genius nor a chocolate lover."
+  },
+  {
+    "objectID": "problems/bank/transformations/twerkout.html",
+    "href": "problems/bank/transformations/twerkout.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "On Lab 7, we learned how to derive the distribution of a transformation. This is an important technical skill that crops up often in mathematical probability, so let’s get our reps in:\n\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\), and find the range and density of \\(Y=e^X\\);\nLet \\(X\\sim\\textrm{Unif}(0,\\,1)\\), and find the range and density of \\(Y=\\sqrt{X}\\);\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\), and find the range and density of \\(Y=X^2\\);\nLet \\(X\\sim\\text{Gamma}(a,\\,b)\\), and find the range and density of \\(Y=1/X\\);\nLet \\(Z\\sim\\text{N}(0,\\,1)\\), and find the range and density of \\(Z^2\\)."
+  },
+  {
+    "objectID": "problems/bank/moments/binomial-mgf.html",
+    "href": "problems/bank/moments/binomial-mgf.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Compute the moment-generating function of the binomial distribution;\nUse the mgf to compute the mean;\nUse the mgf to compute the variance.\n\nNote: we already know from lecture that the mean is \\(np\\) and the variance is \\(np(1-p)\\), so you know you did it right when you get the same answer."
+  },
+  {
+    "objectID": "problems/bank/joint-distributions/gamma-gamma-hierarchy.html",
+    "href": "problems/bank/joint-distributions/gamma-gamma-hierarchy.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Consider the joint distribution of random variables \\(X\\) and \\(Y\\), written in hierarchical form:\n\\[\n\\begin{aligned}\nX&\\sim\\textrm{Gamma}\\left(\\frac{d_2}{2},\\, \\frac{d_2}{2}\\right)\\\\\nY\\,|\\, X = x&\\sim\\textrm{Gamma}\\left(\\frac{d_1}{2},\\, \\frac{d_1}{2}x\\right).\\\\\n\\end{aligned}\n\\]\nDo some serious “massage and squint” to show that the marginal pdf of \\(Y\\) is\n\\[\nf_Y(y)=\\frac{\\Gamma\\left(\\frac{d_1}{2}+\\frac{d_2}{2}\\right)}{\\Gamma\\left(\\frac{d_1}{2}\\right)\\Gamma\\left(\\frac{d_2}{2}\\right)}\\left(\\frac{d_1}{d_2}\\right)^{\\frac{d_1}{2}}y^{\\frac{d_1}{2}-1}\\left(1+\\frac{d_1}{d_2}y\\right)^{-\\frac{d_1+d_2}{2}},\\quad y&gt;0.\n\\]\nThis means that \\(Y\\) has the F-distribution."
+  },
+  {
+    "objectID": "problems/bank/joint-distributions/beta-gamma-hierarchy.html",
+    "href": "problems/bank/joint-distributions/beta-gamma-hierarchy.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Consider a random pair \\((X,\\,Y)\\) with a joint distribution given by this hierarchy:\n\\[\n\\begin{aligned}\n    X\n    &\\sim\n    \\textrm{Beta}(a,\\, b)\n    \\\\\n    Y\\mid X = x\n    &\\sim\n    \\textrm{Gamma}\\left(a+b,\\, \\frac{c}{x}\\right).\n\\end{aligned}\n\\]\n\nWhat is the joint range?\nWhat is the marginal density of \\(Y\\)?\nWhat is the conditional density of \\(X\\)?"
   },
   {
     "objectID": "problems/bank/counting/basic-counting.html",
@@ -2470,6 +2505,34 @@
     "text": "A box contains 20 balls, 5 each of colors cyan, magenta, yellow and black. Answer the following for an experiment where 10 balls are selected at random without replacement from the box. What is the probability that:\n\nMore than two colors are missing from the selection?\nMagenta and yellow are missing from the selection?\nExactly two colors are missing from the selection?\nOnly the color cyan is missing from the selection?\nExactly one color is missing from the selection?\nAt least one color will be missing from the selection?\nNo colors are missing from the selection?"
   },
   {
+    "objectID": "problems/bank/joint-distributions/uniform-on-the-disc.html",
+    "href": "problems/bank/joint-distributions/uniform-on-the-disc.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Let \\(X\\) and \\(Y\\) be jointly absolutely continuous with density\n\\[\nf_{XY}(x,\\, y)=\\frac{1}{\\pi},\\quad x^2+y^2\\leq 1.\n\\]\nSo \\(X\\) and \\(Y\\) jointly possess the uniform distribution on the unit disc.\n\nThe joint density is a surface in three-dimensional space. Sketch what the joint density looks like.\nCompute the marginal densities of \\(X\\) and \\(Y\\).\nAre \\(X\\) and \\(Y\\) independent?"
+  },
+  {
+    "objectID": "problems/bank/joint-distributions/secret-bayes.html",
+    "href": "problems/bank/joint-distributions/secret-bayes.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Suppose \\(X\\) and \\(Y\\) are jointly absolutely continuous random variables with joint density\n\\[\nf_{XY}(x,\\,y)=xe^{-x(y+1)},\\quad x,\\,y&gt;0.\n\\]\n\nFind the marginal density of \\(X\\).\nFind the marginal density of \\(Y\\).\nAre \\(X\\) and \\(Y\\) independent?\nFind the conditional density of \\(X\\) given \\(Y=y\\).\nFind the conditional density of \\(Y\\) given \\(X=x\\)."
+  },
+  {
+    "objectID": "problems/bank/moments/laplace.html",
+    "href": "problems/bank/moments/laplace.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Let \\(X\\) have density\n\\[\nf_X(x)\n=\n\\frac{1}{2}\ne^{-|x|},\\quad x\\in\\mathbb{R}.\n\\]\n\nWhat is the mgf of \\(X\\)?\nWhat is the mean?\nWhat is the variance?"
+  },
+  {
+    "objectID": "problems/bank/moments/simple-mgf.html",
+    "href": "problems/bank/moments/simple-mgf.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Let \\(X\\) be a discrete random variable with\n\n\n\n\n\\(x\\)\n-1\n3\n7\n\n\n\n\n\\(P(X=x)\\)\n0.5\n0.2\n0.3\n\n\n\n\n\nCompute the mgf of \\(X\\).\nCompute the mean two ways: using the definition, and using the mgf. Confirm that you get the same answer.\nCompute the variance two ways: using the definition, and using the mgf. Confirm that you get the same answer."
+  },
+  {
     "objectID": "problems/bank/basic-rules/xor-2.html",
     "href": "problems/bank/basic-rules/xor-2.html",
     "title": "STA 240 Fall 2025",
@@ -2652,11 +2715,18 @@
     "text": "Consider this function:\n\\[\nF(x) = \\begin{cases}\n1 - e^{-g(x)} & x\\geq 0\\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\nAssume \\(g(x)\\) is continuous. I want \\(F(x)\\) to be a continuous function, and I want \\(F(x)\\) to be a valid cumulative distribution function (CDF). What properties must \\(g(x)\\) satisfy in order to make that happen? Give three examples of \\(g\\) that have these properties."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/random-point-on-line.html",
-    "href": "problems/bank/random-variables-continuous/random-point-on-line.html",
+    "objectID": "problems/bank/random-variables-continuous/gamma-half.html",
+    "href": "problems/bank/random-variables-continuous/gamma-half.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "A point is chosen at random on a line segment of length \\(L\\). Interpret this statement, and find the probability that the ratio of the shorter to the longer segment is less than \\(\\frac{1}{4}\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nIt might help to read about the continuous uniform distribution."
+    "text": "Recall the gamma function\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\text{d}y.\n\\]\nShow that \\(\\Gamma\\left(\\frac{1}{2}\\right)=\\sqrt{\\pi}\\)."
+  },
+  {
+    "objectID": "problems/bank/random-variables-continuous/minimize-expected-error.html",
+    "href": "problems/bank/random-variables-continuous/minimize-expected-error.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Let \\(X\\) be any absolutely continuous random variable with pdf \\(f\\) and cdf \\(F\\), and assume that \\(E[(X-a)^2]\\) and \\(E\\left[|X-a|\\right]\\) are finite for all \\(a\\in \\mathbb{R}\\).\n\nCompute and interpret\n\n\\[\na_0=\\underset{a\\in\\mathbb{R}}{\\arg\\min}\\,E[(X-a)^2].\n\\]\n\nCompute and interpret\n\n\\[\nb_0=\\underset{b\\in\\mathbb{R}}{\\arg\\min}\\,E\\left[|X-b|\\right].\n\\]"
   },
   {
     "objectID": "problems/bank/random-variables-continuous/basic-pdf-practice.html",
@@ -2677,126 +2747,154 @@
     "href": "problems/pset-6.html",
     "title": "Problem Set 6",
     "section": "",
-    "text": "DOODLE"
+    "text": "Doodle a cute character that will cheer you on during this assignment.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
   },
   {
     "objectID": "problems/pset-6.html#problem-0",
     "href": "problems/pset-6.html#problem-0",
     "title": "Problem Set 6",
     "section": "",
-    "text": "DOODLE"
+    "text": "Doodle a cute character that will cheer you on during this assignment.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
   },
   {
     "objectID": "problems/pset-6.html#problem-1",
     "href": "problems/pset-6.html#problem-1",
     "title": "Problem Set 6",
     "section": "Problem 1",
-    "text": "Problem 1"
+    "text": "Problem 1\nHere is the cdf of an absolutely continuous random variable \\(X\\):\n\\[\nF(x;\\,\\alpha,\\,\\theta)\n=\n\\begin{cases}\n1-\\left(\\frac{\\theta}{x + \\theta}\\right)^\\alpha & x &gt;0 \\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\nThe parameters \\(\\alpha\\) and \\(\\theta\\) are just positive constants.\n\nFind the pdf of \\(X\\) and plot it for \\(\\alpha=1,\\, 2,\\, 3\\) and \\(\\theta = 1\\);\nCompute the median of \\(X\\);\nCompute \\(E(X)\\). Is it finite for all values of the parameters?\nCompute \\(\\textrm{var}(X)\\). Is it finite for all values of the parameters?\nFix \\((\\alpha,\\,\\theta) = (3,\\, 100)\\) and compute \\(P(X &gt; 75\\,|\\, X &gt; 50)\\).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
   },
   {
     "objectID": "problems/pset-6.html#problem-2",
     "href": "problems/pset-6.html#problem-2",
     "title": "Problem Set 6",
     "section": "Problem 2",
-    "text": "Problem 2"
+    "text": "Problem 2\nQuantum mechanics has a reputation for being an intimidating branch of theoretical physics, and JZ certainly doesn’t understand a ding dong thing about it. Even so, because we have studied some basic probability theory, the mathematics of quantum mechanics is more accessible than you might guess. Behold:\n\n\nImagine a single particle at the (sub)atomic level1. A particle’s quantum state encodes information about all of its measurable properties, such as position, momentum, spin, and energy. In quantum mechanics, measuring these properties is fundamentally probabilistic. Before measurement, the particle doesn’t have a single, definite position or momentum; it has only probabilities for the possible outcomes. The quantum state of a particle is fully characterized by its wave function, and the squared magnitude of the wave function is a probability density that describes the distribution of the particle’s position, or momentum, or whatever else you wish to study. Let’s explore this in a very simple example.\nConsider a single, one-dimensional particle located somewhere in the interval \\([0,\\,L]\\). The wave function associated with the particle’s quantum state is\n\\[\n\\psi_n(x)\n=\n\\begin{cases}\nA\\cdot\\sin\\left(\\frac{n\\pi}{L}x\\right) & 0\\leq x\\leq L\\\\\n0 & \\text{else},\n\\end{cases}\n\\]\nwhere \\(A\\geq 0\\) is the amplitude, and \\(n=1,\\,2,\\,3,\\,...\\) indexes the particle’s energy level. The higher the energy level, the more “excited” the particle is. Behold:\n\n\n\n\n\n\n\n\nBecause the particle does not have a definite position before measurement, we treat the position \\(X_n\\in[0,\\,L]\\) of the particle as a continuous random variable whose probability density function is \\(f_n(x)=|\\psi_n(x)|^2\\).\n\nCompute the value of \\(A\\) that ensures that \\(f_n\\) is a valid pdf;\nCompute the cdf of the random variable \\(X_n\\) and plot it for various values of \\(n\\);\nWhat is the expected location of the particle?\nWhat is the probability that the particle is located at the midpoint of the interval?\nLet \\(n=4\\) and \\(L=1\\). What is the probability that the particle is located in the interval \\([0.2, 0.3]\\)?\nThe parameter \\(n=1,\\,2,\\,3,\\,...\\) indexes the energy level of the particle. The larger the value of \\(n\\), the more excited the particle is. If \\(n\\to\\infty\\), then the particle is, like, super stoked. What happens to the distribution of \\(X_n\\) as \\(n\\to\\infty\\)?",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
   },
   {
     "objectID": "problems/pset-6.html#problem-3",
     "href": "problems/pset-6.html#problem-3",
     "title": "Problem Set 6",
     "section": "Problem 3",
-    "text": "Problem 3"
+    "text": "Problem 3\nLet \\(X\\) be a discrete random variable with\n\n\n\n\\(x\\)\n-1\n3\n7\n\n\n\\(P(X=x)\\)\n0.5\n0.2\n0.3\n\n\n\n\nCompute the mgf of \\(X\\).\nCompute the mean two ways: using the definition, and using the mgf. Confirm that you get the same answer.\nCompute the variance two ways: using the definition, and using the mgf. Confirm that you get the same answer.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
   },
   {
     "objectID": "problems/pset-6.html#problem-4",
     "href": "problems/pset-6.html#problem-4",
     "title": "Problem Set 6",
     "section": "Problem 4",
-    "text": "Problem 4"
+    "text": "Problem 4\n\nCompute the moment-generating function of the binomial distribution;\nUse the mgf to compute the mean;\nUse the mgf to compute the variance.\n\nNote: we already know from lecture that the mean is \\(np\\) and the variance is \\(np(1-p)\\), so you know you did it right when you get the same answer.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
   },
   {
     "objectID": "problems/pset-6.html#problem-5",
     "href": "problems/pset-6.html#problem-5",
     "title": "Problem Set 6",
     "section": "Problem 5",
-    "text": "Problem 5"
+    "text": "Problem 5\nLet \\(X\\) have density\n\\[\nf_X(x)\n=\n\\frac{1}{2}\ne^{-|x|},\\quad x\\in\\mathbb{R}.\n\\]\n\nWhat is the mgf of \\(X\\)?\nWhat is the mean?\nWhat is the variance?",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
   },
   {
     "objectID": "problems/pset-6.html#problem-6",
     "href": "problems/pset-6.html#problem-6",
     "title": "Problem Set 6",
     "section": "Problem 6",
-    "text": "Problem 6"
+    "text": "Problem 6\nOn Lab 7, we learned how to derive the distribution of a transformation. This is an important technical skill that crops up often in mathematical probability, so let’s get our reps in:\n\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\), and find the range and density of \\(Y=e^X\\);\nLet \\(X\\sim\\textrm{Unif}(0,\\,1)\\), and find the range and density of \\(Y=\\sqrt{X}\\);\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\), and find the range and density of \\(Y=X^2\\);\nLet \\(X\\sim\\text{Gamma}(a,\\,b)\\), and find the range and density of \\(Y=1/X\\);\nLet \\(Z\\sim\\text{N}(0,\\,1)\\), and find the range and density of \\(Z^2\\).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
   },
   {
     "objectID": "problems/pset-6.html#problem-7",
     "href": "problems/pset-6.html#problem-7",
     "title": "Problem Set 6",
     "section": "Problem 7",
-    "text": "Problem 7"
+    "text": "Problem 7\nSuppose \\(X\\) and \\(Y\\) are jointly absolutely continuous random variables with joint density\n\\[\nf_{XY}(x,\\,y)=xe^{-x(y+1)},\\quad x,\\,y&gt;0.\n\\]\n\nFind the marginal density of \\(X\\).\nFind the marginal density of \\(Y\\).\nAre \\(X\\) and \\(Y\\) independent?\nFind the conditional density of \\(X\\) given \\(Y=y\\).\nFind the conditional density of \\(Y\\) given \\(X=x\\).",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
   },
   {
     "objectID": "problems/pset-6.html#problem-8",
     "href": "problems/pset-6.html#problem-8",
     "title": "Problem Set 6",
     "section": "Problem 8",
-    "text": "Problem 8"
+    "text": "Problem 8\nLet \\(X\\) and \\(Y\\) be jointly absolutely continuous with density\n\\[\nf_{XY}(x,\\, y)=\\frac{1}{\\pi},\\quad x^2+y^2\\leq 1.\n\\]\nSo \\(X\\) and \\(Y\\) jointly possess the uniform distribution on the unit disc.\n\nThe joint density is a surface in three-dimensional space. Sketch what the joint density looks like.\nCompute the marginal densities of \\(X\\) and \\(Y\\).\nAre \\(X\\) and \\(Y\\) independent?",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
   },
   {
     "objectID": "problems/pset-6.html#problem-9",
     "href": "problems/pset-6.html#problem-9",
     "title": "Problem Set 6",
     "section": "Problem 9",
-    "text": "Problem 9"
+    "text": "Problem 9\nConsider a random pair \\((X,\\,Y)\\) with a joint distribution given by this hierarchy:\n\\[\n\\begin{aligned}\n    X\n    &\\sim\n    \\textrm{Beta}(a,\\, b)\n    \\\\\n    Y\\mid X = x\n    &\\sim\n    \\textrm{Gamma}\\left(a+b,\\, \\frac{c}{x}\\right).\n\\end{aligned}\n\\]\n\nWhat is the joint range?\nWhat is the marginal density of \\(Y\\)?\nWhat is the conditional density of \\(X\\)?",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
   },
   {
     "objectID": "problems/pset-6.html#problem-10",
     "href": "problems/pset-6.html#problem-10",
     "title": "Problem Set 6",
     "section": "Problem 10",
-    "text": "Problem 10"
-  },
-  {
-    "objectID": "problems/pset-6.html#problem-11",
-    "href": "problems/pset-6.html#problem-11",
-    "title": "Problem Set 6",
-    "section": "Problem 11",
-    "text": "Problem 11"
-  },
-  {
-    "objectID": "problems/pset-6.html#problem-12",
-    "href": "problems/pset-6.html#problem-12",
-    "title": "Problem Set 6",
-    "section": "Problem 12",
-    "text": "Problem 12"
-  },
-  {
-    "objectID": "problems/pset-6.html#problem-13",
-    "href": "problems/pset-6.html#problem-13",
-    "title": "Problem Set 6",
-    "section": "Problem 13",
-    "text": "Problem 13"
-  },
-  {
-    "objectID": "problems/pset-6.html#problem-14",
-    "href": "problems/pset-6.html#problem-14",
-    "title": "Problem Set 6",
-    "section": "Problem 14",
-    "text": "Problem 14"
-  },
-  {
-    "objectID": "problems/pset-6.html#problem-15",
-    "href": "problems/pset-6.html#problem-15",
-    "title": "Problem Set 6",
-    "section": "Problem 15",
-    "text": "Problem 15"
+    "text": "Problem 10\nConsider the joint distribution of random variables \\(X\\) and \\(Y\\), written in hierarchical form:\n\\[\n\\begin{aligned}\nX&\\sim\\textrm{Gamma}\\left(\\frac{d_2}{2},\\, \\frac{d_2}{2}\\right)\\\\\nY\\,|\\, X = x&\\sim\\textrm{Gamma}\\left(\\frac{d_1}{2},\\, \\frac{d_1}{2}x\\right).\\\\\n\\end{aligned}\n\\]\nDo some serious “massage and squint” to show that the marginal pdf of \\(Y\\) is\n\\[\nf_Y(y)=\\frac{\\Gamma\\left(\\frac{d_1}{2}+\\frac{d_2}{2}\\right)}{\\Gamma\\left(\\frac{d_1}{2}\\right)\\Gamma\\left(\\frac{d_2}{2}\\right)}\\left(\\frac{d_1}{d_2}\\right)^{\\frac{d_1}{2}}y^{\\frac{d_1}{2}-1}\\left(1+\\frac{d_1}{d_2}y\\right)^{-\\frac{d_1+d_2}{2}},\\quad y&gt;0.\n\\]\nThis means that \\(Y\\) has the F-distribution.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
   },
   {
     "objectID": "problems/pset-6.html#submission",
     "href": "problems/pset-6.html#submission",
     "title": "Problem Set 6",
     "section": "Submission",
-    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.\nDo not forget to include the following:\n\nFor each problem, please acknowledge your collaborators;\nIf a problem required you to code something, please include both the code and the output. “Including the code” can be as crude as a screenshot, but you might also use Quarto to get a nice lil’ pdf that you can merge with the rest of your submission."
+    "text": "Submission\nYou are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to Gradescope and mark the pages associated with each problem.\nDo not forget to include the following:\n\nFor each problem, please acknowledge your collaborators;\nIf a problem required you to code something, please include both the code and the output. “Including the code” can be as crude as a screenshot, but you might also use Quarto to get a nice lil’ pdf that you can merge with the rest of your submission.",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
+  },
+  {
+    "objectID": "problems/pset-6.html#footnotes",
+    "href": "problems/pset-6.html#footnotes",
+    "title": "Problem Set 6",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nIf you’re like me, you cannot do this. Oh well.↩︎",
+    "crumbs": [
+      "Problem Sets",
+      "Problem Set 6"
+    ]
   },
   {
     "objectID": "problems/pset-5.html",

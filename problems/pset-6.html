@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Problem Set 6 – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
@@ -22,13 +19,14 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../labs/lab-1.html" rel="next">
+<link href="../problems/pset-5.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -38,8 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -65,40 +62,58 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 <meta property="og:title" content="Problem Set 6 – STA 240 Fall 2025">
 <meta property="og:description" content="Due Friday November 7 at 5PM">
+<meta property="og:image" content="https://sta240-f25.github.io/problems/pset-6_files/figure-html/unnamed-chunk-1-1.png">
 <meta property="og:site_name" content="STA 240 Fall 2025">
+<meta property="og:image:height" content="537">
+<meta property="og:image:width" content="1344">
 </head>
-
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Problem Set 6</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problems/pset-0.html">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problems/pset-6.html">Problem Set 6</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
@@ -113,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -121,8 +136,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -165,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -174,8 +189,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
@@ -224,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -233,8 +248,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
@@ -331,7 +346,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -340,8 +355,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binomial</span></a>
@@ -384,17 +399,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Problem Sets</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
@@ -430,8 +445,14 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Problem Set 5</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/pset-6.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Problem Set 6</span></a>
+  </div>
+</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
@@ -440,8 +461,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
@@ -484,7 +505,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
@@ -493,26 +514,24 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#problem-0" id="toc-problem-0" class="nav-link active" data-scroll-target="#problem-0">Problem 0</a></li>
+<li><a href="#problem-0" id="toc-problem-0" class="nav-link active" data-scroll-target="#problem-0">Problem 0</a></li>
   <li><a href="#problem-1" id="toc-problem-1" class="nav-link" data-scroll-target="#problem-1">Problem 1</a></li>
   <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
   <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
@@ -523,20 +542,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#problem-8" id="toc-problem-8" class="nav-link" data-scroll-target="#problem-8">Problem 8</a></li>
   <li><a href="#problem-9" id="toc-problem-9" class="nav-link" data-scroll-target="#problem-9">Problem 9</a></li>
   <li><a href="#problem-10" id="toc-problem-10" class="nav-link" data-scroll-target="#problem-10">Problem 10</a></li>
-  <li><a href="#problem-11" id="toc-problem-11" class="nav-link" data-scroll-target="#problem-11">Problem 11</a></li>
-  <li><a href="#problem-12" id="toc-problem-12" class="nav-link" data-scroll-target="#problem-12">Problem 12</a></li>
-  <li><a href="#problem-13" id="toc-problem-13" class="nav-link" data-scroll-target="#problem-13">Problem 13</a></li>
-  <li><a href="#problem-14" id="toc-problem-14" class="nav-link" data-scroll-target="#problem-14">Problem 14</a></li>
-  <li><a href="#problem-15" id="toc-problem-15" class="nav-link" data-scroll-target="#problem-15">Problem 15</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
-  </ul>
-</nav>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problems/pset-0.html">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problems/pset-6.html">Problem Set 6</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">Problem Set 6</h1>
 <p class="subtitle lead">Due Friday November 7 at 5PM</p>
 </div>
@@ -552,60 +562,157 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
-
-
-<section id="problem-0" class="level2">
-<h2 class="anchored" data-anchor-id="problem-0">Problem 0</h2>
-<p>DOODLE</p>
-</section>
-<section id="problem-1" class="level2">
-<h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
-</section>
-<section id="problem-2" class="level2">
-<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
-</section>
-<section id="problem-3" class="level2">
-<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
-</section>
-<section id="problem-4" class="level2">
-<h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
-</section>
-<section id="problem-5" class="level2">
-<h2 class="anchored" data-anchor-id="problem-5">Problem 5</h2>
-</section>
-<section id="problem-6" class="level2">
-<h2 class="anchored" data-anchor-id="problem-6">Problem 6</h2>
-</section>
-<section id="problem-7" class="level2">
-<h2 class="anchored" data-anchor-id="problem-7">Problem 7</h2>
-</section>
-<section id="problem-8" class="level2">
-<h2 class="anchored" data-anchor-id="problem-8">Problem 8</h2>
-</section>
-<section id="problem-9" class="level2">
-<h2 class="anchored" data-anchor-id="problem-9">Problem 9</h2>
-</section>
-<section id="problem-10" class="level2">
-<h2 class="anchored" data-anchor-id="problem-10">Problem 10</h2>
-</section>
-<section id="problem-11" class="level2">
-<h2 class="anchored" data-anchor-id="problem-11">Problem 11</h2>
-</section>
-<section id="problem-12" class="level2">
-<h2 class="anchored" data-anchor-id="problem-12">Problem 12</h2>
-</section>
-<section id="problem-13" class="level2">
-<h2 class="anchored" data-anchor-id="problem-13">Problem 13</h2>
-</section>
-<section id="problem-14" class="level2">
-<h2 class="anchored" data-anchor-id="problem-14">Problem 14</h2>
-</section>
-<section id="problem-15" class="level2">
-<h2 class="anchored" data-anchor-id="problem-15">Problem 15</h2>
-</section>
-<section id="submission" class="level2">
-<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+</header><section id="problem-0" class="level2"><h2 class="anchored" data-anchor-id="problem-0">Problem 0</h2>
+<p>Doodle a cute character that will cheer you on during this assignment.</p>
+</section><section id="problem-1" class="level2"><h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
+<p>Here is the cdf of an absolutely continuous random variable <span class="math inline">\(X\)</span>:</p>
+<p><span class="math display">\[
+F(x;\,\alpha,\,\theta)
+=
+\begin{cases}
+1-\left(\frac{\theta}{x + \theta}\right)^\alpha &amp; x &gt;0 \\
+0 &amp; \text{else}.
+\end{cases}
+\]</span></p>
+<p>The parameters <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\theta\)</span> are just positive constants.</p>
+<ol type="a">
+<li>Find the pdf of <span class="math inline">\(X\)</span> and plot it for <span class="math inline">\(\alpha=1,\, 2,\, 3\)</span> and <span class="math inline">\(\theta = 1\)</span>;</li>
+<li>Compute the median of <span class="math inline">\(X\)</span>;</li>
+<li>Compute <span class="math inline">\(E(X)\)</span>. Is it finite for all values of the parameters?</li>
+<li>Compute <span class="math inline">\(\textrm{var}(X)\)</span>. Is it finite for all values of the parameters?</li>
+<li>Fix <span class="math inline">\((\alpha,\,\theta) = (3,\, 100)\)</span> and compute <span class="math inline">\(P(X &gt; 75\,|\, X &gt; 50)\)</span>.</li>
+</ol></section><section id="problem-2" class="level2"><h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<p>Quantum mechanics has a reputation for being an intimidating branch of theoretical physics, and JZ certainly doesn’t understand a ding dong thing about it. Even so, because we have studied some basic probability theory, the <em>mathematics</em> of quantum mechanics is more accessible than you might guess. Behold:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GqBJiOM5tm8?si=3w-vs1KJ9x36_RTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p>Imagine a single particle at the (sub)atomic level<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. A particle’s <strong>quantum state</strong> encodes information about all of its measurable properties, such as position, momentum, spin, and energy. In quantum mechanics, measuring these properties is fundamentally probabilistic. Before measurement, the particle doesn’t have a single, definite position or momentum; it has only probabilities for the possible outcomes. The quantum state of a particle is fully characterized by its <strong>wave function</strong>, and the squared magnitude of the wave function is a probability density that describes the distribution of the particle’s position, or momentum, or whatever else you wish to study. Let’s explore this in a very simple example.</p>
+<p>Consider a single, one-dimensional particle located somewhere in the interval <span class="math inline">\([0,\,L]\)</span>. The wave function associated with the particle’s quantum state is</p>
+<p><span class="math display">\[
+\psi_n(x)
+=
+\begin{cases}
+A\cdot\sin\left(\frac{n\pi}{L}x\right) &amp; 0\leq x\leq L\\
+0 &amp; \text{else},
+\end{cases}
+\]</span></p>
+<p>where <span class="math inline">\(A\geq 0\)</span> is the <em>amplitude</em>, and <span class="math inline">\(n=1,\,2,\,3,\,...\)</span> indexes the particle’s <em>energy level</em>. The higher the energy level, the more “excited” the particle is. Behold:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="pset-6_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Because the particle does not have a definite position before measurement, we treat the position <span class="math inline">\(X_n\in[0,\,L]\)</span> of the particle as a continuous random variable whose probability density function is <span class="math inline">\(f_n(x)=|\psi_n(x)|^2\)</span>.</p>
+<ol type="a">
+<li>Compute the value of <span class="math inline">\(A\)</span> that ensures that <span class="math inline">\(f_n\)</span> is a valid pdf;</li>
+<li>Compute the cdf of the random variable <span class="math inline">\(X_n\)</span> and plot it for various values of <span class="math inline">\(n\)</span>;</li>
+<li>What is the expected location of the particle?</li>
+<li>What is the probability that the particle is located at the midpoint of the interval?</li>
+<li>Let <span class="math inline">\(n=4\)</span> and <span class="math inline">\(L=1\)</span>. What is the probability that the particle is located in the interval <span class="math inline">\([0.2, 0.3]\)</span>?</li>
+<li>The parameter <span class="math inline">\(n=1,\,2,\,3,\,...\)</span> indexes the energy level of the particle. The larger the value of <span class="math inline">\(n\)</span>, the more excited the particle is. If <span class="math inline">\(n\to\infty\)</span>, then the particle is, like, super stoked. What happens to the distribution of <span class="math inline">\(X_n\)</span> as <span class="math inline">\(n\to\infty\)</span>?</li>
+</ol></section><section id="problem-3" class="level2"><h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
+<p>Let <span class="math inline">\(X\)</span> be a discrete random variable with</p>
+<div class="center-table">
+<table class="caption-top table">
+<thead><tr class="header">
+<th><span class="math inline">\(x\)</span></th>
+<th>-1</th>
+<th>3</th>
+<th>7</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td><span class="math inline">\(P(X=x)\)</span></td>
+<td>0.5</td>
+<td>0.2</td>
+<td>0.3</td>
+</tr></tbody>
+</table>
+</div>
+<ol type="a">
+<li>Compute the mgf of <span class="math inline">\(X\)</span>.</li>
+<li>Compute the mean two ways: using the definition, and using the mgf. Confirm that you get the same answer.</li>
+<li>Compute the variance two ways: using the definition, and using the mgf. Confirm that you get the same answer.</li>
+</ol></section><section id="problem-4" class="level2"><h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
+<ol type="a">
+<li>Compute the moment-generating function of the binomial distribution;</li>
+<li>Use the mgf to compute the mean;</li>
+<li>Use the mgf to compute the variance.</li>
+</ol>
+<p><strong>Note</strong>: we already know from lecture that the mean is <span class="math inline">\(np\)</span> and the variance is <span class="math inline">\(np(1-p)\)</span>, so you know you did it right when you get the same answer.</p>
+</section><section id="problem-5" class="level2"><h2 class="anchored" data-anchor-id="problem-5">Problem 5</h2>
+<p>Let <span class="math inline">\(X\)</span> have density</p>
+<p><span class="math display">\[
+f_X(x)
+=
+\frac{1}{2}
+e^{-|x|},\quad x\in\mathbb{R}.
+\]</span></p>
+<ol type="a">
+<li>What is the mgf of <span class="math inline">\(X\)</span>?</li>
+<li>What is the mean?</li>
+<li>What is the variance?</li>
+</ol></section><section id="problem-6" class="level2"><h2 class="anchored" data-anchor-id="problem-6">Problem 6</h2>
+<p>On <a href="https://sta240-f25.github.io/labs/lab-7.html">Lab 7</a>, we learned how to derive the distribution of a transformation. This is an important technical skill that crops up often in mathematical probability, so let’s get our reps in:</p>
+<ol type="a">
+<li>Let <span class="math inline">\(X\sim\text{Unif}(0,\,1)\)</span>, and find the range and density of <span class="math inline">\(Y=e^X\)</span>;</li>
+<li>Let <span class="math inline">\(X\sim\textrm{Unif}(0,\,1)\)</span>, and find the range and density of <span class="math inline">\(Y=\sqrt{X}\)</span>;</li>
+<li>Let <span class="math inline">\(X\sim\text{Unif}(0,\,1)\)</span>, and find the range and density of <span class="math inline">\(Y=X^2\)</span>;</li>
+<li>Let <span class="math inline">\(X\sim\text{Gamma}(a,\,b)\)</span>, and find the range and density of <span class="math inline">\(Y=1/X\)</span>;</li>
+<li>Let <span class="math inline">\(Z\sim\text{N}(0,\,1)\)</span>, and find the range and density of <span class="math inline">\(Z^2\)</span>.</li>
+</ol></section><section id="problem-7" class="level2"><h2 class="anchored" data-anchor-id="problem-7">Problem 7</h2>
+<p>Suppose <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are jointly absolutely continuous random variables with joint density</p>
+<p><span class="math display">\[
+f_{XY}(x,\,y)=xe^{-x(y+1)},\quad x,\,y&gt;0.
+\]</span></p>
+<ol type="a">
+<li>Find the marginal density of <span class="math inline">\(X\)</span>.</li>
+<li>Find the marginal density of <span class="math inline">\(Y\)</span>.</li>
+<li>Are <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> independent?</li>
+<li>Find the conditional density of <span class="math inline">\(X\)</span> given <span class="math inline">\(Y=y\)</span>.</li>
+<li>Find the conditional density of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=x\)</span>.</li>
+</ol></section><section id="problem-8" class="level2"><h2 class="anchored" data-anchor-id="problem-8">Problem 8</h2>
+<p>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be jointly absolutely continuous with density</p>
+<p><span class="math display">\[
+f_{XY}(x,\, y)=\frac{1}{\pi},\quad x^2+y^2\leq 1.
+\]</span></p>
+<p>So <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> jointly possess the uniform distribution on the unit disc.</p>
+<ol type="a">
+<li>The joint density is a surface in three-dimensional space. Sketch what the joint density looks like.</li>
+<li>Compute the marginal densities of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</li>
+<li>Are <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> independent?</li>
+</ol></section><section id="problem-9" class="level2"><h2 class="anchored" data-anchor-id="problem-9">Problem 9</h2>
+<p>Consider a random pair <span class="math inline">\((X,\,Y)\)</span> with a joint distribution given by this hierarchy:</p>
+<p><span class="math display">\[
+\begin{aligned}
+    X
+    &amp;\sim
+    \textrm{Beta}(a,\, b)
+    \\
+    Y\mid X = x
+    &amp;\sim
+    \textrm{Gamma}\left(a+b,\, \frac{c}{x}\right).
+\end{aligned}
+\]</span></p>
+<ol type="a">
+<li>What is the joint range?</li>
+<li>What is the marginal density of <span class="math inline">\(Y\)</span>?</li>
+<li>What is the conditional density of <span class="math inline">\(X\)</span>?</li>
+</ol></section><section id="problem-10" class="level2"><h2 class="anchored" data-anchor-id="problem-10">Problem 10</h2>
+<p>Consider the joint distribution of random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, written in hierarchical form:</p>
+<p><span class="math display">\[
+\begin{aligned}
+X&amp;\sim\textrm{Gamma}\left(\frac{d_2}{2},\, \frac{d_2}{2}\right)\\
+Y\,|\, X = x&amp;\sim\textrm{Gamma}\left(\frac{d_1}{2},\, \frac{d_1}{2}x\right).\\
+\end{aligned}
+\]</span></p>
+<p>Do some serious “massage and squint” to show that the marginal pdf of <span class="math inline">\(Y\)</span> is</p>
+<p><span class="math display">\[
+f_Y(y)=\frac{\Gamma\left(\frac{d_1}{2}+\frac{d_2}{2}\right)}{\Gamma\left(\frac{d_1}{2}\right)\Gamma\left(\frac{d_2}{2}\right)}\left(\frac{d_1}{d_2}\right)^{\frac{d_1}{2}}y^{\frac{d_1}{2}-1}\left(1+\frac{d_1}{d_2}y\right)^{-\frac{d_1+d_2}{2}},\quad y&gt;0.
+\]</span></p>
+<p>This means that <span class="math inline">\(Y\)</span> has the <strong><em>F</em>-distribution</strong>.</p>
+</section><section id="submission" class="level2"><h2 class="anchored" data-anchor-id="submission">Submission</h2>
 <p>You are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to <a href="https://www.gradescope.com/courses/1071176">Gradescope</a> and mark the pages associated with each problem.</p>
 <p>Do not forget to include the following:</p>
 <ul>
@@ -614,10 +721,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1"><p>If you’re like me, you cannot do this. Oh well.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1015,10 +1122,19 @@ ul.task-list li input[type="checkbox"] {
       }
     }
   });
-  </script>
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../problems/pset-5.html" class="pagination-link" aria-label="Problem Set 5">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Problem Set 5</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../labs/lab-1.html" class="pagination-link" aria-label="Lab 1">
+        <span class="nav-page-text">Lab 1</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -1030,8 +1146,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
