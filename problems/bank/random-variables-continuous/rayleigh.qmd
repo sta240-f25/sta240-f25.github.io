@@ -1,0 +1,13 @@
+Consider a random variable $X$ with pdf
+
+$$
+f(x;\,\theta) =\begin{cases}
+\frac{x}{\theta}e^{-\frac{x^2}{2\theta}} & x\geq 0\\
+0 & \text{else},
+\end{cases}
+$$
+
+where $\theta >0$ is a parameter.
+
+a.  Compute the CDF of $X$.
+b.  Compute the median of $X$.

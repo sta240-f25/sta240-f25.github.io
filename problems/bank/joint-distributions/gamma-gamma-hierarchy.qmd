@@ -1,0 +1,16 @@
+Consider the joint distribution of random variables $X$ and $Y$, written in hierarchical form:
+
+$$
+\begin{aligned}
+X&\sim\textrm{Gamma}\left(\frac{d_2}{2},\, \frac{d_2}{2}\right)\\
+Y\,|\, X = x&\sim\textrm{Gamma}\left(\frac{d_1}{2},\, \frac{d_1}{2}x\right).\\
+\end{aligned}
+$$
+
+Do some serious "massage and squint" to show that the marginal pdf of $Y$ is
+
+$$
+f_Y(y)=\frac{\Gamma\left(\frac{d_1}{2}+\frac{d_2}{2}\right)}{\Gamma\left(\frac{d_1}{2}\right)\Gamma\left(\frac{d_2}{2}\right)}\left(\frac{d_1}{d_2}\right)^{\frac{d_1}{2}}y^{\frac{d_1}{2}-1}\left(1+\frac{d_1}{d_2}y\right)^{-\frac{d_1+d_2}{2}},\quad y>0.
+$$
+
+This means that $Y$ has the ***F*****-distribution**.

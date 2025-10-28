@@ -1,5 +1,55 @@
 ---
-title: "pset-6"
-format: html
+title: "Problem Set 6"
+subtitle: Due Friday November 7 at 5PM
+draft: false
+editor: 
+  mode: source
 ---
 
+## Problem 0
+
+{{< include bank/_doodle.qmd >}}
+
+## Problem 1
+
+{{< include bank/random-variables-continuous/pareto.qmd >}}
+
+## Problem 2
+
+{{< include bank/random-variables-continuous/quantum.qmd >}}
+
+## Problem 3
+
+{{< include bank/moments/simple-mgf.qmd >}}
+
+## Problem 4
+
+{{< include bank/moments/binomial-mgf.qmd >}}
+
+## Problem 5
+
+{{< include bank/moments/laplace.qmd >}}
+
+## Problem 6
+
+{{< include bank/transformations/twerkout.qmd >}}
+
+## Problem 7
+
+{{< include bank/joint-distributions/secret-bayes.qmd >}}
+
+## Problem 8
+
+{{< include bank/joint-distributions/uniform-on-the-disc.qmd >}}
+
+## Problem 9
+
+{{< include bank/joint-distributions/beta-gamma-hierarchy.qmd >}}
+
+## Problem 10
+
+{{< include bank/joint-distributions/gamma-gamma-hierarchy.qmd >}}
+
+## Submission
+
+{{< include bank/_submission.qmd >}}

@@ -1,0 +1,11 @@
+Let $X$ and $Y$ be jointly absolutely continuous with density
+
+$$
+f_{XY}(x,\, y)=\frac{1}{\pi},\quad x^2+y^2\leq 1.
+$$
+
+So $X$ and $Y$ jointly possess the uniform distribution on the unit disc.
+
+a.  The joint density is a surface in three-dimensional space. Sketch what the joint density looks like.
+b.  Compute the marginal densities of $X$ and $Y$.
+c.  Are $X$ and $Y$ independent?

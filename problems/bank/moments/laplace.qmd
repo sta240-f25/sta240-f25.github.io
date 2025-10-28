@@ -1,0 +1,12 @@
+Let $X$ have density
+
+$$
+f_X(x)
+=
+\frac{1}{2}
+e^{-|x|},\quad x\in\mathbb{R}.
+$$
+
+a.  What is the mgf of $X$?
+b.  What is the mean?
+c.  What is the variance?

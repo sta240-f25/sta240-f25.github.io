@@ -1,0 +1,17 @@
+Consider a random pair $(X,\,Y)$ with a joint distribution given by this hierarchy:
+
+$$
+\begin{aligned}
+    X
+    &\sim 
+    \textrm{Beta}(a,\, b)
+    \\
+    Y\mid X = x 
+    &\sim 
+    \textrm{Gamma}\left(a+b,\, \frac{c}{x}\right).
+\end{aligned}
+$$
+
+a. What is the joint range?
+a. What is the marginal density of $Y$?
+a. What is the conditional density of $X$?

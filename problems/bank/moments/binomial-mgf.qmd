@@ -1,0 +1,5 @@
+a. Compute the moment-generating function of the binomial distribution;
+a. Use the mgf to compute the mean;
+a. Use the mgf to compute the variance.
+
+**Note**: we already know from lecture that the mean is $np$ and the variance is $np(1-p)$, so you know you did it right when you get the same answer.

@@ -1,0 +1,18 @@
+Here is the cdf of an absolutely continuous random variable $X$:
+
+$$
+F(x;\,\alpha,\,\theta)
+=
+\begin{cases}
+1-\left(\frac{\theta}{x + \theta}\right)^\alpha & x >0 \\
+0 & \text{else}.
+\end{cases}
+$$
+
+The parameters $\alpha$ and $\theta$ are just positive constants.
+
+a.  Find the pdf of $X$ and plot it for $\alpha=1,\, 2,\, 3$ and $\theta = 1$;
+a.  Compute the median of $X$;
+a.  Compute $E(X)$. Is it finite for all values of the parameters?
+a.  Compute $\textrm{var}(X)$. Is it finite for all values of the parameters?
+a.  Fix $(\alpha,\,\theta) = (3,\, 100)$ and compute $P(X > 75\,|\, X > 50)$.

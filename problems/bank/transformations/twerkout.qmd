@@ -1,0 +1,7 @@
+On [Lab 7](https://sta240-f25.github.io/labs/lab-7.html), we learned how to derive the distribution of a transformation. This is an important technical skill that crops up often in mathematical probability, so let's get our reps in:
+
+a. Let $X\sim\text{Unif}(0,\,1)$, and find the range and density of $Y=e^X$;
+a. Let $X\sim\textrm{Unif}(0,\,1)$, and find the range and density of $Y=\sqrt{X}$;
+a. Let $X\sim\text{Unif}(0,\,1)$, and find the range and density of $Y=X^2$;
+a. Let $X\sim\text{Gamma}(a,\,b)$, and find the range and density of $Y=1/X$;
+a. Let $Z\sim\text{N}(0,\,1)$, and find the range and density of $Z^2$.
