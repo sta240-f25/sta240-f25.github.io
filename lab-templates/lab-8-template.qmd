@@ -1,0 +1,72 @@
+---
+title: "Lab 8"
+subtitle: Duke STA 240 Fall 2025
+author: replace this text with your name
+format: 
+  pdf:
+    toc: false
+editor: 
+  mode: source
+---
+
+# Task 1
+
+Type words here if necessary. Add math here if necessary:
+
+$$
+F, f, M, F^{-1}
+$$
+
+```{r}
+#| label: task-1
+
+# add code here if necessary
+```
+
+{{< pagebreak >}}
+
+# Task 2
+
+Type words here if necessary. Add math here if necessary:
+
+$$
+F, f, M, F^{-1}
+$$
+
+```{r}
+#| label: task-2
+
+# add code here if necessary
+```
+
+{{< pagebreak >}}
+
+# Task 3
+
+Type words here if necessary. Add math here if necessary:
+
+$$
+F, f, M, F^{-1}
+$$
+
+```{r}
+#| label: task-3
+
+# add code here if necessary
+```
+
+{{< pagebreak >}}
+
+# Task 4
+
+Type words here if necessary. Add math here if necessary:
+
+$$
+F, f, M, F^{-1}
+$$
+
+```{r}
+#| label: task-4
+
+# add code here if necessary
+```
