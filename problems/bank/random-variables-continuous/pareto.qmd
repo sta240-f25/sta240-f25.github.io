@@ -16,3 +16,8 @@ a.  Compute the median of $X$;
 a.  Compute $E(X)$. Is it finite for all values of the parameters?
 a.  Compute $\textrm{var}(X)$. Is it finite for all values of the parameters?
 a.  Fix $(\alpha,\,\theta) = (3,\, 100)$ and compute $P(X > 75\,|\, X > 50)$.
+
+
+::: callout-tip
+On [Problem Set 5](https://sta240-f25.github.io/problems/pset-5.html#problem-7) you met some cute alternatives for computing expected values, and they may be helpful here.
+:::
