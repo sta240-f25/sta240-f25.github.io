@@ -169,6 +169,8 @@ website:
             text: Lab 6
           - href: labs/lab-7.qmd
             text: Lab 7
+          - href: labs/lab-8.qmd
+            text: Lab 8
       - section: "Exam Study Guides"
         contents:
           - href: problems/exam-midterm-1.qmd
