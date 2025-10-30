@@ -1,0 +1,121 @@
+---
+title: "Lab 8"
+subtitle: Due Thursday October 30 at 11:59 PM
+format: html
+draft: false
+editor: 
+  mode: source
+---
+
+When we call `rnorm` or `rgamma` or `rpois` to generate random numbers from one of our special distributions, what is the computer actually doing? How do we program a computer to generate random numbers that behave according to some pre-defined distribution? 
+
+At the end of the day, all simulation methods revolve around a simple principle: "simulate from the standard uniform and then apply a [transformation](https://sta240-f25.github.io/labs/lab-7.html)." We statisticians take from granted that the computer scientists have devised good methods for generating random numbers from Unif(0, 1). The [*Mersenne Twister*](https://en.wikipedia.org/wiki/Mersenne_Twister) is a popular algorithm. Given that we can generate random numbers from the standard uniform, we need to figure out how to transform them into a batch of new random numbers that follow the distribution we want: normal, gamma, Cauchy, whatever.
+
+# Task 0
+
+The following theorem is a proof of concept that "simulate Unif(0, 1) and transform" is sufficient, at least in theory, to simulate any distribution we can think of:
+
+::: callout-note
+## Theorem: inverse transform sampling
+
+Let $U\sim \text{Unif}(0,\, 1)$, and let $F$ be any continuous cdf we are interested in. If we define a new random variable $X=F^{-1}(U)$, then $X\sim F$.
+:::
+
+::: {.callout-tip collapse="true"}
+## Proof
+For simplicity, assume $F$ is smooth and invertible. Things still work if it isn't, but it makes the math a little cleaner. Furthermore, recall the cdf of the standard uniform $U\sim\text{Unif}(0,\, 1)$:
+$$
+    F_U(x)=\begin{cases}
+        0 & x \leq 0\\
+        x & 0<x<1\\
+        1 & 1 \leq x.
+    \end{cases}
+$$
+
+$X$ is just a transformation of $U$, so we can apply the cdf method. 
+$$
+    \begin{align*}
+        F_X(x)
+        &=
+        P(X\leq x)
+        \\
+        &=
+        P(F^{-1}(U)\leq x)
+        \\
+        &=
+        P(U\leq F(x))
+        \\
+        &=
+        F_U\left(F(x)\right)
+        \\
+        &=
+        F(x)
+        .
+    \end{align*}
+$$
+
+So, the cdf of $X$ is literally just $F$. 
+:::
+
+
+Now, in order to actually implement the algorithm, we need to be able to compute the inverse cdf $F^{-1}$. In some cases, this may not be possible, and we must use a different transformation to actually get the job done. But the principle stands. Dig down deep enough into any simulation algorithm, and it's just simulating uniforms and messing with them.
+
+# Task 1
+
+Consider a random variable $X$ with this density:
+
+$$
+f(x) = \frac{e^{-x}}{(1+e^{-x})^2},\quad x\in\mathbb{R}.
+$$
+
+a. Compute the cdf;
+a. Compute the inverse cdf;
+a. Use inverse transform sampling to generate `n = 5000` random numbers from this distribution. Plot a histogram of the random numbers, and overlay a line plot of the original density function we gave you. If you did everything correctly, the histogram and the density should agree.
+
+
+# Task 2
+
+Consider a random variable $X$ with this density:
+
+$$
+f(x) = xe^{-\frac{1}{2}x^2},\quad x\geq 0.
+$$
+
+a. Compute the cdf;
+a. Compute the inverse cdf;
+a. Use inverse transform sampling to generate `n = 5000` random numbers from this distribution. Plot a histogram of the random numbers, and overlay a line plot of the original density function we gave you. If you did everything correctly, the histogram and the density should agree.
+
+
+# Task 3
+
+Consider a random variable $X$ with this density:
+
+$$
+f(x) = e^{-(x+e^{-x})},\quad x\in\mathbb{R}.
+$$
+
+a. Compute the cdf;
+a. Compute the inverse cdf;
+a. Use inverse transform sampling to generate `n = 5000` random numbers from this distribution. Plot a histogram of the random numbers, and overlay a line plot of the original density function we gave you. If you did everything correctly, the histogram and the density should agree.
+
+
+# Task 4
+
+Consider a random variable $X$ with this density:
+
+$$
+f(x) = \frac{1}{2}e^{-|x|},\quad x\in\mathbb{R}.
+$$
+
+a. Compute the cdf;
+a. Compute the inverse cdf;
+a. Use inverse transform sampling to generate `n = 5000` random numbers from this distribution. Plot a histogram of the random numbers, and overlay a line plot of the original density function we gave you. If you did everything correctly, the histogram and the density should agree.
+
+
+
+# Further reading
+
+I love computer simulation. It's gorgeous. Here are two great books:
+
+- Devroye, Luc (1986): *Non-uniform Random Variate Generation* ([free pdf](https://luc.devroye.org/rnbookindex.html) from the author);
+- Robert, Christian and George Casella (2004): *Monte Carlo Statistical Methods* ([free pdf](https://doi.org/10.1007/978-1-4757-4145-2) through Duke).
