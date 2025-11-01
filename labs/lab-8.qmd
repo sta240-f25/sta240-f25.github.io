@@ -318,7 +318,58 @@ a. Use inverse transform sampling to generate `n = 5000` random numbers from thi
 ::: {.callout-warning collapse="true"}
 ## Solution
 
-This is the standard Laplace distribution.
+This is the standard Laplace distribution. For $x<0$, 
+
+$$
+\begin{aligned}
+F(x)
+&=
+\int_{-\infty}^x
+\frac{1}{2}e^{-|t|}\,\text{d}t
+\\
+&=
+\frac{1}{2}
+\int_{-\infty}^x
+e^{-(-t)}\,\text{d}t
+\\
+&=
+\frac{1}{2}
+\int_{-\infty}^x
+e^{t}\,\text{d}t
+\\
+&=
+\frac{1}{2}
+[e^t]_{-\infty}^x
+\\
+&=
+\frac{1}{2} e^x.
+\end{aligned}
+$$
+
+For $x\geq 0$, 
+
+$$
+\begin{aligned}
+F(x)&=P(X\leq x)
+\\
+&=1-P(X>x)
+\\
+&=1-\int_x^\infty
+\frac{1}{2}e^{-|t|}\,\text{d}t
+\\
+&=
+1-\frac{1}{2}\int_x^\infty
+e^{-t}\,\text{d}t
+\\
+&=
+1-\frac{1}{2}[-e^{-t}]_x^\infty
+\\
+&=
+1-\frac{1}{2}e^{-x}.
+\end{aligned}
+$$
+
+So
 
 $$
 \begin{aligned}
@@ -331,7 +382,7 @@ F(x)
 \end{aligned}
 $$
 
-Quantile function:
+If you invert that darn thing, you get:
 
 $$
 \begin{aligned}
