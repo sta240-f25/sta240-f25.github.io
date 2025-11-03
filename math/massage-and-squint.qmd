@@ -13,7 +13,7 @@ Here's the principle:
 Let's unpack that:
 
 - **massaging**: u-substitution if it's an integral, re-indexing if it's a sum, multiply by a cleverly written 1, add a cleverly written 0, complete the square, etc;
-- **familiar object**: geometric series, Taylor series of a friendly function (probably $e^x$), gamma function, kernel of special density like the Gaussian, etc.
+- **familiar object**: geometric series, Taylor series of a friendly function (probably $e^x$), binomial theorem, gamma function, kernel of special density like the Gaussian, etc.
 
 ::: callout-warning
 ## Pay attention!
@@ -114,5 +114,10 @@ Use this fact to make your life easier!
 - [Poisson MGF](https://sta240-f25.github.io/distributions/discrete-poisson.html#derivations) from lecture;
 - [Standard normal MGF](https://sta240-f25.github.io/distributions/continuous-normal.html#derivations) from lecture;
 - [Gamma MGF](https://sta240-f25.github.io/distributions/continuous-gamma.html#derivations) from lecture;
-- [PSET 5 #4](https://sta240-f25.github.io/problems/pset-5.html#problem-4);
-- [PSET 5 #6c](https://sta240-f25.github.io/problems/pset-5.html#problem-6).
+- [PSET 5 #4](https://sta240-f25.github.io/problems/pset-5.html#problem-4): $\Gamma(1/2)=\sqrt{\pi}$;
+- [PSET 5 #6c](https://sta240-f25.github.io/problems/pset-5.html#problem-6);
+- [PSET 6 #7](https://sta240-f25.github.io/problems/pset-6.html#problem-7);
+- Poisson-binomial hierarchy from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-12-joint-discrete.pdf);
+- Gamma-normal hierarchy from lecture;
+- [PSET 6 #9](https://sta240-f25.github.io/problems/pset-6.html#problem-9): the beta-gamma hierarchy;
+- [PSET 6 #10](https://sta240-f25.github.io/problems/pset-6.html#problem-10): gamma-gamma hierarchy.
