@@ -15,3 +15,15 @@ $$
 a. What is the joint range?
 a. What is the marginal density of $Y$?
 a. What is the conditional density of $X$?
+
+::: callout-tip 
+## New distribution!
+
+If $X\sim \textrm{Beta}(a,\, b)$, then $\text{Range}(X)=(0,\,1)$ and the density is 
+
+$$
+f(x)=\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}x^{a-1}(1-x)^{b-1},\quad0<x<1.
+$$
+
+That's new to you, so see if you can work with it.
+:::
