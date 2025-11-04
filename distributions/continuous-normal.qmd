@@ -15,7 +15,7 @@ I usually have a little blurb up here describing how the distribution arises or 
 | **Range** | $\mathbb{R}=(-\infty,\,\infty)$ |
 | **Parameter space** | $\begin{matrix}-\infty<\mu<\infty\\\sigma^2>0\end{matrix}$ |
 | **PDF** | $f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)$ |
-| **CDF** | $F(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^x\exp\left(-\frac{1}{2}\frac{(t-\mu)^2}{\sigma^2}\right)\,\text{d}x$ |
+| **CDF** | $F(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^x\exp\left(-\frac{1}{2}\frac{(t-\mu)^2}{\sigma^2}\right)\,\text{d}t$ |
 | **MGF** | $M(t) = \exp\left(\mu t+\frac{\sigma^2}{2}t^2\right)$, $t\in\mathbb{R}$ |
 | **Expectation** | $\mu$ |
 | **Variance** | $\sigma^2$ |
