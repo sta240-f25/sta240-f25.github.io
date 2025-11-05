@@ -2809,7 +2809,7 @@
     "href": "problems/pset-6.html#problem-1",
     "title": "Problem Set 6",
     "section": "Problem 1",
-    "text": "Problem 1\nHere is the cdf of an absolutely continuous random variable \\(X\\):\n\\[\nF(x;\\,\\alpha,\\,\\theta)\n=\n\\begin{cases}\n1-\\left(\\frac{\\theta}{x + \\theta}\\right)^\\alpha & x &gt;0 \\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\nThe parameters \\(\\alpha\\) and \\(\\theta\\) are just positive constants.\n\nFind the pdf of \\(X\\) and plot it for \\(\\alpha=1,\\, 2,\\, 3\\) and \\(\\theta = 1\\);\nCompute the median of \\(X\\);\nCompute \\(E(X)\\). Is it finite for all values of the parameters?\nCompute \\(\\textrm{var}(X)\\). Is it finite for all values of the parameters?\nFix \\((\\alpha,\\,\\theta) = (3,\\, 100)\\) and compute \\(P(X &gt; 75\\,|\\, X &gt; 50)\\).",
+    "text": "Problem 1\nHere is the cdf of an absolutely continuous random variable \\(X\\):\n\\[\nF(x;\\,\\alpha,\\,\\theta)\n=\n\\begin{cases}\n1-\\left(\\frac{\\theta}{x + \\theta}\\right)^\\alpha & x &gt;0 \\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\nThe parameters \\(\\alpha\\) and \\(\\theta\\) are just positive constants.\n\nFind the pdf of \\(X\\) and plot it for \\(\\alpha=1,\\, 2,\\, 3\\) and \\(\\theta = 1\\);\nCompute the median of \\(X\\);\nCompute \\(E(X)\\). Is it finite for all values of the parameters?\nCompute \\(\\textrm{var}(X)\\). Is it finite for all values of the parameters?\nFix \\((\\alpha,\\,\\theta) = (3,\\, 100)\\) and compute \\(P(X &gt; 75\\,|\\, X &gt; 50)\\).\n\n\n\n\n\n\n\nTip\n\n\n\nOn Problem Set 5 you met some cute alternatives for computing expected values, and they may be helpful here.",
     "crumbs": [
       "Problem Sets",
       "Problem Set 6"
@@ -2897,7 +2897,7 @@
     "href": "problems/pset-6.html#problem-9",
     "title": "Problem Set 6",
     "section": "Problem 9",
-    "text": "Problem 9\nConsider a random pair \\((X,\\,Y)\\) with a joint distribution given by this hierarchy:\n\\[\n\\begin{aligned}\n    X\n    &\\sim\n    \\textrm{Beta}(a,\\, b)\n    \\\\\n    Y\\mid X = x\n    &\\sim\n    \\textrm{Gamma}\\left(a+b,\\, \\frac{c}{x}\\right).\n\\end{aligned}\n\\]\n\nWhat is the joint range?\nWhat is the marginal density of \\(Y\\)?\nWhat is the conditional density of \\(X\\)?",
+    "text": "Problem 9\nConsider a random pair \\((X,\\,Y)\\) with a joint distribution given by this hierarchy:\n\\[\n\\begin{aligned}\n    X\n    &\\sim\n    \\textrm{Beta}(a,\\, b)\n    \\\\\n    Y\\mid X = x\n    &\\sim\n    \\textrm{Gamma}\\left(a+b,\\, \\frac{c}{x}\\right).\n\\end{aligned}\n\\]\n\nWhat is the joint range?\nWhat is the marginal density of \\(Y\\)?\nWhat is the conditional density of \\(X\\)?\n\n\n\n\n\n\n\nNew distribution!\n\n\n\nIf \\(X\\sim \\textrm{Beta}(a,\\, b)\\), then \\(\\text{Range}(X)=(0,\\,1)\\) and the density is\n\\[\nf(x)=\\frac{\\Gamma(a+b)}{\\Gamma(a)\\Gamma(b)}x^{a-1}(1-x)^{b-1},\\quad0&lt;x&lt;1.\n\\]\nThat’s new to you, so see if you can work with it.",
     "crumbs": [
       "Problem Sets",
       "Problem Set 6"
