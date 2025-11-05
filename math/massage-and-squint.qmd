@@ -118,6 +118,6 @@ Use this fact to make your life easier!
 - [PSET 5 #6c](https://sta240-f25.github.io/problems/pset-5.html#problem-6);
 - [PSET 6 #7](https://sta240-f25.github.io/problems/pset-6.html#problem-7);
 - Poisson-binomial hierarchy from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-12-joint-discrete.pdf);
-- Gamma-normal hierarchy from lecture;
+- Gamma-normal hierarchy from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-13-joint-continuous.pdf);
 - [PSET 6 #9](https://sta240-f25.github.io/problems/pset-6.html#problem-9): the beta-gamma hierarchy;
 - [PSET 6 #10](https://sta240-f25.github.io/problems/pset-6.html#problem-10): gamma-gamma hierarchy.
