@@ -21,6 +21,7 @@ project:
     - lecture-notes/sta240-notes-11-moments.pdf
     - lecture-notes/sta240-notes-12-joint-discrete.pdf
     - lecture-notes/sta240-notes-13-joint-continuous.pdf
+    - lecture-notes/sta240-notes-14-sums-and-averages.pdf
 
 website:
   page-navigation: true
