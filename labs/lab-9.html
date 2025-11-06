@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>darts – STA 240 Fall 2025</title>
+<title>Lab 9 – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../problems/exam-midterm-1.html" rel="next">
+<link href="../labs/lab-8.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -97,9 +99,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="STA 240 Fall 2025">
-<meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
-<meta property="og:image" content="https://sta240-f25.github.io/problems/bank/conditional-probability/images/dart-board.png">
+<meta property="og:title" content="Lab 9 – STA 240 Fall 2025">
+<meta property="og:description" content="Due Thursday November 6 at 11:59 PM">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
 
@@ -112,7 +113,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-1.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-9.html">Lab 9</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -126,8 +127,8 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      <img src="../../../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
@@ -154,43 +155,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching team</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Materials</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignments and grading</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Policies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">University resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
@@ -207,49 +208,49 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/greeks.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/logexp.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/logexp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exponents and logarithms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/differentiation.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/differentiation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Differentiation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/integration.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/integration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Integration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/limits.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/limits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limits and continuity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/series.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/series.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Infinite series</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/gamma-function.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/gamma-function.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma function</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/massage-and-squint.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/massage-and-squint.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Massage and squint</span></a>
   </div>
 </li>
@@ -266,97 +267,97 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/hello-rstudio.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/hello-rstudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The lay of the land</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/latex.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/latex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Typing math</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/math.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/math.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic math</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/vectors.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/vectors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectors</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/sample.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/sample.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><code>sample</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/if-else.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/if-else.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">if-else and logic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">for loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectorization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/rng-seed.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/rng-seed.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting a seed</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/probabilities.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/probabilities.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Computing probabilities</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/plot.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/plot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting points</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/summary-statistics.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/summary-statistics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summary statistics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/histogram.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/histogram.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Histograms</span></a>
   </div>
 </li>
@@ -373,43 +374,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binomial</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-geometric.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-geometric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Geometric</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hypergeometric</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Poisson</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/continuous-uniform.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/continuous-uniform.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Continuous uniform</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/continuous-normal.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/continuous-normal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Normal</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/continuous-gamma.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/continuous-gamma.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma</span></a>
   </div>
 </li>
@@ -426,43 +427,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-0.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-5.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-6.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 6</span></a>
   </div>
 </li>
@@ -470,64 +471,64 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Labs</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-5.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-6.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-7.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-8.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-9.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-9.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lab 9</span></a>
   </div>
 </li>
@@ -544,7 +545,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
   </div>
 </li>
@@ -555,35 +556,165 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#task-1" id="toc-task-1" class="nav-link active" data-scroll-target="#task-1">Task 1</a></li>
+  <li><a href="#task-2" id="toc-task-2" class="nav-link" data-scroll-target="#task-2">Task 2</a></li>
+  <li><a href="#task-3" id="toc-task-3" class="nav-link" data-scroll-target="#task-3">Task 3</a></li>
+  <li><a href="#task-4" id="toc-task-4" class="nav-link" data-scroll-target="#task-4">Task 4</a></li>
+  <li><a href="#task-5" id="toc-task-5" class="nav-link" data-scroll-target="#task-5">Task 5</a></li>
+  <li><a href="#task-6" id="toc-task-6" class="nav-link" data-scroll-target="#task-6">Task 6</a></li>
+  <li><a href="#task-7" id="toc-task-7" class="nav-link" data-scroll-target="#task-7">Task 7</a></li>
+  <li><a href="#task-8" id="toc-task-8" class="nav-link" data-scroll-target="#task-8">Task 8</a></li>
+  <li><a href="#task-9" id="toc-task-9" class="nav-link" data-scroll-target="#task-9">Task 9</a></li>
+  <li><a href="#task-10" id="toc-task-10" class="nav-link" data-scroll-target="#task-10">Task 10</a></li>
+  <li><a href="#task-11" id="toc-task-11" class="nav-link" data-scroll-target="#task-11">Task 11</a></li>
+  <li><a href="#task-infty" id="toc-task-infty" class="nav-link" data-scroll-target="#task-infty">Task <span class="math inline">\(\infty\)</span></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
-
-
-
-<div id="fig-dart" class="quarto-float quarto-figure quarto-figure-center anchored" width="40%" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-dart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/dart-board.png" id="fig-dart" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:40.0%">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-1.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-9.html">Lab 9</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Lab 9</h1>
+<p class="subtitle lead">Due Thursday November 6 at 11:59 PM</p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-dart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption>
-</figure>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>An insurance company sells policies in the hope that most customers will not actually file a claim. In that case, the company keeps the premiums, and never actually pays out. Cha-ching. If on the other hand, every customer files a claim, then the company is ruined. They simply don’t keep enough cash on hand to literally pay out all the customers they sell policies to.</p>
+<p>This is obviously a risky business. The insurance company is making a bet that most of their customers won’t need the policy that they bought, but there could be surprises. The company is fundamentally uncertain about how many people will file claims, and how big those claims will be. Faced with this uncertainty, they must make decisions about who to sell to, what to charge, and how much cash to keep on hand. To manage the uncertainty and make good decisions, insurance companies hire armies of <em>actuaries</em> to model the insurance market using the basic tools of probability and statistics that we are learning. Let’s get a taste of that.</p>
+<p>Imagine the Pacific All-Risk Insurance Company makes its decisions on a monthly basis. Let <span class="math inline">\(N\in\mathbb{N}\)</span> denote the number of insurance claims the company receives in a given month. Each of those claims will be for some positive dollar amount, call it <span class="math inline">\(X_i&gt;0\)</span>. So each month, customers apply for <span class="math inline">\(S=X_1+X_2+...+X_N\)</span> in reimbursement from the insurance company. The company is not sure what <span class="math inline">\(N\)</span> will be, they are not sure how big each <span class="math inline">\(X_i\)</span> will be, and so they are not sure how big the total <span class="math inline">\(S\)</span> will be. But if it gets too big, the company is finished. We shall model the number of claims <span class="math inline">\(N\)</span> and the size of each claim <span class="math inline">\(X_i\)</span> as random variables using our familiar families:</p>
+<p><span class="math display">\[
+\begin{aligned}
+N&amp;\sim\text{Poisson}(\lambda)
+\\
+X_1,\,X_2,\,X_3,\,X_4,\,...&amp;\overset{\text{iid}}{\sim} \text{Gamma}(\alpha,\,\beta)\\
+S&amp;=\sum\limits_{i=1}^N X_i
+\end{aligned}
+\]</span></p>
+<p>We see that <span class="math inline">\(S\)</span> is a <em>random sum of random variables</em>. Each <span class="math inline">\(X_i\)</span> is random, and the number of terms in the sum <em>is also</em> random. So randomness from both the <span class="math inline">\(X_i\)</span> and <span class="math inline">\(N\)</span> is feeding forward into the randomness in <span class="math inline">\(S\)</span>, making it more challenging to model.</p>
+<p>In what follows, take <span class="math inline">\(\lambda=100\)</span> and <span class="math inline">\((\alpha,\,\beta)=(25,\,0.0025)\)</span>.</p>
+<section id="task-1" class="level1">
+<h1>Task 1</h1>
+<p>What is the probability that <span class="math inline">\(N\)</span> is strictly within one standard deviation of its mean? In other words, what is the probability that <span class="math inline">\(N\)</span> lies in the interval <span class="math inline">\((E(N)-\text{sd}(N),\,E(N)+\text{sd}(N))\)</span>. Use the appropriate <code>p-</code> function to compute this, and pay attention to the endpoints!</p>
+</section>
+<section id="task-2" class="level1">
+<h1>Task 2</h1>
+<p>What is the probability that <span class="math inline">\(N\)</span> is at or above its mean? So, <span class="math inline">\(P(N\geq E(N))\)</span>?</p>
+</section>
+<section id="task-3" class="level1">
+<h1>Task 3</h1>
+<p>Write some <code>R</code> code that simulates <code>m = 5000</code> draws from the joint distribution of <span class="math inline">\((N,\,S)\)</span>. One way to do this is with a for loop that cycles through the following steps:</p>
+<ol type="1">
+<li>Simulate <span class="math inline">\(N\)</span> and store it;</li>
+<li>Given the result of Step 1, simulate iid <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, …, <span class="math inline">\(X_N\)</span>;</li>
+<li>Given the result of Step 2, compute <span class="math inline">\(S=X_1+X_2+...+X_N\)</span> and store it.</li>
+</ol>
+<p>After the loop is complete, you should have a vector <code>N</code> storing all of the draws of <span class="math inline">\(N\)</span>, and a vector <code>S</code> storing all of the draws of <span class="math inline">\(S\)</span>.</p>
+</section>
+<section id="task-4" class="level1">
+<h1>Task 4</h1>
+<p>Create a well-labeled scatterplot of the pairs <span class="math inline">\((N,\,S)\)</span> that you just simulated.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>Jerry Lewis is throwing darts at the board pictured in <a href="#fig-dart" class="quarto-xref">Figure&nbsp;1</a>. It has the following properties:</p>
-<ul>
-<li>The board has radius <span class="math inline">\(r\)</span>;</li>
-<li>The board is partitioned into five rings, each with the same “thickness” <span class="math inline">\(r/5\)</span>;</li>
-<li>The board is mounted on a wall of area <span class="math inline">\(A\)</span>.</li>
-</ul>
-<p>Jerry is not very skilled. His dart is guaranteed to reach the wall and stick someplace, but beyond that, the probability that it lands in any given region is just proportional to that region’s area.</p>
-<p><strong>Task</strong>: Derive a general formula for the <em>conditional</em> probability that a dart lands in ring <span class="math inline">\(i\)</span> given that it hits the board and not the wall. Your formula should be a function of <span class="math inline">\(i=1,\,2,\,3,\,4,\,5\)</span>. Check that these probabilities are nonnegative and sum to one.</p>
+<div class="callout-title-container flex-fill">
+Adjust the point size
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You might want to use the <code>cex</code> argument to the <code>plot</code> function in order to decrease the size of the points. By default <code>cex = 1</code>.</p>
+</div>
+</div>
+</section>
+<section id="task-5" class="level1">
+<h1>Task 5</h1>
+<p>Plot a <a href="https://sta240-f25.github.io/explainers/histogram.html">histogram</a> of the draws of <span class="math inline">\(S\)</span> by themselves.</p>
+</section>
+<section id="task-6" class="level1">
+<h1>Task 6</h1>
+<p>Use your draws of <span class="math inline">\(N\)</span> to estimate the probabilities from Tasks 1 and 2, and verify that you get estimates that are close to the actual probabilities you calculated.</p>
+</section>
+<section id="task-7" class="level1">
+<h1>Task 7</h1>
+<p>Use the draws of <span class="math inline">\(S\)</span> to estimate the following quantities:</p>
+<ol type="a">
+<li>Mean of <span class="math inline">\(S\)</span>;</li>
+<li>Variance of <span class="math inline">\(S\)</span>;</li>
+<li><span class="math inline">\(P(S &gt; 1200000)\)</span>.</li>
+</ol>
+</section>
+<section id="task-8" class="level1">
+<h1>Task 8</h1>
+<p>In our setup, <span class="math inline">\(N\)</span> and <span class="math inline">\(S\)</span> are a random pair that is jointly distributed according to the following hierarchy:</p>
+<p><span class="math display">\[
+\begin{aligned}
+N&amp;\sim\text{Poisson}(\lambda = 100)\\
+S\mid N=n &amp;\sim \,???
+\end{aligned}
+\]</span></p>
+<p><em>Conditional</em> on <span class="math inline">\(n\)</span>, what is the distribution of <span class="math inline">\(S\)</span>? You may find results from <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf">yesterday’s lecture</a> helpful.</p>
+</section>
+<section id="task-9" class="level1">
+<h1>Task 9</h1>
+<p>Use the tower property to compute the following <em>marginal</em> expected values of <span class="math inline">\(S\)</span>:</p>
+<ol type="a">
+<li><span class="math inline">\(E(S)\)</span>;</li>
+<li><span class="math inline">\(E(S^2)\)</span>;</li>
+<li><span class="math inline">\(M_S(t)=E(e^{tS})\)</span>.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The marginal distribution of <span class="math inline">\(S\)</span> is not recognizable. It’s some funky new thing. By deriving its MGF, you have completely characterized the entire distribution, but it turns out that we don’t have nice clean formulas for the CDF or the PDF. Bummer! But as you saw in previous tasks, we can still <em>simulate</em> the distribution of <span class="math inline">\(S\)</span> and approximate its properties. Neat!</p>
+</div>
+</div>
+</section>
+<section id="task-10" class="level1">
+<h1>Task 10</h1>
+<p>Verify that the theoretical mean and variance of <span class="math inline">\(S\)</span> match the sample estimates you computed from your simulation in Task 7.</p>
+</section>
+<section id="task-11" class="level1">
+<h1>Task 11</h1>
+<p>In our setup, we assumed that the <span class="math inline">\(X_i\)</span> were independent.</p>
+<ol type="a">
+<li>What was the purely mathematical benefit of making this assumption? How did it simplify our life?</li>
+<li>In the context of our application, is independence a reasonable assumption?</li>
+</ol>
+</section>
+<section id="task-infty" class="level1">
+<h1>Task <span class="math inline">\(\infty\)</span></h1>
+<p>Go watch <a href="https://en.wikipedia.org/wiki/Double_Indemnity"><em>Double Indemnity</em></a>. It is so entertaining it will make your head spin.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -985,6 +1116,18 @@ Figure&nbsp;1
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../labs/lab-8.html" class="pagination-link" aria-label="Lab 8">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lab 8</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../problems/exam-midterm-1.html" class="pagination-link" aria-label="Midterm 1">
+        <span class="nav-page-text">Midterm 1</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
