@@ -48,9 +48,14 @@ After the loop is complete, you should have a vector `N` storing all of the draw
 
 Create a well-labeled scatterplot of the pairs $(N,\,S)$ that you just simulated.
 
+::: callout-tip
+# Adjust the point size
+You might want to use the `cex` argument to the `plot` function in order to decrease the size of the points. By default `cex = 1`.
+:::
+
 # Task 5
 
-Plot a histogram of the draws of $S$ by themselves.
+Plot a [histogram](https://sta240-f25.github.io/explainers/histogram.html) of the draws of $S$ by themselves.
 
 # Task 6
 
@@ -84,6 +89,10 @@ Use the tower property to compute the following *marginal* expected values of $S
 a. $E(S)$;
 a. $E(S^2)$;
 a. $M_S(t)=E(e^{tS})$.
+
+::: callout-note
+The marginal distribution of $S$ is not recognizable. It's some funky new thing. By deriving its MGF, you have completely characterized the distribution, but it turns out that we don't have nice clean formulas for the CDF or the PDF. Bummer! But as you saw in previous tasks, we can still *simulate* the distribution of $S$ and approximate its properties. Neat!
+:::
 
 # Task 10
 
