@@ -1,0 +1,14 @@
+Consider this joint distribution for random variables $X$ and $Y$, written in hierarchical form:
+
+$$
+\begin{aligned}
+X&\sim\text{Gamma}\left(\alpha,\,\beta\right)\\
+Y\mid X=x&\sim \text{Exponential}(x).
+\end{aligned}
+$$
+
+
+a. Sketch the joint range of $(X,\, Y)$.
+a. What is the joint density of the random pair $(X,\, Y)$?
+a. What is the marginal density of $Y$?
+a. What is the density of $X$ conditional on the event $Y=y$? Is it recognizable?

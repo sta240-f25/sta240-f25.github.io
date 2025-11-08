@@ -1,0 +1,17 @@
+Consider a nonnegative, absolutely continuous random variable with cdf
+
+$$
+F_X(x)
+=
+\begin{cases}
+1 - \exp\left(-\frac{x^2}{2}\right) & x\geq 0
+\\
+0 & x<0.
+\end{cases}
+$$
+
+a.  What is $P(2\leq X\leq 3)$;
+b.  What is the density of $X$?
+c.  What is $E(X^n)$ for any $n\in\mathbb{N}$?
+d.  What is $\text{var}(X)$?
+e.  What is the median of $X$?

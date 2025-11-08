@@ -1,0 +1,14 @@
+Here is the pdf of some absolutely continuous random variable:
+
+$$
+f(x)=\begin{cases}
+ax^2e^{-bx^2} & x\geq 0\\
+0 & x< 0.
+\end{cases}
+$$
+
+Solve for $a$ in terms of $b$. So your final answer will look like
+
+$$
+a=\text{``some formula including $b$ and a bunch of constants''}
+$$

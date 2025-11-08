@@ -1,0 +1,28 @@
+Let $A_1$, $A_2$, $A_3$, $A_4$, $A_5$, and $A_6$ be events in some sample space, each with the same probability $0<p<1/6$. Define the indicator random variables
+
+$$
+I_k
+=
+\begin{cases}
+0 & \text{if }A_k^c\text{ happens}\\
+1 & \text{if }A_k\text{ happens},
+\end{cases}
+$$
+
+and let $X$ be their sum
+
+$$
+X = I_1 + I_2 + I_3 + I_4+I_5+I_6.
+$$
+
+a.  Assume the events $A_i$ are mutually disjoint and compute...
+
+    i.  $E(X)$.
+    ii. $P(X=1)$.
+    iii. $P(X=3)$.
+
+b.  Assume the $A_i$ are independent and compute...
+
+    i.  $E(X)$.
+    ii. $P(X=1)$.
+    iii. $P(X=3)$.

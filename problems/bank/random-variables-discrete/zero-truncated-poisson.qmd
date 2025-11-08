@@ -1,0 +1,11 @@
+Let $X\sim\text{Poisson}(\lambda)$ and define a new random variable $Y$ that is a *zero-truncated* version of $X$. That is, we start with $\text{Range}(X)=\{0,\,1,\,2,\,3,\,...\}$, and then we rig it so that $\text{Range}(Y)=\{1,\,2,\,3,\,...\}$. To do this, we define the PMF of the new random variable $Y$ by 
+
+$$
+P(Y=k)
+=
+P(X=k\mid X > 0),\quad k=1,\,2,\,3,\,4,\,...
+$$
+
+a. Show that the new PMF sums to one;
+a. Compute the mean of $Y$;
+a. Compute the variance of $Y$.

@@ -1,0 +1,5 @@
+Let $X$ have the discrete uniform on $\{1,\,2,\,...,\,n\}$. This means $P(X=i)=1/n$ for all $i = 1,\,2,\,...,\,n$. 
+
+a. Compute the MGF of $X$;
+a. Use it to compute the mean;
+a. Use it to compute the variance.

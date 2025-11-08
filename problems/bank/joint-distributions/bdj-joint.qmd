@@ -1,0 +1,15 @@
+Here is the joint density for a random pair:
+
+$$
+f_{XY}(x,\,y)
+=
+\frac{24}{7}
+x(2-y),\quad 0<x<1\text{ and }0<y<1-x.
+$$
+
+a.  Sketch the joint range of $(X,\,Y)$.
+b.  Find the marginal density of $Y$.
+c.  Find the marginal density of $X$.
+d.  Find the conditional density of $X$ given $Y=y$.
+e.  Use this to compute $P(X>1/2\,|\,Y=1/3)$.
+f.  What is $E(X\,|\,Y=y)$?

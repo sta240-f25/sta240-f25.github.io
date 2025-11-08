@@ -3,17 +3,17 @@ title: "Midterm 2 Study Guide"
 format: html
 editor: 
   mode: source
-draft: true
+draft: false
 ---
 
-Midterm Exam 2 will take place on **Thursday November 13** during your lab section. There will be XX problems, and they will break down as follows:
+Midterm Exam 2 will take place on **Thursday November 13** during your lab section. There will be 6 problems, and they will break down as follows:
 
 0. (an undisclosed check on your visual intuition)
 1. Discrete random variables
-2. Continuous random variables
-3. The moment-generating function
-4. Transformations
-5. Joint distributions
+1. Continuous random variables
+1. The moment-generating function
+1. Transformations
+1. Joint distributions
 
 Below are practice problems for each of these areas, as well as guidance about what course materials to refer to if you want more review on a particular topic.
 
@@ -28,3 +28,94 @@ You are allowed two resources on the exam:
 Do not skimp on the cheat sheet! Students in past semesters have neglected their cheat sheets to their detriment. Get an early start, and give it some elbow grease.
 
 :::
+
+::: callout-tip 
+## What special distribution families should I know?
+[Binomial](https://sta240-f25.github.io/distributions/discrete-binomial.html), [geometric](https://sta240-f25.github.io/distributions/discrete-geometric.html), [Poisson](https://sta240-f25.github.io/distributions/discrete-poisson.html), [continuous uniform](https://sta240-f25.github.io/distributions/continuous-uniform.html), [normal](https://sta240-f25.github.io/distributions/continuous-normal.html), [gamma](https://sta240-f25.github.io/distributions/continuous-gamma.html) (and its special cases like exponential). Anything else will be introduced from scratch within the exam as if you had never seen it before. 
+:::
+
+# Discrete random variables
+
+## Problem 1
+
+{{< include bank/random-variables-discrete/indicator-party.qmd >}}
+
+## Problem 2
+
+{{< include bank/random-variables-discrete/zero-truncated-poisson.qmd >}}
+
+## Want more review?
+
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-05-random-variables.pdf) introducing random variables;
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-06-discrete-families.pdf) on special families of discrete random variables;
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-07-expectation.pdf) on expected value;
+- [Lab 5](https://sta240-f25.github.io/labs/lab-5.html) exercises;
+- [Problem Set 2](https://sta240-f25.github.io/problems/pset-2.html): problem 7;
+- [Problem Set 3](https://sta240-f25.github.io/problems/pset-3.html): problems 9 - 10;
+- [Problem Set 4](https://sta240-f25.github.io/problems/pset-4.html): problems 4 - 10.
+
+# Continuous random variables
+
+## Problem 3
+
+{{< include bank/random-variables-continuous/gauntlet.qmd >}}
+
+## Problem 4
+
+{{< include bank/random-variables-continuous/a-in-terms-of-b.qmd >}}
+
+## Want more review?
+
+- Examples from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-10-absolutely-continuous.pdf);
+- [Lab 8](https://sta240-f25.github.io/labs/lab-8.html);
+- [Problem Set 5](https://sta240-f25.github.io/problems/pset-5.html): problems 2 - 8;
+- [Problem Set 6](https://sta240-f25.github.io/problems/pset-6.html): problems 1 - 2;
+- Odd-numbered exercises in DeGroot & Schervish Chapters 3.2, 5.6, 5.7.
+
+# Moment-generating function
+
+## Problem 5
+
+{{< include bank/moments/discrete-uniform.qmd >}}
+
+## Problem 6
+
+{{< include bank/moments/gumbel-mgf.qmd >}}
+
+## Want more review?
+
+- worked examples from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-11-moments.pdf); 
+- new theorems and examples from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf) about updating MGFs under linear transformations;
+- [Problem Set 5](https://sta240-f25.github.io/problems/pset-5.html): problems 9 - 10;
+- [Problem Set 6](https://sta240-f25.github.io/problems/pset-6.html): problems 3 - 5.
+- Odd-numbered exercises in DeGroot & Schervish Chapter 4.4.
+
+# Transformations
+
+## Problem 7
+
+{{< include bank/transformations/twerkout-2.qmd >}}
+
+## Want more review?
+
+- [Lab 7](https://sta240-f25.github.io/labs/lab-7.html);
+- Problem Set 6: [problem 6](https://sta240-f25.github.io/problems/pset-6.html#problem-6);
+- Read DeGroot & Schervish Chapter 3.8 and do the odd-numbered exercises.
+
+# Joint distributions
+
+## Problem 8
+
+{{< include bank/joint-distributions/bdj-joint.qmd >}}
+
+## Problem 9
+
+{{< include bank/joint-distributions/gamma-exponential-hierarchy.qmd >}}
+
+## Want more review?
+
+- jointly discrete examples from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-12-joint-discrete.pdf);
+- jointly contnuous examples from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-13-joint-continuous.pdf);
+- mixed Poisson-gamma example from [Lab 9](https://sta240-f25.github.io/labs/lab-9.html);
+- [Problem Set 6](https://sta240-f25.github.io/problems/pset-6.html): problems 7 - 10;
+- Odd-numbered exercises in DeGroot & Schervish Chapters 3.4 - 3.6.
