@@ -3,3 +3,6 @@ title: "pset-7"
 format: html
 ---
 
+
+two MLE
+two Bayes
