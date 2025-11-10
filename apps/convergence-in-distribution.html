@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>twerkout-2 – STA 240 Fall 2025</title>
+<title>Convergence in distribution – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<meta name="shinylive:serviceworker_dir" content="..">
+<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/load-shinylive-sw.js" type="module"></script>
+<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/run-python-blocks.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/shinylive.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -97,7 +102,7 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="STA 240 Fall 2025">
+<meta property="og:title" content="Convergence in distribution – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
@@ -111,7 +116,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Convergence in distribution</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -125,8 +130,8 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      <img src="../../../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
@@ -153,43 +158,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching team</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Materials</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignments and grading</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Policies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">University resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
@@ -206,49 +211,49 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/greeks.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/logexp.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/logexp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exponents and logarithms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/differentiation.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/differentiation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Differentiation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/integration.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/integration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Integration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/limits.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/limits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limits and continuity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/series.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/series.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Infinite series</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/gamma-function.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/gamma-function.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma function</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/massage-and-squint.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/massage-and-squint.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Massage and squint</span></a>
   </div>
 </li>
@@ -265,97 +270,97 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/hello-rstudio.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/hello-rstudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The lay of the land</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/latex.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/latex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Typing math</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/math.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/math.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic math</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/vectors.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/vectors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectors</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/sample.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/sample.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><code>sample</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/if-else.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/if-else.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">if-else and logic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">for loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectorization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/rng-seed.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/rng-seed.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting a seed</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/probabilities.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/probabilities.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Computing probabilities</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/plot.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/plot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting points</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/summary-statistics.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/summary-statistics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summary statistics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/histogram.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/histogram.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Histograms</span></a>
   </div>
 </li>
@@ -372,43 +377,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binomial</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-geometric.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-geometric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Geometric</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hypergeometric</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Poisson</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/continuous-uniform.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/continuous-uniform.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Continuous uniform</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/continuous-normal.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/continuous-normal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Normal</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/continuous-gamma.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/continuous-gamma.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma</span></a>
   </div>
 </li>
@@ -425,43 +430,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-0.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-5.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-6.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 6</span></a>
   </div>
 </li>
@@ -478,55 +483,55 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-5.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-6.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-7.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-8.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-9.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-9.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 9</span></a>
   </div>
 </li>
@@ -543,13 +548,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/exam-midterm-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/exam-midterm-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 2</span></a>
   </div>
 </li>
@@ -560,25 +565,239 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#students-t-distribution" id="toc-students-t-distribution" class="nav-link active" data-scroll-target="#students-t-distribution">Student’s <span class="math inline">\(t\)</span> distribution</a></li>
+  <li><a href="#position-of-a-particle-pset-6-2" id="toc-position-of-a-particle-pset-6-2" class="nav-link" data-scroll-target="#position-of-a-particle-pset-6-2">Position of a particle (PSET 6 #2)</a></li>
+  <li><a href="#central-limit-theorem" id="toc-central-limit-theorem" class="nav-link" data-scroll-target="#central-limit-theorem">Central limit theorem</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Convergence in distribution</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<p>This is an important technical skill, so let’s drill it. For each of these, plot the transformation and then derive the range and the density of the new distribution:</p>
-<ol type="a">
-<li>Let <span class="math inline">\(X\sim\text{Unif}(0,\,1)\)</span> and consider <span class="math inline">\(Y=1/X\)</span>;</li>
-<li>Let <span class="math inline">\(X\)</span> have density <span class="math inline">\(f_X(x)=45x^5(1-x)\)</span> for <span class="math inline">\(0&lt;x&lt;1\)</span> and consider <span class="math inline">\(Y=X^3\)</span>;</li>
-<li>Let <span class="math inline">\(X\sim\text{Exponential}(\lambda)\)</span> and consider <span class="math inline">\(Y=4X+3\)</span>;</li>
-<li>Let <span class="math inline">\(X\)</span> have cdf <span class="math inline">\(F_X(x)=(x+1)^3/8\)</span> for <span class="math inline">\(-1&lt;x&lt;1\)</span> and consider <span class="math inline">\(Y=1-X^2\)</span>;</li>
-<li>Let <span class="math inline">\(X\sim\text{N}(0,\,1)\)</span> and consider <span class="math inline">\(Y=|X|\)</span>.</li>
-</ol>
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition: convergence in distribution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Imagine we have a random variable <span class="math inline">\(Y\)</span> as well as an infinite sequence of random variables <span class="math inline">\(Y_1\)</span>, <span class="math inline">\(Y_2\)</span>, <span class="math inline">\(Y_3\)</span>, …, etc. Each of these random variables has a cumulative distribution function (CDF):</p>
+<p><span class="math display">\[
+\begin{aligned}
+F(x)&amp;=P(Y\leq x)\\
+F_1(x)&amp;=P(Y_1\leq x)\\
+F_2(x)&amp;=P(Y_2\leq x)\\
+&amp;\vdots \\
+F_n(x)&amp;=P(Y_n\leq x)\\
+&amp;\vdots
+\end{aligned}
+\]</span></p>
+<p>We say that the sequence of random variables <span class="math inline">\(Y_1\)</span>, <span class="math inline">\(Y_2\)</span>, <span class="math inline">\(Y_3\)</span>, … <strong>converges in distribution</strong> to <span class="math inline">\(Y\)</span> if the sequence of CDFs converges pointwise:</p>
+<p><span class="math display">\[
+\lim_{n\to \infty}F_n(x)=F(x)\quad \text{for all } x\in\mathbb{R}.
+\]</span></p>
+<p>We denote this <span class="math inline">\(Y_n\overset{d}{\to}Y\)</span>.</p>
+</div>
+</div>
+<p>Below are several examples that you have seen sprinkled throughout the course.</p>
+<section id="students-t-distribution" class="level1">
+<h1>Student’s <span class="math inline">\(t\)</span> distribution</h1>
+<p><span class="math display">\[
+t_{\nu}\overset{d}{\to}\text{N}(0,\,1)\quad \text{ as }\nu\to\infty.
+\]</span></p>
+<pre class="shinylive-r" data-engine="r"><code>#| '!! shinylive warning !!': |
+#|   shinylive does not work in self-contained HTML documents.
+#|   Please set `embed-resources: false` in your metadata.
+#| standalone: true
+#| viewerHeight: 700
+
+
+
+library(shiny)
+
+# Define UI for application that draws a histogram
+ui &lt;- fluidPage(
+  
+  # Application title
+  titlePanel("The Student's t distribution"),
+  
+  # Sidebar with a slider input for number of bins 
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("df",
+                  "Degrees of freedom:",
+                  min = 0,
+                  max = 25,
+                  value = 1,
+                  step = 0.1)
+    ),
+    
+    # Show a plot of the generated distribution
+    mainPanel(
+      plotOutput("distPlot", height = "600px")
+    )
+  )
+)
+
+# Define server logic required to draw a histogram
+server &lt;- function(input, output) {
+  
+  output$distPlot &lt;- renderPlot({
+    
+    df = input$df
+    
+    par(mfrow = c(2, 1), mar = c(4, 1, 1, 1))
+    
+    curve(pnorm(x), from = -5, to = 5, n = 5000, col = "black", lwd = 3, bty = "n", 
+          yaxt = "n", ylab = "")
+    curve(pt(x, df), from = -5, to = 5, n = 5000, col = "red", add = TRUE, lwd = 2)
+    abline(h = c(0, 1))
+    
+    curve(dnorm(x), from = -5, to = 5, n = 5000, col = "black", lwd = 3, bty = "n",
+          yaxt = "n", ylab = "")
+    curve(dt(x, df), from = -5, to = 5, n = 5000, col = "red", add = TRUE, lwd = 2)
+    
+    legend("topright", c("N(0, 1) density", "Student's t density"), bty = "n",
+           lty = 1, col = c("black", "red"))
+  })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+
+</code></pre>
+</section>
+<section id="position-of-a-particle-pset-6-2" class="level1">
+<h1>Position of a particle (PSET 6 #2)</h1>
+<p>On Problem Set 6, you studied the position <span class="math inline">\(X_n\)</span> of a one-dimensional subatomic particle on the interval <span class="math inline">\([0,\,L]\)</span> in energy state <span class="math inline">\(n\)</span>. It had cumulative distribution function</p>
+<p><span class="math display">\[
+F_n(x)=P(X_n\leq x)=\frac{x}{L}-\frac{\sin(2n\pi x / L)}{2n\pi},\quad 0\leq x\leq L.
+\]</span></p>
+<p>You observed that</p>
+<p><span class="math display">\[
+X_n\overset{d}{\to}\text{Unif}(0,\,L),\quad n\to\infty.
+\]</span></p>
+<pre class="shinylive-r" data-engine="r"><code>#| '!! shinylive warning !!': |
+#|   shinylive does not work in self-contained HTML documents.
+#|   Please set `embed-resources: false` in your metadata.
+#| standalone: true
+#| viewerHeight: 700
+
+
+
+library(shiny)
+
+# Define UI for application that draws a histogram
+ui &lt;- fluidPage(
+  
+  # Application title
+  titlePanel("Distribution of particle's position"),
+  
+  # Sidebar with a slider input for number of bins 
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("n",
+                  "Energy level (n)",
+                  min = 0,
+                  max = 50,
+                  value = 1,
+                  step = 1),
+      sliderInput("L",
+                  "L",
+                  min = 0,
+                  max = 2,
+                  value = 1,
+                  step = 0.1)
+      
+    ),
+    
+    # Show a plot of the generated distribution
+    mainPanel(
+      plotOutput("distPlot", height = "600px")
+    )
+  )
+)
+
+# Define server logic required to draw a histogram
+server &lt;- function(input, output) {
+  
+  output$distPlot &lt;- renderPlot({
+    
+    n &lt;- input$n
+    L &lt;- input$L
+    
+    par(mfrow = c(1, 1), mar = c(4, 1, 1, 1))
+    plot(0, 0, ylim = c(0, 1), xlim = c(-0.5, 1.5), col = "white")
+    segments(0, 0, L, 1, lty = 2, col = "grey")
+    curve(x/L - sin(2*n*pi*x/L) / (2*pi*n), from = 0, to = L, n = 1000, 
+          col = "red", lwd = 2, add = TRUE)
+    segments(-10, 0, 0, 0, col = "red", lwd = 2)
+    segments(L, 1, 10, 1, col = "red", lwd = 2)
+  })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+
+</code></pre>
+</section>
+<section id="central-limit-theorem" class="level1">
+<h1>Central limit theorem</h1>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Central limit theorem (CLT)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider a sequence of random variables</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,X_3,\,...\overset{\text{iid}}{\sim}P,
+\]</span></p>
+<p>and assume that they have finite mean <span class="math inline">\(\mu=E(X_1)\)</span> and variance <span class="math inline">\(\sigma^2=\text{var}(X_1)\)</span>. If you take the running average of <span class="math inline">\(X_i\)</span> and then standardize it</p>
+<p><span class="math display">\[
+\bar{X}_n=\frac{1}{n}\sum\limits_{i=1}^nX_i\quad Z_n=\frac{\bar{X}_n-\mu}{\sqrt{\sigma^2/n}},
+\]</span></p>
+<p>then you can show that</p>
+<p><span class="math display">\[
+Z_n\overset{d}{\to}\text{N}(0,\,1).
+\]</span></p>
+<p>This is true <em>regardless what the original distribution <span class="math inline">\(P\)</span> was</em>! That’s what makes the CLT so powerful.</p>
+</div>
+</div>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
