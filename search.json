@@ -2623,7 +2623,7 @@
     "href": "problems/bank/moments/gumbel-mgf.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider a continuous random variable \\(X\\) with density\n\\[\nf(x)=\\frac{1}{\\beta}\\exp\\left(-\\frac{x}{\\beta}-e^{-x/\\beta}\\right),\\quad x\\in\\mathbb{R}.\n\\]\nCompute the moment-generating function of \\(X\\)."
+    "text": "Consider a continuous random variable \\(X\\) with density\n\\[\nf(x)=\\frac{1}{\\beta}\\exp\\left(-\\frac{x}{\\beta}-e^{-x/\\beta}\\right),\\quad x\\in\\mathbb{R}.\n\\]\nThe parameter \\(\\beta&gt;0\\) is just a positive constant. Compute the moment-generating function of \\(X\\)."
   },
   {
     "objectID": "problems/bank/moments/binomial-mgf.html",
@@ -2637,7 +2637,7 @@
     "href": "problems/bank/transformations/twerkout-2.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "This is an important technical skill, so let’s drill it. For each of these, plot the transformation and then derive the range and the density of the new distribution:\n\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\) and consider \\(Y=1/X\\);\nLet \\(X\\) have density \\(f_X(x)=45x^5(1-x)\\) for \\(0&lt;x&lt;1\\) and consider \\(Y=X^3\\);\nLet \\(X\\sim\\text{Exponential}(\\lambda)\\) and consider \\(Y=4X+3\\);\nLet \\(X\\) have cdf \\(F_X(x)=(x+1)^3/8\\) for \\(-1&lt;x&lt;1\\) and consider \\(Y=1-X^2\\);\nLet \\(X\\sim\\text{N}(0,\\,1)\\) and consider \\(Y=|X|\\)."
+    "text": "This is an important technical skill, so let’s drill it. For each of these, plot the transformation and then derive the range and the density of the new distribution:\n\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\) and consider \\(Y=1/X\\);\nLet \\(X\\) have density \\(f_X(x)=42x^5(1-x)\\) for \\(0&lt;x&lt;1\\) and consider \\(Y=X^3\\);\nLet \\(X\\sim\\text{Exponential}(\\lambda)\\) and consider \\(Y=4X+3\\);\nLet \\(X\\) have cdf \\(F_X(x)=(x+1)^3/8\\) for \\(-1&lt;x&lt;1\\) and consider \\(Y=1-X^2\\);\nLet \\(X\\sim\\text{N}(0,\\,1)\\) and consider \\(Y=|X|\\)."
   },
   {
     "objectID": "problems/bank/basic-rules/xor-2.html",
@@ -3539,7 +3539,7 @@
     "href": "problems/exam-midterm-2.html#problem-6",
     "title": "Midterm 2 Study Guide",
     "section": "Problem 6",
-    "text": "Problem 6\nConsider a continuous random variable \\(X\\) with density\n\\[\nf(x)=\\frac{1}{\\beta}\\exp\\left(-\\frac{x}{\\beta}-e^{-x/\\beta}\\right),\\quad x\\in\\mathbb{R}.\n\\]\nCompute the moment-generating function of \\(X\\).",
+    "text": "Problem 6\nConsider a continuous random variable \\(X\\) with density\n\\[\nf(x)=\\frac{1}{\\beta}\\exp\\left(-\\frac{x}{\\beta}-e^{-x/\\beta}\\right),\\quad x\\in\\mathbb{R}.\n\\]\nThe parameter \\(\\beta&gt;0\\) is just a positive constant. Compute the moment-generating function of \\(X\\).",
     "crumbs": [
       "Exam Study Guides",
       "Midterm 2"
@@ -3561,7 +3561,7 @@
     "href": "problems/exam-midterm-2.html#problem-7",
     "title": "Midterm 2 Study Guide",
     "section": "Problem 7",
-    "text": "Problem 7\nThis is an important technical skill, so let’s drill it. For each of these, plot the transformation and then derive the range and the density of the new distribution:\n\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\) and consider \\(Y=1/X\\);\nLet \\(X\\) have density \\(f_X(x)=45x^5(1-x)\\) for \\(0&lt;x&lt;1\\) and consider \\(Y=X^3\\);\nLet \\(X\\sim\\text{Exponential}(\\lambda)\\) and consider \\(Y=4X+3\\);\nLet \\(X\\) have cdf \\(F_X(x)=(x+1)^3/8\\) for \\(-1&lt;x&lt;1\\) and consider \\(Y=1-X^2\\);\nLet \\(X\\sim\\text{N}(0,\\,1)\\) and consider \\(Y=|X|\\).",
+    "text": "Problem 7\nThis is an important technical skill, so let’s drill it. For each of these, plot the transformation and then derive the range and the density of the new distribution:\n\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\) and consider \\(Y=1/X\\);\nLet \\(X\\) have density \\(f_X(x)=42x^5(1-x)\\) for \\(0&lt;x&lt;1\\) and consider \\(Y=X^3\\);\nLet \\(X\\sim\\text{Exponential}(\\lambda)\\) and consider \\(Y=4X+3\\);\nLet \\(X\\) have cdf \\(F_X(x)=(x+1)^3/8\\) for \\(-1&lt;x&lt;1\\) and consider \\(Y=1-X^2\\);\nLet \\(X\\sim\\text{N}(0,\\,1)\\) and consider \\(Y=|X|\\).",
     "crumbs": [
       "Exam Study Guides",
       "Midterm 2"
