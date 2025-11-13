@@ -72,7 +72,7 @@ $$
 \begin{aligned}
 \frac{1}{1-x}&=\sum\limits_{n=0}^\infty x^n,&&-1<x<1\\
 e^x&=\sum\limits_{n=0}^\infty\frac{x^n}{n!},&&-\infty < x < \infty\\
-\ln(1-x)&=-\sum\limits_{n=0}^\infty\frac{x^n}{n},&&-1\leq x < 1.
+\ln(1-x)&=-\sum\limits_{n=1}^\infty\frac{x^n}{n},&&-1\leq x < 1.
 \end{aligned}
 $$
 
