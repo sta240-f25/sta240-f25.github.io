@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Lab 9 – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
@@ -20,8 +17,42 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -40,8 +71,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -67,12 +97,7 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -98,18 +123,17 @@ window.Quarto = {
   typesetMath
 };
 </script>
-
 <meta property="og:title" content="Lab 9 – STA 240 Fall 2025">
 <meta property="og:description" content="Due Thursday November 6 at 11:59 PM">
+<meta property="og:image" content="https://sta240-f25.github.io/labs/lab-9_files/figure-html/unnamed-chunk-4-1.png">
 <meta property="og:site_name" content="STA 240 Fall 2025">
+<meta property="og:image:height" content="960">
+<meta property="og:image:width" content="1344">
 </head>
-
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -120,16 +144,11 @@ window.Quarto = {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
@@ -144,7 +163,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -152,8 +171,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -196,7 +215,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -205,8 +224,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
@@ -255,7 +274,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -264,8 +283,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
@@ -362,7 +381,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -371,8 +390,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binomial</span></a>
@@ -415,7 +434,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
@@ -424,8 +443,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
@@ -468,7 +487,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
@@ -477,8 +496,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
@@ -533,7 +552,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
@@ -542,8 +561,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
@@ -556,18 +575,16 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#task-1" id="toc-task-1" class="nav-link active" data-scroll-target="#task-1">Task 1</a></li>
+<li><a href="#task-1" id="toc-task-1" class="nav-link active" data-scroll-target="#task-1">Task 1</a></li>
   <li><a href="#task-2" id="toc-task-2" class="nav-link" data-scroll-target="#task-2">Task 2</a></li>
   <li><a href="#task-3" id="toc-task-3" class="nav-link" data-scroll-target="#task-3">Task 3</a></li>
   <li><a href="#task-4" id="toc-task-4" class="nav-link" data-scroll-target="#task-4">Task 4</a></li>
@@ -579,14 +596,10 @@ window.Quarto = {
   <li><a href="#task-10" id="toc-task-10" class="nav-link" data-scroll-target="#task-10">Task 10</a></li>
   <li><a href="#task-11" id="toc-task-11" class="nav-link" data-scroll-target="#task-11">Task 11</a></li>
   <li><a href="#task-infty" id="toc-task-infty" class="nav-link" data-scroll-target="#task-infty">Task <span class="math inline">\(\infty\)</span></a></li>
-  </ul>
-</nav>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-1.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-9.html">Lab 9</a></li></ol></nav>
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-1.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-9.html">Lab 9</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">Lab 9</h1>
 <p class="subtitle lead">Due Thursday November 6 at 11:59 PM</p>
 </div>
@@ -602,10 +615,7 @@ window.Quarto = {
   
 
 
-</header>
-
-
-<p>An insurance company sells policies in the hope that most customers will not actually file a claim. In that case, the company keeps the premiums, and never actually pays out. Cha-ching. If on the other hand, every customer files a claim, then the company is ruined. They simply don’t keep enough cash on hand to literally pay out all the customers they sell policies to.</p>
+</header><p>An insurance company sells policies in the hope that most customers will not actually file a claim. In that case, the company keeps the premiums, and never actually pays out. Cha-ching. If on the other hand, every customer files a claim, then the company is ruined. They simply don’t keep enough cash on hand to literally pay out all the customers they sell policies to.</p>
 <p>This is obviously a risky business. The insurance company is making a bet that most of their customers won’t need the policy that they bought, but there could be surprises. The company is fundamentally uncertain about how many people will file claims, and how big those claims will be. Faced with this uncertainty, they must make decisions about who to sell to, what to charge, and how much cash to keep on hand. To manage the uncertainty and make good decisions, insurance companies hire armies of <em>actuaries</em> to model the insurance market using the basic tools of probability and statistics that we are learning. Let’s get a taste of that.</p>
 <p>Imagine the Pacific All-Risk Insurance Company makes its decisions on a monthly basis. Let <span class="math inline">\(N\in\mathbb{N}\)</span> denote the number of insurance claims the company receives in a given month. Each of those claims will be for some positive dollar amount, call it <span class="math inline">\(X_i&gt;0\)</span>. So each month, customers apply for <span class="math inline">\(S=X_1+X_2+...+X_N\)</span> in reimbursement from the insurance company. The company is not sure what <span class="math inline">\(N\)</span> will be, they are not sure how big each <span class="math inline">\(X_i\)</span> will be, and so they are not sure how big the total <span class="math inline">\(S\)</span> will be. But if it gets too big, the company is finished. We shall model the number of claims <span class="math inline">\(N\)</span> and the size of each claim <span class="math inline">\(X_i\)</span> as random variables using our familiar families:</p>
 <p><span class="math display">\[
@@ -618,16 +628,63 @@ S&amp;=\sum\limits_{i=1}^N X_i
 \]</span></p>
 <p>We see that <span class="math inline">\(S\)</span> is a <em>random sum of random variables</em>. Each <span class="math inline">\(X_i\)</span> is random, and the number of terms in the sum <em>is also</em> random. So randomness from both the <span class="math inline">\(X_i\)</span> and <span class="math inline">\(N\)</span> is feeding forward into the randomness in <span class="math inline">\(S\)</span>, making it more challenging to model.</p>
 <p>In what follows, take <span class="math inline">\(\lambda=100\)</span> and <span class="math inline">\((\alpha,\,\beta)=(25,\,0.0025)\)</span>.</p>
-<section id="task-1" class="level1">
-<h1>Task 1</h1>
+<section id="task-1" class="level1"><h1>Task 1</h1>
 <p>What is the probability that <span class="math inline">\(N\)</span> is strictly within one standard deviation of its mean? In other words, what is the probability that <span class="math inline">\(N\)</span> lies in the interval <span class="math inline">\((E(N)-\text{sd}(N),\,E(N)+\text{sd}(N))\)</span>. Use the appropriate <code>p-</code> function to compute this, and pay attention to the endpoints!</p>
-</section>
-<section id="task-2" class="level1">
-<h1>Task 2</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(E(N)=100\)</span> and <span class="math inline">\(\text{sd}(N)=\sqrt{\text{var}(N)}=\sqrt{100}=10\)</span>, so we want <span class="math inline">\(P(90 &lt; N &lt; 110)\)</span>. We can use the cdf, but we have to pay attention to the endpoints. In general, we know:</p>
+<p><span class="math display">\[
+P(90 &lt; N \leq  110) = F(110) - F(90).
+\]</span></p>
+<p>Either of these works:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">ppois</a></span><span class="op">(</span><span class="fl">110</span>, <span class="fl">100</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">ppois</a></span><span class="op">(</span><span class="fl">90</span>, <span class="fl">100</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">dpois</a></span><span class="op">(</span><span class="fl">110</span>, <span class="fl">100</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.658055</code></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">ppois</a></span><span class="op">(</span><span class="fl">109</span>, <span class="fl">100</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">ppois</a></span><span class="op">(</span><span class="fl">90</span>, <span class="fl">100</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.658055</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="task-2" class="level1"><h1>Task 2</h1>
 <p>What is the probability that <span class="math inline">\(N\)</span> is at or above its mean? So, <span class="math inline">\(P(N\geq E(N))\)</span>?</p>
-</section>
-<section id="task-3" class="level1">
-<h1>Task 3</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Since <span class="math inline">\(E(N)=100\)</span>, we want <span class="math inline">\(P(N\geq 100) = 1 - P(N &lt; 100) = 1 - P(N\leq 99)\)</span>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">ppois</a></span><span class="op">(</span><span class="fl">99</span>, <span class="fl">100</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5132988</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="task-3" class="level1"><h1>Task 3</h1>
 <p>Write some <code>R</code> code that simulates <code>m = 5000</code> draws from the joint distribution of <span class="math inline">\((N,\,S)\)</span>. One way to do this is with a for loop that cycles through the following steps:</p>
 <ol type="1">
 <li>Simulate <span class="math inline">\(N\)</span> and store it;</li>
@@ -635,9 +692,32 @@ S&amp;=\sum\limits_{i=1}^N X_i
 <li>Given the result of Step 2, compute <span class="math inline">\(S=X_1+X_2+...+X_N\)</span> and store it.</li>
 </ol>
 <p>After the loop is complete, you should have a vector <code>N</code> storing all of the draws of <span class="math inline">\(N\)</span>, and a vector <code>S</code> storing all of the draws of <span class="math inline">\(S\)</span>.</p>
-</section>
-<section id="task-4" class="level1">
-<h1>Task 4</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">556643</span><span class="op">)</span></span>
+<span><span class="va">m</span> <span class="op">=</span> <span class="fl">5000</span></span>
+<span><span class="va">N</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">numeric</a></span><span class="op">(</span><span class="va">m</span><span class="op">)</span></span>
+<span><span class="va">S</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">numeric</a></span><span class="op">(</span><span class="va">m</span><span class="op">)</span></span>
+<span><span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="va">m</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="va">N</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">rpois</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">100</span><span class="op">)</span></span>
+<span>  <span class="va">S</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html">rgamma</a></span><span class="op">(</span><span class="va">N</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, <span class="fl">25</span>, rate <span class="op">=</span> <span class="fl">0.0025</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="task-4" class="level1"><h1>Task 4</h1>
 <p>Create a well-labeled scatterplot of the pairs <span class="math inline">\((N,\,S)\)</span> that you just simulated.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -652,26 +732,121 @@ Adjust the point size
 <p>You might want to use the <code>cex</code> argument to the <code>plot</code> function in order to decrease the size of the points. By default <code>cex = 1</code>.</p>
 </div>
 </div>
-</section>
-<section id="task-5" class="level1">
-<h1>Task 5</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">N</span>, <span class="va">S</span>, pch <span class="op">=</span> <span class="fl">19</span>, cex <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="lab-9_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="task-5" class="level1"><h1>Task 5</h1>
 <p>Plot a <a href="https://sta240-f25.github.io/explainers/histogram.html">histogram</a> of the draws of <span class="math inline">\(S\)</span> by themselves.</p>
-</section>
-<section id="task-6" class="level1">
-<h1>Task 6</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="va">S</span>, freq <span class="op">=</span> <span class="cn">FALSE</span>, breaks <span class="op">=</span> <span class="st">"Scott"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="lab-9_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="task-6" class="level1"><h1>Task 6</h1>
 <p>Use your draws of <span class="math inline">\(N\)</span> to estimate the probabilities from Tasks 1 and 2, and verify that you get estimates that are close to the actual probabilities you calculated.</p>
-</section>
-<section id="task-7" class="level1">
-<h1>Task 7</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fl">90</span> <span class="op">&lt;</span> <span class="va">N</span> <span class="op">&amp;</span> <span class="va">N</span> <span class="op">&lt;</span> <span class="fl">110</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.6536</code></pre>
+</div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">N</span> <span class="op">&gt;=</span> <span class="fl">100</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5194</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="task-7" class="level1"><h1>Task 7</h1>
 <p>Use the draws of <span class="math inline">\(S\)</span> to estimate the following quantities:</p>
 <ol type="a">
 <li>Mean of <span class="math inline">\(S\)</span>;</li>
 <li>Variance of <span class="math inline">\(S\)</span>;</li>
-<li><span class="math inline">\(P(S &gt; 1200000)\)</span>.</li>
+<li>
+<span class="math inline">\(P(S &gt; 1200000)\)</span>.</li>
 </ol>
-</section>
-<section id="task-8" class="level1">
-<h1>Task 8</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">S</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1002005</code></pre>
+</div>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">var</a></span><span class="op">(</span><span class="va">S</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10598722666</code></pre>
+</div>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">S</span> <span class="op">&gt;</span> <span class="fl">1200000</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.0294</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="task-8" class="level1"><h1>Task 8</h1>
 <p>In our setup, <span class="math inline">\(N\)</span> and <span class="math inline">\(S\)</span> are a random pair that is jointly distributed according to the following hierarchy:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -680,14 +855,34 @@ S\mid N=n &amp;\sim \,???
 \end{aligned}
 \]</span></p>
 <p><em>Conditional</em> on <span class="math inline">\(n\)</span>, what is the distribution of <span class="math inline">\(S\)</span>? You may find results from <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf">yesterday’s lecture</a> helpful.</p>
-</section>
-<section id="task-9" class="level1">
-<h1>Task 9</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If <span class="math inline">\(n\)</span> is fixed, then <span class="math inline">\(S\)</span> is the sum of <span class="math inline">\(n\)</span> iid gamma random variables, so we know</p>
+<p><span class="math display">\[
+S\mid N = n \sim \text{Gamma}(n\cdot 25,\,0.0025)
+\]</span></p>
+</div>
+</div>
+</div>
+</section><section id="task-9" class="level1"><h1>Task 9</h1>
 <p>Use the tower property to compute the following <em>marginal</em> expected values of <span class="math inline">\(S\)</span>:</p>
 <ol type="a">
-<li><span class="math inline">\(E(S)\)</span>;</li>
-<li><span class="math inline">\(E(S^2)\)</span>;</li>
-<li><span class="math inline">\(M_S(t)=E(e^{tS})\)</span>.</li>
+<li>
+<span class="math inline">\(E(S)\)</span>;</li>
+<li>
+<span class="math inline">\(E(S^2)\)</span>;</li>
+<li>
+<span class="math inline">\(M_S(t)=E(e^{tS})\)</span>.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -702,28 +897,164 @@ Note
 <p>The marginal distribution of <span class="math inline">\(S\)</span> is not recognizable. It’s some funky new thing. By deriving its MGF, you have completely characterized the entire distribution, but it turns out that we don’t have nice clean formulas for the CDF or the PDF. Bummer! But as you saw in previous tasks, we can still <em>simulate</em> the distribution of <span class="math inline">\(S\)</span> and approximate its properties. Neat!</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="part-a" class="level3"><h3 class="anchored" data-anchor-id="part-a">Part a</h3>
+<p><span class="math display">\[
+\begin{aligned}
+E(S)&amp;=E(E(S\mid N))
+\\
+&amp;=
+E\left(\frac{N\cdot 25}{0.0025}\right)
+\\
+&amp;=
+\frac{25}{0.0025}E\left(N\right)
+\\
+&amp;=
+E(X_1)E(N)
+\\
+&amp;=
+10000\times 100
+\\
+&amp;=
+1000000.
+\end{aligned}
+\]</span></p>
+</section><section id="part-b" class="level3"><h3 class="anchored" data-anchor-id="part-b">Part b</h3>
+<p>We know <span class="math inline">\(S\mid N=n\sim\text{Gamma}(n\cdot 25,\,0.0025)\)</span>, and we know that <span class="math inline">\(\text{var}(S|N=n)=n\cdot 25/0.0025^2\)</span>, so</p>
+<p><span class="math display">\[
+E(S^2|N=n)=\text{var}(S|N=n)+E(S|N=n)^2=\frac{n\cdot 25}{0.0025^2}+\frac{n^2\cdot 25^2}{0.0025^2}
+\]</span></p>
+<p>Tower property again:</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(S^2)
+&amp;=E(E(S^2|N))\\
+&amp;=
+E\left(\frac{N\cdot 25}{0.0025^2}+\frac{N^2\cdot 25^2}{0.0025^2}\right)
+\\
+&amp;=
+\frac{25}{0.0025^2}E(N)+\frac{25^2}{0.0025^2}E(N^2)
+\\
+&amp;=
+\frac{25}{0.0025^2}100+\frac{25^2}{0.0025^2}(100+100^2)
+\end{aligned}
+\]</span></p>
+<div class="cell">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">(</span><span class="fl">25</span> <span class="op">/</span> <span class="fl">0.0025</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="fl">100</span> <span class="op">+</span> <span class="fl">25</span> <span class="op">*</span> <span class="op">(</span><span class="fl">100</span> <span class="op">+</span> <span class="fl">100</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.0104e+12</code></pre>
+</div>
+</div>
+</section><section id="part-c" class="level3"><h3 class="anchored" data-anchor-id="part-c">Part c</h3>
+<p><span class="math display">\[
+\begin{aligned}
+E(e^{tS})
+&amp;=
+E(E(e^{tS}|N))
+\\
+&amp;=E\left(\left(\frac{0.0025}{0.0025 - t}\right)^{N25}\right)&amp;&amp;\text{gamma mgf}
+\\
+&amp;=
+\sum\limits_{n=0}^\infty
+\left(\frac{0.0025}{0.0025 - t}\right)^{n25}\frac{100^n}{n!}e^{-100} &amp;&amp; \text{LOTUS}
+\\
+&amp;=
+e^{-100}
+\sum\limits_{n=0}^\infty
+\frac{\left(100\left(\frac{0.0025}{0.0025 - t}\right)^{25}\right)^n}{n!} &amp;&amp; \text{taylor series of exponential}
+\\
+&amp;=
+e^{-100}
+e^{100\left(\frac{0.0025}{0.0025 - t}\right)^{25}},&amp;&amp; t&lt;0.0025.
+\end{aligned}
+\]</span></p>
 </section>
-<section id="task-10" class="level1">
-<h1>Task 10</h1>
+</div>
+</div>
+</div>
+</section><section id="task-10" class="level1"><h1>Task 10</h1>
 <p>Verify that the theoretical mean and variance of <span class="math inline">\(S\)</span> match the sample estimates you computed from your simulation in Task 7.</p>
-</section>
-<section id="task-11" class="level1">
-<h1>Task 11</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The means are close.</p>
+<div class="cell">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">S</span><span class="op">)</span> <span class="co"># should be close to one million</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1002005</code></pre>
+</div>
+</div>
+<p>The variance should be close to</p>
+<div class="cell">
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">ES2</span> <span class="op">=</span> <span class="op">(</span><span class="fl">25</span> <span class="op">/</span> <span class="fl">0.0025</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="fl">100</span> <span class="op">+</span> <span class="fl">25</span> <span class="op">*</span> <span class="op">(</span><span class="fl">100</span> <span class="op">+</span> <span class="fl">100</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">ES</span> <span class="op">=</span> <span class="fl">1000000</span></span>
+<span><span class="va">varS</span> <span class="op">=</span> <span class="va">ES2</span> <span class="op">-</span> <span class="va">ES</span><span class="op">^</span><span class="fl">2</span></span>
+<span><span class="va">varS</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.04e+10</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">var</a></span><span class="op">(</span><span class="va">S</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10598722666</code></pre>
+</div>
+</div>
+<p>I guess it’s close.</p>
+</div>
+</div>
+</div>
+</section><section id="task-11" class="level1"><h1>Task 11</h1>
 <p>In our setup, we assumed that the <span class="math inline">\(X_i\)</span> were independent.</p>
 <ol type="a">
 <li>What was the purely mathematical benefit of making this assumption? How did it simplify our life?</li>
 <li>In the context of our application, is independence a reasonable assumption?</li>
 </ol>
-</section>
-<section id="task-infty" class="level1">
-<h1>Task <span class="math inline">\(\infty\)</span></h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>We needed independence to say that the sum of gammas was also gamma. If we didn’t know that the exact conditional distribution was gamma, Task 9 would have been a real pain;</li>
+<li>Insurance claims are definitely not independent. Imagine this insurance company sells home insurance policies in southern California. If a wild fire rips through town, the claims being filed by homes in the same neighborhood are definitely <em>dependent</em>.</li>
+</ol>
+</div>
+</div>
+</div>
+</section><section id="task-infty" class="level1"><h1>Task <span class="math inline">\(\infty\)</span>
+</h1>
 <p>Go watch <a href="https://en.wikipedia.org/wiki/Double_Indemnity"><em>Double Indemnity</em></a>. It is so entertaining it will make your head spin.</p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1121,9 +1452,7 @@ Note
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../labs/lab-8.html" class="pagination-link" aria-label="Lab 8">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lab 8</span>
       </a>          
@@ -1135,8 +1464,7 @@ Note
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -1148,8 +1476,6 @@ Note
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

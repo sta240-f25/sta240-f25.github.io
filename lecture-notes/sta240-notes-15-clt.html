@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Problem Set 4 – STA 240 Fall 2025</title>
+<title>Central limit theorem – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,41 +17,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -60,8 +25,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../problems/pset-5.html" rel="next">
-<link href="../problems/pset-3.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -71,7 +34,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<meta name="shinylive:serviceworker_dir" content="..">
+<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/load-shinylive-sw.js" type="module"></script>
+<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/run-python-blocks.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/shinylive.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -123,12 +91,10 @@ window.Quarto = {
   typesetMath
 };
 </script>
-<meta property="og:title" content="Problem Set 4 – STA 240 Fall 2025">
-<meta property="og:description" content="Due Sunday October 5 at 5PM">
-<meta property="og:image" content="https://sta240-f25.github.io/problems/pset-4_files/figure-html/fig-elections-1.png">
+<meta property="og:title" content="Central limit theorem – STA 240 Fall 2025">
+<meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
+<meta property="og:image" content="https://sta240-f25.github.io/lecture-notes/images/conv-in-dist.gif">
 <meta property="og:site_name" content="STA 240 Fall 2025">
-<meta property="og:image:height" content="960">
-<meta property="og:image:width" content="1344">
 </head>
 <body class="nav-sidebar docked quarto-light">
 
@@ -137,7 +103,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problems/pset-0.html">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problems/pset-4.html">Problem Set 4</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Central limit theorem</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -437,13 +403,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">Problem Sets</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
@@ -470,7 +436,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/pset-4.html" class="sidebar-item-text sidebar-link active">
+  <a href="../problems/pset-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 4</span></a>
   </div>
 </li>
@@ -584,24 +550,20 @@ window.Quarto = {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#problem-0" id="toc-problem-0" class="nav-link active" data-scroll-target="#problem-0">Problem 0</a></li>
-  <li><a href="#problem-1" id="toc-problem-1" class="nav-link" data-scroll-target="#problem-1">Problem 1</a></li>
-  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
-  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
-  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a></li>
-  <li><a href="#problem-5" id="toc-problem-5" class="nav-link" data-scroll-target="#problem-5">Problem 5</a></li>
-  <li><a href="#problem-6" id="toc-problem-6" class="nav-link" data-scroll-target="#problem-6">Problem 6</a></li>
-  <li><a href="#problem-7" id="toc-problem-7" class="nav-link" data-scroll-target="#problem-7">Problem 7</a></li>
-  <li><a href="#problem-8" id="toc-problem-8" class="nav-link" data-scroll-target="#problem-8">Problem 8</a></li>
-  <li><a href="#problem-9" id="toc-problem-9" class="nav-link" data-scroll-target="#problem-9">Problem 9</a></li>
-  <li><a href="#problem-10" id="toc-problem-10" class="nav-link" data-scroll-target="#problem-10">Problem 10</a></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+<li><a href="#recap-sums-and-averages-of-iid-random-variables" id="toc-recap-sums-and-averages-of-iid-random-variables" class="nav-link active" data-scroll-target="#recap-sums-and-averages-of-iid-random-variables">Recap: sums and averages of iid random variables</a></li>
+  <li><a href="#convergence-in-distribution" id="toc-convergence-in-distribution" class="nav-link" data-scroll-target="#convergence-in-distribution">Convergence in distribution</a></li>
+  <li>
+<a href="#the-central-limit-theorem" id="toc-the-central-limit-theorem" class="nav-link" data-scroll-target="#the-central-limit-theorem">The central limit theorem</a>
+  <ul class="collapse">
+<li><a href="#partial-proof-of-the-clt" id="toc-partial-proof-of-the-clt" class="nav-link" data-scroll-target="#partial-proof-of-the-clt">Partial proof of the CLT</a></li>
+  </ul>
+</li>
+  <li><a href="#berry-esseen-theorem" id="toc-berry-esseen-theorem" class="nav-link" data-scroll-target="#berry-esseen-theorem">Berry-Esseen theorem</a></li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../problems/pset-0.html">Problem Sets</a></li><li class="breadcrumb-item"><a href="../problems/pset-4.html">Problem Set 4</a></li></ol></nav><div class="quarto-title">
-<h1 class="title">Problem Set 4</h1>
-<p class="subtitle lead">Due Sunday October 5 at 5PM</p>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Central limit theorem</h1>
 </div>
 
 
@@ -615,296 +577,637 @@ window.Quarto = {
   
 
 
-</header><section id="problem-0" class="level2"><h2 class="anchored" data-anchor-id="problem-0">Problem 0</h2>
-<p>Recommend some music for us to listen to while we grade this.</p>
-</section><section id="problem-1" class="level2"><h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
-<p>Sadly, we have a midterm exam coming up on Thursday October 9. Everything you have seen on Problem Sets 1 through 4 is fair game for the exam: set theory, probability spaces and axioms, probability rules and proofs, counting, conditional probability and independence, and discrete random variables.</p>
-<p>Look back through the course materials thus far and select the topic that you think you understand the <em>least</em>. Study this topic carefully and then do two things:</p>
-<ol type="a">
-<li>Write a few paragraphs where you explain this topic to a five-year-old using only words, pictures, and toy examples;</li>
-<li>After you’re done reviewing, and after your response to part a, include one thing you’re still unsure about or a question you’d like to ask about your chosen topic.</li>
-</ol>
-<p>After you submit this problem set, I will answer all of the class’s questions and post an anonymized “Q&amp;A” as part of the exam review materials.</p>
-</section><section id="problem-2" class="level2"><h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
-<p>Assume that <span class="math inline">\(P(A)&gt;0\)</span> and prove that</p>
+</header><section id="recap-sums-and-averages-of-iid-random-variables" class="level1"><h1>Recap: sums and averages of iid random variables</h1>
+<p>In the <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf">last lecture</a>, we studied iid collections of several random variables:</p>
 <p><span class="math display">\[
-P(A\cap B\,|\, A)\geq P(A\cap B\,|\, A\cup B).
+X_1,\,X_2,\,X_3,\,X_4,\,...\overset{\text{iid}}{\sim}P.
 \]</span></p>
-</section><section id="problem-3" class="level2"><h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
-<p>Let <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> be events with <span class="math inline">\(P(C) &gt; 0\)</span>. <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <strong>conditionally independent</strong> given <span class="math inline">\(C\)</span> if and only if</p>
+<p>Because these are <em>identically distributed</em>, we introduced notation for the common mean <span class="math inline">\(\mu=E(X_1)\)</span>, common variance <span class="math inline">\(\sigma^2=\text{var}(X_1)\)</span>, and common moment-generating function <span class="math inline">\(M(t)=E(e^{tX_1})\)</span> shared by all <span class="math inline">\(X_i\)</span> in the collection. Obviously, we are assuming these objects exist to begin with, which is not always the case (think Cauchy).</p>
+<p>Based on the iid collection, we defined the running sum and the running average of the first <span class="math inline">\(n\)</span> variables:</p>
 <p><span class="math display">\[
-P(A \cap B \mid C) = P(A \mid C)P(B \mid C).
+\begin{aligned}
+S_n&amp;=\sum\limits_{i=1}^n X_i\\
+\bar{X}_n&amp;=\frac{1}{n}\sum\limits_{i=1}^n X_i=\frac{1}{n}S_n.
+\end{aligned}
 \]</span></p>
-<p>Show that the above implies <span class="math inline">\(P(A \mid B\cap C) = P(A \mid C)\)</span>.</p>
-</section><section id="problem-4" class="level2"><h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
-<p>An urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let <span class="math inline">\(X\)</span> be the number of balls drawn in this process.</p>
-<ol type="a">
-<li>What is the range of the random variable <span class="math inline">\(X\)</span>?</li>
-<li>What is the probability mass function of <span class="math inline">\(X\)</span>?</li>
-<li>Sketch the CDF of <span class="math inline">\(X\)</span>.</li>
-<li>Compute <span class="math inline">\(E(X)\)</span>.</li>
-<li>Three balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?</li>
-</ol></section><section id="problem-5" class="level2"><h2 class="anchored" data-anchor-id="problem-5">Problem 5</h2>
-<p>King Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive <em>and</em> 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:</p>
-<ol type="1">
-<li>Take a blood sample from each of the 1000 soldiers;</li>
-<li>Split each of these samples into two parts;</li>
-<li>Take one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.</li>
-<li>Test each of those mixed samples;</li>
-<li>A few things could happen:
-<ul>
-<li>If the test gives a negative result, we know all of the original ten samples are clear, and we can move on;</li>
-<li>If the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten soldiers. We can then identify which soldiers are positive.</li>
-</ul>
-</li>
-</ol>
-<p>Gandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”</p>
-<ol type="a">
-<li>What disease prevalence is Gandalf implicitly assuming here?</li>
-<li>Can Gandalf revise his scheme to reduce the expected cost even more?</li>
-</ol></section><section id="problem-6" class="level2"><h2 class="anchored" data-anchor-id="problem-6">Problem 6</h2>
-<p>Not all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.</p>
-<p>Imagine an election where Angela Lansbury receives <span class="math inline">\(a\)</span> votes, Bernadette Peters receives <span class="math inline">\(b\)</span> votes, and Angela provisionally wins with a margin of victory <span class="math inline">\(a-b&gt;0\)</span>. However, of the total <span class="math inline">\(a+b\)</span> votes, we learn that <span class="math inline">\(k&gt;a-b\)</span> were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the <span class="math inline">\(k\)</span> invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.</p>
-<p>To model this, think of the original <span class="math inline">\(a+b\)</span> ballots as balls in the proverbial urn. <span class="math inline">\(a\)</span> of these balls are red, and <span class="math inline">\(b\)</span> of these balls are blue, and assume that <span class="math inline">\(a,\, b&gt;k\)</span>. Removing the <span class="math inline">\(k\)</span> invalid ballots is like drawing <span class="math inline">\(k\)</span> balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the <span class="math inline">\(a+b\)</span> original ballots is <em>equally likely</em> to have been invalid. Next, imagine we randomly remove <span class="math inline">\(k\)</span> balls from the urn, and let <span class="math inline">\(X\)</span> be a random variable that counts the number of the removed/invalid ballots that belong to Angela. In other words, the number of red balls removed. If <span class="math inline">\(X\)</span> is large enough, it will swing the election in Bernadette’s favor.</p>
-<ol type="a">
-<li>What are the range and the pmf of the random variable <span class="math inline">\(X\)</span>?</li>
-<li>For what values of <span class="math inline">\(X\)</span> does removing <span class="math inline">\(k\)</span> ballots reverse the outcome of the election?</li>
-<li>Based on your answers to the previous parts, what is the probability that the election result is reversed when the <span class="math inline">\(k\)</span> bad ballots are removed? Give a general formula for this probability, and then compute the probability for each of the real elections listed in <a href="#tbl-elections" class="quarto-xref">Table&nbsp;1</a>;</li>
-<li>The random variable <span class="math inline">\(X\)</span> that you derived in the first part can be approximated by <span class="math inline">\(\text{Binom}(k,\,1/2)\)</span>. Explain why this approximation might be “good enough,” and verify that it’s not too bad by computing the <em>approximate</em> probability of reversal for the elections in <a href="#tbl-elections" class="quarto-xref">Table&nbsp;1</a>. Compare the approximate probabilities to the actual ones from the previous part;</li>
-<li>Let’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a plot in <code>R</code> like <a href="#fig-elections" class="quarto-xref">Figure&nbsp;1</a> with the following features:
-<ul>
-<li>the margin of victory <span class="math inline">\(a-b\)</span> on the horizontal axis;</li>
-<li>the number of bad ballots <span class="math inline">\(k\)</span> on the vertical axis;</li>
-<li>scatterplot where each point represents an election in <a href="#tbl-elections" class="quarto-xref">Table&nbsp;1</a>, with the points colored according to the decision that was made in the case;</li>
-<li>divide the plane into two regions, one where the <em>approximate</em> probability of reversal is less than 0.05 and one where it is greater.</li>
-</ul>
-</li>
-<li>Write a few pithy paragraphs commenting on the following:
-<ul>
-<li>the assumptions of our lil’ model. Do you think they are innocuous? What might you change, and how?</li>
-<li>the match or lack thereof between our model and the decisions that were actually made in the real cases;</li>
-<li>How do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?</li>
-</ul>
-</li>
-</ol>
-<div id="tbl-elections" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-elections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Close elections
-</figcaption><div aria-describedby="tbl-elections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-</colgroup>
-<thead><tr class="header">
-<th>election</th>
-<th>year</th>
-<th>win</th>
-<th>loss</th>
-<th>total</th>
-<th>margin</th>
-<th>invalid</th>
-<th>decision</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><em>Ippolito v. Power</em></td>
-<td>1968</td>
-<td>1,422</td>
-<td>1,405</td>
-<td>2,827</td>
-<td>17</td>
-<td>101</td>
-<td>void</td>
-</tr>
-<tr class="even">
-<td><em>Santucci v. Power</em></td>
-<td>1969</td>
-<td>58,076</td>
-<td>57,981</td>
-<td>116,057</td>
-<td>95</td>
-<td>448</td>
-<td>void</td>
-</tr>
-<tr class="odd">
-<td><em>DeMartini v. Power</em></td>
-<td>1970</td>
-<td>2,656</td>
-<td>2,594</td>
-<td>5,250</td>
-<td>62</td>
-<td>136</td>
-<td>upheld</td>
-</tr>
-<tr class="even">
-<td>Maine House</td>
-<td>1976</td>
-<td>1,193</td>
-<td>1,060</td>
-<td>2,253</td>
-<td>133</td>
-<td>208</td>
-<td>void</td>
-</tr>
-<tr class="odd">
-<td>Ann Arbor mayor</td>
-<td>1977</td>
-<td>10,660</td>
-<td>10,659</td>
-<td>21,319</td>
-<td>1</td>
-<td>20</td>
-<td>void</td>
-</tr>
-<tr class="even">
-<td>Brunswick ME town council</td>
-<td>1980</td>
-<td>2,390</td>
-<td>2,383</td>
-<td>4,773</td>
-<td>7</td>
-<td>16</td>
-<td>upheld</td>
-</tr>
-<tr class="odd">
-<td>Washington governor</td>
-<td>2004</td>
-<td>1,373,357</td>
-<td>1,373,228</td>
-<td>2,746,585</td>
-<td>129</td>
-<td>1,439</td>
-<td>upheld</td>
-</tr>
-</tbody>
-</table>
+<p>Because these depend on the <span class="math inline">\(X_i\)</span>, <span class="math inline">\(S_n\)</span> and <span class="math inline">\(\bar{X}_n\)</span> are themselves random variables with their own distributions, and we sought to itemize their properties: mean, variance, full distribution, etc. Here’s what we came up with:</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(S_n)&amp;=n\mu\\
+E(\bar{X}_n)&amp;=\mu\\
+\\
+\text{var}(S_n)&amp;=n\sigma^2\\
+\text{var}E(\bar{X}_n)&amp;=\sigma^2/n\\
+\\
+M_{S_n}(t)&amp;=M(t)^n\\
+M_{\bar{X}_n}(t)&amp;=M(t/n)^n.\\
+\end{aligned}
+\]</span></p>
+<p>In the case of the mean and the variance, we have generic formulas that work for any <span class="math inline">\(P\)</span>. If we want to say what the exact distribution is, then we need to know what the original <span class="math inline">\(P\)</span> was. Using those updating formulas for the MGF, we worked several special cases:</p>
+<p><span class="math display">\[
+\begin{aligned}
+P=\text{Bern}(p) \quad &amp; \implies &amp;&amp;S_n\sim\text{Binom}(n,\,p)\\
+\\
+P=\text{Poisson}(\lambda) \quad &amp; \implies &amp;&amp;S_n\sim\text{Poisson}(n\lambda)\\
+\\
+P=\text{Gamma}(\alpha,\,\beta) \quad &amp; \implies &amp;&amp;S_n\sim\text{Gamma}(n\alpha,\,\beta)\\
+\quad &amp; \implies &amp;&amp;\bar{X}_n\sim\text{Gamma}(n\alpha,\,n\beta)\\
+\\
+P=\text{N}(\mu,\,\sigma^2) \quad &amp; \implies &amp;&amp;S_n\sim\text{N}(n\mu,\,n\sigma^2)\\
+\quad &amp; \implies &amp;&amp;\bar{X}_n\sim\text{N}(\mu,\,\sigma^2/n)\\
+\end{aligned}
+\]</span></p>
+<p>Neat! Now, here’s the $<span class="math inline">\(10^6\)</span> question. What happens as <span class="math inline">\(n\to\infty\)</span>? As you average more and more of these iid random variables, what happens to the distribution? Let’s see:</p>
+<pre class="shinylive-r" data-engine="r"><code><a href="https://shiny.posit.co/">#| '!! shinylive warning !!': |
+#|   shinylive does not work in self-contained HTML documents.
+#|   Please set `embed-resources: false` in your metadata.
+#| standalone: true
+#| viewerHeight: 500
+
+library(shiny)
+
+ui &lt;- fluidPage(
+  titlePanel("What happens as you average more and more iid random variables?"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("dist", "Choose an underlying distribution P:",
+                  choices = c("Bernoulli", "Poisson", "Gamma")),
+      
+      # The sliders will appear here:
+      uiOutput("param_ui")
+    ),
+    
+    mainPanel(
+      plotOutput("distPlot")
+    )
+  )
+)
+
+server &lt;- function(input, output, session) {
+  
+  # Dynamically choose which sliders to show
+  output$param_ui &lt;- renderUI({
+    req(input$dist)
+    
+    if (input$dist == "Bernoulli") {
+      tagList(
+        sliderInput("n", "Sample size (n):", min = 1, max = 200, value = 1, step = 1),
+        sliderInput("p", "Probability of success (p):", min = 0, max = 1, value = 0.5, step = 0.01)
+      )
+    } else if (input$dist == "Poisson") {
+      tagList(
+        sliderInput("n", "Sample size (n):", min = 1, max = 200, value = 1, step = 1),
+        sliderInput("rate", "Rate parameter (λ):", min = 0, max = 5, value = 1, step = 0.1)
+      )
+    } else if (input$dist == "Gamma") {
+      tagList(
+        sliderInput("n", "Sample size (n):", min = 1, max = 200, value = 1, step = 1),
+        sliderInput("a", "Shape parameter (α):", min = 0, max = 5, value = 1, step = 0.1),
+        sliderInput("b", "Rate parameter (β):", min = 0, max = 5, value = 1, step = 0.1)
+      )
+    }
+  })
+  
+  # Generate a plot from the chosen distribution
+  output$distPlot &lt;- renderPlot({
+    if (input$dist == "Bernoulli") {
+      n &lt;- input$n
+      p &lt;- input$p
+      #par(mfrow = c(1, 2))
+      #plot(0:n, dbinom(0:n, n, p), type = "h")
+      plot((0:n) / n, dbinom(0:n, n, p), type = "h", xlab = expression(bar(x)),
+           ylab = expression("P(" ~ bar(X)[n] ~ " = " ~ bar(x) ~ ")"),
+           main = expression("Average of iid" ~ X[i] ~ "~ Bernoulli(p)"))
+      mtext("μ", side = 1, at = p, col = "red", line = 2)
+    } else if (input$dist == "Poisson") {
+      n &lt;- input$n
+      rate &lt;- input$rate
+      Kmax &lt;- ceiling(qpois(0.99, 200 * rate))
+      #par(mfrow = c(1, 2))
+      plot(0:Kmax / n, dpois(0:Kmax, n * rate), type = "h", xlab = expression(bar(x)),
+           ylab = expression("P(" ~ bar(X)[n] ~ " = " ~ bar(x) ~ ")"),
+           xlim = c(0, qpois(0.99, rate)),
+           main = expression("Average of iid" ~ X[i] ~ "~ Poisson(λ)"))
+      mtext("μ", side = 1, at = rate, col = "red", line = 2)
+      #plot((0:n) / n, dbinom(0:n, n, p), type = "h")
+      
+    } else if (input$dist == "Gamma") {
+      n &lt;- input$n
+      a &lt;- input$a
+      b &lt;- input$b
+      #par(mfrow = c(1, 2))
+      #curve(dgamma(x, shape = n * a, rate = b), from = 0, to = 10, n = 1000)
+      curve(dgamma(x, shape = n * a, rate = n * b), from = 0, to = qgamma(0.95, shape = a, rate = b), 
+            n = 1000, xlab = expression(bar(x)), ylab = "density",
+            main = expression("Average of iid" ~ X[i] ~ "~ Gamma(α, β)"))
+      mtext("μ", side = 1, at = a / b, col = "red", line = 2)
+    }
+    
+  })
+}
+
+shinyApp(ui, server)
+
+</a></code></pre>
+<p>These three examples are based on very different underlying distributions, and yet the final result would seem to be the same:</p>
+<blockquote class="blockquote">
+<p>as you average more and more iid random variables, the distribution looks more and more like a bell curve.</p>
+</blockquote>
+<p>Is this always true? Can this high-level, qualitative observation be restated as a precise mathematical fact? It turns out that the answer is <strong>yes</strong>, and we call it the <strong>central limit theorem</strong>. In order to state this theorem, we need to rigorously define what we mean by “the distribution looks more and more like a bell curve.” In other words, we need to define a notion of <em>convergence</em> for random variables and their distributions.</p>
+</section><section id="convergence-in-distribution" class="level1"><h1>Convergence in distribution</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+Definition: convergence in distribution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Imagine we have a random variable <span class="math inline">\(Y\)</span> as well as an infinite sequence of random variables <span class="math inline">\(Y_1\)</span>, <span class="math inline">\(Y_2\)</span>, <span class="math inline">\(Y_3\)</span>, …, etc. Each of these random variables has a cumulative distribution function (CDF):</p>
+<p><span class="math display">\[
+\begin{aligned}
+F(x)&amp;=P(Y\leq x)\\
+F_1(x)&amp;=P(Y_1\leq x)\\
+F_2(x)&amp;=P(Y_2\leq x)\\
+&amp;\vdots \\
+F_n(x)&amp;=P(Y_n\leq x)\\
+&amp;\vdots
+\end{aligned}
+\]</span></p>
+<p>We say that the sequence of random variables <span class="math inline">\(Y_1\)</span>, <span class="math inline">\(Y_2\)</span>, <span class="math inline">\(Y_3\)</span>, … <strong>converges in distribution</strong> to <span class="math inline">\(Y\)</span> if the sequence of CDFs converges pointwise:</p>
+<p><span class="math display">\[
+\lim_{n\to \infty}F_n(x)=F(x)\quad \text{for all } x\in\mathbb{R}.
+\]</span></p>
+<p>We denote this <span class="math inline">\(Y_n\overset{d}{\to}Y\)</span>. Here’s a cartoon:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/conv-in-dist.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-<div class="cell" data-layout-align="center">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">elections</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
-<span>  election <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Ippolito"</span>, <span class="st">"Santucci"</span>, <span class="st">"DeMartini"</span>, <span class="st">"Maine"</span>, <span class="st">"Ann Arbor"</span>, <span class="st">"Brunswick"</span>, <span class="st">"Washington"</span><span class="op">)</span>,</span>
-<span>  a <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1422</span>, <span class="fl">58076</span>, <span class="fl">2656</span>, <span class="fl">1193</span>, <span class="fl">10660</span>, <span class="fl">2390</span>, <span class="fl">1373357</span><span class="op">)</span>,</span>
-<span>  b <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1405</span>, <span class="fl">57981</span>, <span class="fl">2594</span>, <span class="fl">1060</span>, <span class="fl">10659</span>, <span class="fl">2383</span>, <span class="fl">1373228</span><span class="op">)</span>,</span>
-<span>  k <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">101</span>, <span class="fl">448</span>, <span class="fl">136</span>, <span class="fl">208</span>, <span class="fl">20</span>, <span class="fl">16</span>, <span class="fl">1439</span><span class="op">)</span>,</span>
-<span>  decision <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"void"</span>, <span class="st">"void"</span>, <span class="st">"upheld"</span>, <span class="st">"void"</span>, <span class="st">"void"</span>, <span class="st">"upheld"</span>, <span class="st">"upheld"</span><span class="op">)</span>,</span>
-<span>  col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"red"</span>, <span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"blue"</span><span class="op">)</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">reversal_prob_binom</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span>, <span class="va">k</span><span class="op">)</span><span class="op">{</span></span>
-<span>  <span class="va">cutoff</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">ceiling</a></span><span class="op">(</span><span class="fl">0.5</span> <span class="op">*</span> <span class="op">(</span><span class="va">k</span> <span class="op">+</span> <span class="va">a</span> <span class="op">-</span> <span class="va">b</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fl">1</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">pbinom</a></span><span class="op">(</span><span class="va">cutoff</span> <span class="op">-</span> <span class="fl">1</span>, <span class="va">k</span>, <span class="fl">1</span><span class="op">/</span><span class="fl">2</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">margin_grid</span> <span class="op">&lt;-</span> <span class="fl">0</span><span class="op">:</span><span class="fl">150</span></span>
-<span><span class="va">k_grid</span> <span class="op">&lt;-</span> <span class="fl">0</span><span class="op">:</span><span class="fl">450</span></span>
-<span><span class="va">n_points</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">margin_grid</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">k_grid</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">grid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
-<span>  margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">numeric</a></span><span class="op">(</span><span class="va">n_points</span><span class="op">)</span>,</span>
-<span>  k <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">numeric</a></span><span class="op">(</span><span class="va">n_points</span><span class="op">)</span>,</span>
-<span>  color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"lightblue"</span>, <span class="va">n_points</span><span class="op">)</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">row</span> <span class="op">&lt;-</span> <span class="fl">0</span></span>
-<span></span>
-<span><span class="kw">for</span><span class="op">(</span><span class="va">x</span> <span class="kw">in</span> <span class="va">margin_grid</span><span class="op">)</span><span class="op">{</span></span>
-<span>  <span class="kw">for</span><span class="op">(</span><span class="va">y</span> <span class="kw">in</span> <span class="va">k_grid</span><span class="op">)</span><span class="op">{</span></span>
-<span>    <span class="va">row</span> <span class="op">&lt;-</span> <span class="va">row</span> <span class="op">+</span> <span class="fl">1</span></span>
-<span>    <span class="va">grid</span><span class="op">[</span><span class="va">row</span>, <span class="fl">1</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">x</span></span>
-<span>    <span class="va">grid</span><span class="op">[</span><span class="va">row</span>, <span class="fl">2</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">y</span></span>
-<span>    <span class="kw">if</span><span class="op">(</span><span class="fu">reversal_prob_binom</span><span class="op">(</span><span class="fl">1</span> <span class="op">+</span> <span class="va">x</span>, <span class="fl">1</span>, <span class="va">y</span><span class="op">)</span> <span class="op">&gt;=</span> <span class="fl">0.05</span><span class="op">)</span><span class="op">{</span></span>
-<span>      <span class="va">grid</span><span class="op">[</span><span class="va">row</span>, <span class="fl">3</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="st">"pink"</span></span>
-<span>    <span class="op">}</span></span>
-<span>  <span class="op">}</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">grid</span><span class="op">$</span><span class="va">margin</span>, <span class="va">grid</span><span class="op">$</span><span class="va">k</span>, col <span class="op">=</span> <span class="va">grid</span><span class="op">$</span><span class="va">color</span>, </span>
-<span>     pch <span class="op">=</span> <span class="fl">19</span>, cex <span class="op">=</span> <span class="fl">0.2</span>,</span>
-<span>     xlab <span class="op">=</span> <span class="st">"margin of victory (a - b)"</span>, </span>
-<span>     ylab <span class="op">=</span> <span class="st">"number of invalid ballots (k)"</span>,</span>
-<span>     main <span class="op">=</span> <span class="st">"Approximate probability of election reversal"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/points.html">points</a></span><span class="op">(</span><span class="va">elections</span><span class="op">$</span><span class="va">a</span> <span class="op">-</span> <span class="va">elections</span><span class="op">$</span><span class="va">b</span>, <span class="va">elections</span><span class="op">$</span><span class="va">k</span>, </span>
-<span>       pch <span class="op">=</span> <span class="fl">19</span>, col <span class="op">=</span> <span class="va">elections</span><span class="op">$</span><span class="va">col</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/legend.html">legend</a></span><span class="op">(</span><span class="op">-</span><span class="fl">7</span>, <span class="fl">450</span>, <span class="st">"&gt; 0.05"</span>, text.col <span class="op">=</span> <span class="st">"salmon"</span>, bty <span class="op">=</span> <span class="st">"n"</span>, cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/legend.html">legend</a></span><span class="op">(</span><span class="fl">115</span>, <span class="fl">450</span>, <span class="st">"&lt; 0.05"</span>, text.col <span class="op">=</span> <span class="st">"blue"</span>, bty <span class="op">=</span> <span class="st">"n"</span>, cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/legend.html">legend</a></span><span class="op">(</span><span class="fl">125</span>, <span class="fl">85</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Voided"</span>, <span class="st">"Upheld"</span><span class="op">)</span>, pch <span class="op">=</span> <span class="fl">19</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"blue"</span><span class="op">)</span>, bty <span class="op">=</span> <span class="st">"n"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
-<div id="fig-elections" class="quarto-float quarto-figure quarto-figure-center anchored" width="672" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-elections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="pset-4_files/figure-html/fig-elections-1.png" id="fig-elections" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-elections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption></figure>
 </div>
 </div>
+<p>In addition to the examples above, you have already seen several examples of this style of convergence.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-</section><section id="problem-7" class="level2"><h2 class="anchored" data-anchor-id="problem-7">Problem 7</h2>
-<p>Forty-nine members of the Cleveland Orchestra string section wish to compare their birthdays. Assume that no one has February 29th and that all birthdays are independent.</p>
-<ol type="a">
-<li>What is the expected number of pairs of people with the same birthday?</li>
-<li>What is the expected number of days on which at least two players were born?</li>
-</ol></section><section id="problem-8" class="level2"><h2 class="anchored" data-anchor-id="problem-8">Problem 8</h2>
-<p>A pair of fair dice is rolled until a sum of either a 5 or a 7 appears. What is the probability that a 5 occurs first?</p>
-</section><section id="problem-9" class="level2"><h2 class="anchored" data-anchor-id="problem-9">Problem 9</h2>
-<p>Let <span class="math inline">\(X\)</span> be a random variable with the following pmf:</p>
-<div class="center-table">
-<table class="caption-top table">
-<thead><tr class="header">
-<th><span class="math inline">\(x\)</span></th>
-<th><span class="math inline">\(P(X=x)\)</span></th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>-1</td>
-<td>0.500</td>
-</tr>
-<tr class="even">
-<td>0</td>
-<td>0.250</td>
-</tr>
-<tr class="odd">
-<td>1</td>
-<td>0.125</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>0.125</td>
-</tr>
-</tbody>
-</table>
+<div class="callout-title-container flex-fill">
+Example: Student’s <span class="math inline">\(t\)</span> distribution
 </div>
-<ol type="a">
-<li>What is the mean of <span class="math inline">\(X\)</span>?</li>
-<li>What is the pmf of <span class="math inline">\(Y = 2X-3\)</span>?</li>
-<li>What is the mean of <span class="math inline">\(Y\)</span>?</li>
-<li>What is the pmf of <span class="math inline">\(W = X^2\)</span>?</li>
-<li>What is the mean of <span class="math inline">\(W\)</span>?</li>
-<li>What is the conditional pmf of <span class="math inline">\(X\)</span> given <span class="math inline">\(X \neq 0\)</span>?</li>
-<li>What is the conditional mean of <span class="math inline">\(X\)</span> given <span class="math inline">\(X \neq 0\)</span>?</li>
-</ol></section><section id="problem-10" class="level2"><h2 class="anchored" data-anchor-id="problem-10">Problem 10</h2>
-<p>If <span class="math inline">\(X\sim\text{Binomial}(n,\,p)\)</span>, show that</p>
+</div>
+<div class="callout-body-container callout-body">
 <p><span class="math display">\[
-E\left[\frac{1}{X+1}\right]=\frac{1-(1-p)^{n+1}}{(n+1)p}.
+t_{\nu}\overset{d}{\to}\text{N}(0,\,1)\quad \text{ as }\nu\to\infty.
 \]</span></p>
-</section><section id="submission" class="level2"><h2 class="anchored" data-anchor-id="submission">Submission</h2>
-<p>You are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to <a href="https://www.gradescope.com/courses/1071176">Gradescope</a> and mark the pages associated with each problem.</p>
-<p>Do not forget to include the following:</p>
+<pre class="shinylive-r" data-engine="r"><code><a href="https://shiny.posit.co/">#| '!! shinylive warning !!': |
+#|   shinylive does not work in self-contained HTML documents.
+#|   Please set `embed-resources: false` in your metadata.
+#| standalone: true
+#| viewerHeight: 500
+
+
+
+library(shiny)
+
+# Define UI for application that draws a histogram
+ui &lt;- fluidPage(
+  
+  # Application title
+  titlePanel("The Student's t distribution"),
+  
+  # Sidebar with a slider input for number of bins 
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("df",
+                  "Degrees of freedom:",
+                  min = 0,
+                  max = 25,
+                  value = 1,
+                  step = 0.1)
+    ),
+    
+    # Show a plot of the generated distribution
+    mainPanel(
+      plotOutput("distPlot", height = "400px")
+    )
+  )
+)
+
+# Define server logic required to draw a histogram
+server &lt;- function(input, output) {
+  
+  output$distPlot &lt;- renderPlot({
+    
+    df = input$df
+    
+    par(mfrow = c(2, 1), mar = c(4, 1, 1, 1))
+    
+    curve(pnorm(x), from = -5, to = 5, n = 5000, col = "black", lwd = 3, bty = "n", 
+          yaxt = "n", ylab = "")
+    curve(pt(x, df), from = -5, to = 5, n = 5000, col = "red", add = TRUE, lwd = 2)
+    abline(h = c(0, 1))
+    
+    curve(dnorm(x), from = -5, to = 5, n = 5000, col = "black", lwd = 3, bty = "n",
+          yaxt = "n", ylab = "")
+    curve(dt(x, df), from = -5, to = 5, n = 5000, col = "red", add = TRUE, lwd = 2)
+    
+    legend("topright", c("N(0, 1) density", "Student's t density"), bty = "n",
+           lty = 1, col = c("black", "red"))
+  })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+
+</a></code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example: position of a particle (PSET 6 #2)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On <a href="https://sta240-f25.github.io/problems/pset-6.html#problem-2">Problem Set 6</a>, you studied the position <span class="math inline">\(X_n\)</span> of a one-dimensional subatomic particle in energy state <span class="math inline">\(n\)</span> on the interval <span class="math inline">\([0,\,L]\)</span>. It had cumulative distribution function</p>
+<p><span class="math display">\[
+F_n(x)=P(X_n\leq x)=\frac{x}{L}-\frac{\sin(2n\pi x / L)}{2n\pi},\quad 0\leq x\leq L.
+\]</span></p>
+<p>You observed that</p>
+<p><span class="math display">\[
+X_n\overset{d}{\to}\text{Unif}(0,\,L),\quad n\to\infty.
+\]</span></p>
+<pre class="shinylive-r" data-engine="r"><code><a href="https://shiny.posit.co/">#| '!! shinylive warning !!': |
+#|   shinylive does not work in self-contained HTML documents.
+#|   Please set `embed-resources: false` in your metadata.
+#| standalone: true
+#| viewerHeight: 500
+
+
+
+library(shiny)
+
+# Define UI for application that draws a histogram
+ui &lt;- fluidPage(
+  
+  # Application title
+  titlePanel("Distribution of particle's position"),
+  
+  # Sidebar with a slider input for number of bins 
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("n",
+                  "Energy level (n)",
+                  min = 1,
+                  max = 50,
+                  value = 1,
+                  step = 1),
+      sliderInput("L",
+                  "L",
+                  min = 0,
+                  max = 1.5,
+                  value = 1,
+                  step = 0.1)
+      
+    ),
+    
+    # Show a plot of the generated distribution
+    mainPanel(
+      plotOutput("distPlot", height = "400px")
+    )
+  )
+)
+
+# Define server logic required to draw a histogram
+server &lt;- function(input, output) {
+  
+  output$distPlot &lt;- renderPlot({
+    
+    n &lt;- input$n
+    L &lt;- input$L
+    
+    par(mfrow = c(1, 1), mar = c(4, 1, 1, 1))
+    plot(0, 0, ylim = c(0, 1), xlim = c(-0.25, 1.5), col = "white")
+    segments(0, 0, L, 1, lty = 2, col = "grey")
+    curve(x/L - sin(2*n*pi*x/L) / (2*pi*n), from = 0, to = L, n = 1000, 
+          col = "red", lwd = 2, add = TRUE)
+    segments(-10, 0, 0, 0, col = "red", lwd = 2)
+    segments(L, 1, 10, 1, col = "red", lwd = 2)
+  })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+
+</a></code></pre>
+</div>
+</div>
+<p>In the definition above, we define convergence in distribution in terms of the CDF, which is the right way to do it since the CDF is a universal object that uniquely characterizes the distribution of a random variable and <em>always exists</em>. However, the following theorem gives us permission to instead work with the MGF when it exists, which is often a convenient alternative:</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Continuity theorem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider a random variable <span class="math inline">\(Y\)</span> as well as a sequence <span class="math inline">\(Y_1\)</span>, <span class="math inline">\(Y_2\)</span>, <span class="math inline">\(Y_3\)</span>, … each having its own moment-generating function (MGF):</p>
+<p><span class="math display">\[
+\begin{aligned}
+M(t)&amp;=E(e^{tY})\\
+M_1(t)&amp;=E(e^{tY_1})\\
+M_2(t)&amp;=E(e^{tY_2})\\
+&amp;\vdots \\
+M_n(t)&amp;=E(e^{tY_n})\\
+&amp;\vdots
+\end{aligned}
+\]</span></p>
+<p>If the MGFs converge pointwise for all <span class="math inline">\(t\)</span> in a neighborhood of zero</p>
+<p><span class="math display">\[
+\lim_{n\to\infty} M_{n}(t)=M(t)\quad \forall |t|&lt;b,
+\]</span></p>
+<p>then <span class="math inline">\(Y_n\overset{d}{\to}Y\)</span>.</p>
+</div>
+</div>
+<p>In other words, convergence of the MGFs (when they exist!) implies convergence of the CDFs. Proving this is beyond the scope of our course, but it provides the technical tool that we require to prove a special case of the following theorem…</p>
+</section><section id="the-central-limit-theorem" class="level1"><h1>The central limit theorem</h1>
+<p>Our high level observation was that “averages of iid random variables look normally distributed after a while.” We can make this rigorous with the following theorem, which plays a <em>central</em> role in probability and statistics:</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Central limit theorem (CLT)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider a collection of iid random variables</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,X_3,\,...\overset{\text{iid}}{\sim}P,
+\]</span></p>
+<p>and assume that they have finite mean <span class="math inline">\(\mu=E(X_1)\)</span> and variance <span class="math inline">\(\sigma^2=\text{var}(X_1)\)</span>. If we take the running average of the <span class="math inline">\(X_i\)</span> and then standardize it</p>
+<p><span class="math display">\[
+\begin{aligned}
+\bar{X}_n&amp;=\frac{1}{n}\sum\limits_{i=1}^nX_i\\
+Z_n&amp;=\frac{\bar{X}_n-\mu}{\sqrt{\sigma^2/n}},
+\end{aligned}
+\]</span></p>
+<p>we can show that</p>
+<p><span class="math display">\[
+Z_n\overset{d}{\to}\text{N}(0,\,1)\quad \text{as }n\to\infty.
+\]</span></p>
+<p>This is true <em>regardless what the original distribution <span class="math inline">\(P\)</span> was</em>!</p>
+</div>
+</div>
+<p>Below is partial proof of the central limit theorem. It is only “partial” because we are going to make an <em>extra</em> assumption that the theorem does not require. We will assume that the moment-generating function of the <span class="math inline">\(X_i\)</span> exists. The theorem only requires that the mean and variance be finite. Assuming the MGF exists is much stronger than this. Among other things, existence of the MGF implies <em>all</em> moments are finite, not just the first two. The reason we make this extra assumption is to simplify the math. The full proof of the result requires that we know something about complex numbers (all that <span class="math inline">\(i^2=-1\)</span> stuff), which our course does not assume.</p>
+<section id="partial-proof-of-the-clt" class="level2"><h2 class="anchored" data-anchor-id="partial-proof-of-the-clt">Partial proof of the CLT</h2>
+<p>Assume the <span class="math inline">\(X_i\)</span> all share a common moment-generating function <span class="math inline">\(M(t)=E(e^{tX_1})\)</span>. To show that <span class="math inline">\(Z_n\)</span> converges in distribution to N(0, 1), we can appeal to the <em>continuity theorem</em> above and show that the MGF of <span class="math inline">\(Z_n\)</span> converges:</p>
+<p><span class="math display">\[
+\lim_{n\to\infty}M_{Z_n}(t)=\underbrace{\exp\left(\frac{1}{2}t^2\right)}_{\text{mgf of N(0, 1)}}.
+\]</span></p>
+<p>Since the log and exp functions are continuous, this is equivalent to showing that</p>
+<p><span class="math display">\[
+\lim_{n\to\infty}\ln M_{Z_n}(t)=\frac{1}{2}t^2.
+\]</span></p>
+<p>Without loss of generality, we can clean up the calculations by assuming that <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma=1\)</span>. With this, the standardized average becomes</p>
+<p><span class="math display">\[
+Z_n
+=
+\frac{\frac{1}{n}\sum\limits_{i=1}^nX_i}{1/\sqrt{n}}
+=
+\frac{1}{\sqrt{n}}\sum\limits_{i=1}^nX_i
+=
+\sum\limits_{i=1}^n\frac{1}{\sqrt{n}}X_i.
+\]</span> In other words, <span class="math inline">\(Z_n\)</span> is a linear combination of iid random variables, and we can use what we know about iid sums to compute the MGF of <span class="math inline">\(Z_n\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+M_{Z_n}(t)
+&amp;=
+E(e^{tZ_n})
+\\
+&amp;=
+E\left(e^{t\sum\limits_{i=1}^n\frac{1}{\sqrt{n}}X_i}\right)
+\\
+&amp;=
+E\left(e^{\sum\limits_{i=1}^n\frac{t}{\sqrt{n}}X_i}\right)
+\\
+&amp;=
+E\left(\prod_{i=1}^ne^{\frac{t}{\sqrt{n}}X_i}\right)
+&amp;&amp;e^{a+b}=e^ae^b
+\\
+&amp;=
+\prod_{i=1}^nE\left(e^{\frac{t}{\sqrt{n}}X_i}\right) &amp;&amp; \text{independence}
+\\
+&amp;=
+\prod_{i=1}^nM_{X_i}(t/\sqrt{n})
+\\
+&amp;=
+\prod_{i=1}^nM(t/\sqrt{n}) &amp;&amp; \text{identically distributed}
+\\
+&amp;=
+[M(t/\sqrt{n})]^n
+.
+\end{aligned}
+\]</span></p>
+<p>Great! Taking the log, we have that</p>
+<p><span class="math display">\[
+\ln M_{Z_n}(t)=n\ln M(t/\sqrt{n}),
+\]</span></p>
+<p>and so the proof is complete if we can show that</p>
+<p><span class="math display">\[
+\lim_{n\to\infty}n\ln M\left(\frac{t}{\sqrt{n}}\right)=\frac{t^2}{2}.
+\]</span></p>
+<p>To do that, we need to haul out L’Hôpital’s rule a few times. But first, a few reminders:</p>
+<p><span class="math display">\[
+\begin{aligned}
+M(0)&amp;=E\left(e^{0\cdot X_1}\right)=E(e^0)=E(1)=1 &amp;&amp; \text{always true}\\
+M'(0)&amp;=E(X_1)=0 &amp;&amp; \text{assumption from above}\\
+M''(0)&amp;=E(X_1^2)=\text{var}(X_1)+E(X_1)^2=1+0=1 &amp;&amp; \text{assumption from above}.
+\end{aligned}
+\]</span></p>
+<p>With that, we’re ready to roll. We start by re-writing the limit using a change-of-variables: <span class="math inline">\(y=1/\sqrt{n}\)</span>, or <span class="math inline">\(n=1/y^2\)</span>. If <span class="math inline">\(n\to\infty\)</span>, that’s the same as <span class="math inline">\(y\to 0\)</span>, so we have:</p>
+<p><span class="math display">\[
+\lim_{n\to\infty}\ln M_{Z_n}(t)
+=
+\lim_{n\to\infty}n\ln M\left(\frac{t}{\sqrt{n}}\right)
+=
+\lim_{y\to0}\frac{\ln M\left(ty\right)}{y^2}
+=
+\frac{\ln M(0)}{0}
+=
+\frac{\ln 1}{0}
+=
+\frac{0}{0}.
+\]</span></p>
+<p>Since a naive attempt to simplify the limit by “plugging in” gives an indeterminate form, we apply L’Hôpital’s rule:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\lim_{n\to\infty}\ln M_{Z_n}(t)
+&amp;=
+\lim_{n\to\infty}n\ln M\left(\frac{t}{\sqrt{n}}\right)
+\\
+&amp;=
+\lim_{y\to0}\frac{\ln M\left(ty\right)}{y^2}
+&amp;&amp; y=\frac{1}{\sqrt{n}}
+\\
+&amp;\overset{\text{L'H}}{=}
+\lim_{y\to0}
+\frac{\frac{t}{M(ty)}M'(ty)}{2y}
+\\
+&amp;=
+\frac{t}{2}
+\lim_{y\to0}
+\frac{M'(ty)}{yM(ty)}
+&amp;&amp;\left(\underbrace{=
+\frac{t}{2}
+\frac{M'(0)}{0\cdot M(0)}
+=
+\frac{t}{2}
+\frac{0}{0}}_{\text{darn!}}
+\right)
+\\
+&amp;\overset{\text{L'H}}{=}
+\frac{t}{2}
+\lim_{y\to 0}
+\frac{tM''(ty)}{tyM'(ty)+M(yt)}
+&amp;&amp;\text{need L'Hôpital again}
+\\
+&amp;=
+\frac{t^2}{2}
+\frac{M''(0)}{t\cdot 0\cdot M'(0)+M(0)}
+\\
+&amp;=
+\frac{t^2}{2}
+\frac{1}{0+1}
+\\
+&amp;=
+\frac{t^2}{2}
+.
+\end{aligned}
+\]</span></p>
+<p>Done!</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Problem Set 0 strikes again!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The limit we took to finish the proof is basically the same limit you took on <a href="https://sta240-f25.github.io/problems/pset-0.html#problem-6">Problem Set 0 problem 6</a>. Just take <span class="math inline">\(x=n\)</span> and <span class="math inline">\(f=\ln M\)</span>.</p>
+</div>
+</div>
+</section></section><section id="berry-esseen-theorem" class="level1"><h1>Berry-Esseen theorem</h1>
+<p>The practical upshot of the CLT is that it gives us permission to use the normal distribution to approximate stuff that, strictly speaking, is <em>not</em> exactly normally distributed, but nevertheless might be close enough if <span class="math inline">\(n\)</span> is sufficiently large. But what does “sufficiently large” mean? <span class="math inline">\(n=40\)</span>? <span class="math inline">\(n=10^{80}\)</span>? If I have to wait until <span class="math inline">\(n\)</span> is insanely huge before the CLT starts to “kick in,” then this result is not actually very useful.</p>
+<p>To address this, we seek the <em>rate of convergence</em> of the central limit theorem. How quickly does <span class="math inline">\(Z_n\)</span> start looking normal? To answer this, we need a way of measuring how far away two distributions are from one another. There are many ways to measure this, but this is a common choice:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition: Kolmogorov-Smirnov (KS) distance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span> are cumulative distribution functions, then the <strong>Kolmogorov-Smirnov</strong> (<strong>KS</strong>) <strong>distance</strong> between them is:</p>
+<p><span class="math display">\[
+d(F,\,G)
+=
+\sup_{x\in\mathbb{R}}
+|F(x)-G(x)|
+.
+\]</span></p>
+<p>In words, this is the “largest” pointwise distance between the <span class="math inline">\(F\)</span> curve and the <span class="math inline">\(G\)</span> curve, like this:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="sta240-notes-15-clt_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>So, you scan from left to right across all real numbers, and you find the point where the vertical gap between the cdfs is biggest. The size of that biggest gap is the KS distance between <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span>.</p>
+<p>The notation “sup” stands for “supremum,” which is like the maximum, only fancier. If in your head you just replace “sup” with “max,” you’ll be fine for now.</p>
+</div>
+</div>
+<p>The CDFs involved in the central limit theorem are</p>
+<p><span class="math display">\[
+\begin{aligned}
+F_n(x)&amp;=P\left(Z_n\leq x\right)
+\\
+\Phi(x)
+&amp;=
+\frac{1}{\sqrt{2\pi}}\int_{-\infty}^xe^{-\frac{1}{2}t^2}\,\text{d}t,
+\end{aligned}
+\]</span></p>
+<p>and the theorem claims that <span class="math inline">\(F_n(x)\to \Phi(x)\)</span> for all <span class="math inline">\(x\)</span>. Another way of saying this is that the sequence of KS distances (which is just a sequence of real numbers) goes to 0:</p>
+<p><span class="math display">\[
+\sup_{x\in\mathbb{R}}
+|F_n(x)-\Phi(x)|\to 0.
+\]</span></p>
+<p>How quickly does that happen? This theorem gives us the answer:</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Berry-Esseen theorem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Assume all of the conditions required for the central limit theorem (iid, finite mean and variance, etc), and furthermore, make the additional assumption that the <em>third</em> moment of the underlying distribution is finite. If that is the case, then</p>
+<p><span class="math display">\[
+\sup_{x\in\mathbb{R}}
+|F_n(x)-\Phi(x)|
+\leq
+C
+\cdot
+E\left[\left|\frac{X_1-\mu}{\sigma}\right|^3\right]
+\frac{1}{\sqrt{n}}
+.
+\]</span></p>
+<p><span class="math inline">\(E\left[\left|\frac{X_1-\mu}{\sigma}\right|^3\right]\)</span> is the third, absolute standardized moment, and <span class="math inline">\(C\)</span> is a purely numerical constant that we know is somewhere between 0.4 and 0.4748. If you can characterize its exact value, I’m sure someone will buy you a beer.</p>
+</div>
+</div>
+<p>Qualitatively, this theorem says that CLT convergence happens on the order of <span class="math inline">\(1/\sqrt{n}\)</span>. Quantitatively, the precise rate depends on how skewed the underlying <span class="math inline">\(P\)</span> is, as measured by the third moment. We know the limiting distribution of N(0, 1) is symmetric, so if we start out with a distribution that is already symmetric, the convergence is faster. If we start out with something skewed, the theorem takes longer to get going. If you revisit the app at the very top of the page and play around with parameter values that gives a highly skewed <span class="math inline">\(P\)</span> (Bernoulli with <span class="math inline">\(p\)</span> very close to 0 or 1, for example), you see this.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Reality check
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Isn’t the central limit theorem kind of an insane result? Think about it. It says several remarkable things:</p>
 <ul>
-<li>For each problem, please <a href="https://sta240-f25.github.io/syllabus/syllabus_policies.html#collaboration">acknowledge your collaborators</a>;</li>
-<li>If a problem required you to code something, please include both the code and the output. “Including the code” can be as crude as a screenshot, but you might also use <a href="https://sta240-f25.github.io/explainers/quarto.html">Quarto</a> to get a nice lil’ pdf that you can merge with the rest of your submission.</li>
+<li>The distribution of <span class="math inline">\(Z_n\)</span> converges to anything at all. Why should it? Why shouldn’t there just be chaos?</li>
+<li>The distribution of <span class="math inline">\(Z_n\)</span> converges to <em>the same thing</em> no matter what the underlying <span class="math inline">\(P\)</span> is. Bonkers;</li>
+<li>That <em>same thing</em> is the standard bell curve. Wut?</li>
 </ul>
+<p>Why should <em>any</em> of those things be true? The correct but vacuous answer is “because the proof says so.” But apart from that, <em>why</em> is the central limit theorem true? The best answer I’ve encountered has to do with <strong>entropy</strong>, which is a measure of how random a variable is. It turns out the normal distribution is the maximum entropy distribution among all distributions with finite mean and variance, and so the central limit theorem is a monotone convergence theorem in the sense of entropy, and it says that the maximum is actually obtained in the limit<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. This result is due to a <a href="https://doi.org/10.1214/aop/1176992632">paper</a> by Andrew Barron (shout out to a Rice undergrad alum). I doubt you can currently read that paper, but a person’s reach should exceed their grasp. Keep studying math, and one day you will.</p>
+</div>
+</div>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1"><p>Why is the normal the maximum entropy distribution? Why is the limit actually obtained instead of stopping short somewhere before? Because the proof says so! It’s just turtles all the way down.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1302,17 +1605,7 @@ E\left[\frac{1}{X+1}\right]=\frac{1-(1-p)^{n+1}}{(n+1)p}.
       }
     }
   });
-  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../problems/pset-3.html" class="pagination-link" aria-label="Problem Set 3">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Problem Set 3</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../problems/pset-5.html" class="pagination-link" aria-label="Problem Set 5">
-        <span class="nav-page-text">Problem Set 5</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
+  </script>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
