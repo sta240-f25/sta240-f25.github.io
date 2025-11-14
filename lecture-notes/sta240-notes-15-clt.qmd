@@ -409,7 +409,7 @@ Below is partial proof of the central limit theorem. It is only "partial" becaus
 Assume the $X_i$ all share a common moment-generating function $M(t)=E(e^{tX_1})$. To show that $Z_n$ converges in distribution to N(0, 1), we can appeal to the *continuity theorem* above and show that the MGF of $Z_n$ converges:
 
 $$
-\lim_{n\to\infty}M_{Z_n}(t)=\underbrace{\exp\left(\frac{1}{2}t^2\right)}_{\text{mgf of N(0, 1)}}
+\lim_{n\to\infty}M_{Z_n}(t)=\underbrace{\exp\left(\frac{1}{2}t^2\right)}_{\text{mgf of N(0, 1)}}.
 $$
 
 Since the log and exp functions are continuous, this is equivalent to showing that
@@ -597,10 +597,15 @@ plot_ks <- function(F1, F2, xrange = c(-5, 5), n = 2001) {
   
   # Plot the CDFs
   plot(x, f1_vals, type = "l", lwd = 2, col = "blue",
-       ylim = c(0,1), xlab = "x", ylab = "CDF", main = "CDFs with KS Distance")
+       ylim = c(0,1), xlab = "x", ylab = "", 
+       main = "KS distance between two CDFs", bty = "n",
+       yaxs = "i", yaxt = "n", xaxt = "n")
+  abline(h = c(0, 1), lwd = 3)
   lines(x, f2_vals, lwd = 2, col = "red")
-  legend("topleft", legend = c("F1", "F2"),
+  legend("topleft", legend = c("F", "G"), cex = 1.25,
          col = c("blue", "red"), lwd = 2, bty = "n")
+  mtext(c("0", "1"), side = 2, at = c(0, 1), las = 2, line = 2,
+            cex = 2)
   
   # Draw KS line segment
   points(ks_x, F1(ks_x), pch = 19, col = "blue")
@@ -615,10 +620,9 @@ plot_ks <- function(F1, F2, xrange = c(-5, 5), n = 2001) {
   
   invisible(list(ks_distance = ks_d, location = ks_x))
 }
-F1 <- function(x) pexp(x, rate = 2)        # e.g. exponential
-F2 <- function(x) punif(x, min = 0, max = 2)
-plot_ks(F1, F2, xrange = c(0, 2))
-
+F1 <- function(x) pnorm(x)
+F2 <- function(x) pnorm(x, mean = 1)
+plot_ks(F1, F2, xrange = c(-4, 4))
 ```
 
 
@@ -678,10 +682,10 @@ Qualitatively, this theorem says that CLT convergence happens on the order of $1
 Isn't the central limit theorem kind of an insane result? Think about it. It says several remarkable things:
 
 - The distribution of $Z_n$ converges to anything at all. Why should it? Why shouldn't there just be chaos?
-- The distribution of $Z_n$ converges to *the same thing* no matter what the underlying $P$ is;
-- That *same thing* is the standard bell curve.
+- The distribution of $Z_n$ converges to *the same thing* no matter what the underlying $P$ is. Bonkers;
+- That *same thing* is the standard bell curve. Wut?
 
-Why should *any* of those things be true? The correct but vacuous answer is "because the proof says so." But apart from that, *why* is the central limit theorem true? The best answer I've encountered has to do with **entropy**, which is a measure of how random a variable is. It turns out the normal distribution is the maximum entropy distribution among all distributions with finite mean and variance, and so the central limit theorem is a monotone convergence theorem in the sense of entropy, and it says that the maximum is actually obtained in the limit[^1]. This result is due to a [paper](https://doi.org/10.1214/aop/1176992632) by Andrew Barron (shout out to a Rice undergrad alum). I doubt you can read that paper today, but a person's reach should exceed their grasp. Keep studying math, and one day you will.
+Why should *any* of those things be true? The correct but vacuous answer is "because the proof says so." But apart from that, *why* is the central limit theorem true? The best answer I've encountered has to do with **entropy**, which is a measure of how random a variable is. It turns out the normal distribution is the maximum entropy distribution among all distributions with finite mean and variance, and so the central limit theorem is a monotone convergence theorem in the sense of entropy, and it says that the maximum is actually obtained in the limit[^1]. This result is due to a [paper](https://doi.org/10.1214/aop/1176992632) by Andrew Barron (shout out to a Rice undergrad alum). I doubt you can currently read that paper, but a person's reach should exceed their grasp. Keep studying math, and one day you will.
 
 :::
 
