@@ -551,7 +551,7 @@ $$
 Done!
 
 
-::: callout-note
+::: callout-important
 ## Problem Set 0 strikes again!
 
 The limit we took to finish the proof is basically the same limit you took on [Problem Set 0 problem 6](https://sta240-f25.github.io/problems/pset-0.html#problem-6). Just take $x=n$ and $f=\ln M$.
@@ -685,7 +685,7 @@ Isn't the central limit theorem kind of an insane result? Think about it. It say
 - The distribution of $Z_n$ converges to *the same thing* no matter what the underlying $P$ is. Bonkers;
 - That *same thing* is the standard bell curve. Wut?
 
-Why should *any* of those things be true? The correct but vacuous answer is "because the proof says so." But apart from that, *why* is the central limit theorem true? The best answer I've encountered has to do with **entropy**, which is a measure of how random a variable is. It turns out the normal distribution is the maximum entropy distribution among all distributions with finite mean and variance, and so the central limit theorem is a monotone convergence theorem in the sense of entropy, and it says that the maximum is actually obtained in the limit[^1]. This result is due to a [paper](https://doi.org/10.1214/aop/1176992632) by Andrew Barron (shout out to a Rice undergrad alum). I doubt you can currently read that paper, but a person's reach should exceed their grasp. Keep studying math, and one day you will.
+Why should *any* of those things be true? The correct but vacuous answer is "because the proof says so." But apart from that, *why* is the central limit theorem true? The answer that resonates most with me has to do with **entropy**, which is a measure of how random a variable is. As you average more and more random variables, entropy goes up, but it can't go up forever. It turns out the normal distribution is the **maximum entropy distribution** among all unbounded distributions with finite mean and variance, and so the central limit theorem is essentially a monotone convergence theorem with respect to entropy. The theorem says that the maximum, which is the normal, is eventually obtained[^1]. This result is due to a [paper](https://doi.org/10.1214/aop/1176992632) by Andrew Barron (shout out to a Rice undergrad alum). I doubt you can currently read that paper, but a person's reach should exceed their grasp. Keep studying math, and one day you will.
 
 :::
 
