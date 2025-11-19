@@ -17,22 +17,4 @@ Our final exam is **Friday December 12 from 9:00 AM to 12:00 PM**. There will be
 9.  Maximum likelihood estimation
 10. Bayesian inference
 
-Below are at least two practice problems for each of these ten items, as well as guidance about what course materials to refer to if you want more review on a particular topic.
-
-::: callout-important
-## Give your cheat sheet some TLC!
-
-You are allowed two resources on the exam:
-
-- a "dumb" calculator (no wi-fi). You will not need it, but if you want it as a security blanket, be my guest;
-- both sides of one 8.5" x 11" sheet of notes, prepared by you and you alone. You can create it however you wish: handwritten, on a computer, etc.
-
-Do not skimp on the cheat sheet! Students in past semesters have neglected their cheat sheets to their detriment. Get an early start, and give it some elbow grease.
-
-:::
-
-# Conditional probability and independence
-
-## Problem XX
-
-{{< include bank/conditional-probability/dgs-exercise-2-3-1.qmd >}}
+I will post practice problems after the break.

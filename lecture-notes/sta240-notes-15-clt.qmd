@@ -33,7 +33,7 @@ E(S_n)&=n\mu\\
 E(\bar{X}_n)&=\mu\\
 \\
 \text{var}(S_n)&=n\sigma^2\\
-\text{var}E(\bar{X}_n)&=\sigma^2/n\\
+\text{var}(\bar{X}_n)&=\sigma^2/n\\
 \\
 M_{S_n}(t)&=M(t)^n\\
 M_{\bar{X}_n}(t)&=M(t/n)^n.\\
