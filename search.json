@@ -3412,6 +3412,17 @@
     ]
   },
   {
+    "objectID": "problems/exam-final.html",
+    "href": "problems/exam-final.html",
+    "title": "Final Exam Study Guide",
+    "section": "",
+    "text": "Our final exam is Friday December 12 from 9:00 AM to 12:00 PM. There will be 11 questions, and they will break down as follows:\n\n(an undisclosed check on your visual intuition)\nProbability spaces and rules\nCounting\nConditional probability and independence\nDiscrete random variables\nAbsolutely continuous random variables\nThe moment-generating function\nTransformations of random variables\nJoint distributions\nMaximum likelihood estimation\nBayesian inference\n\nPractice problems coming soon…",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
+  },
+  {
     "objectID": "problems/pset-3.html",
     "href": "problems/pset-3.html",
     "title": "Problem Set 3",
