@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>pset-7 – STA 240 Fall 2025</title>
+<title>Problem Set 7 – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,9 +67,38 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="pset-7 – STA 240 Fall 2025">
-<meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Problem Set 7 – STA 240 Fall 2025">
+<meta property="og:description" content="Due Friday December 5 at 5PM">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
 
@@ -82,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">pset-7</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Problem Set 7</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -531,15 +560,29 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-0" id="toc-problem-0" class="nav-link active" data-scroll-target="#problem-0">Problem 0</a></li>
+  <li><a href="#problem-1" id="toc-problem-1" class="nav-link" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
+  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
+  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a></li>
+  <li><a href="#problem-5" id="toc-problem-5" class="nav-link" data-scroll-target="#problem-5">Problem 5</a></li>
+  <li><a href="#problem-6" id="toc-problem-6" class="nav-link" data-scroll-target="#problem-6">Problem 6</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">pset-7</h1>
+<h1 class="title">Problem Set 7</h1>
+<p class="subtitle lead">Due Friday December 5 at 5PM</p>
 </div>
 
 
@@ -556,9 +599,63 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>2 x transformations 2 x sums and average 2 x general statistics 2 x two MLE 2 x two Bayes</p>
+<section id="problem-0" class="level2">
+<h2 class="anchored" data-anchor-id="problem-0">Problem 0</h2>
+<p>Doodle a cute character that will cheer you on during this assignment.</p>
+</section>
+<section id="problem-1" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
+<p>If the discrete random variable <span class="math inline">\(X\)</span> has the <em>funky-ass distribution</em> (<em>FAS</em>), then its range is <span class="math inline">\(\text{Range}(X)=\mathbb{N}\)</span> and its pmf is</p>
+<p><span class="math display">\[
+P(X=k)=\binom{k+r-1}{k}(1-p)^kp^r\quad k=0,\,1,\,2,\,3,\,...,
+\]</span></p>
+<p>where the parameters <span class="math inline">\(r\in\mathbb{N}\)</span> and <span class="math inline">\(0&lt;p&lt;1\)</span> are constants. We denote this <span class="math inline">\(X\sim\text{FAS}(r,\,p)\)</span>.</p>
+<ol type="a">
+<li>Use what you know about probability to find the value of this infinite series:</li>
+</ol>
+<p><span class="math display">\[
+\sum\limits_{k=0}^\infty
+\binom{k+r-1}{k}(1-p)^k.
+\]</span></p>
+<ol start="2" type="a">
+<li>Compute the MGF of <span class="math inline">\(X\)</span>;</li>
+<li>Use the definition of the expected value to compute the mean of <span class="math inline">\(X\)</span>;</li>
+<li>Use the MGF to compute the mean of <span class="math inline">\(X\)</span> and verify that you get the same answer you got before;</li>
+<li>Use the MGF to compute the variance of <span class="math inline">\(X\)</span>;</li>
+<li>Consider an iid collection <span class="math inline">\(X_i\overset{\text{iid}}{\sim}\text{FAS}(r,\,p)\)</span> and derive the distribution of the sum <span class="math inline">\(S_n=\sum_{i=1}^nX_i\)</span>.</li>
+</ol>
+</section>
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<p>Wald distribution</p>
+</section>
+<section id="problem-3" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
+<p>MLE</p>
+</section>
+<section id="problem-4" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
+<p>MLE</p>
+</section>
+<section id="problem-5" class="level2">
+<h2 class="anchored" data-anchor-id="problem-5">Problem 5</h2>
+<p>exponential gamma</p>
+</section>
+<section id="problem-6" class="level2">
+<h2 class="anchored" data-anchor-id="problem-6">Problem 6</h2>
+<p>beta-geometric</p>
+</section>
+<section id="submission" class="level2">
+<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>You are free to compose your solutions for this problem set however you wish (scan or photograph written work, handwriting capture on a tablet device, LaTeX, Quarto, whatever) as long as the final product is a single PDF file. You must upload this to <a href="https://www.gradescope.com/courses/1071176">Gradescope</a> and mark the pages associated with each problem.</p>
+<p>Do not forget to include the following:</p>
+<ul>
+<li>For each problem, please <a href="https://sta240-f25.github.io/syllabus/syllabus_policies.html#collaboration">acknowledge your collaborators</a>;</li>
+<li>If a problem required you to code something, please include both the code and the output. “Including the code” can be as crude as a screenshot, but you might also use <a href="https://sta240-f25.github.io/explainers/quarto.html">Quarto</a> to get a nice lil’ pdf that you can merge with the rest of your submission.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

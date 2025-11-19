@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Central limit theorem – STA 240 Fall 2025</title>
+
+
+<title>Introduction to the theory of statistics – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,6 +21,7 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
+
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -35,11 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<meta name="shinylive:serviceworker_dir" content="..">
-<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/load-shinylive-sw.js" type="module"></script>
-<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/run-python-blocks.js" type="module"></script>
-<link href="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/shinylive.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -65,7 +65,12 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -91,30 +96,38 @@ window.Quarto = {
   typesetMath
 };
 </script>
-<meta property="og:title" content="Central limit theorem – STA 240 Fall 2025">
+
+<meta property="og:title" content="Introduction to the theory of statistics – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
-<meta property="og:image" content="https://sta240-f25.github.io/lecture-notes/images/conv-in-dist.gif">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
+
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Central limit theorem</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Introduction to the theory of statistics</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
@@ -129,7 +142,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item sidebar-item-section">
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -137,8 +150,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -181,7 +194,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -190,8 +203,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
@@ -240,7 +253,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -249,8 +262,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
@@ -347,7 +360,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -356,8 +369,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binomial</span></a>
@@ -400,7 +413,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
@@ -409,8 +422,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
@@ -453,7 +466,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
@@ -462,8 +475,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
@@ -518,7 +531,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
@@ -527,8 +540,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
@@ -541,29 +554,27 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#recap-sums-and-averages-of-iid-random-variables" id="toc-recap-sums-and-averages-of-iid-random-variables" class="nav-link active" data-scroll-target="#recap-sums-and-averages-of-iid-random-variables">Recap: sums and averages of iid random variables</a></li>
-  <li><a href="#convergence-in-distribution" id="toc-convergence-in-distribution" class="nav-link" data-scroll-target="#convergence-in-distribution">Convergence in distribution</a></li>
-  <li>
-<a href="#the-central-limit-theorem" id="toc-the-central-limit-theorem" class="nav-link" data-scroll-target="#the-central-limit-theorem">The central limit theorem</a>
-  <ul class="collapse">
-<li><a href="#partial-proof-of-the-clt" id="toc-partial-proof-of-the-clt" class="nav-link" data-scroll-target="#partial-proof-of-the-clt">Partial proof of the CLT</a></li>
+  <li><a href="#point-estimation" id="toc-point-estimation" class="nav-link active" data-scroll-target="#point-estimation">Point estimation</a></li>
   </ul>
-</li>
-  <li><a href="#berry-esseen-theorem" id="toc-berry-esseen-theorem" class="nav-link" data-scroll-target="#berry-esseen-theorem">Berry-Esseen theorem</a></li>
-  </ul></nav>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Central limit theorem</h1>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction to the theory of statistics</h1>
 </div>
 
 
@@ -577,637 +588,55 @@ window.Quarto = {
   
 
 
-</header><section id="recap-sums-and-averages-of-iid-random-variables" class="level1"><h1>Recap: sums and averages of iid random variables</h1>
-<p>In the <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf">last lecture</a>, we studied iid collections of several random variables:</p>
-<p><span class="math display">\[
-X_1,\,X_2,\,X_3,\,X_4,\,...\overset{\text{iid}}{\sim}P.
-\]</span></p>
-<p>Because these are <em>identically distributed</em>, we introduced notation for the common mean <span class="math inline">\(\mu=E(X_1)\)</span>, common variance <span class="math inline">\(\sigma^2=\text{var}(X_1)\)</span>, and common moment-generating function <span class="math inline">\(M(t)=E(e^{tX_1})\)</span> shared by all <span class="math inline">\(X_i\)</span> in the collection. Obviously, we are assuming these objects exist to begin with, which is not always the case (think Cauchy).</p>
-<p>Based on the iid collection, we defined the running sum and the running average of the first <span class="math inline">\(n\)</span> variables:</p>
-<p><span class="math display">\[
-\begin{aligned}
-S_n&amp;=\sum\limits_{i=1}^n X_i\\
-\bar{X}_n&amp;=\frac{1}{n}\sum\limits_{i=1}^n X_i=\frac{1}{n}S_n.
-\end{aligned}
-\]</span></p>
-<p>Because these depend on the <span class="math inline">\(X_i\)</span>, <span class="math inline">\(S_n\)</span> and <span class="math inline">\(\bar{X}_n\)</span> are themselves random variables with their own distributions, and we sought to itemize their properties: mean, variance, full distribution, etc. Here’s what we came up with:</p>
-<p><span class="math display">\[
-\begin{aligned}
-E(S_n)&amp;=n\mu\\
-E(\bar{X}_n)&amp;=\mu\\
-\\
-\text{var}(S_n)&amp;=n\sigma^2\\
-\text{var}(\bar{X}_n)&amp;=\sigma^2/n\\
-\\
-M_{S_n}(t)&amp;=M(t)^n\\
-M_{\bar{X}_n}(t)&amp;=M(t/n)^n.\\
-\end{aligned}
-\]</span></p>
-<p>In the case of the mean and the variance, we have generic formulas that work for any <span class="math inline">\(P\)</span>. If we want to say what the exact distribution is, then we need to know what the original <span class="math inline">\(P\)</span> was. Using those updating formulas for the MGF, we worked several special cases:</p>
-<p><span class="math display">\[
-\begin{aligned}
-P=\text{Bern}(p) \quad &amp; \implies &amp;&amp;S_n\sim\text{Binom}(n,\,p)\\
-\\
-P=\text{Poisson}(\lambda) \quad &amp; \implies &amp;&amp;S_n\sim\text{Poisson}(n\lambda)\\
-\\
-P=\text{Gamma}(\alpha,\,\beta) \quad &amp; \implies &amp;&amp;S_n\sim\text{Gamma}(n\alpha,\,\beta)\\
-\quad &amp; \implies &amp;&amp;\bar{X}_n\sim\text{Gamma}(n\alpha,\,n\beta)\\
-\\
-P=\text{N}(\mu,\,\sigma^2) \quad &amp; \implies &amp;&amp;S_n\sim\text{N}(n\mu,\,n\sigma^2)\\
-\quad &amp; \implies &amp;&amp;\bar{X}_n\sim\text{N}(\mu,\,\sigma^2/n)\\
-\end{aligned}
-\]</span></p>
-<p>Neat! Now, here’s the $<span class="math inline">\(10^6\)</span> question. What happens as <span class="math inline">\(n\to\infty\)</span>? As you average more and more of these iid random variables, what happens to the distribution? Let’s see:</p>
-<pre class="shinylive-r" data-engine="r"><code><a href="https://shiny.posit.co/">#| '!! shinylive warning !!': |
-#|   shinylive does not work in self-contained HTML documents.
-#|   Please set `embed-resources: false` in your metadata.
-#| standalone: true
-#| viewerHeight: 500
+</header>
 
-library(shiny)
 
-ui &lt;- fluidPage(
-  titlePanel("What happens as you average more and more iid random variables?"),
-  
-  sidebarLayout(
-    sidebarPanel(
-      selectInput("dist", "Choose an underlying distribution P:",
-                  choices = c("Bernoulli", "Poisson", "Gamma")),
-      
-      # The sliders will appear here:
-      uiOutput("param_ui")
-    ),
-    
-    mainPanel(
-      plotOutput("distPlot")
-    )
-  )
-)
-
-server &lt;- function(input, output, session) {
-  
-  # Dynamically choose which sliders to show
-  output$param_ui &lt;- renderUI({
-    req(input$dist)
-    
-    if (input$dist == "Bernoulli") {
-      tagList(
-        sliderInput("n", "Sample size (n):", min = 1, max = 200, value = 1, step = 1),
-        sliderInput("p", "Probability of success (p):", min = 0, max = 1, value = 0.5, step = 0.01)
-      )
-    } else if (input$dist == "Poisson") {
-      tagList(
-        sliderInput("n", "Sample size (n):", min = 1, max = 200, value = 1, step = 1),
-        sliderInput("rate", "Rate parameter (λ):", min = 0, max = 5, value = 1, step = 0.1)
-      )
-    } else if (input$dist == "Gamma") {
-      tagList(
-        sliderInput("n", "Sample size (n):", min = 1, max = 200, value = 1, step = 1),
-        sliderInput("a", "Shape parameter (α):", min = 0, max = 5, value = 1, step = 0.1),
-        sliderInput("b", "Rate parameter (β):", min = 0, max = 5, value = 1, step = 0.1)
-      )
-    }
-  })
-  
-  # Generate a plot from the chosen distribution
-  output$distPlot &lt;- renderPlot({
-    if (input$dist == "Bernoulli") {
-      n &lt;- input$n
-      p &lt;- input$p
-      #par(mfrow = c(1, 2))
-      #plot(0:n, dbinom(0:n, n, p), type = "h")
-      plot((0:n) / n, dbinom(0:n, n, p), type = "h", xlab = expression(bar(x)),
-           ylab = expression("P(" ~ bar(X)[n] ~ " = " ~ bar(x) ~ ")"),
-           main = expression("Average of iid" ~ X[i] ~ "~ Bernoulli(p)"))
-      mtext("μ", side = 1, at = p, col = "red", line = 2)
-    } else if (input$dist == "Poisson") {
-      n &lt;- input$n
-      rate &lt;- input$rate
-      Kmax &lt;- ceiling(qpois(0.99, 200 * rate))
-      #par(mfrow = c(1, 2))
-      plot(0:Kmax / n, dpois(0:Kmax, n * rate), type = "h", xlab = expression(bar(x)),
-           ylab = expression("P(" ~ bar(X)[n] ~ " = " ~ bar(x) ~ ")"),
-           xlim = c(0, qpois(0.99, rate)),
-           main = expression("Average of iid" ~ X[i] ~ "~ Poisson(λ)"))
-      mtext("μ", side = 1, at = rate, col = "red", line = 2)
-      #plot((0:n) / n, dbinom(0:n, n, p), type = "h")
-      
-    } else if (input$dist == "Gamma") {
-      n &lt;- input$n
-      a &lt;- input$a
-      b &lt;- input$b
-      #par(mfrow = c(1, 2))
-      #curve(dgamma(x, shape = n * a, rate = b), from = 0, to = 10, n = 1000)
-      curve(dgamma(x, shape = n * a, rate = n * b), from = 0, to = qgamma(0.95, shape = a, rate = b), 
-            n = 1000, xlab = expression(bar(x)), ylab = "density",
-            main = expression("Average of iid" ~ X[i] ~ "~ Gamma(α, β)"))
-      mtext("μ", side = 1, at = a / b, col = "red", line = 2)
-    }
-    
-  })
-}
-
-shinyApp(ui, server)
-
-</a></code></pre>
-<p>These three examples are based on very different underlying distributions, and yet the final result would seem to be the same:</p>
-<blockquote class="blockquote">
-<p>as you average more and more iid random variables, the distribution looks more and more like a bell curve.</p>
-</blockquote>
-<p>Is this always true? Can this high-level, qualitative observation be restated as a precise mathematical fact? It turns out that the answer is <strong>yes</strong>, and we call it the <strong>central limit theorem</strong>. In order to state this theorem, we need to rigorously define what we mean by “the distribution looks more and more like a bell curve.” In other words, we need to define a notion of <em>convergence</em> for random variables and their distributions.</p>
-</section><section id="convergence-in-distribution" class="level1"><h1>Convergence in distribution</h1>
+<p>Yada yada data science yada yada extract patterns and learn about the world.</p>
+<p>goal: typical behavior - mean goal: distribution - plot histogram goal: learn relationships - line of best fit</p>
+<p>These are all examples of statistical methods. A theoretical statistician</p>
+<p>Do these methods actually work? Do they do what we want them to do? Do they deliver what they promise to deliver? Under what conditions? And before we can answer those questions, we have to back up and ask a more fundamental one: what does it even mean for a statistical method to “work”? These are all <em>theoretical</em> questions, and mathematical statisticians use the tools of probability theory to answer them.</p>
+<p>In American government, there are legislative, judicial, and executive branches. In music, there is melody, harmony, and rhythm. Similarly, we organize statistical theory into three related areas of inquiry:</p>
+<ol type="1">
+<li>(point estimation)</li>
+<li>(interval estimation)</li>
+<li>(hypothesis testing) can the data distinguish between</li>
+</ol>
+<section id="point-estimation" class="level1">
+<h1>Point estimation</h1>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Definition: convergence in distribution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Imagine we have a random variable <span class="math inline">\(Y\)</span> as well as an infinite sequence of random variables <span class="math inline">\(Y_1\)</span>, <span class="math inline">\(Y_2\)</span>, <span class="math inline">\(Y_3\)</span>, …, etc. Each of these random variables has a cumulative distribution function (CDF):</p>
-<p><span class="math display">\[
-\begin{aligned}
-F(x)&amp;=P(Y\leq x)\\
-F_1(x)&amp;=P(Y_1\leq x)\\
-F_2(x)&amp;=P(Y_2\leq x)\\
-&amp;\vdots \\
-F_n(x)&amp;=P(Y_n\leq x)\\
-&amp;\vdots
-\end{aligned}
-\]</span></p>
-<p>We say that the sequence of random variables <span class="math inline">\(Y_1\)</span>, <span class="math inline">\(Y_2\)</span>, <span class="math inline">\(Y_3\)</span>, … <strong>converges in distribution</strong> to <span class="math inline">\(Y\)</span> if the sequence of CDFs converges pointwise:</p>
-<p><span class="math display">\[
-\lim_{n\to \infty}F_n(x)=F(x)\quad \text{for all } x\in\mathbb{R}.
-\]</span></p>
-<p>We denote this <span class="math inline">\(Y_n\overset{d}{\to}Y\)</span>. Here’s a cartoon:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/conv-in-dist.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>In addition to the examples above, you have already seen several examples of this style of convergence.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Example: Student’s <span class="math inline">\(t\)</span> distribution
+Definition: risk of an estimator
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
-t_{\nu}\overset{d}{\to}\text{N}(0,\,1)\quad \text{ as }\nu\to\infty.
+E[L(\hat{\theta}_n,\,\theta_0)]
 \]</span></p>
-<pre class="shinylive-r" data-engine="r"><code><a href="https://shiny.posit.co/">#| '!! shinylive warning !!': |
-#|   shinylive does not work in self-contained HTML documents.
-#|   Please set `embed-resources: false` in your metadata.
-#| standalone: true
-#| viewerHeight: 500
-
-
-
-library(shiny)
-
-# Define UI for application that draws a histogram
-ui &lt;- fluidPage(
-  
-  # Application title
-  titlePanel("The Student's t distribution"),
-  
-  # Sidebar with a slider input for number of bins 
-  sidebarLayout(
-    sidebarPanel(
-      sliderInput("df",
-                  "Degrees of freedom:",
-                  min = 0,
-                  max = 25,
-                  value = 1,
-                  step = 0.1)
-    ),
-    
-    # Show a plot of the generated distribution
-    mainPanel(
-      plotOutput("distPlot", height = "400px")
-    )
-  )
-)
-
-# Define server logic required to draw a histogram
-server &lt;- function(input, output) {
-  
-  output$distPlot &lt;- renderPlot({
-    
-    df = input$df
-    
-    par(mfrow = c(2, 1), mar = c(4, 1, 1, 1))
-    
-    curve(pnorm(x), from = -5, to = 5, n = 5000, col = "black", lwd = 3, bty = "n", 
-          yaxt = "n", ylab = "")
-    curve(pt(x, df), from = -5, to = 5, n = 5000, col = "red", add = TRUE, lwd = 2)
-    abline(h = c(0, 1))
-    
-    curve(dnorm(x), from = -5, to = 5, n = 5000, col = "black", lwd = 3, bty = "n",
-          yaxt = "n", ylab = "")
-    curve(dt(x, df), from = -5, to = 5, n = 5000, col = "red", add = TRUE, lwd = 2)
-    
-    legend("topright", c("N(0, 1) density", "Student's t density"), bty = "n",
-           lty = 1, col = c("black", "red"))
-  })
-}
-
-# Run the application 
-shinyApp(ui = ui, server = server)
-
-</a></code></pre>
 </div>
 </div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Example: position of a particle (PSET 6 #2)
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>On <a href="https://sta240-f25.github.io/problems/pset-6.html#problem-2">Problem Set 6</a>, you studied the position <span class="math inline">\(X_n\)</span> of a one-dimensional subatomic particle in energy state <span class="math inline">\(n\)</span> on the interval <span class="math inline">\([0,\,L]\)</span>. It had cumulative distribution function</p>
-<p><span class="math display">\[
-F_n(x)=P(X_n\leq x)=\frac{x}{L}-\frac{\sin(2n\pi x / L)}{2n\pi},\quad 0\leq x\leq L.
-\]</span></p>
-<p>You observed that</p>
-<p><span class="math display">\[
-X_n\overset{d}{\to}\text{Unif}(0,\,L),\quad n\to\infty.
-\]</span></p>
-<pre class="shinylive-r" data-engine="r"><code><a href="https://shiny.posit.co/">#| '!! shinylive warning !!': |
-#|   shinylive does not work in self-contained HTML documents.
-#|   Please set `embed-resources: false` in your metadata.
-#| standalone: true
-#| viewerHeight: 500
-
-
-
-library(shiny)
-
-# Define UI for application that draws a histogram
-ui &lt;- fluidPage(
-  
-  # Application title
-  titlePanel("Distribution of particle's position"),
-  
-  # Sidebar with a slider input for number of bins 
-  sidebarLayout(
-    sidebarPanel(
-      sliderInput("n",
-                  "Energy level (n)",
-                  min = 1,
-                  max = 50,
-                  value = 1,
-                  step = 1),
-      sliderInput("L",
-                  "L",
-                  min = 0,
-                  max = 1.5,
-                  value = 1,
-                  step = 0.1)
-      
-    ),
-    
-    # Show a plot of the generated distribution
-    mainPanel(
-      plotOutput("distPlot", height = "400px")
-    )
-  )
-)
-
-# Define server logic required to draw a histogram
-server &lt;- function(input, output) {
-  
-  output$distPlot &lt;- renderPlot({
-    
-    n &lt;- input$n
-    L &lt;- input$L
-    
-    par(mfrow = c(1, 1), mar = c(4, 1, 1, 1))
-    plot(0, 0, ylim = c(0, 1), xlim = c(-0.25, 1.5), col = "white")
-    segments(0, 0, L, 1, lty = 2, col = "grey")
-    curve(x/L - sin(2*n*pi*x/L) / (2*pi*n), from = 0, to = L, n = 1000, 
-          col = "red", lwd = 2, add = TRUE)
-    segments(-10, 0, 0, 0, col = "red", lwd = 2)
-    segments(L, 1, 10, 1, col = "red", lwd = 2)
-  })
-}
-
-# Run the application 
-shinyApp(ui = ui, server = server)
-
-</a></code></pre>
-</div>
-</div>
-<p>In the definition above, we define convergence in distribution in terms of the CDF, which is the right way to do it since the CDF is a universal object that uniquely characterizes the distribution of a random variable and <em>always exists</em>. However, the following theorem gives us permission to instead work with the MGF when it exists, which is often a convenient alternative:</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Continuity theorem
+Theorem: bias-variance trade-off
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Consider a random variable <span class="math inline">\(Y\)</span> as well as a sequence <span class="math inline">\(Y_1\)</span>, <span class="math inline">\(Y_2\)</span>, <span class="math inline">\(Y_3\)</span>, … each having its own moment-generating function (MGF):</p>
-<p><span class="math display">\[
-\begin{aligned}
-M(t)&amp;=E(e^{tY})\\
-M_1(t)&amp;=E(e^{tY_1})\\
-M_2(t)&amp;=E(e^{tY_2})\\
-&amp;\vdots \\
-M_n(t)&amp;=E(e^{tY_n})\\
-&amp;\vdots
-\end{aligned}
-\]</span></p>
-<p>If the MGFs converge pointwise for all <span class="math inline">\(t\)</span> in a neighborhood of zero</p>
-<p><span class="math display">\[
-\lim_{n\to\infty} M_{n}(t)=M(t)\quad \forall |t|&lt;b,
-\]</span></p>
-<p>then <span class="math inline">\(Y_n\overset{d}{\to}Y\)</span>.</p>
-</div>
-</div>
-<p>In other words, convergence of the MGFs (when they exist!) implies convergence of the CDFs. Proving this is beyond the scope of our course, but it provides the technical tool that we require to prove a special case of the following theorem…</p>
-</section><section id="the-central-limit-theorem" class="level1"><h1>The central limit theorem</h1>
-<p>Our high level observation was that “averages of iid random variables look normally distributed after a while.” We can make this rigorous with the following theorem, which plays a <em>central</em> role in probability and statistics:</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Central limit theorem (CLT)
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Consider a collection of iid random variables</p>
-<p><span class="math display">\[
-X_1,\,X_2,\,X_3,\,...\overset{\text{iid}}{\sim}P,
-\]</span></p>
-<p>and assume that they have finite mean <span class="math inline">\(\mu=E(X_1)\)</span> and variance <span class="math inline">\(\sigma^2=\text{var}(X_1)\)</span>. If we take the running average of the <span class="math inline">\(X_i\)</span> and then standardize it</p>
-<p><span class="math display">\[
-\begin{aligned}
-\bar{X}_n&amp;=\frac{1}{n}\sum\limits_{i=1}^nX_i\\
-Z_n&amp;=\frac{\bar{X}_n-\mu}{\sqrt{\sigma^2/n}},
-\end{aligned}
-\]</span></p>
-<p>we can show that</p>
-<p><span class="math display">\[
-Z_n\overset{d}{\to}\text{N}(0,\,1)\quad \text{as }n\to\infty.
-\]</span></p>
-<p>This is true <em>regardless what the original distribution <span class="math inline">\(P\)</span> was</em>!</p>
-</div>
-</div>
-<p>Below is partial proof of the central limit theorem. It is only “partial” because we are going to make an <em>extra</em> assumption that the theorem does not require. We will assume that the moment-generating function of the <span class="math inline">\(X_i\)</span> exists. The theorem only requires that the mean and variance be finite. Assuming the MGF exists is much stronger than this. Among other things, existence of the MGF implies <em>all</em> moments are finite, not just the first two. The reason we make this extra assumption is to simplify the math. The full proof of the result requires that we know something about complex numbers (all that <span class="math inline">\(i^2=-1\)</span> stuff), which our course does not assume.</p>
-<section id="partial-proof-of-the-clt" class="level2"><h2 class="anchored" data-anchor-id="partial-proof-of-the-clt">Partial proof of the CLT</h2>
-<p>Assume the <span class="math inline">\(X_i\)</span> all share a common moment-generating function <span class="math inline">\(M(t)=E(e^{tX_1})\)</span>. To show that <span class="math inline">\(Z_n\)</span> converges in distribution to N(0, 1), we can appeal to the <em>continuity theorem</em> above and show that the MGF of <span class="math inline">\(Z_n\)</span> converges:</p>
-<p><span class="math display">\[
-\lim_{n\to\infty}M_{Z_n}(t)=\underbrace{\exp\left(\frac{1}{2}t^2\right)}_{\text{mgf of N(0, 1)}}.
-\]</span></p>
-<p>Since the log and exp functions are continuous, this is equivalent to showing that</p>
-<p><span class="math display">\[
-\lim_{n\to\infty}\ln M_{Z_n}(t)=\frac{1}{2}t^2.
-\]</span></p>
-<p>Without loss of generality, we can clean up the calculations by assuming that <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma=1\)</span>. With this, the standardized average becomes</p>
-<p><span class="math display">\[
-Z_n
-=
-\frac{\frac{1}{n}\sum\limits_{i=1}^nX_i}{1/\sqrt{n}}
-=
-\frac{1}{\sqrt{n}}\sum\limits_{i=1}^nX_i
-=
-\sum\limits_{i=1}^n\frac{1}{\sqrt{n}}X_i.
-\]</span> In other words, <span class="math inline">\(Z_n\)</span> is a linear combination of iid random variables, and we can use what we know about iid sums to compute the MGF of <span class="math inline">\(Z_n\)</span>:</p>
-<p><span class="math display">\[
-\begin{aligned}
-M_{Z_n}(t)
-&amp;=
-E(e^{tZ_n})
-\\
-&amp;=
-E\left(e^{t\sum\limits_{i=1}^n\frac{1}{\sqrt{n}}X_i}\right)
-\\
-&amp;=
-E\left(e^{\sum\limits_{i=1}^n\frac{t}{\sqrt{n}}X_i}\right)
-\\
-&amp;=
-E\left(\prod_{i=1}^ne^{\frac{t}{\sqrt{n}}X_i}\right)
-&amp;&amp;e^{a+b}=e^ae^b
-\\
-&amp;=
-\prod_{i=1}^nE\left(e^{\frac{t}{\sqrt{n}}X_i}\right) &amp;&amp; \text{independence}
-\\
-&amp;=
-\prod_{i=1}^nM_{X_i}(t/\sqrt{n})
-\\
-&amp;=
-\prod_{i=1}^nM(t/\sqrt{n}) &amp;&amp; \text{identically distributed}
-\\
-&amp;=
-[M(t/\sqrt{n})]^n
-.
-\end{aligned}
-\]</span></p>
-<p>Great! Taking the log, we have that</p>
-<p><span class="math display">\[
-\ln M_{Z_n}(t)=n\ln M(t/\sqrt{n}),
-\]</span></p>
-<p>and so the proof is complete if we can show that</p>
-<p><span class="math display">\[
-\lim_{n\to\infty}n\ln M\left(\frac{t}{\sqrt{n}}\right)=\frac{t^2}{2}.
-\]</span></p>
-<p>To do that, we need to haul out L’Hôpital’s rule a few times. But first, a few reminders:</p>
-<p><span class="math display">\[
-\begin{aligned}
-M(0)&amp;=E\left(e^{0\cdot X_1}\right)=E(e^0)=E(1)=1 &amp;&amp; \text{always true}\\
-M'(0)&amp;=E(X_1)=0 &amp;&amp; \text{assumption from above}\\
-M''(0)&amp;=E(X_1^2)=\text{var}(X_1)+E(X_1)^2=1+0=1 &amp;&amp; \text{assumption from above}.
-\end{aligned}
-\]</span></p>
-<p>With that, we’re ready to roll. We start by re-writing the limit using a change-of-variables: <span class="math inline">\(y=1/\sqrt{n}\)</span>, or <span class="math inline">\(n=1/y^2\)</span>. If <span class="math inline">\(n\to\infty\)</span>, that’s the same as <span class="math inline">\(y\to 0\)</span>, so we have:</p>
-<p><span class="math display">\[
-\lim_{n\to\infty}\ln M_{Z_n}(t)
-=
-\lim_{n\to\infty}n\ln M\left(\frac{t}{\sqrt{n}}\right)
-=
-\lim_{y\to0}\frac{\ln M\left(ty\right)}{y^2}
-=
-\frac{\ln M(0)}{0}
-=
-\frac{\ln 1}{0}
-=
-\frac{0}{0}.
-\]</span></p>
-<p>Since a naive attempt to simplify the limit by “plugging in” gives an indeterminate form, we apply L’Hôpital’s rule:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\lim_{n\to\infty}\ln M_{Z_n}(t)
-&amp;=
-\lim_{n\to\infty}n\ln M\left(\frac{t}{\sqrt{n}}\right)
-\\
-&amp;=
-\lim_{y\to0}\frac{\ln M\left(ty\right)}{y^2}
-&amp;&amp; y=\frac{1}{\sqrt{n}}
-\\
-&amp;\overset{\text{L'H}}{=}
-\lim_{y\to0}
-\frac{\frac{t}{M(ty)}M'(ty)}{2y}
-\\
-&amp;=
-\frac{t}{2}
-\lim_{y\to0}
-\frac{M'(ty)}{yM(ty)}
-&amp;&amp;\left(\underbrace{=
-\frac{t}{2}
-\frac{M'(0)}{0\cdot M(0)}
-=
-\frac{t}{2}
-\frac{0}{0}}_{\text{darn!}}
-\right)
-\\
-&amp;\overset{\text{L'H}}{=}
-\frac{t}{2}
-\lim_{y\to 0}
-\frac{tM''(ty)}{tyM'(ty)+M(yt)}
-&amp;&amp;\text{need L'Hôpital again}
-\\
-&amp;=
-\frac{t^2}{2}
-\frac{M''(0)}{t\cdot 0\cdot M'(0)+M(0)}
-\\
-&amp;=
-\frac{t^2}{2}
-\frac{1}{0+1}
-\\
-&amp;=
-\frac{t^2}{2}
-.
-\end{aligned}
-\]</span></p>
-<p>Done!</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Problem Set 0 strikes again!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The limit we took to finish the proof is basically the same limit you took on <a href="https://sta240-f25.github.io/problems/pset-0.html#problem-6">Problem Set 0 problem 6</a>. Just take <span class="math inline">\(x=n\)</span> and <span class="math inline">\(f=\ln M\)</span>.</p>
-</div>
-</div>
-</section></section><section id="berry-esseen-theorem" class="level1"><h1>Berry-Esseen theorem</h1>
-<p>The practical upshot of the CLT is that it gives us permission to use the normal distribution to approximate stuff that, strictly speaking, is <em>not</em> exactly normally distributed, but nevertheless might be close enough if <span class="math inline">\(n\)</span> is sufficiently large. But what does “sufficiently large” mean? <span class="math inline">\(n=40\)</span>? <span class="math inline">\(n=10^{80}\)</span>? If I have to wait until <span class="math inline">\(n\)</span> is insanely huge before the CLT starts to “kick in,” then this result is not actually very useful.</p>
-<p>To address this, we seek the <em>rate of convergence</em> of the central limit theorem. How quickly does <span class="math inline">\(Z_n\)</span> start looking normal? To answer this, we need a way of measuring how far away two distributions are from one another. There are many ways to measure this, but this is a common choice:</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Definition: Kolmogorov-Smirnov (KS) distance
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span> are cumulative distribution functions, then the <strong>Kolmogorov-Smirnov</strong> (<strong>KS</strong>) <strong>distance</strong> between them is:</p>
-<p><span class="math display">\[
-d(F,\,G)
-=
-\sup_{x\in\mathbb{R}}
-|F(x)-G(x)|
-.
-\]</span></p>
-<p>In words, this is the “largest” pointwise distance between the <span class="math inline">\(F\)</span> curve and the <span class="math inline">\(G\)</span> curve, like this:</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="sta240-notes-15-clt_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>So, you scan from left to right across all real numbers, and you find the point where the vertical gap between the cdfs is biggest. The size of that biggest gap is the KS distance between <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span>.</p>
-<p>The notation “sup” stands for “supremum,” which is like the maximum, only fancier. If in your head you just replace “sup” with “max,” you’ll be fine for now.</p>
-</div>
-</div>
-<p>The CDFs involved in the central limit theorem are</p>
-<p><span class="math display">\[
-\begin{aligned}
-F_n(x)&amp;=P\left(Z_n\leq x\right)
-\\
-\Phi(x)
-&amp;=
-\frac{1}{\sqrt{2\pi}}\int_{-\infty}^xe^{-\frac{1}{2}t^2}\,\text{d}t,
-\end{aligned}
-\]</span></p>
-<p>and the theorem claims that <span class="math inline">\(F_n(x)\to \Phi(x)\)</span> for all <span class="math inline">\(x\)</span>. Another way of saying this is that the sequence of KS distances (which is just a sequence of real numbers) goes to 0:</p>
-<p><span class="math display">\[
-\sup_{x\in\mathbb{R}}
-|F_n(x)-\Phi(x)|\to 0.
-\]</span></p>
-<p>How quickly does that happen? This theorem gives us the answer:</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Berry-Esseen theorem
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Assume all of the conditions required for the central limit theorem (iid, finite mean and variance, etc), and furthermore, make the additional assumption that the <em>third</em> moment of the underlying distribution is finite. If that is the case, then</p>
-<p><span class="math display">\[
-\sup_{x\in\mathbb{R}}
-|F_n(x)-\Phi(x)|
-\leq
-C
-\cdot
-E\left[\left|\frac{X_1-\mu}{\sigma}\right|^3\right]
-\frac{1}{\sqrt{n}}
-.
-\]</span></p>
-<p><span class="math inline">\(E\left[\left|\frac{X_1-\mu}{\sigma}\right|^3\right]\)</span> is the third, absolute standardized moment, and <span class="math inline">\(C\)</span> is a purely numerical constant that we know is somewhere between 0.4 and 0.4748. If you can characterize its exact value, I’m sure someone will buy you a beer.</p>
-</div>
-</div>
-<p>Qualitatively, this theorem says that CLT convergence happens on the order of <span class="math inline">\(1/\sqrt{n}\)</span>. Quantitatively, the precise rate depends on how skewed the underlying <span class="math inline">\(P\)</span> is, as measured by the third moment. We know the limiting distribution of N(0, 1) is symmetric, so if we start out with a distribution that is already symmetric, the convergence is faster. If we start out with something skewed, the theorem takes longer to get going. If you revisit the app at the very top of the page and play around with parameter values that gives a highly skewed <span class="math inline">\(P\)</span> (Bernoulli with <span class="math inline">\(p\)</span> very close to 0 or 1, for example), you see this.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Reality check
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Isn’t the central limit theorem kind of an insane result? Think about it. It says several remarkable things:</p>
-<ul>
-<li>The distribution of <span class="math inline">\(Z_n\)</span> converges to anything at all. Why should it? Why shouldn’t there just be chaos?</li>
-<li>The distribution of <span class="math inline">\(Z_n\)</span> converges to <em>the same thing</em> no matter what the underlying <span class="math inline">\(P\)</span> is. Bonkers;</li>
-<li>That <em>same thing</em> is the standard bell curve. Wut?</li>
-</ul>
-<p>Why should <em>any</em> of those things be true? The correct but vacuous answer is “because the proof says so.” But apart from that, <em>why</em> is the central limit theorem true? The answer that resonates most with me has to do with <strong>entropy</strong>, which is a measure of how random a variable is. As you average more and more random variables, entropy goes up, but it can’t go up forever. It turns out the normal distribution is the <strong>maximum entropy distribution</strong> among all unbounded distributions with finite mean and variance, and so the central limit theorem is essentially a monotone convergence theorem with respect to entropy. The theorem says that the maximum, which is the normal, is eventually obtained<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. This result is due to a <a href="https://doi.org/10.1214/aop/1176992632">paper</a> by Andrew Barron (shout out to a Rice undergrad alum). I doubt you can currently read that paper, but a person’s reach should exceed their grasp. Keep studying math, and one day you will.</p>
+
 </div>
 </div>
 
 
-</section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-<ol>
-<li id="fn1"><p>Why is the normal the maximum entropy distribution? Why is the limit actually obtained instead of stopping short somewhere before? Because the proof says so! It’s just turtles all the way down.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1607,7 +1036,8 @@ Reality check
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -1619,6 +1049,8 @@ Reality check
 </div>
   </div>
 </footer>
+
+
 
 
 </body></html>
