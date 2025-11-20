@@ -1,6 +1,6 @@
 ---
 title: "Final Exam Study Guide"
-draft: true
+draft: false
 ---
 
 Our final exam is **Friday December 12 from 9:00 AM to 12:00 PM**. There will be 11 questions, and they will break down as follows:
