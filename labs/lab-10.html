@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>if-else statements and logical conditions – STA 240 Fall 2025</title>
+<title>Lab 10 – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,8 +60,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../explainers/loops.html" rel="next">
-<link href="../explainers/sample.html" rel="prev">
+<link href="../problems/exam-midterm-1.html" rel="next">
+<link href="../labs/lab-9.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -97,9 +97,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<meta property="og:title" content="if-else statements and logical conditions – STA 240 Fall 2025">
-<meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+<meta property="og:title" content="Lab 10 – STA 240 Fall 2025">
+<meta property="og:description" content="Due Thursday November 20 at 11:59 PM">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
 <body class="nav-sidebar docked quarto-light">
@@ -109,7 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../explainers/setup.html"><code>R</code> Helpers</a></li><li class="breadcrumb-item"><a href="../explainers/if-else.html">if-else and logic</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-1.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-10.html">Lab 10</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -249,13 +274,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text"><code>R</code> Helpers</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
@@ -306,7 +331,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/if-else.html" class="sidebar-item-text sidebar-link active">
+  <a href="../explainers/if-else.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">if-else and logic</span></a>
   </div>
 </li>
@@ -462,13 +487,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Labs</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
@@ -525,7 +550,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-10.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-10.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lab 10</span></a>
   </div>
 </li>
@@ -568,12 +593,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#logical-conditions" id="toc-logical-conditions" class="nav-link active" data-scroll-target="#logical-conditions">Logical conditions</a></li>
+<li><a href="#task-1" id="toc-task-1" class="nav-link active" data-scroll-target="#task-1">Task 1</a></li>
+  <li><a href="#task-2" id="toc-task-2" class="nav-link" data-scroll-target="#task-2">Task 2</a></li>
+  <li><a href="#task-3" id="toc-task-3" class="nav-link" data-scroll-target="#task-3">Task 3</a></li>
+  <li><a href="#task-4" id="toc-task-4" class="nav-link" data-scroll-target="#task-4">Task 4</a></li>
+  <li><a href="#task-5" id="toc-task-5" class="nav-link" data-scroll-target="#task-5">Task 5</a></li>
+  <li><a href="#task-6" id="toc-task-6" class="nav-link" data-scroll-target="#task-6">Task 6</a></li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../explainers/setup.html"><code>R</code> Helpers</a></li><li class="breadcrumb-item"><a href="../explainers/if-else.html">if-else and logic</a></li></ol></nav><div class="quarto-title">
-<h1 class="title">if-else statements and logical conditions</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-1.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-10.html">Lab 10</a></li></ol></nav><div class="quarto-title">
+<h1 class="title">Lab 10</h1>
+<p class="subtitle lead">Due Thursday November 20 at 11:59 PM</p>
 </div>
 
 
@@ -587,145 +618,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><p>Sometimes we want our code to make a decision: do one thing if a condition is true, and something else if it’s false. In R, the tool for this is <code>if ... else</code>. The pattern looks like this:</p>
-<div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="va">condition</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">do_something</span></span>
-<span><span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
-<span>  <span class="va">do_something_else</span></span>
-<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</header><p>This lab provides extra practice with the kind of maximum likehood problem that you will encounter on the last problem set and the final exam.</p>
+<section id="task-1" class="level1"><h1>Task 1</h1>
+<p>If a non-negative random variable <span class="math inline">\(X\)</span> has the <em>Rayleigh distribution</em> with parameter <span class="math inline">\(\theta&gt;0\)</span>, then its CDF is</p>
+<p><span class="math display">\[
+F(x;\,\theta)=1-\exp\left(-\frac{x^2}{2\theta}\right)\quad x\geq 0,
+\]</span></p>
+<p>and we say <span class="math inline">\(X\sim\text{Rayleigh}(\theta)\)</span>. What is the PDF in this parametric family?</p>
+</section><section id="task-2" class="level1"><h1>Task 2</h1>
+<p>Imagine we observe data</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{Rayleigh}(\theta),
+\]</span></p>
+<p>where the true value of the parameter <span class="math inline">\(\theta&gt;0\)</span> is unknown. Use the method of maximum likelihood to propose an estimator for <span class="math inline">\(\theta\)</span>.</p>
+</section><section id="task-3" class="level1"><h1>Task 3</h1>
+<p>You estimator in the previous part is a random variable that inherits its randomness from the <span class="math inline">\(X_i\)</span>. Derive the full <em>sampling distribution</em> of your estimator.</p>
+</section><section id="task-4" class="level1"><h1>Task 4</h1>
+<p>Now that you know the sampling distribution of the estimator, compute its mean squared error (MSE) using the bias-variance decomposition. Is the estimator unbiased? Is it consistent?</p>
+</section><section id="task-5" class="level1"><h1>Task 5</h1>
+<p>Compute the quantile function of the Rayleigh distribution and use it to generate 100 draws from the distribution that has <span class="math inline">\(\theta=4\)</span>.</p>
+</section><section id="task-6" class="level1"><h1>Task 6</h1>
+<p>Write a for loop that simulates the sampling distribution for your estimator. Here is a schematic of what you are doing:</p>
+<p><span class="math display">\[
+\begin{matrix}
+\text{0. True parameter value} &amp;&amp;&amp; \theta_0 &amp;&amp; \\
+&amp;&amp;&amp; \downarrow &amp;&amp; \\
+\text{1. True distribution} &amp;&amp;&amp; \text{Rayleigh}(\theta_0) &amp;&amp; \\
+&amp;\swarrow &amp;\swarrow&amp; \cdots &amp;\searrow&amp;\searrow \\
+\text{3. Simulated data}&amp;x_{1:n}^{(1)} &amp;x_{1:n}^{(2)}&amp; \cdots &amp;x_{1:n}^{(M-1)}&amp;x_{1:n}^{(M)} \\
+&amp;\downarrow &amp;\downarrow&amp; \cdots &amp;\downarrow&amp;\downarrow \\
+\text{4. Different estimates}&amp;\hat{\theta}_n^{(1)} &amp;\hat{\theta}_n^{(2)}&amp; \cdots &amp;\hat{\theta}_n^{(M-1)}&amp;\hat{\theta}_n^{(M)} \\
+&amp;\searrow &amp;\searrow&amp; \cdots &amp;\swarrow&amp;\swarrow \\
+&amp; &amp;&amp; \text{Histogram} &amp;&amp; \\
+\end{matrix}
+\]</span></p>
+<p>At the end, add on top of the histogram a curve of the density that you derived in Task 3. They ought to match.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>Suppose we roll a six-sided die:</p>
-<div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">roll</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">6</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span><span class="va">roll</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<div class="callout-title-container flex-fill">
+Template
 </div>
 </div>
-<p>We might want to check whether the outcome is “big” (4, 5, or 6) or “small” (1, 2, or 3). Here’s how we can use if else to do that:</p>
+<div class="callout-body-container callout-body">
+<p>Here is some template code you can fill in:</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="va">roll</span> <span class="op">&gt;=</span> <span class="fl">4</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">result</span> <span class="op">&lt;-</span> <span class="st">"Big"</span></span>
-<span><span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
-<span>  <span class="va">result</span> <span class="op">&lt;-</span> <span class="st">"Small"</span></span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">true_theta</span> <span class="op">&lt;-</span> <span class="fl">3.14</span>      <span class="co"># true value of parameter</span></span>
+<span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">25</span>                 <span class="co"># sample size</span></span>
+<span><span class="va">M</span> <span class="op">&lt;-</span> <span class="fl">2500</span>               <span class="co"># how many repetitions</span></span>
+<span><span class="va">estimates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">numeric</a></span><span class="op">(</span><span class="va">M</span><span class="op">)</span> <span class="co"># preallocate storage for the sample of estimates</span></span>
+<span></span>
+<span><span class="kw">for</span><span class="op">(</span><span class="va">m</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="va">M</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="co"># Step 1: simulate a new fake dataset of size n</span></span>
+<span>  <span class="co"># Step 2: apply your formula from Task 2 to compute new estimate</span></span>
+<span>  <span class="co"># Step 3: store it</span></span>
 <span><span class="op">}</span></span>
 <span></span>
-<span><span class="va">result</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Small"</code></pre>
+<span><span class="co"># Step 4: plot histogram of estimates</span></span>
+<span><span class="co"># Step 5: add density curve of exact sampling distribution</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>Let’s unpack:</p>
-<ul>
-<li>First, <code>sample(1:6, size = 1)</code> chooses a random number from 1 to 6;</li>
-<li>Then the if else checks: if the roll is 4 or higher, we call it “Big.” Otherwise, we call it “Small.”</li>
-</ul>
-<p>This is how you can make simple decisions in R code.</p>
-<section id="logical-conditions" class="level1"><h1>Logical conditions</h1>
-<p>In the condition of <code>if</code>, you can use logical comparisons. Here are the most common ones:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 32%">
-<col style="width: 32%">
-</colgroup>
-<thead><tr class="header">
-<th>Operator</th>
-<th>Meaning</th>
-<th>Example</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><code>==</code></td>
-<td>equal to</td>
-<td>
-<code>x == 3</code> is TRUE if x is 3</td>
-</tr>
-<tr class="even">
-<td><code>!=</code></td>
-<td>not equal to</td>
-<td>
-<code>x != 3</code> is TRUE if x is not 3</td>
-</tr>
-<tr class="odd">
-<td><code>&lt;</code></td>
-<td>less than</td>
-<td>
-<code>x &lt; 5</code> is TRUE if x is less than 5</td>
-</tr>
-<tr class="even">
-<td><code>&lt;=</code></td>
-<td>less than or equal</td>
-<td><code>x &lt;= 5</code></td>
-</tr>
-<tr class="odd">
-<td><code>&gt;</code></td>
-<td>greater than</td>
-<td><code>x &gt; 10</code></td>
-</tr>
-<tr class="even">
-<td><code>&gt;=</code></td>
-<td>greater than or equal</td>
-<td><code>x &gt;= 10</code></td>
-</tr>
-<tr class="odd">
-<td><code>&amp;</code></td>
-<td>AND (both conditions true)</td>
-<td><code>x &gt; 0 &amp; x &lt; 5</code></td>
-</tr>
-<tr class="even">
-<td><code>|</code></td>
-<td>OR (at least one true)</td>
-<td><code>x &lt; 0 | x &gt; 10</code></td>
-</tr>
-<tr class="odd">
-<td><code>!</code></td>
-<td>NOT (negates a condition)</td>
-<td><code>!(x == 3)</code></td>
-</tr>
-<tr class="even">
-<td><code>%in%</code></td>
-<td>element of a vector</td>
-<td>
-<code>x %in% c(1,2,3)</code> is TRUE if x is 1, 2, or 3</td>
-</tr>
-</tbody>
-</table>
-<p>Here they are in action:</p>
-<div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">4</span></span>
-<span><span class="va">x</span> <span class="op">&gt;</span> <span class="fl">3</span>       </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;</span> <span class="fl">3</span>       </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
-</div>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&gt;=</span> <span class="fl">3</span> <span class="op">&amp;</span> <span class="va">x</span> <span class="op">&lt;=</span> <span class="fl">5</span>   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;</span> <span class="fl">3</span> <span class="op">|</span> <span class="va">x</span> <span class="op">&gt;</span> <span class="fl">5</span>     </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
-</div>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">!</span><span class="op">(</span><span class="va">x</span> <span class="op">==</span> <span class="fl">4</span><span class="op">)</span>   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
-</div>
-</div>
-<p>Here is how these might be deployed in the context of if-else:</p>
-<div class="cell">
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="va">x</span> <span class="op">&gt;</span> <span class="fl">0</span> <span class="op">&amp;</span> <span class="va">x</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html">%%</a></span> <span class="fl">2</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">result</span> <span class="op">&lt;-</span> <span class="st">"Positive even"</span></span>
-<span><span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
-<span>  <span class="va">result</span> <span class="op">&lt;-</span> <span class="st">"Other"</span></span>
-<span><span class="op">}</span></span>
-<span><span class="va">result</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Positive even"</code></pre>
 </div>
 </div>
 
@@ -1129,13 +1082,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../explainers/sample.html" class="pagination-link" aria-label="`sample`">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><code>sample</code></span>
+      <a href="../labs/lab-9.html" class="pagination-link" aria-label="Lab 9">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lab 9</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../explainers/loops.html" class="pagination-link" aria-label="for loops">
-        <span class="nav-page-text">for loops</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../problems/exam-midterm-1.html" class="pagination-link" aria-label="Midterm 1">
+        <span class="nav-page-text">Midterm 1</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

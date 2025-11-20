@@ -2450,11 +2450,15 @@
     ]
   },
   {
-    "objectID": "lecture-notes/sta240-notes-16-stats-intro.html",
-    "href": "lecture-notes/sta240-notes-16-stats-intro.html",
-    "title": "Introduction to the theory of statistics",
+    "objectID": "labs/lab-10.html",
+    "href": "labs/lab-10.html",
+    "title": "Lab 10",
     "section": "",
-    "text": "Yada yada data science yada yada extract patterns and learn about the world.\ngoal: typical behavior - mean goal: distribution - plot histogram goal: learn relationships - line of best fit\nThese are all examples of statistical methods. A theoretical statistician\nDo these methods actually work? Do they do what we want them to do? Do they deliver what they promise to deliver? Under what conditions? And before we can answer those questions, we have to back up and ask a more fundamental one: what does it even mean for a statistical method to “work”? These are all theoretical questions, and mathematical statisticians use the tools of probability theory to answer them.\nIn American government, there are legislative, judicial, and executive branches. In music, there is melody, harmony, and rhythm. Similarly, we organize statistical theory into three related areas of inquiry:\n\n(point estimation)\n(interval estimation)\n(hypothesis testing) can the data distinguish between\n\n\nPoint estimation\n\n\n\n\n\n\nDefinition: risk of an estimator\n\n\n\n\\[\nE[L(\\hat{\\theta}_n,\\,\\theta_0)]\n\\]\n\n\n\n\n\n\n\n\nTheorem: bias-variance trade-off"
+    "text": "This lab provides extra practice with the kind of maximum likehood problem that you will encounter on the last problem set and the final exam.\nTask 1\nIf a non-negative random variable \\(X\\) has the Rayleigh distribution with parameter \\(\\theta&gt;0\\), then its CDF is\n\\[\nF(x;\\,\\theta)=1-\\exp\\left(-\\frac{x^2}{2\\theta}\\right)\\quad x\\geq 0,\n\\]\nand we say \\(X\\sim\\text{Rayleigh}(\\theta)\\). What is the PDF in this parametric family?\nTask 2\nImagine we observe data\n\\[\nX_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{Rayleigh}(\\theta),\n\\]\nwhere the true value of the parameter \\(\\theta&gt;0\\) is unknown. Use the method of maximum likelihood to propose an estimator for \\(\\theta\\).\nTask 3\nYou estimator in the previous part is a random variable that inherits its randomness from the \\(X_i\\). Derive the full sampling distribution of your estimator.\nTask 4\nNow that you know the sampling distribution of the estimator, compute its mean squared error (MSE) using the bias-variance decomposition. Is the estimator unbiased? Is it consistent?\nTask 5\nCompute the quantile function of the Rayleigh distribution and use it to generate 100 draws from the distribution that has \\(\\theta=4\\).\nTask 6\nWrite a for loop that simulates the sampling distribution for your estimator. Here is a schematic of what you are doing:\n\\[\n\\begin{matrix}\n\\text{0. True parameter value} &&& \\theta_0 && \\\\\n&&& \\downarrow && \\\\\n\\text{1. True distribution} &&& \\text{Rayleigh}(\\theta_0) && \\\\\n&\\swarrow &\\swarrow& \\cdots &\\searrow&\\searrow \\\\\n\\text{3. Simulated data}&x_{1:n}^{(1)} &x_{1:n}^{(2)}& \\cdots &x_{1:n}^{(M-1)}&x_{1:n}^{(M)} \\\\\n&\\downarrow &\\downarrow& \\cdots &\\downarrow&\\downarrow \\\\\n\\text{4. Different estimates}&\\hat{\\theta}_n^{(1)} &\\hat{\\theta}_n^{(2)}& \\cdots &\\hat{\\theta}_n^{(M-1)}&\\hat{\\theta}_n^{(M)} \\\\\n&\\searrow &\\searrow& \\cdots &\\swarrow&\\swarrow \\\\\n& && \\text{Histogram} && \\\\\n\\end{matrix}\n\\]\nAt the end, add on top of the histogram a curve of the density that you derived in Task 3. They ought to match.\n\n\n\n\n\n\nTemplate\n\n\n\nHere is some template code you can fill in:\n\ntrue_theta &lt;- 3.14      # true value of parameter\nn &lt;- 25                 # sample size\nM &lt;- 2500               # how many repetitions\nestimates &lt;- numeric(M) # preallocate storage for the sample of estimates\n\nfor(m in 1:M){\n  # Step 1: simulate a new fake dataset of size n\n  # Step 2: apply your formula from Task 2 to compute new estimate\n  # Step 3: store it\n}\n\n# Step 4: plot histogram of estimates\n# Step 5: add density curve of exact sampling distribution",
+    "crumbs": [
+      "Labs",
+      "Lab 10"
+    ]
   },
   {
     "objectID": "lecture-notes/sta240-notes-15-clt.html",
@@ -2476,6 +2480,13 @@
     "title": "Central limit theorem",
     "section": "Footnotes",
     "text": "Footnotes\n\nWhy is the normal the maximum entropy distribution? Why is the limit actually obtained instead of stopping short somewhere before? Because the proof says so! It’s just turtles all the way down.↩︎"
+  },
+  {
+    "objectID": "lecture-notes/sta240-notes-16-stats-intro.html",
+    "href": "lecture-notes/sta240-notes-16-stats-intro.html",
+    "title": "Introduction to the theory of statistics",
+    "section": "",
+    "text": "Yada yada data science yada yada extract patterns and learn about the world.\ngoal: typical behavior - mean goal: distribution - plot histogram goal: learn relationships - line of best fit\nThese are all examples of statistical methods. A theoretical statistician\nDo these methods actually work? Do they do what we want them to do? Do they deliver what they promise to deliver? Under what conditions? And before we can answer those questions, we have to back up and ask a more fundamental one: what does it even mean for a statistical method to “work”? These are all theoretical questions, and mathematical statisticians use the tools of probability theory to answer them.\nIn American government, there are legislative, judicial, and executive branches. In music, there is melody, harmony, and rhythm. Similarly, we organize statistical theory into three related areas of inquiry:\n\n(point estimation)\n(interval estimation)\n(hypothesis testing) can the data distinguish between\n\n\nPoint estimation\n\n\n\n\n\n\nDefinition: risk of an estimator\n\n\n\n\\[\nE[L(\\hat{\\theta}_n,\\,\\theta_0)]\n\\]\n\n\n\n\n\n\n\n\nTheorem: bias-variance trade-off"
   },
   {
     "objectID": "labs/lab-8.html",
