@@ -1,0 +1,88 @@
+---
+title: "Lab 10"
+subtitle: Due Thursday November 20 at 11:59 PM
+format: html
+draft: false
+editor: 
+  mode: source
+---
+
+This lab provides extra practice with the kind of maximum likehood problem that you will encounter on the last problem set and the final exam. 
+
+# Task 1
+
+If a non-negative random variable $X$ has the *Rayleigh distribution* with parameter $\theta>0$, then its CDF is 
+
+$$
+F(x;\,\theta)=1-\exp\left(-\frac{x^2}{2\theta}\right)\quad x\geq 0,
+$$
+
+and we say $X\sim\text{Rayleigh}(\theta)$. What is the PDF in this parametric family?
+
+# Task 2
+
+Imagine we observe data 
+
+$$
+X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{Rayleigh}(\theta),
+$$
+
+where the true value of the parameter $\theta>0$ is unknown. Use the method of maximum likelihood to propose an estimator for $\theta$.
+
+# Task 3
+
+You estimator in the previous part is a random variable that inherits its randomness from the $X_i$. Derive the full *sampling distribution* of your estimator.
+
+# Task 4
+
+Now that you know the sampling distribution of the estimator, compute its mean squared error (MSE) using the bias-variance decomposition. Is the estimator unbiased? Is it consistent?
+
+# Task 5
+
+Compute the quantile function of the Rayleigh distribution and use it to generate 100 draws from the distribution that has $\theta=4$.
+
+# Task 6
+
+Write a for loop that simulates the sampling distribution for your estimator. Here is a schematic of what you are doing:
+
+$$
+\begin{matrix}
+\text{0. True parameter value} &&& \theta_0 && \\
+&&& \downarrow && \\
+\text{1. True distribution} &&& \text{Rayleigh}(\theta_0) && \\
+&\swarrow &\swarrow& \cdots &\searrow&\searrow \\
+\text{3. Simulated data}&x_{1:n}^{(1)} &x_{1:n}^{(2)}& \cdots &x_{1:n}^{(M-1)}&x_{1:n}^{(M)} \\
+&\downarrow &\downarrow& \cdots &\downarrow&\downarrow \\
+\text{4. Different estimates}&\hat{\theta}_n^{(1)} &\hat{\theta}_n^{(2)}& \cdots &\hat{\theta}_n^{(M-1)}&\hat{\theta}_n^{(M)} \\
+&\searrow &\searrow& \cdots &\swarrow&\swarrow \\
+& && \text{Histogram} && \\
+\end{matrix}
+$$
+
+At the end, add on top of the histogram a curve of the density that you derived in Task 3. They ought to match.
+
+::: callout-tip
+## Template
+
+Here is some template code you can fill in:
+
+```{r}
+#| eval: false
+
+true_theta <- 3.14      # true value of parameter
+n <- 25                 # sample size
+M <- 2500               # how many repetitions
+estimates <- numeric(M) # preallocate storage for the sample of estimates
+
+for(m in 1:M){
+  # Step 1: simulate a new fake dataset of size n
+  # Step 2: apply your formula from Task 2 to compute new estimate
+  # Step 3: store it
+}
+
+# Step 4: plot histogram of estimates
+# Step 5: add density curve of exact sampling distribution
+
+```
+
+:::
