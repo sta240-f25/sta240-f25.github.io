@@ -1,0 +1,92 @@
+---
+title: "Lab 10"
+subtitle: Duke STA 240 Fall 2025
+author: replace this text with your name
+format: 
+  pdf:
+    toc: false
+editor: 
+  mode: source
+---
+
+# Task 1
+
+Type words here if necessary. Add math here if necessary:
+
+$$
+F, f, M, F^{-1}
+$$
+
+
+
+{{< pagebreak >}}
+
+# Task 2
+
+Type words here if necessary. Add math here if necessary:
+
+$$
+F, f, M, F^{-1}
+$$
+
+
+
+{{< pagebreak >}}
+
+# Task 3
+
+Type words here if necessary. Add math here if necessary:
+
+$$
+F, f, M, F^{-1}
+$$
+
+
+
+{{< pagebreak >}}
+
+# Task 4
+
+Type words here if necessary. Add math here if necessary:
+
+$$
+F, f, M, F^{-1}
+$$
+
+
+
+{{< pagebreak >}}
+
+
+# Task 5
+
+Type words here if necessary. Add math here if necessary:
+
+$$
+F, f, M, F^{-1}
+$$
+
+```{r}
+#| label: task-5
+
+# add code here if necessary
+```
+
+{{< pagebreak >}}
+
+
+
+# Task 6
+
+Type words here if necessary. Add math here if necessary:
+
+$$
+F, f, M, F^{-1}
+$$
+
+```{r}
+#| label: task-6
+
+# add code here if necessary
+```
+
