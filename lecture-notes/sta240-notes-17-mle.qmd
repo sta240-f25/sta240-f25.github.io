@@ -1,0 +1,25 @@
+---
+title: "Maximum likelihood estimation"
+format: html
+---
+
+# Main idea
+
+Want to select the parameter value that places the curve
+
+If the curve places high density on regions where we actually observed data, that's good.
+
+
+the sum of the heights? the biggest height? the product?
+
+0 times 100 and 0 times 1000 are both still zero. So it doesn't matter how
+
+but second the product is interpretable. the product is the joint density of the observed data
+
+# Maximum likelihood estimation
+
+If you take a course in statistical theory like STA 332, you learn that the maximum likelihood estimator has good statistical properties in general. So no matter what distribution family you're working with, you can count on the following to be true:
+
+# Example: exponential distribution
+
+# Example: distribution from Midterm 2

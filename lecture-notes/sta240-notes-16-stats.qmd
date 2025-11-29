@@ -1,0 +1,45 @@
+---
+title: "Introduction to the theory of statistics"
+format: html
+filters:
+  - shinylive
+---
+
+Yada yada data science yada yada extract patterns and learn about the world. 
+
+goal: typical behavior - mean
+goal: distribution - plot histogram
+goal: learn relationships - line of best fit
+
+These are all examples of statistical methods. A theoretical statistician 
+
+
+Do these methods actually work? Do they do what we want them to do? Do they deliver what they promise to deliver? Under what conditions? And before we can answer those questions, we have to back up and ask a more fundamental one: what does it even mean for a statistical method to "work"? These are all *theoretical* questions, and mathematical statisticians use the tools of probability theory to answer them. 
+
+
+
+
+
+In American government, there are legislative, judicial, and executive branches. In music, there is melody, harmony, and rhythm. Similarly, we organize statistical theory into three related areas of inquiry:
+
+1. (point estimation)
+2. (interval estimation)
+3. (hypothesis testing) can the data distinguish between
+
+# Point estimation
+
+::: callout-note 
+## Definition: risk of an estimator
+
+$$
+E[L(\hat{\theta}_n,\,\theta_0)]
+$$
+:::
+
+
+
+::: callout-tip
+## Theorem: bias-variance trade-off
+
+:::
+

@@ -1,0 +1,5 @@
+---
+title: "sta240-notes-18-bayes"
+format: html
+---
+
