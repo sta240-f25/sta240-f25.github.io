@@ -611,12 +611,42 @@ window.Quarto = {
 </header>
 
 
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Final exam prep
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The final exam includes one problem on maximum likelihood estimation, and you can expect it to look similar to Problems 3 and 4 below. The final exam closes with one problem on Bayesian statistics, and you can expect it to look similar to Problems 5 and 6 below.</p>
+</div>
+</div>
 <section id="problem-0" class="level2">
 <h2 class="anchored" data-anchor-id="problem-0">Problem 0</h2>
 <p>Doodle a cute character that will cheer you on during this assignment.</p>
 </section>
 <section id="problem-1" class="level2">
 <h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
+<p>Let <span class="math inline">\(Z\sim\text{N}(0,\,1)\)</span>, and recall what that means:</p>
+<p><span class="math display">\[
+\begin{aligned}
+f_Z(z)&amp;=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}z^2\right), &amp;&amp; -\infty&lt;z&lt;\infty\\
+M_Z(t)&amp;=\exp\left(\frac{1}{2}t^2\right), &amp;&amp; -\infty&lt;t&lt;\infty.
+\end{aligned}
+\]</span></p>
+<p>Next, let <span class="math inline">\(X=\mu+\sigma Z\)</span> for some constants <span class="math inline">\(\mu\in\mathbb{R}\)</span> and <span class="math inline">\(\sigma&gt;0\)</span>.</p>
+<ol type="a">
+<li>Use the change-of-variables formula to derive density of <span class="math inline">\(X\)</span>. What is its distribution?</li>
+<li>What is the moment-generating function of <span class="math inline">\(X\)</span>?</li>
+<li>What are the mean and variance of <span class="math inline">\(X\)</span>? Make sure you justify your answer with some type of derivation.</li>
+<li>Consider <span class="math inline">\(X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{N}(\mu,\,\sigma^2)\)</span> and derive the distribution of their sum and their average.</li>
+</ol>
+</section>
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
 <p>If the discrete random variable <span class="math inline">\(X\)</span> has the <em>funky-ass distribution</em> (<em>FAS</em>), then its range is <span class="math inline">\(\text{Range}(X)=\mathbb{N}\)</span> and its pmf is</p>
 <p><span class="math display">\[
 P(X=k)=\binom{k+r-1}{k}(1-p)^kp^r\quad k=0,\,1,\,2,\,3,\,...,
@@ -637,25 +667,92 @@ P(X=k)=\binom{k+r-1}{k}(1-p)^kp^r\quad k=0,\,1,\,2,\,3,\,...,
 <li>Consider an iid collection <span class="math inline">\(X_i\overset{\text{iid}}{\sim}\text{FAS}(r,\,p)\)</span> and derive the distribution of the sum <span class="math inline">\(S_n=\sum_{i=1}^nX_i\)</span>.</li>
 </ol>
 </section>
-<section id="problem-2" class="level2">
-<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
-<p>Wald distribution</p>
-</section>
 <section id="problem-3" class="level2">
 <h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
-<p>MLE</p>
+<p>Consider these data:</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{N}(0,\,\theta).
+\]</span></p>
+<ol type="a">
+<li>What is the maximum likelihood estimator of <span class="math inline">\(\theta&gt;0\)</span>?</li>
+<li>What is the sampling distribution of the estimator?</li>
+<li>What is the MSE of the estimator?</li>
+<li>Based on the MSE, what are the statistical properties of this estimator?</li>
+</ol>
 </section>
 <section id="problem-4" class="level2">
 <h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
-<p>MLE</p>
+<p>Let <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, …, <span class="math inline">\(X_n\)</span> be iid from some member of this parametric family:</p>
+<p><span class="math display">\[
+f(x\,|\,\theta)
+=
+\frac{1}{2\theta}\exp\left(-\frac{|x|}{\theta}\right), \quad -\infty&lt;x&lt;\infty.
+\]</span></p>
+<ol type="a">
+<li>What is the maximum likelihood estimator of <span class="math inline">\(\theta&gt;0\)</span>?</li>
+<li>What is the sampling distribution of the estimator?</li>
+<li>What is the MSE of the estimator?</li>
+<li>Based on the MSE, what are the statistical properties of this estimator?</li>
+</ol>
 </section>
 <section id="problem-5" class="level2">
 <h2 class="anchored" data-anchor-id="problem-5">Problem 5</h2>
-<p>exponential gamma</p>
+<p>Imagine that I quit my job and open a factory that manufactures bow ties and light bulbs (<em>Zito’s Bows and Bulbs</em>). The ties are alright, but the bulbs suck. They burn out real quick. Each bulb is slightly different, and you can’t perfectly predict how long they will last, so the time (in hours) until the bulb dies is a random variable <span class="math inline">\(X\)</span>, and let’s assume <span class="math inline">\(X\sim\text{Exponential}(\lambda)\)</span>, where <span class="math inline">\(\lambda&gt;0\)</span> is unknown. Recall that <span class="math inline">\(E(X)=1/\lambda\)</span>, so the larger the rate, the sooner the burnout time.</p>
+<p>I want to estimate <span class="math inline">\(\lambda\)</span> to get a sense of how bad my light bulbs are, so I sample <span class="math inline">\(n\)</span> bulbs and record their burnout times:</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{Exponential}(\lambda).
+\]</span></p>
+<p>At this point, I could just use the method of maximum likelihood to estimate <span class="math inline">\(\lambda\)</span> like we did in lecture, but before I do, I go and consult Great Grandma Zito. She’s been making bad light bulbs for decades and taught me everything that I know. She says that in her experience, <span class="math inline">\(\lambda\)</span> is in the ballpark of 1 (meaning our bulbs burn out in an hour, on average), but there’s uncertainty about that. In her opinion, the probability that <span class="math inline">\(\lambda&gt;3\)</span> is about 1.7%.</p>
+<p>I want to incorporate my grandmother’s prior knowledge into my analysis, so I decide to be Bayesian:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\lambda &amp;\sim\text{Gamma}(\alpha_0,\,\beta_0) &amp;&amp; \text{(prior)}\\
+X_1,\,X_2,\,...,\,X_n\,|\,\lambda&amp;\overset{\text{iid}}{\sim}\text{Exponential}(\lambda) &amp;&amp; \text{(data model)}.
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\lambda \sim\text{Gamma}(\alpha_0,\,\beta_0)\)</span> is my prior distribution for the unknown parameter, and <span class="math inline">\(\alpha_0,\,\beta_0&gt;0\)</span> are <em>hyperparameters</em> that I will tune in order to encode the prior knowledge about <span class="math inline">\(\lambda\)</span> that my grandmother described. I chose the gamma family simply because it is convenient and familiar to me, and I know that <span class="math inline">\(\lambda\)</span> is a continuous numerical quantity that must be positive.</p>
+<ol type="a">
+<li><p>Show that the posterior distribution for <span class="math inline">\(\lambda\)</span> in this model is</p>
+<p><span class="math display">\[
+\lambda\,|\,X_{1:n}=x_{1:n} \sim \text{Gamma}(\alpha_n,\,\beta_n).
+\]</span></p>
+<p>After we see some data, what are the revised hyperparameters <span class="math inline">\(\alpha_n,\,\beta_n\)</span> equal to?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pay attention to the notation here
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before I see any data, <span class="math inline">\(\text{Gamma}(\alpha_0,\,\beta_0)\)</span> summarizes my beliefs about <span class="math inline">\(\lambda\)</span>. After I see some data, <span class="math inline">\(\text{Gamma}(\alpha_n,\,\beta_n)\)</span> summarizes my beliefs about <span class="math inline">\(\lambda\)</span>. <span class="math inline">\(\alpha_0\)</span> and <span class="math inline">\(\beta_0\)</span> are the <em>prior</em> hyperparameters, and <span class="math inline">\(\alpha_n\)</span> and <span class="math inline">\(\beta_n\)</span> are the <em>posterior</em> hyperparameters. The subscript indicates how much data my beliefs are based on.</p>
+</div>
+</div>
+<ol start="2" type="a">
+<li><p>Show that the posterior mean has the form</p>
+<p><span class="math display">\[
+E(\lambda\,|\,X_1,\,X_2,\,...,\,X_n)=w_n\hat{\lambda}_n^{(MLE)} + (1-w_n)\underbrace{E(\lambda)}_{\text{prior mean}},
+\]</span></p>
+<p>where <span class="math inline">\(w_n\in(0,\,1)\)</span> might depend on the data. This means that the posterior mean is a <em>shrinkage estimator</em>. We shrink the MLE toward our prior estimate of the parameter.</p></li>
+<li><p>How should the prior hyperparameters <span class="math inline">\(\alpha_0\)</span> and <span class="math inline">\(\beta_0\)</span> be set so that the prior distribution captures my grandmother’s beliefs about <span class="math inline">\(\lambda\)</span>? There’s not a tremendous amount of math here. It’s just trial-and-error until you find numbers that work.</p></li>
+</ol>
 </section>
 <section id="problem-6" class="level2">
 <h2 class="anchored" data-anchor-id="problem-6">Problem 6</h2>
-<p>beta-geometric</p>
+<p>Consider the following Bayesian model:</p>
+<p><span class="math display">\[
+\begin{aligned}
+p&amp;\sim\text{Beta}(a_0,\,b_0)&amp;&amp; \text{(prior)}\\
+X_1,\,X_2,\,...,\,X_n\,|\,p&amp;\overset{\text{iid}}{\sim}\text{Geometric}(p).&amp;&amp; \text{(likelihood)}
+\end{aligned}
+\]</span></p>
+<ol type="a">
+<li>What is the posterior distribution?</li>
+<li>Compute the posterior mean and show that it is a weighted average of the prior mean and the maximum likelihood estimator.</li>
+</ol>
 </section>
 <section id="submission" class="level2">
 <h2 class="anchored" data-anchor-id="submission">Submission</h2>
