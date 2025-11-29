@@ -1,0 +1,66 @@
+---
+title: "Midterm 1 Q&A"
+format: html
+editor: 
+  mode: source
+draft: false
+number-sections: true
+---
+
+# General math
+
+## When simplifying a sum, how do you know when to reindex?
+
+::: {.callout-tip collapse="true"}
+## Answer
+Reindexing a sum is analogous to applying a $u$-substitution to an integral, so a lot of your intuitions about that carry over. But to be concrete, let me draw your attention to some examples from the course where a reindex happened:
+
+- Problem Set 0 #2;
+- Prob
+
+
+In each case, the form of the original expression tips you off about 
+
+Do whatever you have to do to muscle it into that form.
+:::
+
+# Set theory and probability spaces
+
+## How do you *start* proofs?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+:::
+
+# Counting
+
+## How do you tell if order matters or not?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+:::
+
+## Under what circumstances do the "ordered" and the "unordered" answers agree?
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+We saw this on the Spotify.
+
+:::
+
+## I am confused about "stars and bars."
+
+::: {.callout-tip collapse="true"}
+## Answer
+
+:::
+
+
+# Conditional probability
+
+# Independence
+
+# Discrete random variables
