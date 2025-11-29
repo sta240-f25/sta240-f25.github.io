@@ -1,0 +1,11 @@
+Consider the following Bayesian model:
+
+$$
+\begin{aligned}
+p&\sim\text{Beta}(a_0,\,b_0)&& \text{(prior)}\\
+X_1,\,X_2,\,...,\,X_n\,|\,p&\overset{\text{iid}}{\sim}\text{Geometric}(p).&& \text{(likelihood)}
+\end{aligned}
+$$
+
+a.  What is the posterior distribution?
+b.  Compute the posterior mean and show that it is a weighted average of the prior mean and the maximum likelihood estimator.

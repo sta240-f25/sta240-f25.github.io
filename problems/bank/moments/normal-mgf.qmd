@@ -1,0 +1,15 @@
+Let $Z\sim\text{N}(0,\,1)$, and recall what that means:
+
+$$
+\begin{aligned}
+f_Z(z)&=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}z^2\right), && -\infty<z<\infty\\
+M_Z(t)&=\exp\left(\frac{1}{2}t^2\right), && -\infty<t<\infty.
+\end{aligned}
+$$
+
+Next, let $X=\mu+\sigma Z$ for some  constants $\mu\in\mathbb{R}$ and $\sigma>0$.
+
+a. Use the change-of-variables formula to derive density of $X$. What is its distribution?
+a. What is the moment-generating function of $X$?
+a. What are the mean and variance of $X$? Make sure you justify your answer with some type of derivation.
+a. Consider $X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{N}(\mu,\,\sigma^2)$ and derive the distribution of their sum and their average.

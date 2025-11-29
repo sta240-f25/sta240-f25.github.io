@@ -1,0 +1,46 @@
+
+Imagine that I quit my job and open a factory that manufactures bow ties and light bulbs (*Zito's Bows and Bulbs*). The ties are alright, but the bulbs suck. They burn out real quick. Each bulb is slightly different, and you can't perfectly predict how long they will last, so the time (in hours) until the bulb dies is a random variable $X$, and let's assume $X\sim\text{Exponential}(\lambda)$, where $\lambda>0$ is unknown. Recall that $E(X)=1/\lambda$, so the larger the rate, the sooner the burnout time.
+
+I want to estimate $\lambda$ to get a sense of how bad my light bulbs are, so I sample $n$ bulbs and record their burnout times: 
+
+$$
+X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{Exponential}(\lambda).
+$$
+
+At this point, I could just use the method of maximum likelihood to estimate $\lambda$ like we did in lecture, but before I do, I go and consult Great Grandma Zito. She's been making bad light bulbs for decades and taught me everything that I know. She says that in her experience, $\lambda$ is in the ballpark of 1 (meaning our bulbs burn out in an hour, on average), but there's uncertainty about that. In her opinion, the probability that $\lambda>3$ is about 1.7%.
+
+I want to incorporate my grandmother's prior knowledge into my analysis, so I decide to be Bayesian:
+
+$$
+\begin{aligned}
+\lambda &\sim\text{Gamma}(\alpha_0,\,\beta_0) && \text{(prior)}\\
+X_1,\,X_2,\,...,\,X_n\,|\,\lambda&\overset{\text{iid}}{\sim}\text{Exponential}(\lambda) && \text{(data model)}.
+\end{aligned}
+$$
+
+$\lambda \sim\text{Gamma}(\alpha_0,\,\beta_0)$ is my prior distribution for the unknown parameter, and $\alpha_0,\,\beta_0>0$ are *hyperparameters* that I will tune in order to encode the prior knowledge about $\lambda$ that my grandmother described. I chose the gamma family simply because it is convenient and familiar to me, and I know that $\lambda$ is a continuous numerical quantity that must be positive.
+
+a. Show that the posterior distribution for $\lambda$ in this model is
+
+    $$
+    \lambda\,|\,X_{1:n}=x_{1:n} \sim \text{Gamma}(\alpha_n,\,\beta_n).
+    $$
+    
+    After we see some data, what are the revised hyperparameters $\alpha_n,\,\beta_n$ equal to?
+
+::: callout-note
+# Pay attention to the notation here
+
+Before I see any data, $\text{Gamma}(\alpha_0,\,\beta_0)$ summarizes my beliefs about $\lambda$. After I see some data, $\text{Gamma}(\alpha_n,\,\beta_n)$ summarizes my beliefs about $\lambda$. $\alpha_0$ and $\beta_0$ are the *prior* hyperparameters, and $\alpha_n$ and $\beta_n$ are the *posterior* hyperparameters. The subscript indicates how much data my beliefs are based on.
+:::
+
+b. Show that the posterior mean has the form
+
+    $$
+    E(\lambda\,|\,X_1,\,X_2,\,...,\,X_n)=w_n\hat{\lambda}_n^{(MLE)} + (1-w_n)\underbrace{E(\lambda)}_{\text{prior mean}},
+    $$
+    
+    where $w_n\in(0,\,1)$ might depend on the data. This means that the posterior mean is a *shrinkage estimator*. We shrink the MLE toward our prior estimate of the parameter.
+    
+
+c. How should the prior hyperparameters $\alpha_0$ and $\beta_0$ be set so that the prior distribution captures my grandmother's beliefs about $\lambda$? There's not a tremendous amount of math here. It's just trial-and-error until you find numbers that work.

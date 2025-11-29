@@ -1,0 +1,10 @@
+Let $X_1$, $X_2$, ..., $X_n$ be iid from some member of the parametric family that you met on Midterm 2:
+
+$$
+f(x\,|\,\theta)=\theta(x+1)^{-(\theta+1)},\quad x>0.
+$$
+
+a.  What is the maximum likelihood estimator of $\theta>0$?
+a.  What is the sampling distribution of the estimator? Problem 14 might be helpful here.
+a.  What is the MSE of the estimator?
+

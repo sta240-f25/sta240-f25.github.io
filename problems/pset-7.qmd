@@ -1,8 +1,44 @@
 ---
-title: "pset-7"
-format: html
+title: "Problem Set 7"
+subtitle: Due Friday December 5 at 5PM
+draft: false
+editor: 
+  mode: source
 ---
 
+::: callout-note
+## Final exam prep
+The final exam includes one problem on maximum likelihood estimation, and you can expect it to look similar to Problems 3 and 4 below. The final exam closes with one problem on Bayesian statistics, and you can expect it to look similar to Problems 5 and 6 below. 
+:::
 
-two MLE
-two Bayes
+## Problem 0
+
+{{< include bank/_doodle.qmd >}}
+
+## Problem 1
+
+{{< include bank/moments/normal-mgf.qmd >}}
+
+## Problem 2
+
+{{< include bank/random-variables-discrete/pascal.qmd >}}
+
+## Problem 3
+
+{{< include bank/mle/mle-normal-variance.qmd >}}
+
+## Problem 4
+
+{{< include bank/mle/mle-laplace.qmd >}}
+
+## Problem 5
+
+{{< include bank/bayes/gamma-exponential.qmd >}}
+
+## Problem 6
+
+{{< include bank/bayes/beta-geometric.qmd >}}
+
+## Submission
+
+{{< include bank/_submission.qmd >}}

@@ -1,0 +1,20 @@
+If the discrete random variable $X$ has the *funky-ass distribution* (*FAS*), then its range is $\text{Range}(X)=\mathbb{N}$ and its pmf is 
+
+$$
+P(X=k)=\binom{k+r-1}{k}(1-p)^kp^r\quad k=0,\,1,\,2,\,3,\,...,
+$$
+
+where the parameters $r\in\mathbb{N}$ and $0<p<1$ are constants. We denote this $X\sim\text{FAS}(r,\,p)$. 
+
+a. Use what you know about probability to find the value of this infinite series:
+
+$$
+\sum\limits_{k=0}^\infty 
+\binom{k+r-1}{k}(1-p)^k.
+$$
+
+b. Compute the MGF of $X$;
+c. Use the definition of the expected value to compute the mean of $X$;
+d. Use the MGF to compute the mean of $X$ and verify that you get the same answer you got before;
+e. Use the MGF to compute the variance of $X$;
+f. Consider an iid collection $X_i\overset{\text{iid}}{\sim}\text{FAS}(r,\,p)$ and derive the distribution of the sum $S_n=\sum_{i=1}^nX_i$.
