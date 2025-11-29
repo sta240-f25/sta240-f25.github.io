@@ -109,6 +109,7 @@ $$
 \ln(x^c)&=c\ln(x)\\
 \ln(1/x)&=-\ln(x)\\
 \ln(e^x)&=x\\
+e^{\ln x}&=x\\
 \ln(e)&=1\\
 \ln(1)&=0.
 \end{aligned}
