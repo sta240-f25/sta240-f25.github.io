@@ -7,3 +7,7 @@
 /.quarto/
 /_site/
 /_freeze/
+/apps/.quarto
+/distributions/.quarto
+/lecture-notes/.quarto
+/math/.quarto
