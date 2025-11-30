@@ -16,5 +16,4 @@ $$
 b. Compute the MGF of $X$;
 c. Use the definition of the expected value to compute the mean of $X$;
 d. Use the MGF to compute the mean of $X$ and verify that you get the same answer you got before;
-e. Use the MGF to compute the variance of $X$;
-f. Consider an iid collection $X_i\overset{\text{iid}}{\sim}\text{FAS}(r,\,p)$ and derive the distribution of the sum $S_n=\sum_{i=1}^nX_i$.
+e. Consider an iid collection $X_i\overset{\text{iid}}{\sim}\text{FAS}(r,\,p)$ and derive the distribution of the sum $S_n=\sum_{i=1}^nX_i$.
