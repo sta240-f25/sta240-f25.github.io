@@ -140,6 +140,8 @@ website:
             text: Normal
           - href: distributions/continuous-gamma.qmd
             text: Gamma
+          - href: distributions/continuous-inverse-gamma.qmd
+            text: Inverse gamma
       - section: "Problem Sets"
         contents:
           - href: problems/pset-0.qmd
