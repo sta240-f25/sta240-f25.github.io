@@ -25,7 +25,17 @@ If $X\sim\text{Gamma}(\alpha,\,\beta)$, then the new random variable $Y=1/X$ has
 ::: {.callout-tip collapse="true"}
 ## Deriving the density from a change-of-variables
 
+Let $X\sim\text{Gamma}(\alpha,\,\beta)$ and consider $Y=1/X$. So the forward transformation is $g(x) = 1/ x$, and the inverse is $g^{-1}(y) = 1/ y$. These are strictly decreasing, and they map positive numbers to positive numbers. So $\text{Range}(Y)=(0,\, \infty)$. Fix $y>0$. The change-of-variables formula says:
 
+$$
+\begin{aligned}
+f_Y(y) &= f_X \left( g^{-1}(y) \right) \left| \frac{d}{dy} g^{-1}(y) \right| \\[6pt]
+&= \frac{\beta^\alpha}{\Gamma(\alpha)} \left( \frac{1}{y} \right)^{\alpha-1} \exp \left(  \frac{-\beta}{y}  \right)  \left|-\frac{1}{y^2}\right| \\[6pt]
+&= \frac{\beta^\alpha}{\Gamma(\alpha)} \left( \frac{1}{y} \right)^{\alpha-1} \exp \left(  \frac{-\beta}{y}  \right)  \frac{1}{y^2} \\[6pt]
+&= \frac{\beta^\alpha}{\Gamma(\alpha)} \left( \frac{1}{y} \right)^{\alpha+1} \exp \left(  \frac{-\beta}{y}  \right)   \\[6pt]
+&= \frac{\beta^\alpha}{\Gamma(\alpha)} y^{-\alpha-1} \exp \left(  \frac{-\beta}{y}  \right),&& y>0.
+\end{aligned}
+$$
 :::
 
 ::: {.callout-note collapse="true"}
