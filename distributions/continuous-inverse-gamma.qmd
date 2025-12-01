@@ -1,0 +1,129 @@
+---
+title: "Inverse gamma distribution"
+format: html
+---
+
+If $X\sim\text{Gamma}(\alpha,\,\beta)$, then the new random variable $Y=1/X$ has the *inverse gamma* distribution. We denote this $Y\sim\text{IG}(\alpha,\,\beta)$. You derived this on [Problem Set 6 #6d](https://sta240-f25.github.io/problems/pset-6.html#problem-6).
+
+## Basic properties
+
+
+|  |        |
+|------|--------------------|
+| **Notation** | $X\sim\text{IG}(\alpha,\,\beta)$  |
+| **Range** | $(0,\,\infty)$ |
+| **Parameter space** | $\alpha,\,\beta>0$ |
+| **PDF** | $f(x)=\begin{cases}\frac{\beta^\alpha}{\Gamma(\alpha)}x^{-\alpha-1}e^{-\beta /x} &x> 0\\0 & x\leq0.\end{cases}$ |
+| **Expectation** | $\frac{\beta}{\alpha-1}$ if $\alpha>1$ |
+| **Variance** | $\frac{\beta^2}{(\alpha-1)^2(\alpha-2)}$ if $\alpha>2$ |
+
+
+
+
+## Derivations
+
+::: {.callout-tip collapse="true"}
+## Deriving the density from a change-of-variables
+
+
+:::
+
+::: {.callout-note collapse="true"}
+## General formula for the raw moments
+
+Let $X\sim\text{Gamma}(\alpha,\,\beta)$ and $Y=1/X\sim\text{IG}(\alpha,\,\beta)$. Furthermore, assume $\alpha > k$ for some $k\in\mathbb{N}$. Then the $k$th raw moment of the inverse gamma variate $Y$ is 
+
+$$
+\begin{aligned}
+E(Y^k)
+&=
+E\left(\frac{1}{X^k}\right)
+\\
+&=
+\int_0^\infty 
+\frac{1}{x^k}
+f_X(x)
+\,\text{d}x
+\\
+&=
+\int_0^\infty 
+\frac{1}{x^k}
+\frac{\beta^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x}
+\,\text{d}x
+\\
+&=
+\frac{\beta^\alpha}{\Gamma(\alpha)}
+\int_0^\infty 
+\underbrace{x^{\alpha-k-1}e^{-\beta x}}_{\text{kernel of Gamma}(\alpha-k,\,\beta)}
+\,\text{d}x
+\\
+&=
+\frac{\beta^\alpha}{\Gamma(\alpha)}
+\frac{\Gamma(\alpha-k)}{\beta^{\alpha-k}}
+\\
+&=
+\beta^k\frac{\Gamma(\alpha-k)}{\Gamma(\alpha)}.
+\end{aligned}
+$$
+
+So
+
+$$
+\begin{aligned}
+E(Y)
+&=
+\beta\frac{\Gamma(\alpha-1)}{\Gamma(\alpha)}=\beta\frac{\Gamma(\alpha-1)}{\Gamma(\alpha-1+1)}=\beta\frac{\Gamma(\alpha-1)}{(\alpha-1)\Gamma(\alpha-1)}=\frac{\beta}{\alpha-1}
+\\
+\\
+E(Y^2)
+&=
+\beta^2\frac{\Gamma(\alpha-2)}{\Gamma(\alpha)}
+\\
+&=
+\beta^2\frac{\Gamma(\alpha-2)}{\Gamma(\alpha-1+1)}
+\\
+&=
+\beta^2\frac{\Gamma(\alpha-2)}{(\alpha-1)\Gamma(\alpha-1)}
+\\
+&=
+\beta^2\frac{\Gamma(\alpha-2)}{(\alpha-1)\Gamma(\alpha-2+1)}
+\\
+&=
+\beta^2\frac{\Gamma(\alpha-2)}{(\alpha-1)(\alpha-2)\Gamma(\alpha-2)}
+\\
+&=
+\frac{\beta^2}{(\alpha-1)(\alpha-2)}
+\\
+\\
+\text{var}(Y)
+&=
+E(Y^2)-E(Y)^2
+\\
+&=
+\frac{\beta^2}{(\alpha-1)(\alpha-2)}
+-
+\frac{\beta^2}{(\alpha-1)^2}
+\\
+&=
+\beta^2
+\left[
+\frac{1}{(\alpha-1)(\alpha-2)}
+-
+\frac{1}{(\alpha-1)^2}
+\right]
+\\
+&=
+\beta^2
+\frac{\alpha-1-(\alpha-2)}{(\alpha-1)^2(\alpha-2)}
+\\
+&=
+\beta^2
+\frac{\alpha-1-\alpha+2}{(\alpha-1)^2(\alpha-2)}
+\\
+&=
+\frac{\beta^2}{(\alpha-1)^2(\alpha-2)}
+.
+\end{aligned}
+$$
+
+:::
