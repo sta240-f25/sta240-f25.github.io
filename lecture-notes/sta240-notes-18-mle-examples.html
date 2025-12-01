@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Hypergeometric distribution – STA 240 Fall 2025</title>
+
+
+<title>Maximum likelihood estimation – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,42 +20,8 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
+
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -60,8 +29,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../distributions/discrete-poisson.html" rel="next">
-<link href="../distributions/discrete-geometric.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -71,7 +38,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -97,7 +65,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -123,29 +96,38 @@ window.Quarto = {
   typesetMath
 };
 </script>
-<meta property="og:title" content="Hypergeometric distribution – STA 240 Fall 2025">
-<meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
+
+<meta property="og:title" content="Maximum likelihood estimation – STA 240 Fall 2025">
+<meta property="og:description" content="Worked examples">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
+
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../distributions/discrete-binomial.html">Distribution Families</a></li><li class="breadcrumb-item"><a href="../distributions/discrete-hypergeometric.html">Hypergeometric</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Maximum likelihood estimation</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
@@ -160,7 +142,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item sidebar-item-section">
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -168,8 +150,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -212,7 +194,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -221,8 +203,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
@@ -271,7 +253,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -280,8 +262,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
@@ -378,17 +360,17 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Distribution Families</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binomial</span></a>
@@ -402,7 +384,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link active">
+  <a href="../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hypergeometric</span></a>
   </div>
 </li>
@@ -437,7 +419,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
@@ -446,8 +428,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
@@ -496,7 +478,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
@@ -505,8 +487,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
@@ -567,7 +549,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
@@ -576,8 +558,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
@@ -596,22 +578,29 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#basic-properties" id="toc-basic-properties" class="nav-link active" data-scroll-target="#basic-properties">Basic properties</a></li>
-  <li><a href="#r-commands" id="toc-r-commands" class="nav-link" data-scroll-target="#r-commands"><code>R</code> commands</a></li>
-  </ul></nav>
+  <li><a href="#example-exponential-distribution" id="toc-example-exponential-distribution" class="nav-link active" data-scroll-target="#example-exponential-distribution">Example: exponential distribution</a></li>
+  <li><a href="#example-midterm-2-strikes-again" id="toc-example-midterm-2-strikes-again" class="nav-link" data-scroll-target="#example-midterm-2-strikes-again">Example: Midterm 2 strikes again!</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../distributions/discrete-binomial.html">Distribution Families</a></li><li class="breadcrumb-item"><a href="../distributions/discrete-hypergeometric.html">Hypergeometric</a></li></ol></nav><div class="quarto-title">
-<h1 class="title">Hypergeometric distribution</h1>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Maximum likelihood estimation</h1>
+<p class="subtitle lead">Worked examples</p>
 </div>
 
 
@@ -625,38 +614,161 @@ window.Quarto = {
   
 
 
-</header><p>Imagine we have a finite population containing <span class="math inline">\(m\)</span> “success” cases and <span class="math inline">\(n\)</span> “failure” cases, for a total population size of <span class="math inline">\(m+n\)</span>. If we sample <span class="math inline">\(k\)</span> cases from the population <em>without replacement</em>, then a hypergeometric random variable counts the number of sampled cases that are a success.</p>
-<p>You first met this distribution on Problem Set 4 when studying <a href="https://sta240-f25.github.io/problems/pset-4.html#problem-6">contested elections</a>.</p>
-<section id="basic-properties" class="level2"><h2 class="anchored" data-anchor-id="basic-properties">Basic properties</h2>
-<table class="caption-top table"><tbody>
-<tr class="odd">
-<td><strong>Notation</strong></td>
-<td><span class="math inline">\(X\sim\text{HG}(m, n, k)\)</span></td>
-</tr>
-<tr class="even">
-<td><strong>Range</strong></td>
-<td><span class="math inline">\(\{0,\,1,\,2,\,3,\,...,\,k-1,\,k\}\)</span></td>
-</tr>
-<tr class="odd">
-<td><strong>PMF</strong></td>
-<td><span class="math inline">\(P(X = x) = \binom{m}{x} \binom{n}{k-x}/\binom{m+n}{k}\)</span></td>
-</tr>
-<tr class="even">
-<td><strong>Expectation</strong></td>
-<td><span class="math inline">\(km/(m+n)\)</span></td>
-</tr>
-</tbody></table></section><section id="r-commands" class="level2"><h2 class="anchored" data-anchor-id="r-commands">
-<code>R</code> commands</h2>
-<p><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Hypergeometric.html">Here</a> is the documentation for the suite of commands that let you work with the hypergeometric distribution in <code>R</code>:</p>
-<div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">dhyper</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span>     <span class="co"># PMF: P(X = x)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">phyper</a></span><span class="op">(</span><span class="va">q</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span>     <span class="co"># CDF: P(X &lt;= q)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">qhyper</a></span><span class="op">(</span><span class="va">p</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span>     <span class="co"># quantile function (inverse CDF)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/Hypergeometric.html">rhyper</a></span><span class="op">(</span><span class="va">ndraw</span>, <span class="va">m</span>, <span class="va">n</span>, <span class="va">k</span><span class="op">)</span> <span class="co"># random numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+</header>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<p>Below are two complete, worked examples of maximum likelihood problems. You also have the solutions to <a href="https://sta240-f25.github.io/labs/lab-10.html">Lab 10</a>. The final exam will feature a problem with exactly the same format as these three examples, so study them carefully. The steps are as follows:</p>
+<ol type="1">
+<li>Compute the (log-)likelihood function;</li>
+<li>Compute the maximum likelihood estimator;</li>
+<li>Derive the <em>exact</em> sampling distribution of the estimator;</li>
+<li>Derive the mean-squared-error (MSE) of the estimator and identify its statistical properties (biased? consistent?).</li>
+</ol>
+<p>Step 1 requires you to be fluent with algebraic manipulations from pre-calculus, especially your log and exponent properties. Step 2 requires you to be fluent in your derivative rules. Step 3 requires you to to be fluent with <a href="https://sta240-f25.github.io/labs/lab-7.html">change-of-variables</a> and <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf">sums and averages</a> of iid random variables. As such, these problems synthesize a lot of the technical skills that you will need in future statistical theory courses. Furthermore, the steps are cumulative. You can’t do Step 3 correctly if you muck up Steps 1 and 2. So, to ace the final, you need to get your arms around the entire process.</p>
+<section id="example-exponential-distribution" class="level1">
+<h1>Example: exponential distribution</h1>
+<p>Consider</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{Exponential}(\theta).
+\]</span></p>
+<p>Recall that <span class="math inline">\(\text{Exponential}(\theta)\)</span> is the same as <span class="math inline">\(\text{Gamma}(1,\,\theta)\)</span> and the density of the distribution is</p>
+<p><span class="math display">\[
+f(x;\,\theta)=\theta e^{-\theta x},\quad x&gt;0.
+\]</span></p>
+<p>So the likelihood function is</p>
+<p><span class="math display">\[
+\begin{aligned}
+L(\theta;\,X_{1:n})
+&amp;=
+\prod_{i=1}^n
+f(X_i;\,\theta)
+\\
+&amp;=
+\prod_{i=1}^n
+\theta e^{-\theta X_i}
+\\
+&amp;=
+\theta^n
+\prod_{i=1}^n
+e^{-\theta X_i}
+\\
+&amp;=
+\theta^n
+e^{-\theta\sum\limits_{i=1}^nX_i},
+\end{aligned}
+\]</span></p>
+<p>and the log-likelihood function is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\ell(\theta;\,X_{1:n})
+&amp;=
+\ln L(\theta;\,X_{1:n})
+\\
+&amp;=
+\ln
+\left[
+\theta^n
+e^{-\theta\sum\limits_{i=1}^nX_i}
+\right]
+\\
+&amp;=
+\ln \theta^n
++
+\ln
+e^{-\theta\sum\limits_{i=1}^nX_i}
+\\
+&amp;=
+n\ln \theta
+-\theta\sum\limits_{i=1}^nX_i.
+\end{aligned}
+\]</span></p>
+<p>We optimize this by taking the derivative with respect to <span class="math inline">\(\theta\)</span>, setting it equal to zero, and solving:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\text{d}\ell}{\text{d}\theta}=\frac{n}{\theta}-\sum\limits_{i=1}^nX_i&amp;=0\\
+\frac{n}{\theta}&amp;=\sum\limits_{i=1}^nX_i\\
+\frac{n}{\sum\limits_{i=1}^nX_i}&amp;=\theta.
+\end{aligned}
+\]</span></p>
+<p>So the maximum likelihood estimator for the exponential family is</p>
+<p><span class="math display">\[
+\hat{\theta}_n=\frac{n}{\sum\limits_{i=1}^nX_i}=\frac{1}{\bar{X}_n}.
+\]</span></p>
+<p>This is a random variable because it depends on the <span class="math inline">\(X_i\)</span>, which are random. We know that <span class="math inline">\(X_i\overset{\text{iid}}{\sim}\text{Gamma}(1,\,\theta)\)</span> and so we know from <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf">lecture</a> that <span class="math inline">\(\bar{X}_n\sim\text{Gamma}(n,\,n\theta)\)</span>. Consequently, the distribution of <span class="math inline">\(\hat{\theta}_n=1/\bar{X}_n\)</span> is <a href="https://sta240-f25.github.io/distributions/continuous-inverse-gamma.html"><em>inverse gamma</em></a>, which you derived on <a href="https://sta240-f25.github.io/problems/pset-6.html#problem-6">Problem Set 6 #6d</a>.</p>
+<p>Since the exact sampling distribution of the estimator is <span class="math inline">\(\hat{\theta}_n\sim\text{IG}(n,\,n\theta)\)</span>, we know that the mean and variance are</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(\hat{\theta}_n)
+&amp;=
+\frac{n\theta}{n-1}
+\\
+\text{var}(\hat{\theta}_n)
+&amp;=
+\frac{n^2\theta^2}{(n-1)^2(n-2)}.
+\end{aligned}
+\]</span></p>
+<p>This implies that the bias of the estimator is</p>
+<p><span class="math display">\[
+E(\hat{\theta}_n)-\theta=\frac{n\theta}{n-1}-\theta=\frac{n\theta-(n-1)\theta}{n-1}=\frac{n\theta-n\theta+\theta}{n-1}=\frac{\theta}{n-1}&gt;0.
+\]</span></p>
+<p>So this estimator is <em>biased upward</em>. On average, it is an overestimate. Finally, the full MSE is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{MSE}
+&amp;=
+\text{bias}^2+\text{variance}
+\\
+&amp;=
+\left[
+E(\hat{\theta}_n)-\theta
+\right]^2
++
+\text{var}(\hat{\theta}_n)
+\\
+&amp;=
+\frac{\theta^2}{(n-1)^2}
++
+\frac{n^2\theta^2}{(n-1)^2(n-2)}.
+\end{aligned}
+\]</span></p>
+<p>As <span class="math inline">\(n\to\infty\)</span>, this goes to zero, so the estimator is <em>consistent</em>.</p>
+</section>
+<section id="example-midterm-2-strikes-again" class="level1">
+<h1>Example: Midterm 2 strikes again!</h1>
+<p>Consider an iid collection of random variables <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, …, <span class="math inline">\(X_n\)</span> belonging to the family that has this density:</p>
+<p><span class="math display">\[
+f(x;\,\theta)=\theta(x+1)^{-(\theta+1)},\quad x&gt;0.
+\]</span></p>
+<p>This is a special case of the family you studied on <a href="https://sta240-f25.github.io/problems/pset-6.html#problem-1">Problem Set 6 #1</a>, and you also worked with it on Midterm 2.</p>
+<p>The likelihood function is</p>
+<p><span class="math display">\[
+\begin{aligned}
+L\left(\theta; X_{1:n}\right) &amp; = \prod_{i = 1}^{n}{f\left(X_{i} ;\, \theta\right)} \\ &amp; = \prod_{i = 1}^{n}{\theta\left(X_{i} + 1\right)^{-(\theta + 1)}} \\ &amp; = \theta^{n}\prod_{i = 1}^{n}{\left(X_{i} + 1\right)^{-(\theta + 1)}} \\ &amp; = \theta^{n}\left(\prod_{i = 1}^{n}{\left(X_{i} + 1\right)}\right)^{-(\theta + 1)}.
+\end{aligned}
+\]</span></p>
+<p>The log-likelihood function is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\ell\left(\theta;\, X_{1:n}\right) &amp; = \ln L\left(\theta; X_{1:n}\right) \\ &amp; = \ln\left(\theta^{n}\left(\prod_{i = 1}^{n}{\left(X_{i} + 1\right)}\right)^{-(\theta + 1)}\right) \\ &amp; = \ln\left(\theta^{n}\right) + \ln\left(\left(\prod_{i = 1}^{n}{\left(X_{i} + 1\right)}\right)^{-(\theta + 1)}\right) \\ &amp; = n  \ln\theta - (\theta + 1)\sum_{i = 1}^{n}{\ln\left(X_{i} + 1\right)}.
+\end{aligned}
+\]</span></p>
+<p>To compute the estimator, we take the derivative with respect to <span class="math inline">\(\theta\)</span>, set it equal to zero, and solve:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\text{d}\ell}{\text{d}\theta}  &amp;= \frac{\text{d}}{\text{d}\theta}\left[n \ln\theta - (\theta + 1)\sum_{i = 1}^{n}{\ln\left(X_{i} + 1\right)}\right]  = \frac{n}{\theta} - \sum_{i = 1}^{n}{\ln\left(X_{i} + 1\right)}
+=0
+\\
+\\
+&amp;\implies \quad \hat{\theta}_n=\frac{n}{\sum\limits_{i=1}^n\ln(X_i+1)}.
+\end{aligned}
+\]</span></p>
+<p>We know from Midterm 2 that <span class="math inline">\(\ln(X_i+1)\overset{\text{iid}}{\sim}\text{Gamma}(1,\,\theta)\)</span>, so <span class="math inline">\(\sum_{i=1}^n\ln(X_i+1)\sim\text{Gamma}(n,\,\theta)\)</span>, and <span class="math inline">\((1/n)\sum_{i=1}^n\ln(X_i+1)\sim\text{Gamma}(n,\,n\theta)\)</span>. As such, <span class="math inline">\(\hat{\theta}_n\sim\text{IG}(n,\,n\theta)\)</span>. This is the same sampling distribution we got in the previous example, so from here the analysis is the same; the estimator is biased upward but consistent.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1054,19 +1166,10 @@ window.Quarto = {
       }
     }
   });
-  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../distributions/discrete-geometric.html" class="pagination-link" aria-label="Geometric">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Geometric</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../distributions/discrete-poisson.html" class="pagination-link" aria-label="Poisson">
-        <span class="nav-page-text">Poisson</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
+  </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -1078,6 +1181,8 @@ window.Quarto = {
 </div>
   </div>
 </footer>
+
+
 
 
 </body></html>

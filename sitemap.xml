@@ -17,108 +17,112 @@
     <lastmod>2025-10-24T02:44:28.775Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/distributions/continuous-gamma.html</loc>
-    <lastmod>2025-10-24T08:18:26.536Z</lastmod>
+    <loc>https://sta240-f25.github.io/distributions/continuous-uniform.html</loc>
+    <lastmod>2025-10-24T09:02:42.631Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/apps/disease-testing.html</loc>
-    <lastmod>2025-11-27T02:00:42.244Z</lastmod>
+    <loc>https://sta240-f25.github.io/distributions/continuous-normal.html</loc>
+    <lastmod>2025-11-04T21:42:18.752Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/vectorization.html</loc>
-    <lastmod>2025-09-06T18:01:28.404Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/sample.html</loc>
+    <lastmod>2025-09-06T18:01:35.631Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/summary-statistics.html</loc>
-    <lastmod>2025-10-16T18:19:42.815Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/setup.html</loc>
+    <lastmod>2025-08-21T08:26:17.117Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/rng-seed.html</loc>
-    <lastmod>2025-10-01T18:00:57.520Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/math.html</loc>
+    <lastmod>2025-08-21T08:26:17.116Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/latex.html</loc>
-    <lastmod>2025-08-21T08:26:17.127Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/vectors.html</loc>
+    <lastmod>2025-08-21T08:26:17.117Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/if-else.html</loc>
-    <lastmod>2025-09-04T09:12:08.774Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/plot.html</loc>
+    <lastmod>2025-10-02T16:23:40.189Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/quarto.html</loc>
-    <lastmod>2025-09-06T20:32:40.622Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/lineplot.html</loc>
+    <lastmod>2025-09-06T18:01:21.133Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/loops.html</loc>
-    <lastmod>2025-09-04T08:59:45.154Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/hello-rstudio.html</loc>
+    <lastmod>2025-08-24T11:23:48.027Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/histogram.html</loc>
-    <lastmod>2025-10-24T06:37:23.497Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/probabilities.html</loc>
+    <lastmod>2025-10-02T17:00:51.563Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/syllabus/syllabus_assignments.html</loc>
+    <loc>https://sta240-f25.github.io/syllabus/syllabus_team.html</loc>
+    <lastmod>2025-09-06T07:43:21.124Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/syllabus/syllabus_policies.html</loc>
+    <lastmod>2025-09-22T17:46:14.748Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/syllabus/syllabus_materials.html</loc>
     <lastmod>2025-08-21T08:26:17.326Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/syllabus/syllabus_resources.html</loc>
-    <lastmod>2025-08-21T08:26:17.327Z</lastmod>
+    <loc>https://sta240-f25.github.io/slides/2025-09-03-set2prob.html</loc>
+    <lastmod>2025-09-09T14:57:01.673Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/syllabus/syllabus_overview.html</loc>
-    <lastmod>2025-09-05T01:08:26.232Z</lastmod>
+    <loc>https://sta240-f25.github.io/slides/user_2025_08_09.html</loc>
+    <lastmod>2025-08-21T22:18:28.419Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/slides/2025-08-25-welcome.html</loc>
-    <lastmod>2025-09-10T18:30:21.173Z</lastmod>
+    <loc>https://sta240-f25.github.io/math/logexp.html</loc>
+    <lastmod>2025-11-25T03:33:00.823Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/math/integration.html</loc>
-    <lastmod>2025-08-21T08:26:17.127Z</lastmod>
+    <loc>https://sta240-f25.github.io/math/differentiation.html</loc>
+    <lastmod>2025-08-28T20:47:11.199Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/math/limits.html</loc>
-    <lastmod>2025-09-12T04:05:58.535Z</lastmod>
+    <loc>https://sta240-f25.github.io/math/greeks.html</loc>
+    <lastmod>2025-08-21T08:26:17.122Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/math/gamma-function.html</loc>
-    <lastmod>2025-10-24T07:11:59.111Z</lastmod>
+    <loc>https://sta240-f25.github.io/math/massage-and-squint.html</loc>
+    <lastmod>2025-11-05T19:13:55.814Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/math/series.html</loc>
-    <lastmod>2025-11-13T08:46:43.321Z</lastmod>
+    <loc>https://sta240-f25.github.io/qa/exam-1-q-and-a.html</loc>
+    <lastmod>2025-10-08T23:11:51.969Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/index.html</loc>
-    <lastmod>2025-08-21T08:26:17.119Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/exam-midterm-2.html</loc>
+    <lastmod>2025-11-08T01:02:51.190Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/exam-midterm-1.html</loc>
-    <lastmod>2025-10-10T01:30:54.137Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/pset-2.html</loc>
+    <lastmod>2025-09-12T19:45:43.279Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/pset-3.html</loc>
-    <lastmod>2025-09-19T20:28:53.843Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/problems/exam-final.html</loc>
-    <lastmod>2025-11-19T19:30:26.510Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/problems/pset-1.html</loc>
+    <loc>https://sta240-f25.github.io/problems/pset-0.html</loc>
     <lastmod>2025-08-21T08:26:17.147Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/pset-4.html</loc>
-    <lastmod>2025-10-01T18:47:24.375Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/pset-5.html</loc>
+    <lastmod>2025-10-16T23:14:26.092Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/mle/mle-normal-variance.html</loc>
-    <lastmod>2025-11-29T02:39:58.333Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/pset-6.html</loc>
+    <lastmod>2025-11-05T19:46:46.741Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/mle/mle-laplace.html</loc>
-    <lastmod>2025-11-29T02:31:02.698Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/mle/mle-lomax.html</loc>
+    <lastmod>2025-11-21T22:32:50.016Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/mle/blitz.html</loc>
+    <lastmod>2025-11-29T05:17:38.853Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/random-variables-continuous/expectation-short-cuts.html</loc>
@@ -310,7 +314,7 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/pset-7.html</loc>
-    <lastmod>2025-11-29T02:37:25.993Z</lastmod>
+    <lastmod>2025-12-01T03:03:07.933Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/labs/lab-7.html</loc>
@@ -333,7 +337,11 @@
     <lastmod>2025-11-29T03:31:03.329Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/lecture-notes/sta240-notes-18-bayes.html</loc>
+    <loc>https://sta240-f25.github.io/lecture-notes/sta240-notes-17-mle-intro.html</loc>
+    <lastmod>2025-11-27T03:29:36.789Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/lecture-notes/sta240-notes-19-bayes.html</loc>
     <lastmod>2025-11-27T01:53:21.738Z</lastmod>
   </url>
   <url>
@@ -345,8 +353,8 @@
     <lastmod>2025-11-15T05:14:12.103Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/lecture-notes/sta240-notes-17-mle.html</loc>
-    <lastmod>2025-11-27T03:29:36.789Z</lastmod>
+    <loc>https://sta240-f25.github.io/lecture-notes/sta240-notes-18-mle-examples.html</loc>
+    <lastmod>2025-12-01T05:22:18.933Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/labs/lab-8.html</loc>
@@ -474,7 +482,7 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/random-variables-discrete/pascal.html</loc>
-    <lastmod>2025-11-18T18:34:59.860Z</lastmod>
+    <lastmod>2025-11-30T06:50:46.436Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/random-variables-discrete/fibonacci-dice.html</loc>
@@ -561,108 +569,112 @@
     <lastmod>2025-09-06T18:01:06.796Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/mle/mle-lomax.html</loc>
-    <lastmod>2025-11-21T22:32:50.016Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/mle/mle-laplace.html</loc>
+    <lastmod>2025-11-29T02:31:02.698Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/pset-6.html</loc>
-    <lastmod>2025-11-05T19:46:46.741Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/mle/mle-normal-variance.html</loc>
+    <lastmod>2025-11-29T02:39:58.333Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/pset-5.html</loc>
-    <lastmod>2025-10-16T23:14:26.092Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/pset-4.html</loc>
+    <lastmod>2025-10-01T18:47:24.375Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/pset-0.html</loc>
+    <loc>https://sta240-f25.github.io/problems/pset-1.html</loc>
     <lastmod>2025-08-21T08:26:17.147Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/pset-2.html</loc>
-    <lastmod>2025-09-12T19:45:43.279Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/exam-final.html</loc>
+    <lastmod>2025-11-19T19:30:26.510Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/exam-midterm-2.html</loc>
-    <lastmod>2025-11-08T01:02:51.190Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/pset-3.html</loc>
+    <lastmod>2025-09-19T20:28:53.843Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/qa/exam-1-q-and-a.html</loc>
-    <lastmod>2025-10-08T23:11:51.969Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/exam-midterm-1.html</loc>
+    <lastmod>2025-10-10T01:30:54.137Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/math/massage-and-squint.html</loc>
-    <lastmod>2025-11-05T19:13:55.814Z</lastmod>
+    <loc>https://sta240-f25.github.io/index.html</loc>
+    <lastmod>2025-08-21T08:26:17.119Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/math/greeks.html</loc>
-    <lastmod>2025-08-21T08:26:17.122Z</lastmod>
+    <loc>https://sta240-f25.github.io/math/series.html</loc>
+    <lastmod>2025-11-13T08:46:43.321Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/math/differentiation.html</loc>
-    <lastmod>2025-08-28T20:47:11.199Z</lastmod>
+    <loc>https://sta240-f25.github.io/math/gamma-function.html</loc>
+    <lastmod>2025-10-24T07:11:59.111Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/math/logexp.html</loc>
-    <lastmod>2025-11-25T03:33:00.823Z</lastmod>
+    <loc>https://sta240-f25.github.io/math/limits.html</loc>
+    <lastmod>2025-09-12T04:05:58.535Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/slides/user_2025_08_09.html</loc>
-    <lastmod>2025-08-21T22:18:28.419Z</lastmod>
+    <loc>https://sta240-f25.github.io/math/integration.html</loc>
+    <lastmod>2025-08-21T08:26:17.127Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/slides/2025-09-03-set2prob.html</loc>
-    <lastmod>2025-09-09T14:57:01.673Z</lastmod>
+    <loc>https://sta240-f25.github.io/slides/2025-08-25-welcome.html</loc>
+    <lastmod>2025-09-10T18:30:21.173Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/syllabus/syllabus_materials.html</loc>
+    <loc>https://sta240-f25.github.io/syllabus/syllabus_overview.html</loc>
+    <lastmod>2025-09-05T01:08:26.232Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/syllabus/syllabus_resources.html</loc>
+    <lastmod>2025-08-21T08:26:17.327Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/syllabus/syllabus_assignments.html</loc>
     <lastmod>2025-08-21T08:26:17.326Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/syllabus/syllabus_policies.html</loc>
-    <lastmod>2025-09-22T17:46:14.748Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/histogram.html</loc>
+    <lastmod>2025-10-24T06:37:23.497Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/syllabus/syllabus_team.html</loc>
-    <lastmod>2025-09-06T07:43:21.124Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/loops.html</loc>
+    <lastmod>2025-09-04T08:59:45.154Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/probabilities.html</loc>
-    <lastmod>2025-10-02T17:00:51.563Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/quarto.html</loc>
+    <lastmod>2025-09-06T20:32:40.622Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/hello-rstudio.html</loc>
-    <lastmod>2025-08-24T11:23:48.027Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/if-else.html</loc>
+    <lastmod>2025-09-04T09:12:08.774Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/lineplot.html</loc>
-    <lastmod>2025-09-06T18:01:21.133Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/latex.html</loc>
+    <lastmod>2025-08-21T08:26:17.127Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/plot.html</loc>
-    <lastmod>2025-10-02T16:23:40.189Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/rng-seed.html</loc>
+    <lastmod>2025-10-01T18:00:57.520Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/vectors.html</loc>
-    <lastmod>2025-08-21T08:26:17.117Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/summary-statistics.html</loc>
+    <lastmod>2025-10-16T18:19:42.815Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/math.html</loc>
-    <lastmod>2025-08-21T08:26:17.116Z</lastmod>
+    <loc>https://sta240-f25.github.io/explainers/vectorization.html</loc>
+    <lastmod>2025-09-06T18:01:28.404Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/setup.html</loc>
-    <lastmod>2025-08-21T08:26:17.117Z</lastmod>
+    <loc>https://sta240-f25.github.io/apps/disease-testing.html</loc>
+    <lastmod>2025-11-27T02:00:42.244Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/explainers/sample.html</loc>
-    <lastmod>2025-09-06T18:01:35.631Z</lastmod>
+    <loc>https://sta240-f25.github.io/distributions/continuous-gamma.html</loc>
+    <lastmod>2025-10-24T08:18:26.536Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/distributions/continuous-normal.html</loc>
-    <lastmod>2025-11-04T21:42:18.752Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta240-f25.github.io/distributions/continuous-uniform.html</loc>
-    <lastmod>2025-10-24T09:02:42.631Z</lastmod>
+    <loc>https://sta240-f25.github.io/distributions/continuous-inverse-gamma.html</loc>
+    <lastmod>2025-12-01T11:13:58.846Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/distributions/continuous-log-normal.html</loc>
