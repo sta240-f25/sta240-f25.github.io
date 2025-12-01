@@ -1,0 +1,189 @@
+---
+title: "Maximum likelihood estimation"
+subtitle: Worked examples
+format: html
+---
+
+Below are two complete, worked examples of maximum likelihood problems. You also have the solutions to [Lab 10](https://sta240-f25.github.io/labs/lab-10.html). The final exam will feature a problem with exactly the same format as these three examples, so study them carefully. The steps are as follows:
+
+1. Compute the (log-)likelihood function;
+1. Compute the maximum likelihood estimator;
+1. Derive the *exact* sampling distribution of the estimator;
+1. Derive the mean-squared-error (MSE) of the estimator and identify its statistical properties (biased? consistent?).
+
+Step 1 requires you to be fluent with algebraic manipulations from pre-calculus, especially your log and exponent properties. Step 2 requires you to be fluent in your derivative rules. Step 3 requires you to to be fluent with [change-of-variables](https://sta240-f25.github.io/labs/lab-7.html) and [sums and averages](https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf) of iid random variables. As such, these problems synthesize a lot of the technical skills that you will need in future statistical theory courses. Furthermore, the steps are cumulative. You can't do Step 3 correctly if you muck up Steps 1 and 2. So, to ace the final, you need to get your arms around the entire process. 
+
+# Example: exponential distribution
+
+Consider 
+
+$$
+X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{Exponential}(\theta).
+$$
+
+Recall that $\text{Exponential}(\theta)$ is the same as $\text{Gamma}(1,\,\theta)$ and the density of the distribution is 
+
+$$
+f(x;\,\theta)=\theta e^{-\theta x},\quad x>0.
+$$
+
+So the likelihood function is
+
+$$
+\begin{aligned}
+L(\theta;\,X_{1:n})
+&=
+\prod_{i=1}^n
+f(X_i;\,\theta)
+\\
+&=
+\prod_{i=1}^n
+\theta e^{-\theta X_i}
+\\
+&=
+\theta^n
+\prod_{i=1}^n
+e^{-\theta X_i}
+\\
+&=
+\theta^n
+e^{-\theta\sum\limits_{i=1}^nX_i},
+\end{aligned}
+$$
+
+and the log-likelihood function is 
+
+$$
+\begin{aligned}
+\ell(\theta;\,X_{1:n})
+&=
+\ln L(\theta;\,X_{1:n})
+\\
+&=
+\ln
+\left[
+\theta^n
+e^{-\theta\sum\limits_{i=1}^nX_i}
+\right]
+\\
+&=
+\ln \theta^n
++
+\ln 
+e^{-\theta\sum\limits_{i=1}^nX_i}
+\\
+&=
+n\ln \theta 
+-\theta\sum\limits_{i=1}^nX_i.
+\end{aligned}
+$$
+
+We optimize this by taking the derivative with respect to $\theta$, setting it equal to zero, and solving:
+
+$$
+\begin{aligned}
+\frac{\text{d}\ell}{\text{d}\theta}=\frac{n}{\theta}-\sum\limits_{i=1}^nX_i&=0\\
+\frac{n}{\theta}&=\sum\limits_{i=1}^nX_i\\
+\frac{n}{\sum\limits_{i=1}^nX_i}&=\theta.
+\end{aligned}
+$$
+
+So the maximum likelihood estimator for the exponential family is 
+
+$$
+\hat{\theta}_n=\frac{n}{\sum\limits_{i=1}^nX_i}=\frac{1}{\bar{X}_n}.
+$$
+
+This is a random variable because it depends on the $X_i$, which are random. We know that $X_i\overset{\text{iid}}{\sim}\text{Gamma}(1,\,\theta)$ and so we know from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf) that $\bar{X}_n\sim\text{Gamma}(n,\,n\theta)$. Consequently, the distribution of $\hat{\theta}_n=1/\bar{X}_n$ is [*inverse gamma*](https://sta240-f25.github.io/distributions/continuous-inverse-gamma.html), which you derived on [Problem Set 6 #6d](https://sta240-f25.github.io/problems/pset-6.html#problem-6). 
+
+Since the exact sampling distribution of the estimator is $\hat{\theta}_n\sim\text{IG}(n,\,n\theta)$, we know that the mean and variance are 
+
+$$
+\begin{aligned}
+E(\hat{\theta}_n)
+&=
+\frac{n\theta}{n-1}
+\\
+\text{var}(\hat{\theta}_n)
+&=
+\frac{n^2\theta^2}{(n-1)^2(n-2)}.
+\end{aligned}
+$$
+
+This implies that the bias of the estimator is 
+
+$$
+E(\hat{\theta}_n)-\theta=\frac{n\theta}{n-1}-\theta=\frac{n\theta-(n-1)\theta}{n-1}=\frac{n\theta-n\theta+\theta}{n-1}=\frac{\theta}{n-1}>0.
+$$
+
+So this estimator is *biased upward*. On average, it is an overestimate. Finally, the full MSE is 
+
+$$
+\begin{aligned}
+\text{MSE}
+&=
+\text{bias}^2+\text{variance}
+\\
+&=
+\left[
+E(\hat{\theta}_n)-\theta
+\right]^2
++
+\text{var}(\hat{\theta}_n)
+\\
+&=
+\frac{\theta^2}{(n-1)^2}
++
+\frac{n^2\theta^2}{(n-1)^2(n-2)}.
+\end{aligned}
+$$
+
+As $n\to\infty$, this goes to zero, so the estimator is *consistent*.
+
+# Example: Midterm 2 strikes again!
+
+Consider an iid collection of random variables $X_1$, $X_2$, ..., $X_n$ belonging to the family that has this density:
+
+$$
+f(x;\,\theta)=\theta(x+1)^{-(\theta+1)},\quad x>0.
+$$
+
+This is a special case of the family you studied on [Problem Set 6 #1](https://sta240-f25.github.io/problems/pset-6.html#problem-1), and you also worked with it on Midterm 2. 
+
+The likelihood function is
+
+$$
+\begin{aligned}
+L\left(\theta; X_{1:n}\right) & = \prod_{i = 1}^{n}{f\left(X_{i} ;\, \theta\right)} \\ & = \prod_{i = 1}^{n}{\theta\left(X_{i} + 1\right)^{-(\theta + 1)}} \\ & = \theta^{n}\prod_{i = 1}^{n}{\left(X_{i} + 1\right)^{-(\theta + 1)}} \\ & = \theta^{n}\left(\prod_{i = 1}^{n}{\left(X_{i} + 1\right)}\right)^{-(\theta + 1)}.
+\end{aligned}
+$$
+
+The log-likelihood function is 
+
+$$
+\begin{aligned}
+\ell\left(\theta;\, X_{1:n}\right) & = \ln L\left(\theta; X_{1:n}\right) \\ & = \ln\left(\theta^{n}\left(\prod_{i = 1}^{n}{\left(X_{i} + 1\right)}\right)^{-(\theta + 1)}\right) \\ & = \ln\left(\theta^{n}\right) + \ln\left(\left(\prod_{i = 1}^{n}{\left(X_{i} + 1\right)}\right)^{-(\theta + 1)}\right) \\ & = n  \ln\theta - (\theta + 1)\sum_{i = 1}^{n}{\ln\left(X_{i} + 1\right)}.
+\end{aligned}
+$$
+
+To compute the estimator, we take the derivative with respect to $\theta$, set it equal to zero, and solve:
+
+$$
+\begin{aligned}
+\frac{\text{d}\ell}{\text{d}\theta}  &= \frac{\text{d}}{\text{d}\theta}\left[n \ln\theta - (\theta + 1)\sum_{i = 1}^{n}{\ln\left(X_{i} + 1\right)}\right]  = \frac{n}{\theta} - \sum_{i = 1}^{n}{\ln\left(X_{i} + 1\right)}
+=0
+\\
+\\
+&\implies \quad \hat{\theta}_n=\frac{n}{\sum\limits_{i=1}^n\ln(X_i+1)}.
+\end{aligned}
+$$
+
+We know from Midterm 2 that $\ln(X_i+1)\overset{\text{iid}}{\sim}\text{Gamma}(1,\,\theta)$, so $\sum_{i=1}^n\ln(X_i+1)\sim\text{Gamma}(n,\,\theta)$, and $(1/n)\sum_{i=1}^n\ln(X_i+1)\sim\text{Gamma}(n,\,n\theta)$. As such, $\hat{\theta}_n\sim\text{IG}(n,\,n\theta)$. This is the same sampling distribution we got in the previous example, so from here the analysis is the same; the estimator is biased upward but consistent.
+
+
+
+
+
+
+
+
