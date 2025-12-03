@@ -20,6 +20,16 @@ The beta has bounded range, so all moments are finite. Sadly, we do not have clo
 | **Expectation** | $\frac{\alpha}{\alpha+\beta}$ |
 | **Variance** | $\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$ |
 
+Every probability density is an [integral identity in disguise](https://sta240-f25.github.io/math/massage-and-squint.html#kernel-tricks), so we have that:
+
+$$
+\int_0^1
+x^{\alpha-1}(1-x)^{\beta-1}
+\,\text{d}x
+=
+\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}
+.
+$$
 
 ## `R` commands
 
@@ -83,3 +93,43 @@ shinyApp(ui, server)
 ```
 
 ## Derivations
+
+::: {.callout-tip collapse="true"}
+## Mean
+
+$$
+\begin{aligned}
+E(X)
+&=
+\int_0^1
+x
+f(x)
+\,\text{d}x
+\\
+&=
+\int_0^1
+x
+\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}x^{\alpha-1}(1-x)^{\beta-1}
+\,\text{d}x
+\\
+&=
+\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}
+\int_0^1
+\underbrace{x^{\alpha+1-1}(1-x)^{\beta-1}}_{\text{kernel of Beta}(\alpha+1,\,\beta)}
+\,\text{d}x
+\\
+&=
+\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\frac{\Gamma(\alpha+1)\Gamma(\beta)}{\Gamma(\alpha+\beta+1)}
+\\
+&=
+\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\frac{\alpha\Gamma(\alpha)\Gamma(\beta)}{(\alpha+\beta)\Gamma(\alpha+\beta)}
+\\
+&=
+\frac{\alpha}{\alpha+\beta}
+.
+\end{aligned}
+$$
+
+This is classic "massage and squint." We do a kernel-trick with the beta density, and we recall the properties of the gamma function from [Problem Set 0](https://sta240-f25.github.io/problems/pset-0.html#problem-5).
+
+:::
