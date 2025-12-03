@@ -88,7 +88,7 @@ $$
 \end{aligned}
 $$
 
-So the maximum likelihood estimator for the exponential family is 
+So the maximum likelihood estimator for the exponential distribution is 
 
 $$
 \hat{\theta}_n=\frac{n}{\sum\limits_{i=1}^nX_i}=\frac{1}{\bar{X}_n}.
