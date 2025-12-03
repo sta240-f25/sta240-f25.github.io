@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Assignments and grading – STA 240 Fall 2025</title>
+<title>Beta distribution – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,8 +17,42 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -29,8 +60,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../syllabus/syllabus_policies.html" rel="next">
-<link href="../syllabus/syllabus_materials.html" rel="prev">
+<link href="../problems/pset-0.html" rel="next">
+<link href="../distributions/continuous-inverse-gamma.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -41,7 +72,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<meta name="shinylive:serviceworker_dir" content="..">
+<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/load-shinylive-sw.js" type="module"></script>
+<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/run-python-blocks.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/shinylive.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -67,40 +102,55 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
-<meta property="og:title" content="Assignments and grading – STA 240 Fall 2025">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+<meta property="og:title" content="Beta distribution – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
-
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../syllabus/syllabus_overview.html">Syllabus</a></li><li class="breadcrumb-item"><a href="../syllabus/syllabus_assignments.html">Assignments and grading</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../distributions/discrete-binomial.html">Distribution Families</a></li><li class="breadcrumb-item"><a href="../distributions/continuous-beta.html">Beta</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
@@ -115,16 +165,16 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -144,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link active">
+  <a href="../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignments and grading</span></a>
   </div>
 </li>
@@ -167,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -176,8 +226,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
@@ -226,7 +276,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -235,8 +285,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
@@ -333,17 +383,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Distribution Families</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binomial</span></a>
@@ -393,12 +443,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../distributions/continuous-beta.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/continuous-beta.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Beta</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
@@ -407,8 +457,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
@@ -457,7 +507,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
@@ -466,8 +516,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
@@ -528,7 +578,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
@@ -537,8 +587,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
@@ -557,29 +607,24 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#labs-10" id="toc-labs-10" class="nav-link active" data-scroll-target="#labs-10">Labs (10%)</a></li>
-  <li><a href="#problem-sets-30" id="toc-problem-sets-30" class="nav-link" data-scroll-target="#problem-sets-30">Problem Sets (30%)</a></li>
-  <li><a href="#exams-20-each" id="toc-exams-20-each" class="nav-link" data-scroll-target="#exams-20-each">Exams (20% each)</a></li>
-  </ul>
-</nav>
+<li><a href="#basic-properties" id="toc-basic-properties" class="nav-link active" data-scroll-target="#basic-properties">Basic properties</a></li>
+  <li><a href="#r-commands" id="toc-r-commands" class="nav-link" data-scroll-target="#r-commands"><code>R</code> commands</a></li>
+  <li><a href="#play-around" id="toc-play-around" class="nav-link" data-scroll-target="#play-around">Play around!</a></li>
+  <li><a href="#derivations" id="toc-derivations" class="nav-link" data-scroll-target="#derivations">Derivations</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../syllabus/syllabus_overview.html">Syllabus</a></li><li class="breadcrumb-item"><a href="../syllabus/syllabus_assignments.html">Assignments and grading</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Assignments and grading</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../distributions/discrete-binomial.html">Distribution Families</a></li><li class="breadcrumb-item"><a href="../distributions/continuous-beta.html">Beta</a></li></ol></nav><div class="quarto-title">
+<h1 class="title">Beta distribution</h1>
 </div>
 
 
@@ -593,206 +638,159 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
-
-
-<p>Your final course grade will be calculated as follows:</p>
-<div class="center-table">
+</header><p>The beta distribution plays many roles in probability and statistics. One of them is as the <em>conjugate prior</em> for the Bernoulli and geometric distributions. These distributions have one parameter <span class="math inline">\(p\)</span>, the probability of success for some binary trial. You can pick a particular beta distribution to represent your beliefs about where the unknown <span class="math inline">\(p\)</span> is likely to lie.</p>
+<section id="basic-properties" class="level2"><h2 class="anchored" data-anchor-id="basic-properties">Basic properties</h2>
+<p>The beta has bounded range, so all moments are finite. Sadly, we do not have closed-form expressions for the cdf or the mgf.</p>
 <table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Category</th>
-<th>Percentage</th>
-</tr>
-</thead>
+<colgroup>
+<col style="width: 23%">
+<col style="width: 76%">
+</colgroup>
 <tbody>
 <tr class="odd">
-<td>Labs</td>
-<td>10%</td>
+<td><strong>Notation</strong></td>
+<td><span class="math inline">\(X\sim\text{Beta}(\alpha,\,\beta)\)</span></td>
 </tr>
 <tr class="even">
-<td>Problem Sets</td>
-<td>30%</td>
+<td><strong>Range</strong></td>
+<td><span class="math inline">\((0,\,1)\)</span></td>
 </tr>
 <tr class="odd">
-<td>Midterm Exam 1</td>
-<td>20%</td>
+<td><strong>Parameter space</strong></td>
+<td><span class="math inline">\(\alpha,\,\beta&gt;0\)</span></td>
 </tr>
 <tr class="even">
-<td>Midterm Exam 2</td>
-<td>20%</td>
+<td><strong>PDF</strong></td>
+<td><span class="math inline">\(f(x)=\begin{cases}\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}x^{\alpha-1}(1-x)^{\beta-1} &amp;0&lt;x&lt;1\\0 &amp; \text{else}.\end{cases}\)</span></td>
 </tr>
 <tr class="odd">
-<td>Final exam</td>
-<td>20%</td>
+<td><strong>Expectation</strong></td>
+<td><span class="math inline">\(\frac{\alpha}{\alpha+\beta}\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Variance</strong></td>
+<td><span class="math inline">\(\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}\)</span></td>
 </tr>
 </tbody>
 </table>
+<p>Every probability density is an <a href="https://sta240-f25.github.io/math/massage-and-squint.html#kernel-tricks">integral identity in disguise</a>, so we have that:</p>
+<p><span class="math display">\[
+\int_0^1
+x^{\alpha-1}(1-x)^{\beta-1}
+\,\text{d}x
+=
+\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}
+.
+\]</span></p>
+</section><section id="r-commands" class="level2"><h2 class="anchored" data-anchor-id="r-commands">
+<code>R</code> commands</h2>
+<p><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Beta.html">Here</a> is the documentation for the suite of commands that let you work with the beta distribution in <code>R</code>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/Beta.html">dbeta</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">shape1</span>, <span class="va">shape2</span><span class="op">)</span> <span class="co"># PDF</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Beta.html">pbeta</a></span><span class="op">(</span><span class="va">q</span>, <span class="va">shape1</span>, <span class="va">shape2</span><span class="op">)</span> <span class="co"># CDF: P(X &lt;= q)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Beta.html">qbeta</a></span><span class="op">(</span><span class="va">p</span>, <span class="va">shape1</span>, <span class="va">shape2</span><span class="op">)</span> <span class="co"># quantile function (inverse CDF)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/Beta.html">rbeta</a></span><span class="op">(</span><span class="va">n</span>, <span class="va">shape1</span>, <span class="va">shape2</span><span class="op">)</span> <span class="co"># random numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Your final letter grade will be determined based on the usual thresholds:</p>
-<div class="center-table">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Letter Grade</th>
-<th>Final Course Grade</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>A+</td>
-<td>&gt;= 97</td>
-</tr>
-<tr class="even">
-<td>A</td>
-<td>93 - 96.99</td>
-</tr>
-<tr class="odd">
-<td>A-</td>
-<td>90 - 92.99</td>
-</tr>
-<tr class="even">
-<td>B+</td>
-<td>87 - 89.99</td>
-</tr>
-<tr class="odd">
-<td>B</td>
-<td>83 - 86.99</td>
-</tr>
-<tr class="even">
-<td>B-</td>
-<td>80 - 82.99</td>
-</tr>
-<tr class="odd">
-<td>C+</td>
-<td>77 - 79.99</td>
-</tr>
-<tr class="even">
-<td>C</td>
-<td>73 - 76.99</td>
-</tr>
-<tr class="odd">
-<td>C-</td>
-<td>70 - 72.99</td>
-</tr>
-<tr class="even">
-<td>D+</td>
-<td>67 - 69.99</td>
-</tr>
-<tr class="odd">
-<td>D</td>
-<td>63 - 66.99</td>
-</tr>
-<tr class="even">
-<td>D-</td>
-<td>60 - 62.99</td>
-</tr>
-<tr class="odd">
-<td>F</td>
-<td>&lt; 60</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
+</section><section id="play-around" class="level2"><h2 class="anchored" data-anchor-id="play-around">Play around!</h2>
+<pre class="shinylive-r" data-engine="r"><code><a href="https://shiny.posit.co/">#| '!! shinylive warning !!': |
+#|   shinylive does not work in self-contained HTML documents.
+#|   Please set `embed-resources: false` in your metadata.
+#| standalone: true
+#| viewerHeight: 700
+library(shiny)
+
+ui &lt;- fluidPage(
+  titlePanel("Beta Distribution Viewer"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("alpha", "Alpha (shape1):",
+                  min = 0.5, max = 10, value = 2, step = 0.1),
+      sliderInput("beta", "Beta (shape2):",
+                  min = 0.5, max = 10, value = 2, step = 0.1)
+    ),
+    
+    mainPanel(
+      plotOutput("betaPlot", height = "600px")
+    )
+  )
+)
+
+server &lt;- function(input, output, session) {
+  
+  output$betaPlot &lt;- renderPlot({
+    a &lt;- input$alpha
+    b &lt;- input$beta
+    x &lt;- seq(0, 1, length.out = 500)
+    
+    par(mfrow = c(2,1), mar = c(4,4,2,1))
+    
+    ## --- CDF ---
+    plot(x, pbeta(x, a, b), type = "l", lwd = 2,
+         xlab = "", ylab = "CDF", main = "Beta CDF",
+         ylim = c(0,1))
+    
+    ## --- PDF ---
+    plot(x, dbeta(x, a, b), type = "l", lwd = 2,
+         xlab = "x", ylab = "PDF", main = "Beta PDF",
+         ylim = c(0,7))   # fixed y-axis range
+  })
+}
+
+shinyApp(ui, server)
+</a></code></pre>
+</section><section id="derivations" class="level2"><h2 class="anchored" data-anchor-id="derivations">Derivations</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Mean
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>These thresholds will not change, and they will be applied exactly. This means that the final grades will not be curved, and a 92.99, for example, will not be rounded up to an A.</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(X)
+&amp;=
+\int_0^1
+x
+f(x)
+\,\text{d}x
+\\
+&amp;=
+\int_0^1
+x
+\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}x^{\alpha-1}(1-x)^{\beta-1}
+\,\text{d}x
+\\
+&amp;=
+\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}
+\int_0^1
+\underbrace{x^{\alpha+1-1}(1-x)^{\beta-1}}_{\text{kernel of Beta}(\alpha+1,\,\beta)}
+\,\text{d}x
+\\
+&amp;=
+\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\frac{\Gamma(\alpha+1)\Gamma(\beta)}{\Gamma(\alpha+\beta+1)}
+\\
+&amp;=
+\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\frac{\alpha\Gamma(\alpha)\Gamma(\beta)}{(\alpha+\beta)\Gamma(\alpha+\beta)}
+\\
+&amp;=
+\frac{\alpha}{\alpha+\beta}
+.
+\end{aligned}
+\]</span></p>
+<p>This is classic “massage and squint.” We do a kernel-trick with the beta density, and we recall the properties of the gamma function from <a href="https://sta240-f25.github.io/problems/pset-0.html#problem-5">Problem Set 0</a>.</p>
 </div>
-</div>
-<section id="labs-10" class="level2">
-<h2 class="anchored" data-anchor-id="labs-10">Labs (10%)</h2>
-<p>In lab every Thursday, you will complete a guided activity that introduces you to special topics, extensions, or applications of the latest course material. Along the way, we will teach you how to implement some of the ideas from the course in the <code>R</code> programming language. Ideally you should be able to finish the activity by the end of your lab period, but in any case, you must submit your lab work by 11:59 ET PM that same day.</p>
-<p>Each lab assignment will be graded on the following scale:</p>
-<ul>
-<li>1.0: a complete, good faith attempt at every part of every problem;</li>
-<li>0.5: partially complete;</li>
-<li>0.0: no submission, or mostly incomplete.</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Grace
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Your two lowest lab scores will be dropped at the end of the semester.</p>
-</div>
-</div>
-</section>
-<section id="problem-sets-30" class="level2">
-<h2 class="anchored" data-anchor-id="problem-sets-30">Problem Sets (30%)</h2>
-<p>Mathematics is like everything else in life; if you practice, you improve. As such, the problem sets are really the heart of the course. They will mostly consist of pencil-and-paper math problems, but sometimes you will be asked to do some coding. You may compose you solutions however you like (scan or photograph written work, LaTeX, Quarto, handwriting capture on a tablet, whatever) so long as you ultimately upload a single <code>.pdf</code> file to Gradescope.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Grace
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Your lowest problem set score will be dropped at the end of the semester.</p>
-</div>
-</div>
-</section>
-<section id="exams-20-each" class="level2">
-<h2 class="anchored" data-anchor-id="exams-20-each">Exams (20% each)</h2>
-<p>There will be three exams. The dates, times, and locations are firm, so mark your calendar now:</p>
-<ul>
-<li><strong>Midterm 1</strong>: Thursday October 9 during your lab;</li>
-<li><strong>Midterm 2</strong>: Thursday November 13 during your lab;</li>
-<li><strong>Final</strong>: Friday December 12 from 9 AM - 12 PM in Old Chem 116.</li>
-</ul>
-<p>These will be old school, pencil-and-paper, in-class exams. You are allowed only two resources:</p>
-<ul>
-<li>a “dumb” calculator (no wi-fi). You will not actually need it, but if you want it as a security blanket, be my guest;</li>
-<li>both sides of one 8.5” x 11” sheet of notes, prepared by you and you alone. You can create it however you wish: handwritten, on a computer, etc.</li>
-</ul>
-<p>If you seek testing accommodations, make sure the Student Disability Access Office sends me a letter, and then please make your appointments in the <a href="https://testingcenter.duke.edu">Testing Center</a> as soon as possible.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Grace
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you do better on the final exam than you did on one of the midterms, we will replace your lowest midterm exam score with your final exam score.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-No make-up exams
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you are absent from one of the midterms for whatever reason, there will not be a make-up. Pursuant to the above policy, we will simply replace the missed midterm score with the final exam score. If you miss the final exam, you get a zero unless you have a <a href="https://trinity.duke.edu/undergraduate/academic-policies/final-exams-scheduling-conflicts-and-absences">Dean’s Excuse</a>.</p>
 </div>
 </div>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1190,22 +1188,19 @@ No make-up exams
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../syllabus/syllabus_materials.html" class="pagination-link" aria-label="Materials">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Materials</span>
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../distributions/continuous-inverse-gamma.html" class="pagination-link" aria-label="Inverse gamma">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Inverse gamma</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../syllabus/syllabus_policies.html" class="pagination-link" aria-label="Policies">
-        <span class="nav-page-text">Policies</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../problems/pset-0.html" class="pagination-link" aria-label="Problem Set 0">
+        <span class="nav-page-text">Problem Set 0</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -1217,8 +1212,6 @@ No make-up exams
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

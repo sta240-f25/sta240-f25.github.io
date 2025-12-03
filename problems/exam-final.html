@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="Final Exam Study Guide – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
@@ -390,6 +419,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Inverse gamma</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/continuous-beta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Beta</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -556,8 +591,72 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#probability-spaces-and-rules" id="toc-probability-spaces-and-rules" class="nav-link active" data-scroll-target="#probability-spaces-and-rules">1. Probability spaces and rules</a>
+  <ul class="collapse">
+  <li><a href="#problem-1" id="toc-problem-1" class="nav-link" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
+  <li><a href="#want-more-review" id="toc-want-more-review" class="nav-link" data-scroll-target="#want-more-review">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#counting" id="toc-counting" class="nav-link" data-scroll-target="#counting">2. Counting</a>
+  <ul class="collapse">
+  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
+  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a></li>
+  <li><a href="#want-more-review-1" id="toc-want-more-review-1" class="nav-link" data-scroll-target="#want-more-review-1">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#conditional-probability-and-independence" id="toc-conditional-probability-and-independence" class="nav-link" data-scroll-target="#conditional-probability-and-independence">3. Conditional probability and independence</a>
+  <ul class="collapse">
+  <li><a href="#problem-5" id="toc-problem-5" class="nav-link" data-scroll-target="#problem-5">Problem 5</a></li>
+  <li><a href="#problem-6" id="toc-problem-6" class="nav-link" data-scroll-target="#problem-6">Problem 6</a></li>
+  <li><a href="#want-more-review-2" id="toc-want-more-review-2" class="nav-link" data-scroll-target="#want-more-review-2">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#discrete-random-variables" id="toc-discrete-random-variables" class="nav-link" data-scroll-target="#discrete-random-variables">4. Discrete random variables</a>
+  <ul class="collapse">
+  <li><a href="#problem-7" id="toc-problem-7" class="nav-link" data-scroll-target="#problem-7">Problem 7</a></li>
+  <li><a href="#problem-8" id="toc-problem-8" class="nav-link" data-scroll-target="#problem-8">Problem 8</a></li>
+  <li><a href="#want-more-review-3" id="toc-want-more-review-3" class="nav-link" data-scroll-target="#want-more-review-3">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#absolutely-continuous-random-variables" id="toc-absolutely-continuous-random-variables" class="nav-link" data-scroll-target="#absolutely-continuous-random-variables">5. Absolutely continuous random variables</a>
+  <ul class="collapse">
+  <li><a href="#problem-9" id="toc-problem-9" class="nav-link" data-scroll-target="#problem-9">Problem 9</a></li>
+  <li><a href="#problem-10" id="toc-problem-10" class="nav-link" data-scroll-target="#problem-10">Problem 10</a></li>
+  <li><a href="#want-more-review-4" id="toc-want-more-review-4" class="nav-link" data-scroll-target="#want-more-review-4">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#the-moment-generating-function" id="toc-the-moment-generating-function" class="nav-link" data-scroll-target="#the-moment-generating-function">6. The moment-generating function</a>
+  <ul class="collapse">
+  <li><a href="#problem-11" id="toc-problem-11" class="nav-link" data-scroll-target="#problem-11">Problem 11</a></li>
+  <li><a href="#problem-12" id="toc-problem-12" class="nav-link" data-scroll-target="#problem-12">Problem 12</a></li>
+  <li><a href="#want-more-review-5" id="toc-want-more-review-5" class="nav-link" data-scroll-target="#want-more-review-5">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#transformations-of-random-variables" id="toc-transformations-of-random-variables" class="nav-link" data-scroll-target="#transformations-of-random-variables">7. Transformations of random variables</a>
+  <ul class="collapse">
+  <li><a href="#problem-13" id="toc-problem-13" class="nav-link" data-scroll-target="#problem-13">Problem 13</a></li>
+  <li><a href="#want-more-review-6" id="toc-want-more-review-6" class="nav-link" data-scroll-target="#want-more-review-6">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#joint-distributions" id="toc-joint-distributions" class="nav-link" data-scroll-target="#joint-distributions">8. Joint distributions</a>
+  <ul class="collapse">
+  <li><a href="#problem-14" id="toc-problem-14" class="nav-link" data-scroll-target="#problem-14">Problem 14</a></li>
+  <li><a href="#problem-15" id="toc-problem-15" class="nav-link" data-scroll-target="#problem-15">Problem 15</a></li>
+  <li><a href="#want-more-review-7" id="toc-want-more-review-7" class="nav-link" data-scroll-target="#want-more-review-7">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#maximum-likelihood-estimation" id="toc-maximum-likelihood-estimation" class="nav-link" data-scroll-target="#maximum-likelihood-estimation">9. Maximum likelihood estimation</a>
+  <ul class="collapse">
+  <li><a href="#problem-16" id="toc-problem-16" class="nav-link" data-scroll-target="#problem-16">Problem 16</a></li>
+  <li><a href="#problem-17" id="toc-problem-17" class="nav-link" data-scroll-target="#problem-17">Problem 17</a></li>
+  <li><a href="#want-more-review-8" id="toc-want-more-review-8" class="nav-link" data-scroll-target="#want-more-review-8">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#bayesian-inference" id="toc-bayesian-inference" class="nav-link" data-scroll-target="#bayesian-inference">10. Bayesian inference</a>
+  <ul class="collapse">
+  <li><a href="#problem-18" id="toc-problem-18" class="nav-link" data-scroll-target="#problem-18">Problem 18</a></li>
+  <li><a href="#problem-19" id="toc-problem-19" class="nav-link" data-scroll-target="#problem-19">Problem 19</a></li>
+  <li><a href="#want-more-review-9" id="toc-want-more-review-9" class="nav-link" data-scroll-target="#want-more-review-9">Want more review?</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -585,7 +684,7 @@ ul.task-list li input[type="checkbox"] {
 <ol start="0" type="1">
 <li>(an undisclosed check on your visual intuition)</li>
 <li>Probability spaces and rules</li>
-<li>Counting</li>
+<li>Counting (ugh!)</li>
 <li>Conditional probability and independence</li>
 <li>Discrete random variables</li>
 <li>Absolutely continuous random variables</li>
@@ -595,9 +694,211 @@ ul.task-list li input[type="checkbox"] {
 <li>Maximum likelihood estimation</li>
 <li>Bayesian inference</li>
 </ol>
-<p>Practice problems coming soon…</p>
+<section id="probability-spaces-and-rules" class="level1">
+<h1>1. Probability spaces and rules</h1>
+<section id="problem-1" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
+</section>
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+</section>
+<section id="want-more-review" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-01-probability-spaces.pdf">Lecture notes</a> on axioms and rules;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-1.html">Problem Set 1</a>: problems 4 - 8;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-2.html">Problem Set 2</a>: problems 2 - 3;</li>
+<li>Midterm 1 Study Guide</li>
+<li>Midterm 1</li>
+</ul>
+</section>
+</section>
+<section id="counting" class="level1">
+<h1>2. Counting</h1>
+<section id="problem-3" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
+</section>
+<section id="problem-4" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
+</section>
+<section id="want-more-review-1" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-1">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-02-counting-theory.pdf">Lecture notes</a> on counting theory;</li>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-03-counting-examples.pdf">Lecture notes</a> with birthday problem and other worked examples;</li>
+<li><a href="https://sta240-f25.github.io/labs/lab-2.html">Lab 2</a> worked examples;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-1.html">Problem Set 1</a>: problems 9 - 10;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-2.html">Problem Set 2</a>: problems 4 - 8;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-3.html">Problem Set 3</a>: problems 2 - 3;</li>
+<li>Odd-numbered exercises in DeGroot &amp; Schervish Chapters 1.6 - 1.8, 1.12.</li>
+</ul>
+</section>
+</section>
+<section id="conditional-probability-and-independence" class="level1">
+<h1>3. Conditional probability and independence</h1>
+<section id="problem-5" class="level2">
+<h2 class="anchored" data-anchor-id="problem-5">Problem 5</h2>
+</section>
+<section id="problem-6" class="level2">
+<h2 class="anchored" data-anchor-id="problem-6">Problem 6</h2>
+<p>Suppose that <span class="math inline">\(k\)</span> events <span class="math inline">\(B_1\)</span>, <span class="math inline">\(B_2\)</span>, …, <span class="math inline">\(B_k\)</span> form a partition of the sample space <span class="math inline">\(S\)</span>, and <span class="math inline">\(A\subseteq S\)</span> is some event with positive probability <span class="math inline">\(P(A)&gt;0\)</span>. Show that if <span class="math inline">\(P(B_1\mid A)&lt;P(B_1)\)</span>, then that guarantees <span class="math inline">\(P(B_i\mid A)&gt;P(B_i)\)</span> for at least one <span class="math inline">\(i\in\{1,\,2,\,...,\,k\}\)</span>.</p>
+</section>
+<section id="want-more-review-2" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-2">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-04-conditional-probability.pdf">Lecture notes</a> with worked examples;
+<ul>
+<li>The lil’ <a href="https://sta240-f25.github.io/apps/disease-testing.html">app</a> on disease testing;</li>
+</ul></li>
+<li><a href="https://sta240-f25.github.io/problems/pset-2.html">Problem Set 2</a>: problems 9 - 10;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-3.html">Problem Set 3</a>: problems 4 - 8;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-4.html">Problem Set 4</a>: problems 2 - 3;</li>
+<li>Odd-numbered exercises in DeGroot &amp; Schervish Chapter 2.</li>
+</ul>
+</section>
+</section>
+<section id="discrete-random-variables" class="level1">
+<h1>4. Discrete random variables</h1>
+<section id="problem-7" class="level2">
+<h2 class="anchored" data-anchor-id="problem-7">Problem 7</h2>
+</section>
+<section id="problem-8" class="level2">
+<h2 class="anchored" data-anchor-id="problem-8">Problem 8</h2>
+</section>
+<section id="want-more-review-3" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-3">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-05-random-variables.pdf">Lecture notes</a> introducing random variables;</li>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-06-discrete-families.pdf">Lecture notes</a> on special families of discrete random variables;</li>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-07-expectation.pdf">Lecture notes</a> on expected value;</li>
+<li><a href="https://sta240-f25.github.io/labs/lab-5.html">Lab 5</a> exercises;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-2.html">Problem Set 2</a>: problem 7;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-3.html">Problem Set 3</a>: problems 9 - 10;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-4.html">Problem Set 4</a>: problems 4 - 10.</li>
+</ul>
+</section>
+</section>
+<section id="absolutely-continuous-random-variables" class="level1">
+<h1>5. Absolutely continuous random variables</h1>
+<section id="problem-9" class="level2">
+<h2 class="anchored" data-anchor-id="problem-9">Problem 9</h2>
+</section>
+<section id="problem-10" class="level2">
+<h2 class="anchored" data-anchor-id="problem-10">Problem 10</h2>
+</section>
+<section id="want-more-review-4" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-4">Want more review?</h2>
+<ul>
+<li>Examples from <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-10-absolutely-continuous.pdf">lecture</a>;</li>
+<li><a href="https://sta240-f25.github.io/labs/lab-8.html">Lab 8</a>;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-5.html">Problem Set 5</a>: problems 2 - 8;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-6.html">Problem Set 6</a>: problems 1 - 2;</li>
+<li>Odd-numbered exercises in DeGroot &amp; Schervish Chapters 3.2, 5.6, 5.7.</li>
+</ul>
+</section>
+</section>
+<section id="the-moment-generating-function" class="level1">
+<h1>6. The moment-generating function</h1>
+<section id="problem-11" class="level2">
+<h2 class="anchored" data-anchor-id="problem-11">Problem 11</h2>
+</section>
+<section id="problem-12" class="level2">
+<h2 class="anchored" data-anchor-id="problem-12">Problem 12</h2>
+</section>
+<section id="want-more-review-5" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-5">Want more review?</h2>
+<ul>
+<li>worked examples from <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-11-moments.pdf">lecture</a>;</li>
+<li>new theorems and examples from <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf">lecture</a> about updating MGFs under linear transformations;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-5.html">Problem Set 5</a>: problems 9 - 10;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-6.html">Problem Set 6</a>: problems 3 - 5.</li>
+<li>PSET 7 1, 2</li>
+<li>Odd-numbered exercises in DeGroot &amp; Schervish Chapter 4.4.</li>
+</ul>
+</section>
+</section>
+<section id="transformations-of-random-variables" class="level1">
+<h1>7. Transformations of random variables</h1>
+<section id="problem-13" class="level2">
+<h2 class="anchored" data-anchor-id="problem-13">Problem 13</h2>
+</section>
+<section id="want-more-review-6" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-6">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/labs/lab-7.html">Lab 7</a>;</li>
+<li>Problem Set 6: <a href="https://sta240-f25.github.io/problems/pset-6.html#problem-6">problem 6</a>;</li>
+<li>Read DeGroot &amp; Schervish Chapter 3.8 and do the odd-numbered exercises.</li>
+<li>Midterm 2 Study Guide</li>
+<li>Midterm 2 problem</li>
+</ul>
+</section>
+</section>
+<section id="joint-distributions" class="level1">
+<h1>8. Joint distributions</h1>
+<section id="problem-14" class="level2">
+<h2 class="anchored" data-anchor-id="problem-14">Problem 14</h2>
+</section>
+<section id="problem-15" class="level2">
+<h2 class="anchored" data-anchor-id="problem-15">Problem 15</h2>
+</section>
+<section id="want-more-review-7" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-7">Want more review?</h2>
+<ul>
+<li>jointly discrete examples from <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-12-joint-discrete.pdf">lecture</a>;</li>
+<li>jointly contnuous examples from <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-13-joint-continuous.pdf">lecture</a>;</li>
+<li>mixed Poisson-gamma example from <a href="https://sta240-f25.github.io/labs/lab-9.html">Lab 9</a>;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-6.html">Problem Set 6</a>: problems 7 - 10;</li>
+<li>Odd-numbered exercises in DeGroot &amp; Schervish Chapters 3.4 - 3.6.</li>
+</ul>
+</section>
+</section>
+<section id="maximum-likelihood-estimation" class="level1">
+<h1>9. Maximum likelihood estimation</h1>
+<section id="problem-16" class="level2">
+<h2 class="anchored" data-anchor-id="problem-16">Problem 16</h2>
+<p>Blitz practice. For each of these, set up the (log-)likelihood function and compute the maximum likelihood estimator (MLE).</p>
+<ol type="a">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</section>
+<section id="problem-17" class="level2">
+<h2 class="anchored" data-anchor-id="problem-17">Problem 17</h2>
+<p>Full monty</p>
+</section>
+<section id="want-more-review-8" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-8">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-18-mle-examples.html">Lecture examples</a>;</li>
+<li><a href="https://sta240-f25.github.io/labs/lab-10.html">Lab 10</a>;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-7.html">PSET 7 problems 3 and 4</a>.</li>
+</ul>
+</section>
+</section>
+<section id="bayesian-inference" class="level1">
+<h1>10. Bayesian inference</h1>
+<section id="problem-18" class="level2">
+<h2 class="anchored" data-anchor-id="problem-18">Problem 18</h2>
+<p>posterior mean</p>
+</section>
+<section id="problem-19" class="level2">
+<h2 class="anchored" data-anchor-id="problem-19">Problem 19</h2>
+<p>posterior mean</p>
+</section>
+<section id="want-more-review-9" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-9">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-19-bayes.pdf">Lecture examples</a>;</li>
+<li><a href="https://sta240-f25.github.io/labs/lab-11.html">Lab 11</a>;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-7.html">PSET 7 problems 5 and 6</a>.</li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

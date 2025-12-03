@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Maximum likelihood estimation – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
@@ -21,7 +18,6 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -39,7 +35,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<meta name="shinylive:serviceworker_dir" content="..">
+<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/load-shinylive-sw.js" type="module"></script>
+<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/run-python-blocks.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/shinylive.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -65,20 +65,43 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 <meta property="og:title" content="Maximum likelihood estimation – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
+<meta property="og:image" content="https://sta240-f25.github.io/lecture-notes/sta240-notes-17-mle-intro_files/figure-html/unnamed-chunk-1-1.png">
 <meta property="og:site_name" content="STA 240 Fall 2025">
+<meta property="og:image:height" content="1344">
+<meta property="og:image:width" content="1344">
 </head>
-
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -89,16 +112,11 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
@@ -113,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -121,8 +139,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -165,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -174,8 +192,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
@@ -224,7 +242,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -233,8 +251,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
@@ -331,7 +349,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -340,8 +358,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binomial</span></a>
@@ -389,8 +407,14 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Inverse gamma</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/continuous-beta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Beta</span></a>
+  </div>
+</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
@@ -399,8 +423,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
@@ -449,7 +473,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
@@ -458,8 +482,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
@@ -520,7 +544,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
@@ -529,8 +553,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
@@ -549,29 +573,21 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#main-idea" id="toc-main-idea" class="nav-link active" data-scroll-target="#main-idea">Main idea</a></li>
+<li><a href="#main-idea" id="toc-main-idea" class="nav-link active" data-scroll-target="#main-idea">Main idea</a></li>
   <li><a href="#maximum-likelihood-estimation" id="toc-maximum-likelihood-estimation" class="nav-link" data-scroll-target="#maximum-likelihood-estimation">Maximum likelihood estimation</a></li>
-  <li><a href="#example-exponential-distribution" id="toc-example-exponential-distribution" class="nav-link" data-scroll-target="#example-exponential-distribution">Example: exponential distribution</a></li>
-  <li><a href="#example-distribution-from-midterm-2" id="toc-example-distribution-from-midterm-2" class="nav-link" data-scroll-target="#example-distribution-from-midterm-2">Example: distribution from Midterm 2</a></li>
-  </ul>
-</nav>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">Maximum likelihood estimation</h1>
 </div>
 
@@ -586,32 +602,306 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
+</header><p>In parameteric statistics, we observe iid data from some parametric distribution</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}f_{\theta}.
+\]</span></p>
+<p>The problem is that we have no clue what the true value of <span class="math inline">\(\theta\)</span> actually is, so we want to use the observed data to construct a best guess. How do we do this? What do we even mean by “best”? To be concrete, consider data from a normal distribution with unknown mean:</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
+\]</span></p>
+<p><span class="math inline">\(\theta\)</span> could be any real number, so suffice it to say, there are a lot of possible guesses to choose from? Which is best, and how do we measure that? Every possible value of <span class="math inline">\(\theta\)</span> gives us a different density curve. Here are three possible guesses:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="sta240-notes-17-mle-intro_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We can probably agree that blah is best. Why? Because that curve assigns the highest density to the data we actually saw. Notice that in each picture, the data are the same. The observations are the observations. The numbers in the your spreadsheet don’t change. What changes is our guess at <span class="math inline">\(\theta\)</span> and the associated curve. The goal of estimation is to search through all possible values of <span class="math inline">\(\theta\)</span> and find the one that gives the best fitting curve. How do we measure “best fitting”? We look at the density that the curve assigns to all the data points. Revisiting the cartoons above, for a given choice of <span class="math inline">\(\theta\)</span> each observation <span class="math inline">\(X_i\)</span> has a density value <span class="math inline">\(f(X_i;\,\theta)\)</span> associated with it, and this corresponds to the vertical gap on the picture:</p>
+<p>We want to pick the parameter and associated curve that makes these vertical gaps as large as possible. To boil everything down to a single number measure of the goodness-of-fit, we look at the <em>product</em> of the vertical gaps:</p>
+<p><span class="math display">\[
+\prod_{i=1}^nf(X_i;\,\theta)=f(X_1;\,\theta)\times f(X_2;\,\theta)\times...\times f(X_n;\,\theta)
+\]</span></p>
+<p>We look at the product instead of the sum or the max for two reasons. One, for the product to be large, we need the fit for each observation to be large. If any one of them is zero or very close to zero, it zeros out the whole product, no matter how good the fit is for the others. Zero times one hundred and zero times one thousand are both zero. So the product rewards good overall fit for all observations instead of just super good fit for one or two. Second, the product has an important probabilistic interpretation. Because we assume that the data are iid, the joint distribution of all <span class="math inline">\(n\)</span> of the observations is the product of marginals by independence, and the marginals all have the same form by identical distribution:</p>
+<p><span class="math display">\[
+f(x_1,\,x_2,\,...,\,x_n;\,\theta)=\prod_{i=1}^nf_i(x_i;\,\theta)=\prod_{i=1}^nf(x_i;\,\theta).
+\]</span></p>
+<p>So our goodness-of-fit criteria is the joint density of the observed data.</p>
+<p>As we saw in the cartoons above, if you change you guess of <span class="math inline">\(\theta\)</span>, you change the curve, you change the vertical gaps, and you change the goodness-of-fit. The observed data are not changing, but the guess for <span class="math inline">\(\theta\)</span> is. For every possible value of <span class="math inline">\(\theta\)</span>, you get a different goodness-of-fit measure (the product of vertical gaps), and you can summarize this with the <strong>likelihood function</strong>:</p>
+<p><span class="math display">\[
+L(\theta;\,X_{1:n})=\prod_{i=1}^nf(X_i;\,\theta).
+\]</span></p>
+<p>In goes a choice of <span class="math inline">\(\theta\)</span>, and out comes a numerical measure of how well that choice fits the observed data. Play around here to see how the choice of <span class="math inline">\(\theta\)</span> changes the fit, and how this traces out a curve measuring the quality of the guess:</p>
+<pre class="shinylive-r" data-engine="r"><code><a href="https://shiny.posit.co/">#| '!! shinylive warning !!': |
+#|   shinylive does not work in self-contained HTML documents.
+#|   Please set `embed-resources: false` in your metadata.
+#| standalone: true
+#| viewerHeight: 500
+library(shiny)
 
+ui &lt;- fluidPage(
+  titlePanel("Maximum likelihood by eye"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("dist", "Choose a distribution family:",
+                  choices = c("Normal (unknown mean)", 
+                              "Normal (unknown variance)", 
+                              "Exponential")),
+      
+      # The sliders will appear here:
+      uiOutput("param_ui")
+    ),
+    
+    mainPanel(
+      plotOutput("distPlot")
+    )
+  )
+)
 
-<section id="main-idea" class="level1">
-<h1>Main idea</h1>
+server &lt;- function(input, output, session) {
+  
+  # Dynamically choose which sliders to show
+  output$param_ui &lt;- renderUI({
+    req(input$dist)
+    
+    if (input$dist == "Normal (unknown mean)") {
+      tagList(
+        sliderInput("theta", "Take a guess at θ", min = -5, max = 5, value = 0, step = 0.01)
+      )
+    } else if (input$dist == "Normal (unknown variance)") {
+      tagList(
+        sliderInput("theta", "Take a guess at θ", min = 0, max = 10, value = 1, step = 0.01)
+      )
+    } else if (input$dist == "Exponential") {
+      tagList(
+        sliderInput("theta", "Take a guess at θ", min = 0, max = 6, value = 1, step = 0.01)
+      )
+    }
+  })
+  
+  # Generate a plot from the chosen distribution
+  output$distPlot &lt;- renderPlot({
+    if (input$dist == "Normal (unknown mean)") {
+      
+      # =============================================
+      # get the guess
+      # =============================================
+      
+      theta &lt;- input$theta
+      
+      # =============================================
+      # create some fake data
+      # =============================================
+      
+      n &lt;- 10
+      set.seed(123)
+      X &lt;- rnorm(n, mean = sqrt(pi) * 3 / 5, sd = 1.5)
+      
+      # =============================================
+      # plot data density
+      # =============================================
+      
+      par(mfrow = c(1, 2))
+      
+      curve(dnorm(x, mean = theta, sd = 1), 
+            from = -6, 
+            to = 6, 
+            n = 2000, 
+            ylab = "f(x | θ)", 
+            main = "Density of N(θ, 1)",
+            bty = "n",
+            yaxs = "i", 
+            xaxt = "n",
+            yaxt = "n",
+            lwd = 2,
+            xlim = c(-5, 5),
+            ylim = c(-0.05, 1.25 * dnorm(theta, mean = theta, sd = 1)))
+      axis(1, pos = 0)
+      axis(2, at = seq(-0.5, 0.5, by = 0.1))
+      mtext("θ", side = 1, at = theta, line = 1, col = "blue")
+      points(theta, dnorm(theta, mean = theta, sd = 1), type = "h", col = "blue", lwd = 2, lty = 2)
+      points(X, numeric(n), col = "red", pch = 19, cex = 0.75)
+      points(X, dnorm(X, mean = theta, sd = 1), type = "h", lty = 3, col = "darkgrey")
+      points(X, dnorm(X, mean = theta, sd = 1), col = "red", pch = 19, cex = 0.75)
+      
+      # =============================================
+      # plot the likelihood function
+      # =============================================
+      
+      M &lt;- 2000
+      theta_grid &lt;- seq(-5, 5, length.out = M)
+      L_grid &lt;- numeric(M)
+      for(i in 1:M){
+        L_grid[i] &lt;- prod(dnorm(X, mean = theta_grid[i], sd = 1))
+      }
+      plot(theta_grid, L_grid, 
+           type = "l", 
+           main = "Likelihood function", 
+           xlab = expression(theta), 
+           ylab = "L(θ)",
+           col = "salmon",
+           bty = "n", lwd = 2)
+      points(theta, prod(dnorm(X, mean = theta, sd = 1)), col = "red", pch = 19)
+      points(theta, prod(dnorm(X, mean = theta, sd = 1)), type = "h", lty = 3, "darkgrey")
+      
+    } else if (input$dist == "Normal (unknown variance)"){
+      
+      # =============================================
+      # get the guess
+      # =============================================
+      
+      theta &lt;- input$theta
+      
+      # =============================================
+      # create some fake data
+      # =============================================
+      
+      n &lt;- 10
+      set.seed(123)
+      X &lt;- rnorm(n, mean = 0, sd = sqrt(pi))
+      
+      # =============================================
+      # plot data density
+      # =============================================
+      
+      par(mfrow = c(1, 2))
+      
+      curve(dnorm(x, mean = 0, sd = sqrt(theta)), 
+            from = -6, 
+            to = 6, 
+            n = 2000, 
+            ylab = "f(x | θ)", 
+            main = "Density of N(0, θ)",
+            bty = "n",
+            yaxs = "i", 
+            xaxt = "n",
+            yaxt = "n",
+            lwd = 2,
+            xlim = c(-5, 5),
+            ylim = c(-0.05, 1))
+      axis(1, pos = 0)
+      axis(2, at = seq(-0.5, 1, by = 0.1))
+      points(X, numeric(n), col = "red", pch = 19, cex = 0.75)
+      points(X, dnorm(X, mean = 0, sd = sqrt(theta)), type = "h", lty = 3, col = "darkgrey")
+      points(X, dnorm(X, mean = 0, sd = sqrt(theta)), col = "red", pch = 19, cex = 0.75)
+      
+      # =============================================
+      # plot the likelihood function
+      # =============================================
+      
+      M &lt;- 3000
+      theta_grid &lt;- seq(0, 10, length.out = M)
+      L_grid &lt;- numeric(M)
+      for(i in 1:M){
+        L_grid[i] &lt;- prod(dnorm(X, mean = 0, sd = sqrt(theta_grid[i])))
+      }
+      plot(theta_grid, L_grid, 
+           type = "l", 
+           main = "Likelihood function", 
+           xlab = expression(theta), 
+           ylab = "L(θ)",
+           col = "salmon",
+           bty = "n", lwd = 2)
+      points(theta, prod(dnorm(X, mean = 0, sd = sqrt(theta))), col = "red", pch = 19)
+      points(theta, prod(dnorm(X, mean = 0, sd = sqrt(theta))), type = "h", lty = 3, "darkgrey")
+
+    } else if (input$dist == "Exponential"){
+      
+      # =============================================
+      # get the guess
+      # =============================================
+      
+      theta &lt;- input$theta
+      
+      # =============================================
+      # create some fake data
+      # =============================================
+      
+      n &lt;- 10
+      set.seed(123)
+      X &lt;- rexp(n, rate = sqrt(pi))
+      
+      # =============================================
+      # plot data density
+      # =============================================
+      
+      par(mfrow = c(1, 2))
+      
+      curve(dexp(x, rate = theta), 
+            from = 0, 
+            to = 6, 
+            n = 2000, 
+            ylab = "f(x | θ)", 
+            main = "Density of Exponential(θ)",
+            bty = "n",
+            yaxs = "i", 
+            xaxt = "n",
+            yaxt = "n",
+            lwd = 2,
+            xlim = c(0, 4),
+            ylim = c(-0.05, 6))
+      axis(1, pos = 0)
+      axis(2, at = seq(0, 6, by = 1))
+      mtext("θ", side = 2, at = theta, line = 2, col = "blue")
+      #points(theta, dnorm(theta, mean = theta, sd = 1), type = "h", col = "blue", lwd = 2, lty = 2)
+      points(X, numeric(n), col = "red", pch = 19, cex = 0.75)
+      points(X, dexp(X, rate = theta), type = "h", lty = 3, col = "darkgrey")
+      points(X, dexp(X, rate = theta), col = "red", pch = 19, cex = 0.75)
+      
+      # =============================================
+      # plot the likelihood function
+      # =============================================
+      
+      M &lt;- 2000
+      theta_grid &lt;- seq(0, 6, length.out = M)
+      L_grid &lt;- numeric(M)
+      for(i in 1:M){
+        L_grid[i] &lt;- prod(dexp(X, rate = theta_grid[i]))
+      }
+      plot(theta_grid, L_grid, 
+           type = "l", 
+           main = "Likelihood function", 
+           xlab = expression(theta), 
+           ylab = "L(θ)",
+           col = "salmon",
+           bty = "n", lwd = 2)
+      points(theta, prod(dexp(X, rate = theta)), col = "red", pch = 19)
+      points(theta, prod(dexp(X, rate = theta)), type = "h", lty = 3, "darkgrey")
+      
+    }
+    
+  })
+}
+
+shinyApp(ui, server)</a></code></pre>
+<p>So to summarize: we seek that value of <span class="math inline">\(\theta\)</span> that gives the best fitting density curve, and we can measure fit with the product of density values. Each value fo <span class="math inline">\(\theta\)</span> gives a new product, and this relationship can be summarized by the likelihood function. If our goal is to find the value of the <span class="math inline">\(\theta\)</span> that best fits the data, we can do that by finding the value of <span class="math inline">\(\theta\)</span> that maximizes the likelihood function:</p>
+<p><span class="math display">\[
+\hat{\theta}_n=\arg\max\,L(\theta;\,X_{1:n})=\arg\max\,\prod_{i=1}^nf(X_i;\,\theta).
+\]</span></p>
+<p>In the app above you can perform the maximization by eye, but in general we do it mathematically. In other words, we reduce the problem of estimation to a Calc 1 problem: take the derivative, set it equal to zero, solve for the critical points, classify them using the second derivative test.</p>
+<p>On a technical level, it is important to recognize that maximizing the likelihood function will give you the same result as maximizing the log-likelihood function because the natural-log is an order-preserving function:</p>
+<p><span class="math display">\[
+\ell(\theta;\,X_{1:n})=\ln L(\theta;\,X_{1:n})=\ln\prod_{i=1}^nf(X_i;\,\theta)=\sum\limits_{i=1}^n\ln f(X_i;\,\theta).
+\]</span></p>
+<p>So, when performing maximum likelihood calculations, it is often easier to work with the log-likelihood, and so we do that instead:</p>
+<p><span class="math display">\[
+\hat{\theta}_n=\arg\max\,L(\theta;\,X_{1:n})=\arg\max\,\sum\limits_{i=1}^n\ln f(X_i;\,\theta).
+\]</span></p>
+<p>You get the same estimate either way, but applying the log turns the big product into a big sum, which is generally easier to work with, differentiate, etc.</p>
+<section id="main-idea" class="level1"><h1>Main idea</h1>
 <p>Want to select the parameter value that places the curve</p>
 <p>If the curve places high density on regions where we actually observed data, that’s good.</p>
 <p>the sum of the heights? the biggest height? the product?</p>
 <p>0 times 100 and 0 times 1000 are both still zero. So it doesn’t matter how</p>
 <p>but second the product is interpretable. the product is the joint density of the observed data</p>
-</section>
-<section id="maximum-likelihood-estimation" class="level1">
-<h1>Maximum likelihood estimation</h1>
+</section><section id="maximum-likelihood-estimation" class="level1"><h1>Maximum likelihood estimation</h1>
 <p>If you take a course in statistical theory like STA 332, you learn that the maximum likelihood estimator has good statistical properties in general. So no matter what distribution family you’re working with, you can count on the following to be true:</p>
-</section>
-<section id="example-exponential-distribution" class="level1">
-<h1>Example: exponential distribution</h1>
-</section>
-<section id="example-distribution-from-midterm-2" class="level1">
-<h1>Example: distribution from Midterm 2</h1>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1011,8 +1301,7 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -1024,8 +1313,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
