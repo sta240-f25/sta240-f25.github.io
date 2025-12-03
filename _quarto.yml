@@ -143,6 +143,8 @@ website:
             text: Gamma
           - href: distributions/continuous-inverse-gamma.qmd
             text: Inverse gamma
+          - href: distributions/continuous-beta.qmd
+            text: Beta
       - section: "Problem Sets"
         contents:
           - href: problems/pset-0.qmd

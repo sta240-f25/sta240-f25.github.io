@@ -1,0 +1,85 @@
+---
+title: "Beta distribution"
+format: html
+filters:
+  - shinylive
+---
+
+The beta distribution plays many roles in probability and statistics. One of them is as the *conjugate prior* for the Bernoulli and geometric distributions. These distributions have one parameter $p$, the probability of success for some binary trial. You can pick a particular beta distribution to represent your beliefs about where the unknown $p$ is likely to lie.
+
+## Basic properties
+
+The beta has bounded range, so all moments are finite. Sadly, we do not have closed-form expressions for the cdf or the mgf.
+
+|  |        |
+|------|--------------------|
+| **Notation** | $X\sim\text{Beta}(\alpha,\,\beta)$  |
+| **Range** | $(0,\,1)$ |
+| **Parameter space** | $\alpha,\,\beta>0$ |
+| **PDF** | $f(x)=\begin{cases}\frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}x^{\alpha-1}(1-x)^{\beta-1} &0<x<1\\0 & \text{else}.\end{cases}$ |
+| **Expectation** | $\frac{\alpha}{\alpha+\beta}$ |
+| **Variance** | $\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}$ |
+
+
+## `R` commands
+
+[Here](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Beta.html) is the documentation for the suite of commands that let you work with the beta distribution in `R`:
+
+```{r}
+#| eval: false
+dbeta(x, shape1, shape2) # PDF
+pbeta(q, shape1, shape2) # CDF: P(X <= q)
+qbeta(p, shape1, shape2) # quantile function (inverse CDF)
+rbeta(n, shape1, shape2) # random numbers
+```
+
+## Play around!
+
+```{shinylive-r}
+#| standalone: true
+#| viewerHeight: 700
+library(shiny)
+
+ui <- fluidPage(
+  titlePanel("Beta Distribution Viewer"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("alpha", "Alpha (shape1):",
+                  min = 0.5, max = 10, value = 2, step = 0.1),
+      sliderInput("beta", "Beta (shape2):",
+                  min = 0.5, max = 10, value = 2, step = 0.1)
+    ),
+    
+    mainPanel(
+      plotOutput("betaPlot", height = "600px")
+    )
+  )
+)
+
+server <- function(input, output, session) {
+  
+  output$betaPlot <- renderPlot({
+    a <- input$alpha
+    b <- input$beta
+    x <- seq(0, 1, length.out = 500)
+    
+    par(mfrow = c(2,1), mar = c(4,4,2,1))
+    
+    ## --- CDF ---
+    plot(x, pbeta(x, a, b), type = "l", lwd = 2,
+         xlab = "", ylab = "CDF", main = "Beta CDF",
+         ylim = c(0,1))
+    
+    ## --- PDF ---
+    plot(x, dbeta(x, a, b), type = "l", lwd = 2,
+         xlab = "x", ylab = "PDF", main = "Beta PDF",
+         ylim = c(0,7))   # fixed y-axis range
+  })
+}
+
+shinyApp(ui, server)
+
+```
+
+## Derivations
