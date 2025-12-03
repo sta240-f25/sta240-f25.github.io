@@ -95,7 +95,7 @@ window.Quarto = {
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
 <meta property="og:image" content="https://sta240-f25.github.io/lecture-notes/sta240-notes-17-mle-intro_files/figure-html/unnamed-chunk-1-1.png">
 <meta property="og:site_name" content="STA 240 Fall 2025">
-<meta property="og:image:height" content="1344">
+<meta property="og:image:height" content="1008">
 <meta property="og:image:width" content="1344">
 </head>
 <body class="nav-sidebar docked quarto-light">
@@ -606,15 +606,23 @@ X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}f_{\theta}.
 X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
 \]</span></p>
 <p><span class="math inline">\(\theta\)</span> could be any real number, so suffice it to say, there are a lot of possible guesses to choose from. Which is best, and how do we measure that? Every possible value of <span class="math inline">\(\theta\)</span> gives us a different density curve. Here are three possible guesses:</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="sta240-notes-17-mle-intro_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="sta240-notes-17-mle-intro_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>We can probably agree that blah is best. Why? Because that curve assigns the highest density to the data we actually saw. Notice that in each picture, the data are the same. The observations are the observations. The numbers in the your spreadsheet don’t change. What changes is our guess at <span class="math inline">\(\theta\)</span> and the associated curve. The goal of estimation is to search through all possible values of <span class="math inline">\(\theta\)</span> and find the one that gives the best fitting curve. How do we measure “best fitting”? We look at the density that the curve assigns to all the data points. Revisiting the cartoons above, for a given choice of <span class="math inline">\(\theta\)</span> each observation <span class="math inline">\(X_i\)</span> has a density value <span class="math inline">\(f(X_i;\,\theta)\)</span> associated with it, and this corresponds to the vertical gap on the picture:</p>
+<p>We can probably agree that <span class="math inline">\(\theta = 2\)</span> is best guess among these options. Why? Because that curve assigns the highest density to the data we actually saw (the red dots on the number line). Notice that in each picture, the data are the same. The observations are the observations. The numbers in the your spreadsheet don’t change. What changes is our guess at <span class="math inline">\(\theta\)</span> and the associated curve. The goal of estimation is to search through all possible values of <span class="math inline">\(\theta\)</span> and find the one that gives the best fitting curve. How do we measure “best fitting”? We look at the density that the curve assigns to all the data points. Revisiting the cartoons above, for a given choice of <span class="math inline">\(\theta\)</span>, each observation <span class="math inline">\(X_i\)</span> has a density value <span class="math inline">\(f(X_i;\,\theta)\)</span> associated with it, and this corresponds to the vertical gap on the picture:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="sta240-notes-17-mle-intro_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>We want to pick the parameter and associated curve that makes these vertical gaps as large as possible. To boil everything down to a single number measure of the goodness-of-fit, we look at the <em>product</em> of the vertical gaps:</p>
 <p><span class="math display">\[
 \prod_{i=1}^nf(X_i;\,\theta)=f(X_1;\,\theta)\times f(X_2;\,\theta)\times...\times f(X_n;\,\theta)
@@ -914,7 +922,7 @@ L(\theta;\,X_{1:n})=\prod_{i=1}^nf(X_i;\,\theta)
 <li>The MLE is consistent:</li>
 <li>The MLE is asymptotically normal, which allows you to compute approximate confidence intervals.</li>
 </ul>
-<p>The MLE may or may not be biased. It depends on the distribution family you are working with.</p>
+<p>The MLE may or may not be biased. It depends on the distribution family you are working with, because the estimator is consistet, whatever bias there is will eventually go away as you collect more data. How fast? It depends. Welcome to statistical theory!</p>
 </div>
 </div>
 
