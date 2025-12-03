@@ -578,13 +578,8 @@ window.Quarto = {
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
-   
-  <ul>
-<li><a href="#main-idea" id="toc-main-idea" class="nav-link active" data-scroll-target="#main-idea">Main idea</a></li>
-  <li><a href="#maximum-likelihood-estimation" id="toc-maximum-likelihood-estimation" class="nav-link" data-scroll-target="#maximum-likelihood-estimation">Maximum likelihood estimation</a></li>
-  </ul></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
@@ -602,7 +597,7 @@ window.Quarto = {
   
 
 
-</header><p>In parameteric statistics, we observe iid data from some parametric distribution</p>
+</header><p>In parametric statistics, we observe iid data from some parametric distribution</p>
 <p><span class="math display">\[
 X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}f_{\theta}.
 \]</span></p>
@@ -610,7 +605,7 @@ X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}f_{\theta}.
 <p><span class="math display">\[
 X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
 \]</span></p>
-<p><span class="math inline">\(\theta\)</span> could be any real number, so suffice it to say, there are a lot of possible guesses to choose from? Which is best, and how do we measure that? Every possible value of <span class="math inline">\(\theta\)</span> gives us a different density curve. Here are three possible guesses:</p>
+<p><span class="math inline">\(\theta\)</span> could be any real number, so suffice it to say, there are a lot of possible guesses to choose from. Which is best, and how do we measure that? Every possible value of <span class="math inline">\(\theta\)</span> gives us a different density curve. Here are three possible guesses:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -624,12 +619,12 @@ X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
 <p><span class="math display">\[
 \prod_{i=1}^nf(X_i;\,\theta)=f(X_1;\,\theta)\times f(X_2;\,\theta)\times...\times f(X_n;\,\theta)
 \]</span></p>
-<p>We look at the product instead of the sum or the max for two reasons. One, for the product to be large, we need the fit for each observation to be large. If any one of them is zero or very close to zero, it zeros out the whole product, no matter how good the fit is for the others. Zero times one hundred and zero times one thousand are both zero. So the product rewards good overall fit for all observations instead of just super good fit for one or two. Second, the product has an important probabilistic interpretation. Because we assume that the data are iid, the joint distribution of all <span class="math inline">\(n\)</span> of the observations is the product of marginals by independence, and the marginals all have the same form by identical distribution:</p>
+<p>We look at the product instead of the sum or the max for two reasons. One, for the product to be large, we need the fit for each observation to be decent. If any one of them is zero or very close to zero, it zeros out the whole product, no matter how good the fit is for the others (zero times one hundred and zero times one thousand are both zero). So the product rewards good overall fit for all observations instead of just super good fit for one or two. Second, the product has an important probabilistic interpretation. Because we assume that the data are iid, the joint distribution of all <span class="math inline">\(n\)</span> of the observations is the product of marginals by independence, and the marginals all have the same form by identical distribution:</p>
 <p><span class="math display">\[
 f(x_1,\,x_2,\,...,\,x_n;\,\theta)=\prod_{i=1}^nf_i(x_i;\,\theta)=\prod_{i=1}^nf(x_i;\,\theta).
 \]</span></p>
 <p>So our goodness-of-fit criteria is the joint density of the observed data.</p>
-<p>As we saw in the cartoons above, if you change you guess of <span class="math inline">\(\theta\)</span>, you change the curve, you change the vertical gaps, and you change the goodness-of-fit. The observed data are not changing, but the guess for <span class="math inline">\(\theta\)</span> is. For every possible value of <span class="math inline">\(\theta\)</span>, you get a different goodness-of-fit measure (the product of vertical gaps), and you can summarize this with the <strong>likelihood function</strong>:</p>
+<p>As we saw in the cartoons above, if you change your guess of <span class="math inline">\(\theta\)</span>, you change the curve, you change the vertical gaps, and you change the goodness-of-fit. The observed data are not changing, but the guess for <span class="math inline">\(\theta\)</span> is. For every possible value of <span class="math inline">\(\theta\)</span>, you get a different goodness-of-fit measure (the product of vertical gaps), and you can summarize this with the <strong>likelihood function</strong>:</p>
 <p><span class="math display">\[
 L(\theta;\,X_{1:n})=\prod_{i=1}^nf(X_i;\,\theta).
 \]</span></p>
@@ -877,31 +872,55 @@ server &lt;- function(input, output, session) {
 }
 
 shinyApp(ui, server)</a></code></pre>
-<p>So to summarize: we seek that value of <span class="math inline">\(\theta\)</span> that gives the best fitting density curve, and we can measure fit with the product of density values. Each value fo <span class="math inline">\(\theta\)</span> gives a new product, and this relationship can be summarized by the likelihood function. If our goal is to find the value of the <span class="math inline">\(\theta\)</span> that best fits the data, we can do that by finding the value of <span class="math inline">\(\theta\)</span> that maximizes the likelihood function:</p>
+<p>So to summarize: we seek the value of <span class="math inline">\(\theta\)</span> that gives the best fitting density curve, and we can measure fit with the product of density values. Each value of <span class="math inline">\(\theta\)</span> gives a new product, and this relationship can be summarized by the likelihood function. If our goal is to find the value of the <span class="math inline">\(\theta\)</span> that best fits the data, we can do that by finding the value of <span class="math inline">\(\theta\)</span> that maximizes the likelihood function:</p>
 <p><span class="math display">\[
-\hat{\theta}_n=\arg\max\,L(\theta;\,X_{1:n})=\arg\max\,\prod_{i=1}^nf(X_i;\,\theta).
+\hat{\theta}_n=\underset{\theta}{\arg\max}\,L(\theta;\,X_{1:n})=\underset{\theta}{\arg\max}\,\prod_{i=1}^nf(X_i;\,\theta).
 \]</span></p>
-<p>In the app above you can perform the maximization by eye, but in general we do it mathematically. In other words, we reduce the problem of estimation to a Calc 1 problem: take the derivative, set it equal to zero, solve for the critical points, classify them using the second derivative test.</p>
+<p>In the app above you can perform the maximization by eye, but in general we do it mathematically. In other words, we reduce the problem of estimation to a Calc 1 problem: take the derivative, set it equal to zero, solve for the critical points, classify them using the second derivative test, all that jazz. See <a href="https://sta240-f25.github.io/math/differentiation.html#optimization">here</a> if you want a refresher on how that goes.</p>
 <p>On a technical level, it is important to recognize that maximizing the likelihood function will give you the same result as maximizing the log-likelihood function because the natural-log is an order-preserving function:</p>
 <p><span class="math display">\[
 \ell(\theta;\,X_{1:n})=\ln L(\theta;\,X_{1:n})=\ln\prod_{i=1}^nf(X_i;\,\theta)=\sum\limits_{i=1}^n\ln f(X_i;\,\theta).
 \]</span></p>
 <p>So, when performing maximum likelihood calculations, it is often easier to work with the log-likelihood, and so we do that instead:</p>
 <p><span class="math display">\[
-\hat{\theta}_n=\arg\max\,L(\theta;\,X_{1:n})=\arg\max\,\sum\limits_{i=1}^n\ln f(X_i;\,\theta).
+\hat{\theta}_n=\underset{\theta}{\arg\max}\,L(\theta;\,X_{1:n})=\underset{\theta}{\arg\max}\,\sum\limits_{i=1}^n\ln f(X_i;\,\theta).
 \]</span></p>
-<p>You get the same estimate either way, but applying the log turns the big product into a big sum, which is generally easier to work with, differentiate, etc.</p>
-<section id="main-idea" class="level1"><h1>Main idea</h1>
-<p>Want to select the parameter value that places the curve</p>
-<p>If the curve places high density on regions where we actually observed data, that’s good.</p>
-<p>the sum of the heights? the biggest height? the product?</p>
-<p>0 times 100 and 0 times 1000 are both still zero. So it doesn’t matter how</p>
-<p>but second the product is interpretable. the product is the joint density of the observed data</p>
-</section><section id="maximum-likelihood-estimation" class="level1"><h1>Maximum likelihood estimation</h1>
-<p>If you take a course in statistical theory like STA 332, you learn that the maximum likelihood estimator has good statistical properties in general. So no matter what distribution family you’re working with, you can count on the following to be true:</p>
+<p>You get the same estimate either way, but applying the log turns the big product into a big sum, which is generally easier to differentiate. Lastly, notice that we write “argmax” and not “max.” This is because we don’t care what the biggest value of <span class="math inline">\(L\)</span> actually is. We just care where it occurs. So we want “the argument that does the maximizing.”</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+MLE summary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We have data from some parametric family of probability distributions:</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}f(x;\,\theta).
+\]</span></p>
+<p>So <span class="math inline">\(f\)</span> is the PDF or PMF for the distribution that all of the <span class="math inline">\(X_i\)</span> share, and <span class="math inline">\(\theta\)</span> is the value of the parameter, which we do not know. The <em>likelihood function</em> measures how well a guess of <span class="math inline">\(\theta\)</span> fits the observed data:</p>
+<p><span class="math display">\[
+L(\theta;\,X_{1:n})=\prod_{i=1}^nf(X_i;\,\theta)
+\]</span></p>
+<p>To get the best-fitting estimate, we find the value that maximizes the likelihood function:</p>
+<p><span class="math display">\[
+\hat{\theta}_n=\underset{\theta}{\arg\max}\,L(\theta;\,X_{1:n}).
+\]</span></p>
+<p>This is the <strong>maximum likelihood estimator</strong> (<strong>MLE</strong>). You get the same solution if you maximize the <em>log-likelihood function</em>, and this is often easier to accomplish mathematically.</p>
+<p>If you take a course in statistical theory like STA 332, you learn that the maximum likelihood estimator has good statistical properties in general. So no matter what distribution family you’re working with (assuming certain technical regularity conditions are satisfied), you can count on the following to be true:</p>
+<ul>
+<li>The MLE is consistent:</li>
+<li>The MLE is asymptotically normal, which allows you to compute approximate confidence intervals.</li>
+</ul>
+<p>The MLE may or may not be biased. It depends on the distribution family you are working with.</p>
+</div>
+</div>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
