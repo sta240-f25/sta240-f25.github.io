@@ -606,6 +606,8 @@ window.Quarto = {
   <li><a href="#task-1" id="toc-task-1" class="nav-link" data-scroll-target="#task-1">Task 1</a></li>
   <li><a href="#task-2" id="toc-task-2" class="nav-link" data-scroll-target="#task-2">Task 2</a></li>
   <li><a href="#task-3" id="toc-task-3" class="nav-link" data-scroll-target="#task-3">Task 3</a></li>
+  <li><a href="#task-4" id="toc-task-4" class="nav-link" data-scroll-target="#task-4">Task 4</a></li>
+  <li><a href="#task-5" id="toc-task-5" class="nav-link" data-scroll-target="#task-5">Task 5</a></li>
   <li><a href="#play-around" id="toc-play-around" class="nav-link" data-scroll-target="#play-around">Play around!</a></li>
   </ul>
 </nav>
@@ -706,6 +708,10 @@ Write-up instructions
 </section>
 <section id="task-2" class="level1">
 <h1>Task 2</h1>
+<p>Compute the mean, bias, variance, and MSE of the estimator and comment on its statistical properties.</p>
+</section>
+<section id="task-3" class="level1">
+<h1>Task 3</h1>
 <p>The rate parameter <span class="math inline">\(\theta&gt;0\)</span> is a positive real number, so if we want to perform a Bayesian analysis, we need a continuous probability distribution on positive reals. The gamma family is a convenient choice for this, so consider the Bayesian model:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -716,9 +722,14 @@ X_1,\,X_2,\,...,\,X_n\mid\theta&amp;\overset{\text{iid}}{\sim}\text{Poisson}(\th
 \]</span></p>
 <p>Derive the posterior distribution.</p>
 </section>
-<section id="task-3" class="level1">
-<h1>Task 3</h1>
+<section id="task-4" class="level1">
+<h1>Task 4</h1>
 <p>Based on your answer from the previous task, show that the posterior mean is a convex combination of the prior mean and the maximum likelihood estimator that you derived earlier.</p>
+</section>
+<section id="task-5" class="level1">
+<h1>Task 5</h1>
+<p>Ignoring that we ever did a Bayesian analysis, treat the posterior mean formula from the previous task as a new <em>classical</em> estimator for <span class="math inline">\(\theta\)</span>. It’s just a function of the data at the end of the day.</p>
+<p>What are the mean, bias, and variance of the posterior mean? How do these compare to the pure MLE? Are there circumstances under which this new estimator would be preferred to the pure MLE?</p>
 </section>
 <section id="play-around" class="level1">
 <h1>Play around!</h1>
