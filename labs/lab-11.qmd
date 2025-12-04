@@ -46,6 +46,10 @@ Compute the maximum likelihood estimator for $\theta>0$ in the Poisson distribut
 
 # Task 2
 
+Compute the mean, bias, variance, and MSE of the estimator and comment on its statistical properties.
+
+# Task 3
+
 The rate parameter $\theta>0$ is a positive real number, so if we want to perform a Bayesian analysis, we need a continuous probability distribution on positive reals. The gamma family is a convenient choice for this, so consider the Bayesian model:
 
 $$
@@ -59,9 +63,15 @@ $$
 Derive the posterior distribution.
 
 
-# Task 3
+# Task 4
 
 Based on your answer from the previous task, show that the posterior mean is a convex combination of the prior mean and the maximum likelihood estimator that you derived earlier.
+
+# Task 5
+
+Ignoring that we ever did a Bayesian analysis, treat the posterior mean formula from the previous task as a new *classical* estimator for $\theta$. It's just a function of the data at the end of the day. 
+
+What are the mean, bias, and variance of the posterior mean? How do these compare to the pure MLE? Are there circumstances under which this new estimator would be preferred to the pure MLE?
 
 
 # Play around!
