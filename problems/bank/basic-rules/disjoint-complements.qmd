@@ -1,0 +1,2 @@
+Suppose the events $A$ and $B$ are disjoint. Under what conditions are $A^{c}$ and $B^{c}$ also disjoint events?
+

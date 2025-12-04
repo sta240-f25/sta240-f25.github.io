@@ -1,0 +1,15 @@
+Here is a cdf for some nonnegative random variable $X$:
+
+$$
+F(x)
+=
+\begin{cases}
+1-\exp(-\sqrt[3]{x}) & x\geq 0 \\
+0 & \text{else}.
+\end{cases}
+$$
+
+a.  What is $P(1 < X <8)$?
+b.  What is the pdf of $X$?
+c.  Compute $E(X^n)$ for any $n\in\mathbb{N}$.
+d.  What is the variance of $X$?

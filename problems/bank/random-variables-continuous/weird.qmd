@@ -1,0 +1,10 @@
+Here is the goofy pdf of some nonnegative random variable $X$:
+
+$$
+f(x)
+=
+e^{1-e^x+x},\quad x\geq 0.
+$$
+
+a.  Compute the cdf of $X$;
+b.  Compute the median of $X$.

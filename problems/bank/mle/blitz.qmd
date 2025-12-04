@@ -1,0 +1,7 @@
+Blitz practice. For each of these, set up the (log-)likelihood function and compute the maximum likelihood estimator (MLE).
+
+a. 
+b. 
+c. 
+d. 
+e. 

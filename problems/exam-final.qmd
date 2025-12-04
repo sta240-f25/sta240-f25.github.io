@@ -1,13 +1,13 @@
 ---
 title: "Final Exam Study Guide"
-draft: false
+draft: true
 ---
 
-Our final exam is **Friday December 12 from 9:00 AM to 12:00 PM**. There will be 11 questions, and they will break down as follows:
+Our final exam is **Friday December 12 from 9:00 AM to 12:00 PM**. There will be 11 problems, and they will break down as follows:
 
 0.  (an undisclosed check on your visual intuition)
 1.  Probability spaces and rules
-2.  Counting
+2.  Counting (ugh!)
 3.  Conditional probability and independence
 4.  Discrete random variables
 5.  Absolutely continuous random variables
@@ -17,4 +17,185 @@ Our final exam is **Friday December 12 from 9:00 AM to 12:00 PM**. There will be
 9.  Maximum likelihood estimation
 10. Bayesian inference
 
-Practice problems coming soon...
+Problems 0 - 8 will be similar to the midterms. Since you've had more time to live with this material, I reserve the right to include problems that might stretch you a bit. For Problems 9 and 10, I assure you there will be no surprises. You can expect problems that are exactly like the examples you've seen in lecture, lab, Problem Set 7, and this study guide. The distributions may be different, but the format and the steps are the same. If you work every practice problem from scratch on your own and then study the solutions carefully, you are ready.
+
+::: callout-note
+## Reminder
+
+If your final exam score is better than your lowest midterm score, I will replace the low midterm with the final.
+:::
+
+# 1. Probability spaces and rules
+
+## Problem 1
+
+{{< include bank/basic-rules/disjoint-complements.qmd >}}
+
+## Problem 2
+
+## Want more review?
+
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-01-probability-spaces.pdf) on axioms and rules;
+- [Problem Set 1](https://sta240-f25.github.io/problems/pset-1.html): problems 4 - 8;
+- [Problem Set 2](https://sta240-f25.github.io/problems/pset-2.html): problems 2 - 3;
+- Midterm 1 Study Guide
+- Midterm 1
+
+# 2. Counting
+
+## Problem 3
+
+## Problem 4
+
+## Want more review?
+
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-02-counting-theory.pdf) on counting theory;
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-03-counting-examples.pdf) with birthday problem and other worked examples;
+- [Lab 2](https://sta240-f25.github.io/labs/lab-2.html) worked examples;
+- [Problem Set 1](https://sta240-f25.github.io/problems/pset-1.html): problems 9 - 10;
+- [Problem Set 2](https://sta240-f25.github.io/problems/pset-2.html): problems 4 - 8;
+- [Problem Set 3](https://sta240-f25.github.io/problems/pset-3.html): problems 2 - 3;
+- Odd-numbered exercises in DeGroot & Schervish Chapters 1.6 - 1.8, 1.12.
+
+
+# 3. Conditional probability and independence
+
+## Problem 5
+
+## Problem 6
+
+{{< include bank/conditional-probability/dgs-exercise-2-3-1.qmd >}}
+
+## Want more review?
+
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-04-conditional-probability.pdf) with worked examples;
+    - The lil' [app](https://sta240-f25.github.io/apps/disease-testing.html) on disease testing;
+- [Problem Set 2](https://sta240-f25.github.io/problems/pset-2.html): problems 9 - 10;
+- [Problem Set 3](https://sta240-f25.github.io/problems/pset-3.html): problems 4 - 8;
+- [Problem Set 4](https://sta240-f25.github.io/problems/pset-4.html): problems 2 - 3;
+- Odd-numbered exercises in DeGroot & Schervish Chapter 2.
+
+
+# 4. Discrete random variables
+
+## Problem 7
+
+## Problem 8
+
+## Want more review?
+
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-05-random-variables.pdf) introducing random variables;
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-06-discrete-families.pdf) on special families of discrete random variables;
+- [Lecture notes](https://sta240-f25.github.io/lecture-notes/sta240-notes-07-expectation.pdf) on expected value;
+- [Lab 5](https://sta240-f25.github.io/labs/lab-5.html) exercises;
+- [Problem Set 2](https://sta240-f25.github.io/problems/pset-2.html): problem 7;
+- [Problem Set 3](https://sta240-f25.github.io/problems/pset-3.html): problems 9 - 10;
+- [Problem Set 4](https://sta240-f25.github.io/problems/pset-4.html): problems 4 - 10.
+
+
+# 5. Absolutely continuous random variables
+
+## Problem 9
+
+{{< include bank/random-variables-continuous/another-weibull.qmd >}}
+
+## Problem 10
+
+{{< include bank/random-variables-continuous/weird.qmd >}}
+
+## Want more review?
+
+
+- Examples from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-10-absolutely-continuous.pdf);
+- [Lab 8](https://sta240-f25.github.io/labs/lab-8.html);
+- [Problem Set 5](https://sta240-f25.github.io/problems/pset-5.html): problems 2 - 8;
+- [Problem Set 6](https://sta240-f25.github.io/problems/pset-6.html): problems 1 - 2;
+- Odd-numbered exercises in DeGroot & Schervish Chapters 3.2, 5.6, 5.7.
+
+
+# 6. The moment-generating function
+
+## Problem 11
+
+## Problem 12
+
+## Want more review?
+
+- worked examples from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-11-moments.pdf); 
+- new theorems and examples from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf) about updating MGFs under linear transformations;
+- [Problem Set 5](https://sta240-f25.github.io/problems/pset-5.html): problems 9 - 10;
+- [Problem Set 6](https://sta240-f25.github.io/problems/pset-6.html): problems 3 - 5.
+- PSET 7 1, 2
+- Odd-numbered exercises in DeGroot & Schervish Chapter 4.4.
+
+
+# 7. Transformations of random variables
+
+## Problem 13
+
+{{< include bank/transformations/twerkout-3.qmd >}}
+
+## Want more review?
+
+- [Lab 7](https://sta240-f25.github.io/labs/lab-7.html);
+- Problem Set 6: [problem 6](https://sta240-f25.github.io/problems/pset-6.html#problem-6);
+- Read DeGroot & Schervish Chapter 3.8 and do the odd-numbered exercises.
+- Midterm 2 Study Guide
+- Midterm 2 problem 
+
+
+# 8. Joint distributions
+
+## Problem 14
+
+## Problem 15
+
+## Want more review?
+
+- jointly discrete examples from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-12-joint-discrete.pdf);
+- jointly contnuous examples from [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-13-joint-continuous.pdf);
+- mixed Poisson-gamma example from [Lab 9](https://sta240-f25.github.io/labs/lab-9.html);
+- [Problem Set 6](https://sta240-f25.github.io/problems/pset-6.html): problems 7 - 10;
+- Odd-numbered exercises in DeGroot & Schervish Chapters 3.4 - 3.6;
+- study guide 
+- midterm
+
+
+# 9. Maximum likelihood estimation
+
+## Problem 16
+
+{{< include bank/mle/mle-normal-mean.qmd >}}
+
+## Problem 17
+
+full monty. weibull?
+
+## Want more review?
+
+- [Lecture examples](https://sta240-f25.github.io/lecture-notes/sta240-notes-18-mle-examples.html);
+- [Lab 10](https://sta240-f25.github.io/labs/lab-10.html);
+- [PSET 7 problems 3 and 4](https://sta240-f25.github.io/problems/pset-7.html).
+
+
+# 10. Bayesian inference
+
+## Problem 18
+
+{{< include bank/bayes/normal-normal.qmd >}}
+
+## Problem 19
+
+{{< include bank/bayes/inv-gamma-normal.qmd >}}
+
+## Problem 20
+
+{{< include bank/bayes/gamma-lomax.qmd >}}
+
+## Want more review?
+
+- [Lecture examples](https://sta240-f25.github.io/lecture-notes/sta240-notes-19-bayes.pdf);
+- [Lab 11](https://sta240-f25.github.io/labs/lab-11.html);
+- [PSET 7 problems 5 and 6](https://sta240-f25.github.io/problems/pset-7.html).
+
+
