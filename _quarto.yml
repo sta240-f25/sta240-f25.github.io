@@ -185,14 +185,16 @@ website:
             text: Lab 9
           - href: labs/lab-10.qmd
             text: Lab 10
+          - href: labs/lab-11.qmd
+            text: Lab 11
       - section: "Exam Study Guides"
         contents:
           - href: problems/exam-midterm-1.qmd
             text: Midterm 1
           - href: problems/exam-midterm-2.qmd
             text: Midterm 2
-          - href: problems/exam-final.qmd
-            text: Final
+          #- href: problems/exam-final.qmd
+          #  text: Final
             
   page-footer:
     right: 'This page is built with [Quarto](https://quarto.org/).'
