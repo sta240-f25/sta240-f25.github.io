@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Limits and continuity – STA 240 Fall 2025</title>
+<title>direct-mgf – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../math/series.html" rel="next">
-<link href="../math/integration.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -99,12 +97,9 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Limits and continuity – STA 240 Fall 2025">
+<meta property="og:title" content="STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
-<meta property="og:image" content="https://sta240-f25.github.io/math/images/continuity-types.png">
 <meta property="og:site_name" content="STA 240 Fall 2025">
-<meta property="og:image:height" content="540">
-<meta property="og:image:width" content="960">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -116,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Helpers</a></li><li class="breadcrumb-item"><a href="../math/limits.html">Limits and continuity</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -130,8 +125,8 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../../../index.html" class="sidebar-logo-link">
+      <img src="../../../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
@@ -158,43 +153,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching team</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Materials</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignments and grading</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Policies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">University resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
@@ -202,58 +197,58 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Math Helpers</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/logexp.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/logexp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exponents and logarithms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/differentiation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/differentiation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Differentiation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/integration.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/integration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Integration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/limits.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../math/limits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limits and continuity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/series.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/series.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Infinite series</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/gamma-function.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/gamma-function.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma function</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../math/massage-and-squint.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../math/massage-and-squint.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Massage and squint</span></a>
   </div>
 </li>
@@ -270,97 +265,97 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/hello-rstudio.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/hello-rstudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The lay of the land</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/latex.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/latex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Typing math</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/math.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/math.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic math</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/vectors.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/vectors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectors</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/sample.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/sample.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><code>sample</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/if-else.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/if-else.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">if-else and logic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">for loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectorization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/rng-seed.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/rng-seed.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting a seed</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/probabilities.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/probabilities.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Computing probabilities</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/plot.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/plot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting points</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/summary-statistics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/summary-statistics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summary statistics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../explainers/histogram.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../explainers/histogram.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Histograms</span></a>
   </div>
 </li>
@@ -377,55 +372,55 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binomial</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../distributions/discrete-geometric.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../distributions/discrete-geometric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Geometric</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hypergeometric</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Poisson</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../distributions/continuous-uniform.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../distributions/continuous-uniform.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Continuous uniform</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../distributions/continuous-normal.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../distributions/continuous-normal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Normal</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../distributions/continuous-gamma.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../distributions/continuous-gamma.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../distributions/continuous-inverse-gamma.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../distributions/continuous-inverse-gamma.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Inverse gamma</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../distributions/continuous-beta.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../distributions/continuous-beta.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Beta</span></a>
   </div>
 </li>
@@ -442,49 +437,49 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/pset-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/pset-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/pset-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/pset-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/pset-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/pset-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/pset-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/pset-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/pset-5.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/pset-5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/pset-6.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/pset-6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/pset-7.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/pset-7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 7</span></a>
   </div>
 </li>
@@ -501,67 +496,67 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-5.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-6.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-7.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-8.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-9.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-9.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 9</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-10.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-10.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 10</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-11.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../labs/lab-11.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 11</span></a>
   </div>
 </li>
@@ -578,13 +573,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../problems/exam-midterm-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../problems/exam-midterm-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 2</span></a>
   </div>
 </li>
@@ -595,159 +590,28 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#limit-rules" id="toc-limit-rules" class="nav-link active" data-scroll-target="#limit-rules">Limit rules</a></li>
-  <li><a href="#indeterminate-forms-and-lhôpitals-rule" id="toc-indeterminate-forms-and-lhôpitals-rule" class="nav-link" data-scroll-target="#indeterminate-forms-and-lhôpitals-rule">Indeterminate forms and L’Hôpital’s rule</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../math/greeks.html">Math Helpers</a></li><li class="breadcrumb-item"><a href="../math/limits.html">Limits and continuity</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Limits and continuity</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>The limit of a function <span class="math inline">\(f(x)\)</span> at a point <span class="math inline">\(c\)</span> is the value that the function approaches as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span>. We denote this:</p>
+<p>A certain random variable <span class="math inline">\(X\)</span> has moment-generating function</p>
 <p><span class="math display">\[
-\lim_{x\to c}f(x).
+M(t)=\frac{e^{2t}}{1-3t},\quad t&lt;1/3.
 \]</span></p>
-<p>If the limit of the function and the actual <em>value</em> of the function agree, then the function is <strong>continuous</strong>:</p>
+<ol type="a">
+<li>Compute the mean and variance of <span class="math inline">\(X\)</span>.</li>
+<li>What is the moment generating function of the new random variable</li>
+</ol>
 <p><span class="math display">\[
-\lim_{x\to c}f(x)=f(c)
-\]</span> If a function is continuous, that makes it especially convenient to evaluate limits because it means you can just plug-in and evaluate the darn function. But as <a href="#fig-continuity" class="quarto-xref">Figure&nbsp;1</a> illustrates, not all functions are continuous. Some functions have breaks and jumps and holes that make them <strong>discontinuous</strong>.</p>
-<div id="fig-continuity" class="quarto-float quarto-figure quarto-figure-center anchored" width="60%" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-continuity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/continuity-types.png" id="fig-continuity" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" style="width:60.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-continuity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption>
-</figure>
-</div>
-<p>But not all discontinuities are created equal:</p>
-<ul>
-<li>(upper right) the function has a <em>hole</em>. The limit the function approaches (the hole), and the value of the function (the point) are different;</li>
-<li>(lower right) this function is <strong>left continuous</strong>. The value of the function and the limit <em>as you approach from the left</em> are in agreement. But there’s a jump, and the limit <em>as you approach from the right</em> is different;</li>
-<li>(lower left) this function is <strong>right continuous</strong>. The value of the function and the limit <em>as you approach from the right</em> are in agreement. But there’s a jump, and the limit <em>as you approach from the left</em> is different;</li>
-<li>(upper left) this function is just straight-up continuous. The left and the right limits both agree with the function value.</li>
-</ul>
-<section id="limit-rules" class="level2">
-<h2 class="anchored" data-anchor-id="limit-rules">Limit rules</h2>
-<p>Assume <span class="math inline">\(\lim_{x\to c}f(x)\)</span> and <span class="math inline">\(\lim_{x\to c}g(x)\)</span> exist, let <span class="math inline">\(a,\,b\in\mathbb{R}\)</span> be arbitrary constants, and let <span class="math inline">\(r&gt;0\)</span>. Then:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>rule</th>
-<th>formula</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>scaling</td>
-<td><span class="math display">\[\lim_{x\to c}[a\cdot f(x)]=a\lim_{x\to c}f(x)\]</span></td>
-</tr>
-<tr class="even">
-<td>sum/difference</td>
-<td><span class="math display">\[\lim_{x\to c}[f(x)\pm g(x)]=\lim_{x\to c}f(x)\pm\lim_{x\to c}g(x)\]</span></td>
-</tr>
-<tr class="odd">
-<td>linearity</td>
-<td><span class="math display">\[\lim_{x\to c}[a\cdot f(x)\pm b\cdot g(x)]=a\lim_{x\to c}f(x)\pm b\lim_{x\to c}g(x)\]</span></td>
-</tr>
-<tr class="even">
-<td>product</td>
-<td><span class="math display">\[\lim_{x\to c}f(x)g(x)=\left[\lim_{x\to c}f(x)\right]\left[\lim_{x\to c}g(x)\right]\]</span></td>
-</tr>
-<tr class="odd">
-<td>quotient</td>
-<td><span class="math display">\[\lim_{x\to c}\frac{f(x)}{g(x)}=\frac{\lim_{x\to c} f(x)}{\lim_{x\to c} g(x)},\quad \text{if }\lim_{x\to c} g(x)\neq0\]</span></td>
-</tr>
-<tr class="even">
-<td>power</td>
-<td><span class="math display">\[\lim_{x\to c}f(x)^r=\left[\lim_{x\to c}f(x)\right]^r,\quad \text{if }c&gt;0,\, \lim_{x\to c} f(x)\geq0\]</span></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="indeterminate-forms-and-lhôpitals-rule" class="level2">
-<h2 class="anchored" data-anchor-id="indeterminate-forms-and-lhôpitals-rule">Indeterminate forms and L’Hôpital’s rule</h2>
-<p>Most of the time, we hope that we can appeal to continuity and evaluate limits by simply “plugging-in.” But sometimes plugging in gives loony stuff:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\lim_{x\to 0}\frac{\sin x}{x}=1, &amp;\text{ but }\frac{\sin(0)}{0}=\frac{0}{0};\\
-\lim_{x\to \infty}\frac{\ln x}{x}=0, &amp;\text{ but }\frac{\ln\infty}{\infty}=\frac{\infty}{\infty}.\\
-\end{aligned}
+Y=\frac{\pi}{2}-\frac{X}{3}.
 \]</span></p>
-<p>Things like <span class="math inline">\(0/0\)</span>, <span class="math inline">\(\infty/\infty\)</span>, and <span class="math inline">\(0\times\infty\)</span> are examples of <strong>indeterminate forms</strong>. If you get one, it doesn’t necessarily mean that <a href="https://youtu.be/oDAKKQuBtDo?si=K_FrQDi0n2cnxDXr">the limit does not exist</a>. It just means that the jury is still out; it’s <em>indeterminate</em>. To continue investigating, you can use a tool called <strong>L’Hôpital’s rule</strong>. Whenever <span class="math inline">\(\lim_{x\to c}f(x)=\lim_{x\to c}g(x)=0\)</span> or <span class="math inline">\(\pm\infty\)</span>, the rule says that</p>
-<p><span class="math display">\[
-\lim_{x\to c}\frac{f(x)}{g(x)}=\lim_{x\to c}\frac{f'(x)}{g'(x)}.
-\]</span> The hope is that the new function <span class="math inline">\(f'(x)/g'(x)\)</span> will be well-behaved at <span class="math inline">\(c\)</span>, meaning you can simplify by just plugging in. However, after applying L’Hôpital’s rule once and <em>trying</em> to plug-in, you may still get an indeterminate form. In that case, you’ll have to take another round of derivatives, and maybe another after that, until the clouds finally part and the <a href="https://youtu.be/SSBWiFGzsyU?si=GKmf7QAhjyvAAK0d">sun shines upon you</a>.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Example: multiple rounds of L’Hôpital’s
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Consider:</p>
-<p><span class="math display">\[
-\lim_{x\to\infty}\frac{(\ln x)^2}{x}.
-\]</span></p>
-<p><span class="math inline">\(\lim_{x\to\infty}(\ln x)^2=\infty\)</span> and <span class="math inline">\(\lim_{x\to\infty}x=\infty\)</span>, so let’s take some derivatives:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\frac{\text{d}}{\text{d}x}(\ln x)^2&amp;=\frac{2\ln x}{x}\\
-\frac{\text{d}}{\text{d}x}x&amp;=1.
-\end{aligned}
-\]</span> The ratio of derivatives is thus <span class="math inline">\(2(\ln x)/x\)</span>, but this still gives an indeterminate form because <span class="math inline">\(\lim_{x\to\infty}2\ln x=\infty\)</span> and <span class="math inline">\(\lim_{x\to\infty}x=\infty\)</span>, so we have to go again:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\frac{\text{d}}{\text{d}x}2\ln x&amp;=\frac{2}{x}\\
-\frac{\text{d}}{\text{d}x}x&amp;=1.
-\end{aligned}
-\]</span> The ratio of these derivatives is just <span class="math inline">\(2/x\)</span>, and that goes to 0 as <span class="math inline">\(x\to \infty\)</span>. In sum,</p>
-<p><span class="math display">\[
-\lim_{x\to\infty}\frac{(\ln x)^2}{x}
-\overset{\text{L'H}}{=}
-\lim_{x\to\infty}\frac{2\ln x}{x}
-\overset{\text{L'H}}{=}
-\lim_{x\to\infty}\frac{2}{x}
-=
-0.
-\]</span></p>
-</div>
-</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1149,18 +1013,6 @@ Example: multiple rounds of L’Hôpital’s
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../math/integration.html" class="pagination-link" aria-label="Integration">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Integration</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../math/series.html" class="pagination-link" aria-label="Infinite series">
-        <span class="nav-page-text">Infinite series</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

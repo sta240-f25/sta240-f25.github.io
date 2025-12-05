@@ -599,11 +599,15 @@ window.Quarto = {
 
 
 
-<p>Consider this Bayesian model:</p>
+<p>Recall this infernal distribution family that you met on <a href="https://sta240-f25.github.io/problems/pset-6.html#problem-1">Problem Set 6</a>, Midterm 2, and again in <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-18-mle-examples.html#example-midterm-2-strikes-again">lecture</a>:</p>
+<p><span class="math display">\[
+f(x\mid \theta)=\theta(x+1)^{-(\theta+1)},\quad x&gt;0.
+\]</span></p>
+<p>We’ve done MLE for this, now let’s go Bayes. Consider this model:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \theta&amp;\sim\text{Gamma}(a_0,\,b_0)\\
-X_{1:n}\mid\theta&amp;\overset{\text{iid}}{\sim}???.
+X_{1:n}\mid\theta&amp;\overset{\text{iid}}{\sim}f(x\mid \theta).
 \end{aligned}
 \]</span></p>
 <ol type="a">

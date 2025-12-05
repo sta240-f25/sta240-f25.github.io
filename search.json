@@ -1908,6 +1908,13 @@
     ]
   },
   {
+    "objectID": "problems/bank/mle/mle-normal-mean.html",
+    "href": "problems/bank/mle/mle-normal-mean.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Consider these data:\n\\[\nX_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{N}(\\theta,\\,1).\n\\]\n\nWhat is the maximum likelihood estimator of \\(\\theta\\in\\mathbb{R}\\)?\nWhat is the sampling distribution of the estimator?\nWhat is the MSE of the estimator?\nBased on the MSE, what are the statistical properties of this estimator?"
+  },
+  {
     "objectID": "problems/bank/mle/mle-laplace.html",
     "href": "problems/bank/mle/mle-laplace.html",
     "title": "STA 240 Fall 2025",
@@ -1915,277 +1922,277 @@
     "text": "Let \\(X_1\\), \\(X_2\\), …, \\(X_n\\) be iid from some member of this parametric family:\n\\[\nf(x\\,|\\,\\theta)\n=\n\\frac{1}{2\\theta}\\exp\\left(-\\frac{|x|}{\\theta}\\right), \\quad -\\infty&lt;x&lt;\\infty.\n\\]\n\nWhat is the maximum likelihood estimator of \\(\\theta&gt;0\\)?\nWhat is the sampling distribution of the estimator?\nWhat is the MSE of the estimator?\nBased on the MSE, what are the statistical properties of this estimator?"
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/quantum.html",
-    "href": "problems/bank/random-variables-continuous/quantum.html",
+    "objectID": "problems/bank/mle/blitz.html",
+    "href": "problems/bank/mle/blitz.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Quantum mechanics has a reputation for being an intimidating branch of theoretical physics, and JZ certainly doesn’t understand a ding dong thing about it. Even so, because we have studied some basic probability theory, the mathematics of quantum mechanics is more accessible than you might guess. Behold:\nImagine a single particle at the (sub)atomic level1. A particle’s quantum state encodes information about all of its measurable properties, such as position, momentum, spin, and energy. In quantum mechanics, measuring these properties is fundamentally probabilistic. Before measurement, the particle doesn’t have a single, definite position or momentum; it has only probabilities for the possible outcomes. The quantum state of a particle is fully characterized by its wave function, and the squared magnitude of the wave function is a probability density that describes the distribution of the particle’s position, or momentum, or whatever else you wish to study. Let’s explore this in a very simple example.\nConsider a single, one-dimensional particle located somewhere in the interval \\([0,\\,L]\\). The wave function associated with the particle’s quantum state is\n\\[\n\\psi_n(x)\n=\n\\begin{cases}\nA\\cdot\\sin\\left(\\frac{n\\pi}{L}x\\right) & 0\\leq x\\leq L\\\\\n0 & \\text{else},\n\\end{cases}\n\\]\nwhere \\(A\\geq 0\\) is the amplitude, and \\(n=1,\\,2,\\,3,\\,...\\) indexes the particle’s energy level. The higher the energy level, the more “excited” the particle is. Behold:\nBecause the particle does not have a definite position before measurement, we treat the position \\(X_n\\in[0,\\,L]\\) of the particle as a continuous random variable whose probability density function is \\(f_n(x)=|\\psi_n(x)|^2\\)."
+    "text": "Blitz practice. For each of these, set up the (log-)likelihood function and compute the maximum likelihood estimator (MLE)."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/quantum.html#footnotes",
-    "href": "problems/bank/random-variables-continuous/quantum.html#footnotes",
-    "title": "STA 240 Fall 2025",
-    "section": "Footnotes",
-    "text": "Footnotes\n\nIf you’re like me, you cannot do this. Oh well.↩︎"
-  },
-  {
-    "objectID": "problems/bank/random-variables-continuous/all-moments-finite-no-mgf.html",
-    "href": "problems/bank/random-variables-continuous/all-moments-finite-no-mgf.html",
+    "objectID": "problems/bank/random-variables-continuous/expectation-short-cuts.html",
+    "href": "problems/bank/random-variables-continuous/expectation-short-cuts.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is the cdf of an absolutely continuous random variable \\(X\\):\n\\[\nF(x)\n=\n\\begin{cases}\n1-\\exp\\left(-\\sqrt{x}\\right)&x\\geq 0\\\\\n0&\\text{else}.\n\\end{cases}\n\\]\n\nWhat is \\(P(4\\leq X &lt; 9)\\)?\nWhat is the pdf of \\(X\\)?\nCompute \\(E(X^n)\\) for any \\(n\\in\\mathbb{N}\\).\nWhat is the variance of \\(X\\)?\nWhat is the median of \\(X\\)?\n\n\n\n\n\n\n\nHint\n\n\n\nAll of the moments of this distribution are finite, but nevertheless, it doesn’t have a moment-generating function (MGF). So you’ll hit a dead-end if you try using that to compute the moments. Instead, use LOTUS. It’s a subtle calculation, but it actually works out pretty nice."
+    "text": "One of the technical themes of our course is “how do I compute an expected value without wanting to vomit?” We will have many tools in our tool belt for getting this done, and you must become fluent in knowing what to use when. Below are two nifty facts that might come in handy one day.\nLet \\(X\\) be an absolutely continuous random variable with pdf \\(f\\) and cdf \\(F\\).\n\nShow that:\n\n\\[\nE(X)=\\int_0^1F^{-1}(x)\\,\\text{d} x.\n\\]\n\nIf we make the extra assumption that \\(X\\) is a non-negative random variable, show that:\n\n\\[\nE(X)=\\int_0^\\infty P(X&gt;x)\\,\\text{d} x.\n\\]\n\n\n\n\n\n\nHint\n\n\n\n\n\nThere are at least two ways to do part b. If you’ve taken multivariable calculus, you can use double integral tricks. If you haven’t taken multivariable calculus yet, try integrating by parts."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/basic-pdf-practice.html",
-    "href": "problems/bank/random-variables-continuous/basic-pdf-practice.html",
+    "objectID": "problems/bank/random-variables-continuous/a-in-terms-of-b.html",
+    "href": "problems/bank/random-variables-continuous/a-in-terms-of-b.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "An absolutely continuous random variable \\(X\\) has pdf\n\\[\nf(x)=\\begin{cases}\n\\frac{3}{22}[5 - (x-1)^2] & 1\\leq x \\leq3\\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\n\nWhat is the range of \\(X\\)?\nConfirm that \\(f\\) is a valid pdf.\nDerive the formula for the cdf of \\(X\\) and plot it.\nCompute \\(P(0.9 &lt; X &lt; 1.1)\\).\nCompute \\(E(X)\\).\nCompute \\(\\text{var}(X)\\)."
+    "text": "Here is the pdf of some absolutely continuous random variable:\n\\[\nf(x)=\\begin{cases}\nax^2e^{-bx^2} & x\\geq 0\\\\\n0 & x&lt; 0.\n\\end{cases}\n\\]\nSolve for \\(a\\) in terms of \\(b\\). So your final answer will look like\n\\[\na=\\text{``some formula including $b$ and a bunch of constants''}\n\\]"
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/minimize-expected-error.html",
-    "href": "problems/bank/random-variables-continuous/minimize-expected-error.html",
+    "objectID": "problems/bank/random-variables-continuous/pareto.html",
+    "href": "problems/bank/random-variables-continuous/pareto.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(X\\) be any absolutely continuous random variable with pdf \\(f\\) and cdf \\(F\\), and assume that \\(E[(X-a)^2]\\) and \\(E\\left[|X-a|\\right]\\) are finite for all \\(a\\in \\mathbb{R}\\).\n\nCompute and interpret\n\n\\[\na_0=\\underset{a\\in\\mathbb{R}}{\\arg\\min}\\,E[(X-a)^2].\n\\]\n\nCompute and interpret\n\n\\[\nb_0=\\underset{b\\in\\mathbb{R}}{\\arg\\min}\\,E\\left[|X-b|\\right].\n\\]"
+    "text": "Here is the cdf of an absolutely continuous random variable \\(X\\):\n\\[\nF(x;\\,\\alpha,\\,\\theta)\n=\n\\begin{cases}\n1-\\left(\\frac{\\theta}{x + \\theta}\\right)^\\alpha & x &gt;0 \\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\nThe parameters \\(\\alpha\\) and \\(\\theta\\) are just positive constants.\n\nFind the pdf of \\(X\\) and plot it for \\(\\alpha=1,\\, 2,\\, 3\\) and \\(\\theta = 1\\);\nCompute the median of \\(X\\);\nCompute \\(E(X)\\). Is it finite for all values of the parameters?\nCompute \\(\\textrm{var}(X)\\). Is it finite for all values of the parameters?\nFix \\((\\alpha,\\,\\theta) = (3,\\, 100)\\) and compute \\(P(X &gt; 75\\,|\\, X &gt; 50)\\).\n\n\n\n\n\n\n\nTip\n\n\n\nOn Problem Set 5 you met some cute alternatives for computing expected values, and they may be helpful here."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/random-point-on-line.html",
-    "href": "problems/bank/random-variables-continuous/random-point-on-line.html",
+    "objectID": "problems/bank/random-variables-continuous/another-weibull.html",
+    "href": "problems/bank/random-variables-continuous/another-weibull.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "A point is chosen at random on a line segment of length \\(L\\). Interpret this statement, and find the probability that the ratio of the shorter to the longer segment is less than \\(\\frac{1}{4}\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nIt might help to read about the continuous uniform distribution."
+    "text": "Here is a cdf for some nonnegative random variable \\(X\\):\n\\[\nF(x)\n=\n\\begin{cases}\n1-\\exp(-\\sqrt[3]{x}) & x\\geq 0 \\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\n\nWhat is \\(P(1 &lt; X &lt;8)\\)?\nWhat is the pdf of \\(X\\)?\nCompute \\(E(X^n)\\) for any \\(n\\in\\mathbb{N}\\).\nWhat is the variance of \\(X\\)?"
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/gamma-half.html",
-    "href": "problems/bank/random-variables-continuous/gamma-half.html",
+    "objectID": "problems/bank/random-variables-continuous/weird.html",
+    "href": "problems/bank/random-variables-continuous/weird.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Recall the gamma function\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\text{d}y.\n\\]\nShow that \\(\\Gamma\\left(\\frac{1}{2}\\right)=\\sqrt{\\pi}\\)."
+    "text": "Here is the goofy pdf of some nonnegative random variable \\(X\\):\n\\[\nf(x)\n=\ne^{1-e^x+x},\\quad x\\geq 0.\n\\]\n\nCompute the cdf of \\(X\\);\nCompute the median of \\(X\\)."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/continuous-cdf-g.html",
-    "href": "problems/bank/random-variables-continuous/continuous-cdf-g.html",
+    "objectID": "problems/bank/random-variables-continuous/rayleigh.html",
+    "href": "problems/bank/random-variables-continuous/rayleigh.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider this function:\n\\[\nF(x) = \\begin{cases}\n1 - e^{-g(x)} & x\\geq 0\\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\nAssume \\(g(x)\\) is continuous. I want \\(F(x)\\) to be a continuous function, and I want \\(F(x)\\) to be a valid cumulative distribution function (CDF). What properties must \\(g(x)\\) satisfy in order to make that happen? Give three examples of \\(g\\) that have these properties."
+    "text": "Consider a random variable \\(X\\) with pdf\n\\[\nf(x;\\,\\theta) =\\begin{cases}\n\\frac{x}{\\theta}e^{-\\frac{x^2}{2\\theta}} & x\\geq 0\\\\\n0 & \\text{else},\n\\end{cases}\n\\]\nwhere \\(\\theta &gt;0\\) is a parameter.\n\nCompute the CDF of \\(X\\).\nCompute the median of \\(X\\)."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/gamma-mgf.html",
-    "href": "problems/bank/random-variables-continuous/gamma-mgf.html",
+    "objectID": "problems/bank/random-variables-continuous/wald.html",
+    "href": "problems/bank/random-variables-continuous/wald.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider \\(X\\sim\\textrm{Gamma}(\\alpha,\\,\\beta)\\).\n\nFind \\(M_X(t)=E[e^{tX}]\\), the moment generating function of \\(X\\). For what values of \\(t\\) is it defined?\nUse the moment-generating function to compute \\(E(X)\\).\nUse the moment-generating function to compute \\(\\text{var}(X)\\).\nIf \\(c&gt;0\\), what is the distribution of \\(Y=cX\\)?"
+    "text": "inverse gaussian"
   },
   {
-    "objectID": "problems/bank/conditional-probability/darts.html",
-    "href": "problems/bank/conditional-probability/darts.html",
+    "objectID": "problems/bank/random-variables-continuous/gauntlet.html",
+    "href": "problems/bank/random-variables-continuous/gauntlet.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Figure 1\n\n\n\nJerry Lewis is throwing darts at the board pictured in Figure 1. It has the following properties:\n\nThe board has radius \\(r\\);\nThe board is partitioned into five rings, each with the same “thickness” \\(r/5\\);\nThe board is mounted on a wall of area \\(A\\).\n\nJerry is not very skilled. His dart is guaranteed to reach the wall and stick someplace, but beyond that, the probability that it lands in any given region is just proportional to that region’s area.\nTask: Derive a general formula for the conditional probability that a dart lands in ring \\(i\\) given that it hits the board and not the wall. Your formula should be a function of \\(i=1,\\,2,\\,3,\\,4,\\,5\\). Check that these probabilities are nonnegative and sum to one."
+    "text": "Consider a nonnegative, absolutely continuous random variable with cdf\n\\[\nF_X(x)\n=\n\\begin{cases}\n1 - \\exp\\left(-\\frac{x^2}{2}\\right) & x\\geq 0\n\\\\\n0 & x&lt;0.\n\\end{cases}\n\\]\n\nWhat is \\(P(2\\leq X\\leq 3)\\);\nWhat is the density of \\(X\\)?\nWhat is \\(E(X^n)\\) for any \\(n\\in\\mathbb{N}\\)?\nWhat is \\(\\text{var}(X)\\)?\nWhat is the median of \\(X\\)?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/face-cards.html",
-    "href": "problems/bank/conditional-probability/face-cards.html",
+    "objectID": "problems/bank/conditional-probability/conditional-independence.html",
+    "href": "problems/bank/conditional-probability/conditional-independence.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "In a standard deck of \\(52\\) cards, 3 (Jack, Queen, and King) of the 13 ranks are collectively known as the “face cards” of the deck. Recall that a standard deck of \\(52\\) cards also has \\(4\\) suits (Hearts, Diamonds, Clubs, and Spades).\nSuppose you deal out two cards from the deck. What is the probability that they are both face cards given that they are both hearts?"
+    "text": "Let \\(A\\), \\(B\\), and \\(C\\) be events with \\(P(C) &gt; 0\\). \\(A\\) and \\(B\\) are conditionally independent given \\(C\\) if and only if\n\\[\nP(A \\cap B \\mid C) = P(A \\mid C)P(B \\mid C).\n\\]\nShow that the above implies \\(P(A \\mid B\\cap C) = P(A \\mid C)\\)."
   },
   {
-    "objectID": "problems/bank/conditional-probability/independent-complements.html",
-    "href": "problems/bank/conditional-probability/independent-complements.html",
+    "objectID": "problems/bank/conditional-probability/target-practice.html",
+    "href": "problems/bank/conditional-probability/target-practice.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "If we know that \\(A\\) and \\(B\\) are independent events, show that their complements \\(A^c\\) and \\(B^c\\) are also independent events."
+    "text": "Pearl Bailey and Elaine Stritch go target shooting. Suppose that each of Pearl’s shots hits a wooden duck target with probability \\(p_1\\), while each shot of Elaine’s hits it with probability \\(p_2\\), independent of Pearl. Suppose that they shoot simultaneously at the same target. If the wooden duck is knocked over (indicating that it was hit), what is the probability that both shots hit the duck?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/bdj-encryption.html",
-    "href": "problems/bank/conditional-probability/bdj-encryption.html",
+    "objectID": "problems/bank/conditional-probability/conditional-inequality.html",
+    "href": "problems/bank/conditional-probability/conditional-inequality.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "An encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
+    "text": "Assume that \\(P(A)&gt;0\\) and prove that\n\\[\nP(A\\cap B\\,|\\, A)\\geq P(A\\cap B\\,|\\, A\\cup B).\n\\]"
   },
   {
-    "objectID": "problems/bank/conditional-probability/bdj-white-balls.html",
-    "href": "problems/bank/conditional-probability/bdj-white-balls.html",
+    "objectID": "problems/bank/conditional-probability/pairwise-versus-mutual-independence.html",
+    "href": "problems/bank/conditional-probability/pairwise-versus-mutual-independence.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "An urn contains 5 white and 10 black balls. Four tickets labeled 1, 2, 3, and 4 reside in a box. A ticket is drawn at random from the box, and that number of balls is randomly chosen from the urn, without replacement.\n\nWhat is the probability that all of the balls drawn are white?\nIf we learn that all balls drawn from the urn are white, what is the conditional probability that the #3 ticket was drawn?"
+    "text": "Let \\(S\\) be the set of all permutations of \\(a\\), \\(b\\), \\(c\\), together with the triples \\(aaa\\), \\(bbb\\), and \\(ccc\\). Imagine we draw an outcome randomly from this set. Define the event \\(A_k=\\{\\text{the kth spot is occupied by the letter a}\\}\\) for \\(k=1,\\,2,\\,3\\). Compute the probabilities \\(P(A_k)\\), \\(P(A_i\\cap A_j)\\), \\(P(A_1\\cap A_2\\cap A_3)\\), and comment on the independence of the three of events;\nImagine we roll two fair, six-sided die. Compute \\(P(A)\\), \\(P(B)\\), \\(P(C)\\), \\(P(A\\cap B)\\), \\(P(A\\cap C)\\), \\(P(B\\cap C)\\), and \\(P(A\\cap B\\cap C)\\) for the following three events and comment on their independence:\n\n\\[\n\\begin{aligned}\nA&=\\text{first die is 1, 2, 3}\\\\\nB&=\\text{first die is 3, 4, 5}\\\\\nC&=\\text{the sum of the two rolls is 9}.\n\\end{aligned}\n\\]"
   },
   {
-    "objectID": "problems/bank/conditional-probability/dgs-exercise-2-3-1.html",
-    "href": "problems/bank/conditional-probability/dgs-exercise-2-3-1.html",
+    "objectID": "problems/bank/conditional-probability/axioms-conditional.html",
+    "href": "problems/bank/conditional-probability/axioms-conditional.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Suppose that \\(k\\) events \\(B_1\\), \\(B_2\\), …, \\(B_k\\) form a partition of the sample space \\(S\\), and \\(A\\subseteq S\\) is some event with positive probability \\(P(A)&gt;0\\). Show that if \\(P(B_1\\mid A)&lt;P(B_1)\\), then that guarantees \\(P(B_i\\mid A)&gt;P(B_i)\\) for at least one \\(i\\in\\{1,\\,2,\\,...,\\,k\\}\\)."
+    "text": "Let \\(S\\) be a sample space with probability measure \\(P\\), and let \\(B\\subseteq S\\) be some event with \\(P(B)&gt;0\\). Show that the function \\(G(A)=P(A\\,|\\, B)\\) is a new probability measure on \\(S\\). That is, show that \\(G\\) satisfies the axioms:\n\ntotal measure 1;\nnonnegativity;\ncountable additivity."
   },
   {
-    "objectID": "problems/bank/conditional-probability/testing-symptoms.html",
-    "href": "problems/bank/conditional-probability/testing-symptoms.html",
+    "objectID": "problems/bank/conditional-probability/bdj-circuit.html",
+    "href": "problems/bank/conditional-probability/bdj-circuit.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\).\nTable 1 enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients’ “true” disease status was determined by a PCR test that we assume is hella accurate.\n\n\n\nTable 1: Some COVID-19 numbers. Source: CDC\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n-\n-\n-\n0.7650\n\n\n-\n-\n+\n0.0128\n\n\n-\n+\n-\n0.1685\n\n\n-\n+\n+\n0.0018\n\n\n+\n-\n-\n0.0091\n\n\n+\n-\n+\n0.0064\n\n\n+\n+\n-\n0.0073\n\n\n+\n+\n+\n0.0291\n\n\n\n\n\n\n\n\nWhat is the overall disease prevalence?\nWhat is the sensitivity of the test?\nWhat is the specificity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?\nWhat is the overall probability that the test is wrong?"
+    "text": "The figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
   },
   {
-    "objectID": "problems/bank/set-theory/basic-set-practice.html",
-    "href": "problems/bank/set-theory/basic-set-practice.html",
+    "objectID": "problems/bank/set-theory/picture-proofs.html",
+    "href": "problems/bank/set-theory/picture-proofs.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Take \\(\\mathbb{R}\\) to be your reference set, and consider these subsets:\n\\[\n\\begin{align*}\nA&=[1,\\,5]\\\\\nB&=\\{x\\in\\mathbb{R}\\,:\\,|x|&gt;2\\}\\\\\nC&=(-\\infty,\\,0]\\\\\nI_n&=\\left[0,\\,\\frac{1}{n}\\right]\n\\end{align*}\n\\]\nExpress each of the following in as simplified and concise a form as possible:\n\n\\(A^c\\)\n\\(A \\cup B\\)\n\\(A\\cap C\\)\n\\(A\\cap C^c\\)\n\\(B \\cap C^c\\)\n\\(A^c \\cap B^c \\cap C^c\\)\n\\((A \\cup B) \\cap C\\)\n\\(\\bigcap_{n=1}^\\infty I_n\\)\n\\(\\bigcup_{n=1}^\\infty I_n\\)"
+    "text": "“Prove” each set identity with a picture:\n\nDistributive property: \\(A\\cup(B\\cap C)=(A\\cup B)\\cap(A\\cup C)\\);\nDe Morgan: \\((A\\cap B)^{c}=A^{c}\\cup B^{c}\\);"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/binomial-birthdays.html",
-    "href": "problems/bank/random-variables-discrete/binomial-birthdays.html",
+    "objectID": "problems/bank/random-variables-discrete/memoryless-geometric.html",
+    "href": "problems/bank/random-variables-discrete/memoryless-geometric.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Forty-nine members of the Cleveland Orchestra string section wish to compare their birthdays. Assume that no one has February 29th and that all birthdays are independent.\n\nWhat is the expected number of pairs of people with the same birthday?\nWhat is the expected number of days on which at least two players were born?"
+    "text": "Let \\(D \\sim \\text{Geometric}(p)\\), and fix positive integers \\(n\\) and \\(k\\). What is \\(P(D = n + k \\,|\\, D &gt; k)\\)? Does this look familiar?"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/indicator-party.html",
-    "href": "problems/bank/random-variables-discrete/indicator-party.html",
+    "objectID": "problems/bank/random-variables-discrete/mak-rv.html",
+    "href": "problems/bank/random-variables-discrete/mak-rv.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(A_1\\), \\(A_2\\), \\(A_3\\), \\(A_4\\), \\(A_5\\), and \\(A_6\\) be events in some sample space, each with the same probability \\(0&lt;p&lt;1/6\\). Define the indicator random variables\n\\[\nI_k\n=\n\\begin{cases}\n0 & \\text{if }A_k^c\\text{ happens}\\\\\n1 & \\text{if }A_k\\text{ happens},\n\\end{cases}\n\\]\nand let \\(X\\) be their sum\n\\[\nX = I_1 + I_2 + I_3 + I_4+I_5+I_6.\n\\]\n\nAssume the events \\(A_i\\) are mutually disjoint and compute…\n\n\\(E(X)\\).\n\\(P(X=1)\\).\n\\(P(X=3)\\).\n\nAssume the \\(A_i\\) are independent and compute…\n\n\\(E(X)\\).\n\\(P(X=1)\\).\n\\(P(X=3)\\)."
+    "text": "Let \\(X\\) be a random variable with the following pmf:\n\n\n\n\n\\(x\\)\n\\(P(X=x)\\)\n\n\n\n\n-1\n0.500\n\n\n0\n0.250\n\n\n1\n0.125\n\n\n2\n0.125\n\n\n\n\n\nWhat is the mean of \\(X\\)?\nWhat is the pmf of \\(Y = 2X-3\\)?\nWhat is the mean of \\(Y\\)?\nWhat is the pmf of \\(W = X^2\\)?\nWhat is the mean of \\(W\\)?\nWhat is the conditional pmf of \\(X\\) given \\(X \\neq 0\\)?\nWhat is the conditional mean of \\(X\\) given \\(X \\neq 0\\)?"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/random-exam.html",
-    "href": "problems/bank/random-variables-discrete/random-exam.html",
+    "objectID": "problems/bank/random-variables-discrete/binomial-lotus.html",
+    "href": "problems/bank/random-variables-discrete/binomial-lotus.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "I dreamed last night I got on the boat to heavenAnd by some chance I had brought my dice along\nGuys and Dolls\n\nAlas. You settle in for what you think will be a good night’s beauty sleep, and you end up having one of those awful dreams where you must take a test you haven’t studied for. It’s a multiple choice test, each question has five options with only one correct answer, there are fifty questions in total, and each is worth one point. The god Morpheus has kindly seen fit to leave a fair, five-sided die in your dream pocket, and so your dream self decides to do the only thing you can do: use the die to answer each of the exam questions completely at random.\n\nLet \\(X\\) be the number of questions you answer correctly. What is the distribution of \\(X\\)?\nPlot the probability mass function of \\(X\\);\nWhat is the expected number of questions you will answer correctly?\nWhat is the probability that you get at least a C- on the exam?"
+    "text": "If \\(X\\sim\\text{Binomial}(n,\\,p)\\), show that\n\\[\nE\\left[\\frac{1}{X+1}\\right]=\\frac{1-(1-p)^{n+1}}{(n+1)p}.\n\\]"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/bdj-rv.html",
-    "href": "problems/bank/random-variables-discrete/bdj-rv.html",
+    "objectID": "problems/bank/random-variables-discrete/contested-election.html",
+    "href": "problems/bank/random-variables-discrete/contested-election.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "An urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
+    "text": "Not all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.\nImagine an election where Angela Lansbury receives \\(a\\) votes, Bernadette Peters receives \\(b\\) votes, and Angela provisionally wins with a margin of victory \\(a-b&gt;0\\). However, of the total \\(a+b\\) votes, we learn that \\(k&gt;a-b\\) were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the \\(k\\) invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.\nTo model this, think of the original \\(a+b\\) ballots as balls in the proverbial urn. \\(a\\) of these balls are red, and \\(b\\) of these balls are blue, and assume that \\(a,\\, b&gt;k\\). Removing the \\(k\\) invalid ballots is like drawing \\(k\\) balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the \\(a+b\\) original ballots is equally likely to have been invalid. Next, imagine we randomly remove \\(k\\) balls from the urn, and let \\(X\\) be a random variable that counts the number of the removed/invalid ballots that belong to Angela. In other words, the number of red balls removed. If \\(X\\) is large enough, it will swing the election in Bernadette’s favor.\n\nWhat are the range and the pmf of the random variable \\(X\\)?\nFor what values of \\(X\\) does removing \\(k\\) ballots reverse the outcome of the election?\nBased on your answers to the previous parts, what is the probability that the election result is reversed when the \\(k\\) bad ballots are removed? Give a general formula for this probability, and then compute the probability for each of the real elections listed in Table 1;\nThe random variable \\(X\\) that you derived in the first part can be approximated by \\(\\text{Binom}(k,\\,1/2)\\). Explain why this approximation might be “good enough,” and verify that it’s not too bad by computing the approximate probability of reversal for the elections in Table 1. Compare the approximate probabilities to the actual ones from the previous part;\nLet’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a plot in R like Figure 1 with the following features:\n\nthe margin of victory \\(a-b\\) on the horizontal axis;\nthe number of bad ballots \\(k\\) on the vertical axis;\nscatterplot where each point represents an election in Table 1, with the points colored according to the decision that was made in the case;\ndivide the plane into two regions, one where the approximate probability of reversal is less than 0.05 and one where it is greater.\n\n\nWrite a few pithy paragraphs commenting on the following:\n\nthe assumptions of our lil’ model. Do you think they are innocuous? What might you change, and how?\nthe match or lack thereof between our model and the decisions that were actually made in the real cases;\nHow do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?\n\n\n\n\n\nTable 1: Close elections\n\n\n\n\n\n\n\n\n\n\n\n\n\nelection\nyear\nwin\nloss\ntotal\nmargin\ninvalid\ndecision\n\n\n\nIppolito v. Power\n1968\n1,422\n1,405\n2,827\n17\n101\nvoid\n\n\nSantucci v. Power\n1969\n58,076\n57,981\n116,057\n95\n448\nvoid\n\n\nDeMartini v. Power\n1970\n2,656\n2,594\n5,250\n62\n136\nupheld\n\n\nMaine House\n1976\n1,193\n1,060\n2,253\n133\n208\nvoid\n\n\nAnn Arbor mayor\n1977\n10,660\n10,659\n21,319\n1\n20\nvoid\n\n\nBrunswick ME town council\n1980\n2,390\n2,383\n4,773\n7\n16\nupheld\n\n\nWashington governor\n2004\n1,373,357\n1,373,228\n2,746,585\n129\n1,439\nupheld\n\n\n\n\n\n\n\nCodeelections &lt;- data.frame(\n  election = c(\"Ippolito\", \"Santucci\", \"DeMartini\", \"Maine\", \"Ann Arbor\", \"Brunswick\", \"Washington\"),\n  a = c(1422, 58076, 2656, 1193, 10660, 2390, 1373357),\n  b = c(1405, 57981, 2594, 1060, 10659, 2383, 1373228),\n  k = c(101, 448, 136, 208, 20, 16, 1439),\n  decision = c(\"void\", \"void\", \"upheld\", \"void\", \"void\", \"upheld\", \"upheld\"),\n  col = c(\"red\", \"red\", \"blue\", \"red\", \"red\", \"blue\", \"blue\")\n)\n\nreversal_prob_binom &lt;- function(a, b, k){\n  cutoff = ceiling(0.5 * (k + a - b))\n  1 - pbinom(cutoff - 1, k, 1/2)\n}\n\nmargin_grid &lt;- 0:150\nk_grid &lt;- 0:450\nn_points &lt;- length(margin_grid) * length(k_grid)\n\ngrid &lt;- data.frame(\n  margin = numeric(n_points),\n  k = numeric(n_points),\n  color = rep(\"lightblue\", n_points)\n)\n\nrow &lt;- 0\n\nfor(x in margin_grid){\n  for(y in k_grid){\n    row &lt;- row + 1\n    grid[row, 1] &lt;- x\n    grid[row, 2] &lt;- y\n    if(reversal_prob_binom(1 + x, 1, y) &gt;= 0.05){\n      grid[row, 3] &lt;- \"pink\"\n    }\n  }\n}\n\nplot(grid$margin, grid$k, col = grid$color, \n     pch = 19, cex = 0.2,\n     xlab = \"margin of victory (a - b)\", \n     ylab = \"number of invalid ballots (k)\",\n     main = \"Approximate probability of election reversal\")\npoints(elections$a - elections$b, elections$k, \n       pch = 19, col = elections$col)\nlegend(-7, 450, \"&gt; 0.05\", text.col = \"salmon\", bty = \"n\", cex = 1.5)\nlegend(115, 450, \"&lt; 0.05\", text.col = \"blue\", bty = \"n\", cex = 1.5)\nlegend(125, 85, c(\"Voided\", \"Upheld\"), pch = 19, col = c(\"red\", \"blue\"), bty = \"n\")\n\n\n\n\n\n\nFigure 1"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/waiting-for-five-or-seven.html",
-    "href": "problems/bank/random-variables-discrete/waiting-for-five-or-seven.html",
+    "objectID": "problems/bank/random-variables-discrete/zero-truncated-poisson.html",
+    "href": "problems/bank/random-variables-discrete/zero-truncated-poisson.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "A pair of fair dice is rolled until a sum of either a 5 or a 7 appears. What is the probability that a 5 occurs first?"
+    "text": "Let \\(X\\sim\\text{Poisson}(\\lambda)\\) and define a new random variable \\(Y\\) that is a zero-truncated version of \\(X\\). That is, we start with \\(\\text{Range}(X)=\\{0,\\,1,\\,2,\\,3,\\,...\\}\\), and then we rig it so that \\(\\text{Range}(Y)=\\{1,\\,2,\\,3,\\,...\\}\\). To do this, we define the PMF of the new random variable \\(Y\\) by\n\\[\nP(Y=k)\n=\nP(X=k\\mid X &gt; 0),\\quad k=1,\\,2,\\,3,\\,4,\\,...\n\\]\n\nShow that the new PMF sums to one;\nCompute the mean of \\(Y\\);\nCompute the variance of \\(Y\\)."
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/ross-rv.html",
-    "href": "problems/bank/random-variables-discrete/ross-rv.html",
+    "objectID": "problems/bank/random-variables-discrete/gandalf-test.html",
+    "href": "problems/bank/random-variables-discrete/gandalf-test.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Two balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
+    "text": "King Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 soldiers;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten soldiers. We can then identify which soldiers are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/geometric-mgf.html",
-    "href": "problems/bank/random-variables-discrete/geometric-mgf.html",
+    "objectID": "problems/bank/random-variables-discrete/fibonacci-dice.html",
+    "href": "problems/bank/random-variables-discrete/fibonacci-dice.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Compute the moment generating function of the geometric distribution. For what values of \\(t\\) is it defined?\nUse the mgf to compute the mean and variance of the geometric distribution."
+    "text": "Signore Fibonacci has created a a balanced, six-sided die whose faces are labeled, naturally, 1, 2, 3, 5, 8, 13. He gives a pair to Enzo, who rolls them repeatedly, eager to get double 13s. Let \\(X\\) be the number of times he has to roll the pair of dice in order to see double 13s for the first time.\n\nWhat is the pmf of \\(X\\)?\nWhat is the expected value of \\(X\\)?\nFind a closed-form expression for \\(P(X\\geq m)\\)."
   },
   {
-    "objectID": "problems/bank/conceptual/sally-clark.html",
-    "href": "problems/bank/conceptual/sally-clark.html",
+    "objectID": "problems/bank/random-variables-discrete/pascal.html",
+    "href": "problems/bank/random-variables-discrete/pascal.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here are some short readings about the case of Sally Clark and Roy Meadow, as well as something called the prosecutor’s fallacy:\n\nGrimes (2023): “Bad Science and Bad Statistics in the Courtroom Convict Innocent People,” Scientific American;\nCarriquiry (2018): “Misuse of statistics in the courtroom: the Sally Clark case,” CSAFE;\nWestreich & Iliinsky (2014): “Epidemiology visualized: the prosecutor’s fallacy,” American Journal of Epidemiology;\nAP Dawid’s statement during the Clark appeal.\n\nPlease do the following:\n\nRead the articles;\nUsing the ideas of conditional probability and independence that we have studied, write a paragraph or two describing what the prosecutor’s fallacy is and how it applies to the Clark case;\nIf you were an attorney for the defense and had the chance to cross-examine Roy Meadow, what would you ask him about his statistical testimony? What are the most incisive questions you could ask? How would you ensure that the cross-examination would “land” with the members of the jury, who most likely know absolutely nothing about probability and statistics?\n\n\n\n\n\n\n\nPlease don’t break my heart\n\n\n\nI’m not asking you to read Moby-Dick here."
+    "text": "If the discrete random variable \\(X\\) has the funky-ass distribution (FAS), then its range is \\(\\text{Range}(X)=\\mathbb{N}\\) and its pmf is\n\\[\nP(X=k)=\\binom{k+r-1}{k}(1-p)^kp^r\\quad k=0,\\,1,\\,2,\\,3,\\,...,\n\\]\nwhere the parameters \\(r\\in\\mathbb{N}\\) and \\(0&lt;p&lt;1\\) are constants. We denote this \\(X\\sim\\text{FAS}(r,\\,p)\\).\n\nUse what you know about probability to find the value of this infinite series:\n\n\\[\n\\sum\\limits_{k=0}^\\infty\n\\binom{k+r-1}{k}(1-p)^k.\n\\]\n\nCompute the MGF of \\(X\\);\nUse the definition of the expected value to compute the mean of \\(X\\);\nUse the MGF to compute the mean of \\(X\\) and verify that you get the same answer you got before;\nConsider an iid collection \\(X_i\\overset{\\text{iid}}{\\sim}\\text{FAS}(r,\\,p)\\) and derive the distribution of the sum \\(S_n=\\sum_{i=1}^nX_i\\)."
   },
   {
-    "objectID": "problems/bank/conceptual/exam-review.html",
-    "href": "problems/bank/conceptual/exam-review.html",
+    "objectID": "problems/bank/conceptual/lousy-forecasting.html",
+    "href": "problems/bank/conceptual/lousy-forecasting.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Sadly, we have a midterm exam coming up on Thursday October 9. Everything you have seen on Problem Sets 1 through 4 is fair game for the exam: set theory, probability spaces and axioms, probability rules and proofs, counting, conditional probability and independence, and discrete random variables.\nLook back through the course materials thus far and select the topic that you think you understand the least. Study this topic carefully and then do two things:\n\nWrite a few paragraphs where you explain this topic to a five-year-old using only words, pictures, and toy examples;\nAfter you’re done reviewing, and after your response to part a, include one thing you’re still unsure about or a question you’d like to ask about your chosen topic.\n\nAfter you submit this problem set, I will answer all of the class’s questions and post an anonymized “Q&A” as part of the exam review materials."
+    "text": "Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:\n\nZohran Mamdani wins the New York City mayoral election;\nWicked: For Good makes more money at the box office (inflation adjusted) on its opening weekend than Wicked: Part I;\nThe Philadelphia Phillies make it to the 2025 World Series;\nSean Combs is sentenced to prison for more than 3 years;\nA greater percentage of Duke undergraduates participate in this year’s Duke Marriage Pact than last year’s. About 43% participated last year;\nThe total number of points scored at the Countdown to Craziness exhibition game is greater than 50;\nBefore the end of the year, the Federal Reserve announces that Lisa Cook is no longer a member of the Board of Governors;\nThe United States federal government is shut down due to a lapse in appropriations by October 1, 2025.\n\nChoose three of these, state the probabilities that you assign to the events happening, and explain in a few paragraphs how you formulated your beliefs. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed.\n\n\n\n\n\n\nAvoid wishful thinking\n\n\n\nFor some of these, you may have strong preferences about the outcome. Try to set them aside and report your honest assessment of the likelihood of the event, whether it pleases you or not."
   },
   {
-    "objectID": "problems/bank/bayes/inv-gamma-normal.html",
-    "href": "problems/bank/bayes/inv-gamma-normal.html",
+    "objectID": "problems/bank/conceptual/diaconis.html",
+    "href": "problems/bank/conceptual/diaconis.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{IG}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(0,\\,\\theta).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE."
+    "text": "Persi Diaconis is a famous researcher in probability and statistics. He has a cute line of research where he probes the randomness that we take for granted in simple things like coin tossing, dice, and playing cards. In the interview above he discusses coin tossing, and says both “coin tossing is as close to a random phenomenon as I know” and “coin tossing is a deterministic process. What’s random about it?” Wut?\nWatch the interview, and report back with a brief summary of Diaconis’ explanation of what makes a coin toss random. Do you agree or disagree?"
   },
   {
-    "objectID": "problems/bank/bayes/gamma-exponential.html",
-    "href": "problems/bank/bayes/gamma-exponential.html",
+    "objectID": "problems/bank/bayes/gamma-lomax.html",
+    "href": "problems/bank/bayes/gamma-lomax.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Imagine that I quit my job and open a factory that manufactures bow ties and light bulbs (Zito’s Bows and Bulbs). The ties are alright, but the bulbs suck. They burn out real quick. Each bulb is slightly different, and you can’t perfectly predict how long they will last, so the time (in hours) until the bulb dies is a random variable \\(X\\), and let’s assume \\(X\\sim\\text{Exponential}(\\lambda)\\), where \\(\\lambda&gt;0\\) is unknown. Recall that \\(E(X)=1/\\lambda\\), so the larger the rate, the sooner the burnout time.\nI want to estimate \\(\\lambda\\) to get a sense of how bad my light bulbs are, so I sample \\(n\\) bulbs and record their burnout times:\n\\[\nX_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{Exponential}(\\lambda).\n\\]\nAt this point, I could just use the method of maximum likelihood to estimate \\(\\lambda\\) like we did in lecture, but before I do, I go and consult Great Grandma Zito. She’s been making bad light bulbs for decades and taught me everything that I know. She says that in her experience, \\(\\lambda\\) is in the ballpark of 1 (meaning our bulbs burn out in an hour, on average), but there’s uncertainty about that. In her opinion, the probability that \\(\\lambda&gt;3\\) is about 1.7%.\nI want to incorporate my grandmother’s prior knowledge into my analysis, so I decide to be Bayesian:\n\\[\n\\begin{aligned}\n\\lambda &\\sim\\text{Gamma}(\\alpha_0,\\,\\beta_0) && \\text{(prior)}\\\\\nX_1,\\,X_2,\\,...,\\,X_n\\,|\\,\\lambda&\\overset{\\text{iid}}{\\sim}\\text{Exponential}(\\lambda) && \\text{(data model)}.\n\\end{aligned}\n\\]\n\\(\\lambda \\sim\\text{Gamma}(\\alpha_0,\\,\\beta_0)\\) is my prior distribution for the unknown parameter, and \\(\\alpha_0,\\,\\beta_0&gt;0\\) are hyperparameters that I will tune in order to encode the prior knowledge about \\(\\lambda\\) that my grandmother described. I chose the gamma family simply because it is convenient and familiar to me, and I know that \\(\\lambda\\) is a continuous numerical quantity that must be positive.\n\nShow that the posterior distribution for \\(\\lambda\\) in this model is\n\\[\n\\lambda\\,|\\,X_{1:n}=x_{1:n} \\sim \\text{Gamma}(\\alpha_n,\\,\\beta_n).\n\\]\nAfter we see some data, what are the revised hyperparameters \\(\\alpha_n,\\,\\beta_n\\) equal to?\n\n\n\n\n\n\n\nPay attention to the notation here\n\n\n\nBefore I see any data, \\(\\text{Gamma}(\\alpha_0,\\,\\beta_0)\\) summarizes my beliefs about \\(\\lambda\\). After I see some data, \\(\\text{Gamma}(\\alpha_n,\\,\\beta_n)\\) summarizes my beliefs about \\(\\lambda\\). \\(\\alpha_0\\) and \\(\\beta_0\\) are the prior hyperparameters, and \\(\\alpha_n\\) and \\(\\beta_n\\) are the posterior hyperparameters. The subscript indicates how much data my beliefs are based on.\n\n\n\nShow that the posterior mean has the form\n\\[\nE(\\lambda\\,|\\,X_1,\\,X_2,\\,...,\\,X_n)=w_n\\hat{\\lambda}_n^{(MLE)} + (1-w_n)\\underbrace{E(\\lambda)}_{\\text{prior mean}},\n\\]\nwhere \\(w_n\\in(0,\\,1)\\) might depend on the data. This means that the posterior mean is a shrinkage estimator. We shrink the MLE toward our prior estimate of the parameter.\nHow should the prior hyperparameters \\(\\alpha_0\\) and \\(\\beta_0\\) be set so that the prior distribution captures my grandmother’s beliefs about \\(\\lambda\\)? There’s not a tremendous amount of math here. It’s just trial-and-error until you find numbers that work."
+    "text": "Recall this infernal distribution family that you met on Problem Set 6, Midterm 2, and again in lecture:\n\\[\nf(x\\mid \\theta)=\\theta(x+1)^{-(\\theta+1)},\\quad x&gt;0.\n\\]\nWe’ve done MLE for this, now let’s go Bayes. Consider this model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{Gamma}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}f(x\\mid \\theta).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE."
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-series.html",
-    "href": "problems/bank/calculus-review/calc-series.html",
+    "objectID": "problems/bank/bayes/beta-geometric.html",
+    "href": "problems/bank/bayes/beta-geometric.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Assume \\(\\lambda&gt;0\\) is a constant and compute\n\\[\n    \\sum\\limits_{n=0}^\\infty n \\frac{\\lambda^n}{n!}e^{-\\lambda}\n    .\n\\]"
+    "text": "Consider the following Bayesian model:\n\\[\n\\begin{aligned}\np&\\sim\\text{Beta}(a_0,\\,b_0)&& \\text{(prior)}\\\\\nX_1,\\,X_2,\\,...,\\,X_n\\,|\\,p&\\overset{\\text{iid}}{\\sim}\\text{Geometric}(p).&& \\text{(likelihood)}\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution?\nCompute the posterior mean and show that it is a weighted average of the prior mean and the maximum likelihood estimator."
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-limit.html",
-    "href": "problems/bank/calculus-review/calc-limit.html",
+    "objectID": "problems/bank/bayes/normal-normal.html",
+    "href": "problems/bank/bayes/normal-normal.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(f\\) be any function with the following properties:\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]"
+    "text": "Consider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{N}(m_0,\\,\\tau_0^2)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(\\theta,\\,1).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean \\(m_0\\) and the MLE."
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-limit.html#footnotes",
-    "href": "problems/bank/calculus-review/calc-limit.html#footnotes",
-    "title": "STA 240 Fall 2025",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nThis means that \\(f\\) and its first two derivatives are all continuous functions at and around zero.↩︎"
-  },
-  {
-    "objectID": "problems/bank/calculus-review/calc-inflection.html",
-    "href": "problems/bank/calculus-review/calc-inflection.html",
+    "objectID": "problems/bank/calculus-review/calc-bad-notation.html",
+    "href": "problems/bank/calculus-review/calc-bad-notation.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is a very silly function:\n\\[\nh(x)\n=\n\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\n,\\quad\n-\\infty&lt;x&lt;\\infty\n.\n\\]\nTreat \\(-\\infty&lt;\\mu&lt;\\infty\\) and \\(\\sigma&gt;0\\) as constants and compute the value(s) of \\(x\\) at which \\(h\\) has inflection points.\n\n\n\n\n\n\nHint\n\n\n\n\n\nHere is an example of what \\(h\\) might look like in the special case where \\(\\mu = 1\\) and \\(\\sigma=2\\):\n\nCodem = 1\ns = 2\npar(mar = c(4, 4, 0.1, 4))\ncurve(exp(-0.5 * ((x - m) / s)^2), \n      from = -6, to = 8, n = 500,\n      xlab = \"x\", ylab = \"h(x)\",\n      xaxt = \"n\")\naxis(1, at = -6:8)\n\n\n\n\n\n\n\nBefore you start doing any math, can you use the picture to guess what the answer will be?"
+    "text": "Explain why this is horrific notation:\n\\[\n    \\int_0^x f(x)\\,\\textrm{d} x.\n\\]\nHow should it be fixed?"
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-gamma.html",
-    "href": "problems/bank/calculus-review/calc-gamma.html",
+    "objectID": "problems/bank/calculus-review/calc-pareto-ish.html",
+    "href": "problems/bank/calculus-review/calc-pareto-ish.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is another inordinately silly function:\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\textrm{d} y,\\quad x&gt;0.\n\\]\nProve that \\(\\Gamma(x+1)=x\\Gamma(x)\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nStart on the left-hand side by writing out \\(\\Gamma(x+1)\\) and evaluating the integral by parts."
+    "text": "Consider this integral:\n\\[\n    \\int_2^\\infty\n    \\frac{1}{x(\\ln x)^p}\\textrm{d} x\n    .\n\\]\n\nUse R to create a single plot with many lines, each graphing the integrand for a different value of \\(p\\). Consider \\(p\\) equal to -2, -1.5, -1, 0, 1, and 5, and make the \\(x\\)-axis of your plot run from 2 to 15.\nShow that \\(\\lim_{x\\to\\infty}\\frac{1}{x(\\ln x)^p}=0\\) for all values of \\(-\\infty&lt;p&lt;\\infty\\).\nFor what values of \\(p\\) does the integral converge? When it does converge, what is its value?\nConsult the picture you created in part (a), and write a few sentences explaining conceptually why the integral converges for some values of \\(p\\) but not others.\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nWhen taking the limit or evaluating the integral, can you use the same technique for all values of \\(p\\), or do you need a different technique depending on what \\(p\\) is?"
   },
   {
-    "objectID": "problems/bank/basic-rules/union-bound.html",
-    "href": "problems/bank/basic-rules/union-bound.html",
+    "objectID": "problems/bank/calculus-review/calc-logexp.html",
+    "href": "problems/bank/calculus-review/calc-logexp.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(A_1,\\,A_2,\\,A_3,\\,...\\subseteq S\\) be an infinite sequence of possibly overlapping events in some probability space. Based on this arbitrary sequence, define a new sequence of events that starts with \\(B_1 = A_1\\) and then has \\(B_i=A_i\\cap \\left(\\bigcup_{j=1}^{i-1}A_j\\right)^c\\) for all \\(i&gt;1\\).\n\nShow that the \\(B_i\\) are pairwise disjoint.\nShow that\n\n\\[\n\\bigcup_{i=1}^\\infty A_i=\\bigcup_{i=1}^\\infty B_i.\n\\]\n\nUse the previous parts to show that\n\n\\[\nP\\left(\\bigcup_{i=1}^\\infty A_i\\right)\\leq\\sum\\limits_{i=1}^\\infty P(A_i).\n\\]"
+    "text": "Simplify this:\n\\[\n\\ln\\left(e^{a_1}e^{a_2}e^{a_3}\\cdots e^{a_n}\\right).\n\\]"
   },
   {
-    "objectID": "problems/bank/basic-rules/blood-type.html",
-    "href": "problems/bank/basic-rules/blood-type.html",
+    "objectID": "problems/bank/basic-rules/set-minus.html",
+    "href": "problems/bank/basic-rules/set-minus.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "A simplified model of the human blood-type system has four types: A, B, AB, and O. Suppose that, for a randomly chosen person, the probability of type O blood is 0.5, of type A blood is 0.36, and of type B blood is 0.11. There are two antigens, anti-A and anti-B, that react with a person’s blood in different ways depending on the type. Anti-A reacts with blood types A and AB but not with B and O. Anti-B reacts with blood types B and AB, but not with A and O.\n\nLet \\(\\mathcal{A}\\) be the event that a person’s blood reacts with anti-A, and let \\(\\mathcal{B}\\) be the event that their blood reacts with anti-B. Classify the person’s blood type using the events \\(\\mathcal{A}\\) and \\(\\mathcal{B}\\) and their complements;\nWhat is the probability that both antigens will react with a random person’s blood?\nWhat is the probability that each antigen will react with a random person’s blood?"
+    "text": "Let \\(S\\) be a sample space, let \\(A,\\, B\\subseteq S\\) be events, and define a new set\n\\[\nA-B = \\{x\\in S:x\\in A\\text{ and }x\\notin B\\}.\n\\]\n\nDraw a well-labeled picture of \\(A\\), \\(B\\), \\(S\\), and the set \\(A-B\\);\nWrite down an equivalent expression for \\(A-B\\) that only makes use of our three basic operations: union, intersection, and complement;\nProve that \\(P(A-B)=P(A)-P(A\\cap B)\\)."
   },
   {
-    "objectID": "problems/bank/basic-rules/poisson-measure.html",
-    "href": "problems/bank/basic-rules/poisson-measure.html",
+    "objectID": "problems/bank/basic-rules/basic-mutually-exclusive-practice.html",
+    "href": "problems/bank/basic-rules/basic-mutually-exclusive-practice.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Suppose we have the sample space \\(S=\\mathbb{N}=\\{0,\\,1,\\,2,\\,...\\}\\) and a probability measure \\(P\\) that assigns the following individual probabilities to the singleton sets:\n\\[\nP(\\{i\\})=c\\frac{4^i}{i!},\\quad i\\in\\mathbb{N}.\n\\]\n\nIn order for \\(P\\) to satisfy the axiom of total measure one, what must be the value of the constant \\(c&gt;0\\).\nWhich outcome(s) in the sample space are most likely (ie have the largest individual probability of occurring)? Furthermore, how do you know for a fact that you’ve identified all of them? The sample space is infinite, so presumably you cannot literally check every outcome.\nWhat is the probability of the even numbers?\n\n\n\n\n\n\n\nBe careful!\n\n\n\nI could not care less about the answers to these questions. It’s all about the reasoning, and showing that you understand how the ideas fit together. To earn full credit, make sure you carefully justify everything by making appropriate reference to the rules and axioms."
+    "text": "Suppose that \\(A\\) and \\(B\\) are mutually exclusive events for which \\(P(A) = 0.3\\) and \\(P(B) = 0.5\\). What is the probability that…\n\neither \\(A\\) or \\(B\\) occurs?\n\\(A\\) occurs but \\(B\\) does not?\nboth \\(A\\) and \\(B\\) occur?\nAre \\(A\\) and \\(B\\) independent? Why or why not?"
   },
   {
-    "objectID": "problems/bank/basic-rules/xor.html",
-    "href": "problems/bank/basic-rules/xor.html",
+    "objectID": "problems/bank/basic-rules/incl-excl-3.html",
+    "href": "problems/bank/basic-rules/incl-excl-3.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(A\\) and \\(B\\) be events in a sample space \\(S\\). Let \\(C\\) be the set of outcomes that are in either \\(A\\) or \\(B\\), but not both.\n\nDraw a well-labeled picture of \\(S\\), \\(A\\), \\(B\\), and \\(C\\).\nWrite down a formula for \\(C\\) in terms of \\(A\\) and \\(B\\) using any of the basic operations: union (\\(\\cup\\)), intersection (\\(\\cap\\)), complement (\\(^c\\)).\nUse set theory and the probability axioms to show that\n\n\\[\nP(C)=P(A)+P(B)-2P(A\\cap B).\n\\]\n\nExplain this result conceptually (with words and pictures)."
+    "text": "Let \\(S\\) be a sample space, and consider events \\(A,\\, B,\\, C\\subseteq S\\). Recall that the law of inclusion/exclusion says that\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B).\n\\]\n\nHow should this be extended to unions of three events? \\[\nP(A\\cup B\\cup C)=P(A)+P(B)+P(C) +\\,...{???}\n\\] Explain your conjecture with words and pictures.\nUse set theory and the probabiity axioms to prove your conjecture in the previous part."
   },
   {
-    "objectID": "problems/bank/basic-rules/geniuses-and-chocolate-lovers.html",
-    "href": "problems/bank/basic-rules/geniuses-and-chocolate-lovers.html",
+    "objectID": "problems/bank/basic-rules/intersection-bound.html",
+    "href": "problems/bank/basic-rules/intersection-bound.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Out of the students in a class, 60% are geniuses, 70% love chocolate, and 40% fall into both categories. Determine the probability that a randomly selected student is neither a genius nor a chocolate lover."
+    "text": "Let \\(A,\\,B\\subseteq S\\) be any pair of events in a sample space \\(S\\), and show that\n\\[\n\\max\\{0,\\,P(A)+P(B)-1\\}\\leq P(A\\cap B)\\leq\\min\\{P(A),\\,P(B)\\}.\n\\]"
   },
   {
-    "objectID": "problems/bank/basic-rules/xor-2.html",
-    "href": "problems/bank/basic-rules/xor-2.html",
+    "objectID": "problems/bank/basic-rules/weather-app.html",
+    "href": "problems/bank/basic-rules/weather-app.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(A\\), \\(B\\), and \\(C\\) be three arbitrary events, and let \\(D\\) denote the event that “exactly one of these three events occurs.”\n\nDraw a cartoon of \\(A\\), \\(B\\), \\(C\\), and \\(D\\);\nUse the three basic set operations (union, intersection, and complement) to express \\(D\\) in terms of \\(A\\), \\(B\\), and \\(C\\);\nShow that\n\n\\[\nP(D)=P(A) + P(B) + P(C) - 2P(A \\cap B) - 2P(A \\cap C) - 2P(B \\cap C) + 3P(A \\cap B \\cap C).\n\\]"
+    "text": "One day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they fit together."
+  },
+  {
+    "objectID": "problems/bank/basic-rules/disjoint-complements.html",
+    "href": "problems/bank/basic-rules/disjoint-complements.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Suppose the events \\(A\\) and \\(B\\) are disjoint. Under what conditions are \\(A^{c}\\) and \\(B^{c}\\) also disjoint events?"
+  },
+  {
+    "objectID": "problems/bank/transformations/gamma-power.html",
+    "href": "problems/bank/transformations/gamma-power.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Let \\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\), and define a new random variable \\(Y=X^r\\) for any positive constant \\(r&gt;0\\).\n\nWhat is the density of \\(Y\\)?\nDerive a formula for \\(E(X^n)\\) that works for any \\(n\\in\\mathbb{N}\\)."
   },
   {
     "objectID": "problems/bank/moments/simple-mgf.html",
@@ -2195,25 +2202,32 @@
     "text": "Let \\(X\\) be a discrete random variable with\n\n\n\n\n\\(x\\)\n-1\n3\n7\n\n\n\n\n\\(P(X=x)\\)\n0.5\n0.2\n0.3\n\n\n\n\n\nCompute the mgf of \\(X\\).\nCompute the mean two ways: using the definition, and using the mgf. Confirm that you get the same answer.\nCompute the variance two ways: using the definition, and using the mgf. Confirm that you get the same answer."
   },
   {
-    "objectID": "problems/bank/moments/normal-mgf.html",
-    "href": "problems/bank/moments/normal-mgf.html",
+    "objectID": "problems/bank/moments/binomial-mgf.html",
+    "href": "problems/bank/moments/binomial-mgf.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(Z\\sim\\text{N}(0,\\,1)\\), and recall what that means:\n\\[\n\\begin{aligned}\nf_Z(z)&=\\frac{1}{\\sqrt{2\\pi}}\\exp\\left(-\\frac{1}{2}z^2\\right), && -\\infty&lt;z&lt;\\infty\\\\\nM_Z(t)&=\\exp\\left(\\frac{1}{2}t^2\\right), && -\\infty&lt;t&lt;\\infty.\n\\end{aligned}\n\\]\nNext, let \\(X=\\mu+\\sigma Z\\) for some constants \\(\\mu\\in\\mathbb{R}\\) and \\(\\sigma&gt;0\\).\n\nUse the change-of-variables formula to derive density of \\(X\\). What is its distribution?\nWhat is the moment-generating function of \\(X\\)?\nWhat are the mean and variance of \\(X\\)? Make sure you justify your answer with some type of derivation.\nConsider \\(X_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{N}(\\mu,\\,\\sigma^2)\\) and derive the distribution of their sum and their average."
+    "text": "Compute the moment-generating function of the binomial distribution;\nUse the mgf to compute the mean;\nUse the mgf to compute the variance.\n\nNote: we already know from lecture that the mean is \\(np\\) and the variance is \\(np(1-p)\\), so you know you did it right when you get the same answer."
   },
   {
-    "objectID": "problems/bank/moments/gumbel-mgf.html",
-    "href": "problems/bank/moments/gumbel-mgf.html",
+    "objectID": "problems/bank/moments/laplace.html",
+    "href": "problems/bank/moments/laplace.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider a continuous random variable \\(X\\) with density\n\\[\nf(x)=\\frac{1}{\\beta}\\exp\\left(-\\frac{x}{\\beta}-e^{-x/\\beta}\\right),\\quad x\\in\\mathbb{R}.\n\\]\nThe parameter \\(\\beta&gt;0\\) is just a positive constant. Compute the moment-generating function of \\(X\\)."
+    "text": "Let \\(X\\) have density\n\\[\nf_X(x)\n=\n\\frac{1}{2}\ne^{-|x|},\\quad x\\in\\mathbb{R}.\n\\]\n\nWhat is the mgf of \\(X\\)?\nWhat is the mean?\nWhat is the variance?"
   },
   {
-    "objectID": "problems/bank/joint-distributions/bdj-joint.html",
-    "href": "problems/bank/joint-distributions/bdj-joint.html",
+    "objectID": "problems/bank/moments/discrete-uniform.html",
+    "href": "problems/bank/moments/discrete-uniform.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is the joint density for a random pair:\n\\[\nf_{XY}(x,\\,y)\n=\n\\frac{24}{7}\nx(2-y),\\quad 0&lt;x&lt;1\\text{ and }0&lt;y&lt;1-x.\n\\]\n\nSketch the joint range of \\((X,\\,Y)\\).\nFind the marginal density of \\(Y\\).\nFind the marginal density of \\(X\\).\nFind the conditional density of \\(X\\) given \\(Y=y\\).\nUse this to compute \\(P(X&gt;1/2\\,|\\,Y=1/3)\\).\nWhat is \\(E(X\\,|\\,Y=y)\\)?"
+    "text": "Let \\(X\\) have the discrete uniform on \\(\\{1,\\,2,\\,...,\\,n\\}\\). This means \\(P(X=i)=1/n\\) for all \\(i = 1,\\,2,\\,...,\\,n\\).\n\nCompute the MGF of \\(X\\);\nUse it to compute the mean;\nUse it to compute the variance."
+  },
+  {
+    "objectID": "problems/bank/joint-distributions/gamma-exponential-hierarchy.html",
+    "href": "problems/bank/joint-distributions/gamma-exponential-hierarchy.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Consider this joint distribution for random variables \\(X\\) and \\(Y\\), written in hierarchical form:\n\\[\n\\begin{aligned}\nX&\\sim\\text{Gamma}\\left(\\alpha,\\,\\beta\\right)\\\\\nY\\mid X=x&\\sim \\text{Exponential}(x).\n\\end{aligned}\n\\]\n\nSketch the joint range of \\((X,\\, Y)\\).\nWhat is the joint density of the random pair \\((X,\\, Y)\\)?\nWhat is the marginal density of \\(Y\\)?\nWhat is the density of \\(X\\) conditional on the event \\(Y=y\\)? Is it recognizable?"
   },
   {
     "objectID": "problems/bank/joint-distributions/gamma-gamma-hierarchy.html",
@@ -2651,7 +2665,7 @@
     "href": "labs/lab-11.html",
     "title": "Lab 11",
     "section": "",
-    "text": "Let’s say you work at an insurance company. Your boss asks you “how many insurance claims do we typically receive in a month?” So you pull up some data. Here’s a preview of what it might look like:\n\n\n\n\nMonth\nYear\nNumber of claims\n\n\n\n\n…\n…\n…\n\n\nMarch\n2005\n80\n\n\nApril\n2005\n61\n\n\nMay\n2005\n98\n\n\nJune\n2005\n73\n\n\n…\n…\n…\n\n\n\n\nTo answer your boss’s question, you could take the numbers and just compute the average. That’s probably a pretty good guess. But imagine your boss follows up with questions like “how certain are we of that guess?” or “how reliable is that estimate?” Now we’re talking about statistics.\nAs soon as we start worrying about uncertainty quantification, we enter the subtle realm of modeling assumptions and interpretive philosophies. It’s not like probability theory where we were just proving theorems and doing calculations. Now, the theory of statistics is in some ways just another branch of probability theory, and so in truth were are still proving theorems and doing calculations. But we wring our hands about the interpretation of the results in ways that we didn’t necessarily do before.\nAnyway, I’m rambling. Data don’t speak for themselves, and so we require an interpretive lens to make sense of them. The strongest form of this is a concrete statistical model, so let’s pose one. The number of insurance claims in a month is going to be a nonnegative integer, and so we could choose for our model any parametric family of probability distributions supported on \\(\\mathbb{N}\\). Let’s go with the simplest one:\n\\[\nX_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{Poisson}(\\theta).\n\\]\nThat’s our model for the claims data. The rate parameter \\(\\theta&gt;0\\) is unknown, and we want to use the data to learn what it is. Note that this model may or may not be a good choice, and entire books have been written on model building and model selection and model diagnostics and model criticism. If you keep studying statistics, you’ll learn about all that, but this class is about one thing and one thing only: can you do the math or not? So we will just take the model as given and use it as an opportunity to test our technical skills.\n\n\n\n\n\n\nWrite-up instructions\n\n\n\nYou don’t have to type up all the work. The final answer is fine. Frankly, I don’t really care what you turn in. This is just extra practice with stuff you are guaranteed to see on the final.\n\n\n\nTask 0\nCompute the likelihood function and the log-likelihood function for the Poisson distribution. You will need both in what follows.\n\n\nTask 1\nCompute the maximum likelihood estimator for \\(\\theta&gt;0\\) in the Poisson distribution.\n\n\nTask 2\nCompute the mean, bias, variance, and MSE of the estimator and comment on its statistical properties.\n\n\nTask 3\nThe rate parameter \\(\\theta&gt;0\\) is a positive real number, so if we want to perform a Bayesian analysis, we need a continuous probability distribution on positive reals. The gamma family is a convenient choice for this, so consider the Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{Gamma}(a_0,\\,b_0)\n\\\\\nX_1,\\,X_2,\\,...,\\,X_n\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{Poisson}(\\theta).\n\\end{aligned}\n\\]\nDerive the posterior distribution.\n\n\nTask 4\nBased on your answer from the previous task, show that the posterior mean is a convex combination of the prior mean and the maximum likelihood estimator that you derived earlier.\n\n\nTask 5\nIgnoring that we ever did a Bayesian analysis, treat the posterior mean formula from the previous task as a new classical estimator for \\(\\theta\\). It’s just a function of the data at the end of the day.\nWhat are the mean, bias, and variance of the posterior mean? How do these compare to the pure MLE? Are there circumstances under which this new estimator would be preferred to the pure MLE?\n\n\nPlay around!\nHere’s a cute lil’ app you can play with to get a sense of how these statistical procedures behave. Start by keeping all the default setting the same but increasing the sample size. What happens to the posterior distribution as you accumulate more and more data?\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 700\nlibrary(shiny)\n\n# true value\n# prior hyperparameter\n# sample size\n# show the data\n# show the summary statistics\n\nui &lt;- fluidPage(\n  titlePanel(\"Inference for the Poisson distribution\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"lambda\", \"True value of θ:\",\n                   min = 0.1, max = 10, value = 1, step = 0.1),\n      sliderInput(\"a\", \"Prior shape (a₀):\",\n                  min = 0.1, max = 100, value = 70, step = 0.1),\n      sliderInput(\"b\", \"Prior rate (b₀):\",\n                  min = 0.1, max = 100, value = 10, step = 0.1),\n      sliderInput(\"n\", \"Sample size (n):\",\n                  min = 1, max = 300, value = 1, step = 1),\n      hr(),\n      verbatimTextOutput(\"moments\")\n    ),\n    \n    mainPanel(\n      plotOutput(\"betaPlot\", height = \"600px\")\n    )\n  )\n)\n\nserver &lt;- function(input, output, session) {\n  \n  output$moments &lt;- renderText({\n    set.seed(1234)\n  \n    n &lt;- input$n\n    lambda &lt;- input$lambda\n    a &lt;- input$a\n    b  &lt;- input$b\n    X &lt;- rpois(n, lambda)\n    \n    xbar &lt;- mean(X)\n    a_new &lt;- a + sum(X)\n    b_new &lt;- b + n\n    paste0(\"Prior mean: \", round(a / b, 3),\n           \"\\nMLE: \", round(xbar, 3),\n           \"\\nPosterior mean: \", round(a_new / b_new, 3))\n  })\n  \n  output$betaPlot &lt;- renderPlot({\n    set.seed(1234)\n  \n    n &lt;- input$n\n    lambda &lt;- input$lambda\n    a &lt;- input$a\n    b  &lt;- input$b\n    X &lt;- rpois(n, lambda)\n    \n    xbar &lt;- mean(X)\n    a_new &lt;- a + sum(X)\n    b_new &lt;- b + n\n    \n    curve(dgamma(x, shape = a, rate = b), from = 0, to = 10, n = 1000, col = \"blue\",\n          ylim = c(0, 5), lwd = 2, xlab = \"θ\",\n          ylab = \"density\")\n    curve(dgamma(x, shape = a_new, rate = b_new), from = 0, to = 10, n = 1000, add = TRUE,\n          col = \"purple\", lwd = 2)\n    abline(v = lambda, lwd = 2, col = \"red\")\n      legend(\"topright\", c(\"prior\", \"posterior\", \"true value\"), \n         lty = 1, lwd = 2,\n         col = c(\"blue\", \"purple\", \"red\"), bty = \"n\")\n  })\n}\n\nshinyApp(ui, server)",
+    "text": "Let’s say you work at an insurance company. Your boss asks you “how many insurance claims do we typically receive in a month?” So you pull up some data. Here’s a preview of what it might look like:\n\n\n\n\nMonth\nYear\nNumber of claims\n\n\n\n\n…\n…\n…\n\n\nMarch\n2005\n80\n\n\nApril\n2005\n61\n\n\nMay\n2005\n98\n\n\nJune\n2005\n73\n\n\n…\n…\n…\n\n\n\n\nTo answer your boss’s question, you could take the numbers and just compute the average. That’s probably a pretty good guess. But imagine your boss follows up with questions like “how certain are we of that guess?” or “how reliable is that estimate?” Now we’re talking about statistics.\nAs soon as we start worrying about uncertainty quantification, we enter the subtle realm of modeling assumptions and interpretive philosophies. It’s not like probability theory where we were just proving theorems and doing calculations. Now, the theory of statistics is in some ways just another branch of probability theory, and so in truth were are still proving theorems and doing calculations. But we wring our hands about the interpretation of the results in ways that we didn’t necessarily do before.\nAnyway, I’m rambling. Data don’t speak for themselves, and so we require an interpretive lens to make sense of them. The strongest form of this is a concrete statistical model, so let’s pose one. The number of insurance claims in a month is going to be a non-negative integer, and so we could choose for our model any parametric family of probability distributions supported on \\(\\mathbb{N}\\). Let’s go with the simplest one:\n\\[\nX_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{Poisson}(\\theta).\n\\]\nThat’s our model for the claims data. The rate parameter \\(\\theta&gt;0\\) is unknown, and we want to use the data to learn what it is. Note that this model may or may not be a good choice, and entire books have been written on model building and model selection and model diagnostics and model criticism. If you keep studying statistics, you’ll learn about all that, but this class is about one thing and one thing only: can you do the math or not? So we will just take the model as given and use it as an opportunity to test our technical skills.\n\n\n\n\n\n\nWrite-up instructions\n\n\n\nYou don’t have to type up all the work. The final answer is fine. Frankly, I don’t really care what you turn in. This is just extra practice with stuff you are guaranteed to see on the final, so lock in.\n\n\n\nTask 0\nCompute the likelihood function and the log-likelihood function for the Poisson distribution. You will need both in what follows.\n\n\nTask 1\nCompute the maximum likelihood estimator for \\(\\theta&gt;0\\) in the Poisson distribution.\n\n\nTask 2\nCompute the mean, bias, variance, and MSE of the estimator and comment on its statistical properties.\n\n\nTask 3\nThe rate parameter \\(\\theta&gt;0\\) is a positive real number, so if we want to perform a Bayesian analysis, we need a continuous probability distribution on positive reals. The gamma family is a convenient choice for this, so consider the Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{Gamma}(a_0,\\,b_0)\n\\\\\nX_1,\\,X_2,\\,...,\\,X_n\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{Poisson}(\\theta).\n\\end{aligned}\n\\]\nDerive the posterior distribution.\n\n\nTask 4\nBased on your answer from the previous task, show that the posterior mean is a convex combination of the prior mean and the maximum likelihood estimator that you derived earlier.\n\n\nTask 5\nIgnoring that we ever did a Bayesian analysis, treat the posterior mean formula from the previous task as a new classical estimator for \\(\\theta\\). It’s just a function of the data at the end of the day.\nWhat are the mean, bias, and variance of the posterior mean? How do these compare to the pure MLE? Are there circumstances under which this new estimator would be preferred to the pure MLE?\n\n\nPlay around!\nHere’s a cute lil’ app you can play with to get a sense of how these statistical procedures behave. Start by keeping all the default setting the same but increasing the sample size. What happens to the posterior distribution as you accumulate more and more data?\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 700\nlibrary(shiny)\n\n# true value\n# prior hyperparameter\n# sample size\n# show the data\n# show the summary statistics\n\nui &lt;- fluidPage(\n  titlePanel(\"Inference for the Poisson distribution\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"lambda\", \"True value of θ:\",\n                   min = 0.1, max = 10, value = 1, step = 0.1),\n      sliderInput(\"a\", \"Prior shape (a₀):\",\n                  min = 0.1, max = 100, value = 70, step = 0.1),\n      sliderInput(\"b\", \"Prior rate (b₀):\",\n                  min = 0.1, max = 100, value = 10, step = 0.1),\n      sliderInput(\"n\", \"Sample size (n):\",\n                  min = 1, max = 300, value = 1, step = 1),\n      hr(),\n      verbatimTextOutput(\"moments\")\n    ),\n    \n    mainPanel(\n      plotOutput(\"betaPlot\", height = \"600px\")\n    )\n  )\n)\n\nserver &lt;- function(input, output, session) {\n  \n  output$moments &lt;- renderText({\n    set.seed(1234)\n  \n    n &lt;- input$n\n    lambda &lt;- input$lambda\n    a &lt;- input$a\n    b  &lt;- input$b\n    X &lt;- rpois(n, lambda)\n    \n    xbar &lt;- mean(X)\n    a_new &lt;- a + sum(X)\n    b_new &lt;- b + n\n    paste0(\"Prior mean: \", round(a / b, 3),\n           \"\\nMLE: \", round(xbar, 3),\n           \"\\nPosterior mean: \", round(a_new / b_new, 3))\n  })\n  \n  output$betaPlot &lt;- renderPlot({\n    set.seed(1234)\n  \n    n &lt;- input$n\n    lambda &lt;- input$lambda\n    a &lt;- input$a\n    b  &lt;- input$b\n    X &lt;- rpois(n, lambda)\n    \n    xbar &lt;- mean(X)\n    a_new &lt;- a + sum(X)\n    b_new &lt;- b + n\n    \n    curve(dgamma(x, shape = a, rate = b), from = 0, to = 10, n = 1000, col = \"blue\",\n          ylim = c(0, 5), lwd = 2, xlab = \"θ\",\n          ylab = \"density\")\n    curve(dgamma(x, shape = a_new, rate = b_new), from = 0, to = 10, n = 1000, add = TRUE,\n          col = \"purple\", lwd = 2)\n    abline(v = lambda, lwd = 2, col = \"red\")\n      legend(\"topright\", c(\"prior\", \"posterior\", \"true value\"), \n         lty = 1, lwd = 2,\n         col = c(\"blue\", \"purple\", \"red\"), bty = \"n\")\n  })\n}\n\nshinyApp(ui, server)",
     "crumbs": [
       "Labs",
       "Lab 11"
@@ -2989,32 +3003,32 @@
     "text": "Suppose \\(X\\) and \\(Y\\) are jointly absolutely continuous random variables with joint density\n\\[\nf_{XY}(x,\\,y)=xe^{-x(y+1)},\\quad x,\\,y&gt;0.\n\\]\n\nFind the marginal density of \\(X\\).\nFind the marginal density of \\(Y\\).\nAre \\(X\\) and \\(Y\\) independent?\nFind the conditional density of \\(X\\) given \\(Y=y\\).\nFind the conditional density of \\(Y\\) given \\(X=x\\)."
   },
   {
-    "objectID": "problems/bank/joint-distributions/gamma-exponential-hierarchy.html",
-    "href": "problems/bank/joint-distributions/gamma-exponential-hierarchy.html",
+    "objectID": "problems/bank/joint-distributions/bdj-joint.html",
+    "href": "problems/bank/joint-distributions/bdj-joint.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider this joint distribution for random variables \\(X\\) and \\(Y\\), written in hierarchical form:\n\\[\n\\begin{aligned}\nX&\\sim\\text{Gamma}\\left(\\alpha,\\,\\beta\\right)\\\\\nY\\mid X=x&\\sim \\text{Exponential}(x).\n\\end{aligned}\n\\]\n\nSketch the joint range of \\((X,\\, Y)\\).\nWhat is the joint density of the random pair \\((X,\\, Y)\\)?\nWhat is the marginal density of \\(Y\\)?\nWhat is the density of \\(X\\) conditional on the event \\(Y=y\\)? Is it recognizable?"
+    "text": "Here is the joint density for a random pair:\n\\[\nf_{XY}(x,\\,y)\n=\n\\frac{24}{7}\nx(2-y),\\quad 0&lt;x&lt;1\\text{ and }0&lt;y&lt;1-x.\n\\]\n\nSketch the joint range of \\((X,\\,Y)\\).\nFind the marginal density of \\(Y\\).\nFind the marginal density of \\(X\\).\nFind the conditional density of \\(X\\) given \\(Y=y\\).\nUse this to compute \\(P(X&gt;1/2\\,|\\,Y=1/3)\\).\nWhat is \\(E(X\\,|\\,Y=y)\\)?"
   },
   {
-    "objectID": "problems/bank/moments/discrete-uniform.html",
-    "href": "problems/bank/moments/discrete-uniform.html",
+    "objectID": "problems/bank/moments/gumbel-mgf.html",
+    "href": "problems/bank/moments/gumbel-mgf.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(X\\) have the discrete uniform on \\(\\{1,\\,2,\\,...,\\,n\\}\\). This means \\(P(X=i)=1/n\\) for all \\(i = 1,\\,2,\\,...,\\,n\\).\n\nCompute the MGF of \\(X\\);\nUse it to compute the mean;\nUse it to compute the variance."
+    "text": "Consider a continuous random variable \\(X\\) with density\n\\[\nf(x)=\\frac{1}{\\beta}\\exp\\left(-\\frac{x}{\\beta}-e^{-x/\\beta}\\right),\\quad x\\in\\mathbb{R}.\n\\]\nThe parameter \\(\\beta&gt;0\\) is just a positive constant. Compute the moment-generating function of \\(X\\)."
   },
   {
-    "objectID": "problems/bank/moments/laplace.html",
-    "href": "problems/bank/moments/laplace.html",
+    "objectID": "problems/bank/moments/normal-mgf.html",
+    "href": "problems/bank/moments/normal-mgf.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(X\\) have density\n\\[\nf_X(x)\n=\n\\frac{1}{2}\ne^{-|x|},\\quad x\\in\\mathbb{R}.\n\\]\n\nWhat is the mgf of \\(X\\)?\nWhat is the mean?\nWhat is the variance?"
+    "text": "Let \\(Z\\sim\\text{N}(0,\\,1)\\), and recall what that means:\n\\[\n\\begin{aligned}\nf_Z(z)&=\\frac{1}{\\sqrt{2\\pi}}\\exp\\left(-\\frac{1}{2}z^2\\right), && -\\infty&lt;z&lt;\\infty\\\\\nM_Z(t)&=\\exp\\left(\\frac{1}{2}t^2\\right), && -\\infty&lt;t&lt;\\infty.\n\\end{aligned}\n\\]\nNext, let \\(X=\\mu+\\sigma Z\\) for some constants \\(\\mu\\in\\mathbb{R}\\) and \\(\\sigma&gt;0\\).\n\nUse the change-of-variables formula to derive density of \\(X\\). What is its distribution?\nWhat is the moment-generating function of \\(X\\)?\nWhat are the mean and variance of \\(X\\)? Make sure you justify your answer with some type of derivation.\nConsider \\(X_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{N}(\\mu,\\,\\sigma^2)\\) and derive the distribution of their sum and their average."
   },
   {
-    "objectID": "problems/bank/moments/binomial-mgf.html",
-    "href": "problems/bank/moments/binomial-mgf.html",
+    "objectID": "problems/bank/moments/direct-mgf.html",
+    "href": "problems/bank/moments/direct-mgf.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Compute the moment-generating function of the binomial distribution;\nUse the mgf to compute the mean;\nUse the mgf to compute the variance.\n\nNote: we already know from lecture that the mean is \\(np\\) and the variance is \\(np(1-p)\\), so you know you did it right when you get the same answer."
+    "text": "A certain random variable \\(X\\) has moment-generating function\n\\[\nM(t)=\\frac{e^{2t}}{1-3t},\\quad t&lt;1/3.\n\\]\n\nCompute the mean and variance of \\(X\\).\nWhat is the moment generating function of the new random variable\n\n\\[\nY=\\frac{\\pi}{2}-\\frac{X}{3}.\n\\]"
   },
   {
     "objectID": "problems/bank/transformations/twerkout-2.html",
@@ -3031,270 +3045,277 @@
     "text": "On Lab 7, we learned how to derive the distribution of a transformation. This is an important technical skill that crops up often in mathematical probability, so let’s get our reps in:\n\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\), and find the range and density of \\(Y=e^X\\);\nLet \\(X\\sim\\textrm{Unif}(0,\\,1)\\), and find the range and density of \\(Y=\\sqrt{X}\\);\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\), and find the range and density of \\(Y=X^2\\);\nLet \\(X\\sim\\text{Gamma}(a,\\,b)\\), and find the range and density of \\(Y=1/X\\);\nLet \\(Z\\sim\\text{N}(0,\\,1)\\), and find the range and density of \\(Z^2\\)."
   },
   {
-    "objectID": "problems/bank/basic-rules/disjoint-complements.html",
-    "href": "problems/bank/basic-rules/disjoint-complements.html",
+    "objectID": "problems/bank/basic-rules/xor-2.html",
+    "href": "problems/bank/basic-rules/xor-2.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Suppose the events \\(A\\) and \\(B\\) are disjoint. Under what conditions are \\(A^{c}\\) and \\(B^{c}\\) also disjoint events?"
+    "text": "Let \\(A\\), \\(B\\), and \\(C\\) be three arbitrary events, and let \\(D\\) denote the event that “exactly one of these three events occurs.”\n\nDraw a cartoon of \\(A\\), \\(B\\), \\(C\\), and \\(D\\);\nUse the three basic set operations (union, intersection, and complement) to express \\(D\\) in terms of \\(A\\), \\(B\\), and \\(C\\);\nShow that\n\n\\[\nP(D)=P(A) + P(B) + P(C) - 2P(A \\cap B) - 2P(A \\cap C) - 2P(B \\cap C) + 3P(A \\cap B \\cap C).\n\\]"
   },
   {
-    "objectID": "problems/bank/basic-rules/weather-app.html",
-    "href": "problems/bank/basic-rules/weather-app.html",
+    "objectID": "problems/bank/basic-rules/geniuses-and-chocolate-lovers.html",
+    "href": "problems/bank/basic-rules/geniuses-and-chocolate-lovers.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "One day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they fit together."
+    "text": "Out of the students in a class, 60% are geniuses, 70% love chocolate, and 40% fall into both categories. Determine the probability that a randomly selected student is neither a genius nor a chocolate lover."
   },
   {
-    "objectID": "problems/bank/basic-rules/intersection-bound.html",
-    "href": "problems/bank/basic-rules/intersection-bound.html",
+    "objectID": "problems/bank/basic-rules/xor.html",
+    "href": "problems/bank/basic-rules/xor.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(A,\\,B\\subseteq S\\) be any pair of events in a sample space \\(S\\), and show that\n\\[\n\\max\\{0,\\,P(A)+P(B)-1\\}\\leq P(A\\cap B)\\leq\\min\\{P(A),\\,P(B)\\}.\n\\]"
+    "text": "Let \\(A\\) and \\(B\\) be events in a sample space \\(S\\). Let \\(C\\) be the set of outcomes that are in either \\(A\\) or \\(B\\), but not both.\n\nDraw a well-labeled picture of \\(S\\), \\(A\\), \\(B\\), and \\(C\\).\nWrite down a formula for \\(C\\) in terms of \\(A\\) and \\(B\\) using any of the basic operations: union (\\(\\cup\\)), intersection (\\(\\cap\\)), complement (\\(^c\\)).\nUse set theory and the probability axioms to show that\n\n\\[\nP(C)=P(A)+P(B)-2P(A\\cap B).\n\\]\n\nExplain this result conceptually (with words and pictures)."
   },
   {
-    "objectID": "problems/bank/basic-rules/incl-excl-3.html",
-    "href": "problems/bank/basic-rules/incl-excl-3.html",
+    "objectID": "problems/bank/basic-rules/poisson-measure.html",
+    "href": "problems/bank/basic-rules/poisson-measure.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(S\\) be a sample space, and consider events \\(A,\\, B,\\, C\\subseteq S\\). Recall that the law of inclusion/exclusion says that\n\\[\nP(A\\cup B)=P(A)+P(B)-P(A\\cap B).\n\\]\n\nHow should this be extended to unions of three events? \\[\nP(A\\cup B\\cup C)=P(A)+P(B)+P(C) +\\,...{???}\n\\] Explain your conjecture with words and pictures.\nUse set theory and the probabiity axioms to prove your conjecture in the previous part."
+    "text": "Suppose we have the sample space \\(S=\\mathbb{N}=\\{0,\\,1,\\,2,\\,...\\}\\) and a probability measure \\(P\\) that assigns the following individual probabilities to the singleton sets:\n\\[\nP(\\{i\\})=c\\frac{4^i}{i!},\\quad i\\in\\mathbb{N}.\n\\]\n\nIn order for \\(P\\) to satisfy the axiom of total measure one, what must be the value of the constant \\(c&gt;0\\).\nWhich outcome(s) in the sample space are most likely (ie have the largest individual probability of occurring)? Furthermore, how do you know for a fact that you’ve identified all of them? The sample space is infinite, so presumably you cannot literally check every outcome.\nWhat is the probability of the even numbers?\n\n\n\n\n\n\n\nBe careful!\n\n\n\nI could not care less about the answers to these questions. It’s all about the reasoning, and showing that you understand how the ideas fit together. To earn full credit, make sure you carefully justify everything by making appropriate reference to the rules and axioms."
   },
   {
-    "objectID": "problems/bank/basic-rules/basic-mutually-exclusive-practice.html",
-    "href": "problems/bank/basic-rules/basic-mutually-exclusive-practice.html",
+    "objectID": "problems/bank/basic-rules/blood-type.html",
+    "href": "problems/bank/basic-rules/blood-type.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Suppose that \\(A\\) and \\(B\\) are mutually exclusive events for which \\(P(A) = 0.3\\) and \\(P(B) = 0.5\\). What is the probability that…\n\neither \\(A\\) or \\(B\\) occurs?\n\\(A\\) occurs but \\(B\\) does not?\nboth \\(A\\) and \\(B\\) occur?\nAre \\(A\\) and \\(B\\) independent? Why or why not?"
+    "text": "A simplified model of the human blood-type system has four types: A, B, AB, and O. Suppose that, for a randomly chosen person, the probability of type O blood is 0.5, of type A blood is 0.36, and of type B blood is 0.11. There are two antigens, anti-A and anti-B, that react with a person’s blood in different ways depending on the type. Anti-A reacts with blood types A and AB but not with B and O. Anti-B reacts with blood types B and AB, but not with A and O.\n\nLet \\(\\mathcal{A}\\) be the event that a person’s blood reacts with anti-A, and let \\(\\mathcal{B}\\) be the event that their blood reacts with anti-B. Classify the person’s blood type using the events \\(\\mathcal{A}\\) and \\(\\mathcal{B}\\) and their complements;\nWhat is the probability that both antigens will react with a random person’s blood?\nWhat is the probability that each antigen will react with a random person’s blood?"
   },
   {
-    "objectID": "problems/bank/basic-rules/set-minus.html",
-    "href": "problems/bank/basic-rules/set-minus.html",
+    "objectID": "problems/bank/basic-rules/union-bound.html",
+    "href": "problems/bank/basic-rules/union-bound.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(S\\) be a sample space, let \\(A,\\, B\\subseteq S\\) be events, and define a new set\n\\[\nA-B = \\{x\\in S:x\\in A\\text{ and }x\\notin B\\}.\n\\]\n\nDraw a well-labeled picture of \\(A\\), \\(B\\), \\(S\\), and the set \\(A-B\\);\nWrite down an equivalent expression for \\(A-B\\) that only makes use of our three basic operations: union, intersection, and complement;\nProve that \\(P(A-B)=P(A)-P(A\\cap B)\\)."
+    "text": "Let \\(A_1,\\,A_2,\\,A_3,\\,...\\subseteq S\\) be an infinite sequence of possibly overlapping events in some probability space. Based on this arbitrary sequence, define a new sequence of events that starts with \\(B_1 = A_1\\) and then has \\(B_i=A_i\\cap \\left(\\bigcup_{j=1}^{i-1}A_j\\right)^c\\) for all \\(i&gt;1\\).\n\nShow that the \\(B_i\\) are pairwise disjoint.\nShow that\n\n\\[\n\\bigcup_{i=1}^\\infty A_i=\\bigcup_{i=1}^\\infty B_i.\n\\]\n\nUse the previous parts to show that\n\n\\[\nP\\left(\\bigcup_{i=1}^\\infty A_i\\right)\\leq\\sum\\limits_{i=1}^\\infty P(A_i).\n\\]"
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-logexp.html",
-    "href": "problems/bank/calculus-review/calc-logexp.html",
+    "objectID": "problems/bank/calculus-review/calc-gamma.html",
+    "href": "problems/bank/calculus-review/calc-gamma.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Simplify this:\n\\[\n\\ln\\left(e^{a_1}e^{a_2}e^{a_3}\\cdots e^{a_n}\\right).\n\\]"
+    "text": "Here is another inordinately silly function:\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\textrm{d} y,\\quad x&gt;0.\n\\]\nProve that \\(\\Gamma(x+1)=x\\Gamma(x)\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nStart on the left-hand side by writing out \\(\\Gamma(x+1)\\) and evaluating the integral by parts."
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-pareto-ish.html",
-    "href": "problems/bank/calculus-review/calc-pareto-ish.html",
+    "objectID": "problems/bank/calculus-review/calc-inflection.html",
+    "href": "problems/bank/calculus-review/calc-inflection.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider this integral:\n\\[\n    \\int_2^\\infty\n    \\frac{1}{x(\\ln x)^p}\\textrm{d} x\n    .\n\\]\n\nUse R to create a single plot with many lines, each graphing the integrand for a different value of \\(p\\). Consider \\(p\\) equal to -2, -1.5, -1, 0, 1, and 5, and make the \\(x\\)-axis of your plot run from 2 to 15.\nShow that \\(\\lim_{x\\to\\infty}\\frac{1}{x(\\ln x)^p}=0\\) for all values of \\(-\\infty&lt;p&lt;\\infty\\).\nFor what values of \\(p\\) does the integral converge? When it does converge, what is its value?\nConsult the picture you created in part (a), and write a few sentences explaining conceptually why the integral converges for some values of \\(p\\) but not others.\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nWhen taking the limit or evaluating the integral, can you use the same technique for all values of \\(p\\), or do you need a different technique depending on what \\(p\\) is?"
+    "text": "Here is a very silly function:\n\\[\nh(x)\n=\n\\exp\\left(-\\frac{1}{2}\\frac{(x-\\mu)^2}{\\sigma^2}\\right)\n,\\quad\n-\\infty&lt;x&lt;\\infty\n.\n\\]\nTreat \\(-\\infty&lt;\\mu&lt;\\infty\\) and \\(\\sigma&gt;0\\) as constants and compute the value(s) of \\(x\\) at which \\(h\\) has inflection points.\n\n\n\n\n\n\nHint\n\n\n\n\n\nHere is an example of what \\(h\\) might look like in the special case where \\(\\mu = 1\\) and \\(\\sigma=2\\):\n\nCodem = 1\ns = 2\npar(mar = c(4, 4, 0.1, 4))\ncurve(exp(-0.5 * ((x - m) / s)^2), \n      from = -6, to = 8, n = 500,\n      xlab = \"x\", ylab = \"h(x)\",\n      xaxt = \"n\")\naxis(1, at = -6:8)\n\n\n\n\n\n\n\nBefore you start doing any math, can you use the picture to guess what the answer will be?"
   },
   {
-    "objectID": "problems/bank/calculus-review/calc-bad-notation.html",
-    "href": "problems/bank/calculus-review/calc-bad-notation.html",
+    "objectID": "problems/bank/calculus-review/calc-limit.html",
+    "href": "problems/bank/calculus-review/calc-limit.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Explain why this is horrific notation:\n\\[\n    \\int_0^x f(x)\\,\\textrm{d} x.\n\\]\nHow should it be fixed?"
+    "text": "Let \\(f\\) be any function with the following properties:\nAssume \\(t\\) is a constant and compute\n\\[\n    \\lim_{x\\to\\infty} xf\\left(\\frac{t}{\\sqrt{x}}\\right)\n    .\n\\]"
   },
   {
-    "objectID": "problems/bank/bayes/normal-normal.html",
-    "href": "problems/bank/bayes/normal-normal.html",
+    "objectID": "problems/bank/calculus-review/calc-limit.html#footnotes",
+    "href": "problems/bank/calculus-review/calc-limit.html#footnotes",
     "title": "STA 240 Fall 2025",
-    "section": "",
-    "text": "Consider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{N}(m_0,\\,\\tau_0^2)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(\\theta,\\,1).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean \\(m_0\\) and the MLE."
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis means that \\(f\\) and its first two derivatives are all continuous functions at and around zero.↩︎"
   },
   {
-    "objectID": "problems/bank/bayes/beta-geometric.html",
-    "href": "problems/bank/bayes/beta-geometric.html",
+    "objectID": "problems/bank/calculus-review/calc-series.html",
+    "href": "problems/bank/calculus-review/calc-series.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider the following Bayesian model:\n\\[\n\\begin{aligned}\np&\\sim\\text{Beta}(a_0,\\,b_0)&& \\text{(prior)}\\\\\nX_1,\\,X_2,\\,...,\\,X_n\\,|\\,p&\\overset{\\text{iid}}{\\sim}\\text{Geometric}(p).&& \\text{(likelihood)}\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution?\nCompute the posterior mean and show that it is a weighted average of the prior mean and the maximum likelihood estimator."
+    "text": "Assume \\(\\lambda&gt;0\\) is a constant and compute\n\\[\n    \\sum\\limits_{n=0}^\\infty n \\frac{\\lambda^n}{n!}e^{-\\lambda}\n    .\n\\]"
   },
   {
-    "objectID": "problems/bank/bayes/gamma-lomax.html",
-    "href": "problems/bank/bayes/gamma-lomax.html",
+    "objectID": "problems/bank/bayes/gamma-exponential.html",
+    "href": "problems/bank/bayes/gamma-exponential.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{Gamma}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}???.\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE."
+    "text": "Imagine that I quit my job and open a factory that manufactures bow ties and light bulbs (Zito’s Bows and Bulbs). The ties are alright, but the bulbs suck. They burn out real quick. Each bulb is slightly different, and you can’t perfectly predict how long they will last, so the time (in hours) until the bulb dies is a random variable \\(X\\), and let’s assume \\(X\\sim\\text{Exponential}(\\lambda)\\), where \\(\\lambda&gt;0\\) is unknown. Recall that \\(E(X)=1/\\lambda\\), so the larger the rate, the sooner the burnout time.\nI want to estimate \\(\\lambda\\) to get a sense of how bad my light bulbs are, so I sample \\(n\\) bulbs and record their burnout times:\n\\[\nX_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{Exponential}(\\lambda).\n\\]\nAt this point, I could just use the method of maximum likelihood to estimate \\(\\lambda\\) like we did in lecture, but before I do, I go and consult Great Grandma Zito. She’s been making bad light bulbs for decades and taught me everything that I know. She says that in her experience, \\(\\lambda\\) is in the ballpark of 1 (meaning our bulbs burn out in an hour, on average), but there’s uncertainty about that. In her opinion, the probability that \\(\\lambda&gt;3\\) is about 1.7%.\nI want to incorporate my grandmother’s prior knowledge into my analysis, so I decide to be Bayesian:\n\\[\n\\begin{aligned}\n\\lambda &\\sim\\text{Gamma}(\\alpha_0,\\,\\beta_0) && \\text{(prior)}\\\\\nX_1,\\,X_2,\\,...,\\,X_n\\,|\\,\\lambda&\\overset{\\text{iid}}{\\sim}\\text{Exponential}(\\lambda) && \\text{(data model)}.\n\\end{aligned}\n\\]\n\\(\\lambda \\sim\\text{Gamma}(\\alpha_0,\\,\\beta_0)\\) is my prior distribution for the unknown parameter, and \\(\\alpha_0,\\,\\beta_0&gt;0\\) are hyperparameters that I will tune in order to encode the prior knowledge about \\(\\lambda\\) that my grandmother described. I chose the gamma family simply because it is convenient and familiar to me, and I know that \\(\\lambda\\) is a continuous numerical quantity that must be positive.\n\nShow that the posterior distribution for \\(\\lambda\\) in this model is\n\\[\n\\lambda\\,|\\,X_{1:n}=x_{1:n} \\sim \\text{Gamma}(\\alpha_n,\\,\\beta_n).\n\\]\nAfter we see some data, what are the revised hyperparameters \\(\\alpha_n,\\,\\beta_n\\) equal to?\n\n\n\n\n\n\n\nPay attention to the notation here\n\n\n\nBefore I see any data, \\(\\text{Gamma}(\\alpha_0,\\,\\beta_0)\\) summarizes my beliefs about \\(\\lambda\\). After I see some data, \\(\\text{Gamma}(\\alpha_n,\\,\\beta_n)\\) summarizes my beliefs about \\(\\lambda\\). \\(\\alpha_0\\) and \\(\\beta_0\\) are the prior hyperparameters, and \\(\\alpha_n\\) and \\(\\beta_n\\) are the posterior hyperparameters. The subscript indicates how much data my beliefs are based on.\n\n\n\nShow that the posterior mean has the form\n\\[\nE(\\lambda\\,|\\,X_1,\\,X_2,\\,...,\\,X_n)=w_n\\hat{\\lambda}_n^{(MLE)} + (1-w_n)\\underbrace{E(\\lambda)}_{\\text{prior mean}},\n\\]\nwhere \\(w_n\\in(0,\\,1)\\) might depend on the data. This means that the posterior mean is a shrinkage estimator. We shrink the MLE toward our prior estimate of the parameter.\nHow should the prior hyperparameters \\(\\alpha_0\\) and \\(\\beta_0\\) be set so that the prior distribution captures my grandmother’s beliefs about \\(\\lambda\\)? There’s not a tremendous amount of math here. It’s just trial-and-error until you find numbers that work."
   },
   {
-    "objectID": "problems/bank/conceptual/diaconis.html",
-    "href": "problems/bank/conceptual/diaconis.html",
+    "objectID": "problems/bank/bayes/inv-gamma-normal.html",
+    "href": "problems/bank/bayes/inv-gamma-normal.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Persi Diaconis is a famous researcher in probability and statistics. He has a cute line of research where he probes the randomness that we take for granted in simple things like coin tossing, dice, and playing cards. In the interview above he discusses coin tossing, and says both “coin tossing is as close to a random phenomenon as I know” and “coin tossing is a deterministic process. What’s random about it?” Wut?\nWatch the interview, and report back with a brief summary of Diaconis’ explanation of what makes a coin toss random. Do you agree or disagree?"
+    "text": "Consider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{IG}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(0,\\,\\theta).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE."
   },
   {
-    "objectID": "problems/bank/conceptual/lousy-forecasting.html",
-    "href": "problems/bank/conceptual/lousy-forecasting.html",
+    "objectID": "problems/bank/conceptual/exam-review.html",
+    "href": "problems/bank/conceptual/exam-review.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is a list of events that may or may not happen, but I believe we will know the final outcome before the end of the semester:\n\nZohran Mamdani wins the New York City mayoral election;\nWicked: For Good makes more money at the box office (inflation adjusted) on its opening weekend than Wicked: Part I;\nThe Philadelphia Phillies make it to the 2025 World Series;\nSean Combs is sentenced to prison for more than 3 years;\nA greater percentage of Duke undergraduates participate in this year’s Duke Marriage Pact than last year’s. About 43% participated last year;\nThe total number of points scored at the Countdown to Craziness exhibition game is greater than 50;\nBefore the end of the year, the Federal Reserve announces that Lisa Cook is no longer a member of the Board of Governors;\nThe United States federal government is shut down due to a lapse in appropriations by October 1, 2025.\n\nChoose three of these, state the probabilities that you assign to the events happening, and explain in a few paragraphs how you formulated your beliefs. What reasoning and evidence did you consider, and how did you weigh it? Feel free to provide links to online sources as needed.\n\n\n\n\n\n\nAvoid wishful thinking\n\n\n\nFor some of these, you may have strong preferences about the outcome. Try to set them aside and report your honest assessment of the likelihood of the event, whether it pleases you or not."
+    "text": "Sadly, we have a midterm exam coming up on Thursday October 9. Everything you have seen on Problem Sets 1 through 4 is fair game for the exam: set theory, probability spaces and axioms, probability rules and proofs, counting, conditional probability and independence, and discrete random variables.\nLook back through the course materials thus far and select the topic that you think you understand the least. Study this topic carefully and then do two things:\n\nWrite a few paragraphs where you explain this topic to a five-year-old using only words, pictures, and toy examples;\nAfter you’re done reviewing, and after your response to part a, include one thing you’re still unsure about or a question you’d like to ask about your chosen topic.\n\nAfter you submit this problem set, I will answer all of the class’s questions and post an anonymized “Q&A” as part of the exam review materials."
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/pascal.html",
-    "href": "problems/bank/random-variables-discrete/pascal.html",
+    "objectID": "problems/bank/conceptual/sally-clark.html",
+    "href": "problems/bank/conceptual/sally-clark.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "If the discrete random variable \\(X\\) has the funky-ass distribution (FAS), then its range is \\(\\text{Range}(X)=\\mathbb{N}\\) and its pmf is\n\\[\nP(X=k)=\\binom{k+r-1}{k}(1-p)^kp^r\\quad k=0,\\,1,\\,2,\\,3,\\,...,\n\\]\nwhere the parameters \\(r\\in\\mathbb{N}\\) and \\(0&lt;p&lt;1\\) are constants. We denote this \\(X\\sim\\text{FAS}(r,\\,p)\\).\n\nUse what you know about probability to find the value of this infinite series:\n\n\\[\n\\sum\\limits_{k=0}^\\infty\n\\binom{k+r-1}{k}(1-p)^k.\n\\]\n\nCompute the MGF of \\(X\\);\nUse the definition of the expected value to compute the mean of \\(X\\);\nUse the MGF to compute the mean of \\(X\\) and verify that you get the same answer you got before;\nConsider an iid collection \\(X_i\\overset{\\text{iid}}{\\sim}\\text{FAS}(r,\\,p)\\) and derive the distribution of the sum \\(S_n=\\sum_{i=1}^nX_i\\)."
+    "text": "Here are some short readings about the case of Sally Clark and Roy Meadow, as well as something called the prosecutor’s fallacy:\n\nGrimes (2023): “Bad Science and Bad Statistics in the Courtroom Convict Innocent People,” Scientific American;\nCarriquiry (2018): “Misuse of statistics in the courtroom: the Sally Clark case,” CSAFE;\nWestreich & Iliinsky (2014): “Epidemiology visualized: the prosecutor’s fallacy,” American Journal of Epidemiology;\nAP Dawid’s statement during the Clark appeal.\n\nPlease do the following:\n\nRead the articles;\nUsing the ideas of conditional probability and independence that we have studied, write a paragraph or two describing what the prosecutor’s fallacy is and how it applies to the Clark case;\nIf you were an attorney for the defense and had the chance to cross-examine Roy Meadow, what would you ask him about his statistical testimony? What are the most incisive questions you could ask? How would you ensure that the cross-examination would “land” with the members of the jury, who most likely know absolutely nothing about probability and statistics?\n\n\n\n\n\n\n\nPlease don’t break my heart\n\n\n\nI’m not asking you to read Moby-Dick here."
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/fibonacci-dice.html",
-    "href": "problems/bank/random-variables-discrete/fibonacci-dice.html",
+    "objectID": "problems/bank/random-variables-discrete/geometric-mgf.html",
+    "href": "problems/bank/random-variables-discrete/geometric-mgf.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Signore Fibonacci has created a a balanced, six-sided die whose faces are labeled, naturally, 1, 2, 3, 5, 8, 13. He gives a pair to Enzo, who rolls them repeatedly, eager to get double 13s. Let \\(X\\) be the number of times he has to roll the pair of dice in order to see double 13s for the first time.\n\nWhat is the pmf of \\(X\\)?\nWhat is the expected value of \\(X\\)?\nFind a closed-form expression for \\(P(X\\geq m)\\)."
+    "text": "Compute the moment generating function of the geometric distribution. For what values of \\(t\\) is it defined?\nUse the mgf to compute the mean and variance of the geometric distribution."
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/gandalf-test.html",
-    "href": "problems/bank/random-variables-discrete/gandalf-test.html",
+    "objectID": "problems/bank/random-variables-discrete/ross-rv.html",
+    "href": "problems/bank/random-variables-discrete/ross-rv.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "King Elessar summons the wizard Gandalf to court, seeking his counsel. A foul plague has been incapacitating the soldiers. King Elessar asks Gandalf if there exists a test for the disease that is 100% sensitive and 100% specific (ie perfect). Gandalf says that a perfect blood test does exist, but it is very expensive, requiring the venom of a special lizard found only in the Morgul Vale. Each blood test would cost one gold piece, but the Royal Purse only has 500 gold pieces to spare, and there are 1000 soldiers that need to be tested. Gandalf sleeps on it and returns the next day with a plan for testing all of them that won’t break the bank:\n\nTake a blood sample from each of the 1000 soldiers;\nSplit each of these samples into two parts;\nTake one part of each sample and mix batches of ten of the samples together to create 100 mixed samples.\nTest each of those mixed samples;\nA few things could happen:\n\nIf the test gives a negative result, we know all of the original ten samples are clear, and we can move on;\nIf the test gives a positive result, then we know at least one of the original ten samples is positive. In that case we test the second part of the sample for each of the ten soldiers. We can then identify which soldiers are positive.\n\n\nGandalf finishes by saying “I expect sixty of the mixed batches to be negative. For the other forty batches, I expect the results to be positive, and hence we will have to test all four hundred of the original samples. This gives a total expected cost of 500 gold pieces.”\n\nWhat disease prevalence is Gandalf implicitly assuming here?\nCan Gandalf revise his scheme to reduce the expected cost even more?"
+    "text": "Two balls are chosen randomly from an urn containing 8 green, 4 black, and 2 orange balls. Suppose that we win $2 for each black ball selected, we lose $1 for each green ball selected, and we earn nothing for each orange ball selected. Let \\(X\\) denote our winnings.\n\nMake a table with the possible values of \\(X\\) and the probabilities of each value.\nSketch the pmf of \\(X\\).\nSketch the cdf of \\(X\\).\nCompute the expected value of \\(X\\)."
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/zero-truncated-poisson.html",
-    "href": "problems/bank/random-variables-discrete/zero-truncated-poisson.html",
+    "objectID": "problems/bank/random-variables-discrete/waiting-for-five-or-seven.html",
+    "href": "problems/bank/random-variables-discrete/waiting-for-five-or-seven.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(X\\sim\\text{Poisson}(\\lambda)\\) and define a new random variable \\(Y\\) that is a zero-truncated version of \\(X\\). That is, we start with \\(\\text{Range}(X)=\\{0,\\,1,\\,2,\\,3,\\,...\\}\\), and then we rig it so that \\(\\text{Range}(Y)=\\{1,\\,2,\\,3,\\,...\\}\\). To do this, we define the PMF of the new random variable \\(Y\\) by\n\\[\nP(Y=k)\n=\nP(X=k\\mid X &gt; 0),\\quad k=1,\\,2,\\,3,\\,4,\\,...\n\\]\n\nShow that the new PMF sums to one;\nCompute the mean of \\(Y\\);\nCompute the variance of \\(Y\\)."
+    "text": "A pair of fair dice is rolled until a sum of either a 5 or a 7 appears. What is the probability that a 5 occurs first?"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/contested-election.html",
-    "href": "problems/bank/random-variables-discrete/contested-election.html",
+    "objectID": "problems/bank/random-variables-discrete/bdj-rv.html",
+    "href": "problems/bank/random-variables-discrete/bdj-rv.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Not all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.\nImagine an election where Angela Lansbury receives \\(a\\) votes, Bernadette Peters receives \\(b\\) votes, and Angela provisionally wins with a margin of victory \\(a-b&gt;0\\). However, of the total \\(a+b\\) votes, we learn that \\(k&gt;a-b\\) were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the \\(k\\) invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.\nTo model this, think of the original \\(a+b\\) ballots as balls in the proverbial urn. \\(a\\) of these balls are red, and \\(b\\) of these balls are blue, and assume that \\(a,\\, b&gt;k\\). Removing the \\(k\\) invalid ballots is like drawing \\(k\\) balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the \\(a+b\\) original ballots is equally likely to have been invalid. Next, imagine we randomly remove \\(k\\) balls from the urn, and let \\(X\\) be a random variable that counts the number of the removed/invalid ballots that belong to Angela. In other words, the number of red balls removed. If \\(X\\) is large enough, it will swing the election in Bernadette’s favor.\n\nWhat are the range and the pmf of the random variable \\(X\\)?\nFor what values of \\(X\\) does removing \\(k\\) ballots reverse the outcome of the election?\nBased on your answers to the previous parts, what is the probability that the election result is reversed when the \\(k\\) bad ballots are removed? Give a general formula for this probability, and then compute the probability for each of the real elections listed in Table 1;\nThe random variable \\(X\\) that you derived in the first part can be approximated by \\(\\text{Binom}(k,\\,1/2)\\). Explain why this approximation might be “good enough,” and verify that it’s not too bad by computing the approximate probability of reversal for the elections in Table 1. Compare the approximate probabilities to the actual ones from the previous part;\nLet’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a plot in R like Figure 1 with the following features:\n\nthe margin of victory \\(a-b\\) on the horizontal axis;\nthe number of bad ballots \\(k\\) on the vertical axis;\nscatterplot where each point represents an election in Table 1, with the points colored according to the decision that was made in the case;\ndivide the plane into two regions, one where the approximate probability of reversal is less than 0.05 and one where it is greater.\n\n\nWrite a few pithy paragraphs commenting on the following:\n\nthe assumptions of our lil’ model. Do you think they are innocuous? What might you change, and how?\nthe match or lack thereof between our model and the decisions that were actually made in the real cases;\nHow do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?\n\n\n\n\n\nTable 1: Close elections\n\n\n\n\n\n\n\n\n\n\n\n\n\nelection\nyear\nwin\nloss\ntotal\nmargin\ninvalid\ndecision\n\n\n\nIppolito v. Power\n1968\n1,422\n1,405\n2,827\n17\n101\nvoid\n\n\nSantucci v. Power\n1969\n58,076\n57,981\n116,057\n95\n448\nvoid\n\n\nDeMartini v. Power\n1970\n2,656\n2,594\n5,250\n62\n136\nupheld\n\n\nMaine House\n1976\n1,193\n1,060\n2,253\n133\n208\nvoid\n\n\nAnn Arbor mayor\n1977\n10,660\n10,659\n21,319\n1\n20\nvoid\n\n\nBrunswick ME town council\n1980\n2,390\n2,383\n4,773\n7\n16\nupheld\n\n\nWashington governor\n2004\n1,373,357\n1,373,228\n2,746,585\n129\n1,439\nupheld\n\n\n\n\n\n\n\nCodeelections &lt;- data.frame(\n  election = c(\"Ippolito\", \"Santucci\", \"DeMartini\", \"Maine\", \"Ann Arbor\", \"Brunswick\", \"Washington\"),\n  a = c(1422, 58076, 2656, 1193, 10660, 2390, 1373357),\n  b = c(1405, 57981, 2594, 1060, 10659, 2383, 1373228),\n  k = c(101, 448, 136, 208, 20, 16, 1439),\n  decision = c(\"void\", \"void\", \"upheld\", \"void\", \"void\", \"upheld\", \"upheld\"),\n  col = c(\"red\", \"red\", \"blue\", \"red\", \"red\", \"blue\", \"blue\")\n)\n\nreversal_prob_binom &lt;- function(a, b, k){\n  cutoff = ceiling(0.5 * (k + a - b))\n  1 - pbinom(cutoff - 1, k, 1/2)\n}\n\nmargin_grid &lt;- 0:150\nk_grid &lt;- 0:450\nn_points &lt;- length(margin_grid) * length(k_grid)\n\ngrid &lt;- data.frame(\n  margin = numeric(n_points),\n  k = numeric(n_points),\n  color = rep(\"lightblue\", n_points)\n)\n\nrow &lt;- 0\n\nfor(x in margin_grid){\n  for(y in k_grid){\n    row &lt;- row + 1\n    grid[row, 1] &lt;- x\n    grid[row, 2] &lt;- y\n    if(reversal_prob_binom(1 + x, 1, y) &gt;= 0.05){\n      grid[row, 3] &lt;- \"pink\"\n    }\n  }\n}\n\nplot(grid$margin, grid$k, col = grid$color, \n     pch = 19, cex = 0.2,\n     xlab = \"margin of victory (a - b)\", \n     ylab = \"number of invalid ballots (k)\",\n     main = \"Approximate probability of election reversal\")\npoints(elections$a - elections$b, elections$k, \n       pch = 19, col = elections$col)\nlegend(-7, 450, \"&gt; 0.05\", text.col = \"salmon\", bty = \"n\", cex = 1.5)\nlegend(115, 450, \"&lt; 0.05\", text.col = \"blue\", bty = \"n\", cex = 1.5)\nlegend(125, 85, c(\"Voided\", \"Upheld\"), pch = 19, col = c(\"red\", \"blue\"), bty = \"n\")\n\n\n\n\n\n\nFigure 1"
+    "text": "An urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/binomial-lotus.html",
-    "href": "problems/bank/random-variables-discrete/binomial-lotus.html",
+    "objectID": "problems/bank/random-variables-discrete/random-exam.html",
+    "href": "problems/bank/random-variables-discrete/random-exam.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "If \\(X\\sim\\text{Binomial}(n,\\,p)\\), show that\n\\[\nE\\left[\\frac{1}{X+1}\\right]=\\frac{1-(1-p)^{n+1}}{(n+1)p}.\n\\]"
+    "text": "I dreamed last night I got on the boat to heavenAnd by some chance I had brought my dice along\nGuys and Dolls\n\nAlas. You settle in for what you think will be a good night’s beauty sleep, and you end up having one of those awful dreams where you must take a test you haven’t studied for. It’s a multiple choice test, each question has five options with only one correct answer, there are fifty questions in total, and each is worth one point. The god Morpheus has kindly seen fit to leave a fair, five-sided die in your dream pocket, and so your dream self decides to do the only thing you can do: use the die to answer each of the exam questions completely at random.\n\nLet \\(X\\) be the number of questions you answer correctly. What is the distribution of \\(X\\)?\nPlot the probability mass function of \\(X\\);\nWhat is the expected number of questions you will answer correctly?\nWhat is the probability that you get at least a C- on the exam?"
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/mak-rv.html",
-    "href": "problems/bank/random-variables-discrete/mak-rv.html",
+    "objectID": "problems/bank/random-variables-discrete/indicator-party.html",
+    "href": "problems/bank/random-variables-discrete/indicator-party.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(X\\) be a random variable with the following pmf:\n\n\n\n\n\\(x\\)\n\\(P(X=x)\\)\n\n\n\n\n-1\n0.500\n\n\n0\n0.250\n\n\n1\n0.125\n\n\n2\n0.125\n\n\n\n\n\nWhat is the mean of \\(X\\)?\nWhat is the pmf of \\(Y = 2X-3\\)?\nWhat is the mean of \\(Y\\)?\nWhat is the pmf of \\(W = X^2\\)?\nWhat is the mean of \\(W\\)?\nWhat is the conditional pmf of \\(X\\) given \\(X \\neq 0\\)?\nWhat is the conditional mean of \\(X\\) given \\(X \\neq 0\\)?"
+    "text": "Let \\(A_1\\), \\(A_2\\), \\(A_3\\), \\(A_4\\), \\(A_5\\), and \\(A_6\\) be events in some sample space, each with the same probability \\(0&lt;p&lt;1/6\\). Define the indicator random variables\n\\[\nI_k\n=\n\\begin{cases}\n0 & \\text{if }A_k^c\\text{ happens}\\\\\n1 & \\text{if }A_k\\text{ happens},\n\\end{cases}\n\\]\nand let \\(X\\) be their sum\n\\[\nX = I_1 + I_2 + I_3 + I_4+I_5+I_6.\n\\]\n\nAssume the events \\(A_i\\) are mutually disjoint and compute…\n\n\\(E(X)\\).\n\\(P(X=1)\\).\n\\(P(X=3)\\).\n\nAssume the \\(A_i\\) are independent and compute…\n\n\\(E(X)\\).\n\\(P(X=1)\\).\n\\(P(X=3)\\)."
   },
   {
-    "objectID": "problems/bank/random-variables-discrete/memoryless-geometric.html",
-    "href": "problems/bank/random-variables-discrete/memoryless-geometric.html",
+    "objectID": "problems/bank/random-variables-discrete/binomial-birthdays.html",
+    "href": "problems/bank/random-variables-discrete/binomial-birthdays.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(D \\sim \\text{Geometric}(p)\\), and fix positive integers \\(n\\) and \\(k\\). What is \\(P(D = n + k \\,|\\, D &gt; k)\\)? Does this look familiar?"
+    "text": "Forty-nine members of the Cleveland Orchestra string section wish to compare their birthdays. Assume that no one has February 29th and that all birthdays are independent.\n\nWhat is the expected number of pairs of people with the same birthday?\nWhat is the expected number of days on which at least two players were born?"
   },
   {
-    "objectID": "problems/bank/set-theory/picture-proofs.html",
-    "href": "problems/bank/set-theory/picture-proofs.html",
+    "objectID": "problems/bank/set-theory/basic-set-practice.html",
+    "href": "problems/bank/set-theory/basic-set-practice.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "“Prove” each set identity with a picture:\n\nDistributive property: \\(A\\cup(B\\cap C)=(A\\cup B)\\cap(A\\cup C)\\);\nDe Morgan: \\((A\\cap B)^{c}=A^{c}\\cup B^{c}\\);"
+    "text": "Take \\(\\mathbb{R}\\) to be your reference set, and consider these subsets:\n\\[\n\\begin{align*}\nA&=[1,\\,5]\\\\\nB&=\\{x\\in\\mathbb{R}\\,:\\,|x|&gt;2\\}\\\\\nC&=(-\\infty,\\,0]\\\\\nI_n&=\\left[0,\\,\\frac{1}{n}\\right]\n\\end{align*}\n\\]\nExpress each of the following in as simplified and concise a form as possible:\n\n\\(A^c\\)\n\\(A \\cup B\\)\n\\(A\\cap C\\)\n\\(A\\cap C^c\\)\n\\(B \\cap C^c\\)\n\\(A^c \\cap B^c \\cap C^c\\)\n\\((A \\cup B) \\cap C\\)\n\\(\\bigcap_{n=1}^\\infty I_n\\)\n\\(\\bigcup_{n=1}^\\infty I_n\\)"
   },
   {
-    "objectID": "problems/bank/conditional-probability/bdj-circuit.html",
-    "href": "problems/bank/conditional-probability/bdj-circuit.html",
+    "objectID": "problems/bank/conditional-probability/testing-symptoms.html",
+    "href": "problems/bank/conditional-probability/testing-symptoms.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "The figure above displays a circuit. Switch \\(S_i\\) closes with probability \\(p_i\\), and the switches close independently of one another. What is the probability that electricity can flow from \\(A\\) to \\(G\\)?"
+    "text": "We studied disease testing in class, and in our stylized example, a patient had only two attributes: their true disease status \\(D\\) and their test result \\(T\\). In reality of course, patients have many more relevant attributes: genetics, prior medical history, lifestyle, charm and good looks, etc. So in an attempt to be slightly more realistic, we shall extend our little model to include a third attribute: whether or not you have symptoms \\(S\\).\nTable 1 enumerates all of the possible states of the world together with their individual probabilities. These numbers come from a small COVID-19 study of undergraduates in Fall 2020. The test in question is an antigen test. Patients’ “true” disease status was determined by a PCR test that we assume is hella accurate.\n\n\n\nTable 1: Some COVID-19 numbers. Source: CDC\n\n\n\n\n\n\n\n\n\n\\(D\\)\n\\(S\\)\n\\(T\\)\n\\(P(D\\cap S\\cap T)\\)\n\n\n\n-\n-\n-\n0.7650\n\n\n-\n-\n+\n0.0128\n\n\n-\n+\n-\n0.1685\n\n\n-\n+\n+\n0.0018\n\n\n+\n-\n-\n0.0091\n\n\n+\n-\n+\n0.0064\n\n\n+\n+\n-\n0.0073\n\n\n+\n+\n+\n0.0291\n\n\n\n\n\n\n\n\nWhat is the overall disease prevalence?\nWhat is the sensitivity of the test?\nWhat is the specificity of the test?\nImagine you develop symptoms. So you visit Dr. Vinnie Boombatz to get tested, and the test comes back positive. Given everything we now know about you, what is the probability that you are truly infected?\nWhat is the overall probability that the test is wrong?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/axioms-conditional.html",
-    "href": "problems/bank/conditional-probability/axioms-conditional.html",
+    "objectID": "problems/bank/conditional-probability/dgs-exercise-2-3-1.html",
+    "href": "problems/bank/conditional-probability/dgs-exercise-2-3-1.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(S\\) be a sample space with probability measure \\(P\\), and let \\(B\\subseteq S\\) be some event with \\(P(B)&gt;0\\). Show that the function \\(G(A)=P(A\\,|\\, B)\\) is a new probability measure on \\(S\\). That is, show that \\(G\\) satisfies the axioms:\n\ntotal measure 1;\nnonnegativity;\ncountable additivity."
+    "text": "Suppose that \\(k\\) events \\(B_1\\), \\(B_2\\), …, \\(B_k\\) form a partition of the sample space \\(S\\), and \\(A\\subseteq S\\) is some event with positive probability \\(P(A)&gt;0\\). Show that if \\(P(B_1\\mid A)&lt;P(B_1)\\), then that guarantees \\(P(B_i\\mid A)&gt;P(B_i)\\) for at least one \\(i\\in\\{1,\\,2,\\,...,\\,k\\}\\)."
   },
   {
-    "objectID": "problems/bank/conditional-probability/pairwise-versus-mutual-independence.html",
-    "href": "problems/bank/conditional-probability/pairwise-versus-mutual-independence.html",
+    "objectID": "problems/bank/conditional-probability/bdj-white-balls.html",
+    "href": "problems/bank/conditional-probability/bdj-white-balls.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(S\\) be the set of all permutations of \\(a\\), \\(b\\), \\(c\\), together with the triples \\(aaa\\), \\(bbb\\), and \\(ccc\\). Imagine we draw an outcome randomly from this set. Define the event \\(A_k=\\{\\text{the kth spot is occupied by the letter a}\\}\\) for \\(k=1,\\,2,\\,3\\). Compute the probabilities \\(P(A_k)\\), \\(P(A_i\\cap A_j)\\), \\(P(A_1\\cap A_2\\cap A_3)\\), and comment on the independence of the three of events;\nImagine we roll two fair, six-sided die. Compute \\(P(A)\\), \\(P(B)\\), \\(P(C)\\), \\(P(A\\cap B)\\), \\(P(A\\cap C)\\), \\(P(B\\cap C)\\), and \\(P(A\\cap B\\cap C)\\) for the following three events and comment on their independence:\n\n\\[\n\\begin{aligned}\nA&=\\text{first die is 1, 2, 3}\\\\\nB&=\\text{first die is 3, 4, 5}\\\\\nC&=\\text{the sum of the two rolls is 9}.\n\\end{aligned}\n\\]"
+    "text": "An urn contains 5 white and 10 black balls. Four tickets labeled 1, 2, 3, and 4 reside in a box. A ticket is drawn at random from the box, and that number of balls is randomly chosen from the urn, without replacement.\n\nWhat is the probability that all of the balls drawn are white?\nIf we learn that all balls drawn from the urn are white, what is the conditional probability that the #3 ticket was drawn?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/conditional-inequality.html",
-    "href": "problems/bank/conditional-probability/conditional-inequality.html",
+    "objectID": "problems/bank/conditional-probability/bdj-encryption.html",
+    "href": "problems/bank/conditional-probability/bdj-encryption.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Assume that \\(P(A)&gt;0\\) and prove that\n\\[\nP(A\\cap B\\,|\\, A)\\geq P(A\\cap B\\,|\\, A\\cup B).\n\\]"
+    "text": "An encryption algorithm generates a seed value \\(z\\) in the following way:\n\nA binary operator is chosen at random from \\(\\{+,\\,\\cdot\\}\\);\nTwo distinct numbers \\(x\\) and \\(y\\) are chosen at random from the set \\(\\{1,\\,2,\\,...,\\,9\\}\\) and the binary operation chosen above acts on \\(x\\) and \\(y\\) to produce \\(z\\).\n\n\nWhat is the probability that \\(z\\) is an even number?\nYou notice that the algorithm generates an even \\(z\\) value. Given this, what is the probability that the \\(+\\) operator was used to generate it?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/target-practice.html",
-    "href": "problems/bank/conditional-probability/target-practice.html",
+    "objectID": "problems/bank/conditional-probability/independent-complements.html",
+    "href": "problems/bank/conditional-probability/independent-complements.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Pearl Bailey and Elaine Stritch go target shooting. Suppose that each of Pearl’s shots hits a wooden duck target with probability \\(p_1\\), while each shot of Elaine’s hits it with probability \\(p_2\\), independent of Pearl. Suppose that they shoot simultaneously at the same target. If the wooden duck is knocked over (indicating that it was hit), what is the probability that both shots hit the duck?"
+    "text": "If we know that \\(A\\) and \\(B\\) are independent events, show that their complements \\(A^c\\) and \\(B^c\\) are also independent events."
   },
   {
-    "objectID": "problems/bank/conditional-probability/conditional-independence.html",
-    "href": "problems/bank/conditional-probability/conditional-independence.html",
+    "objectID": "problems/bank/conditional-probability/face-cards.html",
+    "href": "problems/bank/conditional-probability/face-cards.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(A\\), \\(B\\), and \\(C\\) be events with \\(P(C) &gt; 0\\). \\(A\\) and \\(B\\) are conditionally independent given \\(C\\) if and only if\n\\[\nP(A \\cap B \\mid C) = P(A \\mid C)P(B \\mid C).\n\\]\nShow that the above implies \\(P(A \\mid B\\cap C) = P(A \\mid C)\\)."
+    "text": "In a standard deck of \\(52\\) cards, 3 (Jack, Queen, and King) of the 13 ranks are collectively known as the “face cards” of the deck. Recall that a standard deck of \\(52\\) cards also has \\(4\\) suits (Hearts, Diamonds, Clubs, and Spades).\nSuppose you deal out two cards from the deck. What is the probability that they are both face cards given that they are both hearts?"
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/gauntlet.html",
-    "href": "problems/bank/random-variables-continuous/gauntlet.html",
+    "objectID": "problems/bank/conditional-probability/darts.html",
+    "href": "problems/bank/conditional-probability/darts.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider a nonnegative, absolutely continuous random variable with cdf\n\\[\nF_X(x)\n=\n\\begin{cases}\n1 - \\exp\\left(-\\frac{x^2}{2}\\right) & x\\geq 0\n\\\\\n0 & x&lt;0.\n\\end{cases}\n\\]\n\nWhat is \\(P(2\\leq X\\leq 3)\\);\nWhat is the density of \\(X\\)?\nWhat is \\(E(X^n)\\) for any \\(n\\in\\mathbb{N}\\)?\nWhat is \\(\\text{var}(X)\\)?\nWhat is the median of \\(X\\)?"
+    "text": "Figure 1\n\n\n\nJerry Lewis is throwing darts at the board pictured in Figure 1. It has the following properties:\n\nThe board has radius \\(r\\);\nThe board is partitioned into five rings, each with the same “thickness” \\(r/5\\);\nThe board is mounted on a wall of area \\(A\\).\n\nJerry is not very skilled. His dart is guaranteed to reach the wall and stick someplace, but beyond that, the probability that it lands in any given region is just proportional to that region’s area.\nTask: Derive a general formula for the conditional probability that a dart lands in ring \\(i\\) given that it hits the board and not the wall. Your formula should be a function of \\(i=1,\\,2,\\,3,\\,4,\\,5\\). Check that these probabilities are nonnegative and sum to one."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/wald.html",
-    "href": "problems/bank/random-variables-continuous/wald.html",
+    "objectID": "problems/bank/random-variables-continuous/gamma-mgf.html",
+    "href": "problems/bank/random-variables-continuous/gamma-mgf.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "inverse gaussian"
+    "text": "Consider \\(X\\sim\\textrm{Gamma}(\\alpha,\\,\\beta)\\).\n\nFind \\(M_X(t)=E[e^{tX}]\\), the moment generating function of \\(X\\). For what values of \\(t\\) is it defined?\nUse the moment-generating function to compute \\(E(X)\\).\nUse the moment-generating function to compute \\(\\text{var}(X)\\).\nIf \\(c&gt;0\\), what is the distribution of \\(Y=cX\\)?"
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/rayleigh.html",
-    "href": "problems/bank/random-variables-continuous/rayleigh.html",
+    "objectID": "problems/bank/random-variables-continuous/continuous-cdf-g.html",
+    "href": "problems/bank/random-variables-continuous/continuous-cdf-g.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider a random variable \\(X\\) with pdf\n\\[\nf(x;\\,\\theta) =\\begin{cases}\n\\frac{x}{\\theta}e^{-\\frac{x^2}{2\\theta}} & x\\geq 0\\\\\n0 & \\text{else},\n\\end{cases}\n\\]\nwhere \\(\\theta &gt;0\\) is a parameter.\n\nCompute the CDF of \\(X\\).\nCompute the median of \\(X\\)."
+    "text": "Consider this function:\n\\[\nF(x) = \\begin{cases}\n1 - e^{-g(x)} & x\\geq 0\\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\nAssume \\(g(x)\\) is continuous. I want \\(F(x)\\) to be a continuous function, and I want \\(F(x)\\) to be a valid cumulative distribution function (CDF). What properties must \\(g(x)\\) satisfy in order to make that happen? Give three examples of \\(g\\) that have these properties."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/weird.html",
-    "href": "problems/bank/random-variables-continuous/weird.html",
+    "objectID": "problems/bank/random-variables-continuous/gamma-half.html",
+    "href": "problems/bank/random-variables-continuous/gamma-half.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is the goofy pdf of some nonnegative random variable \\(X\\):\n\\[\nf(x)\n=\ne^{1-e^x+x},\\quad x\\geq 0.\n\\]\n\nCompute the cdf of \\(X\\);\nCompute the median of \\(X\\)."
+    "text": "Recall the gamma function\n\\[\n\\Gamma(x)=\\int_0^\\infty y^{x-1}e^{-y}\\,\\text{d}y.\n\\]\nShow that \\(\\Gamma\\left(\\frac{1}{2}\\right)=\\sqrt{\\pi}\\)."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/another-weibull.html",
-    "href": "problems/bank/random-variables-continuous/another-weibull.html",
+    "objectID": "problems/bank/random-variables-continuous/random-point-on-line.html",
+    "href": "problems/bank/random-variables-continuous/random-point-on-line.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is a cdf for some nonnegative random variable \\(X\\):\n\\[\nF(x)\n=\n\\begin{cases}\n1-\\exp(-\\sqrt[3]{x}) & x\\geq 0 \\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\n\nWhat is \\(P(1 &lt; X &lt;8)\\)?\nWhat is the pdf of \\(X\\)?\nCompute \\(E(X^n)\\) for any \\(n\\in\\mathbb{N}\\).\nWhat is the variance of \\(X\\)?"
+    "text": "A point is chosen at random on a line segment of length \\(L\\). Interpret this statement, and find the probability that the ratio of the shorter to the longer segment is less than \\(\\frac{1}{4}\\).\n\n\n\n\n\n\nHint\n\n\n\n\n\nIt might help to read about the continuous uniform distribution."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/pareto.html",
-    "href": "problems/bank/random-variables-continuous/pareto.html",
+    "objectID": "problems/bank/random-variables-continuous/minimize-expected-error.html",
+    "href": "problems/bank/random-variables-continuous/minimize-expected-error.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is the cdf of an absolutely continuous random variable \\(X\\):\n\\[\nF(x;\\,\\alpha,\\,\\theta)\n=\n\\begin{cases}\n1-\\left(\\frac{\\theta}{x + \\theta}\\right)^\\alpha & x &gt;0 \\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\nThe parameters \\(\\alpha\\) and \\(\\theta\\) are just positive constants.\n\nFind the pdf of \\(X\\) and plot it for \\(\\alpha=1,\\, 2,\\, 3\\) and \\(\\theta = 1\\);\nCompute the median of \\(X\\);\nCompute \\(E(X)\\). Is it finite for all values of the parameters?\nCompute \\(\\textrm{var}(X)\\). Is it finite for all values of the parameters?\nFix \\((\\alpha,\\,\\theta) = (3,\\, 100)\\) and compute \\(P(X &gt; 75\\,|\\, X &gt; 50)\\).\n\n\n\n\n\n\n\nTip\n\n\n\nOn Problem Set 5 you met some cute alternatives for computing expected values, and they may be helpful here."
+    "text": "Let \\(X\\) be any absolutely continuous random variable with pdf \\(f\\) and cdf \\(F\\), and assume that \\(E[(X-a)^2]\\) and \\(E\\left[|X-a|\\right]\\) are finite for all \\(a\\in \\mathbb{R}\\).\n\nCompute and interpret\n\n\\[\na_0=\\underset{a\\in\\mathbb{R}}{\\arg\\min}\\,E[(X-a)^2].\n\\]\n\nCompute and interpret\n\n\\[\nb_0=\\underset{b\\in\\mathbb{R}}{\\arg\\min}\\,E\\left[|X-b|\\right].\n\\]"
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/a-in-terms-of-b.html",
-    "href": "problems/bank/random-variables-continuous/a-in-terms-of-b.html",
+    "objectID": "problems/bank/random-variables-continuous/basic-pdf-practice.html",
+    "href": "problems/bank/random-variables-continuous/basic-pdf-practice.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Here is the pdf of some absolutely continuous random variable:\n\\[\nf(x)=\\begin{cases}\nax^2e^{-bx^2} & x\\geq 0\\\\\n0 & x&lt; 0.\n\\end{cases}\n\\]\nSolve for \\(a\\) in terms of \\(b\\). So your final answer will look like\n\\[\na=\\text{``some formula including $b$ and a bunch of constants''}\n\\]"
+    "text": "An absolutely continuous random variable \\(X\\) has pdf\n\\[\nf(x)=\\begin{cases}\n\\frac{3}{22}[5 - (x-1)^2] & 1\\leq x \\leq3\\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\n\nWhat is the range of \\(X\\)?\nConfirm that \\(f\\) is a valid pdf.\nDerive the formula for the cdf of \\(X\\) and plot it.\nCompute \\(P(0.9 &lt; X &lt; 1.1)\\).\nCompute \\(E(X)\\).\nCompute \\(\\text{var}(X)\\)."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/expectation-short-cuts.html",
-    "href": "problems/bank/random-variables-continuous/expectation-short-cuts.html",
+    "objectID": "problems/bank/random-variables-continuous/all-moments-finite-no-mgf.html",
+    "href": "problems/bank/random-variables-continuous/all-moments-finite-no-mgf.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "One of the technical themes of our course is “how do I compute an expected value without wanting to vomit?” We will have many tools in our tool belt for getting this done, and you must become fluent in knowing what to use when. Below are two nifty facts that might come in handy one day.\nLet \\(X\\) be an absolutely continuous random variable with pdf \\(f\\) and cdf \\(F\\).\n\nShow that:\n\n\\[\nE(X)=\\int_0^1F^{-1}(x)\\,\\text{d} x.\n\\]\n\nIf we make the extra assumption that \\(X\\) is a non-negative random variable, show that:\n\n\\[\nE(X)=\\int_0^\\infty P(X&gt;x)\\,\\text{d} x.\n\\]\n\n\n\n\n\n\nHint\n\n\n\n\n\nThere are at least two ways to do part b. If you’ve taken multivariable calculus, you can use double integral tricks. If you haven’t taken multivariable calculus yet, try integrating by parts."
+    "text": "Here is the cdf of an absolutely continuous random variable \\(X\\):\n\\[\nF(x)\n=\n\\begin{cases}\n1-\\exp\\left(-\\sqrt{x}\\right)&x\\geq 0\\\\\n0&\\text{else}.\n\\end{cases}\n\\]\n\nWhat is \\(P(4\\leq X &lt; 9)\\)?\nWhat is the pdf of \\(X\\)?\nCompute \\(E(X^n)\\) for any \\(n\\in\\mathbb{N}\\).\nWhat is the variance of \\(X\\)?\nWhat is the median of \\(X\\)?\n\n\n\n\n\n\n\nHint\n\n\n\nAll of the moments of this distribution are finite, but nevertheless, it doesn’t have a moment-generating function (MGF). So you’ll hit a dead-end if you try using that to compute the moments. Instead, use LOTUS. It’s a subtle calculation, but it actually works out pretty nice."
   },
   {
-    "objectID": "problems/bank/mle/blitz.html",
-    "href": "problems/bank/mle/blitz.html",
+    "objectID": "problems/bank/random-variables-continuous/quantum.html",
+    "href": "problems/bank/random-variables-continuous/quantum.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Blitz practice. For each of these, set up the (log-)likelihood function and compute the maximum likelihood estimator (MLE)."
+    "text": "Quantum mechanics has a reputation for being an intimidating branch of theoretical physics, and JZ certainly doesn’t understand a ding dong thing about it. Even so, because we have studied some basic probability theory, the mathematics of quantum mechanics is more accessible than you might guess. Behold:\nImagine a single particle at the (sub)atomic level1. A particle’s quantum state encodes information about all of its measurable properties, such as position, momentum, spin, and energy. In quantum mechanics, measuring these properties is fundamentally probabilistic. Before measurement, the particle doesn’t have a single, definite position or momentum; it has only probabilities for the possible outcomes. The quantum state of a particle is fully characterized by its wave function, and the squared magnitude of the wave function is a probability density that describes the distribution of the particle’s position, or momentum, or whatever else you wish to study. Let’s explore this in a very simple example.\nConsider a single, one-dimensional particle located somewhere in the interval \\([0,\\,L]\\). The wave function associated with the particle’s quantum state is\n\\[\n\\psi_n(x)\n=\n\\begin{cases}\nA\\cdot\\sin\\left(\\frac{n\\pi}{L}x\\right) & 0\\leq x\\leq L\\\\\n0 & \\text{else},\n\\end{cases}\n\\]\nwhere \\(A\\geq 0\\) is the amplitude, and \\(n=1,\\,2,\\,3,\\,...\\) indexes the particle’s energy level. The higher the energy level, the more “excited” the particle is. Behold:\nBecause the particle does not have a definite position before measurement, we treat the position \\(X_n\\in[0,\\,L]\\) of the particle as a continuous random variable whose probability density function is \\(f_n(x)=|\\psi_n(x)|^2\\)."
+  },
+  {
+    "objectID": "problems/bank/random-variables-continuous/quantum.html#footnotes",
+    "href": "problems/bank/random-variables-continuous/quantum.html#footnotes",
+    "title": "STA 240 Fall 2025",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nIf you’re like me, you cannot do this. Oh well.↩︎"
   },
   {
     "objectID": "problems/bank/mle/mle-lomax.html",
@@ -3942,7 +3963,7 @@
     "href": "index.html",
     "title": "STA 240 Probability for Statistical Inference",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\nslides\n\n\n\n\nWed, Aug 27\n\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\nnotes\n\n\n\n\nThu, Aug 28\n\n💻 Lab 0 (calculus review)\n\n\n\n\n2\nMon, Sep 1\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\nWed, Sep 3\n\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\nslides notes\n\n\nIntro Survey @ 3 PM\n\n\n\nThu, Sep 4\n\n💻 Lab 1 (hello R)\n\n\nLab 1 @ 11:59 PM\n\n\n\nFri, Sep 5\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nWed, Sep 10\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nThu, Sep 11\n\n💻 Lab 2 (counting)\n\n\nLab 2 @ 11:59 PM\n\n\n\nFri, Sep 12\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nnotes Play around!\n\n\n\n\n\nWed, Sep 17\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nRead! Play around!\n\n\n\n\n\nThu, Sep 18\n\n💻 Lab 3 (disease testing)\nRead!\n\nLab 3 @ 11:59 PM\n\n\n\nFri, Sep 19\n\n\n\nPSET 0 corrections PSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\nDS: 3.1, 3.3, 4.1\n🧑‍🏫 Random variable intro\nnotes\n\n\n\n\nWed, Sep 24\n\nDS: 5.1 - 5.4\n🧑‍🏫 Discrete families\nnotes\n\n\n\n\nThu, Sep 25\n\n💻 Lab 4 (ChatGPT)\n\n\nLab 4 @ 11:59 PM\n\n\n\nFri, Sep 26\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\nDS: 4.2\n🧑‍🏫 Expected value\nnotes\n\n\n\n\nWed, Oct 1\n\nDS: 4.3\n🧑‍🏫 Variance\nnotes\n\n\n\n\nThu, Oct 2\n\n💻 Lab 5 (random dating)\n\n\nLab 5 @ 11:59 PM\n\n\n\nSun, Oct 5\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\nDS: 3.3\n🧑‍🏫 CDF\nnotes\n\n\n\n\nWed, Oct 8\n\nDS: 3.2\n🧑‍🏫 Absolutely continuous\nnotes\n\n\n\n\nThu, Oct 9\nstudy guide\n📝 Midterm 1\n\n\n\n\n\n8\nMon, Oct 13\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\nWed, Oct 15\n\nDS: 5.6 - 5.7\n🧑‍🏫 Normal, gamma\n\nnormal primer gamma primer\n\n\n\n\n\nThu, Oct 16\n\n💻 Lab 6 (normal and gamma)\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\nDS: 4.4 - 4.5\n🧑‍🏫 Moments, quantiles\nnotes\n\n\n\n\nWed, Oct 22\n\nDS: 4.4 - 4.5\n🧑‍🏫 MGF\n\n\n\n\n\nThu, Oct 23\n\nDS: 3.8\n💻 Lab 7 (transformations)\n\n\nLab 7 @ 11:59 PM\n\n\n10\nMon, Oct 27\n\nDS: 3.4 - 3.7\n🧑‍🏫 Jointly discrete\nnotes\n\nPSET 5 @ 3PM\n\n\n\nWed, Oct 29\n\nDS: 3.4 - 3.7\n🧑‍🏫 Jointly continuous\nnotes\n\n\n\n\nThu, Oct 30\n\nDS: 12\n💻 Lab 8 (simulation)\n\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\nDS: 6\n🧑‍🏫 Tower property, Student’s t\n\n\n\n\n\nWed, Nov 5\n\nDS: 6\n🧑‍🏫 Sums and averages\nnotes\n\n\n\n\nThu, Nov 6\n\n💻 Lab 9 (insurance)\n\n\nLab 9 @ 11:59 PM\n\n\n\nSun, Nov 9\n\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\nDS: 6\n🧑‍🏫 Limit theorems\nnotes\n\n\n\n\nWed, Nov 12\n\nDS: 7.1\n🧑‍🏫 What is statistics?\n\n\n\n\n\nThu, Nov 13\nstudy guide\n📝 Midterm 2\n\n\n\n\n\n13\nMon, Nov 17\n\nDS: 7.1\n🧑‍🏫 What is statistics?\n\n\n\n\n\nWed, Nov 19\n\nDS: 7.5 - 7.6\n🧑‍🏫 Maximum likelihood\nnotes\n\n\n\n\nThu, Nov 20\n\n💻 Lab 10 (mle)\n\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\nDS: 7.5 - 7.6\n🧑‍🏫 Maximum likelihood\nnotes\n\n\n\n\nWed, Nov 26\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\nThu, Nov 27\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n15\nMon, Dec 1\n\nDS: 7.2 - 7.4\n🧑‍🏫 Bayesian statistics\nnotes\n\n\n\n\nWed, Dec 3\n\nDS: 7.2 - 7.4\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nThu, Dec 4\n\n💻 Lab 11 (bayes)\n\n\nLab 11 @ 11:59 PM\n\n\n16\nMon, Dec 8\n\n\n\n\nPSET 7 @ 5PM\n\n\n\nFri, Dec 12\nstudy guide\n📝 Final (9AM - 12PM)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\nslides\n\n\n\n\nWed, Aug 27\n\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\nnotes\n\n\n\n\nThu, Aug 28\n\n💻 Lab 0 (calculus review)\n\n\n\n\n2\nMon, Sep 1\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\nWed, Sep 3\n\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\nslides notes\n\n\nIntro Survey @ 3 PM\n\n\n\nThu, Sep 4\n\n💻 Lab 1 (hello R)\n\n\nLab 1 @ 11:59 PM\n\n\n\nFri, Sep 5\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nWed, Sep 10\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nThu, Sep 11\n\n💻 Lab 2 (counting)\n\n\nLab 2 @ 11:59 PM\n\n\n\nFri, Sep 12\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nnotes Play around!\n\n\n\n\n\nWed, Sep 17\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nRead! Play around!\n\n\n\n\n\nThu, Sep 18\n\n💻 Lab 3 (disease testing)\nRead!\n\nLab 3 @ 11:59 PM\n\n\n\nFri, Sep 19\n\n\n\nPSET 0 corrections PSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\nDS: 3.1, 3.3, 4.1\n🧑‍🏫 Random variable intro\nnotes\n\n\n\n\nWed, Sep 24\n\nDS: 5.1 - 5.4\n🧑‍🏫 Discrete families\nnotes\n\n\n\n\nThu, Sep 25\n\n💻 Lab 4 (ChatGPT)\n\n\nLab 4 @ 11:59 PM\n\n\n\nFri, Sep 26\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\nDS: 4.2\n🧑‍🏫 Expected value\nnotes\n\n\n\n\nWed, Oct 1\n\nDS: 4.3\n🧑‍🏫 Variance\nnotes\n\n\n\n\nThu, Oct 2\n\n💻 Lab 5 (random dating)\n\n\nLab 5 @ 11:59 PM\n\n\n\nSun, Oct 5\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\nDS: 3.3\n🧑‍🏫 CDF\nnotes\n\n\n\n\nWed, Oct 8\n\nDS: 3.2\n🧑‍🏫 Absolutely continuous\nnotes\n\n\n\n\nThu, Oct 9\nstudy guide\n📝 Midterm 1\n\n\n\n\n\n8\nMon, Oct 13\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\nWed, Oct 15\n\nDS: 5.6 - 5.7\n🧑‍🏫 Normal, gamma\n\nnormal primer gamma primer\n\n\n\n\n\nThu, Oct 16\n\n💻 Lab 6 (normal and gamma)\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\nDS: 4.4 - 4.5\n🧑‍🏫 Moments, quantiles\nnotes\n\n\n\n\nWed, Oct 22\n\nDS: 4.4 - 4.5\n🧑‍🏫 MGF\n\n\n\n\n\nThu, Oct 23\n\nDS: 3.8\n💻 Lab 7 (transformations)\n\n\nLab 7 @ 11:59 PM\n\n\n10\nMon, Oct 27\n\nDS: 3.4 - 3.7\n🧑‍🏫 Jointly discrete\nnotes\n\nPSET 5 @ 3PM\n\n\n\nWed, Oct 29\n\nDS: 3.4 - 3.7\n🧑‍🏫 Jointly continuous\nnotes\n\n\n\n\nThu, Oct 30\n\nDS: 12\n💻 Lab 8 (simulation)\n\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\nDS: 6\n🧑‍🏫 Tower property, Student’s t\n\n\n\n\n\nWed, Nov 5\n\nDS: 6\n🧑‍🏫 Sums and averages\nnotes\n\n\n\n\nThu, Nov 6\n\n💻 Lab 9 (insurance)\n\n\nLab 9 @ 11:59 PM\n\n\n\nSun, Nov 9\n\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\nDS: 6\n🧑‍🏫 Limit theorems\nnotes\n\n\n\n\nWed, Nov 12\n\nDS: 7.1\n🧑‍🏫 What is statistics?\n\n\n\n\n\nThu, Nov 13\nstudy guide\n📝 Midterm 2\n\n\n\n\n\n13\nMon, Nov 17\n\nDS: 7.1\n🧑‍🏫 What is statistics?\n\n\n\n\n\nWed, Nov 19\n\nDS: 7.5 - 7.6\n🧑‍🏫 Maximum likelihood\nnotes\n\n\n\n\nThu, Nov 20\n\n💻 Lab 10 (mle)\n\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\nDS: 7.5 - 7.6\n🧑‍🏫 Maximum likelihood\n\nnotes bonus notes 1 bonus notes 2 bonus notes 3\n\n\n\n\n\nWed, Nov 26\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\nThu, Nov 27\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n15\nMon, Dec 1\n\nDS: 7.2 - 7.4\n🧑‍🏫 Bayesian statistics\nnotes\n\n\n\n\nWed, Dec 3\n\nDS: 7.2 - 7.4\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nThu, Dec 4\n\n💻 Lab 11 (bayes)\n\n\nLab 11 @ 11:59 PM\n\n\n16\nMon, Dec 8\n\n\n\n\nPSET 7 @ 5PM\n\n\n\nFri, Dec 12\nstudy guide\n📝 Final (9AM - 12PM)",
     "crumbs": [
       "Syllabus",
       "Schedule"
