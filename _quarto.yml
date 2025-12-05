@@ -23,6 +23,9 @@ project:
     - lecture-notes/sta240-notes-13-joint-continuous.pdf
     - lecture-notes/sta240-notes-14-sums-and-averages.pdf
     - lecture-notes/sta240-notes-19-bayes.pdf
+    - lecture-notes/sta240-notes-ex-mle-1.pdf
+    - lecture-notes/sta240-notes-ex-mle-2.pdf
+    - lecture-notes/sta240-notes-ex-ap-stats.pdf
 
 website:
   page-navigation: true
