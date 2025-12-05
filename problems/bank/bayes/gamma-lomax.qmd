@@ -1,9 +1,15 @@
-Consider this Bayesian model:
+Recall this infernal distribution family that you met on [Problem Set 6](https://sta240-f25.github.io/problems/pset-6.html#problem-1), Midterm 2, and again in [lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-18-mle-examples.html#example-midterm-2-strikes-again):
+
+$$
+f(x\mid \theta)=\theta(x+1)^{-(\theta+1)},\quad x>0.
+$$
+
+We've done MLE for this, now let's go Bayes. Consider this model:
 
 $$
 \begin{aligned}
 \theta&\sim\text{Gamma}(a_0,\,b_0)\\
-X_{1:n}\mid\theta&\overset{\text{iid}}{\sim}???.
+X_{1:n}\mid\theta&\overset{\text{iid}}{\sim}f(x\mid \theta).
 \end{aligned}
 $$
 
@@ -11,3 +17,5 @@ $$
 
 a. What is the posterior distribution for $\theta$ conditional on the data?
 a. Derive the posterior mean and show that it is a convex combination of the prior mean and the MLE.
+
+

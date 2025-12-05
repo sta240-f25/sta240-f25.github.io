@@ -117,6 +117,8 @@ If your final exam score is better than your lowest midterm score, I will replac
 
 ## Problem 11
 
+{{< include bank/moments/direct-mgf.qmd >}}
+
 ## Problem 12
 
 ## Want more review?
