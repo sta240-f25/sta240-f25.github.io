@@ -1,0 +1,12 @@
+A certain random variable $X$ has moment-generating function
+
+$$
+M(t)=\frac{e^{2t}}{1-3t},\quad t<1/3.
+$$
+
+a.  Compute the mean and variance of $X$.
+b.  What is the moment generating function of the new random variable
+
+$$
+Y=\frac{\pi}{2}-\frac{X}{3}.
+$$
