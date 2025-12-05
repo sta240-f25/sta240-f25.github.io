@@ -4,7 +4,7 @@ prior_b <- 4
 ymax <- 20
 set.seed(8675309)
 sample_sizes <- c(1, 2, 5, 10, 20, 30, 50, 70, 100, 200, 400)
-plot_sampling <- FALSE
+plot_sampling <- TRUE
 
 for(n in rev(sample_sizes)){
   X <- rbinom(n, 1, true_p)
