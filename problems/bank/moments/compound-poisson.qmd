@@ -1,0 +1,14 @@
+Consider the following:
+
+$$
+\begin{aligned}
+N&\sim\text{Poisson}(\lambda)\\
+X_1,\,X_2,\,X_3,\,...&\overset{\text{iid}}{\sim}M\\
+S&=\sum\limits_{i=1}^NX_i.
+\end{aligned}
+$$
+
+$N$ is independent of all of the $X_i$. The $X_i$ are an infinite sequence of iid random variables each sharing a common moment-generating function $M(t)=E(e^{tX_1})$. $S$ is a *random sum* of random variables. The terms are random, and so is $N$, the number of terms being summed.
+
+a. What is the MGF of $S$? 
+a. If I had an iid collection of $S_1$, $S_2$, ..., $S_m$ each possessing the same distribution that you just derived, what would be the distribution of $T=S_1+S_2+...+S_m$? 

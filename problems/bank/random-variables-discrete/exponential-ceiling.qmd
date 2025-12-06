@@ -1,0 +1,5 @@
+Let $X\sim\text{Exponential}(\lambda)$ for some arbitrary $\lambda>0$. Define a new \textit{discrete} random variable $Y=\lceil X\rceil$. Recall that the ceiling function $\lceil\cdot\rceil$ is the function that rounds a number *up* to the next integer. So $\lceil0.5\rceil=1$, $\lceil13.1\rceil=14$, and so on.
+
+a. What is the range of $Y$?
+a. What is the PMF of $Y$?
+a. Does $Y$ belong to a familiar distribution family?

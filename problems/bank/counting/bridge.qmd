@@ -1,0 +1,6 @@
+Four people are going to play bridge, which begins with an entire 52-card deck being dealt at random, 13 cards per player. What is the probability that each player is dealt *exactly one ace*?
+
+::: callout-tip 
+## Still confused about ordered versus unordered sampling?
+There are several ways to do this calculation. You should try it on your own, but then, go read Example 1.8.9 and the subsequent discussion on pages 37 - 39 of DeGroot & Schervish. 
+:::

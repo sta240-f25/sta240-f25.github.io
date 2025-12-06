@@ -1,0 +1,12 @@
+Consider these data:
+
+$$
+X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{GF}(k,\,\theta).
+$$
+
+So again, we are recycling the distribution family from Problem 13 above. Throughout, just treat $k>0$ as fixed and known.
+
+a.  What is the maximum likelihood estimator of $\theta\in\mathbb{R}$?
+a.  What is the sampling distribution of the estimator?
+a.  What is the MSE of the estimator?
+a.  Based on the MSE, what are the statistical properties of this estimator?

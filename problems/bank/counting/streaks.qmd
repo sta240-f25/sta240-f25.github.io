@@ -1,0 +1,14 @@
+Consider a sequence of $n$ independent coin flips of a fair coin. Define a streak of heads as an uninterrupted run of heads, and efine a streak of tails analogously. We are interested in the number of streaks in a sequence of flips. For example, consider the sequence below:
+
+$$
+hhhttthhttthhhhhthtthhhh.
+$$
+
+It contains 9 streaks. Here is the sequence again with the streaks separated:
+
+
+$$
+hhh\quad ttt\quad hh\quad ttt\quad hhhhh\quad t\quad h\quad tt\quad hhhh.
+$$
+
+In a sequence of $n$ flips of a fair coin, let $Y$ be the number of streaks. What is the range of $Y$, and what is its PMF?

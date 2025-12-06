@@ -1,0 +1,10 @@
+Imagine $X$ has this cdf:
+
+$$
+F(x)=\frac{1}{1+\exp\left(-\frac{x-\mu}{s}\right)},\quad x\in\mathbb{R}.
+$$
+
+$\mu\in\mathbb{R}$ and $s>0$ are just constants.
+
+a. What is the pdf of $X$?
+b. What is the mean of $X$?

@@ -1,0 +1,19 @@
+$X$ and $Y$ are jointly absolutely continuous with joint density
+
+$$
+f_{XY}(x,\, y)
+=
+\frac{1}{8}
+(y^2-x^2)
+e^{-y}
+,\quad 
+y>0
+;\,
+-y<x<y.
+$$
+
+a.  Sketch $\textrm{Range}(X,\, Y)$.
+a.  Compute the marginal density of $X$.
+a.  Compute the marginal density of $Y$.
+a.  Compute the conditional density of $X$ given $Y = y$.
+a.  Compute the conditional density of $Y$ given $X = x$.

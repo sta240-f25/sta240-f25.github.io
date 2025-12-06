@@ -1,0 +1,4 @@
+Let $X\sim\text{Gamma}(\alpha,\,\beta)$, and define a new random variable $Y=X^r$ for any positive constant $r>0$. 
+
+a. What is the density of $Y$?
+b. Derive a formula for $E(X^n)$ that works for any $n\in\mathbb{N}$.

@@ -16,6 +16,8 @@ $$
 
 
 a. What is the posterior distribution for $\theta$ conditional on the data?
-a. Derive the posterior mean and show that it is a convex combination of the prior mean and the MLE.
+a. Derive the posterior mean and show that it is a convex combination of the prior mean and the MLE;
+a. The posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?
+a. Is it possible for this new estimator to be superior (lower MSE) than the pure MLE?
 
 

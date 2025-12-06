@@ -1,5 +1,10 @@
-a. 
-a. 
-a. 
-a. 
-a.
+$X$ possesses the *goofy distribution* if its PDF is:
+
+$$
+f(x)=k\frac{x^{k-1}}{\theta}\exp\left(-\frac{x^k}{\theta}\right),\quad x>0. 
+$$
+
+The constants $k$ and $\theta$ are both positive parameters. We denote this $X\sim\text{GF}(k,\,\theta)$
+
+a. If we define a new random variable $Y=\ln X$, what is its distribution?
+a. If we define a new random variable $Z = X^k$, what is its distribution?

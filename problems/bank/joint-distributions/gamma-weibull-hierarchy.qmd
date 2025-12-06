@@ -1,0 +1,19 @@
+Consider a random pair $(Q,\,Z)$ of continuous random variables whose joint distribution is given by this hierarchy:
+
+$$
+\begin{aligned}
+Q&\sim \text{Gamma}(a,\,b)\\
+Z\mid Q=q&\sim\text{GF}(k, 1/q).
+\end{aligned}
+$$
+
+So conditionally, $Z$ has the distribution introduced in Problem 13 above, with $1/q$ serving as the second parameter. $k>0$ is just a constant throughout.
+
+a. What is the joint density of $(Q,\,Z)$?
+a. What is the marginal distribution of $Z$?
+a. What is the conditional distribution of $Q$ given $Z=z$?
+
+
+
+
+

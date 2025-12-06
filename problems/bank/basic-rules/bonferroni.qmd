@@ -1,0 +1,5 @@
+Let $A_1,\,A_2,\,...,\,A_n\subseteq S$ be a finite collection of possibly overlapping events in some probability space. Show that
+
+$$
+P\left(\bigcap_{i=1}^n A_i\right)\geq \sum\limits_{i=1}^nP(A_i)-n+1.
+$$
