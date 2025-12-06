@@ -608,6 +608,7 @@ window.Quarto = {
   <li><a href="#task-3" id="toc-task-3" class="nav-link" data-scroll-target="#task-3">Task 3</a></li>
   <li><a href="#task-4" id="toc-task-4" class="nav-link" data-scroll-target="#task-4">Task 4</a></li>
   <li><a href="#task-5" id="toc-task-5" class="nav-link" data-scroll-target="#task-5">Task 5</a></li>
+  <li><a href="#task-6" id="toc-task-6" class="nav-link" data-scroll-target="#task-6">Task 6</a></li>
   <li><a href="#play-around" id="toc-play-around" class="nav-link" data-scroll-target="#play-around">Play around!</a></li>
   </ul>
 </nav>
@@ -685,30 +686,115 @@ window.Quarto = {
 X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{Poisson}(\theta).
 \]</span></p>
 <p>That’s our model for the claims data. The rate parameter <span class="math inline">\(\theta&gt;0\)</span> is unknown, and we want to use the data to learn what it is. Note that this model may or may not be a good choice, and entire books have been written on model building and model selection and model diagnostics and model criticism. If you keep studying statistics, you’ll learn about all that, but this class is about one thing and one thing only: can you do the math or not? So we will just take the model as given and use it as an opportunity to test our technical skills.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<section id="task-0" class="level1">
+<h1>Task 0</h1>
+<p>Compute the likelihood function and the log-likelihood function for the Poisson distribution. You will need both in what follows.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Write-up instructions
+Solution
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>You don’t have to type up all the work. The final answer is fine. Frankly, I don’t really care what you turn in. This is just extra practice with stuff you are guaranteed to see on the final, so lock in.</p>
+<p>The likelihood function is</p>
+<p><span class="math display">\[
+\begin{aligned}
+L(\theta\mid X_{1:n})
+&amp;=
+\prod_{i=1}^nf(X_i\mid \theta)
+\\
+&amp;=
+\prod_{i=1}^ne^{-\theta}\frac{\theta^{X_i}}{X_i!}
+\\
+&amp;=
+\left(\prod_{i=1}^ne^{-\theta}\right)\left(\prod_{i=1}^n\theta^{X_i}\right)\prod_{i=1}^n\frac{1}{X_i!}
+\\
+&amp;=
+e^{-n\theta}\theta^{\sum_{i=1}^nX_i}\prod_{i=1}^n\frac{1}{X_i!}.
+\end{aligned}
+\]</span></p>
+<p>The log-likelihood function is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\ell(\theta\mid X_{1:n})
+&amp;=
+\ln L(\theta\mid X_{1:n})
+\\
+&amp;=
+\ln\left(
+e^{-n\theta}\theta^{\sum_{i=1}^nX_i}\prod_{i=1}^n\frac{1}{X_i!}
+\right)
+\\
+&amp;=
+-n\theta+\left(\sum_{i=1}^nX_i\right)\ln\theta+\sum\limits_{i=1}^n\ln(1/X_i!).
+\end{aligned}
+\]</span></p>
 </div>
 </div>
-<section id="task-0" class="level1">
-<h1>Task 0</h1>
-<p>Compute the likelihood function and the log-likelihood function for the Poisson distribution. You will need both in what follows.</p>
+</div>
 </section>
 <section id="task-1" class="level1">
 <h1>Task 1</h1>
 <p>Compute the maximum likelihood estimator for <span class="math inline">\(\theta&gt;0\)</span> in the Poisson distribution.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{aligned}
+\ell'(\theta\mid X_{1:n})=-n+\frac{\sum_{i=1}^nX_i}{\theta}&amp;=0
+\\
+\frac{\sum_{i=1}^nX_i}{\theta}&amp;=n
+\\
+\frac{\sum_{i=1}^nX_i}{n}&amp;=\theta
+\\
+\\
+\implies\quad\hat{\theta}_n&amp;=\bar{X}_n
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
 </section>
 <section id="task-2" class="level1">
 <h1>Task 2</h1>
 <p>Compute the mean, bias, variance, and MSE of the estimator and comment on its statistical properties.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This is the average of iid random variables, so we know that</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(\hat{\theta}_n)&amp;=E(X_1)=\theta\\
+\text{var}(\hat{\theta}_n)&amp;=\frac{\text{var}(X_1)}{n}=\frac{\theta}{n}.
+\end{aligned}
+\]</span></p>
+<p>As such, the estimator is unbiased, the MSE is equal to the variance, and this goes to zero as <span class="math inline">\(n\to\infty\)</span>, so the estimator is consistent.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="task-3" class="level1">
 <h1>Task 3</h1>
@@ -721,15 +807,223 @@ X_1,\,X_2,\,...,\,X_n\mid\theta&amp;\overset{\text{iid}}{\sim}\text{Poisson}(\th
 \end{aligned}
 \]</span></p>
 <p>Derive the posterior distribution.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The posterior kernel is recognizeable:</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(\theta\mid x_{1:n})
+&amp;\propto
+L(\theta\mid x_{1:n})f(\theta)
+\\
+&amp;=
+e^{-n\theta}\theta^{\sum_{i=1}^nx_i}\underbrace{\left(\prod_{i=1}^n\frac{1}{x_i!}\right)\frac{b_0^{a_0}}{\Gamma(a_0)}}_{\text{no }\theta}\theta^{a_0-1}e^{-b_0\theta}
+\\
+&amp;\propto
+e^{-n\theta}\theta^{\sum_{i=1}^nx_i}\theta^{a_0-1}e^{-b_0\theta}
+\\
+&amp;=
+\underbrace{\theta^{a_0+\sum_{i=1}^nx_i-1}e^{-(b_0+n)\theta}}_{\text{kernel of Gamma density}}.
+\end{aligned}
+\]</span></p>
+<p>So the posterior is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\theta\mid X_{1:n}=x_{1:n}&amp;\sim\text{Gamma}(a_n,\,b_n)\\
+\\
+a_n&amp;=a_0+\sum_{i=1}^nx_i\\
+b_n&amp;=b_0+n.
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
 </section>
 <section id="task-4" class="level1">
 <h1>Task 4</h1>
 <p>Based on your answer from the previous task, show that the posterior mean is a convex combination of the prior mean and the maximum likelihood estimator that you derived earlier.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The posterior mean is</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(\theta\mid x_{1:n})
+&amp;=
+\frac{a_n}{b_n}
+\\
+&amp;=
+\frac{a_0+\sum_{i=1}^nx_i}{b_0+n}
+\\
+&amp;=
+\frac{1}{b_0+n}a_0+\frac{1}{b_0+n}\sum_{i=1}^nx_i
+\\
+&amp;=
+\frac{1}{b_0+n}\frac{b_0}{b_0}a_0+\frac{1}{b_0+n}\frac{n}{n}\sum_{i=1}^nx_i
+\\
+&amp;=
+\frac{b_0}{b_0+n}\frac{a_0}{b_0}+\frac{n}{b_0+n}\frac{1}{n}\sum_{i=1}^nx_i
+\\
+&amp;=
+\frac{b_0}{b_0+n}E(\theta)+\frac{n}{b_0+n}\bar{x}_n.
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
 </section>
 <section id="task-5" class="level1">
 <h1>Task 5</h1>
 <p>Ignoring that we ever did a Bayesian analysis, treat the posterior mean formula from the previous task as a new <em>classical</em> estimator for <span class="math inline">\(\theta\)</span>. It’s just a function of the data at the end of the day.</p>
-<p>What are the mean, bias, and variance of the posterior mean? How do these compare to the pure MLE? Are there circumstances under which this new estimator would be preferred to the pure MLE?</p>
+<p>What are the mean, bias, variance, and MSE of the posterior mean?</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Our new estimator is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{\theta}_n&amp;=\frac{b_0}{b_0+n}\frac{a_0}{b_0}+\frac{n}{b_0+n}\bar{X}_n\\
+&amp;=(1-w_n)g+w_n\bar{X}_n.
+\end{aligned}
+\]</span></p>
+<p>This is just a linear transformation of one random variable <span class="math inline">\(\bar{X}_n\)</span>, so the mean and variance are</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(\tilde{\theta}_n)&amp;=(1-w_n)g+w_n\theta\\
+\text{var}(\tilde{\theta}_n)&amp;=w_n^2\frac{\theta}{n}.
+\end{aligned}
+\]</span></p>
+<p>So the bias is</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(\tilde{\theta}_n)-\theta&amp;=(1-w_n)g+w_n\theta-\theta\\
+&amp;=
+(1-w_n)g-(1-w_n)\theta
+\\
+&amp;=
+(1-w_n)(g-\theta).
+\end{aligned}
+\]</span></p>
+<p>Unless the prior mean is exactly equal to the true value (unlikely) or we set <span class="math inline">\(w_n=1\)</span> (back to pure MLE), this is a biased estimator.</p>
+<p>The overall MSE is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{MSE}
+&amp;=
+\left[E(\tilde{\theta}_n)-\theta\right]^2+\text{var}(\tilde{\theta}_n)
+\\
+&amp;=
+(1-w_n)^2(g-\theta)^2+w_n^2\frac{\theta}{n}
+.
+\end{aligned}
+\]</span></p>
+<p>As <span class="math inline">\(n\to\infty\)</span>, <span class="math inline">\(w_n\to 1\)</span>, so both terms go to zero, and the estimator is consistent.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="task-6" class="level1">
+<h1>Task 6</h1>
+<p>Are there circumstances under which this new estimator would be better (in the sense of lower MSE) than the pure MLE?</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If we set <span class="math inline">\(w_n=1\)</span>, the estimator is back to pure MLE, which has an MSE of <span class="math inline">\(\theta/n\)</span>. It is possible to pick <span class="math inline">\(w_n\)</span> such that the biased estimator has even lower MSE. Behold</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\text{d}}{\text{d}w_n}[(1-w_n)^2(g-\theta)^2+w_n^2\frac{\theta}{n}]
+=
+-2(1-w_n)(g-\theta)^2+2w_n\frac{\theta}{n}
+&amp;=
+0
+\\
+2w_n\frac{\theta}{n}
+&amp;=
+2(1-w_n)(g-\theta)^2
+\\
+w_n\frac{\theta}{n}
+&amp;=
+(g-\theta)^2-w_n(g-\theta)^2
+\\
+w_n\frac{\theta}{n}+w_n(g-\theta)^2
+&amp;=
+(g-\theta)^2
+\\
+w_n\left(\frac{\theta}{n}+(g-\theta)^2\right)
+&amp;=
+(g-\theta)^2
+\\
+w_n
+&amp;=
+\frac{(g-\theta)^2}{\frac{\theta}{n}+(g-\theta)^2}.
+\end{aligned}
+\]</span></p>
+<p>It’s 1 AM, so I am not checking the second derivative, but this is a global minimizer, and it is between zero and one as it should be. Here, we don’t just want the location of the minimum, we want the actual minimum value so we can compare the MSEs:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\underset{w_n}{\min}\,\text{MSE}
+&amp;=
+\left(\frac{\theta/n}{\frac{\theta}{n}+(g-\theta)^2}\right)^2(g-\theta)^2+\left(\frac{(g-\theta)^2}{\frac{\theta}{n}+(g-\theta)^2}\right)^2\frac{\theta}{n}
+\\
+&amp;=
+\frac{(\theta/n)^2(g-\theta)^2+(g-\theta)^4(\theta/n)}{\left[\frac{\theta}{n}+(g-\theta)^2\right]^2}
+\\
+&amp;=
+\frac{(g-\theta)^2(\theta/n)[\theta/n+(g-\theta)^2]}{\left[\frac{\theta}{n}+(g-\theta)^2\right]^2}
+\\
+&amp;=
+\frac{(g-\theta)^2(\theta/n)}{\frac{\theta}{n}+(g-\theta)^2}
+\\
+&amp;=
+w_n^*\frac{\theta}{n}
+\\
+&amp;&lt;
+\frac{\theta}{n}
+.
+\end{aligned}
+\]</span></p>
+<p>So, the minimum MSE is equal to the minimizing weight times the MSE of the pure MLE. Since the minimizing weight is strictly less than 1, this is indeed an improvement.</p>
+<p>Now, the MSE-minimizing weight depends on the true but unknown <span class="math inline">\(\theta\)</span>, so you cannot immediately operationalize this result. But nevertheless it demonstrates that in theory shrinkage can improve the MLE.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="play-around" class="level1">
 <h1>Play around!</h1>
