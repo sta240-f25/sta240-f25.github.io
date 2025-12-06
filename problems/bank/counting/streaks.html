@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>normal-normal – STA 240 Fall 2025</title>
+<title>streaks – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -599,19 +599,15 @@ window.Quarto = {
 
 
 
-<p>Consider this Bayesian model:</p>
+<p>Consider a sequence of <span class="math inline">\(n\)</span> independent coin flips of a fair coin. Define a streak of heads as an uninterrupted run of heads, and efine a streak of tails analogously. We are interested in the number of streaks in a sequence of flips. For example, consider the sequence below:</p>
 <p><span class="math display">\[
-\begin{aligned}
-\theta&amp;\sim\text{N}(m_0,\,\tau_0^2)\\
-X_{1:n}\mid\theta&amp;\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
-\end{aligned}
+hhhttthhttthhhhhthtthhhh.
 \]</span></p>
-<ol type="a">
-<li>What is the posterior distribution for <span class="math inline">\(\theta\)</span> conditional on the data?</li>
-<li>Derive the posterior mean and show that it is a convex combination of the prior mean <span class="math inline">\(m_0\)</span> and the MLE.</li>
-<li>The posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?</li>
-<li>Is it possible for this new estimator to be superior (lower MSE) than the pure MLE?</li>
-</ol>
+<p>It contains 9 streaks. Here is the sequence again with the streaks separated:</p>
+<p><span class="math display">\[
+hhh\quad ttt\quad hh\quad ttt\quad hhhhh\quad t\quad h\quad tt\quad hhhh.
+\]</span></p>
+<p>In a sequence of <span class="math inline">\(n\)</span> flips of a fair coin, let <span class="math inline">\(Y\)</span> be the number of streaks. What is the range of <span class="math inline">\(Y\)</span>, and what is its PMF?</p>
 
 
 

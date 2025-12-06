@@ -157,12 +157,16 @@
     <lastmod>2025-10-28T17:15:55.421Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/random-variables-continuous/wald.html</loc>
-    <lastmod>2025-11-18T04:12:37.296Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/random-variables-continuous/continuous-cdf-g.html</loc>
+    <lastmod>2025-10-16T22:59:58.873Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/random-variables-continuous/gauntlet.html</loc>
-    <lastmod>2025-11-07T17:40:44.789Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/random-variables-continuous/gamma-mgf.html</loc>
+    <lastmod>2025-10-16T18:36:27.093Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/conditional-probability/darts.html</loc>
+    <lastmod>2025-09-06T15:25:36.631Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/conditional-probability/conditional-independence.html</loc>
@@ -234,7 +238,7 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/bayes/gamma-lomax.html</loc>
-    <lastmod>2025-12-04T22:40:09.611Z</lastmod>
+    <lastmod>2025-12-06T04:02:07.323Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/bayes/beta-geometric.html</loc>
@@ -242,7 +246,7 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/bayes/normal-normal.html</loc>
-    <lastmod>2025-12-04T06:18:42.096Z</lastmod>
+    <lastmod>2025-12-06T04:00:44.755Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/calculus-review/calc-bad-notation.html</loc>
@@ -277,48 +281,56 @@
     <lastmod>2025-08-21T08:26:17.130Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/disjoint-complements.html</loc>
-    <lastmod>2025-12-04T06:39:01.941Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/bonferroni.html</loc>
+    <lastmod>2025-12-05T20:21:20.723Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/transformations/gamma-power.html</loc>
-    <lastmod>2025-12-05T01:52:52.833Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/xor-2.html</loc>
+    <lastmod>2025-10-01T17:27:39.563Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/transformations/twerkout-3.html</loc>
-    <lastmod>2025-12-04T04:50:14.956Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/transformations/twerkout.html</loc>
+    <lastmod>2025-10-28T17:34:42.364Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/moments/simple-mgf.html</loc>
-    <lastmod>2025-10-28T17:04:05.430Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/transformations/twerkout-2.html</loc>
+    <lastmod>2025-11-11T17:46:51.733Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/moments/binomial-mgf.html</loc>
-    <lastmod>2025-10-28T18:40:57.612Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/moments/direct-mgf.html</loc>
+    <lastmod>2025-12-04T18:16:06.329Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/moments/laplace.html</loc>
-    <lastmod>2025-10-28T17:58:38.242Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/moments/normal-mgf.html</loc>
+    <lastmod>2025-11-29T01:53:43.617Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/moments/discrete-uniform.html</loc>
-    <lastmod>2025-11-07T19:00:04.726Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/moments/gumbel-mgf.html</loc>
+    <lastmod>2025-11-11T08:33:06.594Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/moments/compound-poisson.html</loc>
+    <lastmod>2025-12-06T01:45:32.226Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/joint-distributions/gamma-exponential-hierarchy.html</loc>
     <lastmod>2025-11-07T18:37:02.635Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/joint-distributions/gamma-gamma-hierarchy.html</loc>
-    <lastmod>2025-10-28T16:38:06.523Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/joint-distributions/gamma-weibull-hierarchy.html</loc>
+    <lastmod>2025-12-06T02:39:24.016Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/joint-distributions/beta-gamma-hierarchy.html</loc>
-    <lastmod>2025-11-04T22:03:14.437Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/joint-distributions/secret-bayes.html</loc>
+    <lastmod>2025-10-28T17:30:17.496Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/counting/basic-counting.html</loc>
-    <lastmod>2025-08-21T08:26:17.133Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/joint-distributions/uniform-on-the-disc.html</loc>
+    <lastmod>2025-10-28T16:42:18.269Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/20-balls-4-colors.html</loc>
+    <lastmod>2025-09-12T19:45:31.233Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/counting/random-inner-product.html</loc>
@@ -333,12 +345,16 @@
     <lastmod>2025-10-01T00:16:01.744Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/counting/poker-dice.html</loc>
-    <lastmod>2025-08-21T08:26:17.134Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/yes-replace-order-no.html</loc>
+    <lastmod>2025-09-23T15:32:15.326Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/counting/library-card-PIN.html</loc>
-    <lastmod>2025-10-01T17:43:31.241Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/senate-committees.html</loc>
+    <lastmod>2025-10-01T17:43:32.692Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/exactly-two-suits.html</loc>
+    <lastmod>2025-09-12T17:31:56.957Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/counting/license-plates.html</loc>
@@ -409,16 +425,20 @@
     <lastmod>2025-12-01T03:03:07.933Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/counting/exactly-two-suits.html</loc>
-    <lastmod>2025-09-12T17:31:56.957Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/bridge.html</loc>
+    <lastmod>2025-12-06T03:41:13.355Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/counting/senate-committees.html</loc>
-    <lastmod>2025-10-01T17:43:32.692Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/library-card-PIN.html</loc>
+    <lastmod>2025-10-01T17:43:31.241Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/counting/yes-replace-order-no.html</loc>
-    <lastmod>2025-09-23T15:32:15.326Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/poker-dice.html</loc>
+    <lastmod>2025-08-21T08:26:17.134Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/streaks.html</loc>
+    <lastmod>2025-12-05T23:53:33.123Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/counting/ross-balls.html</loc>
@@ -429,48 +449,56 @@
     <lastmod>2025-09-11T15:20:12.335Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/counting/20-balls-4-colors.html</loc>
-    <lastmod>2025-09-12T19:45:31.233Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/elevator.html</loc>
+    <lastmod>2025-12-06T04:24:59.697Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/joint-distributions/uniform-on-the-disc.html</loc>
-    <lastmod>2025-10-28T16:42:18.269Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/counting/basic-counting.html</loc>
+    <lastmod>2025-08-21T08:26:17.133Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/joint-distributions/secret-bayes.html</loc>
-    <lastmod>2025-10-28T17:30:17.496Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/joint-distributions/beta-gamma-hierarchy.html</loc>
+    <lastmod>2025-11-04T22:03:14.437Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/joint-distributions/gamma-weibull-hierarchy.html</loc>
-    <lastmod>2025-12-05T03:28:21.438Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/joint-distributions/gamma-gamma-hierarchy.html</loc>
+    <lastmod>2025-10-28T16:38:06.523Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/joint-distributions/weird-hard-thing.html</loc>
+    <lastmod>2025-12-05T20:34:46.563Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/joint-distributions/bdj-joint.html</loc>
     <lastmod>2025-11-07T18:00:51.375Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/moments/gumbel-mgf.html</loc>
-    <lastmod>2025-11-11T08:33:06.594Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/moments/discrete-uniform.html</loc>
+    <lastmod>2025-11-07T19:00:04.726Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/moments/normal-mgf.html</loc>
-    <lastmod>2025-11-29T01:53:43.617Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/moments/laplace.html</loc>
+    <lastmod>2025-10-28T17:58:38.242Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/moments/direct-mgf.html</loc>
-    <lastmod>2025-12-04T18:16:06.329Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/moments/binomial-mgf.html</loc>
+    <lastmod>2025-10-28T18:40:57.612Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/transformations/twerkout-2.html</loc>
-    <lastmod>2025-11-11T17:46:51.733Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/moments/simple-mgf.html</loc>
+    <lastmod>2025-10-28T17:04:05.430Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/transformations/twerkout.html</loc>
-    <lastmod>2025-10-28T17:34:42.364Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/transformations/twerkout-3.html</loc>
+    <lastmod>2025-12-06T02:09:22.786Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/xor-2.html</loc>
-    <lastmod>2025-10-01T17:27:39.563Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/transformations/gamma-power.html</loc>
+    <lastmod>2025-12-05T01:52:52.833Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/basic-rules/disjoint-complements.html</loc>
+    <lastmod>2025-12-04T06:39:01.941Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/basic-rules/geniuses-and-chocolate-lovers.html</loc>
@@ -514,7 +542,7 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/bayes/inv-gamma-normal.html</loc>
-    <lastmod>2025-12-04T06:19:31.407Z</lastmod>
+    <lastmod>2025-12-06T04:01:48.500Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/conceptual/exam-review.html</loc>
@@ -542,7 +570,7 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/random-variables-discrete/exponential-ceiling.html</loc>
-    <lastmod>2025-12-04T06:42:17.814Z</lastmod>
+    <lastmod>2025-12-06T00:02:31.658Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/random-variables-discrete/random-exam.html</loc>
@@ -585,16 +613,20 @@
     <lastmod>2025-10-01T17:38:36.734Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/conditional-probability/darts.html</loc>
-    <lastmod>2025-09-06T15:25:36.631Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/conditional-probability/recruiter.html</loc>
+    <lastmod>2025-12-06T03:48:35.654Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/random-variables-continuous/gamma-mgf.html</loc>
-    <lastmod>2025-10-16T18:36:27.093Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/random-variables-continuous/gauntlet.html</loc>
+    <lastmod>2025-11-07T17:40:44.789Z</lastmod>
   </url>
   <url>
-    <loc>https://sta240-f25.github.io/problems/bank/random-variables-continuous/continuous-cdf-g.html</loc>
-    <lastmod>2025-10-16T22:59:58.873Z</lastmod>
+    <loc>https://sta240-f25.github.io/problems/bank/random-variables-continuous/wald.html</loc>
+    <lastmod>2025-11-18T04:12:37.296Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/bank/random-variables-continuous/logistic.html</loc>
+    <lastmod>2025-12-06T02:53:14.066Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/random-variables-continuous/gamma-half.html</loc>
@@ -622,7 +654,7 @@
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/mle/mle-weibull.html</loc>
-    <lastmod>2025-12-05T02:09:47.393Z</lastmod>
+    <lastmod>2025-12-06T02:39:32.357Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/bank/mle/mle-lomax.html</loc>
@@ -639,6 +671,10 @@
   <url>
     <loc>https://sta240-f25.github.io/problems/pset-1.html</loc>
     <lastmod>2025-08-21T08:26:17.147Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta240-f25.github.io/problems/exam-final.html</loc>
+    <lastmod>2025-12-06T04:25:10.665Z</lastmod>
   </url>
   <url>
     <loc>https://sta240-f25.github.io/problems/pset-3.html</loc>

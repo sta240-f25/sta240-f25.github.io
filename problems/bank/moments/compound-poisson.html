@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>normal-normal – STA 240 Fall 2025</title>
+<title>compound-poisson – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -599,18 +599,18 @@ window.Quarto = {
 
 
 
-<p>Consider this Bayesian model:</p>
+<p>Consider the following:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\theta&amp;\sim\text{N}(m_0,\,\tau_0^2)\\
-X_{1:n}\mid\theta&amp;\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
+N&amp;\sim\text{Poisson}(\lambda)\\
+X_1,\,X_2,\,X_3,\,...&amp;\overset{\text{iid}}{\sim}M\\
+S&amp;=\sum\limits_{i=1}^NX_i.
 \end{aligned}
 \]</span></p>
+<p><span class="math inline">\(N\)</span> is independent of all of the <span class="math inline">\(X_i\)</span>. The <span class="math inline">\(X_i\)</span> are an infinite sequence of iid random variables each sharing a common moment-generating function <span class="math inline">\(M(t)=E(e^{tX_1})\)</span>. <span class="math inline">\(S\)</span> is a <em>random sum</em> of random variables. The terms are random, and so is <span class="math inline">\(N\)</span>, the number of terms being summed.</p>
 <ol type="a">
-<li>What is the posterior distribution for <span class="math inline">\(\theta\)</span> conditional on the data?</li>
-<li>Derive the posterior mean and show that it is a convex combination of the prior mean <span class="math inline">\(m_0\)</span> and the MLE.</li>
-<li>The posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?</li>
-<li>Is it possible for this new estimator to be superior (lower MSE) than the pure MLE?</li>
+<li>What is the MGF of <span class="math inline">\(S\)</span>?</li>
+<li>If I had an iid collection of <span class="math inline">\(S_1\)</span>, <span class="math inline">\(S_2\)</span>, …, <span class="math inline">\(S_m\)</span> each possessing the same distribution that you just derived, what would be the distribution of <span class="math inline">\(T=S_1+S_2+...+S_m\)</span>?</li>
 </ol>
 
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>normal-normal – STA 240 Fall 2025</title>
+<title>bonferroni – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -599,19 +599,10 @@ window.Quarto = {
 
 
 
-<p>Consider this Bayesian model:</p>
+<p>Let <span class="math inline">\(A_1,\,A_2,\,...,\,A_n\subseteq S\)</span> be a finite collection of possibly overlapping events in some probability space. Show that</p>
 <p><span class="math display">\[
-\begin{aligned}
-\theta&amp;\sim\text{N}(m_0,\,\tau_0^2)\\
-X_{1:n}\mid\theta&amp;\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
-\end{aligned}
+P\left(\bigcap_{i=1}^n A_i\right)\geq \sum\limits_{i=1}^nP(A_i)-n+1.
 \]</span></p>
-<ol type="a">
-<li>What is the posterior distribution for <span class="math inline">\(\theta\)</span> conditional on the data?</li>
-<li>Derive the posterior mean and show that it is a convex combination of the prior mean <span class="math inline">\(m_0\)</span> and the MLE.</li>
-<li>The posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?</li>
-<li>Is it possible for this new estimator to be superior (lower MSE) than the pure MLE?</li>
-</ol>
 
 
 

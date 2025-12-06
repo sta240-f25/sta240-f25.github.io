@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>normal-normal – STA 240 Fall 2025</title>
+<title>weird-hard-thing – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -599,18 +599,24 @@ window.Quarto = {
 
 
 
-<p>Consider this Bayesian model:</p>
+<p><span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are jointly absolutely continuous with joint density</p>
 <p><span class="math display">\[
-\begin{aligned}
-\theta&amp;\sim\text{N}(m_0,\,\tau_0^2)\\
-X_{1:n}\mid\theta&amp;\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
-\end{aligned}
+f_{XY}(x,\, y)
+=
+\frac{1}{8}
+(y^2-x^2)
+e^{-y}
+,\quad
+y&gt;0
+;\,
+-y&lt;x&lt;y.
 \]</span></p>
 <ol type="a">
-<li>What is the posterior distribution for <span class="math inline">\(\theta\)</span> conditional on the data?</li>
-<li>Derive the posterior mean and show that it is a convex combination of the prior mean <span class="math inline">\(m_0\)</span> and the MLE.</li>
-<li>The posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?</li>
-<li>Is it possible for this new estimator to be superior (lower MSE) than the pure MLE?</li>
+<li>Sketch <span class="math inline">\(\textrm{Range}(X,\, Y)\)</span>.</li>
+<li>Compute the marginal density of <span class="math inline">\(X\)</span>.</li>
+<li>Compute the marginal density of <span class="math inline">\(Y\)</span>.</li>
+<li>Compute the conditional density of <span class="math inline">\(X\)</span> given <span class="math inline">\(Y = y\)</span>.</li>
+<li>Compute the conditional density of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X = x\)</span>.</li>
 </ol>
 
 

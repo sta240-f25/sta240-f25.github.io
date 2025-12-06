@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>normal-normal – STA 240 Fall 2025</title>
+<title>elevator – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,35 +67,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <meta property="og:title" content="STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
@@ -599,18 +570,15 @@ window.Quarto = {
 
 
 
-<p>Consider this Bayesian model:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\theta&amp;\sim\text{N}(m_0,\,\tau_0^2)\\
-X_{1:n}\mid\theta&amp;\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
-\end{aligned}
-\]</span></p>
+<p>An evil cult has its secret meetings in the basement of a building that has 15 above-ground floors. When the meeting is over, the nine cult members enjoy coffee and donuts and then depart to sow the seeds of villainy. They board the elevator, and each person randomly and independently selects one of the 15 floors to visit. Compute the probability that…</p>
 <ol type="a">
-<li>What is the posterior distribution for <span class="math inline">\(\theta\)</span> conditional on the data?</li>
-<li>Derive the posterior mean and show that it is a convex combination of the prior mean <span class="math inline">\(m_0\)</span> and the MLE.</li>
-<li>The posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?</li>
-<li>Is it possible for this new estimator to be superior (lower MSE) than the pure MLE?</li>
+<li>No two passengers share a floor;</li>
+<li>At least two passengers share a floor;</li>
+<li>Exactly two passengers share a floor;</li>
+<li>No passengers get off at the top floor;</li>
+<li>At least one passenger gets off at floor 1;</li>
+<li>All passengers get off on consecutive floors;</li>
+<li>All passengers get off below floor 10</li>
 </ol>
 
 

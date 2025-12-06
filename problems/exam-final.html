@@ -1,2 +1,1543 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"></html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.34">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Final Exam Study Guide – STA 240 Fall 2025</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Final Exam Study Guide – STA 240 Fall 2025">
+<meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
+<meta property="og:site_name" content="STA 240 Fall 2025">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Final Exam Study Guide</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
+    <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
+    <a href="https://edstem.org/us/courses/80868/discussion" title="Ed Discussion" class="quarto-navigation-tool px-1" aria-label="Ed Discussion"><i class="bi bi-people"></i></a>
+    <a href="https://www.gradescope.com/courses/1071176" title="Gradescope" class="quarto-navigation-tool px-1" aria-label="Gradescope"><i class="bi bi-file-arrow-up"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Syllabus</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching team</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Materials</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignments and grading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Policies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">University resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Math Helpers</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Greek alphabet</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/logexp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exponents and logarithms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/differentiation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Differentiation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Integration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/limits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limits and continuity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Infinite series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/gamma-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gamma function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../math/massage-and-squint.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Massage and squint</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text"><code>R</code> Helpers</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting started</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/hello-rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The lay of the land</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/latex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Typing math</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/math.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic math</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/vectors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plotting lines</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/sample.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><code>sample</code></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/if-else.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">if-else and logic</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">for loops</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vectorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/rng-seed.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setting a seed</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/probabilities.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Computing probabilities</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/plot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plotting points</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/summary-statistics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary statistics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../explainers/histogram.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Histograms</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Distribution Families</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Binomial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/discrete-geometric.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Geometric</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypergeometric</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Poisson</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/continuous-uniform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Continuous uniform</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/continuous-normal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Normal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/continuous-gamma.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gamma</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/continuous-inverse-gamma.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inverse gamma</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../distributions/continuous-beta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Beta</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Problem Sets</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Problem Set 0</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/pset-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Problem Set 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/pset-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Problem Set 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/pset-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Problem Set 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/pset-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Problem Set 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/pset-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Problem Set 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/pset-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Problem Set 6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/pset-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Problem Set 7</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Labs</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 11</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Exam Study Guides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Midterm 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/exam-midterm-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Midterm 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#probability-spaces-and-rules" id="toc-probability-spaces-and-rules" class="nav-link active" data-scroll-target="#probability-spaces-and-rules">1. Probability spaces and rules</a>
+  <ul class="collapse">
+  <li><a href="#problem-1" id="toc-problem-1" class="nav-link" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
+  <li><a href="#want-more-review" id="toc-want-more-review" class="nav-link" data-scroll-target="#want-more-review">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#counting" id="toc-counting" class="nav-link" data-scroll-target="#counting">2. Counting</a>
+  <ul class="collapse">
+  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
+  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a></li>
+  <li><a href="#want-more-review-1" id="toc-want-more-review-1" class="nav-link" data-scroll-target="#want-more-review-1">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#conditional-probability-and-independence" id="toc-conditional-probability-and-independence" class="nav-link" data-scroll-target="#conditional-probability-and-independence">3. Conditional probability and independence</a>
+  <ul class="collapse">
+  <li><a href="#problem-5" id="toc-problem-5" class="nav-link" data-scroll-target="#problem-5">Problem 5</a></li>
+  <li><a href="#problem-6" id="toc-problem-6" class="nav-link" data-scroll-target="#problem-6">Problem 6</a></li>
+  <li><a href="#want-more-review-2" id="toc-want-more-review-2" class="nav-link" data-scroll-target="#want-more-review-2">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#discrete-random-variables" id="toc-discrete-random-variables" class="nav-link" data-scroll-target="#discrete-random-variables">4. Discrete random variables</a>
+  <ul class="collapse">
+  <li><a href="#problem-7" id="toc-problem-7" class="nav-link" data-scroll-target="#problem-7">Problem 7</a></li>
+  <li><a href="#problem-8" id="toc-problem-8" class="nav-link" data-scroll-target="#problem-8">Problem 8</a></li>
+  <li><a href="#want-more-review-3" id="toc-want-more-review-3" class="nav-link" data-scroll-target="#want-more-review-3">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#absolutely-continuous-random-variables" id="toc-absolutely-continuous-random-variables" class="nav-link" data-scroll-target="#absolutely-continuous-random-variables">5. Absolutely continuous random variables</a>
+  <ul class="collapse">
+  <li><a href="#problem-9" id="toc-problem-9" class="nav-link" data-scroll-target="#problem-9">Problem 9</a></li>
+  <li><a href="#problem-10" id="toc-problem-10" class="nav-link" data-scroll-target="#problem-10">Problem 10</a></li>
+  <li><a href="#want-more-review-4" id="toc-want-more-review-4" class="nav-link" data-scroll-target="#want-more-review-4">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#the-moment-generating-function" id="toc-the-moment-generating-function" class="nav-link" data-scroll-target="#the-moment-generating-function">6. The moment-generating function</a>
+  <ul class="collapse">
+  <li><a href="#problem-11" id="toc-problem-11" class="nav-link" data-scroll-target="#problem-11">Problem 11</a></li>
+  <li><a href="#problem-12" id="toc-problem-12" class="nav-link" data-scroll-target="#problem-12">Problem 12</a></li>
+  <li><a href="#want-more-review-5" id="toc-want-more-review-5" class="nav-link" data-scroll-target="#want-more-review-5">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#transformations-of-random-variables" id="toc-transformations-of-random-variables" class="nav-link" data-scroll-target="#transformations-of-random-variables">7. Transformations of random variables</a>
+  <ul class="collapse">
+  <li><a href="#sec-weibull" id="toc-sec-weibull" class="nav-link" data-scroll-target="#sec-weibull">Problem 13</a></li>
+  <li><a href="#problem-14" id="toc-problem-14" class="nav-link" data-scroll-target="#problem-14">Problem 14</a></li>
+  <li><a href="#want-more-review-6" id="toc-want-more-review-6" class="nav-link" data-scroll-target="#want-more-review-6">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#joint-distributions" id="toc-joint-distributions" class="nav-link" data-scroll-target="#joint-distributions">8. Joint distributions</a>
+  <ul class="collapse">
+  <li><a href="#problem-15" id="toc-problem-15" class="nav-link" data-scroll-target="#problem-15">Problem 15</a></li>
+  <li><a href="#problem-16" id="toc-problem-16" class="nav-link" data-scroll-target="#problem-16">Problem 16</a></li>
+  <li><a href="#want-more-review-7" id="toc-want-more-review-7" class="nav-link" data-scroll-target="#want-more-review-7">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#maximum-likelihood-estimation" id="toc-maximum-likelihood-estimation" class="nav-link" data-scroll-target="#maximum-likelihood-estimation">9. Maximum likelihood estimation</a>
+  <ul class="collapse">
+  <li><a href="#problem-17" id="toc-problem-17" class="nav-link" data-scroll-target="#problem-17">Problem 17</a></li>
+  <li><a href="#problem-18" id="toc-problem-18" class="nav-link" data-scroll-target="#problem-18">Problem 18</a></li>
+  <li><a href="#want-more-review-8" id="toc-want-more-review-8" class="nav-link" data-scroll-target="#want-more-review-8">Want more review?</a></li>
+  </ul></li>
+  <li><a href="#bayesian-inference" id="toc-bayesian-inference" class="nav-link" data-scroll-target="#bayesian-inference">10. Bayesian inference</a>
+  <ul class="collapse">
+  <li><a href="#problem-19" id="toc-problem-19" class="nav-link" data-scroll-target="#problem-19">Problem 19</a></li>
+  <li><a href="#problem-20" id="toc-problem-20" class="nav-link" data-scroll-target="#problem-20">Problem 20</a></li>
+  <li><a href="#problem-21" id="toc-problem-21" class="nav-link" data-scroll-target="#problem-21">Problem 21</a></li>
+  <li><a href="#want-more-review-9" id="toc-want-more-review-9" class="nav-link" data-scroll-target="#want-more-review-9">Want more review?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Final Exam Study Guide</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Our final exam is <strong>Friday December 12 from 9:00 AM to 12:00 PM</strong>. There will be 11 problems, and they will break down as follows:</p>
+<ol start="0" type="1">
+<li>(an undisclosed check on your visual intuition)</li>
+<li>Probability spaces and rules</li>
+<li>Counting (ugh!)</li>
+<li>Conditional probability and independence</li>
+<li>Discrete random variables</li>
+<li>Absolutely continuous random variables</li>
+<li>The moment-generating function</li>
+<li>Transformations of random variables</li>
+<li>Joint distributions</li>
+<li>Maximum likelihood estimation</li>
+<li>Bayesian inference</li>
+</ol>
+<p>Problems 0 - 8 will be similar to the midterms. Since you’ve had more time to live with this material, I reserve the right to include problems that might stretch you a bit. For Problems 9 and 10, I assure you there will be no surprises. You can expect problems that are exactly like the examples you’ve seen in lecture, lab, Problem Set 7, and this study guide. The distributions may be different, and the details might change, but the format and the steps are the same. If you work every practice problem from scratch on your own and then study the solutions carefully, you are ready.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Reminder
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If your final exam score is better than your lowest midterm score, I will replace the low midterm with the final.</p>
+</div>
+</div>
+<section id="probability-spaces-and-rules" class="level1">
+<h1>1. Probability spaces and rules</h1>
+<section id="problem-1" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
+<p>Suppose the events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are disjoint. Under what conditions are <span class="math inline">\(A^{c}\)</span> and <span class="math inline">\(B^{c}\)</span> also disjoint events?</p>
+</section>
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<p>Let <span class="math inline">\(A_1,\,A_2,\,...,\,A_n\subseteq S\)</span> be a finite collection of possibly overlapping events in some probability space. Show that</p>
+<p><span class="math display">\[
+P\left(\bigcap_{i=1}^n A_i\right)\geq \sum\limits_{i=1}^nP(A_i)-n+1.
+\]</span></p>
+</section>
+<section id="want-more-review" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-01-probability-spaces.pdf">Lecture notes</a> on axioms and rules;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-1.html">Problem Set 1</a>: problems 4 - 8;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-2.html">Problem Set 2</a>: problems 2 - 3;</li>
+<li><a href="https://sta240-f25.github.io/problems/exam-midterm-1.html#probability-spaces">Midterm 1 Study Guide</a>: problems 1 - 4;</li>
+<li>Midterm 1: problem 1.</li>
+</ul>
+</section>
+</section>
+<section id="counting" class="level1">
+<h1>2. Counting</h1>
+<section id="problem-3" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
+<p>Four people are going to play bridge, which begins with an entire 52-card deck being dealt at random, 13 cards per player. What is the probability that each player is dealt <em>exactly one ace</em>?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Still confused about ordered versus unordered sampling?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There are several ways to do this calculation. You should try it on your own, but then, go read Example 1.8.9 and the subsequent discussion on pages 37 - 39 of DeGroot &amp; Schervish.</p>
+</div>
+</div>
+</section>
+<section id="problem-4" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
+<p>An evil cult has its secret meetings in the basement of a building that has 15 above-ground floors. When the meeting is over, the nine cult members enjoy coffee and donuts and then depart to sow the seeds of villainy. They board the elevator, and each person randomly and independently selects one of the 15 floors to visit. Compute the probability that…</p>
+<ol type="a">
+<li>No two passengers share a floor;</li>
+<li>At least two passengers share a floor;</li>
+<li>Exactly two passengers share a floor;</li>
+<li>No passengers get off at the top floor;</li>
+<li>At least one passenger gets off at floor 1;</li>
+<li>All passengers get off on consecutive floors;</li>
+<li>All passengers get off below floor 10</li>
+</ol>
+</section>
+<section id="want-more-review-1" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-1">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-02-counting-theory.pdf">Lecture notes</a> on counting theory;</li>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-03-counting-examples.pdf">Lecture notes</a> with birthday problem and other worked examples;</li>
+<li><a href="https://sta240-f25.github.io/labs/lab-2.html">Lab 2</a> worked examples;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-1.html">Problem Set 1</a>: problems 9 - 10;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-2.html">Problem Set 2</a>: problems 4 - 8;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-3.html">Problem Set 3</a>: problems 2 - 3;</li>
+<li><a href="https://sta240-f25.github.io/problems/exam-midterm-1.html#counting">Midterm 1 Study Guide</a>: problems 5 - 7;</li>
+<li>Midterm 1: problems 2 - 3;</li>
+<li>Odd-numbered exercises in DeGroot &amp; Schervish Chapters 1.6 - 1.8, 1.12.</li>
+</ul>
+</section>
+</section>
+<section id="conditional-probability-and-independence" class="level1">
+<h1>3. Conditional probability and independence</h1>
+<section id="problem-5" class="level2">
+<h2 class="anchored" data-anchor-id="problem-5">Problem 5</h2>
+<p>A JP Morgan recruiter is walking around campus with three bone-colored business cards. Two of the cards are normal; they have writing on one side and they are blank on the other. The third card was misprinted; the writing was duplicated on both sides. The recruiter drops one of the cards and orders his valet to pick it up. When the valet reaches for the card, he sees writing facing up. What is the probability that the recruiter dropped the misprinted card?</p>
+</section>
+<section id="problem-6" class="level2">
+<h2 class="anchored" data-anchor-id="problem-6">Problem 6</h2>
+<p>Suppose that <span class="math inline">\(k\)</span> events <span class="math inline">\(B_1\)</span>, <span class="math inline">\(B_2\)</span>, …, <span class="math inline">\(B_k\)</span> form a partition of the sample space <span class="math inline">\(S\)</span>, and <span class="math inline">\(A\subseteq S\)</span> is some event with positive probability <span class="math inline">\(P(A)&gt;0\)</span>. Show that if <span class="math inline">\(P(B_1\mid A)&lt;P(B_1)\)</span>, then that guarantees <span class="math inline">\(P(B_i\mid A)&gt;P(B_i)\)</span> for at least one <span class="math inline">\(i\in\{1,\,2,\,...,\,k\}\)</span>.</p>
+</section>
+<section id="want-more-review-2" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-2">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-04-conditional-probability.pdf">Lecture notes</a> with worked examples;
+<ul>
+<li>The lil’ <a href="https://sta240-f25.github.io/apps/disease-testing.html">app</a> on disease testing;</li>
+</ul></li>
+<li><a href="https://sta240-f25.github.io/problems/pset-2.html">Problem Set 2</a>: problems 9 - 10;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-3.html">Problem Set 3</a>: problems 4 - 8;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-4.html">Problem Set 4</a>: problems 2 - 3;</li>
+<li><a href="https://sta240-f25.github.io/problems/exam-midterm-1.html#conditional-probability">Midterm 1 Study Guide</a>: problems 8 - 10;</li>
+<li>Midterm 1: problems 3 - 5;</li>
+<li>Odd-numbered exercises in DeGroot &amp; Schervish Chapter 2.</li>
+</ul>
+</section>
+</section>
+<section id="discrete-random-variables" class="level1">
+<h1>4. Discrete random variables</h1>
+<section id="problem-7" class="level2">
+<h2 class="anchored" data-anchor-id="problem-7">Problem 7</h2>
+<p>Consider a sequence of <span class="math inline">\(n\)</span> independent coin flips of a fair coin. Define a streak of heads as an uninterrupted run of heads, and efine a streak of tails analogously. We are interested in the number of streaks in a sequence of flips. For example, consider the sequence below:</p>
+<p><span class="math display">\[
+hhhttthhttthhhhhthtthhhh.
+\]</span></p>
+<p>It contains 9 streaks. Here is the sequence again with the streaks separated:</p>
+<p><span class="math display">\[
+hhh\quad ttt\quad hh\quad ttt\quad hhhhh\quad t\quad h\quad tt\quad hhhh.
+\]</span></p>
+<p>In a sequence of <span class="math inline">\(n\)</span> flips of a fair coin, let <span class="math inline">\(Y\)</span> be the number of streaks. What is the range of <span class="math inline">\(Y\)</span>, and what is its PMF?</p>
+</section>
+<section id="problem-8" class="level2">
+<h2 class="anchored" data-anchor-id="problem-8">Problem 8</h2>
+<p>Let <span class="math inline">\(X\sim\text{Exponential}(\lambda)\)</span> for some arbitrary <span class="math inline">\(\lambda&gt;0\)</span>. Define a new random variable <span class="math inline">\(Y=\lceil X\rceil\)</span>. Recall that the ceiling function <span class="math inline">\(\lceil\cdot\rceil\)</span> is the function that rounds a number <em>up</em> to the next integer. So <span class="math inline">\(\lceil0.5\rceil=1\)</span>, <span class="math inline">\(\lceil13.1\rceil=14\)</span>, and so on.</p>
+<ol type="a">
+<li>What is the range of <span class="math inline">\(Y\)</span>?</li>
+<li>What is the PMF of <span class="math inline">\(Y\)</span>?</li>
+<li>Does <span class="math inline">\(Y\)</span> belong to a familiar distribution family?</li>
+</ol>
+</section>
+<section id="want-more-review-3" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-3">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-05-random-variables.pdf">Lecture notes</a> introducing random variables;</li>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-06-discrete-families.pdf">Lecture notes</a> on special families of discrete random variables;</li>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-07-expectation.pdf">Lecture notes</a> on expected value;</li>
+<li><a href="https://sta240-f25.github.io/labs/lab-5.html">Lab 5</a> exercises;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-2.html">Problem Set 2</a>: problem 7;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-3.html">Problem Set 3</a>: problems 9 - 10;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-4.html">Problem Set 4</a>: problems 4 - 10;</li>
+<li><a href="https://sta240-f25.github.io/problems/exam-midterm-1.html#discrete-random-variables">Midterm 1 Study Guide</a>: problems 11 - 12;</li>
+<li><a href="https://sta240-f25.github.io/problems/exam-midterm-2.html#discrete-random-variables">Midterm 2 Study Guide</a>: problems 1 - 2;</li>
+<li>Midterm 1: problem 6;</li>
+<li>Midterm 2: problem 2.</li>
+</ul>
+</section>
+</section>
+<section id="absolutely-continuous-random-variables" class="level1">
+<h1>5. Absolutely continuous random variables</h1>
+<section id="problem-9" class="level2">
+<h2 class="anchored" data-anchor-id="problem-9">Problem 9</h2>
+<p>Imagine <span class="math inline">\(X\)</span> has this cdf:</p>
+<p><span class="math display">\[
+F(x)=\frac{1}{1+\exp\left(-\frac{x-\mu}{s}\right)},\quad x\in\mathbb{R}.
+\]</span></p>
+<p><span class="math inline">\(\mu\in\mathbb{R}\)</span> and <span class="math inline">\(s&gt;0\)</span> are just constants.</p>
+<ol type="a">
+<li>What is the pdf of <span class="math inline">\(X\)</span>?</li>
+<li>What is the mean of <span class="math inline">\(X\)</span>?</li>
+</ol>
+</section>
+<section id="problem-10" class="level2">
+<h2 class="anchored" data-anchor-id="problem-10">Problem 10</h2>
+<p>Here is the goofy pdf of some nonnegative random variable <span class="math inline">\(X\)</span>:</p>
+<p><span class="math display">\[
+f(x)
+=
+e^{1-e^x+x},\quad x\geq 0.
+\]</span></p>
+<ol type="a">
+<li>Compute the cdf of <span class="math inline">\(X\)</span>;</li>
+<li>Compute the median of <span class="math inline">\(X\)</span>.</li>
+</ol>
+</section>
+<section id="want-more-review-4" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-4">Want more review?</h2>
+<ul>
+<li>Examples from <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-10-absolutely-continuous.pdf">lecture</a>;</li>
+<li><a href="https://sta240-f25.github.io/labs/lab-8.html">Lab 8</a>;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-5.html">Problem Set 5</a>: problems 2 - 8;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-6.html">Problem Set 6</a>: problems 1 - 2;</li>
+<li><a href="https://sta240-f25.github.io/problems/exam-midterm-2.html#continuous-random-variables">Midterm 2 Study Guide</a>: problems 3 - 4;</li>
+<li>Midterm 2: problem 1;</li>
+<li>Odd-numbered exercises in DeGroot &amp; Schervish Chapters 3.2, 5.6, 5.7.</li>
+</ul>
+</section>
+</section>
+<section id="the-moment-generating-function" class="level1">
+<h1>6. The moment-generating function</h1>
+<section id="problem-11" class="level2">
+<h2 class="anchored" data-anchor-id="problem-11">Problem 11</h2>
+<p>A certain random variable <span class="math inline">\(X\)</span> has moment-generating function</p>
+<p><span class="math display">\[
+M(t)=\frac{e^{2t}}{1-3t},\quad t&lt;1/3.
+\]</span></p>
+<ol type="a">
+<li>Compute the mean and variance of <span class="math inline">\(X\)</span>.</li>
+<li>What is the moment generating function of the new random variable</li>
+</ol>
+<p><span class="math display">\[
+Y=\frac{\pi}{2}-\frac{X}{3}.
+\]</span></p>
+</section>
+<section id="problem-12" class="level2">
+<h2 class="anchored" data-anchor-id="problem-12">Problem 12</h2>
+<p>Consider the following:</p>
+<p><span class="math display">\[
+\begin{aligned}
+N&amp;\sim\text{Poisson}(\lambda)\\
+X_1,\,X_2,\,X_3,\,...&amp;\overset{\text{iid}}{\sim}M\\
+S&amp;=\sum\limits_{i=1}^NX_i.
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(N\)</span> is independent of all of the <span class="math inline">\(X_i\)</span>. The <span class="math inline">\(X_i\)</span> are an infinite sequence of iid random variables each sharing a common moment-generating function <span class="math inline">\(M(t)=E(e^{tX_1})\)</span>. <span class="math inline">\(S\)</span> is a <em>random sum</em> of random variables. The terms are random, and so is <span class="math inline">\(N\)</span>, the number of terms being summed.</p>
+<ol type="a">
+<li>What is the MGF of <span class="math inline">\(S\)</span>?</li>
+<li>If I had an iid collection of <span class="math inline">\(S_1\)</span>, <span class="math inline">\(S_2\)</span>, …, <span class="math inline">\(S_m\)</span> each possessing the same distribution that you just derived, what would be the distribution of <span class="math inline">\(T=S_1+S_2+...+S_m\)</span>?</li>
+</ol>
+</section>
+<section id="want-more-review-5" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-5">Want more review?</h2>
+<ul>
+<li>worked examples from <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-11-moments.pdf">lecture</a>;</li>
+<li>new theorems and examples from <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf">lecture</a> about updating MGFs under linear transformations;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-5.html">Problem Set 5</a>: problems 9 - 10;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-6.html">Problem Set 6</a>: problems 3 - 5;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-7.html">Problem Set 7</a>: problems 1 - 2;</li>
+<li><a href="https://sta240-f25.github.io/problems/exam-midterm-2.html#moment-generating-function">Midterm 2 Study Guide</a>: problems 11 - 12;</li>
+<li>Midterm 2: problem 2;</li>
+<li>Odd-numbered exercises in DeGroot &amp; Schervish Chapter 4.4.</li>
+</ul>
+</section>
+</section>
+<section id="transformations-of-random-variables" class="level1">
+<h1>7. Transformations of random variables</h1>
+<section id="sec-weibull" class="level2">
+<h2 class="anchored" data-anchor-id="sec-weibull">Problem 13</h2>
+<p><span class="math inline">\(X\)</span> possesses the <em>goofy distribution</em> if its PDF is:</p>
+<p><span class="math display">\[
+f(x)=k\frac{x^{k-1}}{\theta}\exp\left(-\frac{x^k}{\theta}\right),\quad x&gt;0.
+\]</span></p>
+<p>The constants <span class="math inline">\(k\)</span> and <span class="math inline">\(\theta\)</span> are both positive parameters. We denote this <span class="math inline">\(X\sim\text{GF}(k,\,\theta)\)</span></p>
+<ol type="a">
+<li>If we define a new random variable <span class="math inline">\(Y=\ln X\)</span>, what is its distribution?</li>
+<li>If we define a new random variable <span class="math inline">\(Z = X^k\)</span>, what is its distribution?</li>
+</ol>
+</section>
+<section id="problem-14" class="level2">
+<h2 class="anchored" data-anchor-id="problem-14">Problem 14</h2>
+<p>Let <span class="math inline">\(X\sim\text{Gamma}(\alpha,\,\beta)\)</span>, and define a new random variable <span class="math inline">\(Y=X^r\)</span> for any positive constant <span class="math inline">\(r&gt;0\)</span>.</p>
+<ol type="a">
+<li>What is the density of <span class="math inline">\(Y\)</span>?</li>
+<li>Derive a formula for <span class="math inline">\(E(X^n)\)</span> that works for any <span class="math inline">\(n\in\mathbb{N}\)</span>.</li>
+</ol>
+</section>
+<section id="want-more-review-6" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-6">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/labs/lab-7.html">Lab 7</a>;</li>
+<li>Problem Set 6: <a href="https://sta240-f25.github.io/problems/pset-6.html#problem-6">problem 6</a>;</li>
+<li>Midterm 2 Study Guide: <a href="https://sta240-f25.github.io/problems/exam-midterm-2.html#problem-7">problem 7</a>;</li>
+<li>Midterm 2: problem 3;</li>
+<li>Read DeGroot &amp; Schervish Chapter 3.8 and do the odd-numbered exercises.</li>
+</ul>
+</section>
+</section>
+<section id="joint-distributions" class="level1">
+<h1>8. Joint distributions</h1>
+<section id="problem-15" class="level2">
+<h2 class="anchored" data-anchor-id="problem-15">Problem 15</h2>
+<p><span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are jointly absolutely continuous with joint density</p>
+<p><span class="math display">\[
+f_{XY}(x,\, y)
+=
+\frac{1}{8}
+(y^2-x^2)
+e^{-y}
+,\quad
+y&gt;0
+;\,
+-y&lt;x&lt;y.
+\]</span></p>
+<ol type="a">
+<li>Sketch <span class="math inline">\(\textrm{Range}(X,\, Y)\)</span>.</li>
+<li>Compute the marginal density of <span class="math inline">\(X\)</span>.</li>
+<li>Compute the marginal density of <span class="math inline">\(Y\)</span>.</li>
+<li>Compute the conditional density of <span class="math inline">\(X\)</span> given <span class="math inline">\(Y = y\)</span>.</li>
+<li>Compute the conditional density of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X = x\)</span>.</li>
+</ol>
+</section>
+<section id="problem-16" class="level2">
+<h2 class="anchored" data-anchor-id="problem-16">Problem 16</h2>
+<p>Consider a random pair <span class="math inline">\((Q,\,Z)\)</span> of continuous random variables whose joint distribution is given by this hierarchy:</p>
+<p><span class="math display">\[
+\begin{aligned}
+Q&amp;\sim \text{Gamma}(a,\,b)\\
+Z\mid Q=q&amp;\sim\text{GF}(k, 1/q).
+\end{aligned}
+\]</span></p>
+<p>So conditionally, <span class="math inline">\(Z\)</span> has the distribution introduced in Problem 13 above, with <span class="math inline">\(1/q\)</span> serving as the second parameter. <span class="math inline">\(k&gt;0\)</span> is just a constant throughout.</p>
+<ol type="a">
+<li>What is the joint density of <span class="math inline">\((Q,\,Z)\)</span>?</li>
+<li>What is the marginal distribution of <span class="math inline">\(Z\)</span>?</li>
+<li>What is the conditional distribution of <span class="math inline">\(Q\)</span> given <span class="math inline">\(Z=z\)</span>?</li>
+</ol>
+</section>
+<section id="want-more-review-7" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-7">Want more review?</h2>
+<ul>
+<li>jointly discrete examples from <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-12-joint-discrete.pdf">lecture</a>;</li>
+<li>jointly contnuous examples from <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-13-joint-continuous.pdf">lecture</a>;</li>
+<li>mixed Poisson-gamma example from <a href="https://sta240-f25.github.io/labs/lab-9.html">Lab 9</a>;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-6.html">Problem Set 6</a>: problems 7 - 10;</li>
+<li><a href="https://sta240-f25.github.io/problems/exam-midterm-2.html#joint-distributions">Midterm 2 Study Guide</a>: problems 8 - 9;</li>
+<li>Midterm 2: problem 4;</li>
+<li>Odd-numbered exercises in DeGroot &amp; Schervish Chapters 3.4 - 3.6.</li>
+</ul>
+</section>
+</section>
+<section id="maximum-likelihood-estimation" class="level1">
+<h1>9. Maximum likelihood estimation</h1>
+<section id="problem-17" class="level2">
+<h2 class="anchored" data-anchor-id="problem-17">Problem 17</h2>
+<p>Consider these data:</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
+\]</span></p>
+<ol type="a">
+<li>What is the maximum likelihood estimator of <span class="math inline">\(\theta\in\mathbb{R}\)</span>?</li>
+<li>What is the sampling distribution of the estimator?</li>
+<li>What is the MSE of the estimator?</li>
+<li>Based on the MSE, what are the statistical properties of this estimator?</li>
+</ol>
+</section>
+<section id="problem-18" class="level2">
+<h2 class="anchored" data-anchor-id="problem-18">Problem 18</h2>
+<p>Consider these data:</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{GF}(k,\,\theta).
+\]</span></p>
+<p>So again, we are recycling the distribution family from Problem 13 above. Throughout, just treat <span class="math inline">\(k&gt;0\)</span> as fixed and known.</p>
+<ol type="a">
+<li>What is the maximum likelihood estimator of <span class="math inline">\(\theta\in\mathbb{R}\)</span>?</li>
+<li>What is the sampling distribution of the estimator?</li>
+<li>What is the MSE of the estimator?</li>
+<li>Based on the MSE, what are the statistical properties of this estimator?</li>
+</ol>
+</section>
+<section id="want-more-review-8" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-8">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-18-mle-examples.html">Lecture examples</a>;</li>
+<li><a href="https://sta240-f25.github.io/labs/lab-10.html">Lab 10</a>;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-7.html">Problem Set 7</a>: problems 3 - 4.</li>
+</ul>
+</section>
+</section>
+<section id="bayesian-inference" class="level1">
+<h1>10. Bayesian inference</h1>
+<section id="problem-19" class="level2">
+<h2 class="anchored" data-anchor-id="problem-19">Problem 19</h2>
+<p>Consider this Bayesian model:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\theta&amp;\sim\text{N}(m_0,\,\tau_0^2)\\
+X_{1:n}\mid\theta&amp;\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
+\end{aligned}
+\]</span></p>
+<ol type="a">
+<li>What is the posterior distribution for <span class="math inline">\(\theta\)</span> conditional on the data?</li>
+<li>Derive the posterior mean and show that it is a convex combination of the prior mean <span class="math inline">\(m_0\)</span> and the MLE.</li>
+<li>The posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?</li>
+<li>Is it possible for this new estimator to be superior (lower MSE) than the pure MLE?</li>
+</ol>
+</section>
+<section id="problem-20" class="level2">
+<h2 class="anchored" data-anchor-id="problem-20">Problem 20</h2>
+<p>Consider this Bayesian model:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\theta&amp;\sim\text{IG}(a_0,\,b_0)\\
+X_{1:n}\mid\theta&amp;\overset{\text{iid}}{\sim}\text{N}(0,\,\theta).
+\end{aligned}
+\]</span></p>
+<ol type="a">
+<li>What is the posterior distribution for <span class="math inline">\(\theta\)</span> conditional on the data?</li>
+<li>Derive the posterior mean and show that it is a convex combination of the prior mean and the MLE;</li>
+<li>The posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?</li>
+<li>Is it possible for this new estimator to be superior (lower MSE) than the pure MLE?</li>
+</ol>
+</section>
+<section id="problem-21" class="level2">
+<h2 class="anchored" data-anchor-id="problem-21">Problem 21</h2>
+<p>Recall this infernal distribution family that you met on <a href="https://sta240-f25.github.io/problems/pset-6.html#problem-1">Problem Set 6</a>, Midterm 2, and again in <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-18-mle-examples.html#example-midterm-2-strikes-again">lecture</a>:</p>
+<p><span class="math display">\[
+f(x\mid \theta)=\theta(x+1)^{-(\theta+1)},\quad x&gt;0.
+\]</span></p>
+<p>We’ve done MLE for this, now let’s go Bayes. Consider this model:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\theta&amp;\sim\text{Gamma}(a_0,\,b_0)\\
+X_{1:n}\mid\theta&amp;\overset{\text{iid}}{\sim}f(x\mid \theta).
+\end{aligned}
+\]</span></p>
+<ol type="a">
+<li>What is the posterior distribution for <span class="math inline">\(\theta\)</span> conditional on the data?</li>
+<li>Derive the posterior mean and show that it is a convex combination of the prior mean and the MLE;</li>
+<li>The posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?</li>
+<li>Is it possible for this new estimator to be superior (lower MSE) than the pure MLE?</li>
+</ol>
+</section>
+<section id="want-more-review-9" class="level2">
+<h2 class="anchored" data-anchor-id="want-more-review-9">Want more review?</h2>
+<ul>
+<li><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-19-bayes.pdf">Lecture examples</a>;</li>
+<li><a href="https://sta240-f25.github.io/labs/lab-11.html">Lab 11</a>;</li>
+<li><a href="https://sta240-f25.github.io/problems/pset-7.html">Problem Set 7</a>: problems 5 - 6.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/sta240-f25\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2025 John Zito</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -1971,18 +1971,25 @@
     "text": "Consider a random variable \\(X\\) with pdf\n\\[\nf(x;\\,\\theta) =\\begin{cases}\n\\frac{x}{\\theta}e^{-\\frac{x^2}{2\\theta}} & x\\geq 0\\\\\n0 & \\text{else},\n\\end{cases}\n\\]\nwhere \\(\\theta &gt;0\\) is a parameter.\n\nCompute the CDF of \\(X\\).\nCompute the median of \\(X\\)."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/wald.html",
-    "href": "problems/bank/random-variables-continuous/wald.html",
+    "objectID": "problems/bank/random-variables-continuous/continuous-cdf-g.html",
+    "href": "problems/bank/random-variables-continuous/continuous-cdf-g.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "inverse gaussian"
+    "text": "Consider this function:\n\\[\nF(x) = \\begin{cases}\n1 - e^{-g(x)} & x\\geq 0\\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\nAssume \\(g(x)\\) is continuous. I want \\(F(x)\\) to be a continuous function, and I want \\(F(x)\\) to be a valid cumulative distribution function (CDF). What properties must \\(g(x)\\) satisfy in order to make that happen? Give three examples of \\(g\\) that have these properties."
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/gauntlet.html",
-    "href": "problems/bank/random-variables-continuous/gauntlet.html",
+    "objectID": "problems/bank/random-variables-continuous/gamma-mgf.html",
+    "href": "problems/bank/random-variables-continuous/gamma-mgf.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider a nonnegative, absolutely continuous random variable with cdf\n\\[\nF_X(x)\n=\n\\begin{cases}\n1 - \\exp\\left(-\\frac{x^2}{2}\\right) & x\\geq 0\n\\\\\n0 & x&lt;0.\n\\end{cases}\n\\]\n\nWhat is \\(P(2\\leq X\\leq 3)\\);\nWhat is the density of \\(X\\)?\nWhat is \\(E(X^n)\\) for any \\(n\\in\\mathbb{N}\\)?\nWhat is \\(\\text{var}(X)\\)?\nWhat is the median of \\(X\\)?"
+    "text": "Consider \\(X\\sim\\textrm{Gamma}(\\alpha,\\,\\beta)\\).\n\nFind \\(M_X(t)=E[e^{tX}]\\), the moment generating function of \\(X\\). For what values of \\(t\\) is it defined?\nUse the moment-generating function to compute \\(E(X)\\).\nUse the moment-generating function to compute \\(\\text{var}(X)\\).\nIf \\(c&gt;0\\), what is the distribution of \\(Y=cX\\)?"
+  },
+  {
+    "objectID": "problems/bank/conditional-probability/darts.html",
+    "href": "problems/bank/conditional-probability/darts.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Figure 1\n\n\n\nJerry Lewis is throwing darts at the board pictured in Figure 1. It has the following properties:\n\nThe board has radius \\(r\\);\nThe board is partitioned into five rings, each with the same “thickness” \\(r/5\\);\nThe board is mounted on a wall of area \\(A\\).\n\nJerry is not very skilled. His dart is guaranteed to reach the wall and stick someplace, but beyond that, the probability that it lands in any given region is just proportional to that region’s area.\nTask: Derive a general formula for the conditional probability that a dart lands in ring \\(i\\) given that it hits the board and not the wall. Your formula should be a function of \\(i=1,\\,2,\\,3,\\,4,\\,5\\). Check that these probabilities are nonnegative and sum to one."
   },
   {
     "objectID": "problems/bank/conditional-probability/conditional-independence.html",
@@ -2108,7 +2115,7 @@
     "href": "problems/bank/bayes/gamma-lomax.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Recall this infernal distribution family that you met on Problem Set 6, Midterm 2, and again in lecture:\n\\[\nf(x\\mid \\theta)=\\theta(x+1)^{-(\\theta+1)},\\quad x&gt;0.\n\\]\nWe’ve done MLE for this, now let’s go Bayes. Consider this model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{Gamma}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}f(x\\mid \\theta).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE."
+    "text": "Recall this infernal distribution family that you met on Problem Set 6, Midterm 2, and again in lecture:\n\\[\nf(x\\mid \\theta)=\\theta(x+1)^{-(\\theta+1)},\\quad x&gt;0.\n\\]\nWe’ve done MLE for this, now let’s go Bayes. Consider this model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{Gamma}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}f(x\\mid \\theta).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE;\nThe posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?\nIs it possible for this new estimator to be superior (lower MSE) than the pure MLE?"
   },
   {
     "objectID": "problems/bank/bayes/beta-geometric.html",
@@ -2122,7 +2129,7 @@
     "href": "problems/bank/bayes/normal-normal.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{N}(m_0,\\,\\tau_0^2)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(\\theta,\\,1).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean \\(m_0\\) and the MLE."
+    "text": "Consider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{N}(m_0,\\,\\tau_0^2)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(\\theta,\\,1).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean \\(m_0\\) and the MLE.\nThe posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?\nIs it possible for this new estimator to be superior (lower MSE) than the pure MLE?"
   },
   {
     "objectID": "problems/bank/calculus-review/calc-bad-notation.html",
@@ -2181,46 +2188,60 @@
     "text": "One day last semester I looked down at my phone and saw this screen:\n\n\n\n\n\nInterpret the three probabilities and explain how they fit together."
   },
   {
-    "objectID": "problems/bank/basic-rules/disjoint-complements.html",
-    "href": "problems/bank/basic-rules/disjoint-complements.html",
+    "objectID": "problems/bank/basic-rules/bonferroni.html",
+    "href": "problems/bank/basic-rules/bonferroni.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Suppose the events \\(A\\) and \\(B\\) are disjoint. Under what conditions are \\(A^{c}\\) and \\(B^{c}\\) also disjoint events?"
+    "text": "Let \\(A_1,\\,A_2,\\,...,\\,A_n\\subseteq S\\) be a finite collection of possibly overlapping events in some probability space. Show that\n\\[\nP\\left(\\bigcap_{i=1}^n A_i\\right)\\geq \\sum\\limits_{i=1}^nP(A_i)-n+1.\n\\]"
   },
   {
-    "objectID": "problems/bank/transformations/gamma-power.html",
-    "href": "problems/bank/transformations/gamma-power.html",
+    "objectID": "problems/bank/basic-rules/xor-2.html",
+    "href": "problems/bank/basic-rules/xor-2.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\), and define a new random variable \\(Y=X^r\\) for any positive constant \\(r&gt;0\\).\n\nWhat is the density of \\(Y\\)?\nDerive a formula for \\(E(X^n)\\) that works for any \\(n\\in\\mathbb{N}\\)."
+    "text": "Let \\(A\\), \\(B\\), and \\(C\\) be three arbitrary events, and let \\(D\\) denote the event that “exactly one of these three events occurs.”\n\nDraw a cartoon of \\(A\\), \\(B\\), \\(C\\), and \\(D\\);\nUse the three basic set operations (union, intersection, and complement) to express \\(D\\) in terms of \\(A\\), \\(B\\), and \\(C\\);\nShow that\n\n\\[\nP(D)=P(A) + P(B) + P(C) - 2P(A \\cap B) - 2P(A \\cap C) - 2P(B \\cap C) + 3P(A \\cap B \\cap C).\n\\]"
   },
   {
-    "objectID": "problems/bank/moments/simple-mgf.html",
-    "href": "problems/bank/moments/simple-mgf.html",
+    "objectID": "problems/bank/transformations/twerkout.html",
+    "href": "problems/bank/transformations/twerkout.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(X\\) be a discrete random variable with\n\n\n\n\n\\(x\\)\n-1\n3\n7\n\n\n\n\n\\(P(X=x)\\)\n0.5\n0.2\n0.3\n\n\n\n\n\nCompute the mgf of \\(X\\).\nCompute the mean two ways: using the definition, and using the mgf. Confirm that you get the same answer.\nCompute the variance two ways: using the definition, and using the mgf. Confirm that you get the same answer."
+    "text": "On Lab 7, we learned how to derive the distribution of a transformation. This is an important technical skill that crops up often in mathematical probability, so let’s get our reps in:\n\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\), and find the range and density of \\(Y=e^X\\);\nLet \\(X\\sim\\textrm{Unif}(0,\\,1)\\), and find the range and density of \\(Y=\\sqrt{X}\\);\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\), and find the range and density of \\(Y=X^2\\);\nLet \\(X\\sim\\text{Gamma}(a,\\,b)\\), and find the range and density of \\(Y=1/X\\);\nLet \\(Z\\sim\\text{N}(0,\\,1)\\), and find the range and density of \\(Z^2\\)."
   },
   {
-    "objectID": "problems/bank/moments/binomial-mgf.html",
-    "href": "problems/bank/moments/binomial-mgf.html",
+    "objectID": "problems/bank/transformations/twerkout-2.html",
+    "href": "problems/bank/transformations/twerkout-2.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Compute the moment-generating function of the binomial distribution;\nUse the mgf to compute the mean;\nUse the mgf to compute the variance.\n\nNote: we already know from lecture that the mean is \\(np\\) and the variance is \\(np(1-p)\\), so you know you did it right when you get the same answer."
+    "text": "This is an important technical skill, so let’s drill it. For each of these, plot the transformation and then derive the range and the density of the new distribution:\n\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\) and consider \\(Y=1/X\\);\nLet \\(X\\) have density \\(f_X(x)=42x^5(1-x)\\) for \\(0&lt;x&lt;1\\) and consider \\(Y=X^3\\);\nLet \\(X\\sim\\text{Exponential}(\\lambda)\\) and consider \\(Y=4X+3\\);\nLet \\(X\\) have cdf \\(F_X(x)=(x+1)^3/8\\) for \\(-1&lt;x&lt;1\\) and consider \\(Y=1-X^2\\);\nLet \\(X\\sim\\text{N}(0,\\,1)\\) and consider \\(Y=|X|\\)."
   },
   {
-    "objectID": "problems/bank/moments/laplace.html",
-    "href": "problems/bank/moments/laplace.html",
+    "objectID": "problems/bank/moments/direct-mgf.html",
+    "href": "problems/bank/moments/direct-mgf.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(X\\) have density\n\\[\nf_X(x)\n=\n\\frac{1}{2}\ne^{-|x|},\\quad x\\in\\mathbb{R}.\n\\]\n\nWhat is the mgf of \\(X\\)?\nWhat is the mean?\nWhat is the variance?"
+    "text": "A certain random variable \\(X\\) has moment-generating function\n\\[\nM(t)=\\frac{e^{2t}}{1-3t},\\quad t&lt;1/3.\n\\]\n\nCompute the mean and variance of \\(X\\).\nWhat is the moment generating function of the new random variable\n\n\\[\nY=\\frac{\\pi}{2}-\\frac{X}{3}.\n\\]"
   },
   {
-    "objectID": "problems/bank/moments/discrete-uniform.html",
-    "href": "problems/bank/moments/discrete-uniform.html",
+    "objectID": "problems/bank/moments/normal-mgf.html",
+    "href": "problems/bank/moments/normal-mgf.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(X\\) have the discrete uniform on \\(\\{1,\\,2,\\,...,\\,n\\}\\). This means \\(P(X=i)=1/n\\) for all \\(i = 1,\\,2,\\,...,\\,n\\).\n\nCompute the MGF of \\(X\\);\nUse it to compute the mean;\nUse it to compute the variance."
+    "text": "Let \\(Z\\sim\\text{N}(0,\\,1)\\), and recall what that means:\n\\[\n\\begin{aligned}\nf_Z(z)&=\\frac{1}{\\sqrt{2\\pi}}\\exp\\left(-\\frac{1}{2}z^2\\right), && -\\infty&lt;z&lt;\\infty\\\\\nM_Z(t)&=\\exp\\left(\\frac{1}{2}t^2\\right), && -\\infty&lt;t&lt;\\infty.\n\\end{aligned}\n\\]\nNext, let \\(X=\\mu+\\sigma Z\\) for some constants \\(\\mu\\in\\mathbb{R}\\) and \\(\\sigma&gt;0\\).\n\nUse the change-of-variables formula to derive density of \\(X\\). What is its distribution?\nWhat is the moment-generating function of \\(X\\)?\nWhat are the mean and variance of \\(X\\)? Make sure you justify your answer with some type of derivation.\nConsider \\(X_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{N}(\\mu,\\,\\sigma^2)\\) and derive the distribution of their sum and their average."
+  },
+  {
+    "objectID": "problems/bank/moments/gumbel-mgf.html",
+    "href": "problems/bank/moments/gumbel-mgf.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Consider a continuous random variable \\(X\\) with density\n\\[\nf(x)=\\frac{1}{\\beta}\\exp\\left(-\\frac{x}{\\beta}-e^{-x/\\beta}\\right),\\quad x\\in\\mathbb{R}.\n\\]\nThe parameter \\(\\beta&gt;0\\) is just a positive constant. Compute the moment-generating function of \\(X\\)."
+  },
+  {
+    "objectID": "problems/bank/moments/compound-poisson.html",
+    "href": "problems/bank/moments/compound-poisson.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Consider the following:\n\\[\n\\begin{aligned}\nN&\\sim\\text{Poisson}(\\lambda)\\\\\nX_1,\\,X_2,\\,X_3,\\,...&\\overset{\\text{iid}}{\\sim}M\\\\\nS&=\\sum\\limits_{i=1}^NX_i.\n\\end{aligned}\n\\]\n\\(N\\) is independent of all of the \\(X_i\\). The \\(X_i\\) are an infinite sequence of iid random variables each sharing a common moment-generating function \\(M(t)=E(e^{tX_1})\\). \\(S\\) is a random sum of random variables. The terms are random, and so is \\(N\\), the number of terms being summed.\n\nWhat is the MGF of \\(S\\)?\nIf I had an iid collection of \\(S_1\\), \\(S_2\\), …, \\(S_m\\) each possessing the same distribution that you just derived, what would be the distribution of \\(T=S_1+S_2+...+S_m\\)?"
   },
   {
     "objectID": "problems/bank/joint-distributions/gamma-exponential-hierarchy.html",
@@ -2230,25 +2251,32 @@
     "text": "Consider this joint distribution for random variables \\(X\\) and \\(Y\\), written in hierarchical form:\n\\[\n\\begin{aligned}\nX&\\sim\\text{Gamma}\\left(\\alpha,\\,\\beta\\right)\\\\\nY\\mid X=x&\\sim \\text{Exponential}(x).\n\\end{aligned}\n\\]\n\nSketch the joint range of \\((X,\\, Y)\\).\nWhat is the joint density of the random pair \\((X,\\, Y)\\)?\nWhat is the marginal density of \\(Y\\)?\nWhat is the density of \\(X\\) conditional on the event \\(Y=y\\)? Is it recognizable?"
   },
   {
-    "objectID": "problems/bank/joint-distributions/gamma-gamma-hierarchy.html",
-    "href": "problems/bank/joint-distributions/gamma-gamma-hierarchy.html",
+    "objectID": "problems/bank/joint-distributions/gamma-weibull-hierarchy.html",
+    "href": "problems/bank/joint-distributions/gamma-weibull-hierarchy.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider the joint distribution of random variables \\(X\\) and \\(Y\\), written in hierarchical form:\n\\[\n\\begin{aligned}\nX&\\sim\\textrm{Gamma}\\left(\\frac{d_2}{2},\\, \\frac{d_2}{2}\\right)\\\\\nY\\,|\\, X = x&\\sim\\textrm{Gamma}\\left(\\frac{d_1}{2},\\, \\frac{d_1}{2}x\\right).\\\\\n\\end{aligned}\n\\]\nDo some serious “massage and squint” to show that the marginal pdf of \\(Y\\) is\n\\[\nf_Y(y)=\\frac{\\Gamma\\left(\\frac{d_1}{2}+\\frac{d_2}{2}\\right)}{\\Gamma\\left(\\frac{d_1}{2}\\right)\\Gamma\\left(\\frac{d_2}{2}\\right)}\\left(\\frac{d_1}{d_2}\\right)^{\\frac{d_1}{2}}y^{\\frac{d_1}{2}-1}\\left(1+\\frac{d_1}{d_2}y\\right)^{-\\frac{d_1+d_2}{2}},\\quad y&gt;0.\n\\]\nThis means that \\(Y\\) has the F-distribution."
+    "text": "Consider a random pair \\((Q,\\,Z)\\) of continuous random variables whose joint distribution is given by this hierarchy:\n\\[\n\\begin{aligned}\nQ&\\sim \\text{Gamma}(a,\\,b)\\\\\nZ\\mid Q=q&\\sim\\text{GF}(k, 1/q).\n\\end{aligned}\n\\]\nSo conditionally, \\(Z\\) has the distribution introduced in Problem 13 above, with \\(1/q\\) serving as the second parameter. \\(k&gt;0\\) is just a constant throughout.\n\nWhat is the joint density of \\((Q,\\,Z)\\)?\nWhat is the marginal distribution of \\(Z\\)?\nWhat is the conditional distribution of \\(Q\\) given \\(Z=z\\)?"
   },
   {
-    "objectID": "problems/bank/joint-distributions/beta-gamma-hierarchy.html",
-    "href": "problems/bank/joint-distributions/beta-gamma-hierarchy.html",
+    "objectID": "problems/bank/joint-distributions/secret-bayes.html",
+    "href": "problems/bank/joint-distributions/secret-bayes.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider a random pair \\((X,\\,Y)\\) with a joint distribution given by this hierarchy:\n\\[\n\\begin{aligned}\n    X\n    &\\sim\n    \\textrm{Beta}(a,\\, b)\n    \\\\\n    Y\\mid X = x\n    &\\sim\n    \\textrm{Gamma}\\left(a+b,\\, \\frac{c}{x}\\right).\n\\end{aligned}\n\\]\n\nWhat is the joint range?\nWhat is the marginal density of \\(Y\\)?\nWhat is the conditional density of \\(X\\)?\n\n\n\n\n\n\n\nNew distribution!\n\n\n\nIf \\(X\\sim \\textrm{Beta}(a,\\, b)\\), then \\(\\text{Range}(X)=(0,\\,1)\\) and the density is\n\\[\nf(x)=\\frac{\\Gamma(a+b)}{\\Gamma(a)\\Gamma(b)}x^{a-1}(1-x)^{b-1},\\quad0&lt;x&lt;1.\n\\]\nThat’s new to you, so see if you can work with it."
+    "text": "Suppose \\(X\\) and \\(Y\\) are jointly absolutely continuous random variables with joint density\n\\[\nf_{XY}(x,\\,y)=xe^{-x(y+1)},\\quad x,\\,y&gt;0.\n\\]\n\nFind the marginal density of \\(X\\).\nFind the marginal density of \\(Y\\).\nAre \\(X\\) and \\(Y\\) independent?\nFind the conditional density of \\(X\\) given \\(Y=y\\).\nFind the conditional density of \\(Y\\) given \\(X=x\\)."
   },
   {
-    "objectID": "problems/bank/counting/basic-counting.html",
-    "href": "problems/bank/counting/basic-counting.html",
+    "objectID": "problems/bank/joint-distributions/uniform-on-the-disc.html",
+    "href": "problems/bank/joint-distributions/uniform-on-the-disc.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Suppose you are dealt six cards from a well-shuffled, standard deck of 52.\n\nWhat is the probability of getting 3 of one rank and 3 of another?\nWhat is the probability of getting 4 of one rank and 2 of another?\nWhat is the probability of getting 3 aces and 3 of another rank?\nWhat is the probability of getting 4 of one rank and 2 aces?\nWhat is the probability that all 6 cards are in the same suit?\nWhat is the probability that all 6 cards are consecutive (ie a hand with 3 hearts, 4 spades, 5 spades, 6 clubs, 7 hearts, and the 8 diamonds)? Assume that the ace can only be the high card;\nWhat is the answer to the previous question if we allow the ace to be either high or low?\nWhat is the probability of receiving the ace, king, queen, jack, 10 and 9 all in hearts?"
+    "text": "Let \\(X\\) and \\(Y\\) be jointly absolutely continuous with density\n\\[\nf_{XY}(x,\\, y)=\\frac{1}{\\pi},\\quad x^2+y^2\\leq 1.\n\\]\nSo \\(X\\) and \\(Y\\) jointly possess the uniform distribution on the unit disc.\n\nThe joint density is a surface in three-dimensional space. Sketch what the joint density looks like.\nCompute the marginal densities of \\(X\\) and \\(Y\\).\nAre \\(X\\) and \\(Y\\) independent?"
+  },
+  {
+    "objectID": "problems/bank/counting/20-balls-4-colors.html",
+    "href": "problems/bank/counting/20-balls-4-colors.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "A box contains 20 balls, 5 each of colors cyan, magenta, yellow and black. Answer the following for an experiment where 10 balls are selected at random without replacement from the box. What is the probability that:\n\nMore than two colors are missing from the selection?\nMagenta and yellow are missing from the selection?\nExactly two colors are missing from the selection?\nOnly the color cyan is missing from the selection?\nExactly one color is missing from the selection?\nAt least one color will be missing from the selection?\nNo colors are missing from the selection?"
   },
   {
     "objectID": "problems/bank/counting/random-inner-product.html",
@@ -2279,18 +2307,25 @@
     "text": "Suppose you are dealt six cards from a well-shuffled, standard deck of 52.\n\nWhat is the probability of getting 3 of one rank and 3 of another?\nWhat is the probability of getting 4 of one rank and 2 of another?\nWhat is the probability of getting 3 aces and 3 of another rank?\nWhat is the probability of getting 4 of one rank and 2 aces?\nWhat is the probability that all 6 cards are in the same suit?\nWhat is the probability that all 6 cards are consecutive (ie a hand with 3 hearts, 4 spades, 5 spades, 6 clubs, 7 hearts, and the 8 diamonds)? Assume that the ace can only be the high card;\nWhat is the answer to the previous question if we allow the ace to be either high or low?\nWhat is the probability of receiving the ace, king, queen, jack, 10 and 9 all in hearts?"
   },
   {
-    "objectID": "problems/bank/counting/poker-dice.html",
-    "href": "problems/bank/counting/poker-dice.html",
+    "objectID": "problems/bank/counting/yes-replace-order-no.html",
+    "href": "problems/bank/counting/yes-replace-order-no.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Poker dice is played by simultaneously rolling five dice. The dice are fair, six-sided, and distinct (imagine that each one is a different color). Find the probabilities of the following dice rolls:\n\nfive different numbers;\nthree of a kind (three dice show the same number, while the other two dice are singles);\nfull house (three dice show the same number, while the other two show a separate pair)."
+    "text": "Consider selecting \\(k\\) from \\(n\\) with replacement but ignoring order.\n\nLet’s take the specific case of \\(k=2\\) and \\(n=4\\). List out all possible ways you can select \\(k=2\\) items from \\(\\{1, 2, 3, 4\\}\\) in such a scenario.\nLet \\(x_i\\) be the number of times that element \\(\\{i\\}\\) is selected, for each \\(i = 1,\\,2,\\,3,\\, 4\\). For each combination identified in (a), show that it satisfies the following equation:\n\n\\[x_1 + x_2 + x_3 + x_4 = 2, \\quad x_1, x_2, x_3, x_4 \\in \\{0, 1, 2\\}.\\]\n\nState an analogous equation to part b for general \\(n\\) and \\(k\\). Use this to show that the number of ways you can select \\(k\\) from \\(n\\) with replacement and ignoring order is\n\n\\[\n\\binom{n+k-1}{k}=\\frac{(n+k-1)!}{k!(n-1)!}.\n\\]"
   },
   {
-    "objectID": "problems/bank/counting/library-card-PIN.html",
-    "href": "problems/bank/counting/library-card-PIN.html",
+    "objectID": "problems/bank/counting/senate-committees.html",
+    "href": "problems/bank/counting/senate-committees.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Congratulations! You and two of your friends are now proud owners of brand-new library cards. In order to use your new cards, all you and your friends need to do is create four-digit PINs, with numbers \\(0\\) - \\(9\\) available (in theory) at each position. Predictably, all of you have different ideas of what an acceptable PIN is (odd or even, leading zeros or not, etc.).\n\nYou are fairly chill about what you want in a PIN – all you want is an even PIN, and you’re totally fine if it starts with a zero. How many possible PINs fit your preference?\nOne of your friends is a bit more persnickety – they want a PIN divisible by \\(5\\), and they cannot stand PINs starting with a zero. How many possible PINs fit this friend’s preferences?\nYour other friend has some more…particular preferences – they have an affinity for the number \\(16\\) and thus want the digits \\(1\\) and \\(6\\) to appear in that exact order at some point in the PIN. Further, they also despise PINs starting with a zero. How many possible PINs fit this friend’s preferences?"
+    "text": "The United States Senate contains two senators – one senior and one junior – from each of the \\(50\\) states.\n\nIf a committee of eight senators is selected, what is the probability that it will contain at least one of the two senators from a certain specified state?\nIf a committee of twenty senators is selected, what is the probability it will contain \\(15\\) junior senators and \\(5\\) senior senators?\nWhat is the probability that a group of \\(50\\) senators selected at random will contain one senator from each state?"
+  },
+  {
+    "objectID": "problems/bank/counting/exactly-two-suits.html",
+    "href": "problems/bank/counting/exactly-two-suits.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "A five-card hand is randomly dealt to you from a well-shuffled deck of 52 standard playing cards. What is the probability that your hand contains exactly two suits?"
   },
   {
     "objectID": "problems/bank/counting/license-plates.html",
@@ -2947,25 +2982,32 @@
     ]
   },
   {
-    "objectID": "problems/bank/counting/exactly-two-suits.html",
-    "href": "problems/bank/counting/exactly-two-suits.html",
+    "objectID": "problems/bank/counting/bridge.html",
+    "href": "problems/bank/counting/bridge.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "A five-card hand is randomly dealt to you from a well-shuffled deck of 52 standard playing cards. What is the probability that your hand contains exactly two suits?"
+    "text": "Four people are going to play bridge, which begins with an entire 52-card deck being dealt at random, 13 cards per player. What is the probability that each player is dealt exactly one ace?\n\n\n\n\n\n\nStill confused about ordered versus unordered sampling?\n\n\n\nThere are several ways to do this calculation. You should try it on your own, but then, go read Example 1.8.9 and the subsequent discussion on pages 37 - 39 of DeGroot & Schervish."
   },
   {
-    "objectID": "problems/bank/counting/senate-committees.html",
-    "href": "problems/bank/counting/senate-committees.html",
+    "objectID": "problems/bank/counting/library-card-PIN.html",
+    "href": "problems/bank/counting/library-card-PIN.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "The United States Senate contains two senators – one senior and one junior – from each of the \\(50\\) states.\n\nIf a committee of eight senators is selected, what is the probability that it will contain at least one of the two senators from a certain specified state?\nIf a committee of twenty senators is selected, what is the probability it will contain \\(15\\) junior senators and \\(5\\) senior senators?\nWhat is the probability that a group of \\(50\\) senators selected at random will contain one senator from each state?"
+    "text": "Congratulations! You and two of your friends are now proud owners of brand-new library cards. In order to use your new cards, all you and your friends need to do is create four-digit PINs, with numbers \\(0\\) - \\(9\\) available (in theory) at each position. Predictably, all of you have different ideas of what an acceptable PIN is (odd or even, leading zeros or not, etc.).\n\nYou are fairly chill about what you want in a PIN – all you want is an even PIN, and you’re totally fine if it starts with a zero. How many possible PINs fit your preference?\nOne of your friends is a bit more persnickety – they want a PIN divisible by \\(5\\), and they cannot stand PINs starting with a zero. How many possible PINs fit this friend’s preferences?\nYour other friend has some more…particular preferences – they have an affinity for the number \\(16\\) and thus want the digits \\(1\\) and \\(6\\) to appear in that exact order at some point in the PIN. Further, they also despise PINs starting with a zero. How many possible PINs fit this friend’s preferences?"
   },
   {
-    "objectID": "problems/bank/counting/yes-replace-order-no.html",
-    "href": "problems/bank/counting/yes-replace-order-no.html",
+    "objectID": "problems/bank/counting/poker-dice.html",
+    "href": "problems/bank/counting/poker-dice.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider selecting \\(k\\) from \\(n\\) with replacement but ignoring order.\n\nLet’s take the specific case of \\(k=2\\) and \\(n=4\\). List out all possible ways you can select \\(k=2\\) items from \\(\\{1, 2, 3, 4\\}\\) in such a scenario.\nLet \\(x_i\\) be the number of times that element \\(\\{i\\}\\) is selected, for each \\(i = 1,\\,2,\\,3,\\, 4\\). For each combination identified in (a), show that it satisfies the following equation:\n\n\\[x_1 + x_2 + x_3 + x_4 = 2, \\quad x_1, x_2, x_3, x_4 \\in \\{0, 1, 2\\}.\\]\n\nState an analogous equation to part b for general \\(n\\) and \\(k\\). Use this to show that the number of ways you can select \\(k\\) from \\(n\\) with replacement and ignoring order is\n\n\\[\n\\binom{n+k-1}{k}=\\frac{(n+k-1)!}{k!(n-1)!}.\n\\]"
+    "text": "Poker dice is played by simultaneously rolling five dice. The dice are fair, six-sided, and distinct (imagine that each one is a different color). Find the probabilities of the following dice rolls:\n\nfive different numbers;\nthree of a kind (three dice show the same number, while the other two dice are singles);\nfull house (three dice show the same number, while the other two show a separate pair)."
+  },
+  {
+    "objectID": "problems/bank/counting/streaks.html",
+    "href": "problems/bank/counting/streaks.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Consider a sequence of \\(n\\) independent coin flips of a fair coin. Define a streak of heads as an uninterrupted run of heads, and efine a streak of tails analogously. We are interested in the number of streaks in a sequence of flips. For example, consider the sequence below:\n\\[\nhhhttthhttthhhhhthtthhhh.\n\\]\nIt contains 9 streaks. Here is the sequence again with the streaks separated:\n\\[\nhhh\\quad ttt\\quad hh\\quad ttt\\quad hhhhh\\quad t\\quad h\\quad tt\\quad hhhh.\n\\]\nIn a sequence of \\(n\\) flips of a fair coin, let \\(Y\\) be the number of streaks. What is the range of \\(Y\\), and what is its PMF?"
   },
   {
     "objectID": "problems/bank/counting/ross-balls.html",
@@ -2982,25 +3024,39 @@
     "text": "A few months ago I went to Harris Teeter to get some junk food, and when I looked at my receipt, I saw this:\n\n\n\n\n\nI thought, “Strange. What are the odds the total would be a whole number?” Well, let’s find out!\n\nImagine you randomly purchase two items that each cost less than $10, and assume all prices are equally likely. The prices of the two items are quoted to two decimal places. What is the probability that the two prices add up to a whole number total?\nNow let’s add a wrinkle. Imagine sales tax is 5%. This is calculated, rounded to the nearest cent, and then added to your bill. What is the probability that the cost of the two items plus the rounded sales tax adds up to a whole number?\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nThe answer to part b is roughly 0.01, but showing this is tricky. Give it a shot!"
   },
   {
-    "objectID": "problems/bank/counting/20-balls-4-colors.html",
-    "href": "problems/bank/counting/20-balls-4-colors.html",
+    "objectID": "problems/bank/counting/elevator.html",
+    "href": "problems/bank/counting/elevator.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "A box contains 20 balls, 5 each of colors cyan, magenta, yellow and black. Answer the following for an experiment where 10 balls are selected at random without replacement from the box. What is the probability that:\n\nMore than two colors are missing from the selection?\nMagenta and yellow are missing from the selection?\nExactly two colors are missing from the selection?\nOnly the color cyan is missing from the selection?\nExactly one color is missing from the selection?\nAt least one color will be missing from the selection?\nNo colors are missing from the selection?"
+    "text": "An evil cult has its secret meetings in the basement of a building that has 15 above-ground floors. When the meeting is over, the nine cult members enjoy coffee and donuts and then depart to sow the seeds of villainy. They board the elevator, and each person randomly and independently selects one of the 15 floors to visit. Compute the probability that…\n\nNo two passengers share a floor;\nAt least two passengers share a floor;\nExactly two passengers share a floor;\nNo passengers get off at the top floor;\nAt least one passenger gets off at floor 1;\nAll passengers get off on consecutive floors;\nAll passengers get off below floor 10"
   },
   {
-    "objectID": "problems/bank/joint-distributions/uniform-on-the-disc.html",
-    "href": "problems/bank/joint-distributions/uniform-on-the-disc.html",
+    "objectID": "problems/bank/counting/basic-counting.html",
+    "href": "problems/bank/counting/basic-counting.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(X\\) and \\(Y\\) be jointly absolutely continuous with density\n\\[\nf_{XY}(x,\\, y)=\\frac{1}{\\pi},\\quad x^2+y^2\\leq 1.\n\\]\nSo \\(X\\) and \\(Y\\) jointly possess the uniform distribution on the unit disc.\n\nThe joint density is a surface in three-dimensional space. Sketch what the joint density looks like.\nCompute the marginal densities of \\(X\\) and \\(Y\\).\nAre \\(X\\) and \\(Y\\) independent?"
+    "text": "Suppose you are dealt six cards from a well-shuffled, standard deck of 52.\n\nWhat is the probability of getting 3 of one rank and 3 of another?\nWhat is the probability of getting 4 of one rank and 2 of another?\nWhat is the probability of getting 3 aces and 3 of another rank?\nWhat is the probability of getting 4 of one rank and 2 aces?\nWhat is the probability that all 6 cards are in the same suit?\nWhat is the probability that all 6 cards are consecutive (ie a hand with 3 hearts, 4 spades, 5 spades, 6 clubs, 7 hearts, and the 8 diamonds)? Assume that the ace can only be the high card;\nWhat is the answer to the previous question if we allow the ace to be either high or low?\nWhat is the probability of receiving the ace, king, queen, jack, 10 and 9 all in hearts?"
   },
   {
-    "objectID": "problems/bank/joint-distributions/secret-bayes.html",
-    "href": "problems/bank/joint-distributions/secret-bayes.html",
+    "objectID": "problems/bank/joint-distributions/beta-gamma-hierarchy.html",
+    "href": "problems/bank/joint-distributions/beta-gamma-hierarchy.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Suppose \\(X\\) and \\(Y\\) are jointly absolutely continuous random variables with joint density\n\\[\nf_{XY}(x,\\,y)=xe^{-x(y+1)},\\quad x,\\,y&gt;0.\n\\]\n\nFind the marginal density of \\(X\\).\nFind the marginal density of \\(Y\\).\nAre \\(X\\) and \\(Y\\) independent?\nFind the conditional density of \\(X\\) given \\(Y=y\\).\nFind the conditional density of \\(Y\\) given \\(X=x\\)."
+    "text": "Consider a random pair \\((X,\\,Y)\\) with a joint distribution given by this hierarchy:\n\\[\n\\begin{aligned}\n    X\n    &\\sim\n    \\textrm{Beta}(a,\\, b)\n    \\\\\n    Y\\mid X = x\n    &\\sim\n    \\textrm{Gamma}\\left(a+b,\\, \\frac{c}{x}\\right).\n\\end{aligned}\n\\]\n\nWhat is the joint range?\nWhat is the marginal density of \\(Y\\)?\nWhat is the conditional density of \\(X\\)?\n\n\n\n\n\n\n\nNew distribution!\n\n\n\nIf \\(X\\sim \\textrm{Beta}(a,\\, b)\\), then \\(\\text{Range}(X)=(0,\\,1)\\) and the density is\n\\[\nf(x)=\\frac{\\Gamma(a+b)}{\\Gamma(a)\\Gamma(b)}x^{a-1}(1-x)^{b-1},\\quad0&lt;x&lt;1.\n\\]\nThat’s new to you, so see if you can work with it."
+  },
+  {
+    "objectID": "problems/bank/joint-distributions/gamma-gamma-hierarchy.html",
+    "href": "problems/bank/joint-distributions/gamma-gamma-hierarchy.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Consider the joint distribution of random variables \\(X\\) and \\(Y\\), written in hierarchical form:\n\\[\n\\begin{aligned}\nX&\\sim\\textrm{Gamma}\\left(\\frac{d_2}{2},\\, \\frac{d_2}{2}\\right)\\\\\nY\\,|\\, X = x&\\sim\\textrm{Gamma}\\left(\\frac{d_1}{2},\\, \\frac{d_1}{2}x\\right).\\\\\n\\end{aligned}\n\\]\nDo some serious “massage and squint” to show that the marginal pdf of \\(Y\\) is\n\\[\nf_Y(y)=\\frac{\\Gamma\\left(\\frac{d_1}{2}+\\frac{d_2}{2}\\right)}{\\Gamma\\left(\\frac{d_1}{2}\\right)\\Gamma\\left(\\frac{d_2}{2}\\right)}\\left(\\frac{d_1}{d_2}\\right)^{\\frac{d_1}{2}}y^{\\frac{d_1}{2}-1}\\left(1+\\frac{d_1}{d_2}y\\right)^{-\\frac{d_1+d_2}{2}},\\quad y&gt;0.\n\\]\nThis means that \\(Y\\) has the F-distribution."
+  },
+  {
+    "objectID": "problems/bank/joint-distributions/weird-hard-thing.html",
+    "href": "problems/bank/joint-distributions/weird-hard-thing.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "\\(X\\) and \\(Y\\) are jointly absolutely continuous with joint density\n\\[\nf_{XY}(x,\\, y)\n=\n\\frac{1}{8}\n(y^2-x^2)\ne^{-y}\n,\\quad\ny&gt;0\n;\\,\n-y&lt;x&lt;y.\n\\]\n\nSketch \\(\\textrm{Range}(X,\\, Y)\\).\nCompute the marginal density of \\(X\\).\nCompute the marginal density of \\(Y\\).\nCompute the conditional density of \\(X\\) given \\(Y = y\\).\nCompute the conditional density of \\(Y\\) given \\(X = x\\)."
   },
   {
     "objectID": "problems/bank/joint-distributions/bdj-joint.html",
@@ -3010,46 +3066,53 @@
     "text": "Here is the joint density for a random pair:\n\\[\nf_{XY}(x,\\,y)\n=\n\\frac{24}{7}\nx(2-y),\\quad 0&lt;x&lt;1\\text{ and }0&lt;y&lt;1-x.\n\\]\n\nSketch the joint range of \\((X,\\,Y)\\).\nFind the marginal density of \\(Y\\).\nFind the marginal density of \\(X\\).\nFind the conditional density of \\(X\\) given \\(Y=y\\).\nUse this to compute \\(P(X&gt;1/2\\,|\\,Y=1/3)\\).\nWhat is \\(E(X\\,|\\,Y=y)\\)?"
   },
   {
-    "objectID": "problems/bank/moments/gumbel-mgf.html",
-    "href": "problems/bank/moments/gumbel-mgf.html",
+    "objectID": "problems/bank/moments/discrete-uniform.html",
+    "href": "problems/bank/moments/discrete-uniform.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider a continuous random variable \\(X\\) with density\n\\[\nf(x)=\\frac{1}{\\beta}\\exp\\left(-\\frac{x}{\\beta}-e^{-x/\\beta}\\right),\\quad x\\in\\mathbb{R}.\n\\]\nThe parameter \\(\\beta&gt;0\\) is just a positive constant. Compute the moment-generating function of \\(X\\)."
+    "text": "Let \\(X\\) have the discrete uniform on \\(\\{1,\\,2,\\,...,\\,n\\}\\). This means \\(P(X=i)=1/n\\) for all \\(i = 1,\\,2,\\,...,\\,n\\).\n\nCompute the MGF of \\(X\\);\nUse it to compute the mean;\nUse it to compute the variance."
   },
   {
-    "objectID": "problems/bank/moments/normal-mgf.html",
-    "href": "problems/bank/moments/normal-mgf.html",
+    "objectID": "problems/bank/moments/laplace.html",
+    "href": "problems/bank/moments/laplace.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(Z\\sim\\text{N}(0,\\,1)\\), and recall what that means:\n\\[\n\\begin{aligned}\nf_Z(z)&=\\frac{1}{\\sqrt{2\\pi}}\\exp\\left(-\\frac{1}{2}z^2\\right), && -\\infty&lt;z&lt;\\infty\\\\\nM_Z(t)&=\\exp\\left(\\frac{1}{2}t^2\\right), && -\\infty&lt;t&lt;\\infty.\n\\end{aligned}\n\\]\nNext, let \\(X=\\mu+\\sigma Z\\) for some constants \\(\\mu\\in\\mathbb{R}\\) and \\(\\sigma&gt;0\\).\n\nUse the change-of-variables formula to derive density of \\(X\\). What is its distribution?\nWhat is the moment-generating function of \\(X\\)?\nWhat are the mean and variance of \\(X\\)? Make sure you justify your answer with some type of derivation.\nConsider \\(X_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{N}(\\mu,\\,\\sigma^2)\\) and derive the distribution of their sum and their average."
+    "text": "Let \\(X\\) have density\n\\[\nf_X(x)\n=\n\\frac{1}{2}\ne^{-|x|},\\quad x\\in\\mathbb{R}.\n\\]\n\nWhat is the mgf of \\(X\\)?\nWhat is the mean?\nWhat is the variance?"
   },
   {
-    "objectID": "problems/bank/moments/direct-mgf.html",
-    "href": "problems/bank/moments/direct-mgf.html",
+    "objectID": "problems/bank/moments/binomial-mgf.html",
+    "href": "problems/bank/moments/binomial-mgf.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "A certain random variable \\(X\\) has moment-generating function\n\\[\nM(t)=\\frac{e^{2t}}{1-3t},\\quad t&lt;1/3.\n\\]\n\nCompute the mean and variance of \\(X\\).\nWhat is the moment generating function of the new random variable\n\n\\[\nY=\\frac{\\pi}{2}-\\frac{X}{3}.\n\\]"
+    "text": "Compute the moment-generating function of the binomial distribution;\nUse the mgf to compute the mean;\nUse the mgf to compute the variance.\n\nNote: we already know from lecture that the mean is \\(np\\) and the variance is \\(np(1-p)\\), so you know you did it right when you get the same answer."
   },
   {
-    "objectID": "problems/bank/transformations/twerkout-2.html",
-    "href": "problems/bank/transformations/twerkout-2.html",
+    "objectID": "problems/bank/moments/simple-mgf.html",
+    "href": "problems/bank/moments/simple-mgf.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "This is an important technical skill, so let’s drill it. For each of these, plot the transformation and then derive the range and the density of the new distribution:\n\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\) and consider \\(Y=1/X\\);\nLet \\(X\\) have density \\(f_X(x)=42x^5(1-x)\\) for \\(0&lt;x&lt;1\\) and consider \\(Y=X^3\\);\nLet \\(X\\sim\\text{Exponential}(\\lambda)\\) and consider \\(Y=4X+3\\);\nLet \\(X\\) have cdf \\(F_X(x)=(x+1)^3/8\\) for \\(-1&lt;x&lt;1\\) and consider \\(Y=1-X^2\\);\nLet \\(X\\sim\\text{N}(0,\\,1)\\) and consider \\(Y=|X|\\)."
+    "text": "Let \\(X\\) be a discrete random variable with\n\n\n\n\n\\(x\\)\n-1\n3\n7\n\n\n\n\n\\(P(X=x)\\)\n0.5\n0.2\n0.3\n\n\n\n\n\nCompute the mgf of \\(X\\).\nCompute the mean two ways: using the definition, and using the mgf. Confirm that you get the same answer.\nCompute the variance two ways: using the definition, and using the mgf. Confirm that you get the same answer."
   },
   {
-    "objectID": "problems/bank/transformations/twerkout.html",
-    "href": "problems/bank/transformations/twerkout.html",
+    "objectID": "problems/bank/transformations/twerkout-3.html",
+    "href": "problems/bank/transformations/twerkout-3.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "On Lab 7, we learned how to derive the distribution of a transformation. This is an important technical skill that crops up often in mathematical probability, so let’s get our reps in:\n\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\), and find the range and density of \\(Y=e^X\\);\nLet \\(X\\sim\\textrm{Unif}(0,\\,1)\\), and find the range and density of \\(Y=\\sqrt{X}\\);\nLet \\(X\\sim\\text{Unif}(0,\\,1)\\), and find the range and density of \\(Y=X^2\\);\nLet \\(X\\sim\\text{Gamma}(a,\\,b)\\), and find the range and density of \\(Y=1/X\\);\nLet \\(Z\\sim\\text{N}(0,\\,1)\\), and find the range and density of \\(Z^2\\)."
+    "text": "\\(X\\) possesses the goofy distribution if its PDF is:\n\\[\nf(x)=k\\frac{x^{k-1}}{\\theta}\\exp\\left(-\\frac{x^k}{\\theta}\\right),\\quad x&gt;0.\n\\]\nThe constants \\(k\\) and \\(\\theta\\) are both positive parameters. We denote this \\(X\\sim\\text{GF}(k,\\,\\theta)\\)\n\nIf we define a new random variable \\(Y=\\ln X\\), what is its distribution?\nIf we define a new random variable \\(Z = X^k\\), what is its distribution?"
   },
   {
-    "objectID": "problems/bank/basic-rules/xor-2.html",
-    "href": "problems/bank/basic-rules/xor-2.html",
+    "objectID": "problems/bank/transformations/gamma-power.html",
+    "href": "problems/bank/transformations/gamma-power.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(A\\), \\(B\\), and \\(C\\) be three arbitrary events, and let \\(D\\) denote the event that “exactly one of these three events occurs.”\n\nDraw a cartoon of \\(A\\), \\(B\\), \\(C\\), and \\(D\\);\nUse the three basic set operations (union, intersection, and complement) to express \\(D\\) in terms of \\(A\\), \\(B\\), and \\(C\\);\nShow that\n\n\\[\nP(D)=P(A) + P(B) + P(C) - 2P(A \\cap B) - 2P(A \\cap C) - 2P(B \\cap C) + 3P(A \\cap B \\cap C).\n\\]"
+    "text": "Let \\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\), and define a new random variable \\(Y=X^r\\) for any positive constant \\(r&gt;0\\).\n\nWhat is the density of \\(Y\\)?\nDerive a formula for \\(E(X^n)\\) that works for any \\(n\\in\\mathbb{N}\\)."
+  },
+  {
+    "objectID": "problems/bank/basic-rules/disjoint-complements.html",
+    "href": "problems/bank/basic-rules/disjoint-complements.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Suppose the events \\(A\\) and \\(B\\) are disjoint. Under what conditions are \\(A^{c}\\) and \\(B^{c}\\) also disjoint events?"
   },
   {
     "objectID": "problems/bank/basic-rules/geniuses-and-chocolate-lovers.html",
@@ -3133,7 +3196,7 @@
     "href": "problems/bank/bayes/inv-gamma-normal.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{IG}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(0,\\,\\theta).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE."
+    "text": "Consider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{IG}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(0,\\,\\theta).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE;\nThe posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?\nIs it possible for this new estimator to be superior (lower MSE) than the pure MLE?"
   },
   {
     "objectID": "problems/bank/conceptual/exam-review.html",
@@ -3176,6 +3239,13 @@
     "title": "STA 240 Fall 2025",
     "section": "",
     "text": "An urn contains three white balls and two red balls. The balls are drawn from the urn one at a time, at random and without replacement, until we have drawn all of the balls from a color group. As soon as every ball of either color is drawn, we stop. Let \\(X\\) be the number of balls drawn in this process.\n\nWhat is the range of the random variable \\(X\\)?\nWhat is the probability mass function of \\(X\\)?\nSketch the CDF of \\(X\\).\nCompute \\(E(X)\\).\nThree balls were drawn, and then we stopped because all of one of the colors was drawn. Given this, what is the probability that the last ball we drew was red?"
+  },
+  {
+    "objectID": "problems/bank/random-variables-discrete/exponential-ceiling.html",
+    "href": "problems/bank/random-variables-discrete/exponential-ceiling.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Let \\(X\\sim\\text{Exponential}(\\lambda)\\) for some arbitrary \\(\\lambda&gt;0\\). Define a new random variable \\(Y=\\lceil X\\rceil\\). Recall that the ceiling function \\(\\lceil\\cdot\\rceil\\) is the function that rounds a number up to the next integer. So \\(\\lceil0.5\\rceil=1\\), \\(\\lceil13.1\\rceil=14\\), and so on.\n\nWhat is the range of \\(Y\\)?\nWhat is the PMF of \\(Y\\)?\nDoes \\(Y\\) belong to a familiar distribution family?"
   },
   {
     "objectID": "problems/bank/random-variables-discrete/random-exam.html",
@@ -3248,25 +3318,32 @@
     "text": "In a standard deck of \\(52\\) cards, 3 (Jack, Queen, and King) of the 13 ranks are collectively known as the “face cards” of the deck. Recall that a standard deck of \\(52\\) cards also has \\(4\\) suits (Hearts, Diamonds, Clubs, and Spades).\nSuppose you deal out two cards from the deck. What is the probability that they are both face cards given that they are both hearts?"
   },
   {
-    "objectID": "problems/bank/conditional-probability/darts.html",
-    "href": "problems/bank/conditional-probability/darts.html",
+    "objectID": "problems/bank/conditional-probability/recruiter.html",
+    "href": "problems/bank/conditional-probability/recruiter.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Figure 1\n\n\n\nJerry Lewis is throwing darts at the board pictured in Figure 1. It has the following properties:\n\nThe board has radius \\(r\\);\nThe board is partitioned into five rings, each with the same “thickness” \\(r/5\\);\nThe board is mounted on a wall of area \\(A\\).\n\nJerry is not very skilled. His dart is guaranteed to reach the wall and stick someplace, but beyond that, the probability that it lands in any given region is just proportional to that region’s area.\nTask: Derive a general formula for the conditional probability that a dart lands in ring \\(i\\) given that it hits the board and not the wall. Your formula should be a function of \\(i=1,\\,2,\\,3,\\,4,\\,5\\). Check that these probabilities are nonnegative and sum to one."
+    "text": "A JP Morgan recruiter is walking around campus with three bone-colored business cards. Two of the cards are normal; they have writing on one side and they are blank on the other. The third card was misprinted; the writing was duplicated on both sides. The recruiter drops one of the cards and orders his valet to pick it up. When the valet reaches for the card, he sees writing facing up. What is the probability that the recruiter dropped the misprinted card?"
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/gamma-mgf.html",
-    "href": "problems/bank/random-variables-continuous/gamma-mgf.html",
+    "objectID": "problems/bank/random-variables-continuous/gauntlet.html",
+    "href": "problems/bank/random-variables-continuous/gauntlet.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider \\(X\\sim\\textrm{Gamma}(\\alpha,\\,\\beta)\\).\n\nFind \\(M_X(t)=E[e^{tX}]\\), the moment generating function of \\(X\\). For what values of \\(t\\) is it defined?\nUse the moment-generating function to compute \\(E(X)\\).\nUse the moment-generating function to compute \\(\\text{var}(X)\\).\nIf \\(c&gt;0\\), what is the distribution of \\(Y=cX\\)?"
+    "text": "Consider a nonnegative, absolutely continuous random variable with cdf\n\\[\nF_X(x)\n=\n\\begin{cases}\n1 - \\exp\\left(-\\frac{x^2}{2}\\right) & x\\geq 0\n\\\\\n0 & x&lt;0.\n\\end{cases}\n\\]\n\nWhat is \\(P(2\\leq X\\leq 3)\\);\nWhat is the density of \\(X\\)?\nWhat is \\(E(X^n)\\) for any \\(n\\in\\mathbb{N}\\)?\nWhat is \\(\\text{var}(X)\\)?\nWhat is the median of \\(X\\)?"
   },
   {
-    "objectID": "problems/bank/random-variables-continuous/continuous-cdf-g.html",
-    "href": "problems/bank/random-variables-continuous/continuous-cdf-g.html",
+    "objectID": "problems/bank/random-variables-continuous/wald.html",
+    "href": "problems/bank/random-variables-continuous/wald.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Consider this function:\n\\[\nF(x) = \\begin{cases}\n1 - e^{-g(x)} & x\\geq 0\\\\\n0 & \\text{else}.\n\\end{cases}\n\\]\nAssume \\(g(x)\\) is continuous. I want \\(F(x)\\) to be a continuous function, and I want \\(F(x)\\) to be a valid cumulative distribution function (CDF). What properties must \\(g(x)\\) satisfy in order to make that happen? Give three examples of \\(g\\) that have these properties."
+    "text": "inverse gaussian"
+  },
+  {
+    "objectID": "problems/bank/random-variables-continuous/logistic.html",
+    "href": "problems/bank/random-variables-continuous/logistic.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Imagine \\(X\\) has this cdf:\n\\[\nF(x)=\\frac{1}{1+\\exp\\left(-\\frac{x-\\mu}{s}\\right)},\\quad x\\in\\mathbb{R}.\n\\]\n\\(\\mu\\in\\mathbb{R}\\) and \\(s&gt;0\\) are just constants.\n\nWhat is the pdf of \\(X\\)?\nWhat is the mean of \\(X\\)?"
   },
   {
     "objectID": "problems/bank/random-variables-continuous/gamma-half.html",
@@ -3316,6 +3393,13 @@
     "title": "STA 240 Fall 2025",
     "section": "Footnotes",
     "text": "Footnotes\n\nIf you’re like me, you cannot do this. Oh well.↩︎"
+  },
+  {
+    "objectID": "problems/bank/mle/mle-weibull.html",
+    "href": "problems/bank/mle/mle-weibull.html",
+    "title": "STA 240 Fall 2025",
+    "section": "",
+    "text": "Consider these data:\n\\[\nX_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{GF}(k,\\,\\theta).\n\\]\nSo again, we are recycling the distribution family from Problem 13 above. Throughout, just treat \\(k&gt;0\\) as fixed and known.\n\nWhat is the maximum likelihood estimator of \\(\\theta\\in\\mathbb{R}\\)?\nWhat is the sampling distribution of the estimator?\nWhat is the MSE of the estimator?\nBased on the MSE, what are the statistical properties of this estimator?"
   },
   {
     "objectID": "problems/bank/mle/mle-lomax.html",
@@ -3627,6 +3711,230 @@
       "Problem Sets",
       "Problem Set 1"
     ]
+  },
+  {
+    "objectID": "problems/exam-final.html",
+    "href": "problems/exam-final.html",
+    "title": "Final Exam Study Guide",
+    "section": "",
+    "text": "Our final exam is Friday December 12 from 9:00 AM to 12:00 PM. There will be 11 problems, and they will break down as follows:\nProblems 0 - 8 will be similar to the midterms. Since you’ve had more time to live with this material, I reserve the right to include problems that might stretch you a bit. For Problems 9 and 10, I assure you there will be no surprises. You can expect problems that are exactly like the examples you’ve seen in lecture, lab, Problem Set 7, and this study guide. The distributions may be different, and the details might change, but the format and the steps are the same. If you work every practice problem from scratch on your own and then study the solutions carefully, you are ready."
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-1",
+    "href": "problems/exam-final.html#problem-1",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 1",
+    "text": "Problem 1\nSuppose the events \\(A\\) and \\(B\\) are disjoint. Under what conditions are \\(A^{c}\\) and \\(B^{c}\\) also disjoint events?"
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-2",
+    "href": "problems/exam-final.html#problem-2",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 2",
+    "text": "Problem 2\nLet \\(A_1,\\,A_2,\\,...,\\,A_n\\subseteq S\\) be a finite collection of possibly overlapping events in some probability space. Show that\n\\[\nP\\left(\\bigcap_{i=1}^n A_i\\right)\\geq \\sum\\limits_{i=1}^nP(A_i)-n+1.\n\\]"
+  },
+  {
+    "objectID": "problems/exam-final.html#want-more-review",
+    "href": "problems/exam-final.html#want-more-review",
+    "title": "Final Exam Study Guide",
+    "section": "Want more review?",
+    "text": "Want more review?\n\nLecture notes on axioms and rules;\nProblem Set 1: problems 4 - 8;\nProblem Set 2: problems 2 - 3;\nMidterm 1 Study Guide: problems 1 - 4;\nMidterm 1: problem 1."
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-3",
+    "href": "problems/exam-final.html#problem-3",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 3",
+    "text": "Problem 3\nFour people are going to play bridge, which begins with an entire 52-card deck being dealt at random, 13 cards per player. What is the probability that each player is dealt exactly one ace?\n\n\n\n\n\n\nStill confused about ordered versus unordered sampling?\n\n\n\nThere are several ways to do this calculation. You should try it on your own, but then, go read Example 1.8.9 and the subsequent discussion on pages 37 - 39 of DeGroot & Schervish."
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-4",
+    "href": "problems/exam-final.html#problem-4",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 4",
+    "text": "Problem 4\nAn evil cult has its secret meetings in the basement of a building that has 15 above-ground floors. When the meeting is over, the nine cult members enjoy coffee and donuts and then depart to sow the seeds of villainy. They board the elevator, and each person randomly and independently selects one of the 15 floors to visit. Compute the probability that…\n\nNo two passengers share a floor;\nAt least two passengers share a floor;\nExactly two passengers share a floor;\nNo passengers get off at the top floor;\nAt least one passenger gets off at floor 1;\nAll passengers get off on consecutive floors;\nAll passengers get off below floor 10"
+  },
+  {
+    "objectID": "problems/exam-final.html#want-more-review-1",
+    "href": "problems/exam-final.html#want-more-review-1",
+    "title": "Final Exam Study Guide",
+    "section": "Want more review?",
+    "text": "Want more review?\n\nLecture notes on counting theory;\nLecture notes with birthday problem and other worked examples;\nLab 2 worked examples;\nProblem Set 1: problems 9 - 10;\nProblem Set 2: problems 4 - 8;\nProblem Set 3: problems 2 - 3;\nMidterm 1 Study Guide: problems 5 - 7;\nMidterm 1: problems 2 - 3;\nOdd-numbered exercises in DeGroot & Schervish Chapters 1.6 - 1.8, 1.12."
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-5",
+    "href": "problems/exam-final.html#problem-5",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 5",
+    "text": "Problem 5\nA JP Morgan recruiter is walking around campus with three bone-colored business cards. Two of the cards are normal; they have writing on one side and they are blank on the other. The third card was misprinted; the writing was duplicated on both sides. The recruiter drops one of the cards and orders his valet to pick it up. When the valet reaches for the card, he sees writing facing up. What is the probability that the recruiter dropped the misprinted card?"
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-6",
+    "href": "problems/exam-final.html#problem-6",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 6",
+    "text": "Problem 6\nSuppose that \\(k\\) events \\(B_1\\), \\(B_2\\), …, \\(B_k\\) form a partition of the sample space \\(S\\), and \\(A\\subseteq S\\) is some event with positive probability \\(P(A)&gt;0\\). Show that if \\(P(B_1\\mid A)&lt;P(B_1)\\), then that guarantees \\(P(B_i\\mid A)&gt;P(B_i)\\) for at least one \\(i\\in\\{1,\\,2,\\,...,\\,k\\}\\)."
+  },
+  {
+    "objectID": "problems/exam-final.html#want-more-review-2",
+    "href": "problems/exam-final.html#want-more-review-2",
+    "title": "Final Exam Study Guide",
+    "section": "Want more review?",
+    "text": "Want more review?\n\nLecture notes with worked examples;\n\nThe lil’ app on disease testing;\n\nProblem Set 2: problems 9 - 10;\nProblem Set 3: problems 4 - 8;\nProblem Set 4: problems 2 - 3;\nMidterm 1 Study Guide: problems 8 - 10;\nMidterm 1: problems 3 - 5;\nOdd-numbered exercises in DeGroot & Schervish Chapter 2."
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-7",
+    "href": "problems/exam-final.html#problem-7",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 7",
+    "text": "Problem 7\nConsider a sequence of \\(n\\) independent coin flips of a fair coin. Define a streak of heads as an uninterrupted run of heads, and efine a streak of tails analogously. We are interested in the number of streaks in a sequence of flips. For example, consider the sequence below:\n\\[\nhhhttthhttthhhhhthtthhhh.\n\\]\nIt contains 9 streaks. Here is the sequence again with the streaks separated:\n\\[\nhhh\\quad ttt\\quad hh\\quad ttt\\quad hhhhh\\quad t\\quad h\\quad tt\\quad hhhh.\n\\]\nIn a sequence of \\(n\\) flips of a fair coin, let \\(Y\\) be the number of streaks. What is the range of \\(Y\\), and what is its PMF?"
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-8",
+    "href": "problems/exam-final.html#problem-8",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 8",
+    "text": "Problem 8\nLet \\(X\\sim\\text{Exponential}(\\lambda)\\) for some arbitrary \\(\\lambda&gt;0\\). Define a new random variable \\(Y=\\lceil X\\rceil\\). Recall that the ceiling function \\(\\lceil\\cdot\\rceil\\) is the function that rounds a number up to the next integer. So \\(\\lceil0.5\\rceil=1\\), \\(\\lceil13.1\\rceil=14\\), and so on.\n\nWhat is the range of \\(Y\\)?\nWhat is the PMF of \\(Y\\)?\nDoes \\(Y\\) belong to a familiar distribution family?"
+  },
+  {
+    "objectID": "problems/exam-final.html#want-more-review-3",
+    "href": "problems/exam-final.html#want-more-review-3",
+    "title": "Final Exam Study Guide",
+    "section": "Want more review?",
+    "text": "Want more review?\n\nLecture notes introducing random variables;\nLecture notes on special families of discrete random variables;\nLecture notes on expected value;\nLab 5 exercises;\nProblem Set 2: problem 7;\nProblem Set 3: problems 9 - 10;\nProblem Set 4: problems 4 - 10;\nMidterm 1 Study Guide: problems 11 - 12;\nMidterm 2 Study Guide: problems 1 - 2;\nMidterm 1: problem 6;\nMidterm 2: problem 2."
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-9",
+    "href": "problems/exam-final.html#problem-9",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 9",
+    "text": "Problem 9\nImagine \\(X\\) has this cdf:\n\\[\nF(x)=\\frac{1}{1+\\exp\\left(-\\frac{x-\\mu}{s}\\right)},\\quad x\\in\\mathbb{R}.\n\\]\n\\(\\mu\\in\\mathbb{R}\\) and \\(s&gt;0\\) are just constants.\n\nWhat is the pdf of \\(X\\)?\nWhat is the mean of \\(X\\)?"
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-10",
+    "href": "problems/exam-final.html#problem-10",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 10",
+    "text": "Problem 10\nHere is the goofy pdf of some nonnegative random variable \\(X\\):\n\\[\nf(x)\n=\ne^{1-e^x+x},\\quad x\\geq 0.\n\\]\n\nCompute the cdf of \\(X\\);\nCompute the median of \\(X\\)."
+  },
+  {
+    "objectID": "problems/exam-final.html#want-more-review-4",
+    "href": "problems/exam-final.html#want-more-review-4",
+    "title": "Final Exam Study Guide",
+    "section": "Want more review?",
+    "text": "Want more review?\n\nExamples from lecture;\nLab 8;\nProblem Set 5: problems 2 - 8;\nProblem Set 6: problems 1 - 2;\nMidterm 2 Study Guide: problems 3 - 4;\nMidterm 2: problem 1;\nOdd-numbered exercises in DeGroot & Schervish Chapters 3.2, 5.6, 5.7."
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-11",
+    "href": "problems/exam-final.html#problem-11",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 11",
+    "text": "Problem 11\nA certain random variable \\(X\\) has moment-generating function\n\\[\nM(t)=\\frac{e^{2t}}{1-3t},\\quad t&lt;1/3.\n\\]\n\nCompute the mean and variance of \\(X\\).\nWhat is the moment generating function of the new random variable\n\n\\[\nY=\\frac{\\pi}{2}-\\frac{X}{3}.\n\\]"
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-12",
+    "href": "problems/exam-final.html#problem-12",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 12",
+    "text": "Problem 12\nConsider the following:\n\\[\n\\begin{aligned}\nN&\\sim\\text{Poisson}(\\lambda)\\\\\nX_1,\\,X_2,\\,X_3,\\,...&\\overset{\\text{iid}}{\\sim}M\\\\\nS&=\\sum\\limits_{i=1}^NX_i.\n\\end{aligned}\n\\]\n\\(N\\) is independent of all of the \\(X_i\\). The \\(X_i\\) are an infinite sequence of iid random variables each sharing a common moment-generating function \\(M(t)=E(e^{tX_1})\\). \\(S\\) is a random sum of random variables. The terms are random, and so is \\(N\\), the number of terms being summed.\n\nWhat is the MGF of \\(S\\)?\nIf I had an iid collection of \\(S_1\\), \\(S_2\\), …, \\(S_m\\) each possessing the same distribution that you just derived, what would be the distribution of \\(T=S_1+S_2+...+S_m\\)?"
+  },
+  {
+    "objectID": "problems/exam-final.html#want-more-review-5",
+    "href": "problems/exam-final.html#want-more-review-5",
+    "title": "Final Exam Study Guide",
+    "section": "Want more review?",
+    "text": "Want more review?\n\nworked examples from lecture;\nnew theorems and examples from lecture about updating MGFs under linear transformations;\nProblem Set 5: problems 9 - 10;\nProblem Set 6: problems 3 - 5;\nProblem Set 7: problems 1 - 2;\nMidterm 2 Study Guide: problems 11 - 12;\nMidterm 2: problem 2;\nOdd-numbered exercises in DeGroot & Schervish Chapter 4.4."
+  },
+  {
+    "objectID": "problems/exam-final.html#sec-weibull",
+    "href": "problems/exam-final.html#sec-weibull",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 13",
+    "text": "Problem 13\n\\(X\\) possesses the goofy distribution if its PDF is:\n\\[\nf(x)=k\\frac{x^{k-1}}{\\theta}\\exp\\left(-\\frac{x^k}{\\theta}\\right),\\quad x&gt;0.\n\\]\nThe constants \\(k\\) and \\(\\theta\\) are both positive parameters. We denote this \\(X\\sim\\text{GF}(k,\\,\\theta)\\)\n\nIf we define a new random variable \\(Y=\\ln X\\), what is its distribution?\nIf we define a new random variable \\(Z = X^k\\), what is its distribution?"
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-14",
+    "href": "problems/exam-final.html#problem-14",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 14",
+    "text": "Problem 14\nLet \\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\), and define a new random variable \\(Y=X^r\\) for any positive constant \\(r&gt;0\\).\n\nWhat is the density of \\(Y\\)?\nDerive a formula for \\(E(X^n)\\) that works for any \\(n\\in\\mathbb{N}\\)."
+  },
+  {
+    "objectID": "problems/exam-final.html#want-more-review-6",
+    "href": "problems/exam-final.html#want-more-review-6",
+    "title": "Final Exam Study Guide",
+    "section": "Want more review?",
+    "text": "Want more review?\n\nLab 7;\nProblem Set 6: problem 6;\nMidterm 2 Study Guide: problem 7;\nMidterm 2: problem 3;\nRead DeGroot & Schervish Chapter 3.8 and do the odd-numbered exercises."
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-15",
+    "href": "problems/exam-final.html#problem-15",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 15",
+    "text": "Problem 15\n\\(X\\) and \\(Y\\) are jointly absolutely continuous with joint density\n\\[\nf_{XY}(x,\\, y)\n=\n\\frac{1}{8}\n(y^2-x^2)\ne^{-y}\n,\\quad\ny&gt;0\n;\\,\n-y&lt;x&lt;y.\n\\]\n\nSketch \\(\\textrm{Range}(X,\\, Y)\\).\nCompute the marginal density of \\(X\\).\nCompute the marginal density of \\(Y\\).\nCompute the conditional density of \\(X\\) given \\(Y = y\\).\nCompute the conditional density of \\(Y\\) given \\(X = x\\)."
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-16",
+    "href": "problems/exam-final.html#problem-16",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 16",
+    "text": "Problem 16\nConsider a random pair \\((Q,\\,Z)\\) of continuous random variables whose joint distribution is given by this hierarchy:\n\\[\n\\begin{aligned}\nQ&\\sim \\text{Gamma}(a,\\,b)\\\\\nZ\\mid Q=q&\\sim\\text{GF}(k, 1/q).\n\\end{aligned}\n\\]\nSo conditionally, \\(Z\\) has the distribution introduced in Problem 13 above, with \\(1/q\\) serving as the second parameter. \\(k&gt;0\\) is just a constant throughout.\n\nWhat is the joint density of \\((Q,\\,Z)\\)?\nWhat is the marginal distribution of \\(Z\\)?\nWhat is the conditional distribution of \\(Q\\) given \\(Z=z\\)?"
+  },
+  {
+    "objectID": "problems/exam-final.html#want-more-review-7",
+    "href": "problems/exam-final.html#want-more-review-7",
+    "title": "Final Exam Study Guide",
+    "section": "Want more review?",
+    "text": "Want more review?\n\njointly discrete examples from lecture;\njointly contnuous examples from lecture;\nmixed Poisson-gamma example from Lab 9;\nProblem Set 6: problems 7 - 10;\nMidterm 2 Study Guide: problems 8 - 9;\nMidterm 2: problem 4;\nOdd-numbered exercises in DeGroot & Schervish Chapters 3.4 - 3.6."
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-17",
+    "href": "problems/exam-final.html#problem-17",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 17",
+    "text": "Problem 17\nConsider these data:\n\\[\nX_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{N}(\\theta,\\,1).\n\\]\n\nWhat is the maximum likelihood estimator of \\(\\theta\\in\\mathbb{R}\\)?\nWhat is the sampling distribution of the estimator?\nWhat is the MSE of the estimator?\nBased on the MSE, what are the statistical properties of this estimator?"
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-18",
+    "href": "problems/exam-final.html#problem-18",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 18",
+    "text": "Problem 18\nConsider these data:\n\\[\nX_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{GF}(k,\\,\\theta).\n\\]\nSo again, we are recycling the distribution family from Problem 13 above. Throughout, just treat \\(k&gt;0\\) as fixed and known.\n\nWhat is the maximum likelihood estimator of \\(\\theta\\in\\mathbb{R}\\)?\nWhat is the sampling distribution of the estimator?\nWhat is the MSE of the estimator?\nBased on the MSE, what are the statistical properties of this estimator?"
+  },
+  {
+    "objectID": "problems/exam-final.html#want-more-review-8",
+    "href": "problems/exam-final.html#want-more-review-8",
+    "title": "Final Exam Study Guide",
+    "section": "Want more review?",
+    "text": "Want more review?\n\nLecture examples;\nLab 10;\nProblem Set 7: problems 3 - 4."
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-19",
+    "href": "problems/exam-final.html#problem-19",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 19",
+    "text": "Problem 19\nConsider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{N}(m_0,\\,\\tau_0^2)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(\\theta,\\,1).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean \\(m_0\\) and the MLE.\nThe posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?\nIs it possible for this new estimator to be superior (lower MSE) than the pure MLE?"
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-20",
+    "href": "problems/exam-final.html#problem-20",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 20",
+    "text": "Problem 20\nConsider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{IG}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(0,\\,\\theta).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE;\nThe posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?\nIs it possible for this new estimator to be superior (lower MSE) than the pure MLE?"
+  },
+  {
+    "objectID": "problems/exam-final.html#problem-21",
+    "href": "problems/exam-final.html#problem-21",
+    "title": "Final Exam Study Guide",
+    "section": "Problem 21",
+    "text": "Problem 21\nRecall this infernal distribution family that you met on Problem Set 6, Midterm 2, and again in lecture:\n\\[\nf(x\\mid \\theta)=\\theta(x+1)^{-(\\theta+1)},\\quad x&gt;0.\n\\]\nWe’ve done MLE for this, now let’s go Bayes. Consider this model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{Gamma}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}f(x\\mid \\theta).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE;\nThe posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?\nIs it possible for this new estimator to be superior (lower MSE) than the pure MLE?"
+  },
+  {
+    "objectID": "problems/exam-final.html#want-more-review-9",
+    "href": "problems/exam-final.html#want-more-review-9",
+    "title": "Final Exam Study Guide",
+    "section": "Want more review?",
+    "text": "Want more review?\n\nLecture examples;\nLab 11;\nProblem Set 7: problems 5 - 6."
   },
   {
     "objectID": "problems/pset-3.html",

@@ -67,8 +67,38 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="STA 240 Fall 2025">
+<meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
 <meta property="og:site_name" content="STA 240 Fall 2025">
 </head>
 
@@ -569,12 +599,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p><span class="math inline">\(X\)</span> possesses the <em>goofy distribution</em> if its PDF is:</p>
+<p><span class="math display">\[
+f(x)=k\frac{x^{k-1}}{\theta}\exp\left(-\frac{x^k}{\theta}\right),\quad x&gt;0.
+\]</span></p>
+<p>The constants <span class="math inline">\(k\)</span> and <span class="math inline">\(\theta\)</span> are both positive parameters. We denote this <span class="math inline">\(X\sim\text{GF}(k,\,\theta)\)</span></p>
 <ol type="a">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>If we define a new random variable <span class="math inline">\(Y=\ln X\)</span>, what is its distribution?</li>
+<li>If we define a new random variable <span class="math inline">\(Z = X^k\)</span>, what is its distribution?</li>
 </ol>
 
 
