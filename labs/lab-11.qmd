@@ -22,7 +22,7 @@ To answer your boss's question, you could take the numbers and just compute the 
 
 As soon as we start worrying about uncertainty quantification, we enter the subtle realm of modeling assumptions and interpretive philosophies. It's not like probability theory where we were just proving theorems and doing calculations. Now, the theory of statistics is in some ways just another *branch* of probability theory, and so in truth were are still proving theorems and doing calculations. But we wring our hands about the interpretation of the results in ways that we didn't necessarily do before.
 
-Anyway, I'm rambling. Data don't speak for themselves, and so we require an interpretive lens to make sense of them. The strongest form of this is a concrete statistical model, so let's pose one. The number of insurance claims in a month is going to be a nonnegative integer, and so we could choose for our model any parametric family of probability distributions supported on $\mathbb{N}$. Let's go with the simplest one:
+Anyway, I'm rambling. Data don't speak for themselves, and so we require an interpretive lens to make sense of them. The strongest form of this is a concrete statistical model, so let's pose one. The number of insurance claims in a month is going to be a non-negative integer, and so we could choose for our model any parametric family of probability distributions supported on $\mathbb{N}$. Let's go with the simplest one:
 
 $$
 X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{Poisson}(\theta).
@@ -30,23 +30,88 @@ $$
 
 That's our model for the claims data. The rate parameter $\theta>0$ is unknown, and we want to use the data to learn what it is. Note that this model may or may not be a good choice, and entire books have been written on model building and model selection and model diagnostics and model criticism. If you keep studying statistics, you'll learn about all that, but this class is about one thing and one thing only: can you do the math or not? So we will just take the model as given and use it as an opportunity to test our technical skills.
 
-::: callout-note
-## Write-up instructions
-
-You don't have to type up all the work. The final answer is fine. Frankly, I don't really care what you turn in. This is just extra practice with stuff you are guaranteed to see on the final.
-:::
-
 # Task 0
 
 Compute the likelihood function and the log-likelihood function for the Poisson distribution. You will need both in what follows.
+
+::: {.callout-warning collapse="true"}
+## Solution
+The likelihood function is 
+
+$$
+\begin{aligned}
+L(\theta\mid X_{1:n})
+&=
+\prod_{i=1}^nf(X_i\mid \theta)
+\\
+&=
+\prod_{i=1}^ne^{-\theta}\frac{\theta^{X_i}}{X_i!}
+\\
+&=
+\left(\prod_{i=1}^ne^{-\theta}\right)\left(\prod_{i=1}^n\theta^{X_i}\right)\prod_{i=1}^n\frac{1}{X_i!}
+\\
+&=
+e^{-n\theta}\theta^{\sum_{i=1}^nX_i}\prod_{i=1}^n\frac{1}{X_i!}.
+\end{aligned}
+$$
+
+The log-likelihood function is 
+
+$$
+\begin{aligned}
+\ell(\theta\mid X_{1:n})
+&=
+\ln L(\theta\mid X_{1:n})
+\\
+&=
+\ln\left(
+e^{-n\theta}\theta^{\sum_{i=1}^nX_i}\prod_{i=1}^n\frac{1}{X_i!}
+\right)
+\\
+&=
+-n\theta+\left(\sum_{i=1}^nX_i\right)\ln\theta+\sum\limits_{i=1}^n\ln(1/X_i!).
+\end{aligned}
+$$
+
+:::
 
 # Task 1
 
 Compute the maximum likelihood estimator for $\theta>0$ in the Poisson distribution.
 
+::: {.callout-warning collapse="true"}
+## Solution
+$$
+\begin{aligned}
+\ell'(\theta\mid X_{1:n})=-n+\frac{\sum_{i=1}^nX_i}{\theta}&=0
+\\
+\frac{\sum_{i=1}^nX_i}{\theta}&=n
+\\
+\frac{\sum_{i=1}^nX_i}{n}&=\theta
+\\
+\\
+\implies\quad\hat{\theta}_n&=\bar{X}_n
+\end{aligned}
+$$
+:::
+
 # Task 2
 
 Compute the mean, bias, variance, and MSE of the estimator and comment on its statistical properties.
+
+::: {.callout-warning collapse="true"}
+## Solution
+This is the average of iid random variables, so we know that
+
+$$
+\begin{aligned}
+E(\hat{\theta}_n)&=E(X_1)=\theta\\
+\text{var}(\hat{\theta}_n)&=\frac{\text{var}(X_1)}{n}=\frac{\theta}{n}.
+\end{aligned}
+$$
+
+As such, the estimator is unbiased, the MSE is equal to the variance, and this goes to zero as $n\to\infty$, so the estimator is consistent.
+:::
 
 # Task 3
 
@@ -62,16 +127,200 @@ $$
 
 Derive the posterior distribution.
 
+::: {.callout-warning collapse="true"}
+## Solution
+The posterior kernel is recognizeable:
+
+$$
+\begin{aligned}
+f(\theta\mid x_{1:n})
+&\propto
+L(\theta\mid x_{1:n})f(\theta)
+\\
+&=
+e^{-n\theta}\theta^{\sum_{i=1}^nx_i}\underbrace{\left(\prod_{i=1}^n\frac{1}{x_i!}\right)\frac{b_0^{a_0}}{\Gamma(a_0)}}_{\text{no }\theta}\theta^{a_0-1}e^{-b_0\theta}
+\\
+&\propto
+e^{-n\theta}\theta^{\sum_{i=1}^nx_i}\theta^{a_0-1}e^{-b_0\theta}
+\\
+&=
+\underbrace{\theta^{a_0+\sum_{i=1}^nx_i-1}e^{-(b_0+n)\theta}}_{\text{kernel of Gamma density}}.
+\end{aligned}
+$$
+
+So the posterior is 
+
+$$
+\begin{aligned}
+\theta\mid X_{1:n}=x_{1:n}&\sim\text{Gamma}(a_n,\,b_n)\\
+\\
+a_n&=a_0+\sum_{i=1}^nx_i\\
+b_n&=b_0+n.
+\end{aligned}
+$$
+
+:::
+
 
 # Task 4
 
 Based on your answer from the previous task, show that the posterior mean is a convex combination of the prior mean and the maximum likelihood estimator that you derived earlier.
 
+::: {.callout-warning collapse="true"}
+## Solution
+The posterior mean is 
+
+$$
+\begin{aligned}
+E(\theta\mid x_{1:n})
+&=
+\frac{a_n}{b_n}
+\\
+&=
+\frac{a_0+\sum_{i=1}^nx_i}{b_0+n}
+\\
+&=
+\frac{1}{b_0+n}a_0+\frac{1}{b_0+n}\sum_{i=1}^nx_i
+\\
+&=
+\frac{1}{b_0+n}\frac{b_0}{b_0}a_0+\frac{1}{b_0+n}\frac{n}{n}\sum_{i=1}^nx_i
+\\
+&=
+\frac{b_0}{b_0+n}\frac{a_0}{b_0}+\frac{n}{b_0+n}\frac{1}{n}\sum_{i=1}^nx_i
+\\
+&=
+\frac{b_0}{b_0+n}E(\theta)+\frac{n}{b_0+n}\bar{x}_n.
+\end{aligned}
+$$
+:::
+
 # Task 5
 
 Ignoring that we ever did a Bayesian analysis, treat the posterior mean formula from the previous task as a new *classical* estimator for $\theta$. It's just a function of the data at the end of the day. 
 
-What are the mean, bias, and variance of the posterior mean? How do these compare to the pure MLE? Are there circumstances under which this new estimator would be preferred to the pure MLE?
+What are the mean, bias, variance, and MSE of the posterior mean? 
+
+::: {.callout-warning collapse="true"}
+## Solution
+Our new estimator is 
+
+$$
+\begin{aligned}
+\tilde{\theta}_n&=\frac{b_0}{b_0+n}\frac{a_0}{b_0}+\frac{n}{b_0+n}\bar{X}_n\\
+&=(1-w_n)g+w_n\bar{X}_n.
+\end{aligned}
+$$
+
+This is just a linear transformation of one random variable $\bar{X}_n$, so the mean and variance are 
+
+$$
+\begin{aligned}
+E(\tilde{\theta}_n)&=(1-w_n)g+w_n\theta\\
+\text{var}(\tilde{\theta}_n)&=w_n^2\frac{\theta}{n}.
+\end{aligned}
+$$
+
+So the bias is 
+
+$$
+\begin{aligned}
+E(\tilde{\theta}_n)-\theta&=(1-w_n)g+w_n\theta-\theta\\
+&=
+(1-w_n)g-(1-w_n)\theta
+\\
+&=
+(1-w_n)(g-\theta).
+\end{aligned}
+$$
+
+Unless the prior mean is exactly equal to the true value (unlikely) or we set $w_n=1$ (back to pure MLE), this is a biased estimator.
+
+The overall MSE is 
+
+$$
+\begin{aligned}
+\text{MSE}
+&=
+\left[E(\tilde{\theta}_n)-\theta\right]^2+\text{var}(\tilde{\theta}_n)
+\\
+&=
+(1-w_n)^2(g-\theta)^2+w_n^2\frac{\theta}{n}
+.
+\end{aligned}
+$$
+
+As $n\to\infty$, $w_n\to 1$, so both terms go to zero, and the estimator is consistent.
+
+:::
+
+# Task 6
+
+Are there circumstances under which this new estimator would be better (in the sense of lower MSE) than the pure MLE?
+
+::: {.callout-warning collapse="true"}
+## Solution
+If we set $w_n=1$, the estimator is back to pure MLE, which has an MSE of $\theta/n$. It is possible to pick $w_n$ such that the biased estimator has even lower MSE. Behold
+
+$$
+\begin{aligned}
+\frac{\text{d}}{\text{d}w_n}[(1-w_n)^2(g-\theta)^2+w_n^2\frac{\theta}{n}]
+=
+-2(1-w_n)(g-\theta)^2+2w_n\frac{\theta}{n}
+&=
+0
+\\
+2w_n\frac{\theta}{n}
+&=
+2(1-w_n)(g-\theta)^2
+\\
+w_n\frac{\theta}{n}
+&=
+(g-\theta)^2-w_n(g-\theta)^2
+\\
+w_n\frac{\theta}{n}+w_n(g-\theta)^2
+&=
+(g-\theta)^2
+\\
+w_n\left(\frac{\theta}{n}+(g-\theta)^2\right)
+&=
+(g-\theta)^2
+\\
+w_n
+&=
+\frac{(g-\theta)^2}{\frac{\theta}{n}+(g-\theta)^2}.
+\end{aligned}
+$$
+
+It's 1 AM, so I am not checking the second derivative, but this is a global minimizer, and it is between zero and one as it should be. Here, we don't just want the location of the minimum, we want the actual minimum value so we can compare the MSEs:
+
+$$
+\begin{aligned}
+\underset{w_n}{\min}\,\text{MSE}
+&=
+\left(\frac{\theta/n}{\frac{\theta}{n}+(g-\theta)^2}\right)^2(g-\theta)^2+\left(\frac{(g-\theta)^2}{\frac{\theta}{n}+(g-\theta)^2}\right)^2\frac{\theta}{n}
+\\
+&=
+\frac{(\theta/n)^2(g-\theta)^2+(g-\theta)^4(\theta/n)}{\left[\frac{\theta}{n}+(g-\theta)^2\right]^2}
+\\
+&=
+\frac{(g-\theta)^2(\theta/n)[\theta/n+(g-\theta)^2]}{\left[\frac{\theta}{n}+(g-\theta)^2\right]^2}
+\\
+&=
+\frac{(g-\theta)^2(\theta/n)}{\frac{\theta}{n}+(g-\theta)^2}
+\\
+&=
+w_n^*\frac{\theta}{n}
+\\
+&<
+\frac{\theta}{n}
+.
+\end{aligned}
+$$
+
+So, the minimum MSE is equal to the minimizing weight times the MSE of the pure MLE. Since the minimizing weight is strictly less than 1, this is indeed an improvement. 
+
+Now, the MSE-minimizing weight depends on the true but unknown $\theta$, so you cannot immediately operationalize this result. But nevertheless it demonstrates that in theory shrinkage can improve the MLE. 
+:::
 
 
 # Play around!
