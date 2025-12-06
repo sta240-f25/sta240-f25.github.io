@@ -1,0 +1,9 @@
+An evil cult has its secret meetings in the basement of a building that has 15 above-ground floors. When the meeting is over, the nine cult members enjoy coffee and donuts and then depart to sow the seeds of villainy. They board the elevator, and each person randomly and independently selects one of the 15 floors to visit. Compute the probability that...
+
+a. No two passengers share a floor;
+a. At least two passengers share a floor;
+a. Exactly two passengers share a floor;
+a. No passengers get off at the top floor;
+a. At least one passenger gets off at floor 1;
+a. All passengers get off on consecutive floors;
+a. All passengers get off below floor 10

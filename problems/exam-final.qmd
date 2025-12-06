@@ -51,7 +51,7 @@ If your final exam score is better than your lowest midterm score, I will replac
 
 ## Problem 4
 
-
+{{< include bank/counting/elevator.qmd >}}
 
 ## Want more review?
 
