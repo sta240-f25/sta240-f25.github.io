@@ -115,3 +115,10 @@ d |>
   tab_options(table.font.size = 13) |>
   opt_row_striping()
 ```
+
+**Extra notes**
+
+You're not responsible for any of this, but it's extra stuff I had lying around that you might find interesting:
+
+- Alternative notes on MLE, with more discussion of confidence intervals: [set 1](https://sta240-f25.github.io/lecture-notes/sta240-notes-ex-mle-1.pdf), [set 2](https://sta240-f25.github.io/lecture-notes/sta240-notes-ex-mle-2.pdf);
+- "[AP Statistics in 75 minutes](https://sta240-f25.github.io/lecture-notes/sta240-notes-ex-ap-stats.pdf)." After this class, we have all of the tools to derive the itchy formulas that we take for granted in AP Stats or STA 101.
