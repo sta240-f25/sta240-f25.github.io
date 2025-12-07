@@ -5,6 +5,70 @@ filters:
   - shinylive
 ---
 
+Imagine you work at a hospital. Dozens of babies are delivered in the hospital each week. A lot of information is collected about each birth, and hiding inside of these data is a lot of useful information about the health and future of the community. How can we extract it? If you take classes like STA 101 or 199, you learn various methods:
+
+::: {.center-table}
+| Question       | Method |
+|----------------|------------|
+| How are birth weights distributed?  | histogram        |
+| What's the typical birth weight?   | sample average        |
+| How is birth weight related to gestational age? | linear regression        |
+:::
+
+The goal of *data science* in general is to convert data into knowledge, and we perform this "conversion" by applying statistical methods: histogram, sample average, line of best fit, etc. 
+
+A mathematical statistician looks at these methods and wonders: do they actually work? Do they behave the way we expect? Do they deliver what they promise? Is this method reliable? How reliable? Under what conditions? And before we can answer these questions, we have to back up and ask a more fundamental one: what does it even *mean* for a statistical method to "work"? These are all theoretical questions, and mathematical statisticians answer them using the tools of probability theory that we have studied for the last twelve weeks. 
+
+# Baby's first dataset
+
+For us, a data set will be a spreadsheet with one column of numbers:
+
+XXX
+
+Of course, in the modern era, datasets are huge. There could be millions of columns. There could be so many columns and rows that you can't fit the entire dataset on a single computer. Welcome to "*big data*." Furthermore, modern datasets are weird. It's not just a box of numbers anymore. Text is data. Images are data. Video is data. Sometimes all at once.
+
+If you continue studying statistics, you'll get there eventually. But for now, let's keep it simple.
+
+
+# The implicit assumption of all statistics
+
+> Obsered data are the result of a random process. 
+
+By the time the data arrive in our spreadsheet, they are a fixed set of numbers. But how did those numbers get there? Plenty of seemingly random forces might have had their way before you ever got to observe anything:
+
+- nature's randomness: 
+- human error: 
+- measurement error: 
+- deliberate error
+- 
+
+Statisticians have found that it is convenient to use the tolls and language of probability to get a handle on the variation that we observe in real-world data. 
+
+
+This assumption is so foundational to statistics that it often goes unremarked upon and recedes into the background, but it is indeed an assumption. Not every set of numbers you would seek to extract patterns from is random, but this is the first assumption a statistician makes. 
+
+By the time data arrive in our spreadsheet, they are a fixed set of numbers. But how did they get there?
+
+
+We use the language and tools of probability to model *variation*. Even if the variation in our datasets is not literally the result of random forces, it may be convenient to proceed *as if* it is. 
+
+# Our mathematical model of data analysis
+
+again, iid is an assumption, and it will often be bogus. But we're just starting out. If you can't get a handle on the simple case, 
+
+# Classical statistical inference
+
+
+
+# Parametric statistics
+
+
+
+
+
+
+In this class, our data will be numerical. 
+
 Yada yada data science yada yada extract patterns and learn about the world. 
 
 goal: typical behavior - mean
