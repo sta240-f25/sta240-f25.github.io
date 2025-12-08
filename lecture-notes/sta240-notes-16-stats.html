@@ -583,6 +583,12 @@ window.Quarto = {
  <span class="menu-text">Midterm 2</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../problems/exam-final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Final</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -595,7 +601,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#point-estimation" id="toc-point-estimation" class="nav-link active" data-scroll-target="#point-estimation">Point estimation</a></li>
+  <li><a href="#babys-first-dataset" id="toc-babys-first-dataset" class="nav-link active" data-scroll-target="#babys-first-dataset">Baby’s first dataset</a></li>
+  <li><a href="#the-implicit-assumption-of-all-statistics" id="toc-the-implicit-assumption-of-all-statistics" class="nav-link" data-scroll-target="#the-implicit-assumption-of-all-statistics">The implicit assumption of all statistics</a></li>
+  <li><a href="#our-mathematical-model-of-data-analysis" id="toc-our-mathematical-model-of-data-analysis" class="nav-link" data-scroll-target="#our-mathematical-model-of-data-analysis">Our mathematical model of data analysis</a></li>
+  <li><a href="#classical-statistical-inference" id="toc-classical-statistical-inference" class="nav-link" data-scroll-target="#classical-statistical-inference">Classical statistical inference</a></li>
+  <li><a href="#parametric-statistics" id="toc-parametric-statistics" class="nav-link" data-scroll-target="#parametric-statistics">Parametric statistics</a></li>
+  <li><a href="#point-estimation" id="toc-point-estimation" class="nav-link" data-scroll-target="#point-estimation">Point estimation</a></li>
   </ul>
 </nav>
     </div>
@@ -621,6 +632,72 @@ window.Quarto = {
 </header>
 
 
+<p>Imagine you work at a hospital. Dozens of babies are delivered in the hospital each week. A lot of information is collected about each birth, and hiding inside of these data is a lot of useful information about the health and future of the community. How can we extract it? If you take classes like STA 101 or 199, you learn various methods:</p>
+<div class="center-table">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 57%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>How are birth weights distributed?</td>
+<td>histogram</td>
+</tr>
+<tr class="even">
+<td>What’s the typical birth weight?</td>
+<td>sample average</td>
+</tr>
+<tr class="odd">
+<td>How is birth weight related to gestational age?</td>
+<td>linear regression</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The goal of <em>data science</em> in general is to convert data into knowledge, and we perform this “conversion” by applying statistical methods: histogram, sample average, line of best fit, etc.</p>
+<p>A mathematical statistician looks at these methods and wonders: do they actually work? Do they behave the way we expect? Do they deliver what they promise? Are they reliable? How reliable? Under what conditions? And before we can answer these questions, we have to back up and ask a more fundamental one: what does it even <em>mean</em> for a statistical method to “work”? These are all theoretical questions, and mathematical statisticians answer them using the tools of probability theory that we have studied for the last twelve weeks.</p>
+<section id="babys-first-dataset" class="level1">
+<h1>Baby’s first dataset</h1>
+<p>For us, a data set will be a spreadsheet with one column of numbers:</p>
+<p>XXX</p>
+<p>Of course, in the modern era, datasets are huge. There could be millions of columns. There could be so many columns and rows that you can’t fit the entire dataset on a single computer. Welcome to “<em>big data</em>.” Furthermore, modern datasets are weird. It’s not just a box of numbers anymore. Text is data. Images are data. Video is data. Sometimes all at once.</p>
+<p>If you continue studying statistics, you’ll get there eventually. But for now, let’s keep it simple.</p>
+</section>
+<section id="the-implicit-assumption-of-all-statistics" class="level1">
+<h1>The implicit assumption of all statistics</h1>
+<blockquote class="blockquote">
+<p>Obsered data are the result of a random process.</p>
+</blockquote>
+<p>By the time the data arrive in our spreadsheet, they are a fixed set of numbers. But how did those numbers get there? Plenty of seemingly random forces might have had their way before you ever got to observe anything:</p>
+<ul>
+<li>nature’s randomness:</li>
+<li>human error:</li>
+<li>measurement error:</li>
+<li>deliberate error</li>
+<li></li>
+</ul>
+<p>Statisticians have found that it is convenient to use the tolls and language of probability to get a handle on the variation that we observe in real-world data.</p>
+<p>This assumption is so foundational to statistics that it often goes unremarked upon and recedes into the background, but it is indeed an assumption. Not every set of numbers you would seek to extract patterns from is random, but this is the first assumption a statistician makes.</p>
+<p>By the time data arrive in our spreadsheet, they are a fixed set of numbers. But how did they get there?</p>
+<p>We use the language and tools of probability to model <em>variation</em>. Even if the variation in our datasets is not literally the result of random forces, it may be convenient to proceed <em>as if</em> it is.</p>
+</section>
+<section id="our-mathematical-model-of-data-analysis" class="level1">
+<h1>Our mathematical model of data analysis</h1>
+<p>again, iid is an assumption, and it will often be bogus. But we’re just starting out. If you can’t get a handle on the simple case,</p>
+</section>
+<section id="classical-statistical-inference" class="level1">
+<h1>Classical statistical inference</h1>
+</section>
+<section id="parametric-statistics" class="level1">
+<h1>Parametric statistics</h1>
+<p>In this class, our data will be numerical.</p>
 <p>Yada yada data science yada yada extract patterns and learn about the world.</p>
 <p>goal: typical behavior - mean goal: distribution - plot histogram goal: learn relationships - line of best fit</p>
 <p>These are all examples of statistical methods. A theoretical statistician</p>
@@ -631,6 +708,7 @@ window.Quarto = {
 <li>(interval estimation)</li>
 <li>(hypothesis testing) can the data distinguish between</li>
 </ol>
+</section>
 <section id="point-estimation" class="level1">
 <h1>Point estimation</h1>
 <div class="callout callout-style-default callout-note callout-titled">

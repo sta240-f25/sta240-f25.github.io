@@ -2686,7 +2686,7 @@
     "href": "lecture-notes/sta240-notes-16-stats.html",
     "title": "Introduction to the theory of statistics",
     "section": "",
-    "text": "Yada yada data science yada yada extract patterns and learn about the world.\ngoal: typical behavior - mean goal: distribution - plot histogram goal: learn relationships - line of best fit\nThese are all examples of statistical methods. A theoretical statistician\nDo these methods actually work? Do they do what we want them to do? Do they deliver what they promise to deliver? Under what conditions? And before we can answer those questions, we have to back up and ask a more fundamental one: what does it even mean for a statistical method to “work”? These are all theoretical questions, and mathematical statisticians use the tools of probability theory to answer them.\nIn American government, there are legislative, judicial, and executive branches. In music, there is melody, harmony, and rhythm. Similarly, we organize statistical theory into three related areas of inquiry:\n\n(point estimation)\n(interval estimation)\n(hypothesis testing) can the data distinguish between\n\n\nPoint estimation\n\n\n\n\n\n\nDefinition: risk of an estimator\n\n\n\n\\[\nE[L(\\hat{\\theta}_n,\\,\\theta_0)]\n\\]\n\n\n\n\n\n\n\n\nTheorem: bias-variance trade-off"
+    "text": "Imagine you work at a hospital. Dozens of babies are delivered in the hospital each week. A lot of information is collected about each birth, and hiding inside of these data is a lot of useful information about the health and future of the community. How can we extract it? If you take classes like STA 101 or 199, you learn various methods:\n\n\n\n\n\n\n\n\nQuestion\nMethod\n\n\n\n\nHow are birth weights distributed?\nhistogram\n\n\nWhat’s the typical birth weight?\nsample average\n\n\nHow is birth weight related to gestational age?\nlinear regression\n\n\n\n\nThe goal of data science in general is to convert data into knowledge, and we perform this “conversion” by applying statistical methods: histogram, sample average, line of best fit, etc.\nA mathematical statistician looks at these methods and wonders: do they actually work? Do they behave the way we expect? Do they deliver what they promise? Are they reliable? How reliable? Under what conditions? And before we can answer these questions, we have to back up and ask a more fundamental one: what does it even mean for a statistical method to “work”? These are all theoretical questions, and mathematical statisticians answer them using the tools of probability theory that we have studied for the last twelve weeks.\n\nBaby’s first dataset\nFor us, a data set will be a spreadsheet with one column of numbers:\nXXX\nOf course, in the modern era, datasets are huge. There could be millions of columns. There could be so many columns and rows that you can’t fit the entire dataset on a single computer. Welcome to “big data.” Furthermore, modern datasets are weird. It’s not just a box of numbers anymore. Text is data. Images are data. Video is data. Sometimes all at once.\nIf you continue studying statistics, you’ll get there eventually. But for now, let’s keep it simple.\n\n\nThe implicit assumption of all statistics\n\nObsered data are the result of a random process.\n\nBy the time the data arrive in our spreadsheet, they are a fixed set of numbers. But how did those numbers get there? Plenty of seemingly random forces might have had their way before you ever got to observe anything:\n\nnature’s randomness:\nhuman error:\nmeasurement error:\ndeliberate error\n\n\nStatisticians have found that it is convenient to use the tolls and language of probability to get a handle on the variation that we observe in real-world data.\nThis assumption is so foundational to statistics that it often goes unremarked upon and recedes into the background, but it is indeed an assumption. Not every set of numbers you would seek to extract patterns from is random, but this is the first assumption a statistician makes.\nBy the time data arrive in our spreadsheet, they are a fixed set of numbers. But how did they get there?\nWe use the language and tools of probability to model variation. Even if the variation in our datasets is not literally the result of random forces, it may be convenient to proceed as if it is.\n\n\nOur mathematical model of data analysis\nagain, iid is an assumption, and it will often be bogus. But we’re just starting out. If you can’t get a handle on the simple case,\n\n\nClassical statistical inference\n\n\nParametric statistics\nIn this class, our data will be numerical.\nYada yada data science yada yada extract patterns and learn about the world.\ngoal: typical behavior - mean goal: distribution - plot histogram goal: learn relationships - line of best fit\nThese are all examples of statistical methods. A theoretical statistician\nDo these methods actually work? Do they do what we want them to do? Do they deliver what they promise to deliver? Under what conditions? And before we can answer those questions, we have to back up and ask a more fundamental one: what does it even mean for a statistical method to “work”? These are all theoretical questions, and mathematical statisticians use the tools of probability theory to answer them.\nIn American government, there are legislative, judicial, and executive branches. In music, there is melody, harmony, and rhythm. Similarly, we organize statistical theory into three related areas of inquiry:\n\n(point estimation)\n(interval estimation)\n(hypothesis testing) can the data distinguish between\n\n\n\nPoint estimation\n\n\n\n\n\n\nDefinition: risk of an estimator\n\n\n\n\\[\nE[L(\\hat{\\theta}_n,\\,\\theta_0)]\n\\]\n\n\n\n\n\n\n\n\nTheorem: bias-variance trade-off"
   },
   {
     "objectID": "lecture-notes/sta240-notes-18-mle-examples.html",
@@ -3717,224 +3717,352 @@
     "href": "problems/exam-final.html",
     "title": "Final Exam Study Guide",
     "section": "",
-    "text": "Our final exam is Friday December 12 from 9:00 AM to 12:00 PM. There will be 11 problems, and they will break down as follows:\nProblems 0 - 8 will be similar to the midterms. Since you’ve had more time to live with this material, I reserve the right to include problems that might stretch you a bit. For Problems 9 and 10, I assure you there will be no surprises. You can expect problems that are exactly like the examples you’ve seen in lecture, lab, Problem Set 7, and this study guide. The distributions may be different, and the details might change, but the format and the steps are the same. If you work every practice problem from scratch on your own and then study the solutions carefully, you are ready."
+    "text": "Our final exam is Friday December 12 from 9:00 AM to 12:00 PM. There will be 11 problems, and they will break down as follows:\nProblems 0 - 8 will be similar to the midterms. Since you’ve had more time to live with this material, I reserve the right to include problems that might stretch you a bit. For Problems 9 and 10, I assure you there will be no surprises. You can expect problems that are exactly like the examples you’ve seen in lecture, lab, Problem Set 7, and this study guide. The distributions may be different, and the details might change, but the format and the steps are the same. If you work every practice problem from scratch on your own and then study the solutions carefully, you are ready.",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-1",
     "href": "problems/exam-final.html#problem-1",
     "title": "Final Exam Study Guide",
     "section": "Problem 1",
-    "text": "Problem 1\nSuppose the events \\(A\\) and \\(B\\) are disjoint. Under what conditions are \\(A^{c}\\) and \\(B^{c}\\) also disjoint events?"
+    "text": "Problem 1\nSuppose the events \\(A\\) and \\(B\\) are disjoint. Under what conditions are \\(A^{c}\\) and \\(B^{c}\\) also disjoint events?",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-2",
     "href": "problems/exam-final.html#problem-2",
     "title": "Final Exam Study Guide",
     "section": "Problem 2",
-    "text": "Problem 2\nLet \\(A_1,\\,A_2,\\,...,\\,A_n\\subseteq S\\) be a finite collection of possibly overlapping events in some probability space. Show that\n\\[\nP\\left(\\bigcap_{i=1}^n A_i\\right)\\geq \\sum\\limits_{i=1}^nP(A_i)-n+1.\n\\]"
+    "text": "Problem 2\nLet \\(A_1,\\,A_2,\\,...,\\,A_n\\subseteq S\\) be a finite collection of possibly overlapping events in some probability space. Show that\n\\[\nP\\left(\\bigcap_{i=1}^n A_i\\right)\\geq \\sum\\limits_{i=1}^nP(A_i)-n+1.\n\\]",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#want-more-review",
     "href": "problems/exam-final.html#want-more-review",
     "title": "Final Exam Study Guide",
     "section": "Want more review?",
-    "text": "Want more review?\n\nLecture notes on axioms and rules;\nProblem Set 1: problems 4 - 8;\nProblem Set 2: problems 2 - 3;\nMidterm 1 Study Guide: problems 1 - 4;\nMidterm 1: problem 1."
+    "text": "Want more review?\n\nLecture notes on axioms and rules;\nProblem Set 1: problems 4 - 8;\nProblem Set 2: problems 2 - 3;\nMidterm 1 Study Guide: problems 1 - 4;\nMidterm 1: problem 1.",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-3",
     "href": "problems/exam-final.html#problem-3",
     "title": "Final Exam Study Guide",
     "section": "Problem 3",
-    "text": "Problem 3\nFour people are going to play bridge, which begins with an entire 52-card deck being dealt at random, 13 cards per player. What is the probability that each player is dealt exactly one ace?\n\n\n\n\n\n\nStill confused about ordered versus unordered sampling?\n\n\n\nThere are several ways to do this calculation. You should try it on your own, but then, go read Example 1.8.9 and the subsequent discussion on pages 37 - 39 of DeGroot & Schervish."
+    "text": "Problem 3\nFour people are going to play bridge, which begins with an entire 52-card deck being dealt at random, 13 cards per player. What is the probability that each player is dealt exactly one ace?\n\n\n\n\n\n\nStill confused about ordered versus unordered sampling?\n\n\n\nThere are several ways to do this calculation. You should try it on your own, but then, go read Example 1.8.9 and the subsequent discussion on pages 37 - 39 of DeGroot & Schervish.",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-4",
     "href": "problems/exam-final.html#problem-4",
     "title": "Final Exam Study Guide",
     "section": "Problem 4",
-    "text": "Problem 4\nAn evil cult has its secret meetings in the basement of a building that has 15 above-ground floors. When the meeting is over, the nine cult members enjoy coffee and donuts and then depart to sow the seeds of villainy. They board the elevator, and each person randomly and independently selects one of the 15 floors to visit. Compute the probability that…\n\nNo two passengers share a floor;\nAt least two passengers share a floor;\nExactly two passengers share a floor;\nNo passengers get off at the top floor;\nAt least one passenger gets off at floor 1;\nAll passengers get off on consecutive floors;\nAll passengers get off below floor 10"
+    "text": "Problem 4\nAn evil cult has its secret meetings in the basement of a building that has 15 above-ground floors. When the meeting is over, the nine cult members enjoy coffee and donuts and then depart to sow the seeds of villainy. They board the elevator, and each person randomly and independently selects one of the 15 floors to visit. Compute the probability that…\n\nNo two passengers share a floor;\nAt least two passengers share a floor;\nExactly two passengers share a floor;\nNo passengers get off at the top floor;\nAt least one passenger gets off at floor 1;\nAll passengers get off on consecutive floors;\nAll passengers get off below floor 10",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#want-more-review-1",
     "href": "problems/exam-final.html#want-more-review-1",
     "title": "Final Exam Study Guide",
     "section": "Want more review?",
-    "text": "Want more review?\n\nLecture notes on counting theory;\nLecture notes with birthday problem and other worked examples;\nLab 2 worked examples;\nProblem Set 1: problems 9 - 10;\nProblem Set 2: problems 4 - 8;\nProblem Set 3: problems 2 - 3;\nMidterm 1 Study Guide: problems 5 - 7;\nMidterm 1: problems 2 - 3;\nOdd-numbered exercises in DeGroot & Schervish Chapters 1.6 - 1.8, 1.12."
+    "text": "Want more review?\n\nLecture notes on counting theory;\nLecture notes with birthday problem and other worked examples;\nLab 2 worked examples;\nProblem Set 1: problems 9 - 10;\nProblem Set 2: problems 4 - 8;\nProblem Set 3: problems 2 - 3;\nMidterm 1 Study Guide: problems 5 - 7;\nMidterm 1: problems 2 - 3;\nOdd-numbered exercises in DeGroot & Schervish Chapters 1.6 - 1.8, 1.12.",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-5",
     "href": "problems/exam-final.html#problem-5",
     "title": "Final Exam Study Guide",
     "section": "Problem 5",
-    "text": "Problem 5\nA JP Morgan recruiter is walking around campus with three bone-colored business cards. Two of the cards are normal; they have writing on one side and they are blank on the other. The third card was misprinted; the writing was duplicated on both sides. The recruiter drops one of the cards and orders his valet to pick it up. When the valet reaches for the card, he sees writing facing up. What is the probability that the recruiter dropped the misprinted card?"
+    "text": "Problem 5\nA JP Morgan recruiter is walking around campus with three bone-colored business cards. Two of the cards are normal; they have writing on one side and they are blank on the other. The third card was misprinted; the writing was duplicated on both sides. The recruiter drops one of the cards and orders his valet to pick it up. When the valet reaches for the card, he sees writing facing up. What is the probability that the recruiter dropped the misprinted card?",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-6",
     "href": "problems/exam-final.html#problem-6",
     "title": "Final Exam Study Guide",
     "section": "Problem 6",
-    "text": "Problem 6\nSuppose that \\(k\\) events \\(B_1\\), \\(B_2\\), …, \\(B_k\\) form a partition of the sample space \\(S\\), and \\(A\\subseteq S\\) is some event with positive probability \\(P(A)&gt;0\\). Show that if \\(P(B_1\\mid A)&lt;P(B_1)\\), then that guarantees \\(P(B_i\\mid A)&gt;P(B_i)\\) for at least one \\(i\\in\\{1,\\,2,\\,...,\\,k\\}\\)."
+    "text": "Problem 6\nSuppose that \\(k\\) events \\(B_1\\), \\(B_2\\), …, \\(B_k\\) form a partition of the sample space \\(S\\), and \\(A\\subseteq S\\) is some event with positive probability \\(P(A)&gt;0\\). Show that if \\(P(B_1\\mid A)&lt;P(B_1)\\), then that guarantees \\(P(B_i\\mid A)&gt;P(B_i)\\) for at least one \\(i\\in\\{1,\\,2,\\,...,\\,k\\}\\).",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#want-more-review-2",
     "href": "problems/exam-final.html#want-more-review-2",
     "title": "Final Exam Study Guide",
     "section": "Want more review?",
-    "text": "Want more review?\n\nLecture notes with worked examples;\n\nThe lil’ app on disease testing;\n\nProblem Set 2: problems 9 - 10;\nProblem Set 3: problems 4 - 8;\nProblem Set 4: problems 2 - 3;\nMidterm 1 Study Guide: problems 8 - 10;\nMidterm 1: problems 3 - 5;\nOdd-numbered exercises in DeGroot & Schervish Chapter 2."
+    "text": "Want more review?\n\nLecture notes with worked examples;\n\nThe lil’ app on disease testing;\n\nProblem Set 2: problems 9 - 10;\nProblem Set 3: problems 4 - 8;\nProblem Set 4: problems 2 - 3;\nMidterm 1 Study Guide: problems 8 - 10;\nMidterm 1: problems 3 - 5;\nOdd-numbered exercises in DeGroot & Schervish Chapter 2.",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-7",
     "href": "problems/exam-final.html#problem-7",
     "title": "Final Exam Study Guide",
     "section": "Problem 7",
-    "text": "Problem 7\nConsider a sequence of \\(n\\) independent coin flips of a fair coin. Define a streak of heads as an uninterrupted run of heads, and efine a streak of tails analogously. We are interested in the number of streaks in a sequence of flips. For example, consider the sequence below:\n\\[\nhhhttthhttthhhhhthtthhhh.\n\\]\nIt contains 9 streaks. Here is the sequence again with the streaks separated:\n\\[\nhhh\\quad ttt\\quad hh\\quad ttt\\quad hhhhh\\quad t\\quad h\\quad tt\\quad hhhh.\n\\]\nIn a sequence of \\(n\\) flips of a fair coin, let \\(Y\\) be the number of streaks. What is the range of \\(Y\\), and what is its PMF?"
+    "text": "Problem 7\nConsider a sequence of \\(n\\) independent coin flips of a fair coin. Define a streak of heads as an uninterrupted run of heads, and efine a streak of tails analogously. We are interested in the number of streaks in a sequence of flips. For example, consider the sequence below:\n\\[\nhhhttthhttthhhhhthtthhhh.\n\\]\nIt contains 9 streaks. Here is the sequence again with the streaks separated:\n\\[\nhhh\\quad ttt\\quad hh\\quad ttt\\quad hhhhh\\quad t\\quad h\\quad tt\\quad hhhh.\n\\]\nIn a sequence of \\(n\\) flips of a fair coin, let \\(Y\\) be the number of streaks. What is the range of \\(Y\\), and what is its PMF?",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-8",
     "href": "problems/exam-final.html#problem-8",
     "title": "Final Exam Study Guide",
     "section": "Problem 8",
-    "text": "Problem 8\nLet \\(X\\sim\\text{Exponential}(\\lambda)\\) for some arbitrary \\(\\lambda&gt;0\\). Define a new random variable \\(Y=\\lceil X\\rceil\\). Recall that the ceiling function \\(\\lceil\\cdot\\rceil\\) is the function that rounds a number up to the next integer. So \\(\\lceil0.5\\rceil=1\\), \\(\\lceil13.1\\rceil=14\\), and so on.\n\nWhat is the range of \\(Y\\)?\nWhat is the PMF of \\(Y\\)?\nDoes \\(Y\\) belong to a familiar distribution family?"
+    "text": "Problem 8\nLet \\(X\\sim\\text{Exponential}(\\lambda)\\) for some arbitrary \\(\\lambda&gt;0\\). Define a new random variable \\(Y=\\lceil X\\rceil\\). Recall that the ceiling function \\(\\lceil\\cdot\\rceil\\) is the function that rounds a number up to the next integer. So \\(\\lceil0.5\\rceil=1\\), \\(\\lceil13.1\\rceil=14\\), and so on.\n\nWhat is the range of \\(Y\\)?\nWhat is the PMF of \\(Y\\)?\nDoes \\(Y\\) belong to a familiar distribution family?",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#want-more-review-3",
     "href": "problems/exam-final.html#want-more-review-3",
     "title": "Final Exam Study Guide",
     "section": "Want more review?",
-    "text": "Want more review?\n\nLecture notes introducing random variables;\nLecture notes on special families of discrete random variables;\nLecture notes on expected value;\nLab 5 exercises;\nProblem Set 2: problem 7;\nProblem Set 3: problems 9 - 10;\nProblem Set 4: problems 4 - 10;\nMidterm 1 Study Guide: problems 11 - 12;\nMidterm 2 Study Guide: problems 1 - 2;\nMidterm 1: problem 6;\nMidterm 2: problem 2."
+    "text": "Want more review?\n\nLecture notes introducing random variables;\nLecture notes on special families of discrete random variables;\nLecture notes on expected value;\nLab 5 exercises;\nProblem Set 2: problem 7;\nProblem Set 3: problems 9 - 10;\nProblem Set 4: problems 4 - 10;\nMidterm 1 Study Guide: problems 11 - 12;\nMidterm 2 Study Guide: problems 1 - 2;\nMidterm 1: problem 6;\nMidterm 2: problem 2.",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-9",
     "href": "problems/exam-final.html#problem-9",
     "title": "Final Exam Study Guide",
     "section": "Problem 9",
-    "text": "Problem 9\nImagine \\(X\\) has this cdf:\n\\[\nF(x)=\\frac{1}{1+\\exp\\left(-\\frac{x-\\mu}{s}\\right)},\\quad x\\in\\mathbb{R}.\n\\]\n\\(\\mu\\in\\mathbb{R}\\) and \\(s&gt;0\\) are just constants.\n\nWhat is the pdf of \\(X\\)?\nWhat is the mean of \\(X\\)?"
+    "text": "Problem 9\nImagine \\(X\\) has this cdf:\n\\[\nF(x)=\\frac{1}{1+\\exp\\left(-\\frac{x-\\mu}{s}\\right)},\\quad x\\in\\mathbb{R}.\n\\]\n\\(\\mu\\in\\mathbb{R}\\) and \\(s&gt;0\\) are just constants.\n\nWhat is the pdf of \\(X\\)?\nWhat is the mean of \\(X\\)?",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-10",
     "href": "problems/exam-final.html#problem-10",
     "title": "Final Exam Study Guide",
     "section": "Problem 10",
-    "text": "Problem 10\nHere is the goofy pdf of some nonnegative random variable \\(X\\):\n\\[\nf(x)\n=\ne^{1-e^x+x},\\quad x\\geq 0.\n\\]\n\nCompute the cdf of \\(X\\);\nCompute the median of \\(X\\)."
+    "text": "Problem 10\nHere is the goofy pdf of some nonnegative random variable \\(X\\):\n\\[\nf(x)\n=\ne^{1-e^x+x},\\quad x\\geq 0.\n\\]\n\nCompute the cdf of \\(X\\);\nCompute the median of \\(X\\).",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#want-more-review-4",
     "href": "problems/exam-final.html#want-more-review-4",
     "title": "Final Exam Study Guide",
     "section": "Want more review?",
-    "text": "Want more review?\n\nExamples from lecture;\nLab 8;\nProblem Set 5: problems 2 - 8;\nProblem Set 6: problems 1 - 2;\nMidterm 2 Study Guide: problems 3 - 4;\nMidterm 2: problem 1;\nOdd-numbered exercises in DeGroot & Schervish Chapters 3.2, 5.6, 5.7."
+    "text": "Want more review?\n\nExamples from lecture;\nLab 8;\nProblem Set 5: problems 2 - 8;\nProblem Set 6: problems 1 - 2;\nMidterm 2 Study Guide: problems 3 - 4;\nMidterm 2: problem 1;\nOdd-numbered exercises in DeGroot & Schervish Chapters 3.2, 5.6, 5.7.",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-11",
     "href": "problems/exam-final.html#problem-11",
     "title": "Final Exam Study Guide",
     "section": "Problem 11",
-    "text": "Problem 11\nA certain random variable \\(X\\) has moment-generating function\n\\[\nM(t)=\\frac{e^{2t}}{1-3t},\\quad t&lt;1/3.\n\\]\n\nCompute the mean and variance of \\(X\\).\nWhat is the moment generating function of the new random variable\n\n\\[\nY=\\frac{\\pi}{2}-\\frac{X}{3}.\n\\]"
+    "text": "Problem 11\nA certain random variable \\(X\\) has moment-generating function\n\\[\nM(t)=\\frac{e^{2t}}{1-3t},\\quad t&lt;1/3.\n\\]\n\nCompute the mean and variance of \\(X\\).\nWhat is the moment generating function of the new random variable\n\n\\[\nY=\\frac{\\pi}{2}-\\frac{X}{3}.\n\\]",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-12",
     "href": "problems/exam-final.html#problem-12",
     "title": "Final Exam Study Guide",
     "section": "Problem 12",
-    "text": "Problem 12\nConsider the following:\n\\[\n\\begin{aligned}\nN&\\sim\\text{Poisson}(\\lambda)\\\\\nX_1,\\,X_2,\\,X_3,\\,...&\\overset{\\text{iid}}{\\sim}M\\\\\nS&=\\sum\\limits_{i=1}^NX_i.\n\\end{aligned}\n\\]\n\\(N\\) is independent of all of the \\(X_i\\). The \\(X_i\\) are an infinite sequence of iid random variables each sharing a common moment-generating function \\(M(t)=E(e^{tX_1})\\). \\(S\\) is a random sum of random variables. The terms are random, and so is \\(N\\), the number of terms being summed.\n\nWhat is the MGF of \\(S\\)?\nIf I had an iid collection of \\(S_1\\), \\(S_2\\), …, \\(S_m\\) each possessing the same distribution that you just derived, what would be the distribution of \\(T=S_1+S_2+...+S_m\\)?"
+    "text": "Problem 12\nConsider the following:\n\\[\n\\begin{aligned}\nN&\\sim\\text{Poisson}(\\lambda)\\\\\nX_1,\\,X_2,\\,X_3,\\,...&\\overset{\\text{iid}}{\\sim}M\\\\\nS&=\\sum\\limits_{i=1}^NX_i.\n\\end{aligned}\n\\]\n\\(N\\) is independent of all of the \\(X_i\\). The \\(X_i\\) are an infinite sequence of iid random variables each sharing a common moment-generating function \\(M(t)=E(e^{tX_1})\\). \\(S\\) is a random sum of random variables. The terms are random, and so is \\(N\\), the number of terms being summed.\n\nWhat is the MGF of \\(S\\)?\nIf I had an iid collection of \\(S_1\\), \\(S_2\\), …, \\(S_m\\) each possessing the same distribution that you just derived, what would be the distribution of \\(T=S_1+S_2+...+S_m\\)?",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#want-more-review-5",
     "href": "problems/exam-final.html#want-more-review-5",
     "title": "Final Exam Study Guide",
     "section": "Want more review?",
-    "text": "Want more review?\n\nworked examples from lecture;\nnew theorems and examples from lecture about updating MGFs under linear transformations;\nProblem Set 5: problems 9 - 10;\nProblem Set 6: problems 3 - 5;\nProblem Set 7: problems 1 - 2;\nMidterm 2 Study Guide: problems 11 - 12;\nMidterm 2: problem 2;\nOdd-numbered exercises in DeGroot & Schervish Chapter 4.4."
+    "text": "Want more review?\n\nworked examples from lecture;\nnew theorems and examples from lecture about updating MGFs under linear transformations;\nProblem Set 5: problems 9 - 10;\nProblem Set 6: problems 3 - 5;\nProblem Set 7: problems 1 - 2;\nMidterm 2 Study Guide: problems 11 - 12;\nMidterm 2: problem 2;\nOdd-numbered exercises in DeGroot & Schervish Chapter 4.4.",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#sec-weibull",
     "href": "problems/exam-final.html#sec-weibull",
     "title": "Final Exam Study Guide",
     "section": "Problem 13",
-    "text": "Problem 13\n\\(X\\) possesses the goofy distribution if its PDF is:\n\\[\nf(x)=k\\frac{x^{k-1}}{\\theta}\\exp\\left(-\\frac{x^k}{\\theta}\\right),\\quad x&gt;0.\n\\]\nThe constants \\(k\\) and \\(\\theta\\) are both positive parameters. We denote this \\(X\\sim\\text{GF}(k,\\,\\theta)\\)\n\nIf we define a new random variable \\(Y=\\ln X\\), what is its distribution?\nIf we define a new random variable \\(Z = X^k\\), what is its distribution?"
+    "text": "Problem 13\n\\(X\\) possesses the goofy distribution if its PDF is:\n\\[\nf(x)=k\\frac{x^{k-1}}{\\theta}\\exp\\left(-\\frac{x^k}{\\theta}\\right),\\quad x&gt;0.\n\\]\nThe constants \\(k\\) and \\(\\theta\\) are both positive parameters. We denote this \\(X\\sim\\text{GF}(k,\\,\\theta)\\)\n\nIf we define a new random variable \\(Y=\\ln X\\), what is its distribution?\nIf we define a new random variable \\(Z = X^k\\), what is its distribution?",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-14",
     "href": "problems/exam-final.html#problem-14",
     "title": "Final Exam Study Guide",
     "section": "Problem 14",
-    "text": "Problem 14\nLet \\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\), and define a new random variable \\(Y=X^r\\) for any positive constant \\(r&gt;0\\).\n\nWhat is the density of \\(Y\\)?\nDerive a formula for \\(E(X^n)\\) that works for any \\(n\\in\\mathbb{N}\\)."
+    "text": "Problem 14\nLet \\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\), and define a new random variable \\(Y=X^r\\) for any positive constant \\(r&gt;0\\).\n\nWhat is the density of \\(Y\\)?\nDerive a formula for \\(E(X^n)\\) that works for any \\(n\\in\\mathbb{N}\\).",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#want-more-review-6",
     "href": "problems/exam-final.html#want-more-review-6",
     "title": "Final Exam Study Guide",
     "section": "Want more review?",
-    "text": "Want more review?\n\nLab 7;\nProblem Set 6: problem 6;\nMidterm 2 Study Guide: problem 7;\nMidterm 2: problem 3;\nRead DeGroot & Schervish Chapter 3.8 and do the odd-numbered exercises."
+    "text": "Want more review?\n\nLab 7;\nProblem Set 6: problem 6;\nMidterm 2 Study Guide: problem 7;\nMidterm 2: problem 3;\nRead DeGroot & Schervish Chapter 3.8 and do the odd-numbered exercises.",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-15",
     "href": "problems/exam-final.html#problem-15",
     "title": "Final Exam Study Guide",
     "section": "Problem 15",
-    "text": "Problem 15\n\\(X\\) and \\(Y\\) are jointly absolutely continuous with joint density\n\\[\nf_{XY}(x,\\, y)\n=\n\\frac{1}{8}\n(y^2-x^2)\ne^{-y}\n,\\quad\ny&gt;0\n;\\,\n-y&lt;x&lt;y.\n\\]\n\nSketch \\(\\textrm{Range}(X,\\, Y)\\).\nCompute the marginal density of \\(X\\).\nCompute the marginal density of \\(Y\\).\nCompute the conditional density of \\(X\\) given \\(Y = y\\).\nCompute the conditional density of \\(Y\\) given \\(X = x\\)."
+    "text": "Problem 15\n\\(X\\) and \\(Y\\) are jointly absolutely continuous with joint density\n\\[\nf_{XY}(x,\\, y)\n=\n\\frac{1}{8}\n(y^2-x^2)\ne^{-y}\n,\\quad\ny&gt;0\n;\\,\n-y&lt;x&lt;y.\n\\]\n\nSketch \\(\\textrm{Range}(X,\\, Y)\\).\nCompute the marginal density of \\(X\\).\nCompute the marginal density of \\(Y\\).\nCompute the conditional density of \\(X\\) given \\(Y = y\\).\nCompute the conditional density of \\(Y\\) given \\(X = x\\).",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-16",
     "href": "problems/exam-final.html#problem-16",
     "title": "Final Exam Study Guide",
     "section": "Problem 16",
-    "text": "Problem 16\nConsider a random pair \\((Q,\\,Z)\\) of continuous random variables whose joint distribution is given by this hierarchy:\n\\[\n\\begin{aligned}\nQ&\\sim \\text{Gamma}(a,\\,b)\\\\\nZ\\mid Q=q&\\sim\\text{GF}(k, 1/q).\n\\end{aligned}\n\\]\nSo conditionally, \\(Z\\) has the distribution introduced in Problem 13 above, with \\(1/q\\) serving as the second parameter. \\(k&gt;0\\) is just a constant throughout.\n\nWhat is the joint density of \\((Q,\\,Z)\\)?\nWhat is the marginal distribution of \\(Z\\)?\nWhat is the conditional distribution of \\(Q\\) given \\(Z=z\\)?"
+    "text": "Problem 16\nConsider a random pair \\((Q,\\,Z)\\) of continuous random variables whose joint distribution is given by this hierarchy:\n\\[\n\\begin{aligned}\nQ&\\sim \\text{Gamma}(a,\\,b)\\\\\nZ\\mid Q=q&\\sim\\text{GF}(k, 1/q).\n\\end{aligned}\n\\]\nSo conditionally, \\(Z\\) has the distribution introduced in Problem 13 above, with \\(1/q\\) serving as the second parameter. \\(k&gt;0\\) is just a constant throughout.\n\nWhat is the joint density of \\((Q,\\,Z)\\)?\nWhat is the marginal distribution of \\(Z\\)?\nWhat is the conditional distribution of \\(Q\\) given \\(Z=z\\)?",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#want-more-review-7",
     "href": "problems/exam-final.html#want-more-review-7",
     "title": "Final Exam Study Guide",
     "section": "Want more review?",
-    "text": "Want more review?\n\njointly discrete examples from lecture;\njointly contnuous examples from lecture;\nmixed Poisson-gamma example from Lab 9;\nProblem Set 6: problems 7 - 10;\nMidterm 2 Study Guide: problems 8 - 9;\nMidterm 2: problem 4;\nOdd-numbered exercises in DeGroot & Schervish Chapters 3.4 - 3.6."
+    "text": "Want more review?\n\njointly discrete examples from lecture;\njointly contnuous examples from lecture;\nmixed Poisson-gamma example from Lab 9;\nProblem Set 6: problems 7 - 10;\nMidterm 2 Study Guide: problems 8 - 9;\nMidterm 2: problem 4;\nOdd-numbered exercises in DeGroot & Schervish Chapters 3.4 - 3.6.",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-17",
     "href": "problems/exam-final.html#problem-17",
     "title": "Final Exam Study Guide",
     "section": "Problem 17",
-    "text": "Problem 17\nConsider these data:\n\\[\nX_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{N}(\\theta,\\,1).\n\\]\n\nWhat is the maximum likelihood estimator of \\(\\theta\\in\\mathbb{R}\\)?\nWhat is the sampling distribution of the estimator?\nWhat is the MSE of the estimator?\nBased on the MSE, what are the statistical properties of this estimator?"
+    "text": "Problem 17\nConsider these data:\n\\[\nX_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{N}(\\theta,\\,1).\n\\]\n\nWhat is the maximum likelihood estimator of \\(\\theta\\in\\mathbb{R}\\)?\nWhat is the sampling distribution of the estimator?\nWhat is the MSE of the estimator?\nBased on the MSE, what are the statistical properties of this estimator?",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-18",
     "href": "problems/exam-final.html#problem-18",
     "title": "Final Exam Study Guide",
     "section": "Problem 18",
-    "text": "Problem 18\nConsider these data:\n\\[\nX_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{GF}(k,\\,\\theta).\n\\]\nSo again, we are recycling the distribution family from Problem 13 above. Throughout, just treat \\(k&gt;0\\) as fixed and known.\n\nWhat is the maximum likelihood estimator of \\(\\theta\\in\\mathbb{R}\\)?\nWhat is the sampling distribution of the estimator?\nWhat is the MSE of the estimator?\nBased on the MSE, what are the statistical properties of this estimator?"
+    "text": "Problem 18\nConsider these data:\n\\[\nX_1,\\,X_2,\\,...,\\,X_n\\overset{\\text{iid}}{\\sim}\\text{GF}(k,\\,\\theta).\n\\]\nSo again, we are recycling the distribution family from Problem 13 above. Throughout, just treat \\(k&gt;0\\) as fixed and known.\n\nWhat is the maximum likelihood estimator of \\(\\theta\\in\\mathbb{R}\\)?\nWhat is the sampling distribution of the estimator?\nWhat is the MSE of the estimator?\nBased on the MSE, what are the statistical properties of this estimator?",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#want-more-review-8",
     "href": "problems/exam-final.html#want-more-review-8",
     "title": "Final Exam Study Guide",
     "section": "Want more review?",
-    "text": "Want more review?\n\nLecture examples;\nLab 10;\nProblem Set 7: problems 3 - 4."
+    "text": "Want more review?\n\nLecture examples;\nLab 10;\nProblem Set 7: problems 3 - 4.",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-19",
     "href": "problems/exam-final.html#problem-19",
     "title": "Final Exam Study Guide",
     "section": "Problem 19",
-    "text": "Problem 19\nConsider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{N}(m_0,\\,\\tau_0^2)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(\\theta,\\,1).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean \\(m_0\\) and the MLE.\nThe posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?\nIs it possible for this new estimator to be superior (lower MSE) than the pure MLE?"
+    "text": "Problem 19\nConsider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{N}(m_0,\\,\\tau_0^2)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(\\theta,\\,1).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean \\(m_0\\) and the MLE.\nThe posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?\nIs it possible for this new estimator to be superior (lower MSE) than the pure MLE?",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-20",
     "href": "problems/exam-final.html#problem-20",
     "title": "Final Exam Study Guide",
     "section": "Problem 20",
-    "text": "Problem 20\nConsider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{IG}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(0,\\,\\theta).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE;\nThe posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?\nIs it possible for this new estimator to be superior (lower MSE) than the pure MLE?"
+    "text": "Problem 20\nConsider this Bayesian model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{IG}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}\\text{N}(0,\\,\\theta).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE;\nThe posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?\nIs it possible for this new estimator to be superior (lower MSE) than the pure MLE?",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#problem-21",
     "href": "problems/exam-final.html#problem-21",
     "title": "Final Exam Study Guide",
     "section": "Problem 21",
-    "text": "Problem 21\nRecall this infernal distribution family that you met on Problem Set 6, Midterm 2, and again in lecture:\n\\[\nf(x\\mid \\theta)=\\theta(x+1)^{-(\\theta+1)},\\quad x&gt;0.\n\\]\nWe’ve done MLE for this, now let’s go Bayes. Consider this model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{Gamma}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}f(x\\mid \\theta).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE;\nThe posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?\nIs it possible for this new estimator to be superior (lower MSE) than the pure MLE?"
+    "text": "Problem 21\nRecall this infernal distribution family that you met on Problem Set 6, Midterm 2, and again in lecture:\n\\[\nf(x\\mid \\theta)=\\theta(x+1)^{-(\\theta+1)},\\quad x&gt;0.\n\\]\nWe’ve done MLE for this, now let’s go Bayes. Consider this model:\n\\[\n\\begin{aligned}\n\\theta&\\sim\\text{Gamma}(a_0,\\,b_0)\\\\\nX_{1:n}\\mid\\theta&\\overset{\\text{iid}}{\\sim}f(x\\mid \\theta).\n\\end{aligned}\n\\]\n\nWhat is the posterior distribution for \\(\\theta\\) conditional on the data?\nDerive the posterior mean and show that it is a convex combination of the prior mean and the MLE;\nThe posterior mean can be thought of as an alternative estimator, in a classical sense. So, what are its mean, variance, bias, and MSE?\nIs it possible for this new estimator to be superior (lower MSE) than the pure MLE?",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/exam-final.html#want-more-review-9",
     "href": "problems/exam-final.html#want-more-review-9",
     "title": "Final Exam Study Guide",
     "section": "Want more review?",
-    "text": "Want more review?\n\nLecture examples;\nLab 11;\nProblem Set 7: problems 5 - 6."
+    "text": "Want more review?\n\nLecture examples;\nLab 11;\nProblem Set 7: problems 5 - 6.",
+    "crumbs": [
+      "Exam Study Guides",
+      "Final"
+    ]
   },
   {
     "objectID": "problems/pset-3.html",
@@ -4271,7 +4399,7 @@
     "href": "index.html",
     "title": "STA 240 Probability for Statistical Inference",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\nslides\n\n\n\n\nWed, Aug 27\n\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\nnotes\n\n\n\n\nThu, Aug 28\n\n💻 Lab 0 (calculus review)\n\n\n\n\n2\nMon, Sep 1\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\nWed, Sep 3\n\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\nslides notes\n\n\nIntro Survey @ 3 PM\n\n\n\nThu, Sep 4\n\n💻 Lab 1 (hello R)\n\n\nLab 1 @ 11:59 PM\n\n\n\nFri, Sep 5\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nWed, Sep 10\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nThu, Sep 11\n\n💻 Lab 2 (counting)\n\n\nLab 2 @ 11:59 PM\n\n\n\nFri, Sep 12\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nnotes Play around!\n\n\n\n\n\nWed, Sep 17\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nRead! Play around!\n\n\n\n\n\nThu, Sep 18\n\n💻 Lab 3 (disease testing)\nRead!\n\nLab 3 @ 11:59 PM\n\n\n\nFri, Sep 19\n\n\n\nPSET 0 corrections PSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\nDS: 3.1, 3.3, 4.1\n🧑‍🏫 Random variable intro\nnotes\n\n\n\n\nWed, Sep 24\n\nDS: 5.1 - 5.4\n🧑‍🏫 Discrete families\nnotes\n\n\n\n\nThu, Sep 25\n\n💻 Lab 4 (ChatGPT)\n\n\nLab 4 @ 11:59 PM\n\n\n\nFri, Sep 26\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\nDS: 4.2\n🧑‍🏫 Expected value\nnotes\n\n\n\n\nWed, Oct 1\n\nDS: 4.3\n🧑‍🏫 Variance\nnotes\n\n\n\n\nThu, Oct 2\n\n💻 Lab 5 (random dating)\n\n\nLab 5 @ 11:59 PM\n\n\n\nSun, Oct 5\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\nDS: 3.3\n🧑‍🏫 CDF\nnotes\n\n\n\n\nWed, Oct 8\n\nDS: 3.2\n🧑‍🏫 Absolutely continuous\nnotes\n\n\n\n\nThu, Oct 9\nstudy guide\n📝 Midterm 1\n\n\n\n\n\n8\nMon, Oct 13\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\nWed, Oct 15\n\nDS: 5.6 - 5.7\n🧑‍🏫 Normal, gamma\n\nnormal primer gamma primer\n\n\n\n\n\nThu, Oct 16\n\n💻 Lab 6 (normal and gamma)\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\nDS: 4.4 - 4.5\n🧑‍🏫 Moments, quantiles\nnotes\n\n\n\n\nWed, Oct 22\n\nDS: 4.4 - 4.5\n🧑‍🏫 MGF\n\n\n\n\n\nThu, Oct 23\n\nDS: 3.8\n💻 Lab 7 (transformations)\n\n\nLab 7 @ 11:59 PM\n\n\n10\nMon, Oct 27\n\nDS: 3.4 - 3.7\n🧑‍🏫 Jointly discrete\nnotes\n\nPSET 5 @ 3PM\n\n\n\nWed, Oct 29\n\nDS: 3.4 - 3.7\n🧑‍🏫 Jointly continuous\nnotes\n\n\n\n\nThu, Oct 30\n\nDS: 12\n💻 Lab 8 (simulation)\n\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\nDS: 6\n🧑‍🏫 Tower property, Student’s t\n\n\n\n\n\nWed, Nov 5\n\nDS: 6\n🧑‍🏫 Sums and averages\nnotes\n\n\n\n\nThu, Nov 6\n\n💻 Lab 9 (insurance)\n\n\nLab 9 @ 11:59 PM\n\n\n\nSun, Nov 9\n\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\nDS: 6\n🧑‍🏫 Limit theorems\nnotes\n\n\n\n\nWed, Nov 12\n\nDS: 7.1\n🧑‍🏫 What is statistics?\n\n\n\n\n\nThu, Nov 13\nstudy guide\n📝 Midterm 2\n\n\n\n\n\n13\nMon, Nov 17\n\nDS: 7.1\n🧑‍🏫 What is statistics?\n\n\n\n\n\nWed, Nov 19\n\nDS: 7.5 - 7.6\n🧑‍🏫 Maximum likelihood\nnotes\n\n\n\n\nThu, Nov 20\n\n💻 Lab 10 (mle)\n\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\nDS: 7.5 - 7.6\n🧑‍🏫 Maximum likelihood\n\nnotes bonus notes 1 bonus notes 2 bonus notes 3\n\n\n\n\n\nWed, Nov 26\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\nThu, Nov 27\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n15\nMon, Dec 1\n\nDS: 7.2 - 7.4\n🧑‍🏫 Bayesian statistics\nnotes\n\n\n\n\nWed, Dec 3\n\nDS: 7.2 - 7.4\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nThu, Dec 4\n\n💻 Lab 11 (bayes)\n\n\nLab 11 @ 11:59 PM\n\n\n16\nMon, Dec 8\n\n\n\n\nPSET 7 @ 5PM\n\n\n\nFri, Dec 12\nstudy guide\n📝 Final (9AM - 12PM)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nMon, Aug 25\n\nDS: 1.1 - 1.2\n🧑‍🏫 Welcome!\nslides\n\n\n\n\nWed, Aug 27\n\nDS: 1.3 - 1.4\n🧑‍🏫 Set Theory\nnotes\n\n\n\n\nThu, Aug 28\n\n💻 Lab 0 (calculus review)\n\n\n\n\n2\nMon, Sep 1\n\n❌ Labor Day - No Lecture\n\n\n\n\n\n\nWed, Sep 3\n\nDS: 1.5\n🧑‍🏫 Probability Spaces\n\nslides notes\n\n\nIntro Survey @ 3 PM\n\n\n\nThu, Sep 4\n\n💻 Lab 1 (hello R)\n\n\nLab 1 @ 11:59 PM\n\n\n\nFri, Sep 5\n\n\n\n\nPSET 0 @ 5PM\n\n\n3\nMon, Sep 8\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nWed, Sep 10\n\nDS: 1.6 - 1.8\n🧑‍🏫 Counting\nnotes\n\n\n\n\nThu, Sep 11\n\n💻 Lab 2 (counting)\n\n\nLab 2 @ 11:59 PM\n\n\n\nFri, Sep 12\n\n\n\n\nPSET 1 @ 5PM\n\n\n4\nMon, Sep 15\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nnotes Play around!\n\n\n\n\n\nWed, Sep 17\n\nDS: 2\n🧑‍🏫 Conditional Probability\n\nRead! Play around!\n\n\n\n\n\nThu, Sep 18\n\n💻 Lab 3 (disease testing)\nRead!\n\nLab 3 @ 11:59 PM\n\n\n\nFri, Sep 19\n\n\n\nPSET 0 corrections PSET 2 @ 5PM\n\n\n5\nMon, Sep 22\n\nDS: 3.1, 3.3, 4.1\n🧑‍🏫 Random variable intro\nnotes\n\n\n\n\nWed, Sep 24\n\nDS: 5.1 - 5.4\n🧑‍🏫 Discrete families\nnotes\n\n\n\n\nThu, Sep 25\n\n💻 Lab 4 (ChatGPT)\n\n\nLab 4 @ 11:59 PM\n\n\n\nFri, Sep 26\n\n\n\n\nPSET 3 @ 5PM\n\n\n6\nMon, Sep 29\n\nDS: 4.2\n🧑‍🏫 Expected value\nnotes\n\n\n\n\nWed, Oct 1\n\nDS: 4.3\n🧑‍🏫 Variance\nnotes\n\n\n\n\nThu, Oct 2\n\n💻 Lab 5 (random dating)\n\n\nLab 5 @ 11:59 PM\n\n\n\nSun, Oct 5\n\n\n\n\nPSET 4 @ 5PM\n\n\n7\nMon, Oct 6\n\nDS: 3.3\n🧑‍🏫 CDF\nnotes\n\n\n\n\nWed, Oct 8\n\nDS: 3.2\n🧑‍🏫 Absolutely continuous\nnotes\n\n\n\n\nThu, Oct 9\nstudy guide\n📝 Midterm 1\n\n\n\n\n\n8\nMon, Oct 13\n\n❌ Fall Break - No Lecture\n\n\n\n\n\n\nWed, Oct 15\n\nDS: 5.6 - 5.7\n🧑‍🏫 Normal, gamma\n\nnormal primer gamma primer\n\n\n\n\n\nThu, Oct 16\n\n💻 Lab 6 (normal and gamma)\n\n\nLab 6 @ 11:59 PM\n\n\n9\nMon, Oct 20\n\nDS: 4.4 - 4.5\n🧑‍🏫 Moments, quantiles\nnotes\n\n\n\n\nWed, Oct 22\n\nDS: 4.4 - 4.5\n🧑‍🏫 MGF\n\n\n\n\n\nThu, Oct 23\n\nDS: 3.8\n💻 Lab 7 (transformations)\n\n\nLab 7 @ 11:59 PM\n\n\n10\nMon, Oct 27\n\nDS: 3.4 - 3.7\n🧑‍🏫 Jointly discrete\nnotes\n\nPSET 5 @ 3PM\n\n\n\nWed, Oct 29\n\nDS: 3.4 - 3.7\n🧑‍🏫 Jointly continuous\nnotes\n\n\n\n\nThu, Oct 30\n\nDS: 12\n💻 Lab 8 (simulation)\n\n\nLab 8 @ 11:59 PM\n\n\n11\nMon, Nov 3\n\nDS: 6\n🧑‍🏫 Tower property, Student’s t\n\n\n\n\n\nWed, Nov 5\n\nDS: 6\n🧑‍🏫 Sums and averages\nnotes\n\n\n\n\nThu, Nov 6\n\n💻 Lab 9 (insurance)\n\n\nLab 9 @ 11:59 PM\n\n\n\nSun, Nov 9\n\n\n\n\nPSET 6 @ 5PM\n\n\n12\nMon, Nov 10\n\nDS: 6\n🧑‍🏫 Limit theorems\nnotes\n\n\n\n\nWed, Nov 12\n\nDS: 7.1\n🧑‍🏫 What is statistics?\n\n\n\n\n\nThu, Nov 13\nstudy guide\n📝 Midterm 2\n\n\n\n\n\n13\nMon, Nov 17\n\nDS: 7.1\n🧑‍🏫 What is statistics?\n\n\n\n\n\nWed, Nov 19\n\nDS: 7.5 - 7.6\n🧑‍🏫 Maximum likelihood\nnotes\n\n\n\n\nThu, Nov 20\n\n💻 Lab 10 (mle)\n\n\nLab 10 @ 11:59 PM\n\n\n14\nMon, Nov 24\n\nDS: 7.5 - 7.6\n🧑‍🏫 Maximum likelihood\nnotes\n\n\n\n\nWed, Nov 26\n\n❌ Thanksgiving - No Lecture\n\n\n\n\n\n\nThu, Nov 27\n\n❌ Thanksgiving - No Lab\n\n\n\n\n\n15\nMon, Dec 1\n\nDS: 7.2 - 7.4\n🧑‍🏫 Bayesian statistics\nnotes\n\n\n\n\nWed, Dec 3\n\nDS: 7.2 - 7.4\n🧑‍🏫 Bayesian statistics\n\n\n\n\n\nThu, Dec 4\n\n💻 Lab 11 (bayes)\n\n\nLab 11 @ 11:59 PM\n\n\n16\nMon, Dec 8\n\n\n\n\nPSET 7 @ 5PM\n\n\n\nFri, Dec 12\nstudy guide\n📝 Final (9AM - 12PM)\n\n\n\n\n\n\n\n\n\nExtra notes\nYou’re not responsible for any of this, but it’s extra stuff I had lying around that you might find interesting:\n\nAlternative notes on MLE, with more discussion of confidence intervals: set 1, set 2;\n“AP Statistics in 75 minutes.” After this class, we have all of the tools to derive the itchy formulas that we take for granted in AP Stats or STA 101.",
     "crumbs": [
       "Syllabus",
       "Schedule"
