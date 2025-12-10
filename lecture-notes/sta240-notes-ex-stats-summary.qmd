@@ -1,0 +1,47 @@
+---
+title: "Guide to the stats problems"
+format: html
+---
+
+We ended our course with a preview of some statistical topics that you are guaranteed to encounter early on in STA 332 and STA 402. The last two problems on our final exam will cover these topics, and as I have promised several times, you can expect these problems to be identical in format to the ones you have seen in lecture, lab, problem sets, and study guides. To that end, I have summarized below everything that you have seen. You should pay attention to the similarities *and* the differences. 
+
+# Maximum likelihood estimation
+
+Problem 9 on the final exam will present you with a parametric distribution family that you may or may not have seen before, and you will be asked to do the following:
+
+a. Derive the likelihood function and the log-likelihood function. To do this successfully, you need to be comfortable with pre-calc stuff: algebra, PEMDAS, especially your log and exponent properties;
+a. Derive the maximum likelihood estimator (MLE). So, we're back in Calc I: take a derivative, set it equal to zero, and solve. Within a timed exam, I don't expect you to check the second derivative;
+a. The estimator you derive is a function of the $X_i$, which are random, and so the estimator is also random. What is its distribution? To find it, you may have to apply the [change-of-variables formula](https://sta240-f25.github.io/labs/lab-7.html) and recall the behavior of [sums and averages](https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf);
+a. Once you have the sampling distribution of the estimator, you can compute the estimator's mean, variance, bias, mean-squared-error (MSE) and observe what the statistical properties are. If the sampling distribution belongs to a familiar family, you can lift the formulas for mean and variance off the shelf without any new derivations.
+
+
+| source | distribution | $\hat{\theta}_n$ | sampling distribution | properties |
+|------|------|------|------|------|
+| [Lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-18-mle-examples.html#example-exponential-distribution) |  $\text{Exponential}(\theta)$    |   $\frac{n}{\sum_{i=1}^nX_i}$   |   $\text{IG}(n,\,n\theta)$   | biased, consistent     |
+| [Lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-18-mle-examples.html#example-midterm-2-strikes-again) |   $\theta(x+1)^{-(\theta+1)}$   |   $\frac{n}{\sum_{i=1}^n\ln(X_i+1)}$   | $\text{IG}(n,\,n\theta)$   | biased, consistent  |
+| [Lab 10](https://sta240-f25.github.io/labs/lab-10.html) |   $\text{Rayleigh}(\theta)$   |  $\frac{1}{2n}\sum\limits_{i=1}^nX_i^2$    |   $\text{Gamma}(n,\,n/\theta)$   |   unbiased, consistent   |
+| [PSET 7](https://sta240-f25.github.io/problems/pset-7.html) |  $\text{N}(0,\,\theta)$    |   $\frac{1}{n}\sum\limits_{i=1}^nX_i^2$   |   $\text{Gamma}(n/2,\,n/2\theta)$   |  unbiased, consistent    |
+| [PSET 7](https://sta240-f25.github.io/problems/pset-7.html) |   $\frac{1}{2\theta}\exp\left(-\frac{|x|}{\theta}\right)$   |   $\frac{1}{n}\sum\limits_{i=1}^n|X_i|$   |  $\text{Gamma}(n,\,n/\theta)$    |  unbiased, consistent    |
+| [Study Guide](https://sta240-f25.github.io/problems/exam-final.html#maximum-likelihood-estimation) |  $\text{N}(\theta,\,1)$    |   $\frac{1}{n}\sum\limits_{i=1}^nX_i$   |   $\text{N}(\theta,\,1/n)$   |  unbiased, consistent    |
+| [Study Guide](https://sta240-f25.github.io/problems/exam-final.html#maximum-likelihood-estimation) |  $\frac{k}{\theta}x^{k-1}\exp\left(-\frac{x^k}{\theta}\right)$    |   $\frac{1}{n}\sum\limits_{i=1}^nX_i^k$   |      $\text{Gamma}(n,\,n/\theta)$    |  unbiased, consistent      |
+
+
+# Bayesian inference
+
+Problem 10 on the final exam will present you with a Bayesian model: a prior for the parameter and a distribution for the data. Then, you will do a few things:
+
+a. Derive the posterior distribution. To do this, you massage the posterior kernel until you recognize that it belongs to a familiar family of distributions;
+a. Compute the posterior mean and show that it can be rewritten as a convex combination of the prior mean and the maximum likelihood estimator. If you do not already know the MLE from a previous result, then you may have to compute it;
+a. The posterior mean is a *new estimator* that could be used as an alternative to the pure MLE. This new estmator has its own mean, variance, bias, and MSE which you can compute using what you know about the sampling distribution of the MLE and the linearity of expectation. The solutions to [Lab 11](https://sta240-f25.github.io/labs/lab-11.html#task-5) give you an example where this is fully worked out.
+
+| source | prior | likelihood | posterior | hyperparameters |
+|------|------|------|------|------|
+| [Lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-19-bayes.pdf) | $\text{Beta}(a_0,\,b_0)$     |   $\text{Bernoulli}(\theta)$   |  $\text{Beta}(a_n,\,b_n)$    |   $$\begin{aligned}a_n&=a_0+\sum_{i=1}^nx_i\\b_n&=b_0+n-\sum_{i=1}^nx_i\end{aligned}$$   |
+| [Lab 11](https://sta240-f25.github.io/labs/lab-11.html) | $\text{Gamma}(a_0,\,b_0)$ | $\text{Poisson}(\theta)$ | $\text{Gamma}(a_n,\,b_n)$     |   $$\begin{aligned}a_n&=a_0+\sum_{i=1}^nx_i\\b_n&=b_0+n\end{aligned}$$   |
+| [PSET 7](https://sta240-f25.github.io/problems/pset-7.html) | $\text{Gamma}(a_0,\,b_0)$ | $\text{Exponential}(\theta)$ |   $\text{Gamma}(a_n,\,b_n)$   |   $$\begin{aligned}a_n&=a_0+n\\b_n&=b_0+\sum_{i=1}^nx_i\end{aligned}$$   |
+| [PSET 7](https://sta240-f25.github.io/problems/pset-7.html) | $\text{Beta}(a_0,\,b_0)$ | $\text{Geometric}(\theta)$ |  $\text{Beta}(a_n,\,b_n)$    |   $$\begin{aligned}a_n&=a_0+n\\b_n&=b_0-n+\sum_{i=1}^nx_i\end{aligned}$$   |
+| [Study Guide](https://sta240-f25.github.io/problems/exam-final.html#bayesian-inference) | $\text{N}(m_0,\,\tau_0^2)$ | $\text{N}(\theta,\,1)$  |   $\text{N}(m_n,\,\tau_n^2)$   |   $$\begin{aligned}\tau_n^2&=(n+1/\tau_0^2)^{-1}\\m_n&=\tau_n^2\left(\frac{m_0}{\tau_0^2}+\sum_{i=1}^nx_i\right)\end{aligned}$$   |
+| [Study Guide](https://sta240-f25.github.io/problems/exam-final.html#bayesian-inference) | $\text{IG}(a_0,\,b_0)$ |  $\text{N}(0,\,\theta)$    |  $\text{IG}(a_n,\,b_n)$    |   $$\begin{aligned}a_n&=a_0+n/2\\b_n&=b_0+\frac{1}{2}\sum_{i=1}^nx_i^2\end{aligned}$$   |
+| [Study Guide](https://sta240-f25.github.io/problems/exam-final.html#bayesian-inference) | $\text{Gamma}(a_0,\,b_0)$ |  $\theta(x+1)^{-(\theta+1)}$    |   $\text{Gamma}(a_n,\,b_n)$   |   $$\begin{aligned}a_n&=a_0+n\\b_n&=b_0+\sum_{i=1}^n\ln(1+x_i)\end{aligned}$$   |
+
+
