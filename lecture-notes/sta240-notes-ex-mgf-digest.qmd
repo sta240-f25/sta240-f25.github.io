@@ -20,7 +20,7 @@ This is a function. In go different values of $t$, and out pop different expecte
 - We used the MGF to derive the distributions of [sums and averages](https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf). Super useful for statistics!
 - We used the MGF to [prove the darn central limit theorem (CLT)](https://sta240-f25.github.io/lecture-notes/sta240-notes-15-clt.html)!
 
-Below, I reproduce several examples where we computed the MGF of a distribution, and I point out that we basically followed the same steps in each case. The unifying theme here is [*kernel tricks*](https://sta240-f25.github.io/math/massage-and-squint.html).
+Below, I reproduce several examples where we computed the MGF of a distribution, and I point out that they all have the same basic structure. The unifying theme here is [*kernel tricks*](https://sta240-f25.github.io/math/massage-and-squint.html).
 
 ::: {.callout-tip collapse="true"}
 ## MGF of the Poisson (from lecture)
@@ -425,4 +425,4 @@ If the pattern is not clear by now...oy:
 - every PMF/PDF is a normalizing constant times a kernel. Since probabilities need to sum/integrate to one, the sum or integral of the kernel must equal the reciprocal of the normalizing constant. This is essentially a free series/integral identity;
 - the series/integral identity that you get from the kernel trick gets recycled when you compute the moment-generating function.
 
-It is not a freak accident that all of these examples share the same basic structure. It follows from the fact that all of these distribution families belong to a *meta-family* of distributions called the **exponential family**. Keep studying statistics, and you will learn all about this. It's really beautiful.
+It is not a freak accident that all of these examples share the same basic structure. It follows from the fact that all of these distribution families belong to a *meta-family* of distributions called the **natural exponential family**. Keep studying statistics, and you will learn all about this. It's really beautiful.
