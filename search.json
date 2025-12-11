@@ -3112,7 +3112,7 @@
     "href": "problems/bank/transformations/gamma-power.html",
     "title": "STA 240 Fall 2025",
     "section": "",
-    "text": "Let \\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\), and define a new random variable \\(Y=X^r\\) for any positive constant \\(r&gt;0\\).\n\nWhat is the density of \\(Y\\)?\nDerive a formula for \\(E(X^n)\\) that works for any \\(n\\in\\mathbb{N}\\)."
+    "text": "Let \\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\), and define a new random variable \\(Y=X^r\\) for any positive constant \\(r&gt;0\\).\n\nWhat is the density of \\(Y\\)?\nDerive a formula for \\(E(Y^n)\\) that works for any \\(n\\in\\mathbb{N}\\)."
   },
   {
     "objectID": "problems/bank/basic-rules/disjoint-complements.html",
@@ -3944,7 +3944,7 @@
     "href": "problems/exam-final.html#problem-14",
     "title": "Final Exam Study Guide",
     "section": "Problem 14",
-    "text": "Problem 14\nLet \\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\), and define a new random variable \\(Y=X^r\\) for any positive constant \\(r&gt;0\\).\n\nWhat is the density of \\(Y\\)?\nDerive a formula for \\(E(X^n)\\) that works for any \\(n\\in\\mathbb{N}\\).",
+    "text": "Problem 14\nLet \\(X\\sim\\text{Gamma}(\\alpha,\\,\\beta)\\), and define a new random variable \\(Y=X^r\\) for any positive constant \\(r&gt;0\\).\n\nWhat is the density of \\(Y\\)?\nDerive a formula for \\(E(Y^n)\\) that works for any \\(n\\in\\mathbb{N}\\).",
     "crumbs": [
       "Exam Study Guides",
       "Final"
