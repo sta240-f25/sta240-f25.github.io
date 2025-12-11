@@ -633,8 +633,8 @@ window.Quarto = {
 <h1>Maximum likelihood estimation</h1>
 <p>Problem 9 on the final exam will present you with a parametric distribution family that you may or may not have seen before, and you will be asked to do the following:</p>
 <ol type="a">
-<li>Derive the likelihood function and the log-likelihood function. To do this successfully, you need to be comfortable with pre-calc stuff: algebra, PEMDAS, especially your log and exponent properties;</li>
-<li>Derive the maximum likelihood estimator (MLE). So, we’re back in Calc I: take a derivative, set it equal to zero, and solve. Within a timed exam, I don’t expect you to check the second derivative;</li>
+<li>Derive the likelihood function and the log-likelihood function. To do this successfully, you need to be comfortable with pre-calc stuff: algebra, PEMDAS, especially your log and exponent properties. Your algebraic manipulations in this step should be goal-directed. We know in the next step that we’re going to have to differentiate the log-likelihood function with respect to <span class="math inline">\(\theta\)</span>, so get things in a form where that derivative is as easy to take as possible;</li>
+<li>Derive the maximum likelihood estimator (MLE). So, we’re back in Calc I: take a derivative, set it equal to zero, and solve. Within a timed exam, I don’t expect you to check the second derivative. As with all the examples below, there is one critical point, it is the global maximizer, so it’s fine;</li>
 <li>The estimator you derive is a function of the <span class="math inline">\(X_i\)</span>, which are random, and so the estimator is also random. What is its distribution? To find it, you may have to apply the <a href="https://sta240-f25.github.io/labs/lab-7.html">change-of-variables formula</a> and recall the behavior of <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf">sums and averages</a>;</li>
 <li>Once you have the sampling distribution of the estimator, you can compute the estimator’s mean, variance, bias, mean-squared-error (MSE) and observe what the statistical properties are. If the sampling distribution belongs to a familiar family, you can lift the formulas for mean and variance off the shelf without any new derivations.</li>
 </ol>
@@ -703,10 +703,10 @@ window.Quarto = {
 </section>
 <section id="bayesian-inference" class="level1">
 <h1>Bayesian inference</h1>
-<p>Problem 10 on the final exam will present you with a Bayesian model: a prior for the parameter and a distribution for the data. Then, you will do a few things:</p>
+<p>Problem 10 on the final exam will present you with a Bayesian model: a prior for the parameter and a distribution for the data. Then, you will do the following:</p>
 <ol type="a">
 <li>Derive the posterior distribution. To do this, you massage the posterior kernel until you recognize that it belongs to a familiar family of distributions;</li>
-<li>Compute the posterior mean and show that it can be rewritten as a convex combination of the prior mean and the maximum likelihood estimator. If you do not already know the MLE from a previous result, then you may have to compute it.</li>
+<li>Compute the posterior mean and show that it can be rewritten as a convex combination (weighted average where the weights sum to one) of the prior mean and the maximum likelihood estimator. If you do not already know the MLE from a previous result, then you may have to compute it.</li>
 </ol>
 <table class="caption-top table">
 <thead>

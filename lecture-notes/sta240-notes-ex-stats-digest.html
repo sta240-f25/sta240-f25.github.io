@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>contested-election – STA 240 Fall 2025</title>
+
+
+<title>Stats digest – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,59 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -95,7 +65,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -121,32 +96,38 @@ window.Quarto = {
   typesetMath
 };
 </script>
-<meta property="og:title" content="STA 240 Fall 2025">
+
+<meta property="og:title" content="Stats digest – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
-<meta property="og:image" content="https://sta240-f25.github.io/problems/bank/random-variables-discrete/contested-election_files/figure-html/fig-elections-1.png">
 <meta property="og:site_name" content="STA 240 Fall 2025">
-<meta property="og:image:height" content="960">
-<meta property="og:image:width" content="1344">
 </head>
+
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Stats digest</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      <img src="../../../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
@@ -161,7 +142,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item sidebar-item-section">
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -169,51 +150,51 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Teaching team</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Materials</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_assignments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignments and grading</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_policies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Policies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus_resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">University resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -222,57 +203,57 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/greeks.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/logexp.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/logexp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exponents and logarithms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/differentiation.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/differentiation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Differentiation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/integration.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/integration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Integration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/limits.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/limits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limits and continuity</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/series.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/series.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Infinite series</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/gamma-function.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/gamma-function.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma function</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../math/massage-and-squint.html" class="sidebar-item-text sidebar-link">
+  <a href="../math/massage-and-squint.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Massage and squint</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -281,105 +262,105 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/hello-rstudio.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/hello-rstudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The lay of the land</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/latex.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/latex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Typing math</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/math.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/math.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic math</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/vectors.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/vectors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectors</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/lineplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting lines</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/sample.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/sample.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><code>sample</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/if-else.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/if-else.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">if-else and logic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">for loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/vectorization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectorization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/rng-seed.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/rng-seed.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting a seed</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/probabilities.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/probabilities.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Computing probabilities</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/plot.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/plot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting points</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/summary-statistics.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/summary-statistics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summary statistics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../explainers/histogram.html" class="sidebar-item-text sidebar-link">
+  <a href="../explainers/histogram.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Histograms</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -388,63 +369,63 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binomial</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-geometric.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-geometric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Geometric</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-hypergeometric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hypergeometric</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/discrete-poisson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Poisson</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/continuous-uniform.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/continuous-uniform.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Continuous uniform</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/continuous-normal.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/continuous-normal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Normal</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/continuous-gamma.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/continuous-gamma.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gamma</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/continuous-inverse-gamma.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/continuous-inverse-gamma.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Inverse gamma</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../distributions/continuous-beta.html" class="sidebar-item-text sidebar-link">
+  <a href="../distributions/continuous-beta.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Beta</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
@@ -453,57 +434,57 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-0.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-5.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-6.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/pset-7.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/pset-7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 7</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
@@ -512,75 +493,75 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-4.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-5.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-6.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-7.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-8.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-9.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-9.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 9</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-10.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-10.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 10</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../labs/lab-11.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-11.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 11</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
@@ -589,223 +570,212 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/exam-midterm-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/exam-midterm-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../problems/exam-final.html" class="sidebar-item-text sidebar-link">
+  <a href="../problems/exam-final.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Final</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#maximum-likelihood-estimation" id="toc-maximum-likelihood-estimation" class="nav-link active" data-scroll-target="#maximum-likelihood-estimation">Maximum likelihood estimation</a></li>
+  <li><a href="#bayesian-inference" id="toc-bayesian-inference" class="nav-link" data-scroll-target="#bayesian-inference">Bayesian inference</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header><p>Not all election challenges are frivolous and cynical. Sometimes there are illegal/ineligible ballots in a close election, and if a candidate raises a legal challenge, a court must make a decision: certify the original results? adjust the vote totals somehow, possibly reversing the election? void the results entirely and order a new election? The concern of course is that the presence of the bad ballots might have swung the outcome, but how likely is this? Let’s model it.</p>
-<p>Imagine an election where Angela Lansbury receives <span class="math inline">\(a\)</span> votes, Bernadette Peters receives <span class="math inline">\(b\)</span> votes, and Angela provisionally wins with a margin of victory <span class="math inline">\(a-b&gt;0\)</span>. However, of the total <span class="math inline">\(a+b\)</span> votes, we learn that <span class="math inline">\(k&gt;a-b\)</span> were invalid or illegal. But we know nothing else. We do not know who these folks are, where they came from, or who they voted for. We just know that they exist. If the <span class="math inline">\(k\)</span> invalid ballots were removed from the total, what is the probability that it would flip the result of the election? If this probability is “too big,” we might start to worry.</p>
-<p>To model this, think of the original <span class="math inline">\(a+b\)</span> ballots as balls in the proverbial urn. <span class="math inline">\(a\)</span> of these balls are red, and <span class="math inline">\(b\)</span> of these balls are blue, and assume that <span class="math inline">\(a,\, b&gt;k\)</span>. Removing the <span class="math inline">\(k\)</span> invalid ballots is like drawing <span class="math inline">\(k\)</span> balls out of the urn without replacement. Since we know nothing about the illegal ballots apart from the fact that they exist, assume that each of the <span class="math inline">\(a+b\)</span> original ballots is <em>equally likely</em> to have been invalid. Next, imagine we randomly remove <span class="math inline">\(k\)</span> balls from the urn, and let <span class="math inline">\(X\)</span> be a random variable that counts the number of the removed/invalid ballots that belong to Angela. In other words, the number of red balls removed. If <span class="math inline">\(X\)</span> is large enough, it will swing the election in Bernadette’s favor.</p>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Stats digest</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>We ended our course with a preview of some statistical topics that you are guaranteed to encounter early on in STA 332 and STA 402. The last two problems on our final exam will cover these topics, and as I have promised several times, you can expect these problems to be identical in format to the ones you have seen in lecture, lab, problem sets, and study guides. To that end, I have summarized below everything that you have seen. You should pay attention to the similarities <em>and</em> the differences.</p>
+<section id="maximum-likelihood-estimation" class="level1">
+<h1>Maximum likelihood estimation</h1>
+<p>Problem 9 on the final exam will present you with a parametric distribution family that you may or may not have seen before, and you will be asked to do the following:</p>
 <ol type="a">
-<li>What are the range and the pmf of the random variable <span class="math inline">\(X\)</span>?</li>
-<li>For what values of <span class="math inline">\(X\)</span> does removing <span class="math inline">\(k\)</span> ballots reverse the outcome of the election?</li>
-<li>Based on your answers to the previous parts, what is the probability that the election result is reversed when the <span class="math inline">\(k\)</span> bad ballots are removed? Give a general formula for this probability, and then compute the probability for each of the real elections listed in <a href="#tbl-elections" class="quarto-xref">Table&nbsp;1</a>;</li>
-<li>The random variable <span class="math inline">\(X\)</span> that you derived in the first part can be approximated by <span class="math inline">\(\text{Binom}(k,\,1/2)\)</span>. Explain why this approximation might be “good enough,” and verify that it’s not too bad by computing the <em>approximate</em> probability of reversal for the elections in <a href="#tbl-elections" class="quarto-xref">Table&nbsp;1</a>. Compare the approximate probabilities to the actual ones from the previous part;</li>
-<li>Let’s say that we consider the probability of reversal “too big” if it is greater than 5%. Create a plot in <code>R</code> like <a href="#fig-elections" class="quarto-xref">Figure&nbsp;1</a> with the following features:
-<ul>
-<li>the margin of victory <span class="math inline">\(a-b\)</span> on the horizontal axis;</li>
-<li>the number of bad ballots <span class="math inline">\(k\)</span> on the vertical axis;</li>
-<li>scatterplot where each point represents an election in <a href="#tbl-elections" class="quarto-xref">Table&nbsp;1</a>, with the points colored according to the decision that was made in the case;</li>
-<li>divide the plane into two regions, one where the <em>approximate</em> probability of reversal is less than 0.05 and one where it is greater.</li>
-</ul>
-</li>
-<li>Write a few pithy paragraphs commenting on the following:
-<ul>
-<li>the assumptions of our lil’ model. Do you think they are innocuous? What might you change, and how?</li>
-<li>the match or lack thereof between our model and the decisions that were actually made in the real cases;</li>
-<li>How do you think a court should handle a legitimate election challenge? What are their responsibilities to the electorate, and what should they prioritize? Should they err on the side of upholding or voiding results? Should they think probabilistically? Should they consult this model, or one like it?</li>
-</ul>
-</li>
+<li>Derive the likelihood function and the log-likelihood function. To do this successfully, you need to be comfortable with pre-calc stuff: algebra, PEMDAS, especially your log and exponent properties. Your algebraic manipulations in this step should be goal-directed. We know in the next step that we’re going to have to differentiate the log-likelihood function with respect to <span class="math inline">\(\theta\)</span>, so get things in a form where that derivative is as easy to take as possible;</li>
+<li>Derive the maximum likelihood estimator (MLE). So, we’re back in Calc I: take a derivative, set it equal to zero, and solve. Within a timed exam, I don’t expect you to check the second derivative. As with all the examples below, there is one critical point, it is the global maximizer, so it’s fine;</li>
+<li>The estimator you derive is a function of the <span class="math inline">\(X_i\)</span>, which are random, and so the estimator is also random. What is its distribution? To find it, you may have to apply the <a href="https://sta240-f25.github.io/labs/lab-7.html">change-of-variables formula</a> and recall the behavior of <a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf">sums and averages</a>;</li>
+<li>Once you have the sampling distribution of the estimator, you can compute the estimator’s mean, variance, bias, mean-squared-error (MSE) and observe what the statistical properties are. If the sampling distribution belongs to a familiar family, you can lift the formulas for mean and variance off the shelf without any new derivations.</li>
 </ol>
-<div id="tbl-elections" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-elections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Close elections
-</figcaption><div aria-describedby="tbl-elections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-</colgroup>
-<thead><tr class="header">
-<th>election</th>
-<th>year</th>
-<th>win</th>
-<th>loss</th>
-<th>total</th>
-<th>margin</th>
-<th>invalid</th>
-<th>decision</th>
-</tr></thead>
+<thead>
+<tr class="header">
+<th>source</th>
+<th>distribution</th>
+<th><span class="math inline">\(\hat{\theta}_n\)</span></th>
+<th>sampling distribution</th>
+<th>properties</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td><em>Ippolito v. Power</em></td>
-<td>1968</td>
-<td>1,422</td>
-<td>1,405</td>
-<td>2,827</td>
-<td>17</td>
-<td>101</td>
-<td>void</td>
+<td><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-18-mle-examples.html#example-exponential-distribution">Lecture</a></td>
+<td><span class="math inline">\(\text{Exponential}(\theta)\)</span></td>
+<td><span class="math inline">\(\frac{n}{\sum_{i=1}^nX_i}\)</span></td>
+<td><span class="math inline">\(\text{IG}(n,\,n\theta)\)</span></td>
+<td>biased, consistent</td>
 </tr>
 <tr class="even">
-<td><em>Santucci v. Power</em></td>
-<td>1969</td>
-<td>58,076</td>
-<td>57,981</td>
-<td>116,057</td>
-<td>95</td>
-<td>448</td>
-<td>void</td>
+<td><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-18-mle-examples.html#example-midterm-2-strikes-again">Lecture</a></td>
+<td><span class="math inline">\(\theta(x+1)^{-(\theta+1)}\)</span></td>
+<td><span class="math inline">\(\frac{n}{\sum_{i=1}^n\ln(X_i+1)}\)</span></td>
+<td><span class="math inline">\(\text{IG}(n,\,n\theta)\)</span></td>
+<td>biased, consistent</td>
 </tr>
 <tr class="odd">
-<td><em>DeMartini v. Power</em></td>
-<td>1970</td>
-<td>2,656</td>
-<td>2,594</td>
-<td>5,250</td>
-<td>62</td>
-<td>136</td>
-<td>upheld</td>
+<td><a href="https://sta240-f25.github.io/labs/lab-10.html">Lab 10</a></td>
+<td><span class="math inline">\(\text{Rayleigh}(\theta)\)</span></td>
+<td><span class="math inline">\(\frac{1}{2n}\sum\limits_{i=1}^nX_i^2\)</span></td>
+<td><span class="math inline">\(\text{Gamma}(n,\,n/\theta)\)</span></td>
+<td>unbiased, consistent</td>
 </tr>
 <tr class="even">
-<td>Maine House</td>
-<td>1976</td>
-<td>1,193</td>
-<td>1,060</td>
-<td>2,253</td>
-<td>133</td>
-<td>208</td>
-<td>void</td>
+<td><a href="https://sta240-f25.github.io/problems/pset-7.html">PSET 7</a></td>
+<td><span class="math inline">\(\text{N}(0,\,\theta)\)</span></td>
+<td><span class="math inline">\(\frac{1}{n}\sum\limits_{i=1}^nX_i^2\)</span></td>
+<td><span class="math inline">\(\text{Gamma}(n/2,\,n/2\theta)\)</span></td>
+<td>unbiased, consistent</td>
 </tr>
 <tr class="odd">
-<td>Ann Arbor mayor</td>
-<td>1977</td>
-<td>10,660</td>
-<td>10,659</td>
-<td>21,319</td>
-<td>1</td>
-<td>20</td>
-<td>void</td>
+<td><a href="https://sta240-f25.github.io/problems/pset-7.html">PSET 7</a></td>
+<td><span class="math inline">\(\frac{1}{2\theta}\exp\left(-\frac{|x|}{\theta}\right)\)</span></td>
+<td><span class="math inline">\(\frac{1}{n}\sum\limits_{i=1}^n|X_i|\)</span></td>
+<td><span class="math inline">\(\text{Gamma}(n,\,n/\theta)\)</span></td>
+<td>unbiased, consistent</td>
 </tr>
 <tr class="even">
-<td>Brunswick ME town council</td>
-<td>1980</td>
-<td>2,390</td>
-<td>2,383</td>
-<td>4,773</td>
-<td>7</td>
-<td>16</td>
-<td>upheld</td>
+<td><a href="https://sta240-f25.github.io/problems/exam-final.html#maximum-likelihood-estimation">Study Guide</a></td>
+<td><span class="math inline">\(\text{N}(\theta,\,1)\)</span></td>
+<td><span class="math inline">\(\frac{1}{n}\sum\limits_{i=1}^nX_i\)</span></td>
+<td><span class="math inline">\(\text{N}(\theta,\,1/n)\)</span></td>
+<td>unbiased, consistent</td>
 </tr>
 <tr class="odd">
-<td>Washington governor</td>
-<td>2004</td>
-<td>1,373,357</td>
-<td>1,373,228</td>
-<td>2,746,585</td>
-<td>129</td>
-<td>1,439</td>
-<td>upheld</td>
+<td><a href="https://sta240-f25.github.io/problems/exam-final.html#maximum-likelihood-estimation">Study Guide</a></td>
+<td><span class="math inline">\(\frac{k}{\theta}x^{k-1}\exp\left(-\frac{x^k}{\theta}\right)\)</span></td>
+<td><span class="math inline">\(\frac{1}{n}\sum\limits_{i=1}^nX_i^k\)</span></td>
+<td><span class="math inline">\(\text{Gamma}(n,\,n/\theta)\)</span></td>
+<td>unbiased, consistent</td>
 </tr>
 </tbody>
 </table>
-</div>
-</figure>
-</div>
-<div class="cell" data-layout-align="center">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">elections</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
-<span>  election <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Ippolito"</span>, <span class="st">"Santucci"</span>, <span class="st">"DeMartini"</span>, <span class="st">"Maine"</span>, <span class="st">"Ann Arbor"</span>, <span class="st">"Brunswick"</span>, <span class="st">"Washington"</span><span class="op">)</span>,</span>
-<span>  a <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1422</span>, <span class="fl">58076</span>, <span class="fl">2656</span>, <span class="fl">1193</span>, <span class="fl">10660</span>, <span class="fl">2390</span>, <span class="fl">1373357</span><span class="op">)</span>,</span>
-<span>  b <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1405</span>, <span class="fl">57981</span>, <span class="fl">2594</span>, <span class="fl">1060</span>, <span class="fl">10659</span>, <span class="fl">2383</span>, <span class="fl">1373228</span><span class="op">)</span>,</span>
-<span>  k <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">101</span>, <span class="fl">448</span>, <span class="fl">136</span>, <span class="fl">208</span>, <span class="fl">20</span>, <span class="fl">16</span>, <span class="fl">1439</span><span class="op">)</span>,</span>
-<span>  decision <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"void"</span>, <span class="st">"void"</span>, <span class="st">"upheld"</span>, <span class="st">"void"</span>, <span class="st">"void"</span>, <span class="st">"upheld"</span>, <span class="st">"upheld"</span><span class="op">)</span>,</span>
-<span>  col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"red"</span>, <span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"blue"</span><span class="op">)</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">reversal_prob_binom</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">a</span>, <span class="va">b</span>, <span class="va">k</span><span class="op">)</span><span class="op">{</span></span>
-<span>  <span class="va">cutoff</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">ceiling</a></span><span class="op">(</span><span class="fl">0.5</span> <span class="op">*</span> <span class="op">(</span><span class="va">k</span> <span class="op">+</span> <span class="va">a</span> <span class="op">-</span> <span class="va">b</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fl">1</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">pbinom</a></span><span class="op">(</span><span class="va">cutoff</span> <span class="op">-</span> <span class="fl">1</span>, <span class="va">k</span>, <span class="fl">1</span><span class="op">/</span><span class="fl">2</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">margin_grid</span> <span class="op">&lt;-</span> <span class="fl">0</span><span class="op">:</span><span class="fl">150</span></span>
-<span><span class="va">k_grid</span> <span class="op">&lt;-</span> <span class="fl">0</span><span class="op">:</span><span class="fl">450</span></span>
-<span><span class="va">n_points</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">margin_grid</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">k_grid</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">grid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
-<span>  margin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">numeric</a></span><span class="op">(</span><span class="va">n_points</span><span class="op">)</span>,</span>
-<span>  k <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">numeric</a></span><span class="op">(</span><span class="va">n_points</span><span class="op">)</span>,</span>
-<span>  color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="st">"lightblue"</span>, <span class="va">n_points</span><span class="op">)</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">row</span> <span class="op">&lt;-</span> <span class="fl">0</span></span>
-<span></span>
-<span><span class="kw">for</span><span class="op">(</span><span class="va">x</span> <span class="kw">in</span> <span class="va">margin_grid</span><span class="op">)</span><span class="op">{</span></span>
-<span>  <span class="kw">for</span><span class="op">(</span><span class="va">y</span> <span class="kw">in</span> <span class="va">k_grid</span><span class="op">)</span><span class="op">{</span></span>
-<span>    <span class="va">row</span> <span class="op">&lt;-</span> <span class="va">row</span> <span class="op">+</span> <span class="fl">1</span></span>
-<span>    <span class="va">grid</span><span class="op">[</span><span class="va">row</span>, <span class="fl">1</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">x</span></span>
-<span>    <span class="va">grid</span><span class="op">[</span><span class="va">row</span>, <span class="fl">2</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">y</span></span>
-<span>    <span class="kw">if</span><span class="op">(</span><span class="fu">reversal_prob_binom</span><span class="op">(</span><span class="fl">1</span> <span class="op">+</span> <span class="va">x</span>, <span class="fl">1</span>, <span class="va">y</span><span class="op">)</span> <span class="op">&gt;=</span> <span class="fl">0.05</span><span class="op">)</span><span class="op">{</span></span>
-<span>      <span class="va">grid</span><span class="op">[</span><span class="va">row</span>, <span class="fl">3</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="st">"pink"</span></span>
-<span>    <span class="op">}</span></span>
-<span>  <span class="op">}</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">grid</span><span class="op">$</span><span class="va">margin</span>, <span class="va">grid</span><span class="op">$</span><span class="va">k</span>, col <span class="op">=</span> <span class="va">grid</span><span class="op">$</span><span class="va">color</span>, </span>
-<span>     pch <span class="op">=</span> <span class="fl">19</span>, cex <span class="op">=</span> <span class="fl">0.2</span>,</span>
-<span>     xlab <span class="op">=</span> <span class="st">"margin of victory (a - b)"</span>, </span>
-<span>     ylab <span class="op">=</span> <span class="st">"number of invalid ballots (k)"</span>,</span>
-<span>     main <span class="op">=</span> <span class="st">"Approximate probability of election reversal"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/points.html">points</a></span><span class="op">(</span><span class="va">elections</span><span class="op">$</span><span class="va">a</span> <span class="op">-</span> <span class="va">elections</span><span class="op">$</span><span class="va">b</span>, <span class="va">elections</span><span class="op">$</span><span class="va">k</span>, </span>
-<span>       pch <span class="op">=</span> <span class="fl">19</span>, col <span class="op">=</span> <span class="va">elections</span><span class="op">$</span><span class="va">col</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/legend.html">legend</a></span><span class="op">(</span><span class="op">-</span><span class="fl">7</span>, <span class="fl">450</span>, <span class="st">"&gt; 0.05"</span>, text.col <span class="op">=</span> <span class="st">"salmon"</span>, bty <span class="op">=</span> <span class="st">"n"</span>, cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/legend.html">legend</a></span><span class="op">(</span><span class="fl">115</span>, <span class="fl">450</span>, <span class="st">"&lt; 0.05"</span>, text.col <span class="op">=</span> <span class="st">"blue"</span>, bty <span class="op">=</span> <span class="st">"n"</span>, cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/legend.html">legend</a></span><span class="op">(</span><span class="fl">125</span>, <span class="fl">85</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Voided"</span>, <span class="st">"Upheld"</span><span class="op">)</span>, pch <span class="op">=</span> <span class="fl">19</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"blue"</span><span class="op">)</span>, bty <span class="op">=</span> <span class="st">"n"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
-<div id="fig-elections" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-elections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="contested-election_files/figure-html/fig-elections-1.png" id="fig-elections" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-elections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption></figure>
-</div>
-</div>
-</div>
+</section>
+<section id="bayesian-inference" class="level1">
+<h1>Bayesian inference</h1>
+<p>Problem 10 on the final exam will present you with a Bayesian model: a prior for the parameter and a conditional distribution for the data. Again, maybe you’ve seen these, maybe you haven’t. Then, you will do the following:</p>
+<ol type="a">
+<li>Derive the posterior distribution. To do this, you massage the posterior kernel until you recognize that it belongs to a familiar family of distributions;</li>
+<li>Compute the posterior mean and show that it can be rewritten as a convex combination (weighted average where the weights sum to one) of the prior mean and the maximum likelihood estimator. If you do not already know the MLE from a previous result, then you may have to compute it.</li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>source</th>
+<th>prior</th>
+<th>likelihood</th>
+<th>posterior</th>
+<th>hyperparameters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://sta240-f25.github.io/lecture-notes/sta240-notes-19-bayes.pdf">Lecture</a></td>
+<td><span class="math inline">\(\text{Beta}(a_0,\,b_0)\)</span></td>
+<td><span class="math inline">\(\text{Bernoulli}(\theta)\)</span></td>
+<td><span class="math inline">\(\text{Beta}(a_n,\,b_n)\)</span></td>
+<td><span class="math display">\[\begin{aligned}a_n&amp;=a_0+\sum_{i=1}^nx_i\\b_n&amp;=b_0+n-\sum_{i=1}^nx_i\end{aligned}\]</span></td>
+</tr>
+<tr class="even">
+<td><a href="https://sta240-f25.github.io/labs/lab-11.html">Lab 11</a></td>
+<td><span class="math inline">\(\text{Gamma}(a_0,\,b_0)\)</span></td>
+<td><span class="math inline">\(\text{Poisson}(\theta)\)</span></td>
+<td><span class="math inline">\(\text{Gamma}(a_n,\,b_n)\)</span></td>
+<td><span class="math display">\[\begin{aligned}a_n&amp;=a_0+\sum_{i=1}^nx_i\\b_n&amp;=b_0+n\end{aligned}\]</span></td>
+</tr>
+<tr class="odd">
+<td><a href="https://sta240-f25.github.io/problems/pset-7.html">PSET 7</a></td>
+<td><span class="math inline">\(\text{Gamma}(a_0,\,b_0)\)</span></td>
+<td><span class="math inline">\(\text{Exponential}(\theta)\)</span></td>
+<td><span class="math inline">\(\text{Gamma}(a_n,\,b_n)\)</span></td>
+<td><span class="math display">\[\begin{aligned}a_n&amp;=a_0+n\\b_n&amp;=b_0+\sum_{i=1}^nx_i\end{aligned}\]</span></td>
+</tr>
+<tr class="even">
+<td><a href="https://sta240-f25.github.io/problems/pset-7.html">PSET 7</a></td>
+<td><span class="math inline">\(\text{Beta}(a_0,\,b_0)\)</span></td>
+<td><span class="math inline">\(\text{Geometric}(\theta)\)</span></td>
+<td><span class="math inline">\(\text{Beta}(a_n,\,b_n)\)</span></td>
+<td><span class="math display">\[\begin{aligned}a_n&amp;=a_0+n\\b_n&amp;=b_0-n+\sum_{i=1}^nx_i\end{aligned}\]</span></td>
+</tr>
+<tr class="odd">
+<td><a href="https://sta240-f25.github.io/problems/exam-final.html#bayesian-inference">Study Guide</a></td>
+<td><span class="math inline">\(\text{N}(m_0,\,\tau_0^2)\)</span></td>
+<td><span class="math inline">\(\text{N}(\theta,\,1)\)</span></td>
+<td><span class="math inline">\(\text{N}(m_n,\,\tau_n^2)\)</span></td>
+<td><span class="math display">\[\begin{aligned}\tau_n^2&amp;=(n+1/\tau_0^2)^{-1}\\m_n&amp;=\tau_n^2\left(\frac{m_0}{\tau_0^2}+\sum_{i=1}^nx_i\right)\end{aligned}\]</span></td>
+</tr>
+<tr class="even">
+<td><a href="https://sta240-f25.github.io/problems/exam-final.html#bayesian-inference">Study Guide</a></td>
+<td><span class="math inline">\(\text{IG}(a_0,\,b_0)\)</span></td>
+<td><span class="math inline">\(\text{N}(0,\,\theta)\)</span></td>
+<td><span class="math inline">\(\text{IG}(a_n,\,b_n)\)</span></td>
+<td><span class="math display">\[\begin{aligned}a_n&amp;=a_0+n/2\\b_n&amp;=b_0+\frac{1}{2}\sum_{i=1}^nx_i^2\end{aligned}\]</span></td>
+</tr>
+<tr class="odd">
+<td><a href="https://sta240-f25.github.io/problems/exam-final.html#bayesian-inference">Study Guide</a></td>
+<td><span class="math inline">\(\text{Gamma}(a_0,\,b_0)\)</span></td>
+<td><span class="math inline">\(\theta(x+1)^{-(\theta+1)}\)</span></td>
+<td><span class="math inline">\(\text{Gamma}(a_n,\,b_n)\)</span></td>
+<td><span class="math display">\[\begin{aligned}a_n&amp;=a_0+n\\b_n&amp;=b_0+\sum_{i=1}^n\ln(1+x_i)\end{aligned}\]</span></td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1205,7 +1175,8 @@ Figure&nbsp;1
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -1217,6 +1188,8 @@ Figure&nbsp;1
 </div>
   </div>
 </footer>
+
+
 
 
 </body></html>
