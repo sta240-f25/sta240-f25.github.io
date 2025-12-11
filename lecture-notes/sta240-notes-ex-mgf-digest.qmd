@@ -1,0 +1,428 @@
+---
+title: "MGF digest"
+format: html
+---
+
+The [moment-generating function](https://sta240-f25.github.io/lecture-notes/sta240-notes-11-moments.pdf) (MGF) is this funky thing that wandered in from the cold, seemingly out of nowhere:
+
+$$
+M(t)=E[e^{tX}]
+=
+\begin{cases}
+\sum\limits_{k\in\text{Range}(X)}e^{tk}P(X=k) && \text{if discrete}\\
+\int_{-\infty}^\infty e^{tx}f(x)\,\text{d}x && \text{if continuous}.
+\end{cases}
+$$
+
+This is a function. In go different values of $t$, and out pop different expected values. But notice: we have never once plotted this damn thing. There's not a whole lot of understanding you can gain about the distribution from inspecting a picture of the MGF, so we never even bothered. The MGF *does* convey interpretive and intuitive information about the distribution, but to appreciate this, you need more math than we have. So for us, we treat the MGF as a purely technical tool that enables us to perform some important calculations:
+
+- $E(X^n)=M^{(n)}(0)$. So, instead of computing moments with an integral or a series, we can do it with derivatives. Super convenient!
+- We used the MGF to derive the distributions of [sums and averages](https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf). Super useful for statistics!
+- We used the MGF to [prove the darn central limit theorem (CLT)](https://sta240-f25.github.io/lecture-notes/sta240-notes-15-clt.html)!
+
+Below, I reproduce several examples where we computed the MGF of a distribution, and I point out that we basically followed the same steps in each case. The unifying theme here is [*kernel tricks*](https://sta240-f25.github.io/math/massage-and-squint.html).
+
+::: {.callout-tip collapse="true"}
+## MGF of the Poisson (from lecture)
+
+If $X\sim\text{Poisson}(\lambda)$ for some $\lambda>0$, then $\text{Range}=\mathbb{N}$ and 
+
+$$
+P(X=k)=\underbrace{e^{-\lambda}}_{\begin{matrix}\text{normalizing}\\\text{constant}\end{matrix}}\underbrace{\frac{\lambda^k}{k!}}_{\text{kernel}},\quad k = 0,\,1,\,2,\,...
+$$
+
+If you had never heard of a Taylor series before in your life but you were willing to take my word for it that the PMF was *valid*, then you could perform the following kernel trick to derive a new infinite series identity:
+
+$$
+\begin{aligned}
+\sum\limits_{k=0}^\infty P(X=k)
+=
+\sum\limits_{k=0}^\infty e^{-\lambda}\frac{\lambda^k}{k!}
+=
+e^{-\lambda}\sum\limits_{k=0}^\infty \frac{\lambda^k}{k!}
+=
+1
+\quad\implies\quad 
+\sum\limits_{k=0}^\infty \frac{\lambda^k}{k!}
+=e^{\lambda}
+.
+\end{aligned}
+$$
+
+So, a valid PMF gives you a free infinite series identity as a byproduct.
+
+Now compute the MGF:
+
+$$
+\begin{aligned}
+M(t)&=E[e^{tX}]\\
+&=\sum\limits_{k=0}^\infty e^{tk}P(X=k)\\
+&=\sum\limits_{k=0}^\infty e^{tk}\frac{\lambda^k}{k!}e^{-\lambda}\\
+&=e^{-\lambda}\sum\limits_{k=0}^\infty \left(e^{t}\right)^k\frac{\lambda^k}{k!}\\
+&=e^{-\lambda}\sum\limits_{k=0}^\infty \frac{\left(\lambda e^{t}\right)^k}{k!} && \text{combine k powers}\\
+&=e^{-\lambda}e^{\lambda e^t} && \text{identity from kernel trick!}\\
+&=e^{\lambda e^t-\lambda}.
+\end{aligned}
+$$
+
+So, the kernel trick gave us an identity that we recycled to compute the MGF.
+
+:::
+
+::: {.callout-note collapse="true"}
+## MGF of the geometric (from PSET 5)
+
+If $X\sim\text{Geometric}(p)$ for some $0<p<1$, then $\text{Range}=\{1,\,2,\,3,\,4,\,...\}$ and 
+
+$$
+P(X=k)=\underbrace{p}_{\begin{matrix}\text{normalizing}\\\text{constant}\end{matrix}}\underbrace{(1-p)^{k-1}}_{\text{kernel}},\quad k = 1,\,2,\,...
+$$
+
+If you had never heard of the geometric series before in your life but you were willing to take my word for it that the PMF was *valid*, then you could perform the following kernel trick to derive a new infinite series identity:
+
+$$
+\begin{aligned}
+\sum\limits_{k=1}^\infty P(X=k)
+=
+\sum\limits_{k=1}^\infty p(1-p)^{k-1}
+=
+p\sum\limits_{k=1}^\infty (1-p)^{k-1}
+=
+1
+\quad\implies\quad 
+\sum\limits_{k=1}^\infty (1-p)^{k-1}
+=
+\frac{1}{p}
+,\quad 0<p<1.
+\end{aligned}
+$$
+
+So, a valid PMF gives you a free infinite series identity as a byproduct.
+
+Now compute the MGF:
+
+$$
+\begin{aligned}
+    E(e^{tX})
+    &=
+    \sum\limits_{k=1}^\infty e^{tk}P(X=k)
+    \\
+    &=
+    \sum\limits_{k=1}^\infty e^{tk}(1-p)^{k-1}p
+    \\
+    &=
+    p\sum\limits_{k=1}^\infty e^{tk}(1-p)^{k-1}
+    \\
+    &=
+    p\sum\limits_{k=1}^\infty \frac{e^t}{e^t}e^{tk}(1-p)^{k-1}
+    \\
+    &=
+    pe^t\sum\limits_{k=1}^\infty e^{tk-t}(1-p)^{k-1}
+    \\
+        &=
+    pe^t\sum\limits_{k=1}^\infty e^{t(k-1)}(1-p)^{k-1}
+    \\
+        &=
+    pe^t\sum\limits_{k=1}^\infty (e^t)^{k-1}(1-p)^{k-1}
+    \\
+        &=
+    pe^t\sum\limits_{k=1}^\infty [e^t(1-p)]^{k-1} && \text{combine k - 1 powers}
+    \\
+        &=
+    pe^t\sum\limits_{k=1}^\infty [1-1+e^t(1-p)]^{k-1}
+    \\
+        &=
+    pe^t\sum\limits_{k=1}^\infty [1-[1-e^t(1-p)]]^{k-1}
+    \\
+        &=
+    \frac{pe^t}{1-e^t(1-p)}. && \text{identity from kernel trick!}\\
+    .
+\end{aligned}
+$$
+
+So, the kernel trick gave us an identity that we recycled to compute the MGF.
+
+**Note**: this is definitely *not* the most efficient way to write this up. For that, see the PSET 5 solutions. I'm just writing it this way to make a point about the structure of the calculation. 
+:::
+
+::: {.callout-tip collapse="true"}
+## MGF of the logarithmic (from Midterm 2)
+On Midterm 2, I introduced a random variable $Z$ with parameter $0<p<1$, $\text{Range}(Z)=\{1,\, 2,\, 3,\, 4,\, ...\}$, and probability mass function 
+
+$$
+P(Z=k)
+=
+\underbrace{-\frac{1}{\ln(1-p)}}_{\begin{matrix}\text{normalizing}\\\text{constant}\end{matrix}}\underbrace{\frac{p^k}{k}}_{\text{kernel}},\quad k=1,\,2,\,3,\,...
+$$
+
+If you're willing to take my word that it's valid, you could perform the following kernel trick to derive a new infinite series identity:
+
+$$
+\sum\limits_{k=1}^\infty P(Z=k)
+=
+\sum\limits_{k=1}^\infty
+{-\frac{1}{\ln(1-p)}}{\frac{p^k}{k}}
+=
+-\frac{1}{\ln(1-p)}\sum\limits_{k=1}^\infty
+\frac{p^k}{k}
+=
+1
+\quad \implies \quad 
+\sum\limits_{k=1}^\infty\frac{p^k}{k}=-\ln(1-p),\quad 0<p<1
+$$
+
+So, a valid PMF gives you a free infinite series identity as a byproduct.
+
+Now compute the MGF:
+
+$$
+\begin{aligned}
+            M_Z(t)
+            &=
+            E(e^{tZ})
+            \\
+            &=
+            \sum\limits_{k=1}^\infty e^{tk}P(Z=k) 
+            \\
+            &=
+            \sum\limits_{k=1}^\infty e^{tk}\frac{-1}{\ln(1-p)}\frac{p^k}{k}
+            \\
+            &=
+            \frac{-1}{\ln(1-p)}
+            \sum\limits_{k=1}^\infty e^{tk}\frac{p^k}{k}
+            \\
+            &=
+            \frac{-1}{\ln(1-p)}
+            \sum\limits_{k=1}^\infty (e^{t})^k\frac{p^k}{k}
+            \\
+            &=
+            \frac{-1}{\ln(1-p)}
+            \sum\limits_{k=1}^\infty \frac{(pe^t)^k}{k}
+            &&\text{combine k powers}
+            \\
+            &=
+            \frac{-1}{\ln(1-p)}
+            [-\ln(1-pe^t)]
+             && \text{identity from kernel trick!}\\
+            \\
+            &=
+            \frac{\ln(1-pe^t)}{\ln(1-p)}.
+\end{aligned}
+$$
+
+So, the kernel trick gave us an identity that we recycled to compute the MGF.
+
+:::
+
+::: {.callout-note collapse="true"}
+## MGF of the negative binomial (from PSET 7)
+You recently met the **negative binomial** (**NB**) distribution. If $X\sim\text{NB}(r,\,p)$, then $r\in\mathbb{N}$ and $0<p<1$, $\text{Range}(X)=\mathbb{N}$, and the PMF is 
+
+$$
+P(X=k)
+=
+\underbrace{p^r}_{\begin{matrix}\text{normalizing}\\\text{constant}\end{matrix}}
+\underbrace{\binom{k+r-1}{k}(1-p)^k}_{\text{kernel}}\quad k=0,\,1,\,2,\,3,\,...
+$$
+
+If you're willing to take my word that it's valid, you could perform the following kernel trick to derive a new infinite series identity:
+
+$$
+\sum\limits_{k=0}^\infty P(X=k)
+=
+\sum\limits_{k=0}^\infty \binom{k+r-1}{k}(1-p)^kp^r
+=
+p^r\sum\limits_{k=0}^\infty \binom{k+r-1}{k}(1-p)^k=1
+\quad\implies 
+\quad \sum\limits_{k=0}^\infty 
+\binom{k+r-1}{k}(1-p)^k=\frac{1}{p^r},\quad 0<p<1.
+$$
+
+So, a valid PMF gives you a free infinite series identity as a byproduct.
+
+Now compute the MGF:
+
+$$
+\begin{aligned}
+M_{X}(t) & = \mathbb{E}\left[e^{tX}\right] \\ & = \sum_{k = 0}^{\infty}{e^{tk} P(X = k)} \\
+& = \sum_{k = 0}^{\infty}{e^{tk}  \binom{k + r - 1}{k}(1-p)^{k}p^{r}} \\
+& = p^{r}\sum_{k = 0}^{\infty}{\cdot \binom{k + r - 1}{k}\left((1 - p)e^{t}\right)^{k}} \\
+& = p^{r}\sum_{k = 0}^{\infty}{\cdot \binom{k + r - 1}{k}\left[1-1+(1 - p)e^{t}\right]^{k}} \\
+& = p^{r}\sum_{k = 0}^{\infty}{\cdot \binom{k + r - 1}{k}\left[1-[1-(1 - p)e^{t}]\right]^{k}} \\
+& = p^{r}\frac{1}{1-(1 - p)e^{t}}. && \text{identity from kernel trick!}\\
+\end{aligned}
+$$
+
+So, the kernel trick gave us an identity that we recycled to compute the MGF.
+
+:::
+
+::: {.callout-tip collapse="true"}
+## MGF of the gamma (from lecture)
+If $X\sim\text{Gamma}(\alpha,\,\beta)$ for some $\alpha,\,\beta>0$, then $\text{Range}(X)=(0,\,\infty)$ and the density is 
+
+$$
+f(x)=\underbrace{\frac{\beta^\alpha}{\Gamma(\alpha)}}_{\begin{matrix}\text{normalizing}\\\text{constant}\end{matrix}}\underbrace{x^{\alpha-1}e^{-\beta x}}_{\text{kernel}},\quad x>0.
+$$
+
+PDFs must integrate to 1, so do the kernel trick:
+
+$$
+\int_0^\infty f(x)\,\text{d}x
+=
+\int_0^\infty \frac{\beta^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x}\,\text{d}x
+=
+\frac{\beta^\alpha}{\Gamma(\alpha)}\int_0^\infty x^{\alpha-1}e^{-\beta x}\,\text{d}x
+=
+1
+\quad 
+\implies 
+\quad 
+\int_0^\infty x^{\alpha-1}e^{-\beta x}\,\text{d}x
+=
+\frac{\Gamma(\alpha)}{\beta^\alpha}
+.
+$$
+
+We have used this identity so often that I want to vomit.
+
+Recall the MGF calculation:
+
+$$
+      \begin{align*}
+          M_X(t)&=E\left(e^{tX}\right)\\
+          &=\int_0^\infty e^{tx}\frac{\beta^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x}\,\text{d} x && \text{LOTUS}\\
+          &=\frac{\beta^\alpha}{\Gamma(\alpha)}\int_0^\infty x^{\alpha-1}e^{tx}e^{-\beta x}\,\text{d} x && \text{pull out constant}\\
+          &=\frac{\beta^\alpha}{\Gamma(\alpha)}\int_0^\infty x^{\alpha-1}e^{tx-\beta x}\,\text{d} x&& \text{combine base-e terms}\\
+`         &=\frac{\beta^\alpha}{\Gamma(\alpha)}\int_0^\infty x^{\alpha-1}e^{(t-\beta) x}\,\text{d} x&& \text{factor out }x\\
+`         &=\frac{\beta^\alpha}{\Gamma(\alpha)}\int_0^\infty x^{\alpha-1}e^{-(\beta-t) x}\,\text{d} x&& \text{factor out -1}\\
+          &=\frac{\beta^\alpha}{\Gamma(\alpha)}\int_0^\infty \underbrace{x^{\alpha-1}e^{-(\beta-t)x}}_{\text{kernel of Gamma}(\alpha,\,\beta-t)}\,\text{d} x && \text{recognize}\\
+          &=\frac{\beta^\alpha}{{\Gamma(\alpha)}}\frac{{\Gamma(\alpha)}}{(\beta-t)^\alpha}\\
+          &=\left(\frac{\beta}{\beta-t}\right)^\alpha.
+      \end{align*}
+$$
+
+So, the same integral identity we derived from the kernel trick gets immediately recycled to compute the MGF.
+
+:::
+
+::: {.callout-note collapse="true"}
+## MGF of the normal (from lecture and PSET 7)
+Let $X\sim\text{N}(\mu,\,\sigma^2)$. So $\mu\in\mathbb{R}$, $\sigma>0$, $\text{Range}(X)=\mathbb{R}$, and the pdf is 
+
+$$
+\begin{aligned}
+f(x)
+&=
+\frac{1}{\sqrt{2\pi\sigma^2}}
+\exp\left(-\frac{1}{2\sigma^2}(x-\mu)^2\right)
+\\
+&=
+\frac{1}{\sqrt{2\pi\sigma^2}}
+\exp\left(-\frac{1}{2\sigma^2}[x^2-2x\mu+\mu^2]\right)
+\\
+&=
+\frac{1}{\sqrt{2\pi\sigma^2}}
+\exp\left(-\frac{1}{2\sigma^2}[x^2-2x\mu]-\frac{1}{2\sigma^2}\mu^2\right)
+\\
+&=
+\underbrace{\frac{1}{\sqrt{2\pi\sigma^2}}
+\exp\left(-\frac{1}{2\sigma^2}\mu^2\right)}_{\begin{matrix}\text{normalizing}\\\text{constant}\end{matrix}}
+\underbrace{\exp\left(-\frac{1}{2\sigma^2}[x^2-2x\mu]\right)}_{\text{kernel}},\quad x\in\mathbb{R}.
+\end{aligned}
+$$
+
+That's a little different from how we usually think about it, but hopefully you agree with the math. Since densities must integrate to one, the implied identity is 
+
+$$
+\int_{-\infty}^\infty \exp\left(-\frac{1}{2\sigma^2}[x^2-2x\mu]\right)\text{d}x=\sqrt{2\pi\sigma^2}
+\exp\left(\frac{1}{2\sigma^2}\mu^2\right).
+$$
+
+Now, how about that MGF:
+
+$$
+\begin{aligned}
+M(t)
+&=
+E(e^{tX})
+\\
+&=
+\int_{-\infty}^\infty e^{tx}f(x)\,\text{d}x
+\\
+&=
+\int_{-\infty}^\infty 
+e^{tx}
+\frac{1}{\sqrt{2\pi\sigma^2}}
+\exp\left(-\frac{1}{2\sigma^2}\mu^2\right)
+\exp\left(-\frac{1}{2\sigma^2}[x^2-2x\mu]\right)
+\text{d}x
+\\
+&=
+\frac{1}{\sqrt{2\pi\sigma^2}}
+\exp\left(-\frac{1}{2\sigma^2}\mu^2\right)
+\int_{-\infty}^\infty 
+e^{tx}
+\exp\left(-\frac{1}{2\sigma^2}[x^2-2x\mu]\right)
+\text{d}x
+\\
+&=
+\frac{1}{\sqrt{2\pi\sigma^2}}
+\exp\left(-\frac{1}{2\sigma^2}\mu^2\right)
+\int_{-\infty}^\infty 
+\exp\left(-\frac{1}{2\sigma^2}[x^2-2x\mu]+tx\right)
+\text{d}x
+\\
+&=
+\frac{1}{\sqrt{2\pi\sigma^2}}
+\exp\left(-\frac{1}{2\sigma^2}\mu^2\right)
+\int_{-\infty}^\infty 
+\exp\left(-\frac{1}{2\sigma^2}[x^2-2x\mu-2\sigma^2tx]\right)
+\text{d}x
+\\
+&=
+\frac{1}{\sqrt{2\pi\sigma^2}}
+\exp\left(-\frac{1}{2\sigma^2}\mu^2\right)
+\int_{-\infty}^\infty 
+\underbrace{\exp\left(-\frac{1}{2\sigma^2}[x^2-2x(\mu+\sigma^2t)]\right)}_{\text{kernel of N}(\mu+\sigma^2t,\,\sigma^2)}
+\text{d}x
+\\
+&=
+\frac{1}{\sqrt{2\pi\sigma^2}}
+\exp\left(-\frac{1}{2\sigma^2}\mu^2\right)
+\sqrt{2\pi\sigma^2}
+\exp\left(\frac{1}{2\sigma^2}(\mu+\sigma^2t)^2\right)
+\\
+&=
+\exp\left(-\frac{1}{2\sigma^2}\mu^2+\frac{1}{2\sigma^2}(\mu+\sigma^2t)^2\right)
+\\
+&=
+\exp\left(\frac{1}{2\sigma^2}[-\mu^2+(\mu+\sigma^2t)^2]\right)
+\\
+&=
+\exp\left(\frac{1}{2\sigma^2}[-\mu^2+\mu^2+2\mu\sigma^2t+(\sigma^2t)^2]\right)
+\\
+&=
+\exp\left(\frac{1}{2\sigma^2}[2\mu\sigma^2t+\sigma^4t^2]\right)
+\\
+&=
+\exp\left(\mu t + \frac{\sigma^2}{2}t^2\right)
+.
+\end{aligned}
+$$
+
+I can't believe I just typed all of that up at 1AM. What has my life become? 
+
+But set aside my existential crisis and recognize two things:
+
+- This formula for the MGF of $\text{N}(\mu,\,\sigma^2)$ is exactly what we have [here](https://sta240-f25.github.io/distributions/continuous-normal.html) and what you derived on PSET 7 (using much simpler means!);
+- To perform the calculation, as in the previous eighty examples I just recapped, we recycled the identity that we got from the kernel trick.
+
+:::
+
+If the pattern is not clear by now...oy:
+
+- every PMF/PDF is a normalizing constant times a kernel. Since probabilities need to sum/integrate to one, the sum or integral of the kernel must equal the reciprocal of the normalizing constant. This is essentially a free series/integral identity;
+- the series/integral identity that you get from the kernel trick gets recycled when you compute the moment-generating function.
+
+It is not a freak accident that all of these examples share the same basic structure. It follows from the fact that all of these distribution families belong to a *meta-family* of distributions called the **exponential family**. Keep studying statistics, and you will learn all about this. It's really beautiful.

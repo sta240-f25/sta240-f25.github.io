@@ -1,5 +1,5 @@
 ---
-title: "Guide to the stats problems"
+title: "Stats digest"
 format: html
 ---
 
@@ -9,8 +9,8 @@ We ended our course with a preview of some statistical topics that you are guara
 
 Problem 9 on the final exam will present you with a parametric distribution family that you may or may not have seen before, and you will be asked to do the following:
 
-a. Derive the likelihood function and the log-likelihood function. To do this successfully, you need to be comfortable with pre-calc stuff: algebra, PEMDAS, especially your log and exponent properties;
-a. Derive the maximum likelihood estimator (MLE). So, we're back in Calc I: take a derivative, set it equal to zero, and solve. Within a timed exam, I don't expect you to check the second derivative;
+a. Derive the likelihood function and the log-likelihood function. To do this successfully, you need to be comfortable with pre-calc stuff: algebra, PEMDAS, especially your log and exponent properties. Your algebraic manipulations in this step should be goal-directed. We know in the next step that we're going to have to differentiate the log-likelihood function with respect to $\theta$, so get things in a form where that derivative is as easy to take as possible;
+a. Derive the maximum likelihood estimator (MLE). So, we're back in Calc I: take a derivative, set it equal to zero, and solve. Within a timed exam, I don't expect you to check the second derivative. As with all the examples below, there is one critical point, it is the global maximizer, so it's fine;
 a. The estimator you derive is a function of the $X_i$, which are random, and so the estimator is also random. What is its distribution? To find it, you may have to apply the [change-of-variables formula](https://sta240-f25.github.io/labs/lab-7.html) and recall the behavior of [sums and averages](https://sta240-f25.github.io/lecture-notes/sta240-notes-14-sums-and-averages.pdf);
 a. Once you have the sampling distribution of the estimator, you can compute the estimator's mean, variance, bias, mean-squared-error (MSE) and observe what the statistical properties are. If the sampling distribution belongs to a familiar family, you can lift the formulas for mean and variance off the shelf without any new derivations.
 
@@ -28,10 +28,10 @@ a. Once you have the sampling distribution of the estimator, you can compute the
 
 # Bayesian inference
 
-Problem 10 on the final exam will present you with a Bayesian model: a prior for the parameter and a distribution for the data. Then, you will do a few things:
+Problem 10 on the final exam will present you with a Bayesian model: a prior for the parameter and a conditional distribution for the data. Again, maybe you've seen these, maybe you haven't. Then, you will do the following:
 
 a. Derive the posterior distribution. To do this, you massage the posterior kernel until you recognize that it belongs to a familiar family of distributions;
-a. Compute the posterior mean and show that it can be rewritten as a convex combination of the prior mean and the maximum likelihood estimator. If you do not already know the MLE from a previous result, then you may have to compute it.
+a. Compute the posterior mean and show that it can be rewritten as a convex combination (weighted average where the weights sum to one) of the prior mean and the maximum likelihood estimator. If you do not already know the MLE from a previous result, then you may have to compute it.
 
 | source | prior | likelihood | posterior | hyperparameters |
 |------|------|------|------|------|
