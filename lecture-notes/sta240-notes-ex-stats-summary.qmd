@@ -31,8 +31,7 @@ a. Once you have the sampling distribution of the estimator, you can compute the
 Problem 10 on the final exam will present you with a Bayesian model: a prior for the parameter and a distribution for the data. Then, you will do a few things:
 
 a. Derive the posterior distribution. To do this, you massage the posterior kernel until you recognize that it belongs to a familiar family of distributions;
-a. Compute the posterior mean and show that it can be rewritten as a convex combination of the prior mean and the maximum likelihood estimator. If you do not already know the MLE from a previous result, then you may have to compute it;
-a. The posterior mean is a *new estimator* that could be used as an alternative to the pure MLE. This new estmator has its own mean, variance, bias, and MSE which you can compute using what you know about the sampling distribution of the MLE and the linearity of expectation. The solutions to [Lab 11](https://sta240-f25.github.io/labs/lab-11.html#task-5) give you an example where this is fully worked out.
+a. Compute the posterior mean and show that it can be rewritten as a convex combination of the prior mean and the maximum likelihood estimator. If you do not already know the MLE from a previous result, then you may have to compute it.
 
 | source | prior | likelihood | posterior | hyperparameters |
 |------|------|------|------|------|
