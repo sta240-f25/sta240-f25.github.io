@@ -6,11 +6,11 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       sliderInput("alpha", "Prior shape α:",
-                  min = 0.1, max = 20, value = 2, step = 0.1),
+                  min = 0.1, max = 100, value = 2, step = 0.1),
       sliderInput("n", "Sample size n:",
-                  min = 1, max = 200, value = 20, step = 1),
+                  min = 1, max = 200, value = 10, step = 1),
       sliderInput("lambda", "True Poisson mean λ:",
-                  min = 0.1, max = 20, value = 3, step = 0.1)
+                  min = 0.1, max = 10, value = 3, step = 0.1)
     ),
     
     mainPanel(
@@ -54,12 +54,12 @@ server <- function(input, output) {
     
     lines(beta, variance, col = "blue", lwd = 2)
     lines(beta, bias2, col = "darkgreen", lwd = 2)
-    lines(beta, post_mean, col = "purple", lwd = 2, lty = 2)
+    #lines(beta, post_mean, col = "purple", lwd = 2, lty = 2)
     
     legend("topright",
-           legend = c("MSE", "Variance", "Bias^2", "Posterior Mean"),
-           col = c("red", "blue", "darkgreen", "purple"),
-           lwd = c(3,2,2,2), lty = c(1,1,1,2))
+           legend = c("MSE", "Variance", "Bias^2"),
+           col = c("red", "blue", "darkgreen"),
+           lwd = c(3,2,2), lty = c(1,1,1))
   })
 }
 
