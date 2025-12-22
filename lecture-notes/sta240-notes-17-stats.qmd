@@ -34,27 +34,28 @@ If you continue studying statistics, you'll get there eventually. But for now, l
 
 > Obsered data are the result of a random process. 
 
-By the time the data arrive in our spreadsheet, they are a fixed set of numbers. But how did those numbers get there? Plenty of seemingly random forces might have had their way before you ever got to observe anything:
+By the time the data arrive in our spreadsheet, they are a fixed set of numbers. But how did those numbers get there in the first place? Plenty of seemingly random forces might have had their way before you ever got to observe anything:
 
-- nature's randomness: 
-- human error: 
-- measurement error: 
-- deliberate error
-- 
+- (**nature's randomness**) many of the phenomena we study have an intrinsic random component that is simply irreducible. Think mutations during DNA replication, the quantum behavior of subatomic particles, or the "random walk" in stock prices;
+- (**human error**) data are collected by humans, and humans make mistakes;
+- (**measurement error**) the laboratory devices we use to collect measurements in the sciences are far from perfect;
+- (**study design**) the gold standard for teasing out cause and effect is the randomized controlled trial (RCT) where, *by design*, the researcher randomly divides subjects into treatment and control groups;
+- (**survey non-response**) much of our economic data on unemployment, inflation, and the behavior of firms is collected by survey. Political polls are a type of survey. Course evaluations are a survey. Say you issue a survey to a population of interest, and only 10% of respond? Who are they? Why did they respond? Why did the other 90% abstain? There's a lot of randomness going here, and you need to get your arms around it if you want to interpret the survey results correctly. 
 
-Statisticians have found that it is convenient to use the tolls and language of probability to get a handle on the variation that we observe in real-world data. 
-
-
-This assumption is so foundational to statistics that it often goes unremarked upon and recedes into the background, but it is indeed an assumption. Not every set of numbers you would seek to extract patterns from is random, but this is the first assumption a statistician makes. 
-
-By the time data arrive in our spreadsheet, they are a fixed set of numbers. But how did they get there?
-
-
-We use the language and tools of probability to model *variation*. Even if the variation in our datasets is not literally the result of random forces, it may be convenient to proceed *as if* it is. 
+For all of these reasons and more, it is sensible to regard the numbers in our spreadsheet as the end-result of a complex random process. One of the statistician's goals is to model this process and explain how the data turned out the way they did. Part of this job involves modeling the true underlying science, and another part involves modeling the errors introduced in the measurement process. Tricky stuff!
 
 # Our mathematical model of data analysis
 
-again, iid is an assumption, and it will often be bogus. But we're just starting out. If you can't get a handle on the simple case, 
+Since the data in our spreadsheet are random, we model them on the blackboard as realizations of *random variables*. Y'know, those things we've been studying for two months. To keep it simple, on a first pass we model the data as **independent and identically distributed** (**iid**) from some shared distribution $P_0$:
+
+$$
+X_1,\,X_2,\,X_3,\,...,\,X_{n-1},\,X_n\overset{\text{iid}}{\sim}P_0.
+$$
+
+Again, if you keep studying statistics, you learn how to relax the iid assumption, which is often bogus. 
+
+
+
 
 # Classical statistical inference
 
@@ -65,7 +66,15 @@ again, iid is an assumption, and it will often be bogus. But we're just starting
 
 
 
+Statisticians have found that it is convenient to use the tolls and language of probability to get a handle on the variation that we observe in real-world data. 
 
+
+This assumption is so foundational to statistics that it often goes unremarked upon and recedes into the background, but it is indeed an assumption. Not every set of numbers you would seek to extract patterns from is random, but this is the first assumption a statistician makes. 
+
+By the time data arrive in our spreadsheet, they are a fixed set of numbers. But how did they get there?
+
+
+We use the language and tools of probability to model *variation*. Even if the variation in our datasets is not literally the result of random forces, it may be convenient to proceed *as if* it is. 
 
 In this class, our data will be numerical. 
 
@@ -92,6 +101,8 @@ In American government, there are legislative, judicial, and executive branches.
 
 # Point estimation
 
+## Measuring the quality of an estimator
+
 ::: callout-note 
 ## Definition: risk of an estimator
 
@@ -102,8 +113,73 @@ $$
 
 
 
+## Bias and variance
+
+
 ::: callout-tip
 ## Theorem: bias-variance trade-off
 
 :::
+
+$$
+\begin{aligned}
+\text{MSE}(\hat{\theta}_n,\,\theta)
+&=
+E[(\theta-\hat{\theta}_n)^2]
+\\
+&=
+E[(\underbrace{\theta-E(\hat{\theta}_n)}_{\text{keep together}}+\underbrace{E(\hat{\theta}_n)-\hat{\theta}_n}_{\text{keep together}})^2]
+&&
+\text{add zero}
+\\
+&=
+E\left[\underbrace{(\theta-E(\hat{\theta}_n))^2}_{\text{constant}}+\underbrace{2(\theta-E(\hat{\theta}_n))}_{\text{constant}}\underbrace{(E(\hat{\theta}_n)-\hat{\theta}_n)}_{\text{random}}+\underbrace{(E(\hat{\theta}_n)-\hat{\theta}_n)^2}_{\text{random}}\right]
+&&
+\text{FOIL}
+\\
+&=
+(\theta-E(\hat{\theta}_n))^2+
+2(\theta-E(\hat{\theta}_n))
+E[E(\hat{\theta}_n)-\hat{\theta}_n]
++
+E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
+&&
+\text{linearity}
+\\
+&=
+(\theta-E(\hat{\theta}_n))^2+
+2(\theta-E(\hat{\theta}_n))
+[E(\hat{\theta}_n)-E(\hat{\theta}_n)]
++
+E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
+&&
+\text{linearity again}
+\\
+&=
+(\theta-E(\hat{\theta}_n))^2+
+2(\theta-E(\hat{\theta}_n))
+\cdot
+0
++
+E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
+\\
+&=
+(\theta-E(\hat{\theta}_n))^2
++
+E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
+\\
+&=
+\text{bias}(\hat{\theta}_n,\,\theta)^2
++
+\text{var}(\hat{\theta}_n).
+\end{aligned}
+$$
+
+
+Classic bullseye analogy
+
+
+
+
+
 
