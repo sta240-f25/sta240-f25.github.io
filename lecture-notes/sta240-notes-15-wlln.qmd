@@ -1,0 +1,6 @@
+---
+title: "Weak law of large numbers"
+format: html
+filters:
+  - shinylive
+---
