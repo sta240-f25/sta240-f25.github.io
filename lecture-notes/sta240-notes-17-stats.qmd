@@ -95,13 +95,16 @@ Do these methods actually work? Do they do what we want them to do? Do they deli
 
 In American government, there are legislative, judicial, and executive branches. In music, there is melody, harmony, and rhythm. Similarly, we organize statistical theory into three related areas of inquiry:
 
-1. (point estimation)
-2. (interval estimation)
-3. (hypothesis testing) can the data distinguish between
+1. (**point estimation**)
+2. (**interval estimation**)
+3. (**hypothesis testing**) can the data distinguish between
 
 # Point estimation
 
 ## Measuring the quality of an estimator
+
+Loss functions
+
 
 ::: callout-note 
 ## Definition: risk of an estimator
@@ -113,7 +116,9 @@ $$
 
 
 
-## Bias and variance
+## Mean squared error
+
+
 
 
 ::: callout-tip
@@ -140,7 +145,7 @@ E\left[\underbrace{(\theta-E(\hat{\theta}_n))^2}_{\text{constant}}+\underbrace{2
 &=
 (\theta-E(\hat{\theta}_n))^2+
 2(\theta-E(\hat{\theta}_n))
-E[E(\hat{\theta}_n)-\hat{\theta}_n]
+E\left[E(\hat{\theta}_n)-\hat{\theta}_n\right]
 +
 E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
 &&
@@ -149,7 +154,7 @@ E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
 &=
 (\theta-E(\hat{\theta}_n))^2+
 2(\theta-E(\hat{\theta}_n))
-[E(\hat{\theta}_n)-E(\hat{\theta}_n)]
+\left[E(\hat{\theta}_n)-E(\hat{\theta}_n)\right]
 +
 E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
 &&
