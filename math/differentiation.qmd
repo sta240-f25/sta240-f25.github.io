@@ -31,7 +31,7 @@ As such, the derivative is the continuous analog to a discrete difference.
 | linearity | $h(x)=a\cdot f(x)\pm b\cdot g(x)$ | $h'(x)=a\cdot f'(x)\pm b\cdot g'(x)$ |
 | power | $h(x)=x^n$| $h'(x)=nx^{n-1}$|
 | product |$h(x)=f(x)g(x)$| $h'(x)=f'(x)g(x)+f(x)g'(x)$|
-| quotient |$h(x)=f(x)/g(x)$| $h'(x)=\frac{f'(x)g(x)+f(x)g'(x)}{g(x)^2}$|
+| quotient |$h(x)=f(x)/g(x)$| $h'(x)=\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}$|
 | chain |$h(x)=f(g(x))$| $h'(x)=f'(g(x))g'(x)$|
 | exponential |$h(x)=e^x$| $h'(x)=e^x$|
 | natural log | $h(x)=\ln(x)$| $h'(x)=1/x$|
