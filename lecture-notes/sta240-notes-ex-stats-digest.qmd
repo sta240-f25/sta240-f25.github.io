@@ -17,8 +17,8 @@ a. Once you have the sampling distribution of the estimator, you can compute the
 
 | source | distribution | $\hat{\theta}_n$ | sampling distribution | properties |
 |------|------|------|------|------|
-| [Lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-18-mle-examples.html#example-exponential-distribution) |  $\text{Exponential}(\theta)$    |   $\frac{n}{\sum_{i=1}^nX_i}$   |   $\text{IG}(n,\,n\theta)$   | biased, consistent     |
-| [Lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-18-mle-examples.html#example-midterm-2-strikes-again) |   $\theta(x+1)^{-(\theta+1)}$   |   $\frac{n}{\sum_{i=1}^n\ln(X_i+1)}$   | $\text{IG}(n,\,n\theta)$   | biased, consistent  |
+| [Lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-19-mle-examples.html#example-exponential-distribution) |  $\text{Exponential}(\theta)$    |   $\frac{n}{\sum_{i=1}^nX_i}$   |   $\text{IG}(n,\,n\theta)$   | biased, consistent     |
+| [Lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-19-mle-examples.html#example-midterm-2-strikes-again) |   $\theta(x+1)^{-(\theta+1)}$   |   $\frac{n}{\sum_{i=1}^n\ln(X_i+1)}$   | $\text{IG}(n,\,n\theta)$   | biased, consistent  |
 | [Lab 10](https://sta240-f25.github.io/labs/lab-10.html) |   $\text{Rayleigh}(\theta)$   |  $\frac{1}{2n}\sum\limits_{i=1}^nX_i^2$    |   $\text{Gamma}(n,\,n/\theta)$   |   unbiased, consistent   |
 | [PSET 7](https://sta240-f25.github.io/problems/pset-7.html) |  $\text{N}(0,\,\theta)$    |   $\frac{1}{n}\sum\limits_{i=1}^nX_i^2$   |   $\text{Gamma}(n/2,\,n/2\theta)$   |  unbiased, consistent    |
 | [PSET 7](https://sta240-f25.github.io/problems/pset-7.html) |   $\frac{1}{2\theta}\exp\left(-\frac{|x|}{\theta}\right)$   |   $\frac{1}{n}\sum\limits_{i=1}^n|X_i|$   |  $\text{Gamma}(n,\,n/\theta)$    |  unbiased, consistent    |
@@ -35,7 +35,7 @@ a. Compute the posterior mean and show that it can be rewritten as a convex comb
 
 | source | prior | likelihood | posterior | hyperparameters |
 |------|------|------|------|------|
-| [Lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-19-bayes.pdf) | $\text{Beta}(a_0,\,b_0)$     |   $\text{Bernoulli}(\theta)$   |  $\text{Beta}(a_n,\,b_n)$    |   $$\begin{aligned}a_n&=a_0+\sum_{i=1}^nx_i\\b_n&=b_0+n-\sum_{i=1}^nx_i\end{aligned}$$   |
+| [Lecture](https://sta240-f25.github.io/lecture-notes/sta240-notes-20-bayes.pdf) | $\text{Beta}(a_0,\,b_0)$     |   $\text{Bernoulli}(\theta)$   |  $\text{Beta}(a_n,\,b_n)$    |   $$\begin{aligned}a_n&=a_0+\sum_{i=1}^nx_i\\b_n&=b_0+n-\sum_{i=1}^nx_i\end{aligned}$$   |
 | [Lab 11](https://sta240-f25.github.io/labs/lab-11.html) | $\text{Gamma}(a_0,\,b_0)$ | $\text{Poisson}(\theta)$ | $\text{Gamma}(a_n,\,b_n)$     |   $$\begin{aligned}a_n&=a_0+\sum_{i=1}^nx_i\\b_n&=b_0+n\end{aligned}$$   |
 | [PSET 7](https://sta240-f25.github.io/problems/pset-7.html) | $\text{Gamma}(a_0,\,b_0)$ | $\text{Exponential}(\theta)$ |   $\text{Gamma}(a_n,\,b_n)$   |   $$\begin{aligned}a_n&=a_0+n\\b_n&=b_0+\sum_{i=1}^nx_i\end{aligned}$$   |
 | [PSET 7](https://sta240-f25.github.io/problems/pset-7.html) | $\text{Beta}(a_0,\,b_0)$ | $\text{Geometric}(\theta)$ |  $\text{Beta}(a_n,\,b_n)$    |   $$\begin{aligned}a_n&=a_0+n\\b_n&=b_0-n+\sum_{i=1}^nx_i\end{aligned}$$   |
