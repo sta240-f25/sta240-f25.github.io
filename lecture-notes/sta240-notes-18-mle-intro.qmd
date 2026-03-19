@@ -17,7 +17,7 @@ $$
 X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
 $$
 
-$\theta$ could be any real number, so suffice it to say, there are a lot of possible guesses to choose from. Which is best, and how do we measure that? Every possible value of $\theta$ gives us a different density curve. Here are three possible guesses:
+$\theta$ could be any real number, so suffice it to say, there are a lot of possible guesses to choose from. Which is best, and how do we measure that? Every possible value of $\theta$ gives us a different density curve. Here are four possible guesses:
 
 ```{r}
 #| echo: false
@@ -55,7 +55,7 @@ points(X, numeric(n), col = "red", pch = 19, cex = 0.75)
 }
 ```
 
-We can probably agree that $\theta = 2$ is best guess among these options. Why? Because that curve assigns the highest density to the data we actually saw (the red dots on the number line). Notice that in each picture, the data are the same. The observations are the observations. The numbers in the your spreadsheet don't change. What changes is our guess at $\theta$ and the associated curve. The goal of estimation is to search through all possible values of $\theta$ and find the one that gives the best fitting curve. How do we measure "best fitting"? We look at the density that the curve assigns to all the data points. Revisiting the cartoons above, for a given choice of $\theta$, each observation $X_i$ has a density value $f(X_i;\,\theta)$ associated with it, and this corresponds to the vertical gap on the picture:
+We can probably agree that $\theta = 2$ is the best guess among these options. Why? Because that curve assigns the highest density to the data we actually saw (the red dots on the number line). Notice that in each picture, the data are the same. The observations are the observations. The numbers in the your spreadsheet don't change. What changes is our guess at $\theta$ and the associated curve. The goal of estimation is to search through all possible values of $\theta$ and find the one that gives the best fitting curve. How do we measure "best fitting"? We look at the density that the curve assigns to all the data points. Revisiting the cartoons above, for a given choice of $\theta$, each observation $X_i$ has a density value $f(X_i;\,\theta)$ associated with it, and this corresponds to the vertical gap on the picture:
 
 ```{r}
 #| echo: false
@@ -408,7 +408,7 @@ If you take a course in statistical theory like STA 332, you learn that the maxi
 - The MLE is consistent:
 - The MLE is asymptotically normal, which allows you to compute approximate confidence intervals.
 
-The MLE may or may not be biased. It depends on the distribution family you are working with, because the estimator is consistet, whatever bias there is will eventually go away as you collect more data. How fast? It depends. Welcome to statistical theory!
+The MLE may or may not be biased. It depends on the distribution family you are working with. Because the estimator is consistent, whatever bias there is will eventually go away as you collect more data. How fast will the bias go away? It depends. Welcome to statistical theory!
 :::
 
 
