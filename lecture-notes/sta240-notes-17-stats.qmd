@@ -342,6 +342,19 @@ E(\hat{\theta}_n)&=\theta\\
 \end{aligned}
 $$
 
+So already, we see that the sample proportion is unbiased: $\text{bias}(\hat{\theta}_n,\,\theta)=E(\hat{\theta}_n)-\theta=\theta-\theta=0$. As such, $\text{MSE}(\hat{\theta}_n,\,\theta)=\text{var}(\hat{\theta}_n)=\theta(1-\theta)/n\to0$ as $n\to\infty$, so the estimator is consistent as well.
+
+That's a great start already, but we can go further and characterize the entire sampling distribution exactly for any $n$. We know that $X_i\sim \text{Bern}(\theta)$ and $\hat{\theta}_n=\frac{1}{n}\sum\limits_{i=1}^nX_i$. Since $\sum\limits_{i=1}^nX_i\sim\text{Binom}(n,\,p)$, $\hat{\theta}_n$ is just a "rescaled" binomial with:
+
+$$
+\begin{aligned}
+\text{Range}(\hat{\theta}_n)&=\left\{\frac{0}{n}=0,\,\frac{1}{n},\,\frac{2}{n},\,...,\,\frac{n-1}{n},\,\frac{n}{n}=1\right\}\\
+P\left(\hat{\theta}_n=\frac{k}{n}\right)&=\binom{n}{k}\theta^k(1-\theta)^{n-k}.
+\end{aligned}
+$$
+
+This is visualized below, where you can see the unbiasedness and the consistency with the naked eye:
+
 
 ```{shinylive-r}
 #| standalone: true
