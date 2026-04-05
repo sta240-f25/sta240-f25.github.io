@@ -68,12 +68,12 @@ $$
 
 Here, $f$ is generic notation for *either* a PMF or PDF, and $\theta$ is generic notation for the *finite* set of parameters that govern the distribution. Here are some of the examples we have seen:
 
-- The Bernoulli family has $\theta=p$;
-- The Poisson family has $\theta=\lambda$;
-- The normal family has $\theta=(\mu,\,\sigma^2)$;
-- The gamma family has $\theta=(\alpha,\,\beta)$.
+- The Bernoulli family has the probability of success $\theta=p$;
+- The Poisson family has the rate $\theta=\lambda$;
+- The normal family has the mean and variance $\theta=(\mu,\,\sigma^2)$;
+- The gamma family has the shape and rate $\theta=(\alpha,\,\beta)$.
 
-If you're willing to swallow the parametric assumption, the goal of statistical inference becomes "use the data to learn the value of the unknown parameter $\theta$." Furthermore, statisticians want to *quantify uncertainty* about what we've learned from the data, not just produce a good guess and call it a day.
+If you're willing to swallow the parametric assumption, the goal of statistical inference becomes "use the data to learn the value of the unknown parameter $\theta$." As soon as you know the parameters, you know the entire distribution. Furthermore, statisticians want to *quantify uncertainty* about what we've learned from the data, not just produce a good guess and call it a day.
 
 
 To be clear from the very outset, the "true" data-generating distribution is seldom if ever literally a member of one of our special parametric families, but as a simplifying assumption, this leap of faith may be "close enough" for practical purposes. If you remain skeptical, I encourage you to dive into the beautiful area of [*nonparametric* statistics](https://doi.org/10.1007/0-387-30623-4) where we do *not* make strong (and often unrealistic) parametric assumptions about $P$. 
@@ -103,6 +103,13 @@ $$
 ::: callout-note 
 ## Definition: estimator
 
+An **estimator** is a rule that takes in data and outputs a best guess at some quantity of interest. Formally, an estimator could be any transformation of the observations:
+
+$$
+\hat{\theta}_n=\hat{\theta}(X_1,\,X_2,\,...,\,X_n).
+$$
+
+So, in go data, out pops a guess. The notation is deliberate. Our generic notation for the **estimand** (the true but unknown quantity we seek to estimate) will be $\theta$, so $\hat{\theta}$ will be our generic notation for an estimator that targets that quantity. The subscript-$n$ reminds us what sample size our estimate is based on, which will be an important consideration.
 
 :::
 
@@ -254,15 +261,28 @@ E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
 $$
 :::
 
-Bias is this and variance is this. accuracy and precision.
-
-
-The BV tradefoff says that if we want overall MSE to be low, we want both to be low, 
+Bias refers to how accurate the estimator is on average. If the estimator is "correct" on average and $E(\hat{\theta}_n)=\theta$, then $\text{bias}(\hat{\theta}_n,\,\theta)=0$ and we call the estimator **unbiased**. This would seem to be a good property in and of itself, but if our goal is for *overall* MSE to be as low as possible, the above result shows us that bias is only a part of the story. We must also consider the variance of the estimator. If bias is like the "accuracy" of an estimator and its variance is like the inverse of its precision, then then lesson of the bias-variance decomposition is illustrated with the classic bullseye analogy displayed in @fig-bullseye.
 
 
 ![Accuracy is synonymous with bias here, and precision is the inverse of variance. We want our estimator to nail it on both counts, but sometimes we are willing to trade-off one for the other if it makes the overall MSE lower.](images/accuracy-precision.svg){#fig-bullseye fig-align="center" width="60%"}
 
+The result in this section is referred to as the bias-variance *tradeoff* because in practice, we will sometimes find ourselves tolerating a little bit of bias for a reduction in variance that makes the overall MSE smaller than if we had restricted ourselves to purely unbiased estimators. This opens up a whole kettle of worms involving topics like **shrinkage** and **regularization**. Fun stuff for another day!
+
+::: callout-note
+## Definition: consistency
+
+If $\text{MSE}(\hat{\theta}_n,\,\theta)\to 0$ as $n\to\infty$, then we say that an estimator is **consistent**. In order to be consistent, an estimators bias and variance must both go to zero as the sample size increases. If the estimator is already unbiased, then consistency is guaranteed if the variance goes to 0. 
+
+:::
+
+When it comes to point estimation, this is the ultimate sanity check. If we had *infinite* data, would our estimator recover the truth? If the answer is no, then wut wut wut are we doing? An estimator should *at least* be consistent. But if the answer is yes, this isn't the slam dunk it may seen like. Consistency is an *asymptotic* property. It tells us what happens if we have infinite data. But we never actually have infinite data. We have a finite set of observations. If an estimator is consistent but the rate of convergence is very slow, then that somewhat curbs our enthusiasm for it.
+
+
 # Interval estimation
+
+If I had to boil statistics down to the one main idea that distinguishes it from adjacent fields, I would say that statistics is uniquely focused on the quantification of uncertainty to help make decisions. As such, we are not content to simply construct a single number best guess for an unknown quantity. We also want to construct a range that communicates uncertainty. If the data give us a wide range, then uncertainty is high. If the data give us a small range, then uncertainty is low. At the crudest level of abstraction, that's basically it.
+
+
 
 # Example: Bernoulli data (coin flip)
 
@@ -360,7 +380,124 @@ shinyApp(ui, server)
 
 ### Review: standard normal quantiles
 
+Let $Z\sim\text{N}(0,\,1)$. This means that 
+
+
+$$
+\begin{aligned}
+f_Z(z)&=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}z^2\right), && -\infty<z<\infty\\
+F_Z(t)&=P(Z\leq z)\\
+&=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^z\exp\left(-\frac{1}{2}t^2\right), && -\infty<z<\infty.
+\end{aligned}
+$$
+
+Use $z(p)=F_Z^{-1}(p)$ to denote the quantile function (ie the inverse cdf) of the standard normal. Some of its values are kinda famous: $z(1/2)=0$, $z(0.95)\approx 1.645$, $z(0.975)\approx 1.96$, etc. For $p>1/2$, $z(p)>0$, and so by symmetry of the bell curve about zero,
+
+$$
+\begin{aligned}
+P\left(-z(p)<Z<z(p)\right)
+&=
+F_Z(z(p))-F_Z(-z(p))
+\\
+&=
+F_Z(z(p))-[1-F_Z(z(p))]
+\\
+&=
+F_Z(F_Z^{-1}(p))-[1-F_Z(F_Z^{-1}(p))]
+\\
+&=
+p-(1-p)
+\\
+&=
+2p-1
+.
+\end{aligned}
+$$
+
+Here's the picture:
+
+```{r}
+#| echo: false
+
+zp <- 1.5
+
+curve(dnorm(x), from = -4, to = 4, n = 1000, bty = "n", yaxt = "n", ylab = "", xaxt = "n", xlab = "", yaxs = "i", col = "blue")
+axis(1, at = c(-4, -zp, 0, zp, 4), labels = c(NA, "-z(p)", "0", "z(p)", NA))
+abline(v = c(-zp, zp), lty = 2)
+text(0, dnorm(0) / 2, "2p - 1")
+text(1.2 * zp, dnorm(1.2 * zp) / 2, "1 - p")
+text(-1.2 * zp, dnorm(1.2 * zp) / 2, "1 - p")
+```
+
+So, if we have $\alpha>1/2$, and we seek lower and upper bounds that swallow the middle $1-\alpha$ of the density and place $\alpha/2$ in either tail, we can take $\pm z(1-\alpha/2)$, because 
+
+$$
+2(1-\alpha/2)-1=2-\alpha+1=1-\alpha,
+$$
+
+and so $P(-z(1-\alpha/2) < Z < z(1-\alpha/2))=1-\alpha$. Again:
+
+```{r}
+#| echo: false
+
+zp <- 1.5
+
+curve(dnorm(x), from = -4, to = 4, n = 1000, bty = "n", yaxt = "n", ylab = "", xaxt = "n", xlab = "", yaxs = "i", col = "blue")
+axis(1, at = c(-4, -zp, 0, zp, 4), labels = c(NA, "-z(1 - α/2)", "0", "z(1 - α/2)", NA))
+abline(v = c(-zp, zp), lty = 2)
+text(0, dnorm(0) / 2, "1 - α")
+text(1.2 * zp, dnorm(1.2 * zp) / 2, "α / 2")
+text(-1.2 * zp, dnorm(1.2 * zp) / 2, "α / 2")
+```
+
 
 ### Large sample confidence interval
+
+Since our estimator $\hat{\theta}_n$ is the average of iid random variables $X_i$ with finite mean $\theta$ and variance $\theta(1-\theta)$, the [central limit theorem](/lecture-notes/sta240-notes-16-clt.html) guarantees that 
+
+$$
+\frac{\hat{\theta}_n-\theta}{\sqrt{\theta(1-\theta)/n}}\overset{d}{\to}\text{N}(0,\,1).
+$$
+
+Furthermore, if you take a class like STA 332, you learn that this remains true if you replace the true but unknown $\theta$ in the denominator with the estimator. So
+
+$$
+\frac{\hat{\theta}_n-\theta}{\sqrt{\hat{\theta}_n(1-\hat{\theta}_n)/n}}\overset{d}{\to}\text{N}(0,\,1).
+$$
+
+Note that this is *not* what the central limit theorem says off the shelf. This is a new result that you have to work to prove. But for now we will take it for granted and use it to derive an approximate confidence interval for $\theta$.
+
+Practically speaking, these results give us permission to use N(0, 1) to approximate the distribution of the random variable on the left, provided $n$ is sufficiently large that the theorem has "kicked in." If the approximation is good, it means that we can use the results from the previous section to say that:
+
+$$
+P\left(-z\left(1-\frac{\alpha}{2}\right)<\frac{\hat{\theta}_n-\theta}{\sqrt{\hat{\theta}_n(1-\hat{\theta}_n)/n}}<z\left(1-\frac{\alpha}{2}\right)\right)\approx 1 - \alpha,\quad \alpha>1/2.
+$$
+
+By doing some itchy algebra, we can rewrite this statement in the form $P(L_n<\theta<U_n)\approx 1-\alpha$, which is exactly what we want for a confidence interval:
+
+$$
+\begin{aligned}
+1-\alpha
+&\approx
+P\left(-z\left(1-\frac{\alpha}{2}\right)<\frac{\hat{\theta}_n-\theta}{\sqrt{\hat{\theta}_n(1-\hat{\theta}_n)/n}}<z\left(1-\frac{\alpha}{2}\right)\right)
+\\
+&=
+P\left(-z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}<\hat{\theta}_n-\theta<z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}\right)
+\\
+&=
+P\left(-\hat{\theta}_n-z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}<-\theta<-\hat{\theta}_n+z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}\right)
+\\
+&=
+P\left(\hat{\theta}_n+z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}>\theta>\hat{\theta}_n-z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}\right)
+\\
+&=
+P\left(\hat{\theta}_n-z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}<\theta<\hat{\theta}_n+z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}\right)
+.
+\end{aligned}
+$$
+
+So, if we take $L_n=\hat{\theta}_n-z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}$ and $U_n=\hat{\theta}_n+z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}$, we get an interval satisfying $P(L_n<\theta<U_n)\approx 1-\alpha$ for sufficiently large $n$.
+
+
 
 
