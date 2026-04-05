@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Introduction to the theory of statistics – STA 240 Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
@@ -21,7 +18,6 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -43,8 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/load-shinylive-sw.js" type="module"></script>
 <script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/run-python-blocks.js" type="module"></script>
 <link href="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/shinylive.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -70,12 +65,7 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -101,7 +91,6 @@ window.Quarto = {
   typesetMath
 };
 </script>
-
 <meta property="og:title" content="Introduction to the theory of statistics – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
 <meta property="og:image" content="https://sta240-f25.github.io/lecture-notes/images/birth-weight-hist.png">
@@ -109,13 +98,10 @@ window.Quarto = {
 <meta property="og:image:height" content="758">
 <meta property="og:image:width" content="1376">
 </head>
-
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -126,16 +112,11 @@ window.Quarto = {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://go.canvas.duke.edu/" title="Canvas" class="quarto-navigation-tool px-1" aria-label="Canvas"><i class="bi bi-megaphone"></i></a>
@@ -150,7 +131,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -158,8 +139,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -202,7 +183,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -211,8 +192,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../math/greeks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Greek alphabet</span></a>
@@ -261,7 +242,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -270,8 +251,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../explainers/setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting started</span></a>
@@ -368,7 +349,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -377,8 +358,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../distributions/discrete-binomial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Binomial</span></a>
@@ -433,7 +414,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
@@ -442,8 +423,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/pset-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Problem Set 0</span></a>
@@ -492,7 +473,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
@@ -501,8 +482,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
@@ -569,7 +550,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
@@ -578,8 +559,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../problems/exam-midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
@@ -598,47 +579,49 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#babys-first-dataset" id="toc-babys-first-dataset" class="nav-link active" data-scroll-target="#babys-first-dataset">Baby’s first dataset</a></li>
+<li><a href="#babys-first-dataset" id="toc-babys-first-dataset" class="nav-link active" data-scroll-target="#babys-first-dataset">Baby’s first dataset</a></li>
   <li><a href="#the-implicit-assumption-of-all-statistics" id="toc-the-implicit-assumption-of-all-statistics" class="nav-link" data-scroll-target="#the-implicit-assumption-of-all-statistics">The implicit assumption of all statistics</a></li>
-  <li><a href="#classical-statistical-inference" id="toc-classical-statistical-inference" class="nav-link" data-scroll-target="#classical-statistical-inference">Classical statistical inference</a>
+  <li>
+<a href="#classical-statistical-inference" id="toc-classical-statistical-inference" class="nav-link" data-scroll-target="#classical-statistical-inference">Classical statistical inference</a>
   <ul class="collapse">
-  <li><a href="#parametric-statistics" id="toc-parametric-statistics" class="nav-link" data-scroll-target="#parametric-statistics">Parametric statistics</a></li>
+<li><a href="#parametric-statistics" id="toc-parametric-statistics" class="nav-link" data-scroll-target="#parametric-statistics">Parametric statistics</a></li>
   <li><a href="#threes-company" id="toc-threes-company" class="nav-link" data-scroll-target="#threes-company">Three’s Company</a></li>
-  </ul></li>
-  <li><a href="#point-estimation" id="toc-point-estimation" class="nav-link" data-scroll-target="#point-estimation">Point estimation</a>
-  <ul class="collapse">
-  <li><a href="#measuring-the-quality-of-an-estimator" id="toc-measuring-the-quality-of-an-estimator" class="nav-link" data-scroll-target="#measuring-the-quality-of-an-estimator">Measuring the quality of an estimator</a></li>
-  <li><a href="#mean-squared-error" id="toc-mean-squared-error" class="nav-link" data-scroll-target="#mean-squared-error">Mean squared error</a></li>
-  </ul></li>
-  <li><a href="#interval-estimation" id="toc-interval-estimation" class="nav-link" data-scroll-target="#interval-estimation">Interval estimation</a></li>
-  <li><a href="#example-bernoulli-data-coin-flip" id="toc-example-bernoulli-data-coin-flip" class="nav-link" data-scroll-target="#example-bernoulli-data-coin-flip">Example: Bernoulli data (coin flip)</a>
-  <ul class="collapse">
-  <li><a href="#point-estimation-1" id="toc-point-estimation-1" class="nav-link" data-scroll-target="#point-estimation-1">Point estimation</a></li>
-  <li><a href="#interval-estimation-1" id="toc-interval-estimation-1" class="nav-link" data-scroll-target="#interval-estimation-1">Interval estimation</a>
-  <ul class="collapse">
-  <li><a href="#review-standard-normal-quantiles" id="toc-review-standard-normal-quantiles" class="nav-link" data-scroll-target="#review-standard-normal-quantiles">Review: standard normal quantiles</a></li>
-  <li><a href="#large-sample-confidence-interval" id="toc-large-sample-confidence-interval" class="nav-link" data-scroll-target="#large-sample-confidence-interval">Large sample confidence interval</a></li>
-  </ul></li>
-  </ul></li>
   </ul>
-</nav>
+</li>
+  <li>
+<a href="#point-estimation" id="toc-point-estimation" class="nav-link" data-scroll-target="#point-estimation">Point estimation</a>
+  <ul class="collapse">
+<li><a href="#measuring-the-quality-of-an-estimator" id="toc-measuring-the-quality-of-an-estimator" class="nav-link" data-scroll-target="#measuring-the-quality-of-an-estimator">Measuring the quality of an estimator</a></li>
+  <li><a href="#mean-squared-error" id="toc-mean-squared-error" class="nav-link" data-scroll-target="#mean-squared-error">Mean squared error</a></li>
+  </ul>
+</li>
+  <li><a href="#interval-estimation" id="toc-interval-estimation" class="nav-link" data-scroll-target="#interval-estimation">Interval estimation</a></li>
+  <li>
+<a href="#example-bernoulli-data-coin-flip" id="toc-example-bernoulli-data-coin-flip" class="nav-link" data-scroll-target="#example-bernoulli-data-coin-flip">Example: Bernoulli data (coin flip)</a>
+  <ul class="collapse">
+<li><a href="#point-estimation-1" id="toc-point-estimation-1" class="nav-link" data-scroll-target="#point-estimation-1">Point estimation</a></li>
+  <li>
+<a href="#interval-estimation-1" id="toc-interval-estimation-1" class="nav-link" data-scroll-target="#interval-estimation-1">Interval estimation</a>
+  <ul class="collapse">
+<li><a href="#review-standard-normal-quantiles" id="toc-review-standard-normal-quantiles" class="nav-link" data-scroll-target="#review-standard-normal-quantiles">Review: standard normal quantiles</a></li>
+  <li><a href="#large-sample-confidence-interval" id="toc-large-sample-confidence-interval" class="nav-link" data-scroll-target="#large-sample-confidence-interval">Large sample confidence interval</a></li>
+  </ul>
+</li>
+  </ul>
+</li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">Introduction to the theory of statistics</h1>
 </div>
 
@@ -653,10 +636,7 @@ window.Quarto = {
   
 
 
-</header>
-
-
-<p>Imagine you work at a hospital. Dozens of babies are delivered in the hospital each week. A lot of information is collected about each birth, and hiding inside of these data is a lot of useful information about the health and future of the community. How can we extract it? If you take classes like STA 101 or 199, you learn various methods:</p>
+</header><p>Imagine you work at a hospital. Dozens of babies are delivered in the hospital each week. A lot of information is collected about each birth, and hiding inside of these data is a lot of useful information about the health and future of the community. How can we extract it? If you take classes like STA 101 or 199, you learn various methods:</p>
 <div class="center-table-75">
 <table class="caption-top table">
 <colgroup>
@@ -664,13 +644,11 @@ window.Quarto = {
 <col style="width: 20%">
 <col style="width: 40%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>Question</th>
 <th>Method</th>
 <th>Cartoon</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>How are birth weights distributed?</td>
@@ -691,19 +669,15 @@ window.Quarto = {
 </table>
 </div>
 <p>In general, the goal of <em>data science</em> is to convert data into knowledge, and we perform this “conversion” by applying statistical methods: histogram, sample average, line of best fit, etc. A <em>mathematical statistician</em> looks at these methods and wonders: do they actually work? Do they behave the way we expect? Do they deliver what they promise? Are they reliable? How reliable? Under what conditions? And before we can answer these questions, we have to back up and ask a more fundamental one: what does it even <em>mean</em> for a statistical method to “work”? These are all theoretical questions, and mathematical statisticians answer them using the tools of probability theory that we have studied for the last twelve weeks.</p>
-<section id="babys-first-dataset" class="level1">
-<h1>Baby’s first dataset</h1>
+<section id="babys-first-dataset" class="level1"><h1>Baby’s first dataset</h1>
 <p>For us, a data set will be a spreadsheet with one column of numbers:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/baby-spreadsheet.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure"><p><img src="images/baby-spreadsheet.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>Of course, in the modern era, datasets are huge. There could be millions of columns. There could be so many columns and rows that you can’t fit the entire dataset on a single computer (so-called “big data”). Furthermore, modern datasets are weird. It’s not just a box of numbers anymore. Text is data. Images are data. Video is data. Sometimes all at once.</p>
 <p>If you continue studying statistics, you’ll get there eventually. But for now, let’s keep it simple.</p>
-</section>
-<section id="the-implicit-assumption-of-all-statistics" class="level1">
-<h1>The implicit assumption of all statistics</h1>
+</section><section id="the-implicit-assumption-of-all-statistics" class="level1"><h1>The implicit assumption of all statistics</h1>
 <blockquote class="blockquote">
 <p>Obsered data are the result of a random process.</p>
 </blockquote>
@@ -716,33 +690,28 @@ window.Quarto = {
 <li>(<strong>survey non-response</strong>) much of our economic data on unemployment, inflation, and the behavior of firms is collected by survey. Political polls are a type of survey. Course evaluations are a survey. Say you issue a survey to a population of interest, and only 10% of respond? Who are they? Why did they respond? Why did the other 90% abstain? There’s a lot of randomness going on here, and you need to get your arms around it if you want to interpret the survey results correctly.</li>
 </ul>
 <p>For all of these reasons and more, it is sensible to regard the numbers in our spreadsheet as the end-result of a complex random process. One of the statistician’s goals is to model this process and explain how the data turned out the way they did. Part of this job involves modeling the true underlying science, and another part involves modeling the errors introduced in the measurement process. Tricky stuff!</p>
-</section>
-<section id="classical-statistical-inference" class="level1">
-<h1>Classical statistical inference</h1>
+</section><section id="classical-statistical-inference" class="level1"><h1>Classical statistical inference</h1>
 <p>Since the data in our spreadsheet are the result of a random process, we model them on the blackboard as realizations of <em>random variables</em>. Y’know, those things we’ve been studying for two months. To keep it simple, on a first pass we model the data as <strong>independent and identically distributed</strong> (<strong>iid</strong>) from some shared distribution <span class="math inline">\(P\)</span>:</p>
 <p><span class="math display">\[
 X_1,\,X_2,\,X_3,\,...,\,X_{n-1},\,X_n\overset{\text{iid}}{\sim}P.
 \]</span></p>
 <p>If you keep studying statistics, you learn how to relax the iid assumption, which is often bogus.</p>
 <p>The main idea of statistics is that we have no clue what the distribution <span class="math inline">\(P\)</span> is that governs the data. All we have access to are realizations of the <span class="math inline">\(X_i\)</span>, and we need to use these to try to reverse engineer <span class="math inline">\(P\)</span>. Contrast this with probability. When we were doing probability, <span class="math inline">\(P\)</span> was always known. Every problem thus far has begun with a statement that is equivalent to: “Assume <span class="math inline">\(P\)</span> is…” You were <em>told</em> what the distribution was, and then you did some math that reasoned from that assumption to a conclusion about the behavior of <span class="math inline">\(X\)</span>: its mean, median, variance, mgf, how to sample it, etc. In statistics, the situation is exactly reversed: given examples of data generated from <span class="math inline">\(P\)</span>, can you figure out what <span class="math inline">\(P\)</span> is? As I warned you on the <a href="../slides/2025-08-25-welcome.html#/inverse-problems-are-tricky">first day of class</a>, this task is much less straightforward than probability, so gird your loins!</p>
-<section id="parametric-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="parametric-statistics">Parametric statistics</h2>
+<section id="parametric-statistics" class="level2"><h2 class="anchored" data-anchor-id="parametric-statistics">Parametric statistics</h2>
 <p>In principle, <span class="math inline">\(P\)</span> could be literally any probability distribution under the sun. That makes searching for the right one quite daunting. To simplify life, we often make the <em>extra</em> assumption that the unknown <span class="math inline">\(P\)</span> belongs to some convenient <strong>parametric family</strong> of distributions, such as the binomial, Poisson, normal, etc:</p>
 <p><span class="math display">\[
 X_1,\,X_2,\,X_3,\,...,\,X_{n-1},\,X_n\overset{\text{iid}}{\sim}f_{\theta}.
 \]</span></p>
 <p>Here, <span class="math inline">\(f\)</span> is generic notation for <em>either</em> a PMF or PDF, and <span class="math inline">\(\theta\)</span> is generic notation for the <em>finite</em> set of parameters that govern the distribution. Here are some of the examples we have seen:</p>
 <ul>
-<li>The Bernoulli family has <span class="math inline">\(\theta=p\)</span>;</li>
-<li>The Poisson family has <span class="math inline">\(\theta=\lambda\)</span>;</li>
-<li>The normal family has <span class="math inline">\(\theta=(\mu,\,\sigma^2)\)</span>;</li>
-<li>The gamma family has <span class="math inline">\(\theta=(\alpha,\,\beta)\)</span>.</li>
+<li>The Bernoulli family has the probability of success <span class="math inline">\(\theta=p\)</span>;</li>
+<li>The Poisson family has the rate <span class="math inline">\(\theta=\lambda\)</span>;</li>
+<li>The normal family has the mean and variance <span class="math inline">\(\theta=(\mu,\,\sigma^2)\)</span>;</li>
+<li>The gamma family has the shape and rate <span class="math inline">\(\theta=(\alpha,\,\beta)\)</span>.</li>
 </ul>
-<p>If you’re willing to swallow the parametric assumption, the goal of statistical inference becomes “use the data to learn the value of the unknown parameter <span class="math inline">\(\theta\)</span>.” Furthermore, statisticians want to <em>quantify uncertainty</em> about what we’ve learned from the data, not just produce a good guess and call it a day.</p>
+<p>If you’re willing to swallow the parametric assumption, the goal of statistical inference becomes “use the data to learn the value of the unknown parameter <span class="math inline">\(\theta\)</span>.” As soon as you know the parameters, you know the entire distribution. Furthermore, statisticians want to <em>quantify uncertainty</em> about what we’ve learned from the data, not just produce a good guess and call it a day.</p>
 <p>To be clear from the very outset, the “true” data-generating distribution is seldom if ever literally a member of one of our special parametric families, but as a simplifying assumption, this leap of faith may be “close enough” for practical purposes. If you remain skeptical, I encourage you to dive into the beautiful area of <a href="https://doi.org/10.1007/0-387-30623-4"><em>nonparametric</em> statistics</a> where we do <em>not</em> make strong (and often unrealistic) parametric assumptions about <span class="math inline">\(P\)</span>.</p>
-</section>
-<section id="threes-company" class="level2">
-<h2 class="anchored" data-anchor-id="threes-company">Three’s Company</h2>
+</section><section id="threes-company" class="level2"><h2 class="anchored" data-anchor-id="threes-company">Three’s Company</h2>
 <p>The Catholics have the Father, the Son, and the Holy Spirit. American government has legislative, judicial, and executive branches. Music has melody, harmony, and rhythm. Similarly, we organize classical parametric statistical theory into three related areas of inquiry:</p>
 <ol type="1">
 <li>(<strong>point estimation</strong>) what is our single number best guess at the unknown parameter?</li>
@@ -750,10 +719,7 @@ X_1,\,X_2,\,X_3,\,...,\,X_{n-1},\,X_n\overset{\text{iid}}{\sim}f_{\theta}.
 <li>(<strong>hypothesis testing</strong>) can the data distinguish between competing claims about the unknown parameter?</li>
 </ol>
 <p>With the short time we have left, we will discuss the first two and defer the third to STA 332. Hypothesis testing turns out to be a surprisingly controversial topic. Spicy!</p>
-</section>
-</section>
-<section id="point-estimation" class="level1">
-<h1>Point estimation</h1>
+</section></section><section id="point-estimation" class="level1"><h1>Point estimation</h1>
 <p><span class="math display">\[
 X_1,\,X_2,\,X_3,\,...,\,X_{n-1},\,X_n\overset{\text{iid}}{\sim}f_{\theta}.
 \]</span></p>
@@ -767,7 +733,11 @@ Definition: estimator
 </div>
 </div>
 <div class="callout-body-container callout-body">
-
+<p>An <strong>estimator</strong> is a rule that takes in data and outputs a best guess at some quantity of interest. Formally, an estimator could be any transformation of the observations:</p>
+<p><span class="math display">\[
+\hat{\theta}_n=\hat{\theta}(X_1,\,X_2,\,...,\,X_n).
+\]</span></p>
+<p>So, in go data, out pops a guess. The notation is deliberate. Our generic notation for the <strong>estimand</strong> (the true but unknown quantity we seek to estimate) will be <span class="math inline">\(\theta\)</span>, so <span class="math inline">\(\hat{\theta}\)</span> will be our generic notation for an estimator that targets that quantity. The subscript-<span class="math inline">\(n\)</span> reminds us what sample size our estimate is based on, which will be an important consideration.</p>
 </div>
 </div>
 <p>The main idea of <em>classical</em> statistics is that, since the data are random variables and the estimator is a function of the data, the estimator is a random variable as well. So it has its own distribution which we call the <strong>sampling distribution</strong> of the estimator. If we want to understand how the estimator behaves and whether or not it is “good,” we need to understand the properties of its sampling distribution. For example:</p>
@@ -777,8 +747,7 @@ Definition: estimator
 <li>(<strong>consistency</strong>) As we collect more and more data, does the estimator get closer and closer to the truth? That is, does <span class="math inline">\(\hat{\theta}_n\to\theta\)</span> as <span class="math inline">\(n\to\infty\)</span>? If not, then what the hell are we even doing? If so, how fast is the convergence?</li>
 </ul>
 <p>To investigate these properties, we need all of the tools of probability theory that we’ve been developing this semester.</p>
-<section id="measuring-the-quality-of-an-estimator" class="level2">
-<h2 class="anchored" data-anchor-id="measuring-the-quality-of-an-estimator">Measuring the quality of an estimator</h2>
+<section id="measuring-the-quality-of-an-estimator" class="level2"><h2 class="anchored" data-anchor-id="measuring-the-quality-of-an-estimator">Measuring the quality of an estimator</h2>
 <p>In the crudest possible terms, an estimator <span class="math inline">\(\hat{\theta}_n\)</span> is good if it is close to the true value of the unknown parameter <span class="math inline">\(\theta\)</span>. To assess this, we choose a <strong>loss function</strong> <span class="math inline">\(L(\hat{\theta}_n,\,\theta)\)</span> that measures the discrepancy between the estimator and the truth. Examples include:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -810,9 +779,7 @@ R(\hat{\theta}_n,\,\theta) = E[L(\hat{\theta}_n,\,\theta)]
 <p>The expected value is taken with respect to the sampling distribution of the estimator <span class="math inline">\(\hat{\theta}_n\)</span>, and the true but unknown value of the parameter <span class="math inline">\(\theta\)</span> is everywhere treated as a constant.</p>
 </div>
 </div>
-</section>
-<section id="mean-squared-error" class="level2">
-<h2 class="anchored" data-anchor-id="mean-squared-error">Mean squared error</h2>
+</section><section id="mean-squared-error" class="level2"><h2 class="anchored" data-anchor-id="mean-squared-error">Mean squared error</h2>
 <p>For the rest of the semester, we will focus on the example of squared error loss, mainly because it is convenient mathematically (<span class="math inline">\(x^2\)</span> is differentiable while <span class="math inline">\(|x|\)</span> is not). The risk associated with this loss gets a special name:</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -928,25 +895,39 @@ E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
 </div>
 </div>
 </div>
-<p>Bias is this and variance is this. accuracy and precision.</p>
-<p>The BV tradefoff says that if we want overall MSE to be low, we want both to be low,</p>
+<p>Bias refers to how accurate the estimator is on average. If the estimator is “correct” on average and <span class="math inline">\(E(\hat{\theta}_n)=\theta\)</span>, then <span class="math inline">\(\text{bias}(\hat{\theta}_n,\,\theta)=0\)</span> and we call the estimator <strong>unbiased</strong>. This would seem to be a good property in and of itself, but if our goal is for <em>overall</em> MSE to be as low as possible, the above result shows us that bias is only a part of the story. We must also consider the variance of the estimator. If bias is like the “accuracy” of an estimator and its variance is like the inverse of its precision, then then lesson of the bias-variance decomposition is illustrated with the classic bullseye analogy displayed in <a href="#fig-bullseye" class="quarto-xref">Figure&nbsp;1</a>.</p>
 <div id="fig-bullseye" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-bullseye-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bullseye-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/accuracy-precision.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bullseye-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Accuracy is synonymous with bias here, and precision is the inverse of variance. We want our estimator to nail it on both counts, but sometimes we are willing to trade-off one for the other if it makes the overall MSE lower.
-</figcaption>
-</figure>
+</figcaption></figure>
 </div>
-</section>
-</section>
-<section id="interval-estimation" class="level1">
-<h1>Interval estimation</h1>
-</section>
-<section id="example-bernoulli-data-coin-flip" class="level1">
-<h1>Example: Bernoulli data (coin flip)</h1>
+<p>The result in this section is referred to as the bias-variance <em>tradeoff</em> because in practice, we will sometimes find ourselves tolerating a little bit of bias for a reduction in variance that makes the overall MSE smaller than if we had restricted ourselves to purely unbiased estimators. This opens up a whole kettle of worms involving topics like <strong>shrinkage</strong> and <strong>regularization</strong>. Fun stuff for another day!</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition: consistency
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If <span class="math inline">\(\text{MSE}(\hat{\theta}_n,\,\theta)\to 0\)</span> as <span class="math inline">\(n\to\infty\)</span>, then we say that an estimator is <strong>consistent</strong>. In order to be consistent, an estimators bias and variance must both go to zero as the sample size increases. If the estimator is already unbiased, then consistency is guaranteed if the variance goes to 0.</p>
+</div>
+</div>
+<p>When it comes to point estimation, this is the ultimate sanity check. If we had <em>infinite</em> data, would our estimator recover the truth? If the answer is no, then wut wut wut are we doing? An estimator should <em>at least</em> be consistent. But if the answer is yes, this isn’t the slam dunk it may seen like. Consistency is an <em>asymptotic</em> property. It tells us what happens if we have infinite data. But we never actually have infinite data. We have a finite set of observations. If an estimator is consistent but the rate of convergence is very slow, then that somewhat curbs our enthusiasm for it.</p>
+</section></section><section id="interval-estimation" class="level1"><h1>Interval estimation</h1>
+<p>If I had to boil statistics down to the one main idea that distinguishes it from adjacent fields, I would say that statistics is uniquely focused on the quantification of uncertainty to help make decisions. As such, we are not content to simply construct a single number best guess for an unknown quantity. We also want to construct a range that communicates uncertainty. If the data give us a wide range, then uncertainty is high. If the data give us a small range, then uncertainty is low. At the crudest level of abstraction, that’s basically it.</p>
+<p>In classical statistics, the goal is to use the data to construct an interval <span class="math inline">\((L_n,\,U_n)\subseteq \mathbb{R}\)</span> satisfying</p>
+<p><span class="math display">\[
+P(L_n&lt;\theta &lt; U_n)=1-\alpha,
+\]</span></p>
+<p>where <span class="math inline">\(0 &lt; \alpha&lt; 1/2\)</span> is the user-defined <strong>coverage level</strong>. So, if you want a 95% confidence interval, <span class="math inline">\(\alpha=0.05\)</span>; If you want 90%, <span class="math inline">\(\alpha = 0.1\)</span>, and so on. Newcomers find confidence intervals challenging because the interpretation is subtle and somewhat at odds with how we <em>wish</em> such an interval behaved. The bounds of the interval are computed from the data, so just like an estimator, the bounds are random. The statement <span class="math inline">\(P(L_n&lt;\theta &lt; U_n)=1-\alpha\)</span> refers to the sampling distribution of the <em>random</em> interval bounds. The true but unknown value <span class="math inline">\(theta\)</span> is always a fixed constant.</p>
+<p><a href="https://rpsychologist.com/d3/ci/" class="uri">https://rpsychologist.com/d3/ci/</a></p>
+</section><section id="example-bernoulli-data-coin-flip" class="level1"><h1>Example: Bernoulli data (coin flip)</h1>
 <p>To illustrate the concepts introduced above, let us consider the simplest possible inference problem. Imagine we have <em>binary</em> data:</p>
 <p><span class="math display">\[
 X_i
@@ -961,8 +942,7 @@ X_i
 X_1,\,X_2,\,X_3,\,...,\,X_{n-1},\,X_n\overset{\text{iid}}{\sim}\text{Bernoulli}(\theta).
 \]</span></p>
 <p>This becomes a statistics problem when we imagine that the probability of success <span class="math inline">\(\theta=P(X_1=1)\)</span> is unknown. This serves as a model for the archetypal statistics problem that we discussed in our <a href="../slides/2025-08-25-welcome.html#/an-archetypal-statistics-problem">first lecture</a>: given a mystery coin with an unknown probability of heads <span class="math inline">\(0\leq\theta\leq 1\)</span>, you flip the coin <span class="math inline">\(n\)</span> times and use the outcomes <span class="math inline">\(X_i\)</span> to guess what the underlying probability is. The goal of statistics is to use the data to learn what <span class="math inline">\(\theta\)</span> is <em>and also</em> to quantify our uncertainty about it. In other words, we want to construct an estimator and a confidence interval for <span class="math inline">\(\theta\)</span> that have good statistical properties.</p>
-<section id="point-estimation-1" class="level2">
-<h2 class="anchored" data-anchor-id="point-estimation-1">Point estimation</h2>
+<section id="point-estimation-1" class="level2"><h2 class="anchored" data-anchor-id="point-estimation-1">Point estimation</h2>
 <p>So, where do you even start? Confronted with a new statistical problem, how do you devise a reasonable estimator? In upcoming lectures we will study a generic principle (maximum likelihood) that automatically guides you to a reasonable starting point. But for now, let’s just go off vibes. The unknown parameter <span class="math inline">\(0\leq \theta\leq 1\)</span> is a probability representing the likelihood of an event occurring. Our dataset of binary variables <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, …, <span class="math inline">\(X_n\)</span> is essentially a running tally of how often we actually observed the event of interest (eg the coin coming up heads), and so a reasonable estimator might be the proportion of successes that we observed:</p>
 <p><span class="math display">\[
 \hat{\theta}_n=\begin{matrix}\text{sample}\\\text{proportion}\end{matrix}=\frac{\#(X_i=1)}{n}=\frac{1}{n}\sum\limits_{i=1}^nX_i.
@@ -982,7 +962,7 @@ E(\hat{\theta}_n)&amp;=\theta\\
 \text{var}(\hat{\theta}_n)&amp;=\frac{\theta(1-\theta)}{n}.
 \end{aligned}
 \]</span></p>
-<pre class="shinylive-r" data-engine="r"><code>#| '!! shinylive warning !!': |
+<pre class="shinylive-r" data-engine="r"><code><a href="https://shiny.posit.co/">#| '!! shinylive warning !!': |
 #|   shinylive does not work in self-contained HTML documents.
 #|   Please set `embed-resources: false` in your metadata.
 #| standalone: true
@@ -1022,23 +1002,104 @@ server &lt;- function(input, output, session) {
 
 shinyApp(ui, server)
 
-</code></pre>
-</section>
-<section id="interval-estimation-1" class="level2">
-<h2 class="anchored" data-anchor-id="interval-estimation-1">Interval estimation</h2>
-<section id="review-standard-normal-quantiles" class="level3">
-<h3 class="anchored" data-anchor-id="review-standard-normal-quantiles">Review: standard normal quantiles</h3>
-</section>
-<section id="large-sample-confidence-interval" class="level3">
-<h3 class="anchored" data-anchor-id="large-sample-confidence-interval">Large sample confidence interval</h3>
+</a></code></pre>
+</section><section id="interval-estimation-1" class="level2"><h2 class="anchored" data-anchor-id="interval-estimation-1">Interval estimation</h2>
+<section id="review-standard-normal-quantiles" class="level3"><h3 class="anchored" data-anchor-id="review-standard-normal-quantiles">Review: standard normal quantiles</h3>
+<p>Let <span class="math inline">\(Z\sim\text{N}(0,\,1)\)</span>. This means that</p>
+<p><span class="math display">\[
+\begin{aligned}
+f_Z(z)&amp;=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}z^2\right), &amp;&amp; -\infty&lt;z&lt;\infty\\
+F_Z(t)&amp;=P(Z\leq z)\\
+&amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^z\exp\left(-\frac{1}{2}t^2\right), &amp;&amp; -\infty&lt;z&lt;\infty.
+\end{aligned}
+\]</span></p>
+<p>Use <span class="math inline">\(z(p)=F_Z^{-1}(p)\)</span> to denote the quantile function (ie the inverse cdf) of the standard normal. Some of its values are kinda famous: <span class="math inline">\(z(1/2)=0\)</span>, <span class="math inline">\(z(0.95)\approx 1.645\)</span>, <span class="math inline">\(z(0.975)\approx 1.96\)</span>, etc. For <span class="math inline">\(p&gt;1/2\)</span>, <span class="math inline">\(z(p)&gt;0\)</span>, and so by symmetry of the bell curve about zero,</p>
+<p><span class="math display">\[
+\begin{aligned}
+P\left(-z(p)&lt;Z&lt;z(p)\right)
+&amp;=
+F_Z(z(p))-F_Z(-z(p))
+\\
+&amp;=
+F_Z(z(p))-[1-F_Z(z(p))]
+\\
+&amp;=
+F_Z(F_Z^{-1}(p))-[1-F_Z(F_Z^{-1}(p))]
+\\
+&amp;=
+p-(1-p)
+\\
+&amp;=
+2p-1
+.
+\end{aligned}
+\]</span></p>
+<p>Here’s the picture:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="sta240-notes-17-stats_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>So, if we have <span class="math inline">\(0&lt;\alpha&lt;1/2\)</span>, and we seek lower and upper bounds that swallow the middle <span class="math inline">\(1-\alpha\)</span> of the density and place <span class="math inline">\(\alpha/2\)</span> in either tail, we can take <span class="math inline">\(\pm z(1-\alpha/2)\)</span>, because</p>
+<p><span class="math display">\[
+2(1-\alpha/2)-1=2-\alpha+1=1-\alpha,
+\]</span></p>
+<p>and so <span class="math inline">\(P(-z(1-\alpha/2) &lt; Z &lt; z(1-\alpha/2))=1-\alpha\)</span>. Again:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="sta240-notes-17-stats_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="large-sample-confidence-interval" class="level3"><h3 class="anchored" data-anchor-id="large-sample-confidence-interval">Large sample confidence interval</h3>
+<p>Since our estimator <span class="math inline">\(\hat{\theta}_n\)</span> is the average of iid random variables <span class="math inline">\(X_i\)</span> with finite mean <span class="math inline">\(\theta\)</span> and variance <span class="math inline">\(\theta(1-\theta)\)</span>, the <a href="../lecture-notes/sta240-notes-16-clt.html">central limit theorem</a> guarantees that</p>
+<p><span class="math display">\[
+\frac{\hat{\theta}_n-\theta}{\sqrt{\theta(1-\theta)/n}}\overset{d}{\to}\text{N}(0,\,1).
+\]</span></p>
+<p>Furthermore, if you take a class like STA 332, you learn that this remains true if you replace the true but unknown <span class="math inline">\(\theta\)</span> in the denominator with the estimator. So</p>
+<p><span class="math display">\[
+\frac{\hat{\theta}_n-\theta}{\sqrt{\hat{\theta}_n(1-\hat{\theta}_n)/n}}\overset{d}{\to}\text{N}(0,\,1).
+\]</span></p>
+<p>Note that this is <em>not</em> what the central limit theorem says off the shelf. This is a new result that you have to work to prove. But for now we will take it for granted and use it to derive an approximate confidence interval for <span class="math inline">\(\theta\)</span>.</p>
+<p>Practically speaking, these results give us permission to use N(0, 1) to approximate the distribution of the random variable on the left, provided <span class="math inline">\(n\)</span> is sufficiently large that the theorem has “kicked in.” If the approximation is good, it means that we can use the results from the previous section to say that:</p>
+<p><span class="math display">\[
+P\left(-z\left(1-\frac{\alpha}{2}\right)&lt;\frac{\hat{\theta}_n-\theta}{\sqrt{\hat{\theta}_n(1-\hat{\theta}_n)/n}}&lt;z\left(1-\frac{\alpha}{2}\right)\right)\approx 1 - \alpha,\quad \alpha&gt;1/2.
+\]</span></p>
+<p>By doing some itchy algebra, we can rewrite this statement in the form <span class="math inline">\(P(L_n&lt;\theta&lt;U_n)\approx 1-\alpha\)</span>, which is exactly what we want for a confidence interval:</p>
+<p><span class="math display">\[
+\begin{aligned}
+1-\alpha
+&amp;\approx
+P\left(-z\left(1-\frac{\alpha}{2}\right)&lt;\frac{\hat{\theta}_n-\theta}{\sqrt{\hat{\theta}_n(1-\hat{\theta}_n)/n}}&lt;z\left(1-\frac{\alpha}{2}\right)\right)
+\\
+&amp;=
+P\left(-z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}&lt;\hat{\theta}_n-\theta&lt;z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}\right)
+\\
+&amp;=
+P\left(-\hat{\theta}_n-z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}&lt;-\theta&lt;-\hat{\theta}_n+z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}\right)
+\\
+&amp;=
+P\left(\hat{\theta}_n+z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}&gt;\theta&gt;\hat{\theta}_n-z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}\right)
+\\
+&amp;=
+P\left(\hat{\theta}_n-z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}&lt;\theta&lt;\hat{\theta}_n+z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}\right)
+.
+\end{aligned}
+\]</span></p>
+<p>So, if we take <span class="math inline">\(L_n=\hat{\theta}_n-z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}\)</span> and <span class="math inline">\(U_n=\hat{\theta}_n+z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}\)</span>, we get an interval satisfying <span class="math inline">\(P(L_n&lt;\theta&lt;U_n)\approx 1-\alpha\)</span> for sufficiently large <span class="math inline">\(n\)</span>.</p>
+<p>So, the asymptotically valid <span class="math inline">\(100\times (1-\alpha)\%\)</span> confidence interval for <span class="math inline">\(\theta\)</span> is</p>
+<p><span class="math display">\[
+\underbrace{\hat{\theta}_n}_{\begin{matrix}\text{point}\\\text{estimate}\end{matrix}}\pm \underbrace{z\left(1-\frac{\alpha}{2}\right)}_{z-\text{score}}\underbrace{\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}}_{\text{standard error}}.
+\]</span></p>
+<p>This structure of “point estimate plus or minus quantile times standard error” is a familiar form that arises often in statistics. Intervals of this form are symmetric around the point estimate. The standard error is an estimate of the standard deviation of the sampling distribution of the estimator, and the larger it is, the more uncertainty there is, and the wider the interval will be. The quantile (which here comes from the standard normal but doesn’t have to) governs the nominal coverage of the interval. A 90% interval will need to be wider than an 80% interval to swallow up the extra probability.</p>
 
 
-</section>
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1438,8 +1499,7 @@ shinyApp(ui, server)
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 John Zito</p>
 </div>   
@@ -1451,8 +1511,6 @@ shinyApp(ui, server)
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
