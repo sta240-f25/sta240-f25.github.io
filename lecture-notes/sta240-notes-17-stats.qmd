@@ -7,12 +7,13 @@ filters:
 
 Imagine you work at a hospital. Dozens of babies are delivered in the hospital each week. A lot of information is collected about each birth, and hiding inside of these data is a lot of useful information about the health and future of the community. How can we extract it? If you take classes like STA 101 or 199, you learn various methods:
 
-::: {.center-table}
+::: center-table-75
 | Question       | Method | Cartoon |
 |----------------|------------|--|
-| How are birth weights distributed?  | histogram        |  |
-| What's the typical birth weight?   | sample average        | |
-| How is birth weight related to gestational age? | linear regression        | |
+| How are birth weights distributed?  | histogram        | ![](images/birth-weight-hist.png) |
+| What's the typical birth weight?   | sample average        | ![](images/birth-weight-mean.png)  |
+| How is birth weight related to gestational age? | linear regression        | ![](images/birth-weight-scatter.png)  |
+: {tbl-colwidths="[40,20,40]"}
 :::
 
 In general, the goal of *data science* is to convert data into knowledge, and we perform this "conversion" by applying statistical methods: histogram, sample average, line of best fit, etc. A *mathematical statistician* looks at these methods and wonders: do they actually work? Do they behave the way we expect? Do they deliver what they promise? Are they reliable? How reliable? Under what conditions? And before we can answer these questions, we have to back up and ask a more fundamental one: what does it even *mean* for a statistical method to "work"? These are all theoretical questions, and mathematical statisticians answer them using the tools of probability theory that we have studied for the last twelve weeks. 
@@ -21,7 +22,7 @@ In general, the goal of *data science* is to convert data into knowledge, and we
 
 For us, a data set will be a spreadsheet with one column of numbers:
 
-XXX
+![](images/baby-spreadsheet.png){fig-align="center"}
 
 Of course, in the modern era, datasets are huge. There could be millions of columns. There could be so many columns and rows that you can't fit the entire dataset on a single computer (so-called "big data"). Furthermore, modern datasets are weird. It's not just a box of numbers anymore. Text is data. Images are data. Video is data. Sometimes all at once.
 
@@ -52,30 +53,33 @@ $$
 
 If you keep studying statistics, you learn how to relax the iid assumption, which is often bogus. 
 
-The main idea of statistics is that we have no clue what the distribution $P$ is that governs the data. All we have access to are realizations of the $X_i$, and we need to use these to try to reverse engineer $P$. Contrast this with probability. When we were doing probability, $P$ was always known. Every problem thus far has begun with a statement that is equivalent to: "Assume $P$ is..." You were *told* what the distribution was, and then you did some math that reasoned from that assumption to a conclusion about the behavior of $X$. In statistics, the situation is exactly reversed: given examples of data generated from $P$, can you figure out what $P$ is? As I warned you on the [first day of class](/slides/2025-08-25-welcome.html#/inverse-problems-are-tricky), this task is much less straightforward than probability, so gird your loins!
+The main idea of statistics is that we have no clue what the distribution $P$ is that governs the data. All we have access to are realizations of the $X_i$, and we need to use these to try to reverse engineer $P$. Contrast this with probability. When we were doing probability, $P$ was always known. Every problem thus far has begun with a statement that is equivalent to: "Assume $P$ is..." You were *told* what the distribution was, and then you did some math that reasoned from that assumption to a conclusion about the behavior of $X$: its mean, median, variance, mgf, how to sample it, etc. In statistics, the situation is exactly reversed: given examples of data generated from $P$, can you figure out what $P$ is? As I warned you on the [first day of class](/slides/2025-08-25-welcome.html#/inverse-problems-are-tricky), this task is much less straightforward than probability, so gird your loins!
 
 
 
 ## Parametric statistics
 
-In principle, $P$ could be literally any probability distribution under the sun. That makes searching for the right one quite daunting. To simplify life, we often make the *extra* assumption that the unknown $P$ belongs to some convenient **parametric family** of distributions, such as the binomial, Poisson, normal, etc. 
+In principle, $P$ could be literally any probability distribution under the sun. That makes searching for the right one quite daunting. To simplify life, we often make the *extra* assumption that the unknown $P$ belongs to some convenient **parametric family** of distributions, such as the binomial, Poisson, normal, etc: 
 
 
 $$
 X_1,\,X_2,\,X_3,\,...,\,X_{n-1},\,X_n\overset{\text{iid}}{\sim}f_{\theta}.
 $$
 
-Here, $f$ is generic notation for *either* a PMF or PDF. 
+Here, $f$ is generic notation for *either* a PMF or PDF. If you're willing to swallow this parametric assumption, the goal of statistical inference becomes "using the data to learn the value of the unknown parameter $\theta$."
+
+
+To be clear from the very outset, the "true" data-generating distribution is seldom if ever literally a member of one of our special parametric families, but as a simplifying assumption, this leap of faith may be "close enough" for practical purposes. If you remain skeptical, I encourage you to dive into the beautiful area of [*nonparametric* statistics](https://doi.org/10.1007/0-387-30623-4) where we do *not* make strong (and often unrealistic) parametric assumptions about $P$. 
 
 ## Three's Company
 
-The Catholics have the Father, the Son, and the Holy Spirit. American government has legislative, judicial, and executive branches. Music has melody, harmony, and rhythm. Similarly, we organize classical statistical theory into three related areas of inquiry:
+The Catholics have the Father, the Son, and the Holy Spirit. American government has legislative, judicial, and executive branches. Music has melody, harmony, and rhythm. Similarly, we organize classical parametric statistical theory into three related areas of inquiry:
 
 1. (**point estimation**) what is our single number best guess at the unknown parameter?
 2. (**interval estimation**) what is a range of likely values for the unknown parameter?
 3. (**hypothesis testing**) can the data distinguish between competing claims about the unknown parameter? 
 
-With the short time we have left, we will discuss the first two and defer the third to STA 332.
+With the short time we have left, we will discuss the first two and defer the third to STA 332. Hypothesis testing turns out to be a surprisingly controversial topic. Spicy!
 
 
 # Point estimation
@@ -199,10 +203,13 @@ E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
 \text{linearity again}
 \\
 &=
-(\theta-E(\hat{\theta}_n))^2+
+(\theta-E(\hat{\theta}_n))^2
++
+\underbrace{
 2(\theta-E(\hat{\theta}_n))
 \cdot
 0
+}_{=0}
 +
 E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
 \\
