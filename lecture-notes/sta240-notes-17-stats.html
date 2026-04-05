@@ -962,6 +962,15 @@ E(\hat{\theta}_n)&amp;=\theta\\
 \text{var}(\hat{\theta}_n)&amp;=\frac{\theta(1-\theta)}{n}.
 \end{aligned}
 \]</span></p>
+<p>So already, we see that the sample proportion is unbiased: <span class="math inline">\(\text{bias}(\hat{\theta}_n,\,\theta)=E(\hat{\theta}_n)-\theta=\theta-\theta=0\)</span>. As such, <span class="math inline">\(\text{MSE}(\hat{\theta}_n,\,\theta)=\text{var}(\hat{\theta}_n)=\theta(1-\theta)/n\to0\)</span> as <span class="math inline">\(n\to\infty\)</span>, so the estimator is consistent as well.</p>
+<p>That’s a great start already, but we can go further and characterize the entire sampling distribution exactly for any <span class="math inline">\(n\)</span>. We know that <span class="math inline">\(X_i\sim \text{Bern}(\theta)\)</span> and <span class="math inline">\(\hat{\theta}_n=\frac{1}{n}\sum\limits_{i=1}^nX_i\)</span>. Since <span class="math inline">\(\sum\limits_{i=1}^nX_i\sim\text{Binom}(n,\,p)\)</span>, <span class="math inline">\(\hat{\theta}_n\)</span> is just a “rescaled” binomial with:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{Range}(\hat{\theta}_n)&amp;=\left\{\frac{0}{n}=0,\,\frac{1}{n},\,\frac{2}{n},\,...,\,\frac{n-1}{n},\,\frac{n}{n}=1\right\}\\
+P\left(\hat{\theta}_n=\frac{k}{n}\right)&amp;=\binom{n}{k}\theta^k(1-\theta)^{n-k}.
+\end{aligned}
+\]</span></p>
+<p>This is visualized below, where you can see the unbiasedness and the consistency with the naked eye:</p>
 <pre class="shinylive-r" data-engine="r"><code><a href="https://shiny.posit.co/">#| '!! shinylive warning !!': |
 #|   shinylive does not work in self-contained HTML documents.
 #|   Please set `embed-resources: false` in your metadata.
