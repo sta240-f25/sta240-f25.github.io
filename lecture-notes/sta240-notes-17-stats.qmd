@@ -280,8 +280,17 @@ When it comes to point estimation, this is the ultimate sanity check. If we had 
 
 # Interval estimation
 
-If I had to boil statistics down to the one main idea that distinguishes it from adjacent fields, I would say that statistics is uniquely focused on the quantification of uncertainty to help make decisions. As such, we are not content to simply construct a single number best guess for an unknown quantity. We also want to construct a range that communicates uncertainty. If the data give us a wide range, then uncertainty is high. If the data give us a small range, then uncertainty is low. At the crudest level of abstraction, that's basically it.
+If I had to boil statistics down to the one main idea that distinguishes it from adjacent fields, I would say that statistics is uniquely focused on the quantification of uncertainty to help make decisions. As such, we are not content to simply construct a single number best guess for an unknown quantity. We also want to construct a range that communicates uncertainty. If the data give us a wide range, then uncertainty is high. If the data give us a small range, then uncertainty is low. At the crudest level of abstraction, that's basically it. 
 
+In classical statistics, the goal is to use the data to construct an interval $(L_n,\,U_n)\subseteq \mathbb{R}$ satisfying 
+
+$$
+P(L_n<\theta < U_n)=1-\alpha,
+$$
+
+where $0 < \alpha< 1/2$ is the user-defined **coverage level**. So, if you want a 95% confidence interval, $\alpha=0.05$; If you want 90%, $\alpha = 0.1$, and so on. Newcomers find confidence intervals challenging because the interpretation is subtle and somewhat at odds with how we *wish* such an interval behaved. The bounds of the interval are computed from the data, so just like an estimator, the bounds are random. The statement $P(L_n<\theta < U_n)=1-\alpha$ refers to the sampling distribution of the *random* interval bounds. The true but unknown value $theta$ is always a fixed constant.
+
+<https://rpsychologist.com/d3/ci/>
 
 
 # Example: Bernoulli data (coin flip)
@@ -429,7 +438,7 @@ text(1.2 * zp, dnorm(1.2 * zp) / 2, "1 - p")
 text(-1.2 * zp, dnorm(1.2 * zp) / 2, "1 - p")
 ```
 
-So, if we have $\alpha>1/2$, and we seek lower and upper bounds that swallow the middle $1-\alpha$ of the density and place $\alpha/2$ in either tail, we can take $\pm z(1-\alpha/2)$, because 
+So, if we have $0<\alpha<1/2$, and we seek lower and upper bounds that swallow the middle $1-\alpha$ of the density and place $\alpha/2$ in either tail, we can take $\pm z(1-\alpha/2)$, because 
 
 $$
 2(1-\alpha/2)-1=2-\alpha+1=1-\alpha,
@@ -498,6 +507,13 @@ $$
 
 So, if we take $L_n=\hat{\theta}_n-z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}$ and $U_n=\hat{\theta}_n+z\left(1-\frac{\alpha}{2}\right)\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}$, we get an interval satisfying $P(L_n<\theta<U_n)\approx 1-\alpha$ for sufficiently large $n$.
 
+So, the asymptotically valid $100\times (1-\alpha)\%$ confidence interval for $\theta$ is 
+
+$$
+\underbrace{\hat{\theta}_n}_{\begin{matrix}\text{point}\\\text{estimate}\end{matrix}}\pm \underbrace{z\left(1-\frac{\alpha}{2}\right)}_{z-\text{score}}\underbrace{\sqrt{\frac{\hat{\theta}_n(1-\hat{\theta}_n)}{n}}}_{\text{standard error}}.
+$$
+
+This structure of "point estimate plus or minus quantile times standard error" is a familiar form that arises often in statistics. Intervals of this form are symmetric around the point estimate. The standard error is an estimate of the standard deviation of the sampling distribution of the estimator, and the larger it is, the more uncertainty there is, and the wider the interval will be. The quantile (which here comes from the standard normal but doesn't have to) governs the nominal coverage of the interval. A 90% interval will need to be wider than an 80% interval to swallow up the extra probability. 
 
 
 
