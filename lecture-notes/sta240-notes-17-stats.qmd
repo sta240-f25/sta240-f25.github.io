@@ -293,8 +293,25 @@ $$
 \hat{\theta}_n=\begin{matrix}\text{sample}\\\text{proportion}\end{matrix}=\frac{\#(X_i=1)}{n}=\frac{1}{n}\sum\limits_{i=1}^nX_i.
 $$
 
-Again, we will have firmer motivations for this choice later, but things are already looking promising. Why? Because this choice of estimator takes the form of an *average* of iid random variables, and we know a lot about how those behave: mean, variance, LLN, CLT, etc. Behold:
+Again, we will have firmer motivations for this choice later, but things are already looking promising. Why? Because this choice of estimator takes the form of an *average* of iid random variables, and we know a lot about how those behave.
 
+To begin, recall some facts about the [Bernoulli distribution](/distributions/discrete-binomial.html):
+
+$$
+\begin{aligned}
+E(X_1)&=\theta\\
+\text{var}(X_1)&=\theta(1-\theta).
+\end{aligned}
+$$
+
+Since $X_i\overset{\text{iid}}{\sim}\text{Bernoulli}(\theta)$ and $\hat{\theta}_n$ is their average, we know from [before](/lecture-notes/sta240-notes-14-sums-and-averages.pdf) that 
+
+$$
+\begin{aligned}
+E(\hat{\theta}_n)&=\theta\\
+\text{var}(\hat{\theta}_n)&=\frac{\theta(1-\theta)}{n}.
+\end{aligned}
+$$
 
 
 ```{shinylive-r}
@@ -341,6 +358,9 @@ shinyApp(ui, server)
 ## Interval estimation
 
 
+### Review: standard normal quantiles
 
+
+### Large sample confidence interval
 
 
