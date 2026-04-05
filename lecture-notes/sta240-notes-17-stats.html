@@ -38,7 +38,12 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6047717dfb1a2edde31992d245f01f96.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<meta name="shinylive:serviceworker_dir" content="..">
+<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/load-shinylive-sw.js" type="module"></script>
+<script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/run-python-blocks.js" type="module"></script>
+<link href="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/shinylive.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -99,7 +104,10 @@ window.Quarto = {
 
 <meta property="og:title" content="Introduction to the theory of statistics – STA 240 Fall 2025">
 <meta property="og:description" content="Homepage for STA 240 Probability for Statistical Inference, Modeling, and Data Analysis at Duke University, Fall 2025.">
+<meta property="og:image" content="https://sta240-f25.github.io/lecture-notes/images/birth-weight-hist.png">
 <meta property="og:site_name" content="STA 240 Fall 2025">
+<meta property="og:image:height" content="758">
+<meta property="og:image:width" content="1376">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -603,13 +611,25 @@ window.Quarto = {
   <ul>
   <li><a href="#babys-first-dataset" id="toc-babys-first-dataset" class="nav-link active" data-scroll-target="#babys-first-dataset">Baby’s first dataset</a></li>
   <li><a href="#the-implicit-assumption-of-all-statistics" id="toc-the-implicit-assumption-of-all-statistics" class="nav-link" data-scroll-target="#the-implicit-assumption-of-all-statistics">The implicit assumption of all statistics</a></li>
-  <li><a href="#our-mathematical-model-of-data-analysis" id="toc-our-mathematical-model-of-data-analysis" class="nav-link" data-scroll-target="#our-mathematical-model-of-data-analysis">Our mathematical model of data analysis</a></li>
-  <li><a href="#classical-statistical-inference" id="toc-classical-statistical-inference" class="nav-link" data-scroll-target="#classical-statistical-inference">Classical statistical inference</a></li>
+  <li><a href="#classical-statistical-inference" id="toc-classical-statistical-inference" class="nav-link" data-scroll-target="#classical-statistical-inference">Classical statistical inference</a>
+  <ul class="collapse">
   <li><a href="#parametric-statistics" id="toc-parametric-statistics" class="nav-link" data-scroll-target="#parametric-statistics">Parametric statistics</a></li>
+  <li><a href="#threes-company" id="toc-threes-company" class="nav-link" data-scroll-target="#threes-company">Three’s Company</a></li>
+  </ul></li>
   <li><a href="#point-estimation" id="toc-point-estimation" class="nav-link" data-scroll-target="#point-estimation">Point estimation</a>
   <ul class="collapse">
   <li><a href="#measuring-the-quality-of-an-estimator" id="toc-measuring-the-quality-of-an-estimator" class="nav-link" data-scroll-target="#measuring-the-quality-of-an-estimator">Measuring the quality of an estimator</a></li>
   <li><a href="#mean-squared-error" id="toc-mean-squared-error" class="nav-link" data-scroll-target="#mean-squared-error">Mean squared error</a></li>
+  </ul></li>
+  <li><a href="#interval-estimation" id="toc-interval-estimation" class="nav-link" data-scroll-target="#interval-estimation">Interval estimation</a></li>
+  <li><a href="#example-bernoulli-data-coin-flip" id="toc-example-bernoulli-data-coin-flip" class="nav-link" data-scroll-target="#example-bernoulli-data-coin-flip">Example: Bernoulli data (coin flip)</a>
+  <ul class="collapse">
+  <li><a href="#point-estimation-1" id="toc-point-estimation-1" class="nav-link" data-scroll-target="#point-estimation-1">Point estimation</a></li>
+  <li><a href="#interval-estimation-1" id="toc-interval-estimation-1" class="nav-link" data-scroll-target="#interval-estimation-1">Interval estimation</a>
+  <ul class="collapse">
+  <li><a href="#review-standard-normal-quantiles" id="toc-review-standard-normal-quantiles" class="nav-link" data-scroll-target="#review-standard-normal-quantiles">Review: standard normal quantiles</a></li>
+  <li><a href="#large-sample-confidence-interval" id="toc-large-sample-confidence-interval" class="nav-link" data-scroll-target="#large-sample-confidence-interval">Large sample confidence interval</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -637,41 +657,49 @@ window.Quarto = {
 
 
 <p>Imagine you work at a hospital. Dozens of babies are delivered in the hospital each week. A lot of information is collected about each birth, and hiding inside of these data is a lot of useful information about the health and future of the community. How can we extract it? If you take classes like STA 101 or 199, you learn various methods:</p>
-<div class="center-table">
+<div class="center-table-75">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 57%">
-<col style="width: 42%">
+<col style="width: 40%">
+<col style="width: 20%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Question</th>
 <th>Method</th>
+<th>Cartoon</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>How are birth weights distributed?</td>
 <td>histogram</td>
+<td><img src="images/birth-weight-hist.png" class="img-fluid"></td>
 </tr>
 <tr class="even">
 <td>What’s the typical birth weight?</td>
 <td>sample average</td>
+<td><img src="images/birth-weight-mean.png" class="img-fluid"></td>
 </tr>
 <tr class="odd">
 <td>How is birth weight related to gestational age?</td>
 <td>linear regression</td>
+<td><img src="images/birth-weight-scatter.png" class="img-fluid"></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>The goal of <em>data science</em> in general is to convert data into knowledge, and we perform this “conversion” by applying statistical methods: histogram, sample average, line of best fit, etc.</p>
-<p>A mathematical statistician looks at these methods and wonders: do they actually work? Do they behave the way we expect? Do they deliver what they promise? Are they reliable? How reliable? Under what conditions? And before we can answer these questions, we have to back up and ask a more fundamental one: what does it even <em>mean</em> for a statistical method to “work”? These are all theoretical questions, and mathematical statisticians answer them using the tools of probability theory that we have studied for the last twelve weeks.</p>
+<p>In general, the goal of <em>data science</em> is to convert data into knowledge, and we perform this “conversion” by applying statistical methods: histogram, sample average, line of best fit, etc. A <em>mathematical statistician</em> looks at these methods and wonders: do they actually work? Do they behave the way we expect? Do they deliver what they promise? Are they reliable? How reliable? Under what conditions? And before we can answer these questions, we have to back up and ask a more fundamental one: what does it even <em>mean</em> for a statistical method to “work”? These are all theoretical questions, and mathematical statisticians answer them using the tools of probability theory that we have studied for the last twelve weeks.</p>
 <section id="babys-first-dataset" class="level1">
 <h1>Baby’s first dataset</h1>
 <p>For us, a data set will be a spreadsheet with one column of numbers:</p>
-<p>XXX</p>
-<p>Of course, in the modern era, datasets are huge. There could be millions of columns. There could be so many columns and rows that you can’t fit the entire dataset on a single computer. Welcome to “<em>big data</em>.” Furthermore, modern datasets are weird. It’s not just a box of numbers anymore. Text is data. Images are data. Video is data. Sometimes all at once.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/baby-spreadsheet.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Of course, in the modern era, datasets are huge. There could be millions of columns. There could be so many columns and rows that you can’t fit the entire dataset on a single computer (so-called “big data”). Furthermore, modern datasets are weird. It’s not just a box of numbers anymore. Text is data. Images are data. Video is data. Sometimes all at once.</p>
 <p>If you continue studying statistics, you’ll get there eventually. But for now, let’s keep it simple.</p>
 </section>
 <section id="the-implicit-assumption-of-all-statistics" class="level1">
@@ -685,44 +713,86 @@ window.Quarto = {
 <li>(<strong>human error</strong>) data are collected by humans, and humans make mistakes;</li>
 <li>(<strong>measurement error</strong>) the laboratory devices we use to collect measurements in the sciences are far from perfect;</li>
 <li>(<strong>study design</strong>) the gold standard for teasing out cause and effect is the randomized controlled trial (RCT) where, <em>by design</em>, the researcher randomly divides subjects into treatment and control groups;</li>
-<li>(<strong>survey non-response</strong>) much of our economic data on unemployment, inflation, and the behavior of firms is collected by survey. Political polls are a type of survey. Course evaluations are a survey. Say you issue a survey to a population of interest, and only 10% of respond? Who are they? Why did they respond? Why did the other 90% abstain? There’s a lot of randomness going here, and you need to get your arms around it if you want to interpret the survey results correctly.</li>
+<li>(<strong>survey non-response</strong>) much of our economic data on unemployment, inflation, and the behavior of firms is collected by survey. Political polls are a type of survey. Course evaluations are a survey. Say you issue a survey to a population of interest, and only 10% of respond? Who are they? Why did they respond? Why did the other 90% abstain? There’s a lot of randomness going on here, and you need to get your arms around it if you want to interpret the survey results correctly.</li>
 </ul>
 <p>For all of these reasons and more, it is sensible to regard the numbers in our spreadsheet as the end-result of a complex random process. One of the statistician’s goals is to model this process and explain how the data turned out the way they did. Part of this job involves modeling the true underlying science, and another part involves modeling the errors introduced in the measurement process. Tricky stuff!</p>
 </section>
-<section id="our-mathematical-model-of-data-analysis" class="level1">
-<h1>Our mathematical model of data analysis</h1>
-<p>Since the data in our spreadsheet are random, we model them on the blackboard as realizations of <em>random variables</em>. Y’know, those things we’ve been studying for two months. To keep it simple, on a first pass we model the data as <strong>independent and identically distributed</strong> (<strong>iid</strong>) from some shared distribution <span class="math inline">\(P_0\)</span>:</p>
-<p><span class="math display">\[
-X_1,\,X_2,\,X_3,\,...,\,X_{n-1},\,X_n\overset{\text{iid}}{\sim}P_0.
-\]</span></p>
-<p>Again, if you keep studying statistics, you learn how to relax the iid assumption, which is often bogus.</p>
-</section>
 <section id="classical-statistical-inference" class="level1">
 <h1>Classical statistical inference</h1>
+<p>Since the data in our spreadsheet are the result of a random process, we model them on the blackboard as realizations of <em>random variables</em>. Y’know, those things we’ve been studying for two months. To keep it simple, on a first pass we model the data as <strong>independent and identically distributed</strong> (<strong>iid</strong>) from some shared distribution <span class="math inline">\(P\)</span>:</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,X_3,\,...,\,X_{n-1},\,X_n\overset{\text{iid}}{\sim}P.
+\]</span></p>
+<p>If you keep studying statistics, you learn how to relax the iid assumption, which is often bogus.</p>
+<p>The main idea of statistics is that we have no clue what the distribution <span class="math inline">\(P\)</span> is that governs the data. All we have access to are realizations of the <span class="math inline">\(X_i\)</span>, and we need to use these to try to reverse engineer <span class="math inline">\(P\)</span>. Contrast this with probability. When we were doing probability, <span class="math inline">\(P\)</span> was always known. Every problem thus far has begun with a statement that is equivalent to: “Assume <span class="math inline">\(P\)</span> is…” You were <em>told</em> what the distribution was, and then you did some math that reasoned from that assumption to a conclusion about the behavior of <span class="math inline">\(X\)</span>: its mean, median, variance, mgf, how to sample it, etc. In statistics, the situation is exactly reversed: given examples of data generated from <span class="math inline">\(P\)</span>, can you figure out what <span class="math inline">\(P\)</span> is? As I warned you on the <a href="../slides/2025-08-25-welcome.html#/inverse-problems-are-tricky">first day of class</a>, this task is much less straightforward than probability, so gird your loins!</p>
+<section id="parametric-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="parametric-statistics">Parametric statistics</h2>
+<p>In principle, <span class="math inline">\(P\)</span> could be literally any probability distribution under the sun. That makes searching for the right one quite daunting. To simplify life, we often make the <em>extra</em> assumption that the unknown <span class="math inline">\(P\)</span> belongs to some convenient <strong>parametric family</strong> of distributions, such as the binomial, Poisson, normal, etc:</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,X_3,\,...,\,X_{n-1},\,X_n\overset{\text{iid}}{\sim}f_{\theta}.
+\]</span></p>
+<p>Here, <span class="math inline">\(f\)</span> is generic notation for <em>either</em> a PMF or PDF, and <span class="math inline">\(\theta\)</span> is generic notation for the <em>finite</em> set of parameters that govern the distribution. Here are some of the examples we have seen:</p>
+<ul>
+<li>The Bernoulli family has <span class="math inline">\(\theta=p\)</span>;</li>
+<li>The Poisson family has <span class="math inline">\(\theta=\lambda\)</span>;</li>
+<li>The normal family has <span class="math inline">\(\theta=(\mu,\,\sigma^2)\)</span>;</li>
+<li>The gamma family has <span class="math inline">\(\theta=(\alpha,\,\beta)\)</span>.</li>
+</ul>
+<p>If you’re willing to swallow the parametric assumption, the goal of statistical inference becomes “use the data to learn the value of the unknown parameter <span class="math inline">\(\theta\)</span>.” Furthermore, statisticians want to <em>quantify uncertainty</em> about what we’ve learned from the data, not just produce a good guess and call it a day.</p>
+<p>To be clear from the very outset, the “true” data-generating distribution is seldom if ever literally a member of one of our special parametric families, but as a simplifying assumption, this leap of faith may be “close enough” for practical purposes. If you remain skeptical, I encourage you to dive into the beautiful area of <a href="https://doi.org/10.1007/0-387-30623-4"><em>nonparametric</em> statistics</a> where we do <em>not</em> make strong (and often unrealistic) parametric assumptions about <span class="math inline">\(P\)</span>.</p>
 </section>
-<section id="parametric-statistics" class="level1">
-<h1>Parametric statistics</h1>
-<p>Statisticians have found that it is convenient to use the tolls and language of probability to get a handle on the variation that we observe in real-world data.</p>
-<p>This assumption is so foundational to statistics that it often goes unremarked upon and recedes into the background, but it is indeed an assumption. Not every set of numbers you would seek to extract patterns from is random, but this is the first assumption a statistician makes.</p>
-<p>By the time data arrive in our spreadsheet, they are a fixed set of numbers. But how did they get there?</p>
-<p>We use the language and tools of probability to model <em>variation</em>. Even if the variation in our datasets is not literally the result of random forces, it may be convenient to proceed <em>as if</em> it is.</p>
-<p>In this class, our data will be numerical.</p>
-<p>Yada yada data science yada yada extract patterns and learn about the world.</p>
-<p>goal: typical behavior - mean goal: distribution - plot histogram goal: learn relationships - line of best fit</p>
-<p>These are all examples of statistical methods. A theoretical statistician</p>
-<p>Do these methods actually work? Do they do what we want them to do? Do they deliver what they promise to deliver? Under what conditions? And before we can answer those questions, we have to back up and ask a more fundamental one: what does it even mean for a statistical method to “work”? These are all <em>theoretical</em> questions, and mathematical statisticians use the tools of probability theory to answer them.</p>
-<p>In American government, there are legislative, judicial, and executive branches. In music, there is melody, harmony, and rhythm. Similarly, we organize statistical theory into three related areas of inquiry:</p>
+<section id="threes-company" class="level2">
+<h2 class="anchored" data-anchor-id="threes-company">Three’s Company</h2>
+<p>The Catholics have the Father, the Son, and the Holy Spirit. American government has legislative, judicial, and executive branches. Music has melody, harmony, and rhythm. Similarly, we organize classical parametric statistical theory into three related areas of inquiry:</p>
 <ol type="1">
-<li>(<strong>point estimation</strong>)</li>
-<li>(<strong>interval estimation</strong>)</li>
-<li>(<strong>hypothesis testing</strong>) can the data distinguish between</li>
+<li>(<strong>point estimation</strong>) what is our single number best guess at the unknown parameter?</li>
+<li>(<strong>interval estimation</strong>) what is a range of likely values for the unknown parameter?</li>
+<li>(<strong>hypothesis testing</strong>) can the data distinguish between competing claims about the unknown parameter?</li>
 </ol>
+<p>With the short time we have left, we will discuss the first two and defer the third to STA 332. Hypothesis testing turns out to be a surprisingly controversial topic. Spicy!</p>
+</section>
 </section>
 <section id="point-estimation" class="level1">
 <h1>Point estimation</h1>
+<p><span class="math display">\[
+X_1,\,X_2,\,X_3,\,...,\,X_{n-1},\,X_n\overset{\text{iid}}{\sim}f_{\theta}.
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition: estimator
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>The main idea of <em>classical</em> statistics is that, since the data are random variables and the estimator is a function of the data, the estimator is a random variable as well. So it has its own distribution which we call the <strong>sampling distribution</strong> of the estimator. If we want to understand how the estimator behaves and whether or not it is “good,” we need to understand the properties of its sampling distribution. For example:</p>
+<ul>
+<li>(<strong>bias</strong>) is the estimator correct <em>on average</em>? Is the sampling distribution centered on the true value? In other words, do we have <span class="math inline">\(E(\hat{\theta}_n)=\theta\)</span>?</li>
+<li>(<strong>variance</strong>) is the estimator stable or volatile? Is the sampling distribution widely spread out or tightly concentrated? In other words, how big is <span class="math inline">\(\text{var}(\hat{\theta}_n)\)</span>?</li>
+<li>(<strong>consistency</strong>) As we collect more and more data, does the estimator get closer and closer to the truth? That is, does <span class="math inline">\(\hat{\theta}_n\to\theta\)</span> as <span class="math inline">\(n\to\infty\)</span>? If not, then what the hell are we even doing? If so, how fast is the convergence?</li>
+</ul>
+<p>To investigate these properties, we need all of the tools of probability theory that we’ve been developing this semester.</p>
 <section id="measuring-the-quality-of-an-estimator" class="level2">
 <h2 class="anchored" data-anchor-id="measuring-the-quality-of-an-estimator">Measuring the quality of an estimator</h2>
-<p>Loss functions</p>
+<p>In the crudest possible terms, an estimator <span class="math inline">\(\hat{\theta}_n\)</span> is good if it is close to the true value of the unknown parameter <span class="math inline">\(\theta\)</span>. To assess this, we choose a <strong>loss function</strong> <span class="math inline">\(L(\hat{\theta}_n,\,\theta)\)</span> that measures the discrepancy between the estimator and the truth. Examples include:</p>
+<p><span class="math display">\[
+\begin{aligned}
+L(\hat{\theta}_n,\,\theta)&amp;=(\hat{\theta}_n-\theta)^2 &amp;&amp; \text{squared error loss}\\
+L(\hat{\theta}_n,\,\theta)&amp;=|\hat{\theta}_n-\theta| &amp;&amp; \text{absolute error}\\
+L(\hat{\theta}_n,\,\theta)&amp;=\begin{cases}
+0 &amp; \hat{\theta}_n\neq\theta
+\\
+1 &amp; \hat{\theta}_n=\theta
+\end{cases} &amp;&amp; \text{zero-one loss}.
+\end{aligned}
+\]</span></p>
+<p>And trust me, there are more where that come from. I want to emphasize that the loss function is a <em>choice</em> made by the statistician to capture their priorities in the analysis. For example, both absolute and squared error loss are symmetric, meaning they penalize over- and under-estimation equally. But if you are working in an environment where one type of error is more costly, you should choose a different loss function that captures that asymmetry.</p>
+<p>Anyhow, the first thing to notice is that the loss of an estimator is just a particular transformation of the estimator. Since the estimator is a random variable, the loss is a random variable as well. If we wish to compute a single number that summarizes <em>typically</em> how far the estimator is from the target, we look at the expected value of the loss, which gets a special name:</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -733,14 +803,37 @@ Definition: risk of an estimator
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>The <strong>risk</strong> of an estimator is the expected value of the loss:</p>
 <p><span class="math display">\[
-E[L(\hat{\theta}_n,\,\theta_0)]
+R(\hat{\theta}_n,\,\theta) = E[L(\hat{\theta}_n,\,\theta)]
 \]</span></p>
+<p>The expected value is taken with respect to the sampling distribution of the estimator <span class="math inline">\(\hat{\theta}_n\)</span>, and the true but unknown value of the parameter <span class="math inline">\(\theta\)</span> is everywhere treated as a constant.</p>
 </div>
 </div>
 </section>
 <section id="mean-squared-error" class="level2">
 <h2 class="anchored" data-anchor-id="mean-squared-error">Mean squared error</h2>
+<p>For the rest of the semester, we will focus on the example of squared error loss, mainly because it is convenient mathematically (<span class="math inline">\(x^2\)</span> is differentiable while <span class="math inline">\(|x|\)</span> is not). The risk associated with this loss gets a special name:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition: mean squared error (MSE)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The risk of an estimator under squared error loss is its <strong>mean squared error</strong> (<strong>MSE</strong>):</p>
+<p><span class="math display">\[
+\text{MSE}(\hat{\theta}_n,\,\theta)
+=
+E[(\theta-\hat{\theta}_n)^2]
+.
+\]</span></p>
+</div>
+</div>
+<p>It turns out that the mean squared error has a powerful and informative decomposition:</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -751,9 +844,31 @@ Theorem: bias-variance trade-off
 </div>
 </div>
 <div class="callout-body-container callout-body">
-
+<p>The mean squared error of an estimator can be decomposed into the sum of its squared bias and its variance:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{MSE}(\hat{\theta}_n,\,\theta)
+=
+\text{bias}(\hat{\theta}_n,\,\theta)^2
++
+\text{var}(\hat{\theta}_n).
+\end{aligned}
+\]</span></p>
+<p>Here <span class="math inline">\(\text{bias}(\hat{\theta}_n,\,\theta)=E(\hat{\theta}_n)-\theta\)</span> and <span class="math inline">\(\text{var}(\hat{\theta}_n)=E[(\hat{\theta}_n-E(\hat{\theta}_n))^2]\)</span>.</p>
 </div>
 </div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p><span class="math display">\[
 \begin{aligned}
 \text{MSE}(\hat{\theta}_n,\,\theta)
@@ -789,10 +904,13 @@ E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
 \text{linearity again}
 \\
 &amp;=
-(\theta-E(\hat{\theta}_n))^2+
+(\theta-E(\hat{\theta}_n))^2
++
+\underbrace{
 2(\theta-E(\hat{\theta}_n))
 \cdot
 0
+}_{=0}
 +
 E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
 \\
@@ -807,9 +925,115 @@ E[(E(\hat{\theta}_n)-\hat{\theta}_n)^2]
 \text{var}(\hat{\theta}_n).
 \end{aligned}
 \]</span></p>
-<p>Classic bullseye analogy</p>
+</div>
+</div>
+</div>
+<p>Bias is this and variance is this. accuracy and precision.</p>
+<p>The BV tradefoff says that if we want overall MSE to be low, we want both to be low,</p>
+<div id="fig-bullseye" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bullseye-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/accuracy-precision.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bullseye-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Accuracy is synonymous with bias here, and precision is the inverse of variance. We want our estimator to nail it on both counts, but sometimes we are willing to trade-off one for the other if it makes the overall MSE lower.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="interval-estimation" class="level1">
+<h1>Interval estimation</h1>
+</section>
+<section id="example-bernoulli-data-coin-flip" class="level1">
+<h1>Example: Bernoulli data (coin flip)</h1>
+<p>To illustrate the concepts introduced above, let us consider the simplest possible inference problem. Imagine we have <em>binary</em> data:</p>
+<p><span class="math display">\[
+X_i
+=
+\begin{cases}
+1 &amp; \text{something happened}\\
+0 &amp; \text{something didn't happen.}
+\end{cases}
+\]</span></p>
+<p>Assuming the <span class="math inline">\(X_i\)</span> are independent and identically distributed (iid), there is really only one distribution that could have generated these data:</p>
+<p><span class="math display">\[
+X_1,\,X_2,\,X_3,\,...,\,X_{n-1},\,X_n\overset{\text{iid}}{\sim}\text{Bernoulli}(\theta).
+\]</span></p>
+<p>This becomes a statistics problem when we imagine that the probability of success <span class="math inline">\(\theta=P(X_1=1)\)</span> is unknown. This serves as a model for the archetypal statistics problem that we discussed in our <a href="../slides/2025-08-25-welcome.html#/an-archetypal-statistics-problem">first lecture</a>: given a mystery coin with an unknown probability of heads <span class="math inline">\(0\leq\theta\leq 1\)</span>, you flip the coin <span class="math inline">\(n\)</span> times and use the outcomes <span class="math inline">\(X_i\)</span> to guess what the underlying probability is. The goal of statistics is to use the data to learn what <span class="math inline">\(\theta\)</span> is <em>and also</em> to quantify our uncertainty about it. In other words, we want to construct an estimator and a confidence interval for <span class="math inline">\(\theta\)</span> that have good statistical properties.</p>
+<section id="point-estimation-1" class="level2">
+<h2 class="anchored" data-anchor-id="point-estimation-1">Point estimation</h2>
+<p>So, where do you even start? Confronted with a new statistical problem, how do you devise a reasonable estimator? In upcoming lectures we will study a generic principle (maximum likelihood) that automatically guides you to a reasonable starting point. But for now, let’s just go off vibes. The unknown parameter <span class="math inline">\(0\leq \theta\leq 1\)</span> is a probability representing the likelihood of an event occurring. Our dataset of binary variables <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, …, <span class="math inline">\(X_n\)</span> is essentially a running tally of how often we actually observed the event of interest (eg the coin coming up heads), and so a reasonable estimator might be the proportion of successes that we observed:</p>
+<p><span class="math display">\[
+\hat{\theta}_n=\begin{matrix}\text{sample}\\\text{proportion}\end{matrix}=\frac{\#(X_i=1)}{n}=\frac{1}{n}\sum\limits_{i=1}^nX_i.
+\]</span></p>
+<p>Again, we will have firmer motivations for this choice later, but things are already looking promising. Why? Because this choice of estimator takes the form of an <em>average</em> of iid random variables, and we know a lot about how those behave.</p>
+<p>To begin, recall some facts about the <a href="../distributions/discrete-binomial.html">Bernoulli distribution</a>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(X_1)&amp;=\theta\\
+\text{var}(X_1)&amp;=\theta(1-\theta).
+\end{aligned}
+\]</span></p>
+<p>Since <span class="math inline">\(X_i\overset{\text{iid}}{\sim}\text{Bernoulli}(\theta)\)</span> and <span class="math inline">\(\hat{\theta}_n\)</span> is their average, we know from <a href="../lecture-notes/sta240-notes-14-sums-and-averages.pdf">before</a> that</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(\hat{\theta}_n)&amp;=\theta\\
+\text{var}(\hat{\theta}_n)&amp;=\frac{\theta(1-\theta)}{n}.
+\end{aligned}
+\]</span></p>
+<pre class="shinylive-r" data-engine="r"><code>#| '!! shinylive warning !!': |
+#|   shinylive does not work in self-contained HTML documents.
+#|   Please set `embed-resources: false` in your metadata.
+#| standalone: true
+#| viewerHeight: 500
+
+library(shiny)
+
+ui &lt;- fluidPage(
+  titlePanel("Sampling distribution of the sample proportion"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("n", "Sample size (n):", min = 1, max = 200, value = 1, step = 1),
+      sliderInput("p", "True probability of success (θ):", min = 0, max = 1, value = 0.5, step = 0.01)
+    ),
+    
+    mainPanel(
+      plotOutput("distPlot")
+    )
+  )
+)
+
+server &lt;- function(input, output, session) {
+  
+  output$distPlot &lt;- renderPlot({
+    n &lt;- input$n
+    p &lt;- input$p
+    
+    plot((0:n) / n, dbinom(0:n, n, p), type = "h",
+         xlab = expression(bar(x)),
+         ylab = expression("P(" ~ bar(X)[n] ~ " = " ~ bar(x) ~ ")"),
+         main = expression("Average of iid" ~ X[i] ~ "~ Bernoulli(θ)"))
+    
+    mtext("θ", side = 1, at = p, col = "red", line = 2)
+  })
+}
+
+shinyApp(ui, server)
+
+</code></pre>
+</section>
+<section id="interval-estimation-1" class="level2">
+<h2 class="anchored" data-anchor-id="interval-estimation-1">Interval estimation</h2>
+<section id="review-standard-normal-quantiles" class="level3">
+<h3 class="anchored" data-anchor-id="review-standard-normal-quantiles">Review: standard normal quantiles</h3>
+</section>
+<section id="large-sample-confidence-interval" class="level3">
+<h3 class="anchored" data-anchor-id="large-sample-confidence-interval">Large sample confidence interval</h3>
 
 
+</section>
 </section>
 </section>
 

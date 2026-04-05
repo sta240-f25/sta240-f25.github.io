@@ -34,7 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-266aaafc31a669e17face162c8bbcf98.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6047717dfb1a2edde31992d245f01f96.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <meta name="shinylive:serviceworker_dir" content="..">
 <script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/load-shinylive-sw.js" type="module"></script>
 <script src="../site_libs/quarto-contrib/shinylive-0.9.1/shinylive/run-python-blocks.js" type="module"></script>
@@ -611,7 +611,7 @@ X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}f_{\theta}.
 <p><span class="math display">\[
 X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
 \]</span></p>
-<p><span class="math inline">\(\theta\)</span> could be any real number, so suffice it to say, there are a lot of possible guesses to choose from. Which is best, and how do we measure that? Every possible value of <span class="math inline">\(\theta\)</span> gives us a different density curve. Here are three possible guesses:</p>
+<p><span class="math inline">\(\theta\)</span> could be any real number, so suffice it to say, there are a lot of possible guesses to choose from. Which is best, and how do we measure that? Every possible value of <span class="math inline">\(\theta\)</span> gives us a different density curve. Here are four possible guesses:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -620,7 +620,7 @@ X_1,\,X_2,\,...,\,X_n\overset{\text{iid}}{\sim}\text{N}(\theta,\,1).
 </div>
 </div>
 </div>
-<p>We can probably agree that <span class="math inline">\(\theta = 2\)</span> is best guess among these options. Why? Because that curve assigns the highest density to the data we actually saw (the red dots on the number line). Notice that in each picture, the data are the same. The observations are the observations. The numbers in the your spreadsheet don’t change. What changes is our guess at <span class="math inline">\(\theta\)</span> and the associated curve. The goal of estimation is to search through all possible values of <span class="math inline">\(\theta\)</span> and find the one that gives the best fitting curve. How do we measure “best fitting”? We look at the density that the curve assigns to all the data points. Revisiting the cartoons above, for a given choice of <span class="math inline">\(\theta\)</span>, each observation <span class="math inline">\(X_i\)</span> has a density value <span class="math inline">\(f(X_i;\,\theta)\)</span> associated with it, and this corresponds to the vertical gap on the picture:</p>
+<p>We can probably agree that <span class="math inline">\(\theta = 2\)</span> is the best guess among these options. Why? Because that curve assigns the highest density to the data we actually saw (the red dots on the number line). Notice that in each picture, the data are the same. The observations are the observations. The numbers in the your spreadsheet don’t change. What changes is our guess at <span class="math inline">\(\theta\)</span> and the associated curve. The goal of estimation is to search through all possible values of <span class="math inline">\(\theta\)</span> and find the one that gives the best fitting curve. How do we measure “best fitting”? We look at the density that the curve assigns to all the data points. Revisiting the cartoons above, for a given choice of <span class="math inline">\(\theta\)</span>, each observation <span class="math inline">\(X_i\)</span> has a density value <span class="math inline">\(f(X_i;\,\theta)\)</span> associated with it, and this corresponds to the vertical gap on the picture:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -928,7 +928,7 @@ L(\theta;\,X_{1:n})=\prod_{i=1}^nf(X_i;\,\theta)
 <li>The MLE is consistent:</li>
 <li>The MLE is asymptotically normal, which allows you to compute approximate confidence intervals.</li>
 </ul>
-<p>The MLE may or may not be biased. It depends on the distribution family you are working with, because the estimator is consistet, whatever bias there is will eventually go away as you collect more data. How fast? It depends. Welcome to statistical theory!</p>
+<p>The MLE may or may not be biased. It depends on the distribution family you are working with. Because the estimator is consistent, whatever bias there is will eventually go away as you collect more data. How fast will the bias go away? It depends. Welcome to statistical theory!</p>
 </div>
 </div>
 
